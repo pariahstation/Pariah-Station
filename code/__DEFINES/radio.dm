@@ -46,11 +46,18 @@
 #define RADIO_KEY_CENTCOM "y"
 #define RADIO_TOKEN_CENTCOM ":y"
 
+// PARIAH MODULE EDIT START
+
+#define RADIO_CHANNEL_INTERDYNE "Interdyne"
+#define RADIO_KEY_INTERDYNE "i"
+#define RADIO_TOKE_INTERDYNE ":i"
+
+// PARIAH MODULE EDIT END
+
 #define RADIO_CHANNEL_CTF_RED "Red Team"
 #define RADIO_CHANNEL_CTF_BLUE "Blue Team"
 #define RADIO_CHANNEL_CTF_GREEN "Green Team"
 #define RADIO_CHANNEL_CTF_YELLOW "Yellow Team"
-
 
 #define MIN_FREE_FREQ 1201 // -------------------------------------------------
 // Frequencies are always odd numbers and range from 1201 to 1599.
