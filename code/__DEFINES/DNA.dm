@@ -199,7 +199,6 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 #define SPECIES_ABDUCTOR "abductor" //PARIAH MODULAR EDIT
 #define SPECIES_SHADOWPERSON "shadow" //PARIAH MODULAR EDIT
 
-#define SPECIES_ABDUCTOR "abductor"
 #define SPECIES_ANDROID "android"
 #define SPECIES_MUSHROOM "mush"
 #define SPECIES_PODPERSON "pod"
