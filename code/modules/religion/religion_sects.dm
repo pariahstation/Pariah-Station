@@ -99,17 +99,17 @@
 	var/mob/living/carbon/human/blessed = target
 	for(var/X in blessed.bodyparts)
 		var/obj/item/bodypart/bodypart = X
-		if(bodypart.status == BODYPART_ROBOTIC)
+		if(BODYTYPE_ROBOTIC in BP.bodytype) //PARIAH STATION EDIT
 			to_chat(chap, span_warning("[GLOB.deity] refuses to heal this metallic taint!"))
 			return TRUE
 
 	var/heal_amt = 10
-	var/list/hurt_limbs = blessed.get_damaged_bodyparts(1, 1, null, BODYPART_ORGANIC)
+	var/list/hurt_limbs = H.get_damaged_bodyparts(1, 1, null, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 
 	if(hurt_limbs.len)
 		for(var/X in hurt_limbs)
 			var/obj/item/bodypart/affecting = X
-			if(affecting.heal_damage(heal_amt, heal_amt, null, BODYPART_ORGANIC))
+			if(affecting.heal_damage(heal_amt, heal_amt, null, BODYTYPE_ORGANIC)) //PARIAH STATION EDIT
 				blessed.update_damage_overlays()
 		blessed.visible_message(span_notice("[chap] heals [blessed] with the power of [GLOB.deity]!"))
 		to_chat(blessed, span_boldnotice("May the power of [GLOB.deity] compel you to be healed!"))
@@ -164,7 +164,7 @@
 
 	//if we're not targetting a robot part we stop early
 	var/obj/item/bodypart/bodypart = blessed.get_bodypart(chap.zone_selected)
-	if(bodypart.status != BODYPART_ROBOTIC)
+	if(IS_ORGANIC_LIMB(BP)) //PARIAH STATION EDIT
 		if(!did_we_charge)
 			to_chat(chap, span_warning("[GLOB.deity] scoffs at the idea of healing such fleshy matter!"))
 		else
@@ -175,7 +175,7 @@
 		return TRUE
 
 	//charge(?) and go
-	if(bodypart.heal_damage(5,5,null,BODYPART_ROBOTIC))
+	if(BP.heal_damage(5,5,null,BODYTYPE_ROBOTIC)) //PARIAH STATION EDIT
 		blessed.update_damage_overlays()
 
 	blessed.visible_message(span_notice("[chap] [did_we_charge ? "repairs" : "repairs and charges"] [blessed] with the power of [GLOB.deity]!"))
@@ -257,10 +257,10 @@
 
 	account.adjust_money(-GREEDY_HEAL_COST)
 	var/heal_amt = 30
-	var/list/hurt_limbs = blessed.get_damaged_bodyparts(1, 1, null, BODYPART_ORGANIC)
+	var/list/hurt_limbs = H.get_damaged_bodyparts(1, 1, null, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 	if(hurt_limbs.len)
 		for(var/obj/item/bodypart/affecting as anything in hurt_limbs)
-			if(affecting.heal_damage(heal_amt, heal_amt, null, BODYPART_ORGANIC))
+			if(affecting.heal_damage(heal_amt, heal_amt, null, BODYTYPE_ORGANIC)) //PARIAH STATION EDIT
 				blessed.update_damage_overlays()
 		blessed.visible_message(span_notice("[chap] barters a heal for [blessed] from [GLOB.deity]!"))
 		to_chat(blessed, span_boldnotice("May the power of [GLOB.deity] compel you to be healed! Thank you for choosing [GLOB.deity]!"))

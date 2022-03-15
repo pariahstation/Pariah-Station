@@ -4,7 +4,12 @@
 	force = 3
 	throwforce = 3
 	w_class = WEIGHT_CLASS_SMALL
-	icon = 'icons/mob/human_parts.dmi'
+//PARIAH STATION EDIT START
+	icon = 'icons/mob/human_parts_greyscale.dmi'
+	var/husk_icon = 'icons/mob/human_parts.dmi'
+	var/husk_type = "humanoid"
+	var/static_icon = 'icons/mob/human_parts.dmi' //Uncolorable sprites
+//PARIAH STATION EDIT END
 	icon_state = ""
 	/// The icon for Organic limbs using greyscale
 	var/icon_greyscale = DEFAULT_BODYPART_ICON_ORGANIC
@@ -16,7 +21,17 @@
 	var/datum/weakref/original_owner
 	var/status = BODYPART_ORGANIC
 	var/needs_processing = FALSE
+	///If you'd like to know if a bodypart is organic, please use is_organic_limb() - PARIAH STATION EDIT START
+	var/bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC //List of bodytypes flags, important for fitting clothing.
+	var/change_exempt_flags //Defines when a bodypart should not be changed. Example: BP_BLOCK_CHANGE_SPECIES prevents the limb from being overwritten on species gain
 
+	var/is_husked = FALSE //Duh
+	var/limb_id = SPECIES_HUMAN //This is effectively the icon_state for limbs.
+	var/limb_gender //Defines what sprite the limb should use if it is also sexually dimorphic.
+	var/uses_mutcolor = TRUE //Does this limb have a greyscale version?
+	var/is_dimorphic = FALSE //Is there a sprite difference between male and female?
+	var/draw_color //Greyscale draw color
+//PARIAH STATION EDIT END
 	/// BODY_ZONE_CHEST, BODY_ZONE_L_ARM, etc , used for def_zone
 	var/body_zone
 	var/aux_zone // used for hands
@@ -39,7 +54,7 @@
 	var/can_be_disabled = FALSE
 	///Multiplier of the limb's damage that gets applied to the mob
 	var/body_damage_coeff = 1
-	var/stam_damage_coeff = 0.75
+	var/stam_damage_coeff = 0.75 //Why is this the default??? - Kapu - PARIAH STATION EDIT
 	var/brutestate = 0
 	var/burnstate = 0
 	var/brute_dam = 0
@@ -58,7 +73,7 @@
 	var/body_gender = ""
 	var/species_id = ""
 	var/should_draw_gender = FALSE
-	var/should_draw_greyscale = FALSE
+	var/should_draw_greyscale = TRUE //Limbs need this information as a back-up incase they are generated outside of a carbon (limbgrower) //PARIAH STATION EDIT
 	var/species_color = ""
 	var/mutation_color = ""
 	var/no_update = 0
@@ -85,6 +100,18 @@
 	var/light_burn_msg = "numb"
 	var/medium_burn_msg = "blistered"
 	var/heavy_burn_msg = "peeling away"
+//PARIAH STATION EDIT START
+/obj/item/bodypart/Initialize()
+	..()
+	name = "[limb_id] [parse_zone(body_zone)]"
+	update_icon_dropped()
+
+/obj/item/bodypart/forceMove(atom/destination) //Please. Never forcemove a limb if its's actually in use. This is only for borgs.
+	. = ..()
+	if(isturf(destination))
+		update_icon_dropped()
+
+//PARIAH STATION EDIT END
 
 	/// The wounds currently afflicting this body part
 	var/list/wounds
@@ -188,7 +215,7 @@
 
 /obj/item/bodypart/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	..()
-	if(status != BODYPART_ROBOTIC)
+	if(IS_ORGANIC_LIMB(src)) //PARIAH STATION EDIT
 		playsound(get_turf(src), 'sound/misc/splort.ogg', 50, TRUE, -1)
 	pixel_x = rand(-3, 3)
 	pixel_y = rand(-3, 3)
@@ -196,7 +223,7 @@
 //empties the bodypart from its organs and other things inside it
 /obj/item/bodypart/proc/drop_organs(mob/user, violent_removal)
 	var/turf/bodypart_turf = get_turf(src)
-	if(status != BODYPART_ROBOTIC)
+	if(IS_ORGANIC_LIMB(src)) //PARIAH STATION EDIT
 		playsound(bodypart_turf, 'sound/misc/splort.ogg', 50, TRUE, -1)
 	seep_gauze(9999) // destroy any existing gauze if any exists
 	for(var/obj/item/organ/bodypart_organ in get_organs())
@@ -233,7 +260,7 @@
 	if(owner && (owner.status_flags & GODMODE))
 		return FALSE //godmode
 
-	if(required_status && (status != required_status))
+	if(required_status && !(bodytype & required_status)) //PARIAH STATION EDIT
 		return FALSE
 
 	var/dmg_multi = CONFIG_GET(number/damage_multiplier) * hit_percent
@@ -510,7 +537,7 @@
 //Cannot remove negative damage (i.e. apply damage)
 /obj/item/bodypart/proc/heal_damage(brute, burn, stamina, required_status, updating_health = TRUE)
 
-	if(required_status && status != required_status) //So we can only heal certain kinds of limbs, ie robotic vs organic.
+	if(required_status && !(bodytype & required_status)) //So we can only heal certain kinds of limbs, ie robotic vs organic. - PARIAH STATION EDIT
 		return
 
 	if(brute)
@@ -705,9 +732,17 @@
 		return TRUE
 	return FALSE
 
-//Change organ status
+//Change //Change limb between status - PARIAH STATION EDIT START
+//Note:This proc only exists because I can't be arsed to remove it yet. Theres no real reason this should ever be used.
+//Don't look at me, I'm just half-assedly porting everything I see.
 /obj/item/bodypart/proc/change_bodypart_status(new_limb_status, heal_limb, change_icon_to_default)
-	status = new_limb_status
+	if(!(bodytype & new_limb_status))
+		bodytype &= ~(BODYTYPE_ROBOTIC & BODYTYPE_ORGANIC)
+		bodytype |= new_limb_status
+	else
+		bodytype = bodytype & ~BODYTYPE_ORGANIC
+		bodytype = bodytype | BODYTYPE_ROBOTIC
+//PARIAH STATION EDIT END
 	if(heal_limb)
 		burn_dam = 0
 		brute_dam = 0
@@ -715,9 +750,9 @@
 		burnstate = 0
 
 	if(change_icon_to_default)
-		if(status == BODYPART_ORGANIC)
+		if(IS_ORGANIC_LIMB(src)) //PARIAH STATION EDIT
 			icon = icon_greyscale
-		else if(status == BODYPART_ROBOTIC)
+		else // PARIAH STATION EDIT
 			icon = icon_robotic
 
 	if(owner)
@@ -730,7 +765,8 @@
 	return (status == BODYPART_ORGANIC)
 
 //we inform the bodypart of the changes that happened to the owner, or give it the informations from a source mob.
-/obj/item/bodypart/proc/update_limb(dropping_limb, mob/living/carbon/source)
+//set is_creating to true if you want to change the appearance of the limb outside of mutation changes or forced changes.
+/obj/item/bodypart/proc/update_limb(dropping_limb, mob/living/carbon/source, is_creating = FALSE) // PARIAH STATION EDIT
 	var/mob/living/carbon/limb_owner
 	if(source)
 		limb_owner = source
@@ -743,20 +779,26 @@
 		else
 			no_update = FALSE
 
-	if(HAS_TRAIT(limb_owner, TRAIT_HUSK) && is_organic_limb())
-		species_id = "husk" //overrides species_id
+	if(HAS_TRAIT(C, TRAIT_HUSK) && IS_ORGANIC_LIMB(src)) // PARIAH STAITON EDIT START
 		dmg_overlay_type = "" //no damage overlay shown when husked
-		should_draw_gender = FALSE
-		should_draw_greyscale = FALSE
-		no_update = TRUE
+		is_husked = TRUE
 
-	if(HAS_TRAIT(src, TRAIT_PLASMABURNT) && is_organic_limb())
-		species_id = SPECIES_PLASMAMAN
-		dmg_overlay_type = ""
-		should_draw_gender = FALSE
-		should_draw_greyscale = FALSE
-		no_update = TRUE
+	else
+		dmg_overlay_type = initial(dmg_overlay_type)
+		is_husked = FALSE
 
+	if(!dropping_limb && C.dna?.check_mutation(HULK)) //Please remove hulk from the game. I beg you.
+		mutation_color = "00aa00"
+	else
+		mutation_color = null
+
+	if(mutation_color) //I hate mutations
+		draw_color = mutation_color
+	else if(should_draw_greyscale)
+		draw_color = (species_color) || (skin_tone && skintone2hex(skin_tone))
+	else
+		draw_color = null
+//PARIAH STATION EDIT END
 	if(HAS_TRAIT(limb_owner, TRAIT_INVISIBLE_MAN) && is_organic_limb())
 		species_id = "invisible" //overrides species_id
 		dmg_overlay_type = "" //no damage overlay shown when invisible since the wounds themselves are invisible.
@@ -767,13 +809,15 @@
 	if(no_update)
 		return
 
-	if(!animal_origin)
+	if(!is_creating) //PARIAH STATION START
+		return
+
+	if(!animal_origin && ishuman(C)) //PARIAH STATION END
 		var/mob/living/carbon/human/human_owner = limb_owner
 		should_draw_greyscale = FALSE
 
 		var/datum/species/owner_species = human_owner.dna.species
-		species_id = owner_species.limbs_id
-		species_flags_list = human_owner.dna.species.species_traits
+		species_flags_list = H.dna.species.species_traits //Literally only exists for a single use of NOBLOOD, but, no reason to remove it i guess...? - PARIAH STATION EDIT
 
 		if(owner_species.use_skintones)
 			skin_tone = human_owner.skin_tone
@@ -783,27 +827,29 @@
 
 		body_gender = human_owner.body_type
 		should_draw_gender = owner_species.sexes
-
-		if((MUTCOLORS in owner_species.species_traits) || (DYNCOLORS in owner_species.species_traits))
+		if(should_draw_gender) //Assigns the limb a gender for rendering - PARIAH STATION EDIT START
+			limb_gender = (H.gender == MALE) ? "m" : "f"
+//PARIAH STATION EDIT END
+		if(((MUTCOLORS in S.species_traits) || (DYNCOLORS in S.species_traits)) && uses_mutcolor) //Ethereal code. Motherfuckers. - PARIAH STATION EDIT
 			if(owner_species.fixed_mut_color)
 				species_color = owner_species.fixed_mut_color
 			else
 				species_color = human_owner.dna.features["mcolor"]
 			should_draw_greyscale = TRUE
 		else
-			species_color = ""
+			species_color = null //PARIAH STATION EDIT START
 
-		if(!dropping_limb && human_owner.dna.check_mutation(/datum/mutation/human/hulk))
-			mutation_color = "#00aa00"
-		else
-			mutation_color = ""
+		UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
+		draw_color = mutation_color
+		if(should_draw_greyscale) //Should the limb be colored?
+			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone)) //PARIAH STATION EDIT END
 
 		dmg_overlay_type = owner_species.damage_overlay_type
 
 	else if(animal_origin == MONKEY_BODYPART) //currently monkeys are the only non human mob to have damage overlays.
 		dmg_overlay_type = animal_origin
 
-	if(status == BODYPART_ROBOTIC)
+	if(!IS_ORGANIC_LIMB(src)) //PARIAH STATION EDIT
 		dmg_overlay_type = "robotic"
 
 	if(dropping_limb)
@@ -827,6 +873,7 @@
 
 	. = list()
 
+	//Handles dropped icons
 	var/image_dir = 0
 	if(dropped)
 		image_dir = SOUTH
@@ -840,10 +887,10 @@
 	var/image/aux
 	. += limb
 
-	if(animal_origin)
-		if(is_organic_limb())
+	if(animal_origin) //Cringe ass animal-specific code. - PARIAH STATION EDIT
+		if(IS_ORGANIC_LIMB(src)) // PARIAH STATION EDIT
 			limb.icon = 'icons/mob/animal_parts.dmi'
-			if(species_id == "husk")
+			if(is_husked) //PARIAH STATION EDIT
 				limb.icon_state = "[animal_origin]_husk_[body_zone]"
 			else
 				limb.icon_state = "[animal_origin]_[body_zone]"
@@ -856,81 +903,37 @@
 			limb_em_block.dir = image_dir
 			limb.overlays += limb_em_block
 		return
-
-	var/icon_gender = (body_gender == FEMALE) ? "f" : "m" //gender of the icon, if applicable
-
-	if((body_zone != BODY_ZONE_HEAD && body_zone != BODY_ZONE_CHEST))
-		should_draw_gender = FALSE
-
-	var/draw_color
-
-	if(!is_organic_limb())
-		limb.icon = icon
-		limb.icon_state = "[body_zone]" //Inorganic limbs are agender
-
-		if(blocks_emissive)
-			var/mutable_appearance/limb_em_block = emissive_blocker(limb.icon, limb.icon_state, alpha = limb.alpha)
-			limb_em_block.dir = image_dir
-			limb.overlays += limb_em_block
-
-		if(aux_zone)
-			aux = image(limb.icon, "[aux_zone]", -aux_layer, image_dir)
+//PARIAH STATION EDIT START
+	if(is_husked)
+		limb.icon = husk_icon
+		limb.icon_state = "[husk_type]_husk_[body_zone]"
+		if(aux_zone) //Hand shit
+			aux = image(limb.icon, "[husk_type]_husk_[aux_zone]", -aux_layer, image_dir) // PARIAH STATION EDIT END
 			. += aux
-
-			if(blocks_emissive)
-				var/mutable_appearance/aux_em_block = emissive_blocker(aux.icon, aux.icon_state, alpha = aux.alpha)
-				aux_em_block.dir = image_dir
-				aux.overlays += aux_em_block
-
-	else
-		if(should_draw_greyscale)
-			limb.icon = icon_greyscale
-			if(should_draw_gender)
-				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
-			else if(use_digitigrade)
-				limb.icon_state = "digitigrade_[use_digitigrade]_[body_zone]"
-			else
-				limb.icon_state = "[species_id]_[body_zone]"
-		else
-			limb.icon = 'icons/mob/human_parts.dmi'
-			if(should_draw_gender)
-				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
-			else
-				limb.icon_state = "[species_id]_[body_zone]"
-
-		if(aux_zone)
-			aux = image(limb.icon, "[species_id]_[aux_zone]", -aux_layer, image_dir)
-			. += aux
-
-		if(should_draw_greyscale)
-			draw_color = mutation_color || species_color || (skin_tone && skintone2hex(skin_tone))
-			if(draw_color)
-				limb.color = draw_color
-				if(aux_zone)
-					aux.color = draw_color
-
-		if(blocks_emissive)
-			var/mutable_appearance/limb_em_block = emissive_blocker(limb.icon, limb.icon_state, alpha = limb.alpha)
-			limb_em_block.dir = image_dir
-			limb.overlays += limb_em_block
-
-			if(aux_zone)
-				var/mutable_appearance/aux_em_block = emissive_blocker(aux.icon, aux.icon_state, alpha = aux.alpha)
-				aux_em_block.dir = image_dir
-				aux.overlays += aux_em_block
-
-	if(!draw_external_organs)
 		return
 
-	//Draw external organs like horns and frills
-	for(var/obj/item/organ/external/external_organ in external_organs)
-		if(!dropped && !external_organ.can_draw_on_bodypart(owner))
-			continue
-		//Some externals have multiple layers for background, foreground and between
-		for(var/external_layer in external_organ.all_layers)
-			if(external_organ.layers & external_layer)
-				external_organ.get_overlays(., image_dir, external_organ.bitflag_to_layer(external_layer), icon_gender, draw_color)
+	////This is the MEAT of limb icon code
+	limb.icon = icon
+	if(!should_draw_greyscale || !icon)
+		limb.icon = static_icon
+	if(is_dimorphic) //Does this type of limb have sexual dimorphism?
+		limb.icon_state = "[limb_id]_[body_zone]_[limb_gender]"
 
+	else
+		limb.icon_state = "[limb_id]_[body_zone]"
+		if(aux_zone) //Hand shit
+		aux = image(limb.icon, "[limb_id]_[aux_zone]", -aux_layer, image_dir)
+		. += aux
+
+	draw_color = mutation_color
+	if(should_draw_greyscale) //Should the limb be colored?
+		draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone))
+
+	if(draw_color)
+		limb.color = "#[draw_color]"
+		if(aux_zone)
+			aux.color = "#[draw_color]"
+//PARIAH STATION EDIT END
 /obj/item/bodypart/deconstruct(disassembled = TRUE)
 	drop_organs()
 	qdel(src)

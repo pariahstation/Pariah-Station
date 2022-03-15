@@ -1,7 +1,7 @@
 /obj/item/bodypart/head
 	name = BODY_ZONE_HEAD
 	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
-	icon = 'icons/mob/human_parts.dmi'
+	icon = 'icons/mob/human_parts_greyscale.dmi' //PARIAH STATION EDIT
 	icon_state = "default_human_head"
 	max_damage = 200
 	body_zone = BODY_ZONE_HEAD
@@ -13,6 +13,7 @@
 	px_y = -8
 	stam_damage_coeff = 1
 	max_stamina_damage = 100
+	is_dimorphic = TRUE // PARIAH STATION EDIT
 	wound_resistance = 5
 	disabled_wound_penalty = 25
 	scars_covered_by_clothes = FALSE
@@ -72,7 +73,7 @@
 
 /obj/item/bodypart/head/examine(mob/user)
 	. = ..()
-	if(status == BODYPART_ORGANIC && show_organs_on_examine)
+	if(IS_ORGANIC_LIMB(src)) // PARIAH STATION EDIT
 		if(!brain)
 			. += span_info("The brain has been removed from [src].")
 		else if(brain.suicided || brainmob?.suiciding)
@@ -99,14 +100,14 @@
 			. += span_info("[real_name]'s tongue has been removed.")
 
 
-/obj/item/bodypart/head/can_dismember(obj/item/item)
-	if(owner.stat < HARD_CRIT)
+/obj/item/bodypart/head/can_dismember()
+	if(owner?.stat <= HARD_CRIT) // PARIAH STATION EDIT
 		return FALSE
 	return ..()
 
 /obj/item/bodypart/head/drop_organs(mob/user, violent_removal)
 	var/turf/head_turf = get_turf(src)
-	if(status != BODYPART_ROBOTIC)
+	if(IS_ORGANIC_LIMB(src)) // PARIAH STATION EDIT
 		playsound(head_turf, 'sound/misc/splort.ogg', 50, TRUE, -1)
 	for(var/obj/item/head_item in src)
 		if(head_item == brain)
@@ -136,7 +137,7 @@
 	ears = null
 	tongue = null
 
-/obj/item/bodypart/head/update_limb(dropping_limb, mob/living/carbon/source)
+/obj/item/bodypart/head/update_limb(dropping_limb, mob/living/carbon/source, is_creating) //PARIAH STATION EDIT
 	var/mob/living/carbon/head_owner
 	if(source)
 		head_owner = source
@@ -151,7 +152,7 @@
 		lip_style = null
 		stored_lipstick_trait = null
 
-	else if(!animal_origin)
+	else if(!animal_origin && ishuman(C)) // PARIAH STATION EDIT
 		var/mob/living/carbon/human/human_head_owner = head_owner
 		var/datum/species/owner_species = human_head_owner.dna.species
 
@@ -213,7 +214,7 @@
 	. = ..()
 	if(dropped) //certain overlays only appear when the limb is being detached from its owner.
 
-		if(status != BODYPART_ROBOTIC) //having a robotic head hides certain features.
+		if(IS_ORGANIC_LIMB(src)) //having a robotic head hides certain features.//PARIAH STATION EDIT
 			//facial hair
 			if(facial_hairstyle)
 				var/datum/sprite_accessory/sprite = GLOB.facial_hairstyles_list[facial_hairstyle]
@@ -243,23 +244,22 @@
 					hair_overlay.color = hair_color
 					hair_overlay.alpha = hair_alpha
 					. += hair_overlay
-
-
+//PARIAH STATION EDIT START
 		// lipstick
-		if(lip_style)
-			var/image/lips_overlay = image('icons/mob/human_face.dmi', "lips_[lip_style]", -BODY_LAYER, SOUTH)
-			lips_overlay.color = lip_color
-			. += lips_overlay
+			if(lip_style)
+				var/image/lips_overlay = image('icons/mob/human_face.dmi', "lips_[lip_style]", -BODY_LAYER, SOUTH)
+				lips_overlay.color = lip_color
+				. += lips_overlay
 
-		// eyes
-		var/image/eyes_overlay = image('icons/mob/human_face.dmi', "eyes_missing", -BODY_LAYER, SOUTH)
-		. += eyes_overlay
-		if(eyes)
-			eyes_overlay.icon_state = eyes.eye_icon_state
+			// eyes
+			var/image/eyes_overlay = image('icons/mob/human_face.dmi', "eyes_missing", -BODY_LAYER, SOUTH)
+			. += eyes_overlay
+			if(eyes)
+				eyes_overlay.icon_state = eyes.eye_icon_state
 
-			if(eyes.eye_color)
-				eyes_overlay.color = eyes.eye_color
-
+				if(eyes.eye_color)
+					eyes_overlay.color = "#" + eyes.eye_color
+//PARIAH STATION EDIT END
 /obj/item/bodypart/head/talk_into(mob/holder, message, channel, spans, datum/language/language, list/message_mods)
 	var/mob/headholder = holder
 	if(istype(headholder))
@@ -274,6 +274,7 @@
 /obj/item/bodypart/head/monkey
 	icon = 'icons/mob/animal_parts.dmi'
 	icon_state = "default_monkey_head"
+	limb_id = SPECIES_MONKEY //PARIAH STATION EDIT 
 	animal_origin = MONKEY_BODYPART
 
 /obj/item/bodypart/head/alien

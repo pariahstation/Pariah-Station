@@ -3194,6 +3194,7 @@
 #include "code\modules\mob\living\carbon\human\species_types\humans.dm"
 #include "code\modules\mob\living\carbon\human\species_types\jellypeople.dm"
 #include "code\modules\mob\living\carbon\human\species_types\lizardpeople.dm"
+#include "code\modules\mob\living\carbon\human\species_types\monkey.dm" //PARIAH STATION ADDITION
 #include "code\modules\mob\living\carbon\human\species_types\monkeys.dm"
 #include "code\modules\mob\living\carbon\human\species_types\mothmen.dm"
 #include "code\modules\mob\living\carbon\human\species_types\mushpeople.dm"
@@ -3202,7 +3203,6 @@
 #include "code\modules\mob\living\carbon\human\species_types\shadowpeople.dm"
 #include "code\modules\mob\living\carbon\human\species_types\skeletons.dm"
 #include "code\modules\mob\living\carbon\human\species_types\snail.dm"
-#include "code\modules\mob\living\carbon\human\species_types\synths.dm"
 #include "code\modules\mob\living\carbon\human\species_types\vampire.dm"
 #include "code\modules\mob\living\carbon\human\species_types\zombies.dm"
 #include "code\modules\mob\living\silicon\damage_procs.dm"
@@ -4038,12 +4038,18 @@
 #include "code\modules\surgery\advanced\bioware\nerve_grounding.dm"
 #include "code\modules\surgery\advanced\bioware\nerve_splicing.dm"
 #include "code\modules\surgery\advanced\bioware\vein_threading.dm"
-#include "code\modules\surgery\bodyparts\_bodyparts.dm"
+#include "code\modules\surgery\bodyparts\bodyparts.dm" //PARIAH STATION ADDITION
 #include "code\modules\surgery\bodyparts\dismemberment.dm"
 #include "code\modules\surgery\bodyparts\head.dm"
 #include "code\modules\surgery\bodyparts\helpers.dm"
 #include "code\modules\surgery\bodyparts\parts.dm"
 #include "code\modules\surgery\bodyparts\robot_bodyparts.dm"
+#include "code\modules\surgery\bodyparts\species_parts\ethereal_bodyparts.dm" //PARIAH STATION ADDITION
+#include "code\modules\surgery\bodyparts\species_parts\ipc_bodyparts.dm" //PARIAH STATION ADDITION
+#include "code\modules\surgery\bodyparts\species_parts\lizard_bodyparts.dm" //PARIAH STATION ADDITION
+#include "code\modules\surgery\bodyparts\species_parts\misc_bodyparts.dm" //PARIAH STATION ADDITION
+#include "code\modules\surgery\bodyparts\species_parts\moth_bodyparts.dm" //PARIAH STATION ADDITION
+#include "code\modules\surgery\bodyparts\species_parts\plasmaman_bodyparts.dm" //PARIAH STATION ADDITION
 #include "code\modules\surgery\bodyparts\species_parts\apid_bodyparts.dm"
 #include "code\modules\surgery\bodyparts\species_parts\ethereal_bodyparts.dm"
 #include "code\modules\surgery\bodyparts\species_parts\ipc_bodyparts.dm"

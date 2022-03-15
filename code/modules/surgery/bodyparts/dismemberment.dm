@@ -1,7 +1,6 @@
 
-/obj/item/bodypart/proc/can_dismember(obj/item/item)
-	if(dismemberable)
-		return TRUE
+/obj/item/bodypart/proc/can_dismember() //PARIAH STATION EDIT
+	return dismemberable
 
 //Dismember a limb
 /obj/item/bodypart/proc/dismember(dam_type = BRUTE, silent=TRUE)
@@ -17,7 +16,13 @@
 	affecting.receive_damage(clamp(brute_dam/2 * affecting.body_damage_coeff, 15, 50), clamp(burn_dam/2 * affecting.body_damage_coeff, 0, 50), wound_bonus=CANT_WOUND) //Damage the chest based on limb's existing damage
 	if(!silent)
 		limb_owner.visible_message(span_danger("<B>[limb_owner]'s [name] is violently dismembered!</B>"))
-	INVOKE_ASYNC(limb_owner, /mob.proc/emote, "scream")
+//PARIAH STATION EDIT START
+	if(C.stat <= SOFT_CRIT)//No more screaming while unconsious
+		if(IS_ORGANIC_LIMB(affecting))//Chest is a good indicator for if a carbon is robotic in nature or not.
+			INVOKE_ASYNC(C, /mob.proc/emote, "scream")
+
+	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
+//PARIAH STATION EDIT END
 	playsound(get_turf(limb_owner), 'sound/effects/dismember.ogg', 80, TRUE)
 	SEND_SIGNAL(limb_owner, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
 	limb_owner.mind?.add_memory(MEMORY_DISMEMBERED, list(DETAIL_LOST_LIMB = src, DETAIL_PROTAGONIST = limb_owner), story_value = STORY_VALUE_AMAZING)
@@ -128,6 +133,7 @@
 				continue
 			organ.transfer_to_limb(src, phantom_owner)
 
+	synchronize_bodytypes(C) //PARIAH STATION EDIT
 	update_icon_dropped()
 	phantom_owner.update_health_hud() //update the healthdoll
 	phantom_owner.update_body()
@@ -190,7 +196,7 @@
 
 //when a limb is dropped, the internal organs are removed from the mob and put into the limb
 /obj/item/organ/proc/transfer_to_limb(obj/item/bodypart/bodypart, mob/living/carbon/bodypart_owner)
-	Remove(bodypart_owner)
+	Remove(C, TRUE) //PARIAH STATION EDIT
 	forceMove(bodypart)
 
 /obj/item/organ/brain/transfer_to_limb(obj/item/bodypart/head/head, mob/living/carbon/human/head_owner)
@@ -293,36 +299,36 @@
 			pill.forceMove(src)
 
 	//Make sure de-zombification happens before organ removal instead of during it
-	var/obj/item/organ/zombie_infection/ooze = owner.getorganslot(ORGAN_SLOT_ZOMBIE)
-	if(istype(ooze))
-		ooze.transfer_to_limb(src, owner)
-
-	name = "[owner.real_name]'s head"
+	name = owner ? "[owner.real_name]'s head" : "unknown [limb_id] head" //PARIAH STATION EDIT
 	..()
 
 //Attach a limb to a human and drop any existing limb of that type.
-/obj/item/bodypart/proc/replace_limb(mob/living/carbon/limb_owner, special)
+/obj/item/bodypart/proc/replace_limb(mob/living/carbon/C, special, is_creating = FALSE) //PARIAH STATION EDIT
 	if(!istype(limb_owner))
 		return
-	var/obj/item/bodypart/limb = limb_owner.get_bodypart(body_zone) //needs to happen before attach because multiple limbs in same zone breaks helpers
-	if(!attach_limb(limb_owner, special))//we can attach this limb and drop the old after because of our robust bodyparts system. you know, just for a sec.
-		return
+	var/obj/item/bodypart/O = C.get_bodypart(body_zone) //PARIAH STATION EDIT
 	if(limb)
 		limb.drop_limb(1)
-
+	return attach_limb(C, special, is_creating) //PARIAH STATION EDIT
 /obj/item/bodypart/head/replace_limb(mob/living/carbon/head_owner, special)
 	if(!istype(head_owner))
 		return
 	var/obj/item/bodypart/head/head = head_owner.get_bodypart(body_zone)
-	if(!attach_limb(head_owner, special))
-		return
 	if(head)
-		head.drop_limb(1)
+		if(!special) //PARIAH STATION EDIT START
+			return
+		else
+			O.drop_limb(1)
+	return attach_limb(C, special, is_creating)
+
+/obj/item/bodypart/proc/attach_limb(mob/living/carbon/C, special, is_creating = FALSE)
+	var/obj/item/bodypart/chest/mob_chest = C.get_bodypart(BODY_ZONE_CHEST)
+	if(mob_chest && !(mob_chest.acceptable_bodytype & bodytype)) //PARIAH STATION EDIT END
 
 /obj/item/bodypart/proc/attach_limb(mob/living/carbon/new_limb_owner, special)
 	if(SEND_SIGNAL(new_limb_owner, COMSIG_CARBON_ATTACH_LIMB, src, special) & COMPONENT_NO_ATTACH)
 		return FALSE
-	. = TRUE
+	// . = TRUE // - PARIAH STATION EDIT
 	moveToNullspace()
 	set_owner(new_limb_owner)
 	new_limb_owner.add_bodypart(src)
@@ -368,7 +374,7 @@
 	new_limb_owner.updatehealth()
 	new_limb_owner.update_body()
 	new_limb_owner.update_hair()
-	new_limb_owner.update_damage_overlays()
+	return TRUE // PARIAH STATION EDIT
 
 
 /obj/item/bodypart/head/attach_limb(mob/living/carbon/new_head_owner, special = FALSE, abort = FALSE)
@@ -446,17 +452,5 @@
 	if(get_bodypart(limb_zone))
 		return FALSE
 	limb = newBodyPart(limb_zone, 0, 0)
-	if(limb)
-		if(!noheal)
-			limb.set_brute_dam(0)
-			limb.set_burn_dam(0)
-			limb.brutestate = 0
-			limb.burnstate = 0
-
-		if(!limb.attach_limb(src, 1))
-			qdel(limb)
-			return FALSE
-		var/datum/scar/scaries = new
-		var/datum/wound/loss/phantom_loss = new // stolen valor, really
-		scaries.generate(limb, phantom_loss)
-		return TRUE
+	L.replace_limb(src, TRUE, TRUE)
+	return 1 // PARIAH STATION EDIT

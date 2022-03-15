@@ -20,7 +20,7 @@
 	if(istype(tool, /obj/item/borg/apparatus/organ_storage) && istype(tool.contents[1], /obj/item/bodypart))
 		tool = tool.contents[1]
 	var/obj/item/bodypart/aug = tool
-	if(aug.status != BODYPART_ROBOTIC)
+	if(IS_ORGANIC_LIMB(aug)) //PARIAH STATION EDIT
 		to_chat(user, span_warning("That's not an augment, silly!"))
 		return -1
 	if(aug.body_zone != target_zone)
@@ -59,7 +59,12 @@
 			tool.cut_overlays()
 			tool = tool.contents[1]
 		if(istype(tool) && user.temporarilyRemoveItemFromInventory(tool))
-			tool.replace_limb(target, TRUE)
+			if(!tool.replace_limb(target, TRUE)) //PARIAH STATION EDIT START
+				display_results(user, target, "<span class='warning'>You fail in replacing [target]'s [parse_zone(target_zone)]! Their body has rejected [tool]!</span>",
+				"<span class='warning'>[user] fails to replace [target]'s [parse_zone(target_zone)]!</span>",
+				"<span class='warning'>[user] fails to replaces [target]'s [parse_zone(target_zone)]!</span>")
+				tool.forceMove(target.loc)
+				return //PARIAH STATION EDIT END
 		display_results(user, target, span_notice("You successfully augment [target]'s [parse_zone(target_zone)]."),
 			span_notice("[user] successfully augments [target]'s [parse_zone(target_zone)] with [tool]!"),
 			span_notice("[user] successfully augments [target]'s [parse_zone(target_zone)]!"))

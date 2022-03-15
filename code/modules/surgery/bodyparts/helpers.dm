@@ -7,7 +7,7 @@
 
 	if(!zone)
 		zone = BODY_ZONE_CHEST
-	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
+	for(var/obj/item/bodypart/L as anything in bodyparts) //PARIAH STATION EDIT
 		if(bodypart.body_zone == zone)
 			return bodypart
 
@@ -109,37 +109,37 @@
 
 ///Remove all embedded objects from all limbs on the carbon mob
 /mob/living/carbon/proc/remove_all_embedded_objects()
-	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
+	for(var/obj/item/bodypart/L as anything in bodyparts) //PARIAH STATION EDIT
 		for(var/obj/item/embedded in bodypart.embedded_objects)
 			remove_embedded_object(embedded)
 
 /mob/living/carbon/proc/has_embedded_objects(include_harmless=FALSE)
-	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
+	for(var/obj/item/bodypart/L as anything in bodyparts) //PARIAH STATION EDIT
 		for(var/obj/item/embedded in bodypart.embedded_objects)
 			if(!include_harmless && embedded.isEmbedHarmless())
 				continue
 			return TRUE
 
 //Helper for quickly creating a new limb - used by augment code in species.dm spec_attacked_by
+//
+// FUCK YOU AUGMENT CODE - With love, Kapu
+//Hi Kapu
+//this is a pain in the ass to port -Octus
 /mob/living/carbon/proc/newBodyPart(zone, robotic, fixed_icon)
 	var/obj/item/bodypart/new_bodypart
-	switch(zone)
+	switch(zone) //PARIAH STATION EDIT START
 		if(BODY_ZONE_L_ARM)
-			new_bodypart = new /obj/item/bodypart/l_arm()
+			L = new dna.species.species_l_arm()
 		if(BODY_ZONE_R_ARM)
-			new_bodypart = new /obj/item/bodypart/r_arm()
+			L = new dna.species.species_r_arm()
 		if(BODY_ZONE_HEAD)
-			new_bodypart = new /obj/item/bodypart/head()
+			L = new dna.species.species_head()
 		if(BODY_ZONE_L_LEG)
-			new_bodypart = new /obj/item/bodypart/l_leg()
+			L = new dna.species.species_l_leg()
 		if(BODY_ZONE_R_LEG)
-			new_bodypart = new /obj/item/bodypart/r_leg()
+			L = new dna.species.species_r_leg()
 		if(BODY_ZONE_CHEST)
-			new_bodypart = new /obj/item/bodypart/chest()
-	if(new_bodypart)
-		new_bodypart.update_limb(fixed_icon, src)
-		if(robotic)
-			new_bodypart.change_bodypart_status(BODYPART_ROBOTIC)
+			L = new dna.species.species_chest() //PARIAH STATION EDIT END
 	. = new_bodypart
 
 /mob/living/carbon/human/newBodyPart(zone, robotic, fixed_icon)
@@ -150,7 +150,7 @@
 	if(bodypart)
 		bodypart.update_limb(fixed_icon, src)
 		if(robotic)
-			bodypart.change_bodypart_status(BODYPART_ROBOTIC)
+			L.change_bodypart_status(BODYTYPE_ROBOTIC)
 	. = bodypart
 
 /mob/living/carbon/alien/larva/newBodyPart(zone, robotic, fixed_icon)
@@ -163,7 +163,7 @@
 	if(new_bodypart)
 		new_bodypart.update_limb(fixed_icon, src)
 		if(robotic)
-			new_bodypart.change_bodypart_status(BODYPART_ROBOTIC)
+			L.change_bodypart_status(BODYTYPE_ROBOTIC)
 	. = new_bodypart
 
 /mob/living/carbon/alien/humanoid/newBodyPart(zone, robotic, fixed_icon)
@@ -218,7 +218,7 @@
 		if("orange")
 			. = "#ffc905"
 
-/mob/living/carbon/proc/Digitigrade_Leg_Swap(swap_back)
+/*mob/living/carbon/proc/Digitigrade_Leg_Swap(swap_back) - PARIAH STATION EDIT
 	var/body_plan_changed = FALSE
 	for(var/obj/item/bodypart/existing_bodypart as anything in bodyparts)
 		var/obj/item/bodypart/new_bodypart
@@ -250,4 +250,4 @@
 					uniform.adjusted = DIGITIGRADE_STYLE
 				leg_owner.update_inv_w_uniform()
 		if(leg_owner.shoes && !(leg_owner.shoes.item_flags & IGNORE_DIGITIGRADE) && !swap_back)
-			leg_owner.dropItemToGround(leg_owner.shoes)
+			leg_owner.dropItemToGround(leg_owner.shoes) */
