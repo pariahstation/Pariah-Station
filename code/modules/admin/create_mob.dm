@@ -39,4 +39,4 @@
 
 	H.update_body()
 	H.update_hair()
-	H.update_body_parts()
+	// H.update_body_parts() // PARIAH MODULAR REMOVAL

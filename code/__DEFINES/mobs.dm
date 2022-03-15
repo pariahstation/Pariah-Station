@@ -56,6 +56,16 @@
 #define BODYPART_ORGANIC 1
 #define BODYPART_ROBOTIC 2
 
+//PARIAH MODULAR EDIT START
+
+//Bodytype defines for how things can be worn.
+#define BODYTYPE_ORGANIC		(1<<0)
+#define BODYTYPE_ROBOTIC		(1<<1)
+#define BODYTYPE_HUMANOID		(1<<2) //Everything that isnt Grod
+#define BODYTYPE_BOXHEAD		(1<<3) //TV Head
+#define BODYTYPE_DIGITIGRADE	(1<<4) //Cancer
+#define NUMBER_OF_BODYTYPES	5 //KEEP THIS UPDATED OR SHIT WILL BREAK
+
 #define DEFAULT_BODYPART_ICON_ORGANIC 'icons/mob/human_parts_greyscale.dmi'
 #define DEFAULT_BODYPART_ICON_ROBOTIC 'icons/mob/augmentation/augments.dmi'
 
@@ -63,6 +73,10 @@
 #define ALIEN_BODYPART "alien"
 #define LARVA_BODYPART "larva"
 
+//Bodypart change blocking flags
+#define BP_BLOCK_CHANGE_SPECIES	(1<<0)
+
+//PARIAH MODULAR EDIT END
 
 ///Body type bitfields for allowed_animal_origin used to check compatible surgery body types (use NONE for no matching body type)
 #define HUMAN_BODY (1 << 0)

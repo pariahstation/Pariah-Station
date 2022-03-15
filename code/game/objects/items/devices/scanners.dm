@@ -302,14 +302,15 @@ GENE SCANNER
 							<td><font color='#ff9933'><b>[CEILING(fire_loss,1)]</b></font></td>\
 							<td><font color='#00cc66'><b>[CEILING(tox_loss,1)]</b></font></td>\
 							<td><font color='#33ccff'><b>[CEILING(oxy_loss,1)]</b></font></td></tr>"
-
+//PARIAH MODULAR EDIT START
 			if(mode == SCANNER_VERBOSE)
 				for(var/obj/item/bodypart/limb as anything in damaged)
-					dmgreport += "<tr><td><font color='#cc3333'>[capitalize(limb.name)]:</font></td>"
+					dmgreport += "<tr><td><font color='#0000CC'>[capitalize(parse_zone(org.body_zone))]:</font>
 					dmgreport += "<td><font color='#cc3333'>[(limb.brute_dam > 0) ? "[CEILING(limb.brute_dam,1)]" : "0"]</font></td>"
 					dmgreport += "<td><font color='#ff9933'>[(limb.burn_dam > 0) ? "[CEILING(limb.burn_dam,1)]" : "0"]</font></td></tr>"
 			dmgreport += "</font></table>"
 			render_list += dmgreport // tables do not need extra linebreak
+//PARIAH MODULAR EDIT END
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/humantarget = target

@@ -1211,6 +1211,12 @@ GLOBAL_LIST_INIT(freon_color_matrix, list("#2E5E69", "#60A2A8", "#A1AFB1", rgb(0
 	var/icon/I = getFlatIcon(thing)
 	return icon2html(I, target, sourceonly = sourceonly)
 
+	//Returns TRUE if the given iconstate is located in the given file, otherwise returns false. PARIAH MODULAR EDIT
+/proc/icon_exists(file, state)
+	var/list/states = icon_states(file)
+	if(states.Find(state))
+		return TRUE
+
 GLOBAL_LIST_EMPTY(transformation_animation_objects)
 
 

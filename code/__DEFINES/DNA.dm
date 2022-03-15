@@ -65,30 +65,22 @@
 #define NOBLOOD 6
 #define NOTRANSSTING 7
 #define NOZOMBIE 8
-/// Uses weird leg sprites. Optional for Lizards, required for ashwalkers. Don't give it to other races unless you make sprites for this (see human_parts_greyscale.dmi)
-#define DIGITIGRADE 9
-#define NO_UNDERWEAR 10
-#define NOSTOMACH 11
-#define NO_DNA_COPY 12
-#define DRINKSBLOOD 13
-/// Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting
-#define DYNCOLORS 14
-#define AGENDER 15
-/// Do not draw eyes or eyeless overlay
-#define NOEYESPRITES 16
-/// Used for determining which wounds are applicable to this species.
-/// if we have flesh (can suffer slash/piercing/burn wounds, requires they don't have NOBLOOD)
-#define HAS_FLESH 17
-/// if we have bones (can suffer bone wounds)
-#define HAS_BONE 18
-///If we have a limb-specific overlay sprite
-#define HAS_MARKINGS 19
-/// Do not draw blood overlay
-#define NOBLOODOVERLAY 20
-///No augments, for monkeys in specific because they will turn into fucking freakazoids https://cdn.discordapp.com/attachments/326831214667235328/791313258912153640/102707682-fa7cad80-4294-11eb-8f13-8c689468aeb0.png
-#define NOAUGMENTS 21
-///will be assigned a universal vampire themed last name shared by their department. this is preferenced!
-#define BLOOD_CLANS 22
+//PARIAH MODULAR EDIT START
+#define NO_UNDERWEAR	10
+#define NOLIVER			11
+#define NOSTOMACH		12
+#define NO_DNA_COPY     13
+#define DRINKSBLOOD		14
+#define NOFLASH			15
+#define DYNCOLORS		16 //! Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting TRANSLATION: AWFUL.
+#define AGENDER			17
+#define NOEYESPRITES	18 //! Do not draw eyes or eyeless overlay
+#define NOREAGENTS     19 //! DO NOT PROCESS REAGENTS
+#define REVIVESBYHEALING 20 // Will revive on heal when healing and total HP > 0.
+#define NOHUSK			21 // Can't be husked.
+#define NOMOUTH			22
+#define NOSOCKS       23 // You cannot wear socks.
+//PARIAH MODULAR EDIT END
 
 //organ slots
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"
@@ -196,7 +188,7 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 #define SPECIES_LUMINESCENT "lum"
 #define SPECIES_STARGAZER "stargazer"
 #define SPECIES_LIZARD "lizard"
-#define SPECIES_LIZARD_ASH "ashlizard"
+#define SPECIES_ASHWALKER "ashlizard" //PARIAH MODULAR EDIT
 #define SPECIES_LIZARD_SILVER "silverlizard"
 #define SPECIES_DULLAHAN "dullahan"
 #define SPECIES_SKELETON "skeleton"
@@ -204,6 +196,8 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 #define SPECIES_ZOMBIE "memezombies"
 #define SPECIES_ZOMBIE_HALLOWEEN "zombie"
 #define SPECIES_ADDICT "goofzombies"
+#define SPECIES_ABDUCTOR "abductor" //PARIAH MODULAR EDIT
+#define SPECIES_SHADOWPERSON "shadow" //PARIAH MODULAR EDIT
 
 #define SPECIES_ABDUCTOR "abductor"
 #define SPECIES_ANDROID "android"
@@ -214,6 +208,26 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 #define SPECIES_SNAIL "snail"
 #define SPECIES_SYNTH "synth"
 #define SPECIES_SYNTH_MILITARY "military_synth"
+
+//PARIAH MODULAR EDIT START - Species bitflags, used for species_restricted. If this somehow ever gets above 23 Bee has larger problems.
+#define FLAG_HUMAN			(1<<0)
+#define FLAG_IPC			(1<<1)
+#define FLAG_ETHEREAL		(1<<2)
+#define FLAG_PLASMAMAN		(1<<3)
+#define	FLAG_APID			(1<<4)
+#define FLAG_MOTH			(1<<5)
+#define FLAG_LIZARD			(1<<6)
+#define FLAG_FELINID		(1<<7)
+#define FLAG_OOZELING		(1<<8)
+#define FLAG_FLY			(1<<9)
+#define FLAG_DEBUG_SPECIES	(1<<10)
+#define FLAG_MONKEY (1<<11)
+
+#define DIGITIGRADE_NEVER 0
+#define DIGITIGRADE_OPTIONAL 1
+#define DIGITIGRADE_FORCED 2
+
+//PARIAH MODULAR EDIT END
 
 //Defines for Golem Species IDs
 #define SPECIES_GOLEM "iron_golem"

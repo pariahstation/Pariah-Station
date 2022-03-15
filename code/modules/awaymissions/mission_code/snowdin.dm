@@ -196,9 +196,9 @@
 	var/list/plasma_parts = list()//a list of the organic parts to be turned into plasma limbs
 	var/list/robo_parts = list()//keep a reference of robotic parts so we know if we can turn them into a plasmaman
 	for(var/obj/item/bodypart/burn_limb as anything in burn_human.bodyparts)
-		if(burn_limb.status == BODYPART_ORGANIC && burn_limb.species_id != SPECIES_PLASMAMAN) //getting every organic, non-plasmaman limb (augments/androids are immune to this)
+		if(IS_ORGANIC_LIMB(NN) && NN.limb_id != "plasmaman") //getting every organic, non-plasmaman limb (augments/androids are immune to this) PARIAH MODULAR EDIT
 			plasma_parts += burn_limb
-		if(burn_limb.status == BODYPART_ROBOTIC)
+		if(!IS_ORGANIC_LIMB(NN))
 			robo_parts += burn_limb
 
 	burn_human.adjustToxLoss(15)

@@ -89,7 +89,7 @@
 	if(!istype(O))
 		return
 
-	if(O.status == BODYPART_ROBOTIC)
+	if(!IS_ORGANIC_LIMB(O)) //PARIAH MODULAR EDIT
 		return
 
 	if (!(flags & CALTROP_BYPASS_SHOES))

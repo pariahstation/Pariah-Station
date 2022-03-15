@@ -205,7 +205,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 
 			amazed_human.update_body()
 			amazed_human.update_hair()
-			amazed_human.update_body_parts()
+			amazed_human.update_body_parts(TRUE) //PARIAH MODULAR EDIT
 			amazed_human.update_mutations_overlay() // no hulk lizard
 
 		if("gender")

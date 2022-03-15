@@ -482,13 +482,19 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 
 		preference.apply_to_human(character, read_preference(preference.type))
 
+//PARIAH MODULAR EDIT START - Because of how set_species replaces all bodyparts with new ones, hair needs to be set AFTER species.
 	character.dna.real_name = character.real_name
+	character.hair_color = hair_color
+	character.facial_hair_color = facial_hair_color
 
+	character.hair_style = hair_style
+	character.facial_hair_style = facial_hair_style
+//PARIAH MODULAR EDIT END
 	if(icon_updates)
 		character.icon_render_key = null //turns out if you don't set this to null update_body_parts does nothing, since it assumes the operation was cached
 		character.update_body()
 		character.update_hair()
-		character.update_body_parts()
+		character.update_body_parts(TRUE) //PARIAH MODULAR EDIT
 
 
 /// Returns whether the parent mob should have the random hardcore settings enabled. Assumes it has a mind.
