@@ -61,7 +61,7 @@
 	/// Total level of visualy impairing items
 	var/tinttotal = 0
 
-	var/list/icon_render_keys = list() - //PARIAH MODULAR ADDITION
+	var/list/icon_render_keys = list() //PARIAH MODULAR ADDITION
 
 	///Gets filled up in [create_bodyparts()][/mob/living/carbon/proc/create_bodyparts]
 	var/list/bodyparts = list(

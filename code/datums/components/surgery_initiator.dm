@@ -89,7 +89,7 @@
 		if(affecting)
 			if(!surgery.requires_bodypart)
 				continue
-			if(surgery.requires_bodypart_type && !(affecting.bodytype & S.requires_bodypart_type)) //PARIAH STATION EDIT
+			if(surgery.requires_bodypart_type && !(affecting.bodytype & surgery.requires_bodypart_type)) //PARIAH STATION EDIT
 				continue
 			if(surgery.requires_real_bodypart && affecting.is_pseudopart)
 				continue
@@ -128,7 +128,7 @@
 
 	var/required_tool_type = TOOL_CAUTERY
 	var/obj/item/close_tool = user.get_inactive_held_item()
-	var/is_robotic = S.requires_bodypart_type == BODYTYPE_ROBOTIC //PARIAH STATION EDIT
+	var/is_robotic = the_surgery.requires_bodypart_type == BODYTYPE_ROBOTIC //PARIAH STATION EDIT
 
 	if(is_robotic)
 		required_tool_type = TOOL_SCREWDRIVER
@@ -300,7 +300,7 @@
 
 		return
 
-	if (!isnull(affecting_limb) && surgery.requires_bodypart_type && !(affecting.bodytype & S.requires_bodypart_type)) //PARIAH STATION EDIT
+	if (!isnull(affecting_limb) && surgery.requires_bodypart_type && affecting_limb.status != surgery.requires_bodypart_type)
 		target.balloon_alert(user, "not the right type of limb!")
 		return
 

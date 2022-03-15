@@ -104,7 +104,7 @@
 			return TRUE
 
 	var/heal_amt = 10
-	var/list/hurt_limbs = H.get_damaged_bodyparts(1, 1, null, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
+	var/list/hurt_limbs = blessed.get_damaged_bodyparts(1, 1, null, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 
 	if(hurt_limbs.len)
 		for(var/X in hurt_limbs)
@@ -175,7 +175,7 @@
 		return TRUE
 
 	//charge(?) and go
-	if(BP.heal_damage(5,5,null,BODYTYPE_ROBOTIC)) //PARIAH STATION EDIT
+	if(bodypart.heal_damage(5,5,null,BODYTYPE_ROBOTIC)) //PARIAH STATION EDIT
 		blessed.update_damage_overlays()
 
 	blessed.visible_message(span_notice("[chap] [did_we_charge ? "repairs" : "repairs and charges"] [blessed] with the power of [GLOB.deity]!"))

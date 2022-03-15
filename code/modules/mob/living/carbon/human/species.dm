@@ -31,10 +31,22 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///Clothing offsets. If a species has a different body than other species, you can offset clothing so they look less weird.
 	var/list/offset_features = list(OFFSET_UNIFORM = list(0,0), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,0), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,0), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,0), OFFSET_NECK = list(0,0))
 
+	//PARIAH MODULAR EDIT START
+	//The maximum number of bodyparts this species can have.
+	var/max_bodypart_count = 6
+	//PARIAH MODULAR EDIT END
+
 	///This allows races to have specific hair colors. If null, it uses the H's hair/facial hair colors. If "mutcolor", it uses the H's mutant_color. If "fixedmutcolor", it uses fixedmutcolor
 	var/hair_color
 	///The alpha used by the hair. 255 is completely solid, 0 is invisible.
 	var/hair_alpha = 255
+
+	//PARIAH MODULAR EDIT START
+	///This is used for children, it will determine their default limb ID for use of examine. See examine.dm.
+	var/examine_limb_id
+	///Never, Optional, or Forced digi legs?
+	var/digitigrade_customization = DIGITIGRADE_NEVER
+	//PARIAH MODULAR EDIT END
 
 	///Does the species use skintones or not? As of now only used by humans.
 	var/use_skintones = FALSE
@@ -204,6 +216,16 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	///Bitflag that controls what in game ways something can select this species as a spawnable source, such as magic mirrors. See [mob defines][code/__DEFINES/mobs.dm] for possible sources.
 	var/changesource_flags = NONE
+
+	//PARIAH MODULAR EDIT START
+	//K-Limbs. If a species doesn't have their own limb types. Do not override this, use the K-Limbs overrides at the top of the species datum.
+	var/obj/item/bodypart/species_chest = /obj/item/bodypart/chest
+	var/obj/item/bodypart/species_head = /obj/item/bodypart/head
+	var/obj/item/bodypart/species_l_arm = /obj/item/bodypart/l_arm
+	var/obj/item/bodypart/species_r_arm = /obj/item/bodypart/r_arm
+	var/obj/item/bodypart/species_r_leg = /obj/item/bodypart/r_leg
+	var/obj/item/bodypart/species_l_leg = /obj/item/bodypart/l_leg
+	//PARIAH MODULAR EDIT END
 
 	///For custom overrides for species ass images
 	var/icon/ass_image
@@ -390,6 +412,53 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			// organ.Insert will qdel any current organs in that slot, so we don't need to.
 			replacement.Insert(C, TRUE, FALSE)
 
+
+/datum/species/proc/replace_body(mob/living/carbon/C, var/datum/species/new_species)
+	new_species ||= C.dna.species //If no new species is provided, assume its src.
+	//Note for future: Potentionally add a new C.dna.species() to build a template species for more accurate limb replacement
+
+	if((new_species.digitigrade_customization == DIGITIGRADE_OPTIONAL && C.dna.features["legs"] == "Digitigrade Legs") || new_species.digitigrade_customization == DIGITIGRADE_FORCED)
+		new_species.species_r_leg = /obj/item/bodypart/r_leg/digitigrade
+		new_species.species_l_leg = /obj/item/bodypart/l_leg/digitigrade
+
+	for(var/obj/item/bodypart/old_part as() in C.bodyparts)
+		if(old_part.change_exempt_flags & BP_BLOCK_CHANGE_SPECIES)
+			continue
+
+		switch(old_part.body_zone)
+			if(BODY_ZONE_HEAD)
+				var/obj/item/bodypart/head/new_part = new new_species.species_head()
+				new_part.replace_limb(C, TRUE)
+				new_part.update_limb(is_creating = TRUE)
+				qdel(old_part)
+			if(BODY_ZONE_CHEST)
+				var/obj/item/bodypart/chest/new_part = new new_species.species_chest()
+				new_part.replace_limb(C, TRUE)
+				new_part.update_limb(is_creating = TRUE)
+				qdel(old_part)
+			if(BODY_ZONE_L_ARM)
+				var/obj/item/bodypart/l_arm/new_part = new new_species.species_l_arm()
+				new_part.replace_limb(C, TRUE)
+				new_part.update_limb(is_creating = TRUE)
+				qdel(old_part)
+			if(BODY_ZONE_R_ARM)
+				var/obj/item/bodypart/r_arm/new_part = new new_species.species_r_arm()
+				new_part.replace_limb(C, TRUE)
+				new_part.update_limb(is_creating = TRUE)
+				qdel(old_part)
+			if(BODY_ZONE_L_LEG)
+				var/obj/item/bodypart/l_leg/new_part = new new_species.species_l_leg()
+				new_part.replace_limb(C, TRUE)
+				new_part.update_limb(is_creating = TRUE)
+				qdel(old_part)
+			if(BODY_ZONE_R_LEG)
+				var/obj/item/bodypart/r_leg/new_part = new new_species.species_r_leg()
+				new_part.replace_limb(C, TRUE)
+				new_part.update_limb(is_creating = TRUE)
+				qdel(old_part)
+
+
+
 /**
  * Proc called when a carbon becomes this species.
  *
@@ -414,11 +483,17 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	fix_non_native_limbs(C)
 
+	/* PARIAH MODULAR EDIT
 	// this needs to be FIRST because qdel calls update_body which checks if we have DIGITIGRADE legs or not and if not then removes DIGITIGRADE from species_traits
 	if(C.dna.species.mutant_bodyparts["legs"] && C.dna.features["legs"] == "Digitigrade Legs")
 		species_traits += DIGITIGRADE
 	if(DIGITIGRADE in species_traits)
 		C.Digitigrade_Leg_Swap(FALSE)
+
+	*/
+
+	replace_body(C)
+	//PARIAH MODULAR EDIT END
 
 	C.mob_biotypes = inherent_biotypes
 
@@ -494,8 +569,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	SHOULD_CALL_PARENT(TRUE)
 	if(C.dna.species.exotic_bloodtype)
 		C.dna.blood_type = random_blood_type()
+	/* PARIAH MODULAR EDIT REMOVAL
 	if(DIGITIGRADE in species_traits)
 		C.Digitigrade_Leg_Swap(TRUE)
+	PARIAH MODULAR EDIT END */
 	for(var/X in inherent_traits)
 		REMOVE_TRAIT(C, X, SPECIES_TRAIT)
 	for(var/obj/item/organ/external/organ in C.internal_organs)
@@ -900,6 +977,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(!source.dna.features["ears"] || source.dna.features["ears"] == "None" || source.head && (source.head.flags_inv & HIDEHAIR) || (source.wear_mask && (source.wear_mask.flags_inv & HIDEHAIR)) || !noggin || noggin.status == BODYPART_ROBOTIC)
 			bodyparts_to_add -= "ears"
 
+	/* PARIAH MODULAR EDIT
 	//Digitigrade legs are stuck in the phantom zone between true limbs and mutant bodyparts. Mainly it just needs more aggressive updating than most limbs.
 	var/update_needed = FALSE
 	var/not_digitigrade = TRUE
@@ -922,6 +1000,35 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		source.update_body_parts()
 	if(not_digitigrade && (DIGITIGRADE in species_traits)) //Curse is lifted
 		species_traits -= DIGITIGRADE
+	*/
+
+
+	////PUT ALL YOUR WEIRD ASS REAL-LIMB HANDLING HERE
+	///Digi handling
+	if(H.dna.species.bodytype & BODYTYPE_DIGITIGRADE)
+		var/uniform_compatible = FALSE
+		var/suit_compatible = FALSE
+		if(!(H.w_uniform) || (H.w_uniform.supports_variations & DIGITIGRADE_VARIATION) || (H.w_uniform.supports_variations & DIGITIGRADE_VARIATION_NO_NEW_ICON)) //Checks uniform compatibility
+			uniform_compatible = TRUE
+		if((!H.wear_suit) || (H.wear_suit.supports_variations & DIGITIGRADE_VARIATION) || !(H.wear_suit.body_parts_covered & LEGS) || (H.wear_suit.supports_variations & DIGITIGRADE_VARIATION_NO_NEW_ICON)) //Checks suit compatability
+			suit_compatible = TRUE
+
+		if((uniform_compatible && suit_compatible) || (suit_compatible && H.wear_suit?.flags_inv & HIDEJUMPSUIT)) //If the uniform is hidden, it doesnt matter if its compatible
+			for(var/obj/item/bodypart/BP as() in H.bodyparts)
+				if(BP.bodytype & BODYTYPE_DIGITIGRADE)
+					BP.limb_id = "digitigrade"
+
+		else
+			for(var/obj/item/bodypart/BP as() in H.bodyparts)
+				if(BP.bodytype & BODYTYPE_DIGITIGRADE)
+					BP.limb_id = "lizard"
+	///End digi handling
+
+
+	////END REAL-LIMB HANDLING
+	H.update_body_parts()
+
+	//PARIAH MODULAR EDIT END
 
 	if(!bodyparts_to_add)
 		return

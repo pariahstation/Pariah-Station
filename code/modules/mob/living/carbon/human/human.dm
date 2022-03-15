@@ -12,9 +12,8 @@
 
 	prepare_huds() //Prevents a nasty runtime on human init - PARIAH MODULAR ADDITION
 	if(dna.species)
-
-		INVOKE_ASYNC(src, .proc/set_species, dna.species.type)
-			set_species(dna.species.type) //This generates new limbs based on the species, beware. - PARIAH MODULAR ADDITION
+		//INVOKE_ASYNC(src, .proc/set_species, dna.species.type) PARIAH MODULAR REMOVAL
+		set_species(dna.species.type) //This generates new limbs based on the species, beware. - PARIAH MODULAR ADDITION
 
 	//initialise organs
 	create_internal_organs() //most of it is done in set_species now, this is only for parent call

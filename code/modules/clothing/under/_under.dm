@@ -101,10 +101,11 @@
 	if(ishuman(user)) //PARIAH MODULAR EDIT
 		var/mob/living/carbon/human/H = user
 
-	//PARIAH MODULAR EDIT START
-/*		if(DIGITIGRADE in H.dna.species.species_traits)
+		/* PARIAH MODULAR EDIT START
+		if(DIGITIGRADE in H.dna.species.species_traits)
 			adjusted = DIGITIGRADE_STYLE
-*/ //PARIAH MODULAR EDIT END
+ 		PARIAH MODULAR EDIT END */
+
 		H.update_inv_w_uniform()
 
 

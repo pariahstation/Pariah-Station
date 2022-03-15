@@ -66,9 +66,9 @@ INITIALIZE_IMMEDIATE(/obj/item/organ)
 	if(replaced)
 		replaced.Remove(reciever, special = TRUE)
 		if(drop_if_replaced)
-			var/dest = get_turf(M) //PARIAH STATION EDIT START
+			var/dest = get_turf(reciever) //PARIAH STATION EDIT START
 			if(dest)
-				replaced.forceMove(get_turf(M))
+				replaced.forceMove(get_turf(reciever))
 			else
 				qdel(replaced) //PARIAH STATION EDIT END
 		else

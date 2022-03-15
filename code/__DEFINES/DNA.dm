@@ -66,20 +66,21 @@
 #define NOTRANSSTING 7
 #define NOZOMBIE 8
 //PARIAH MODULAR EDIT START
-#define NO_UNDERWEAR	10
-#define NOLIVER			11
-#define NOSTOMACH		12
-#define NO_DNA_COPY     13
-#define DRINKSBLOOD		14
-#define NOFLASH			15
-#define DYNCOLORS		16 //! Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting TRANSLATION: AWFUL.
-#define AGENDER			17
-#define NOEYESPRITES	18 //! Do not draw eyes or eyeless overlay
-#define NOREAGENTS     19 //! DO NOT PROCESS REAGENTS
-#define REVIVESBYHEALING 20 // Will revive on heal when healing and total HP > 0.
-#define NOHUSK			21 // Can't be husked.
-#define NOMOUTH			22
-#define NOSOCKS       23 // You cannot wear socks.
+#define NO_UNDERWEAR	9
+#define NOLIVER			10
+#define NOSTOMACH		11
+#define NO_DNA_COPY     12
+#define DRINKSBLOOD		13
+#define NOFLASH			14
+#define DYNCOLORS		15 //! Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting TRANSLATION: AWFUL.
+#define HAS_FLESH		16
+#define HAS_BONE		17
+#define HAS_MARKINGS	18
+#define NOBLOODOVERLAY	19
+#define	NOAUGMENTS		20
+#define BLOOD_CLANS		21
+#define AGENDER			22
+#define NOEYESPRITES	23 //! Do not draw eyes or eyeless overlay.
 //PARIAH MODULAR EDIT END
 
 //organ slots
@@ -195,7 +196,7 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 #define SPECIES_VAMPIRE "vampire"
 #define SPECIES_ZOMBIE "memezombies"
 #define SPECIES_ZOMBIE_HALLOWEEN "zombie"
-#define SPECIES_ADDICT "goofzombies"
+#define SPECIES_GOOFZOMBIE "goofzombies"
 #define SPECIES_ABDUCTOR "abductor" //PARIAH MODULAR EDIT
 #define SPECIES_SHADOWPERSON "shadow" //PARIAH MODULAR EDIT
 

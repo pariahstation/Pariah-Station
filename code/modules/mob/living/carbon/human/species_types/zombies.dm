@@ -2,7 +2,7 @@
 
 /datum/species/zombie
 	// 1spooky
-	name = name = "\improper High-Functioning Zombie" //PARIAH MODULAR EDIT
+	name = "\improper High-Functioning Zombie" //PARIAH MODULAR EDIT
 	id = SPECIES_ZOMBIE
 	say_mod = "moans"
 	sexes = 0

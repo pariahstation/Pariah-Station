@@ -292,7 +292,8 @@ There are several things that need to be remembered:
 		inv.update_appearance()
 
 	if(shoes)
-		var/icon_file = 'icons/mob/clothing/feet.dmi' //PARIAH MODULAR EDIT START
+	//PARIAH MODULAR EDIT START
+		var/icon_file = 'icons/mob/clothing/feet.dmi'
 		if(istype(shoes, /obj/item/clothing/shoes))
 			var/obj/item/clothing/shoes/S = shoes
 			if(S.sprite_sheets & (dna?.species.bodyflag))
@@ -307,7 +308,7 @@ There are several things that need to be remembered:
 
 			if(!handled_icon)
 				overlays_standing[SHOES_LAYER] = S.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = icon_file, isinhands = FALSE, species = dna.species.species_clothing_path)
-//PARIAH MODULAR EDIT END
+	//PARIAH MODULAR EDIT END
 		shoes.screen_loc = ui_shoes //move the item to the appropriate screen loc
 		if(client && hud_used?.hud_shown)
 			if(hud_used.inventory_shown) //if the inventory is open
@@ -555,13 +556,15 @@ generate/load female uniform sprites matching all previously decided variables
 	else
 		t_state = !isinhands ? (worn_icon_state ? worn_icon_state : icon_state) : (inhand_icon_state ? inhand_icon_state : icon_state)
 
-	//Find a valid icon file from variables+arguments - PARIAH MODULAR EDIT START
+	//PARIAH MODULAR EDIT START
+	//Find a valid icon file from variables+arguments
 	var/file2use
 	if(override_file)
 		file2use = override_file
 	else
 		file2use = !isinhands ? (mob_overlay_icon ? mob_overlay_icon : default_icon_file) : default_icon_file
-//PARIAH MODULAR EDIT END
+	//PARIAH MODULAR EDIT END
+
 	//Find a valid layer from variables+arguments
 	var/layer2use = alternate_worn_layer ? alternate_worn_layer : default_layer
 

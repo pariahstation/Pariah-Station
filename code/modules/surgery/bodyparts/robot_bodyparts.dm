@@ -126,7 +126,7 @@
 	name = "cyborg torso"
 	desc = "A heavily reinforced case containing cyborg logic boards, with space for a standard power cell."
 	inhand_icon_state = "buildpipe"
-	icon = static_icon =  'icons/mob/augmentation/augments.dmi' //PARIAH STATION EDIT START
+	static_icon =  'icons/mob/augmentation/augments.dmi' //PARIAH STATION EDIT START
 	icon = null
 	limb_id = "robotic"
 	flags_1 = CONDUCT_1
@@ -234,7 +234,7 @@
 	name = "cyborg head"
 	desc = "A standard reinforced braincase, with spine-plugged neural socket and sensor gimbals."
 	inhand_icon_state = "buildpipe"
-	icon = static_icon = 'icons/mob/augmentation/augments.dmi' //PARIAH STATION EDIT START
+	static_icon = 'icons/mob/augmentation/augments.dmi' //PARIAH STATION EDIT START
 	limb_id = "robotic"
 	icon = null
 	flags_1 = CONDUCT_1
@@ -336,7 +336,7 @@
 /obj/item/bodypart/l_arm/robot/surplus
 	name = "surplus prosthetic left arm"
 	desc = "A skeletal, robotic limb. Outdated and fragile, but it's still better than nothing."
-	icon = static_icon = 'icons/mob/augmentation/surplus_augments.dmi' //PARIAH STATION EDIT
+	static_icon = 'icons/mob/augmentation/surplus_augments.dmi' //PARIAH STATION EDIT
 	brute_reduction = 0
 	burn_reduction = 0
 	max_damage = 20

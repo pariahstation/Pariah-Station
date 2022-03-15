@@ -129,17 +129,17 @@
 	var/obj/item/bodypart/new_bodypart
 	switch(zone) //PARIAH STATION EDIT START
 		if(BODY_ZONE_L_ARM)
-			L = new dna.species.species_l_arm()
+			new_bodypart = new dna.species.species_l_arm()
 		if(BODY_ZONE_R_ARM)
-			L = new dna.species.species_r_arm()
+			new_bodypart = new dna.species.species_r_arm()
 		if(BODY_ZONE_HEAD)
-			L = new dna.species.species_head()
+			new_bodypart = new dna.species.species_head()
 		if(BODY_ZONE_L_LEG)
-			L = new dna.species.species_l_leg()
+			new_bodypart = new dna.species.species_l_leg()
 		if(BODY_ZONE_R_LEG)
-			L = new dna.species.species_r_leg()
+			new_bodypart = new dna.species.species_r_leg()
 		if(BODY_ZONE_CHEST)
-			L = new dna.species.species_chest() //PARIAH STATION EDIT END
+			new_bodypart = new dna.species.species_chest() //PARIAH STATION EDIT END
 	. = new_bodypart
 
 /mob/living/carbon/human/newBodyPart(zone, robotic, fixed_icon)
@@ -150,7 +150,7 @@
 	if(bodypart)
 		bodypart.update_limb(fixed_icon, src)
 		if(robotic)
-			L.change_bodypart_status(BODYTYPE_ROBOTIC)
+			bodypart.change_bodypart_status(BODYTYPE_ROBOTIC)
 	. = bodypart
 
 /mob/living/carbon/alien/larva/newBodyPart(zone, robotic, fixed_icon)
@@ -163,7 +163,7 @@
 	if(new_bodypart)
 		new_bodypart.update_limb(fixed_icon, src)
 		if(robotic)
-			L.change_bodypart_status(BODYTYPE_ROBOTIC)
+			new_bodypart.change_bodypart_status(BODYTYPE_ROBOTIC)
 	. = new_bodypart
 
 /mob/living/carbon/alien/humanoid/newBodyPart(zone, robotic, fixed_icon)

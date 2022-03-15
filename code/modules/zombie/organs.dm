@@ -78,7 +78,7 @@
 		old_species = owner.dna.species.type
 		C.set_species(/datum/species/zombie/infectious) //PARIAH STATION EDIT START
 
-	ar/stand_up = (C.stat == DEAD) || (C.stat == UNCONSCIOUS)
+	var/stand_up = (C.stat == DEAD) || (C.stat == UNCONSCIOUS)
 
 	//Fully heal the zombie's damage the first time they rise
 	C.setToxLoss(0, 0)

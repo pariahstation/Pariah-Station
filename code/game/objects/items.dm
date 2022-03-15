@@ -121,7 +121,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	var/transparent_protection = NONE
 
 	///flags for what should be done when you click on the item, default is picking it up
-	var/interaction_flags_item =
+	var/interaction_flags_item = INTERACT_ITEM_ATTACK_HAND_PICKUP
 
 	/// Used in picking icon_states based on the string color here. Also used for cables or something. This could probably do with being deprecated. PARIAH MODULAR EDIT
 	var/item_color = null

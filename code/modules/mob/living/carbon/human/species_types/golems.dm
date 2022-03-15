@@ -1086,7 +1086,7 @@
 	var/last_creation = 0
 	var/brother_creation_cooldown = 300
 //PARIAH MODULAR EDIT START
-/obj/item/bodypart/chest/golem/cardboard
+	species_chest = /obj/item/bodypart/chest/golem/cardboard
 	species_head = /obj/item/bodypart/head/golem/cardboard
 	species_l_arm = /obj/item/bodypart/l_arm/golem/cardboard
 	species_r_arm = /obj/item/bodypart/r_arm/golem/cardboard

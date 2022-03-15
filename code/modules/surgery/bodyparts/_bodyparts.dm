@@ -4,12 +4,12 @@
 	force = 3
 	throwforce = 3
 	w_class = WEIGHT_CLASS_SMALL
-//PARIAH STATION EDIT START
+	//PARIAH STATION EDIT START
 	icon = 'icons/mob/human_parts_greyscale.dmi'
 	var/husk_icon = 'icons/mob/human_parts.dmi'
 	var/husk_type = "humanoid"
 	var/static_icon = 'icons/mob/human_parts.dmi' //Uncolorable sprites
-//PARIAH STATION EDIT END
+	//PARIAH STATION EDIT END
 	icon_state = ""
 	/// The icon for Organic limbs using greyscale
 	var/icon_greyscale = DEFAULT_BODYPART_ICON_ORGANIC
@@ -21,7 +21,9 @@
 	var/datum/weakref/original_owner
 	var/status = BODYPART_ORGANIC
 	var/needs_processing = FALSE
-	///If you'd like to know if a bodypart is organic, please use is_organic_limb() - PARIAH STATION EDIT START
+
+	//PARIAH STATION EDIT START
+	///If you'd like to know if a bodypart is organic, please use is_organic_limb()
 	var/bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC //List of bodytypes flags, important for fitting clothing.
 	var/change_exempt_flags //Defines when a bodypart should not be changed. Example: BP_BLOCK_CHANGE_SPECIES prevents the limb from being overwritten on species gain
 
@@ -31,7 +33,8 @@
 	var/uses_mutcolor = TRUE //Does this limb have a greyscale version?
 	var/is_dimorphic = FALSE //Is there a sprite difference between male and female?
 	var/draw_color //Greyscale draw color
-//PARIAH STATION EDIT END
+	//PARIAH STATION EDIT END
+
 	/// BODY_ZONE_CHEST, BODY_ZONE_L_ARM, etc , used for def_zone
 	var/body_zone
 	var/aux_zone // used for hands
@@ -100,18 +103,6 @@
 	var/light_burn_msg = "numb"
 	var/medium_burn_msg = "blistered"
 	var/heavy_burn_msg = "peeling away"
-//PARIAH STATION EDIT START
-/obj/item/bodypart/Initialize()
-	..()
-	name = "[limb_id] [parse_zone(body_zone)]"
-	update_icon_dropped()
-
-/obj/item/bodypart/forceMove(atom/destination) //Please. Never forcemove a limb if its's actually in use. This is only for borgs.
-	. = ..()
-	if(isturf(destination))
-		update_icon_dropped()
-
-//PARIAH STATION EDIT END
 
 	/// The wounds currently afflicting this body part
 	var/list/wounds
@@ -140,6 +131,18 @@
 	///A list of all the external organs we've got stored to draw horns, wings and stuff with (special because we are actually in the limbs unlike normal organs :/ )
 	var/list/obj/item/organ/external/external_organs = list()
 
+	//PARIAH STATION EDIT START
+/obj/item/bodypart/Initialize()
+	..()
+	name = "[limb_id] [parse_zone(body_zone)]"
+	update_icon_dropped()
+
+/obj/item/bodypart/forceMove(atom/destination) //Please. Never forcemove a limb if its's actually in use. This is only for borgs.
+	. = ..()
+	if(isturf(destination))
+		update_icon_dropped()
+
+	//PARIAH STATION EDIT END
 
 /obj/item/bodypart/Initialize(mapload)
 	. = ..()
@@ -829,7 +832,7 @@
 		should_draw_gender = owner_species.sexes
 		if(should_draw_gender) //Assigns the limb a gender for rendering - PARIAH STATION EDIT START
 			limb_gender = (H.gender == MALE) ? "m" : "f"
-//PARIAH STATION EDIT END
+		//PARIAH STATION EDIT END
 		if(((MUTCOLORS in S.species_traits) || (DYNCOLORS in S.species_traits)) && uses_mutcolor) //Ethereal code. Motherfuckers. - PARIAH STATION EDIT
 			if(owner_species.fixed_mut_color)
 				species_color = owner_species.fixed_mut_color
@@ -903,7 +906,7 @@
 			limb_em_block.dir = image_dir
 			limb.overlays += limb_em_block
 		return
-//PARIAH STATION EDIT START
+	//PARIAH STATION EDIT START
 	if(is_husked)
 		limb.icon = husk_icon
 		limb.icon_state = "[husk_type]_husk_[body_zone]"

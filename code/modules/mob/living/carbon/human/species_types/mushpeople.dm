@@ -1,7 +1,7 @@
 /datum/species/mush //mush mush codecuck
 	name = "\improper Mushroomperson" //PARIAH MODULAR EDIT
 	plural_form = "Mushroompeople"
-	id = SPECIES_MUSH
+	id = SPECIES_MUSHROOM
 	mutant_bodyparts = list("caps" = "Round")
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
 

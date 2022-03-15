@@ -16,13 +16,13 @@
 	affecting.receive_damage(clamp(brute_dam/2 * affecting.body_damage_coeff, 15, 50), clamp(burn_dam/2 * affecting.body_damage_coeff, 0, 50), wound_bonus=CANT_WOUND) //Damage the chest based on limb's existing damage
 	if(!silent)
 		limb_owner.visible_message(span_danger("<B>[limb_owner]'s [name] is violently dismembered!</B>"))
-//PARIAH STATION EDIT START
+	//PARIAH STATION EDIT START
 	if(C.stat <= SOFT_CRIT)//No more screaming while unconsious
 		if(IS_ORGANIC_LIMB(affecting))//Chest is a good indicator for if a carbon is robotic in nature or not.
 			INVOKE_ASYNC(C, /mob.proc/emote, "scream")
 
 	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
-//PARIAH STATION EDIT END
+	//PARIAH STATION EDIT END
 	playsound(get_turf(limb_owner), 'sound/effects/dismember.ogg', 80, TRUE)
 	SEND_SIGNAL(limb_owner, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
 	limb_owner.mind?.add_memory(MEMORY_DISMEMBERED, list(DETAIL_LOST_LIMB = src, DETAIL_PROTAGONIST = limb_owner), story_value = STORY_VALUE_AMAZING)
@@ -376,6 +376,17 @@
 	new_limb_owner.update_hair()
 	return TRUE // PARIAH STATION EDIT
 
+	//PARIAH MODULAR EDIT
+/obj/item/bodypart/proc/synchronize_bodytypes(mob/living/carbon/C)
+	if(!C.dna.species)
+		return
+	//This codeblock makes sure that the owner's bodytype flags match the flags of all of it's parts.
+	var/all_limb_flags
+	for(var/obj/item/bodypart/BP as() in C.bodyparts)
+		all_limb_flags =  all_limb_flags | BP.bodytype
+
+	C.dna.species.bodytype = all_limb_flags
+	//PARIAH MODULAR EDIT END
 
 /obj/item/bodypart/head/attach_limb(mob/living/carbon/new_head_owner, special = FALSE, abort = FALSE)
 	// These are stored before calling super. This is so that if the head is from a different body, it persists its appearance.
@@ -452,5 +463,5 @@
 	if(get_bodypart(limb_zone))
 		return FALSE
 	limb = newBodyPart(limb_zone, 0, 0)
-	L.replace_limb(src, TRUE, TRUE)
+	limb.replace_limb(src, TRUE, TRUE)
 	return 1 // PARIAH STATION EDIT
