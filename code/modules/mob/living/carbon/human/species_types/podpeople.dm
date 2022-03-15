@@ -46,7 +46,7 @@
 		if(H.nutrition > NUTRITION_LEVEL_ALMOST_FULL)
 			H.set_nutrition(NUTRITION_LEVEL_ALMOST_FULL)
 		if(light_amount > 0.2) //if there's enough light, heal
-			H.heal_overall_damage(1,1, 0, BODYTYPE_ORGANIC) //PARIAH MODULAR EDIT
+			H.heal_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 			H.adjustToxLoss(-0.5 * delta_time)
 			H.adjustOxyLoss(-0.5 * delta_time)
 

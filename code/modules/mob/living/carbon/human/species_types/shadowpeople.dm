@@ -31,9 +31,9 @@
 		var/light_amount = T.get_lumcount()
 
 		if(light_amount > SHADOW_SPECIES_LIGHT_THRESHOLD) //if there's enough light, start dying
-			H.take_overall_damage(1,1, 0, BODYTYPE_ORGANIC) //PARIAH MODULAR EDIT
+			H.take_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 		else if (light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD) //heal in the dark
-			H.heal_overall_damage(1,1, 0, BODYTYPE_ORGANIC) //PARIAH MODULAR EDIT
+			H.heal_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 
 /datum/species/shadow/check_roundstart_eligible()
 	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])

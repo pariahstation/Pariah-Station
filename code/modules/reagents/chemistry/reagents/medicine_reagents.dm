@@ -295,7 +295,7 @@
 
 /datum/reagent/medicine/oxandrolone/overdose_process(mob/living/M, delta_time, times_fired)
 	if(M.getFireLoss()) //It only makes existing burns worse
-		M.adjustFireLoss(4.5*REM, FALSE, FALSE, BODYTYPE_ORGANIC) // it's going to be healing either 4 or 0.5 //PARIAH STATION EDIT
+		M.adjustFireLoss(4.5 * REM * delta_time, FALSE, FALSE, BODYTYPE_ORGANIC) // it's going to be healing either 4 or 0.5 //PARIAH STATION EDIT
 		. = TRUE
 	..()
 
@@ -406,8 +406,8 @@
 /datum/reagent/medicine/omnizine/overdose_process(mob/living/M, delta_time, times_fired)
 	M.adjustToxLoss(1.5 * REM * delta_time, FALSE)
 	M.adjustOxyLoss(1.5 * REM * delta_time, FALSE)
-	M.adjustBruteLoss(1.5*REM, FALSE, FALSE, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
-	M.adjustFireLoss(1.5*REM, FALSE, FALSE, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
+	M.adjustBruteLoss(1.5 * REM * delta_time, FALSE, FALSE, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
+	M.adjustFireLoss(1.5 * REM * delta_time, FALSE, FALSE, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 	..()
 	. = TRUE
 
@@ -504,7 +504,7 @@
 
 /datum/reagent/medicine/sal_acid/overdose_process(mob/living/M, delta_time, times_fired)
 	if(M.getBruteLoss()) //It only makes existing bruises worse
-		M.adjustBruteLoss(4.5*REM, FALSE, FALSE, BODYTYPE_ORGANIC) // it's going to be healing either 4 or 0.5 //PARIAH STATION EDIT
+		M.adjustBruteLoss(4.5 * REM * delta_time, FALSE, FALSE, BODYTYPE_ORGANIC) // it's going to be healing either 4 or 0.5 //PARIAH STATION EDIT
 		. = TRUE
 	..()
 
