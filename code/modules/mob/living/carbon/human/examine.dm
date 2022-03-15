@@ -9,15 +9,18 @@
 	var/t_es = p_es()
 	var/obscure_name
 
+	var/list/obscured = check_obscured_slots()
+	var/skipface = ((wear_mask?.flags_inv & HIDEFACE) || (head?.flags_inv & HIDEFACE)) //PARIAH MODULAR ADDITION
+
 	if(isliving(user))
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA) || HAS_TRAIT(L, TRAIT_INVISIBLE_MAN))
 			obscure_name = TRUE
 
-	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
-
-	var/obscured = check_obscured_slots()
-	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	var/apparent_species
+	if(dna?.species && !skipface)
+		apparent_species = ", \an [dna.species.name]"
+	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"][apparent_species]</EM>!") //PARIAH MODULAR EDIT
 
 	//uniform
 	if(w_uniform && !(obscured & ITEM_SLOT_ICLOTHING) && !(w_uniform.item_flags & EXAMINE_SKIP))
@@ -135,8 +138,7 @@
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()
-	for(var/X in bodyparts)
-		var/obj/item/bodypart/body_part = X
+	for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR EDIT
 		if(body_part.bodypart_disabled)
 			disabled += body_part
 		missing -= body_part.body_zone
@@ -181,6 +183,10 @@
 		msg += "[t_He] really keeps to the left.\n"
 	else if(l_limbs_missing >= 2 && r_limbs_missing >= 2)
 		msg += "[t_He] [p_do()]n't seem all there.\n"
+
+	for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR ADDITION
+		if(BP.limb_id != (dna.species.examine_limb_id ? dna.species.examine_limb_id : dna.species.id)) //PARIAH MODULAR ADDITION
+			msg += "<span class='info'>[t_He] has \an [BP.name].</span>\n" //PARIAH MODULAR ADDITION
 
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
 		var/temp

@@ -1,7 +1,7 @@
 /datum/species/mush //mush mush codecuck
-	name = "Mushroomperson"
+	name = "\improper Mushroomperson" //PARIAH MODULAR EDIT
 	plural_form = "Mushroompeople"
-	id = SPECIES_MUSHROOM
+	id = SPECIES_MUSH
 	mutant_bodyparts = list("caps" = "Round")
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
 
@@ -33,7 +33,14 @@
 	use_skintones = FALSE
 	var/datum/martial_art/mushpunch/mush
 	species_language_holder = /datum/language_holder/mushroom
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/mushroom
+	species_head = /obj/item/bodypart/head/mushroom
+	species_l_arm = /obj/item/bodypart/l_arm/mushroom
+	species_r_arm = /obj/item/bodypart/r_arm/mushroom
+	species_l_leg = /obj/item/bodypart/l_leg/mushroom
+	species_r_leg = /obj/item/bodypart/r_leg/mushroom
+//PARIAH MODULAR EDIT END
 /datum/species/mush/check_roundstart_eligible()
 	return FALSE //hard locked out of roundstart on the order of design lead kor, this can be removed in the future when planetstation is here OR SOMETHING but right now we have a problem with races.
 

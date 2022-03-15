@@ -61,6 +61,8 @@
 	/// Total level of visualy impairing items
 	var/tinttotal = 0
 
+	var/list/icon_render_keys = list() - //PARIAH MODULAR ADDITION
+
 	///Gets filled up in [create_bodyparts()][/mob/living/carbon/proc/create_bodyparts]
 	var/list/bodyparts = list(
 		/obj/item/bodypart/chest,
@@ -68,8 +70,8 @@
 		/obj/item/bodypart/l_arm,
 		/obj/item/bodypart/r_arm,
 		/obj/item/bodypart/r_leg,
-		/obj/item/bodypart/l_leg,
-		)
+		/obj/item/bodypart/l_leg
+	)//PARIAH MODULAR EDIT
 
 	/// A collection of arms (or actually whatever the fug /bodyparts you monsters use to wreck my systems)
 	var/list/hand_bodyparts = list()

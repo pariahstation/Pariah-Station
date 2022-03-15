@@ -1,9 +1,9 @@
 //Subtype of human
 /datum/species/human/felinid
-	name = "Felinid"
+	name = "\improper Felinid" //PARIAH MODULAR EDIT
 	id = SPECIES_FELINE
 	say_mod = "meows"
-	limbs_id = "human"
+	examine_limb_id = SPECIES_HUMAN //PARIAH MODULAR EDIT
 
 	mutant_bodyparts = list("tail_human" = "Cat", "ears" = "Cat", "wings" = "None")
 

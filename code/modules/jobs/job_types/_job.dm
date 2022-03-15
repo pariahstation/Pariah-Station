@@ -429,7 +429,7 @@
 	if(fully_randomize)
 		player_client.prefs.apply_prefs_to(src)
 
-		if(require_human)
+		if(H.dna.species.id != SPECIES_HUMAN) //PARIAH MODULAR EDIT
 			randomize_human_appearance(~RANDOMIZE_SPECIES)
 		else
 			randomize_human_appearance()

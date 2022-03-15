@@ -190,7 +190,7 @@
 		return
 	var/mob/living/carbon/human/burn_human = burn_living
 	var/datum/species/burn_species = burn_human.dna.species
-	if(istype(burn_species, /datum/species/plasmaman) || istype(burn_species, /datum/species/android) || istype(burn_species, /datum/species/synth)) //ignore plasmamen/robotic species
+	if(istype(burn_species, /datum/species/plasmaman) || istype(burn_species, /datum/species/android)) //ignore plasmamen/robotic species - PARIAH MODULAR EDIT
 		return
 
 	var/list/plasma_parts = list()//a list of the organic parts to be turned into plasma limbs

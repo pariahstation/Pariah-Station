@@ -1,6 +1,6 @@
 /datum/species/golem
 	// Animated beings of stone. They have increased defenses, and do not need to breathe. They're also slow as fuuuck.
-	name = "Golem"
+	name = "\improper Golem" //PARIAH MODULAR EDIT
 	id = SPECIES_GOLEM
 	species_traits = list(NOBLOOD,NOTRANSSTING, MUTCOLORS,NO_UNDERWEAR, NO_DNA_COPY)
 	inherent_traits = list(
@@ -30,12 +30,20 @@
 	no_equip = list(ITEM_SLOT_MASK, ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_SUITSTORE)
 	nojumpsuit = 1
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC
-	sexes = 1
+	sexes = FALSE //PARIAH MODULAR EDIT
 	damage_overlay_type = ""
 	meat = /obj/item/food/meat/slab/human/mutant/golem
 	species_language_holder = /datum/language_holder/golem
 	// To prevent golem subtypes from overwhelming the odds when random species
 	// changes, only the Random Golem type can be chosen
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/golem
+	species_head = /obj/item/bodypart/head/golem
+	species_l_arm = /obj/item/bodypart/l_arm/golem
+	species_r_arm = /obj/item/bodypart/r_arm/golem
+	species_l_leg = /obj/item/bodypart/l_leg/golem
+	species_r_leg = /obj/item/bodypart/r_leg/golem
+//PARIAH MODULAR EDIT END
 	limbs_id = "golem"
 	fixed_mut_color = "#aaaaaa"
 	var/info_text = "As an <span class='danger'>Iron Golem</span>, you don't have any special traits."
@@ -304,12 +312,20 @@
 	info_text = "As an <span class='danger'>Alloy Golem</span>, you are made of advanced alien materials: you are faster and regenerate over time. You are, however, only able to be heard by other alloy golems."
 	prefix = "Alien"
 	special_names = list("Outsider", "Technology", "Watcher", "Stranger") //ominous and unknown
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/golem/alloy
+	species_head = /obj/item/bodypart/head/golem/alloy
+	species_l_arm = /obj/item/bodypart/l_arm/golem/alloy
+	species_r_arm = /obj/item/bodypart/r_arm/golem/alloy
+	species_l_leg = /obj/item/bodypart/l_leg/golem/alloy
+	species_r_leg = /obj/item/bodypart/r_leg/golem/alloy
+//PARIAH MODULAR EDIT END
 
 //Regenerates because self-repairing super-advanced alien tech
 /datum/species/golem/alloy/spec_life(mob/living/carbon/human/H, delta_time, times_fired)
 	if(H.stat == DEAD)
 		return
-	H.heal_overall_damage(1 * delta_time, 1 * delta_time, 0, BODYPART_ORGANIC)
+	H.heal_overall_damage(2,2, 0, BODYTYPE_ORGANIC) //PARIAH MODULAR EDIT
 	H.adjustToxLoss(-1 * delta_time)
 	H.adjustOxyLoss(-1 * delta_time)
 
@@ -605,7 +621,14 @@
 	attack_sound = 'sound/items/airhorn2.ogg'
 	prefix = "Bananium"
 	special_names = null
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/golem/bananium
+	species_head = /obj/item/bodypart/head/golem/bananium
+	species_l_arm = /obj/item/bodypart/l_arm/golem/bananium
+	species_r_arm = /obj/item/bodypart/r_arm/golem/bananium
+	species_l_leg = /obj/item/bodypart/l_leg/golem/bananium
+	species_r_leg = /obj/item/bodypart/r_leg/golem/bananium
+//PARIAH MODULAR EDIT END
 	/// Cooldown for producing honks
 	COOLDOWN_DECLARE(honkooldown)
 	/// Cooldown for producing bananas
@@ -683,8 +706,8 @@
 
 /datum/species/golem/runic
 	name = "Runic Golem"
-	id = SPECIES_GOLEM_CULT
-	limbs_id = "cultgolem"
+	id = "cult_golem" //PARIAD MODULAR EDIT
+	// limbs_id = "cultgolem" - PARIAH MODULAR EDIT
 	sexes = FALSE
 	info_text = "As a <span class='danger'>Runic Golem</span>, you possess eldritch powers granted by the Elder Goddess Nar'Sie."
 	species_traits = list(NOBLOOD,NO_UNDERWEAR,NOEYESPRITES) //no mutcolors
@@ -712,6 +735,14 @@
 	var/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift/golem/phase_shift
 	var/obj/effect/proc_holder/spell/pointed/abyssal_gaze/abyssal_gaze
 	var/obj/effect/proc_holder/spell/pointed/dominate/dominate
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/golem/cult
+	species_head = /obj/item/bodypart/head/golem/cult
+	species_l_arm = /obj/item/bodypart/l_arm/golem/cult
+	species_r_arm = /obj/item/bodypart/r_arm/golem/cult
+	species_l_leg = /obj/item/bodypart/l_leg/golem/cult
+	species_r_leg = /obj/item/bodypart/r_leg/golem/cult
+//PARIAH MODULAR EDIT END
 
 /datum/species/golem/runic/random_name(gender,unique,lastname)
 	var/edgy_first_name = pick("Razor","Blood","Dark","Evil","Cold","Pale","Black","Silent","Chaos","Deadly","Coldsteel")
@@ -780,7 +811,14 @@
 	punchdamagehigh = 8 // not as heavy as stone
 	prefix = "Cloth"
 	special_names = null
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/golem/cloth
+	species_head = /obj/item/bodypart/head/golem/cloth
+	species_l_arm = /obj/item/bodypart/l_arm/golem/cloth
+	species_r_arm = /obj/item/bodypart/r_arm/golem/cloth
+	species_l_leg = /obj/item/bodypart/l_leg/golem/cloth
+	species_r_leg = /obj/item/bodypart/r_leg/golem/cloth
+//PARIAH MODULAR EDIT END
 /datum/species/golem/cloth/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	ADD_TRAIT(C, TRAIT_HOLY, SPECIES_TRAIT)
@@ -1047,7 +1085,14 @@
 	punchdamagehigh = 8
 	var/last_creation = 0
 	var/brother_creation_cooldown = 300
-
+//PARIAH MODULAR EDIT START
+/obj/item/bodypart/chest/golem/cardboard
+	species_head = /obj/item/bodypart/head/golem/cardboard
+	species_l_arm = /obj/item/bodypart/l_arm/golem/cardboard
+	species_r_arm = /obj/item/bodypart/r_arm/golem/cardboard
+	species_l_leg = /obj/item/bodypart/l_leg/golem/cardboard
+	species_r_leg = /obj/item/bodypart/r_leg/golem/cardboard
+//PARIAH MODULAR EDIT END
 /datum/species/golem/cardboard/spec_attacked_by(obj/item/I, mob/living/user, obj/item/bodypart/affecting, mob/living/carbon/human/H)
 	. = ..()
 	if(user != H)
@@ -1120,7 +1165,13 @@
 		TRAIT_NOFLASH,
 	)
 	info_text = "As a <span class='danger'>Durathread Golem</span>, your strikes will cause those your targets to start choking, but your woven body won't withstand fire as well."
-
+//PARIAH MODULAR EDIT START
+	species_head = /obj/item/bodypart/head/golem/durathread
+	species_l_arm = /obj/item/bodypart/l_arm/golem/durathread
+	species_r_arm = /obj/item/bodypart/r_arm/golem/durathread
+	species_l_leg = /obj/item/bodypart/l_leg/golem/durathread
+	species_r_leg = /obj/item/bodypart/r_leg/golem/durathread
+//PARIAH MODULAR EDIT END
 /datum/species/golem/durathread/spec_unarmedattacked(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	. = ..()
 	target.apply_status_effect(/datum/status_effect/strandling)
@@ -1160,7 +1211,14 @@
 	species_language_holder = /datum/language_holder/golem/bone
 	info_text = "As a <span class='danger'>Bone Golem</span>, You have a powerful spell that lets you chill your enemies with fear, and milk heals you! Just make sure to watch our for bone-hurting juice."
 	var/datum/action/innate/bonechill/bonechill
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/golem/bone
+	species_head = /obj/item/bodypart/head/golem/bone
+	species_l_arm = /obj/item/bodypart/l_arm/golem/bone
+	species_r_arm = /obj/item/bodypart/r_arm/golem/bone
+	species_l_leg = /obj/item/bodypart/l_leg/golem/bone
+	species_r_leg = /obj/item/bodypart/r_leg/golem/bone
+//PARIAH MODULAT EDIT END
 /datum/species/golem/bone/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	if(ishuman(C))
@@ -1262,7 +1320,14 @@
 
 	var/obj/effect/proc_holder/spell/targeted/conjure_item/snowball/ball
 	var/obj/effect/proc_holder/spell/aimed/cryo/cryo
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/golem/snow
+	species_head = /obj/item/bodypart/head/golem/snow
+	species_l_arm = /obj/item/bodypart/l_arm/golem/snow
+	species_r_arm = /obj/item/bodypart/r_arm/golem/snow
+	species_l_leg = /obj/item/bodypart/l_leg/golem/snow
+	species_r_leg = /obj/item/bodypart/r_leg/golem/snow
+//PARIAH MODULAR EDIT END
 /datum/species/golem/snow/spec_death(gibbed, mob/living/carbon/human/H)
 	H.visible_message(span_danger("[H] turns into a pile of snow!"))
 	for(var/obj/item/W in H)

@@ -1,11 +1,11 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "Lizardperson"
+	name = "\improper Sarathi" //SKYRAT MODULAR EDIT
 	plural_form = "Lizardfolk"
 	id = SPECIES_LIZARD
 	say_mod = "hisses"
 	default_color = COLOR_VIBRANT_LIME
-	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE)
+	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,NO_UNDERWEAR) //PARIAH MODULAR EDIT
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
@@ -35,6 +35,16 @@
 	deathsound = 'sound/voice/lizard/deathsound.ogg'
 	wings_icons = list("Dragon")
 	species_language_holder = /datum/language_holder/lizard
+//PARIAH MODULAR EDIT START
+	digitigrade_customization = DIGITIGRADE_OPTIONAL
+
+	species_chest = /obj/item/bodypart/chest/lizard
+	species_head = /obj/item/bodypart/head/lizard
+	species_l_arm = /obj/item/bodypart/l_arm/lizard
+	species_r_arm = /obj/item/bodypart/r_arm/lizard
+	species_l_leg = /obj/item/bodypart/l_leg/lizard
+	species_r_leg = /obj/item/bodypart/r_leg/lizard
+//PARIAH MODULAR EDIT END
 	// Lizards are coldblooded and can stand a greater temperature range than humans
 	bodytemp_heat_damage_limit = (BODYTEMP_HEAT_DAMAGE_LIMIT + 20) // This puts lizards 10 above lavaland max heat for ash lizards.
 	bodytemp_cold_damage_limit = (BODYTEMP_COLD_DAMAGE_LIMIT - 10)
@@ -168,9 +178,9 @@ Lizard subspecies: ASHWALKERS
 */
 /datum/species/lizard/ashwalker
 	name = "Ash Walker"
-	id = SPECIES_LIZARD_ASH
-	limbs_id = "lizard"
-	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,DIGITIGRADE,HAS_FLESH,HAS_BONE)
+	id = SPECIES_ASHWALKER //PARIAH MODULAR EDIT
+	examine_limb_id = SPECIES_LIZARD //PARIAH MODULAR EDIT
+	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR) //PARIAH MODULAR EDIT
 	mutantlungs = /obj/item/organ/lungs/ashwalker
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,

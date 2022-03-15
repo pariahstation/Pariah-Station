@@ -1,5 +1,5 @@
 /datum/species/snail
-	name = "Snailperson"
+	name = "\improper Snailperson" //PARIAH MODULAR EDIT
 	id = SPECIES_SNAIL
 	offset_features = list(OFFSET_GLASSES = list(0,4))
 	default_color = "336600" //vomit green
@@ -23,7 +23,14 @@
 	mutanteyes = /obj/item/organ/eyes/snail
 	mutanttongue = /obj/item/organ/tongue/snail
 	exotic_blood = /datum/reagent/lube
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/snail
+	species_head = /obj/item/bodypart/head/snail
+	species_l_arm = /obj/item/bodypart/l_arm/snail
+	species_r_arm = /obj/item/bodypart/r_arm/snail
+	species_l_leg = /obj/item/bodypart/l_leg/snail
+	species_r_leg = /obj/item/bodypart/r_leg/snail
+//PARIAH MODULAR EDIT END
 /datum/species/snail/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H, delta_time, times_fired)
 	if(istype(chem,/datum/reagent/consumable/salt))
 		H.adjustFireLoss(2 * REAGENTS_EFFECT_MULTIPLIER * delta_time)

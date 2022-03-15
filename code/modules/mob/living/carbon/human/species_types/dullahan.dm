@@ -1,6 +1,7 @@
 /datum/species/dullahan
-	name = "Dullahan"
+	name = "\improper Dullahan" //PARIAH MODULAR EDIT
 	id = SPECIES_DULLAHAN
+	max_bodypart_count = 5 //No head - PARIAH MODULAR ADDITION
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, HAS_FLESH, HAS_BONE)
 	inherent_traits = list(
@@ -16,7 +17,7 @@
 	mutanteyes = /obj/item/organ/eyes/dullahan
 	mutanttongue = /obj/item/organ/tongue/dullahan
 	mutantears = /obj/item/organ/ears/dullahan
-	limbs_id = "human"
+	examine_limb_id = SPECIES_HUMAN //PARIAH MODULAR EDIT
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | ERT_SPAWN
 

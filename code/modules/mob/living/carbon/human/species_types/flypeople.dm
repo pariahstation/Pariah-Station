@@ -1,5 +1,5 @@
 /datum/species/fly
-	name = "Flyperson"
+	name = "\improper Flyperson" //PARIAH MODULAR EDIT
 	plural_form = "Flypeople"
 	id = SPECIES_FLY
 	say_mod = "buzzes"
@@ -18,15 +18,14 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/fly
 	payday_modifier = 0.75
-
-	mutanttongue = /obj/item/organ/tongue/fly
-	mutantheart = /obj/item/organ/heart/fly
-	mutantlungs = /obj/item/organ/lungs/fly
-	mutantliver = /obj/item/organ/liver/fly
-	mutantstomach = /obj/item/organ/stomach/fly
-	mutantappendix = /obj/item/organ/appendix/fly
-	mutant_organs = list(/obj/item/organ/fly, /obj/item/organ/fly/groin)
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/fly
+	species_head = /obj/item/bodypart/head/fly
+	species_l_arm = /obj/item/bodypart/l_arm/fly
+	species_r_arm = /obj/item/bodypart/r_arm/fly
+	species_l_leg = /obj/item/bodypart/l_leg/fly
+	species_r_leg = /obj/item/bodypart/r_leg/fly
+//PARIAH MODULAR EDIT END
 /datum/species/fly/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H, delta_time, times_fired)
 	if(chem.type == /datum/reagent/toxin/pestkiller)
 		H.adjustToxLoss(3 * REAGENTS_EFFECT_MULTIPLIER * delta_time)

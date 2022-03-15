@@ -1,6 +1,6 @@
 /obj/item/clothing/under/color
 	desc = "A standard issue colored jumpsuit. Variety is the spice of life!"
-	supports_variations = DIGITIGRADE_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION //PARIAH MODULAR EDIT
 	dying_key = DYE_REGISTRY_UNDER
 	greyscale_colors = "#3f3f3f"
 	greyscale_config = /datum/greyscale_config/jumpsuit

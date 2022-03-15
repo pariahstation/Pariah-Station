@@ -490,11 +490,8 @@ GLOBAL_LIST_INIT(phobia_species, list(
 		/datum/species/shadow,
 	)),
 	"anime" = typecacheof(list(/datum/species/human/felinid)),
-	"conspiracies" = typecacheof(list(
-		/datum/species/abductor,
-		/datum/species/lizard,
-		/datum/species/synth,
-	)),
+	"conspiracies" = typecacheof(list(/datum/species/abductor, /datum/species/lizard)),
+	)), //PARIAH MODULAR EDIT
 	"insects" = typecacheof(list(
 		/datum/species/fly,
 		/datum/species/moth,

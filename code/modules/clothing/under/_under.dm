@@ -20,7 +20,7 @@
 	var/alt_covers_chest = FALSE // for adjusted/rolled-down jumpsuits, FALSE = exposes chest and arms, TRUE = exposes arms only
 	var/obj/item/clothing/accessory/attached_accessory
 	var/mutable_appearance/accessory_overlay
-	// PARIAH MODULAR EDIT // var/mutantrace_variation = NO_MUTANTRACE_VARIATION //Are there special sprites for specific situations? Don't use this unless you need to.
+	// PARIAH MODULAR EDIT - var/mutantrace_variation = NO_MUTANTRACE_VARIATION //Are there special sprites for specific situations? Don't use this unless you need to.
 	var/freshly_laundered = FALSE
 
 /obj/item/clothing/under/worn_overlays(mutable_appearance/standing, isinhands = FALSE)
@@ -104,8 +104,9 @@
 	//PARIAH MODULAR EDIT START
 /*		if(DIGITIGRADE in H.dna.species.species_traits)
 			adjusted = DIGITIGRADE_STYLE
-		H.update_inv_w_uniform()
 */ //PARIAH MODULAR EDIT END
+		H.update_inv_w_uniform()
+
 
 	if(attached_accessory && slot != ITEM_SLOT_HANDS && ishuman(user))
 		var/mob/living/carbon/human/H = user

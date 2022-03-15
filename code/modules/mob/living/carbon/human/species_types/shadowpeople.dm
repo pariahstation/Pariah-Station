@@ -17,17 +17,23 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC
 	mutanteyes = /obj/item/organ/eyes/night_vision
 	species_language_holder = /datum/language_holder/shadowpeople
-
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/shadow
+	species_head = /obj/item/bodypart/head/shadow
+	species_l_arm = /obj/item/bodypart/l_arm/shadow
+	species_r_arm = /obj/item/bodypart/r_arm/shadow
+	species_l_leg = /obj/item/bodypart/l_leg/shadow
+	species_r_leg = /obj/item/bodypart/r_leg/shadow
+//PARIAH MODULAR EDIT END
 /datum/species/shadow/spec_life(mob/living/carbon/human/H, delta_time, times_fired)
 	var/turf/T = H.loc
 	if(istype(T))
 		var/light_amount = T.get_lumcount()
 
 		if(light_amount > SHADOW_SPECIES_LIGHT_THRESHOLD) //if there's enough light, start dying
-			H.take_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYPART_ORGANIC)
+			H.take_overall_damage(1,1, 0, BODYTYPE_ORGANIC) //PARIAH MODULAR EDIT
 		else if (light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD) //heal in the dark
-			H.heal_overall_damage(0.5 * delta_time, 0.5 * delta_time, 0, BODYPART_ORGANIC)
+			H.heal_overall_damage(1,1, 0, BODYTYPE_ORGANIC) //PARIAH MODULAR EDIT
 
 /datum/species/shadow/check_roundstart_eligible()
 	if(SSevents.holidays && SSevents.holidays[HALLOWEEN])

@@ -1,6 +1,6 @@
 /datum/species/ethereal
 	name = "Ethereal"
-	id = SPECIES_ETHEREAL
+	name = "\improper Elzuose"
 	attack_verb = "burn"
 	attack_sound = 'sound/weapons/etherealhit.ogg'
 	miss_sound = 'sound/weapons/etherealmiss.ogg'
@@ -27,7 +27,14 @@
 	bodytemp_cold_damage_limit = (T20C - 10) // about 10c
 	hair_color = "fixedmutcolor"
 	hair_alpha = 140
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/ethereal
+	species_head = /obj/item/bodypart/head/ethereal
+	species_l_arm = /obj/item/bodypart/l_arm/ethereal
+	species_r_arm = /obj/item/bodypart/r_arm/ethereal
+	species_l_leg = /obj/item/bodypart/l_leg/ethereal
+	species_r_leg = /obj/item/bodypart/r_leg/ethereal
+//PARIAH MODULAR EDIT END
 	var/current_color
 	var/EMPeffect = FALSE
 	var/emageffect = FALSE
@@ -85,6 +92,8 @@
 
 /datum/species/ethereal/spec_updatehealth(mob/living/carbon/human/H)
 	. = ..()
+	if(!ethereal_light) //PARIAH MODULAR ADDITION
+		return
 	if(H.stat != DEAD && !EMPeffect)
 		var/healthpercent = max(H.health, 0) / 100
 		if(!emageffect)
@@ -143,7 +152,13 @@
 	emageffect = FALSE
 	spec_updatehealth(H)
 	H.visible_message(span_danger("[H] stops flickering and goes back to their normal state!"))
-
+//PARIAH MODULAR EDIT START
+	//The following code is literally only to make admin-spawned ethereals not be black.
+	C.dna.features["mcolor"] = C.dna.features["ethcolor"] //Ethcolor and Mut color are both dogshit and will be replaced
+	for(var/obj/item/bodypart/BP as anything in C.bodyparts)
+		if(BP.limb_id == SPECIES_ETHEREAL)
+			BP.update_limb(is_creating = TRUE)
+//PARIAH MODULAR EDIT END
 /datum/species/ethereal/get_features()
 	var/list/features = ..()
 

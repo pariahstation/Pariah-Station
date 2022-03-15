@@ -1,5 +1,5 @@
 /datum/species/plasmaman
-	name = "Plasmaman"
+	name = "\improper Plasmaman" //PARIAH MODULAR EDIT
 	plural_form = "Plasmamen"
 	id = SPECIES_PLASMAMAN
 	say_mod = "rattles"
@@ -33,7 +33,14 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC
 	outfit_important_for_life = /datum/outfit/plasmaman
 	species_language_holder = /datum/language_holder/skeleton
-
+//PARIAH MODULE EDIT START
+	species_chest = /obj/item/bodypart/chest/plasmaman
+	species_head = /obj/item/bodypart/head/plasmaman
+	species_l_arm = /obj/item/bodypart/l_arm/plasmaman
+	species_r_arm = /obj/item/bodypart/r_arm/plasmaman
+	species_l_leg = /obj/item/bodypart/l_leg/plasmaman
+	species_r_leg = /obj/item/bodypart/r_leg/plasmaman
+//PARIAH MODULAR EDIT END
 	// Body temperature for Plasmen is much lower human as they can handle colder environments
 	bodytemp_normal = (BODYTEMP_NORMAL - 40)
 	// The minimum amount they stabilize per tick is reduced making hot areas harder to deal with

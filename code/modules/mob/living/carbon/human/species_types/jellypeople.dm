@@ -1,6 +1,6 @@
 /datum/species/jelly
 	// Entirely alien beings that seem to be made entirely out of gel. They have three eyes and a skeleton visible within them.
-	name = "Jellyperson"
+	name = "\improper Jellyperson" //PARIAH MODULAR EDIT
 	plural_form = "Jellypeople"
 	id = SPECIES_JELLYPERSON
 	default_color = "00FF90"
@@ -26,7 +26,14 @@
 	inherent_factions = list("slime")
 	species_language_holder = /datum/language_holder/jelly
 	ass_image = 'icons/ass/assslime.png'
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/jelly
+	species_head = /obj/item/bodypart/head/jelly
+	species_l_arm = /obj/item/bodypart/l_arm/jelly
+	species_r_arm = /obj/item/bodypart/r_arm/jelly
+	species_l_leg = /obj/item/bodypart/l_leg/jelly
+	species_r_leg = /obj/item/bodypart/r_leg/jelly
+//PARIAH MODULAR EDIT END
 /datum/species/jelly/on_species_loss(mob/living/carbon/C)
 	if(regenerate_limbs)
 		regenerate_limbs.Remove(C)
@@ -147,7 +154,14 @@
 	var/datum/action/innate/split_body/slime_split
 	var/list/mob/living/carbon/bodies
 	var/datum/action/innate/swap_body/swap_body
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/slime
+	species_head = /obj/item/bodypart/head/slime
+	species_l_arm = /obj/item/bodypart/l_arm/slime
+	species_r_arm = /obj/item/bodypart/r_arm/slime
+	species_l_leg = /obj/item/bodypart/l_leg/slime
+	species_r_leg = /obj/item/bodypart/r_leg/slime
+//PARIAH MODULAR EDIT END
 /datum/species/jelly/slime/on_species_loss(mob/living/carbon/C)
 	if(slime_split)
 		slime_split.Remove(C)
@@ -432,6 +446,7 @@
 	var/datum/action/innate/use_extract/extract_minor
 	var/datum/action/innate/use_extract/major/extract_major
 	var/extract_cooldown = 0
+	examine_limb_id = SPECIES_JELLYPERSON //PARIAH MODULAR ADDITION
 
 //Species datums don't normally implement destroy, but JELLIES SUCK ASS OUT OF A STEEL STRAW
 /datum/species/jelly/luminescent/Destroy(force, ...)
@@ -608,6 +623,7 @@
 	name = "Stargazer"
 	plural_form = null
 	id = SPECIES_STARGAZER
+	examine_limb_id = SPECIES_JELLYPERSON //PARIAH MODULAR ADDITION
 	/// Special "project thought" telepathy action for stargazers.
 	var/datum/action/innate/project_thought/project_action
 

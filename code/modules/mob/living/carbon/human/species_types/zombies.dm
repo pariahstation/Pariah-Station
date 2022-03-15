@@ -2,8 +2,8 @@
 
 /datum/species/zombie
 	// 1spooky
-	name = "High-Functioning Zombie"
-	id = SPECIES_ZOMBIE_HALLOWEEN
+	name = name = "\improper High-Functioning Zombie" //PARIAH MODULAR EDIT
+	id = SPECIES_ZOMBIE
 	say_mod = "moans"
 	sexes = 0
 	meat = /obj/item/food/meat/slab/human/mutant/zombie
@@ -35,7 +35,14 @@
 	bodytemp_normal = T0C // They have no natural body heat, the environment regulates body temp
 	bodytemp_heat_damage_limit = FIRE_MINIMUM_TEMPERATURE_TO_EXIST // Take damage at fire temp
 	bodytemp_cold_damage_limit = MINIMUM_TEMPERATURE_TO_MOVE // take damage below minimum movement temp
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/zombie
+	species_head = /obj/item/bodypart/head/zombie
+	species_l_arm = /obj/item/bodypart/l_arm/zombie
+	species_r_arm = /obj/item/bodypart/r_arm/zombie
+	species_l_leg = /obj/item/bodypart/l_leg/zombie
+	species_r_leg = /obj/item/bodypart/r_leg/zombie
+//PARIAH MODULAR EDIT END
 /// Zombies do not stabilize body temperature they are the walking dead and are cold blooded
 /datum/species/zombie/body_temperature_core(mob/living/carbon/human/humi, delta_time, times_fired)
 	return
@@ -68,9 +75,9 @@
 	return to_add
 
 /datum/species/zombie/infectious
-	name = "Infectious Zombie"
+	name = "\improper Infectious Zombie" //PARIAH MODULAR EDIT
 	id = SPECIES_ZOMBIE
-	limbs_id = "zombie"
+	examine_limb_id = "zombie" //PARIAH MODULAR EDIT
 	mutanthands = /obj/item/zombie_hand
 	armor = 20 // 120 damage to KO a zombie, which kills it
 	speedmod = 1.6
@@ -132,14 +139,39 @@
 		infection.Insert(C)
 
 // Your skin falls off
-/datum/species/krokodil_addict
-	name = "Human"
-	id = SPECIES_ADDICT
-	limbs_id = "zombie" //They look like zombies
+/datum/species/human/krokodil_addict //PARIAH MODULAR EDIT START
+	name = "\improper Human"
+	id = SPECIES_GOOFZOMBIE
+	examine_limb_id = SPECIES_HUMAN //PARIAH MODULAR EDIT END
 	sexes = 0
 	meat = /obj/item/food/meat/slab/human/mutant/zombie
 	mutanttongue = /obj/item/organ/tongue/zombie
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
+//PARIAH MODULAR EDIT START
+		species_chest = /obj/item/bodypart/chest/zombie
+	species_head = /obj/item/bodypart/head/zombie
+	species_l_arm = /obj/item/bodypart/l_arm/zombie
+	species_r_arm = /obj/item/bodypart/r_arm/zombie
+	species_l_leg = /obj/item/bodypart/l_leg/zombie
+	species_r_leg = /obj/item/bodypart/r_leg/zombie
+
+/datum/species/human/krokodil_addict/replace_body(mob/living/carbon/C, datum/species/new_species)
+	..()
+	var/skintone
+	if(ishuman(C))
+		var/mob/living/carbon/human/H = C
+		skintone = H.skin_tone
+
+	for(var/obj/item/bodypart/BP as anything in C.bodyparts)
+		if(IS_ORGANIC_LIMB(BP))
+			if(BP.body_zone == BODY_ZONE_HEAD || BP.body_zone == BODY_ZONE_CHEST)
+				BP.is_dimorphic = TRUE
+			BP.skin_tone ||= skintone
+			BP.limb_id = SPECIES_HUMAN
+			BP.should_draw_greyscale = TRUE
+			BP.name = "human [parse_zone(BP.body_zone)]"
+			BP.update_limb()
+//PARIAH MODULAR EDIT END
 	species_traits = list(HAS_FLESH, HAS_BONE)
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,

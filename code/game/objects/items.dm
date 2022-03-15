@@ -121,7 +121,10 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	var/transparent_protection = NONE
 
 	///flags for what should be done when you click on the item, default is picking it up
-	var/interaction_flags_item = INTERACT_ITEM_ATTACK_HAND_PICKUP
+	var/interaction_flags_item =
+
+	/// Used in picking icon_states based on the string color here. Also used for cables or something. This could probably do with being deprecated. PARIAH MODULAR EDIT
+	var/item_color = null
 
 	///What body parts are covered by the clothing when you wear it
 	var/body_parts_covered = 0
@@ -146,10 +149,10 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	///How long it takes to resist out of the item (cuffs and such)
 	var/breakouttime = 0
 
-	///Used in [atom/proc/attackby] to say how something was attacked `"[x] has been [z.attack_verb] by [y] with [z]"`
+	/// Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]" PARIAH MODULAR EDIT
 	var/list/attack_verb_continuous
 	var/list/attack_verb_simple
-	///list() of species types, if a species cannot put items in a certain slot, but species type is in list, it will be able to wear that item
+	/// list() of species types, if a species cannot put items in a certain slot, but species type is in list, it will be able to wear that item PARIAH MODULAR EDIT
 	var/list/species_exception = null
 
 	///A weakref to the mob who threw the item

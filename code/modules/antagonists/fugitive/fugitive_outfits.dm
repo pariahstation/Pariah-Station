@@ -219,7 +219,7 @@
 		/obj/item/bountytrap = 4
 		)
 
-/datum/outfit/bountysynth/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/*datum/outfit/bountysynth/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE) - PARIAD MODULAR EDIT START
 	if(visualsOnly)
 		return
 	var/datum/species/synth/synthetic_appearance = new()
@@ -230,6 +230,7 @@
 	W.registered_name = H.real_name
 	W.update_label()
 	W.update_icon()
+*/ //PARIAH MODULAR EDIT END
 
 //ids and ert code
 

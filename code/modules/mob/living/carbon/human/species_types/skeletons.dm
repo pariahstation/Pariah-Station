@@ -1,6 +1,6 @@
 /datum/species/skeleton
 	// 2spooky
-	name = "Spooky Scary Skeleton"
+	name = "\improper Spooky Scary Skeleton" //PARIAH MODULAR EDIT
 	id = SPECIES_SKELETON
 	say_mod = "rattles"
 	sexes = 0
@@ -37,7 +37,14 @@
 	//They can technically be in an ERT
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
 	species_language_holder = /datum/language_holder/skeleton
-
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/skeleton
+	species_head = /obj/item/bodypart/head/skeleton
+	species_l_arm = /obj/item/bodypart/l_arm/skeleton
+	species_r_arm = /obj/item/bodypart/r_arm/skeleton
+	species_l_leg = /obj/item/bodypart/l_leg/skeleton
+	species_r_leg = /obj/item/bodypart/r_leg/skeleton
+//PARIAH MODULAR EDIT END
 /datum/species/skeleton/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	. = ..()
 	C.set_safe_hunger_level()

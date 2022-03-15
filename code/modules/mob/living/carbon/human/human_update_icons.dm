@@ -60,7 +60,7 @@ There are several things that need to be remembered:
 
 /mob/living/carbon/human/update_body()
 	dna.species.handle_body(src)
-	..()
+	// ..() - PARIAH MODULAR EDIT
 
 /mob/living/carbon/human/update_fire()
 	..((fire_stacks > HUMAN_FIRE_STACK_ICON_NUM) ? dna.species.fire_overlay : "Generic_mob_burning")
@@ -71,7 +71,7 @@ There are several things that need to be remembered:
 /mob/living/carbon/human/regenerate_icons()
 
 	if(!..())
-		icon_render_key = null //invalidate bodyparts cache
+		// icon_render_key = null //invalidate bodyparts cache - PARIAH MODULAR EDIT
 		update_body()
 		update_hair()
 		update_inv_w_uniform()
@@ -119,18 +119,34 @@ There are several things that need to be remembered:
 		var/target_overlay = U.icon_state
 		if(U.adjusted == ALT_STYLE)
 			target_overlay = "[target_overlay]_d"
-		else if(U.adjusted == DIGITIGRADE_STYLE)
-			target_overlay = "[target_overlay]_l"
-
-
+		/* else if(U.adjusted == DIGITIGRADE_STYLE)
+			target_overlay = "[target_overlay]_l" */ // -PARIAH MODULAR EDIT
+//PARIAH MODULAR EDIT START
+		var/t_color = U.item_color
+		if(!t_color)
+			t_color = U.icon_state
+		if(U.adjusted == ALT_STYLE)
+			t_color = "[t_color]_d"
+//PARIAH MODULAR EDIT END
 		var/mutable_appearance/uniform_overlay
 
 		if(dna?.species.sexes)
 			if(body_type == FEMALE && U.female_sprite_flags != NO_FEMALE_UNIFORM)
 				uniform_overlay = U.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/clothing/under/default.dmi', isinhands = FALSE, femaleuniform = U.female_sprite_flags, override_state = target_overlay)
 
+		var/icon_file = 'icons/mob/uniform.dmi' //PARIAH MODULAR ADDITION
 		if(!uniform_overlay)
-			uniform_overlay = U.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/clothing/under/default.dmi', isinhands = FALSE, override_state = target_overlay)
+			if(U.sprite_sheets & (dna?.species.bodyflag)) //PARIAH MODULAR EDIT START
+				icon_file = dna.species.get_custom_icons("uniform")
+
+			//Kapu's autistic attempt at digitigrade handling
+			//Hi Kapu
+			if((dna?.species.bodytype & BODYTYPE_DIGITIGRADE && U.supports_variations & DIGITIGRADE_VARIATION))
+
+				uniform_overlay = U.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = icon_file, isinhands = FALSE, override_file = 'icons/mob/species/misc/digitigrade.dmi', species = dna.species.species_clothing_path)
+			else
+				uniform_overlay = U.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = icon_file, isinhands = FALSE, species = dna.species.species_clothing_path)
+//PARIAH MODULAR EDIT END
 
 		if(OFFSET_UNIFORM in dna.species.offset_features)
 			uniform_overlay.pixel_x += dna.species.offset_features[OFFSET_UNIFORM][1]
@@ -276,12 +292,28 @@ There are several things that need to be remembered:
 		inv.update_appearance()
 
 	if(shoes)
+		var/icon_file = 'icons/mob/clothing/feet.dmi' //PARIAH MODULAR EDIT START
+		if(istype(shoes, /obj/item/clothing/shoes))
+			var/obj/item/clothing/shoes/S = shoes
+			if(S.sprite_sheets & (dna?.species.bodyflag))
+				icon_file = dna.species.get_custom_icons("shoes")
+
+			var/handled_icon = FALSE
+			if((dna?.species.bodytype & BODYTYPE_DIGITIGRADE && S.supports_variations & DIGITIGRADE_VARIATION))
+				var/obj/item/bodypart/r_leg/leg = src.get_bodypart(BODY_ZONE_L_LEG)
+				if(leg.limb_id == "digitigrade")//Snowflakey and bad. But it makes it look consistent.
+					overlays_standing[SHOES_LAYER] = S.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = icon_file, isinhands = FALSE, override_file = 'icons/mob/species/misc/digitigrade_shoes.dmi', species = dna.species.species_clothing_path)
+					handled_icon = TRUE
+
+			if(!handled_icon)
+				overlays_standing[SHOES_LAYER] = S.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = icon_file, isinhands = FALSE, species = dna.species.species_clothing_path)
+//PARIAH MODULAR EDIT END
 		shoes.screen_loc = ui_shoes //move the item to the appropriate screen loc
 		if(client && hud_used?.hud_shown)
 			if(hud_used.inventory_shown) //if the inventory is open
 				client.screen += shoes //add it to client's screen
 		update_observer_view(shoes,1)
-		overlays_standing[SHOES_LAYER] = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = 'icons/mob/clothing/feet.dmi')
+		// overlays_standing[SHOES_LAYER] = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = 'icons/mob/clothing/feet.dmi') PARIAH MODULAR EDIT
 		var/mutable_appearance/shoes_overlay = overlays_standing[SHOES_LAYER]
 		if(OFFSET_SHOES in dna.species.offset_features)
 			shoes_overlay.pixel_x += dna.species.offset_features[OFFSET_SHOES][1]
@@ -303,7 +335,7 @@ There are several things that need to be remembered:
 		if(client && hud_used?.hud_shown)
 			client.screen += s_store
 		update_observer_view(s_store)
-		overlays_standing[SUIT_STORE_LAYER] = s_store.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'icons/mob/clothing/belt_mirror.dmi')
+		overlays_standing[BELT_LAYER] = belt.build_worn_icon(default_layer = BELT_LAYER, default_icon_file = 'icons/mob/clothing/belt.dmi', species = dna.species.species_clothing_path) //PARIAH MODULAR EDIT
 		var/mutable_appearance/s_store_overlay = overlays_standing[SUIT_STORE_LAYER]
 		if(OFFSET_S_STORE in dna.species.offset_features)
 			s_store_overlay.pixel_x += dna.species.offset_features[OFFSET_S_STORE][1]
@@ -336,7 +368,7 @@ There are several things that need to be remembered:
 		if(client && hud_used?.hud_shown)
 			client.screen += belt
 		update_observer_view(belt)
-		overlays_standing[BELT_LAYER] = belt.build_worn_icon(default_layer = BELT_LAYER, default_icon_file = 'icons/mob/clothing/belt.dmi')
+		overlays_standing[BELT_LAYER] = belt.build_worn_icon(default_layer = BELT_LAYER, default_icon_file = 'icons/mob/clothing/belt.dmi', species = dna.species.species_clothing_path) //PARIAH MODULAR EDIT
 		var/mutable_appearance/belt_overlay = overlays_standing[BELT_LAYER]
 		if(OFFSET_BELT in dna.species.offset_features)
 			belt_overlay.pixel_x += dna.species.offset_features[OFFSET_BELT][1]
@@ -353,19 +385,28 @@ There are several things that need to be remembered:
 	if(client && hud_used)
 		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_OCLOTHING) + 1]
 		inv.update_appearance()
-
+//PARIAH MODULAR EDIT START
 	if(istype(wear_suit, /obj/item/clothing/suit))
+		var/icon_file = 'icons/mob/clothing/suit.dmi'
+		var/obj/item/clothing/suit/S = wear_suit
+		if(S.sprite_sheets & (dna?.species.bodyflag))
+			icon_file = dna.species.get_custom_icons("suit")
+
+		if(dna?.species.bodytype & BODYTYPE_DIGITIGRADE)
+			if(S.supports_variations & DIGITIGRADE_VARIATION)
+				icon_file = 'icons/mob/species/misc/digitigrade_suits.dmi'
+//PARIAH MODULAR EDIT END
 		wear_suit.screen_loc = ui_oclothing
 		if(client && hud_used?.hud_shown)
 			if(hud_used.inventory_shown)
 				client.screen += wear_suit
 		update_observer_view(wear_suit,1)
-		overlays_standing[SUIT_LAYER] = wear_suit.build_worn_icon(default_layer = SUIT_LAYER, default_icon_file = 'icons/mob/clothing/suit.dmi')
+		overlays_standing[SUIT_LAYER] = wear_suit.build_worn_icon(default_layer = SUIT_LAYER, default_icon_file = icon_file, species = dna.species.species_clothing_path) //PARIAH MODULAR EDIT
 		var/mutable_appearance/suit_overlay = overlays_standing[SUIT_LAYER]
 		if(OFFSET_SUIT in dna.species.offset_features)
 			suit_overlay.pixel_x += dna.species.offset_features[OFFSET_SUIT][1]
 			suit_overlay.pixel_y += dna.species.offset_features[OFFSET_SUIT][2]
-		overlays_standing[SUIT_LAYER] = suit_overlay
+			overlays_standing[SUIT_LAYER] = suit_overlay //PARIAH MODULAR EDIT
 	update_hair()
 	update_mutant_bodyparts()
 
@@ -514,9 +555,13 @@ generate/load female uniform sprites matching all previously decided variables
 	else
 		t_state = !isinhands ? (worn_icon_state ? worn_icon_state : icon_state) : (inhand_icon_state ? inhand_icon_state : icon_state)
 
-	//Find a valid icon file from variables+arguments
-	var/file2use = !isinhands ? (worn_icon ? worn_icon : default_icon_file) : default_icon_file
-
+	//Find a valid icon file from variables+arguments - PARIAH MODULAR EDIT START
+	var/file2use
+	if(override_file)
+		file2use = override_file
+	else
+		file2use = !isinhands ? (mob_overlay_icon ? mob_overlay_icon : default_icon_file) : default_icon_file
+//PARIAH MODULAR EDIT END
 	//Find a valid layer from variables+arguments
 	var/layer2use = alternate_worn_layer ? alternate_worn_layer : default_layer
 
@@ -568,8 +613,8 @@ generate/load female uniform sprites matching all previously decided variables
 		else //No offsets or Unwritten number of hands
 			return list("x" = 0, "y" = 0)//Handle held offsets
 
-//produces a key based on the human's limbs
-/mob/living/carbon/human/generate_icon_render_key()
+//*produces a key based on the human's limbs - PARIAH MODULAR EDIT START
+/*mob/living/carbon/human/generate_icon_render_key()
 	. = "[dna.species.limbs_id]"
 
 	if(dna.check_mutation(/datum/mutation/human/hulk))
@@ -613,8 +658,8 @@ generate/load female uniform sprites matching all previously decided variables
 
 /mob/living/carbon/human/load_limb_from_cache()
 	..()
-	update_hair()
-
+	update_hair()*/
+//PARIAH MODULAR EDIT END
 
 
 /mob/living/carbon/human/proc/update_observer_view(obj/item/I, inventory)
@@ -633,7 +678,7 @@ generate/load female uniform sprites matching all previously decided variables
 					break
 
 // Only renders the head of the human
-/mob/living/carbon/human/proc/update_body_parts_head_only()
+/mob/living/carbon/human/proc/update_body_parts_head_only(var/update_limb_data) //PARIAH MODULAR EDIT
 	if (!dna)
 		return
 
@@ -645,7 +690,7 @@ generate/load female uniform sprites matching all previously decided variables
 	if (!istype(HD))
 		return
 
-	HD.update_limb()
+	HD.update_limb(is_creating = update_limb_data) //PARIAH MODULAR EDIT
 
 	add_overlay(HD.get_limb_icon())
 	update_damage_overlays()

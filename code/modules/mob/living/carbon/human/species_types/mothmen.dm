@@ -1,5 +1,5 @@
 /datum/species/moth
-	name = "Mothman"
+	name = "\improper Mothman" //PARIAH MODULAR EDIT
 	plural_form = "Mothmen"
 	id = SPECIES_MOTH
 	say_mod = "flutters"
@@ -26,6 +26,14 @@
 	species_language_holder = /datum/language_holder/moth
 	wings_icons = list("Megamoth", "Mothra")
 	has_innate_wings = TRUE
+//PARIAH MODULAR EDIT START
+	species_chest = /obj/item/bodypart/chest/moth
+	species_head = /obj/item/bodypart/head/moth
+	species_l_arm = /obj/item/bodypart/l_arm/moth
+	species_r_arm = /obj/item/bodypart/r_arm/moth
+	species_l_leg = /obj/item/bodypart/l_leg/moth
+	species_r_leg = /obj/item/bodypart/r_leg/moth
+//PARIAH MODULAR EDIT END
 	payday_modifier = 0.75
 	family_heirlooms = list(/obj/item/flashlight/lantern/heirloom_moth)
 

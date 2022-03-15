@@ -9,8 +9,12 @@
 
 	setup_human_dna()
 
+
+	prepare_huds() //Prevents a nasty runtime on human init - PARIAH MODULAR ADDITION
 	if(dna.species)
+
 		INVOKE_ASYNC(src, .proc/set_species, dna.species.type)
+			set_species(dna.species.type) //This generates new limbs based on the species, beware. - PARIAH MODULAR ADDITION
 
 	//initialise organs
 	create_internal_organs() //most of it is done in set_species now, this is only for parent call
@@ -149,8 +153,7 @@
 				var/status = ""
 				if(getBruteLoss())
 					to_chat(usr, "<b>Physical trauma analysis:</b>")
-					for(var/X in bodyparts)
-						var/obj/item/bodypart/BP = X
+					for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR EDIT
 						var/brutedamage = BP.brute_dam
 						if(brutedamage > 0)
 							status = "received minor physical injuries."
@@ -165,8 +168,7 @@
 							to_chat(usr, "<span class='[span]'>[BP] appears to have [status]</span>")
 				if(getFireLoss())
 					to_chat(usr, "<b>Analysis of skin burns:</b>")
-					for(var/X in bodyparts)
-						var/obj/item/bodypart/BP = X
+					for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR EDIT
 						var/burndamage = BP.burn_dam
 						if(burndamage > 0)
 							status = "signs of minor burns."
@@ -1147,11 +1149,12 @@
 /mob/living/carbon/human/species/snail
 	race = /datum/species/snail
 
-/mob/living/carbon/human/species/synth
+/*mob/living/carbon/human/species/synth - PARIAH MODULAR EDIT START
 	race = /datum/species/synth
 
 /mob/living/carbon/human/species/synth/military
 	race = /datum/species/synth/military
+	*/ //-PARIAH MODULAR EDIT END
 
 /mob/living/carbon/human/species/vampire
 	race = /datum/species/vampire
@@ -1163,4 +1166,4 @@
 	race = /datum/species/zombie/infectious
 
 /mob/living/carbon/human/species/zombie/krokodil_addict
-	race = /datum/species/krokodil_addict
+	race = /datum/species/human/krokodil_addict //PARIAH MODULAR EDIT

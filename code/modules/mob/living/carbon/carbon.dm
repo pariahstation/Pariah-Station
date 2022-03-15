@@ -1,7 +1,7 @@
 /mob/living/carbon/Initialize(mapload)
 	. = ..()
 	create_reagents(1000, REAGENT_HOLDER_ALIVE)
-	assign_bodypart_ownership()
+	// assign_bodypart_ownership() - PARIAH MODULAR EDIT
 	update_body_parts() //to update the carbon's new bodyparts appearance
 	register_context()
 
@@ -211,7 +211,7 @@
 
 /mob/living/carbon/on_fall()
 	. = ..()
-	loc.handle_fall(src)//it's loc so it doesn't call the mob's handle_fall which does nothing
+	loc?.handle_fall(src)//it's loc so it doesn't call the mob's handle_fall which does nothing - PARIAH MODULAR EDIT
 
 /mob/living/carbon/is_muzzled()
 	for (var/obj/item/clothing/clothing in get_equipped_items())
@@ -512,8 +512,7 @@
 	var/total_burn = 0
 	var/total_brute = 0
 	var/total_stamina = 0
-	for(var/X in bodyparts) //hardcoded to streamline things a bit
-		var/obj/item/bodypart/BP = X
+	for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR EDIT
 		total_brute += (BP.brute_dam * BP.body_damage_coeff)
 		total_burn += (BP.burn_dam * BP.body_damage_coeff)
 		total_stamina += (BP.stamina_dam * BP.stam_damage_coeff)
@@ -1074,7 +1073,7 @@
 				if("augment")
 					if(ishuman(src))
 						if(BP)
-							BP.change_bodypart_status(BODYPART_ROBOTIC, TRUE, TRUE)
+							BP.change_bodypart_status(BODYTYPE_ROBOTIC, TRUE, TRUE) //PARIAH MODULAR EDIT
 						else
 							to_chat(usr, span_boldwarning("[src] doesn't have such bodypart."))
 					else

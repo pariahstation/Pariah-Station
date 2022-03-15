@@ -13,8 +13,7 @@
 		//If a specific bodypart is targetted, check how that bodypart is protected and return the value.
 
 	//If you don't specify a bodypart, it checks ALL your bodyparts for protection, and averages out the values
-	for(var/X in bodyparts)
-		var/obj/item/bodypart/BP = X
+	for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR EDIT
 		armorval += checkarmor(BP, type)
 		organnum++
 	return (armorval/max(organnum, 1))
@@ -475,8 +474,7 @@
 			if(EXPLODE_DEVASTATE)
 				max_limb_loss = 4
 				probability = 50
-		for(var/X in bodyparts)
-			var/obj/item/bodypart/BP = X
+		for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR EDIT
 			if(prob(probability) && !prob(getarmor(BP, BOMB)) && BP.body_zone != BODY_ZONE_HEAD && BP.body_zone != BODY_ZONE_CHEST)
 				BP.brute_dam = BP.max_damage
 				BP.dismember()
@@ -530,7 +528,7 @@
 		return
 	var/informed = FALSE
 	for(var/obj/item/bodypart/L in src.bodyparts)
-		if(L.status == BODYPART_ROBOTIC)
+		if(!IS_ORGANIC_LIMB(L)) //PARIAH MODULAR EDIT
 			if(!informed)
 				to_chat(src, span_userdanger("You feel a sharp pain as your robotic limbs overload."))
 				informed = TRUE
