@@ -9,6 +9,7 @@
 		TRAIT_NOHUNGER,
 		TRAIT_NOBREATH,
 	)
+	default_features = list("mcolor" = "FFF", "tail_human" = "None", "ears" = "None", "wings" = "None", "body_size" = "Normal") //PARIAH MODULAR EDIT
 	inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
 	mutant_bodyparts = list("wings" = "None")
 	use_skintones = TRUE

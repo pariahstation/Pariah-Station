@@ -8,7 +8,7 @@
 		TRAIT_CAN_STRIP,
 		TRAIT_CAN_USE_FLIGHT_POTION,
 	)
-	mutant_bodyparts = list("wings" = "None")
+	mutant_bodyparts = list("mcolor" = "FFF", "wings" = "None", "body_size" = "Normal") //PARIAH MODULAR EDIT
 	use_skintones = 1
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	disliked_food = GROSS | RAW | CLOTH

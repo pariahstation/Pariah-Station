@@ -307,6 +307,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Character
 	READ_FILE(S["randomise"],  randomise)
+	READ_FILE(S["body_size"],  body_size) //PARIAH MODULAR EDIT
 
 	//Load prefs
 	READ_FILE(S["job_preferences"], job_preferences)
@@ -365,6 +366,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Character
 	WRITE_FILE(S["randomise"] , randomise)
+	WRITE_FILE(S["body_size"] , body_size) //PARIAH MODULAR EDIT
 
 	//Write prefs
 	WRITE_FILE(S["job_preferences"] , job_preferences)

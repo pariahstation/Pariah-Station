@@ -12,6 +12,7 @@
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 	meat = /obj/item/food/meat/slab/human/mutant/fly
 	mutanteyes = /obj/item/organ/eyes/fly
+	default_features = list("insect_type" = "housefly", "body_size" = "Normal") //PARIAH MODULAR EDIT
 	liked_food = GROSS
 	disliked_food = NONE
 	toxic_food = NONE

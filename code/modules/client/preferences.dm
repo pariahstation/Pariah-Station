@@ -35,6 +35,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/slot_randomized //keeps track of round-to-round randomization of the character slot, prevents overwriting
 
 	var/list/randomise = list()
+	var/list/body_size = list()
 
 	//Quirk list
 	var/list/all_quirks = list()
@@ -489,6 +490,8 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 		character.update_body()
 		character.update_hair()
 		character.update_body_parts()
+
+		character.dna.update_body_size() //PARIAH STATION EDIT
 
 
 /// Returns whether the parent mob should have the random hardcore settings enabled. Assumes it has a mind.

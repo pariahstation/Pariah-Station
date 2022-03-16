@@ -6,7 +6,7 @@
 	limbs_id = "human"
 
 	mutant_bodyparts = list("tail_human" = "Cat", "ears" = "Cat", "wings" = "None")
-
+	default_features = list("mcolor" = "FFF", "wings" = "None", "body_size" = "Normal") //PARIAH MODULAR EDIT
 	mutantears = /obj/item/organ/ears/cat
 	mutant_organs = list(/obj/item/organ/tail/cat)
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT

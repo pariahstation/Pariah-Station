@@ -66,6 +66,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	var/default_mutation_genes[DNA_MUTATION_BLOCKS] //List of the default genes from this mutation to allow DNA Scanner highlighting
 	var/stability = 100
 	var/scrambled = FALSE //Did we take something like mutagen? In that case we cant get our genes scanned to instantly cheese all the powers.
+	var/current_body_size = BODY_SIZE_NORMAL //This is a size multiplier, it starts at "1". - PARIAH STATION MODULAR EDIT
 
 /datum/dna/New(mob/living/new_holder)
 	if(istype(new_holder))
@@ -96,6 +97,8 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	destination.dna.unique_features = unique_features
 	destination.dna.features = features.Copy()
 	destination.dna.real_name = real_name
+	destination.dna.update_body_size()
+ //Must come after features.Copy()
 	destination.dna.temporary_mutations = temporary_mutations.Copy()
 	if(transfer_SE)
 		destination.dna.mutation_index = mutation_index
@@ -111,8 +114,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	new_dna.features = features.Copy()
 	new_dna.species = new species.type
 	new_dna.species.species_traits = species.species_traits
-	new_dna.real_name = real_name
-	// Mutations aren't gc managed, but they still aren't templates
+	new_dna.real_name = real_name // Mutations aren't gc managed, but they still aren't templates - PARIAH STATION EDIT
 	// Let's do a proper copy
 	for(var/datum/mutation/human/mutation in mutations)
 		new_dna.add_mutation(mutation, mutation.class, mutation.timeout)
@@ -438,7 +440,21 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	return
 
 /////////////////////////// DNA MOB-PROCS //////////////////////
+//PARIAH STATION EDIT START
+/datum/dna/proc/update_body_size()
+	if(!holder)
+		return
+	var/desired_size = GLOB.body_sizes[features["body_size"]]
 
+	if(desired_size == current_body_size)
+		return
+
+	var/change_multiplier = desired_size / current_body_size
+	var/translate = ((change_multiplier-1) * 32) * 0.5
+	holder.transform = holder.transform.Scale(change_multiplier)
+	holder.transform = holder.transform.Translate(0, translate)
+	current_body_size = desired_size
+//PARIAH STATION EDIT END
 /mob/proc/set_species(datum/species/mrace, icon_update = 1)
 	return
 
