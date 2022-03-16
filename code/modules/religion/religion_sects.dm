@@ -99,7 +99,7 @@
 	var/mob/living/carbon/human/blessed = target
 	for(var/X in blessed.bodyparts)
 		var/obj/item/bodypart/bodypart = X
-		if(BODYTYPE_ROBOTIC in BP.bodytype) //PARIAH STATION EDIT
+		if(BODYTYPE_ROBOTIC in bodypart.bodytype) //PARIAH STATION EDIT
 			to_chat(chap, span_warning("[GLOB.deity] refuses to heal this metallic taint!"))
 			return TRUE
 
@@ -164,7 +164,7 @@
 
 	//if we're not targetting a robot part we stop early
 	var/obj/item/bodypart/bodypart = blessed.get_bodypart(chap.zone_selected)
-	if(IS_ORGANIC_LIMB(BP)) //PARIAH STATION EDIT
+	if(IS_ORGANIC_LIMB(bodypart)) //PARIAH STATION EDIT
 		if(!did_we_charge)
 			to_chat(chap, span_warning("[GLOB.deity] scoffs at the idea of healing such fleshy matter!"))
 		else
@@ -257,7 +257,7 @@
 
 	account.adjust_money(-GREEDY_HEAL_COST)
 	var/heal_amt = 30
-	var/list/hurt_limbs = H.get_damaged_bodyparts(1, 1, null, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
+	var/list/hurt_limbs = blessed.get_damaged_bodyparts(1, 1, null, BODYTYPE_ORGANIC) //PARIAH STATION EDIT
 	if(hurt_limbs.len)
 		for(var/obj/item/bodypart/affecting as anything in hurt_limbs)
 			if(affecting.heal_damage(heal_amt, heal_amt, null, BODYTYPE_ORGANIC)) //PARIAH STATION EDIT

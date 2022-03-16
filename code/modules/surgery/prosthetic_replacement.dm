@@ -42,14 +42,14 @@
 		tool = organ_storage_contents
 	if(istype(tool, /obj/item/bodypart))
 		var/obj/item/bodypart/bodypart_to_attach = tool
-		if(IS_ORGANIC_LIMB(BP)) //PARIAH STATION EDIT
+		if(IS_ORGANIC_LIMB(bodypart_to_attach)) //PARIAH STATION EDIT
 			organ_rejection_dam = 10
 			if(ishuman(target))
 				var/mob/living/carbon/human/human_target = target
 				if(!(bodypart_to_attach.part_origin & human_target.dna.species.allowed_animal_origin))
 					to_chat(user, span_warning("[bodypart_to_attach] doesn't match the patient's morphology."))
 					return -1
-				if(H.dna.species.id != BP.limb_id) //PARIAH STATION EDIT
+				if(human_target.dna.species.id != bodypart_to_attach.limb_id) //PARIAH STATION EDIT
 					organ_rejection_dam = 30
 
 		if(target_zone == bodypart_to_attach.body_zone) //so we can't replace a leg with an arm, or a human arm with a monkey arm.
@@ -80,7 +80,7 @@
 			display_results(user, target, span_warning("You fail in replacing [target]'s [parse_zone(target_zone)]! Their body has rejected [limb_to_attach]!"),
 				span_warning("[user] fails to replace [target]'s [parse_zone(target_zone)]!"),
 				span_warning("[user] fails to replaces [target]'s [parse_zone(target_zone)]!"))
-			L.forceMove(target.loc) //PARIAH STATION ADDITION
+			limb_to_attach.forceMove(target.loc) //PARIAH STATION ADDITION
 			return
 		if(organ_rejection_dam)
 			target.adjustToxLoss(organ_rejection_dam)

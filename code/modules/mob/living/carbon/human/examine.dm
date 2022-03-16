@@ -138,7 +138,7 @@
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()
-	for(var/obj/item/bodypart/BP as anything in bodyparts) //PARIAH MODULAR EDIT
+	for(var/obj/item/bodypart/body_part as anything in bodyparts) //PARIAH MODULAR EDIT
 		if(body_part.bodypart_disabled)
 			disabled += body_part
 		missing -= body_part.body_zone

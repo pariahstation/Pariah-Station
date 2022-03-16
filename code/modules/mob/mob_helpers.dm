@@ -373,7 +373,7 @@
 /proc/item_heal_robotic(mob/living/carbon/human/H, mob/user, brute_heal, burn_heal)
 	var/obj/item/bodypart/affecting = H.get_bodypart(check_zone(user.zone_selected))
 	if(affecting && (!IS_ORGANIC_LIMB(affecting))) //PARIAH STATION EDIT
-	var/dam //changes repair text based on how much brute/burn was supplied
+		var/dam //changes repair text based on how much brute/burn was supplied
 		if(brute_heal > burn_heal)
 			dam = 1
 		else
@@ -382,7 +382,7 @@
 			if(affecting.heal_damage(brute_heal, burn_heal, 0, BODYTYPE_ROBOTIC)) //PARIAH STATION EDIT
 				H.update_damage_overlays()
 			user.visible_message(span_notice("[user] has fixed some of the [dam ? "dents on" : "burnt wires in"] [H]'s [parse_zone(affecting.body_zone)]."), \ //PARIAH STATION EDIT
-			span_notice("You fix some of the [dam ? "dents on" : "burnt wires in"] [H == user ? "your" : "[H]'s"] [parse_zone(affecting.body_zone)].</span>")) //PARIAH STATION EDIT
+			span_notice("You fix some of the [dam ? "dents on" : "burnt wires in"] [H == user ? "your" : "[H]'s"] [parse_zone(affecting.body_zone)].")) //PARIAH STATION EDIT
 			return 1 //successful heal
 		else
 			to_chat(user, span_warning("[affecting] is already in good condition!"))

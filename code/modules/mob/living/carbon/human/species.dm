@@ -1005,28 +1005,28 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	////PUT ALL YOUR WEIRD ASS REAL-LIMB HANDLING HERE
 	///Digi handling
-	if(H.dna.species.bodytype & BODYTYPE_DIGITIGRADE)
+	if(source.dna.species.bodytype & BODYTYPE_DIGITIGRADE)
 		var/uniform_compatible = FALSE
 		var/suit_compatible = FALSE
-		if(!(H.w_uniform) || (H.w_uniform.supports_variations & DIGITIGRADE_VARIATION) || (H.w_uniform.supports_variations & DIGITIGRADE_VARIATION_NO_NEW_ICON)) //Checks uniform compatibility
+		if(!(source.w_uniform) || (source.w_uniform.supports_variations & DIGITIGRADE_VARIATION) || (source.w_uniform.supports_variations & DIGITIGRADE_VARIATION_NO_NEW_ICON)) //Checks uniform compatibility
 			uniform_compatible = TRUE
-		if((!H.wear_suit) || (H.wear_suit.supports_variations & DIGITIGRADE_VARIATION) || !(H.wear_suit.body_parts_covered & LEGS) || (H.wear_suit.supports_variations & DIGITIGRADE_VARIATION_NO_NEW_ICON)) //Checks suit compatability
+		if((!source.wear_suit) || (source.wear_suit.supports_variations & DIGITIGRADE_VARIATION) || !(source.wear_suit.body_parts_covered & LEGS) || (source.wear_suit.supports_variations & DIGITIGRADE_VARIATION_NO_NEW_ICON)) //Checks suit compatability
 			suit_compatible = TRUE
 
-		if((uniform_compatible && suit_compatible) || (suit_compatible && H.wear_suit?.flags_inv & HIDEJUMPSUIT)) //If the uniform is hidden, it doesnt matter if its compatible
-			for(var/obj/item/bodypart/BP as() in H.bodyparts)
+		if((uniform_compatible && suit_compatible) || (suit_compatible && source.wear_suit?.flags_inv & HIDEJUMPSUIT)) //If the uniform is hidden, it doesnt matter if its compatible
+			for(var/obj/item/bodypart/BP as() in source.bodyparts)
 				if(BP.bodytype & BODYTYPE_DIGITIGRADE)
 					BP.limb_id = "digitigrade"
 
 		else
-			for(var/obj/item/bodypart/BP as() in H.bodyparts)
+			for(var/obj/item/bodypart/BP as() in source.bodyparts)
 				if(BP.bodytype & BODYTYPE_DIGITIGRADE)
 					BP.limb_id = "lizard"
 	///End digi handling
 
 
 	////END REAL-LIMB HANDLING
-	H.update_body_parts()
+	source.update_body_parts()
 
 	//PARIAH MODULAR EDIT END
 

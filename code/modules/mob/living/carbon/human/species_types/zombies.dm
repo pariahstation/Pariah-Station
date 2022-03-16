@@ -148,7 +148,7 @@
 	mutanttongue = /obj/item/organ/tongue/zombie
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
 //PARIAH MODULAR EDIT START
-		species_chest = /obj/item/bodypart/chest/zombie
+	species_chest = /obj/item/bodypart/chest/zombie
 	species_head = /obj/item/bodypart/head/zombie
 	species_l_arm = /obj/item/bodypart/l_arm/zombie
 	species_r_arm = /obj/item/bodypart/r_arm/zombie

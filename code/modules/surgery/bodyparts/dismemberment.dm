@@ -17,11 +17,11 @@
 	if(!silent)
 		limb_owner.visible_message(span_danger("<B>[limb_owner]'s [name] is violently dismembered!</B>"))
 	//PARIAH STATION EDIT START
-	if(C.stat <= SOFT_CRIT)//No more screaming while unconsious
+	if(limb_owner.stat <= SOFT_CRIT)//No more screaming while unconsious
 		if(IS_ORGANIC_LIMB(affecting))//Chest is a good indicator for if a carbon is robotic in nature or not.
-			INVOKE_ASYNC(C, /mob.proc/emote, "scream")
+			INVOKE_ASYNC(limb_owner, /mob.proc/emote, "scream")
 
-	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
+	SEND_SIGNAL(limb_owner, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
 	//PARIAH STATION EDIT END
 	playsound(get_turf(limb_owner), 'sound/effects/dismember.ogg', 80, TRUE)
 	SEND_SIGNAL(limb_owner, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
@@ -133,7 +133,7 @@
 				continue
 			organ.transfer_to_limb(src, phantom_owner)
 
-	synchronize_bodytypes(C) //PARIAH STATION EDIT
+	synchronize_bodytypes(phantom_owner) //PARIAH STATION EDIT
 	update_icon_dropped()
 	phantom_owner.update_health_hud() //update the healthdoll
 	phantom_owner.update_body()
@@ -196,7 +196,7 @@
 
 //when a limb is dropped, the internal organs are removed from the mob and put into the limb
 /obj/item/organ/proc/transfer_to_limb(obj/item/bodypart/bodypart, mob/living/carbon/bodypart_owner)
-	Remove(C, TRUE) //PARIAH STATION EDIT
+	Remove(bodypart_owner, TRUE) //PARIAH STATION EDIT
 	forceMove(bodypart)
 
 /obj/item/organ/brain/transfer_to_limb(obj/item/bodypart/head/head, mob/living/carbon/human/head_owner)
@@ -321,12 +321,9 @@
 			O.drop_limb(1)
 	return attach_limb(C, special, is_creating)
 
-/obj/item/bodypart/proc/attach_limb(mob/living/carbon/C, special, is_creating = FALSE)
-	var/obj/item/bodypart/chest/mob_chest = C.get_bodypart(BODY_ZONE_CHEST)
+/obj/item/bodypart/proc/attach_limb(mob/living/carbon/new_limb_owner, special, is_creating = FALSE)
+	var/obj/item/bodypart/chest/mob_chest = new_limb_owner.get_bodypart(BODY_ZONE_CHEST)
 	if(mob_chest && !(mob_chest.acceptable_bodytype & bodytype)) //PARIAH STATION EDIT END
-
-/obj/item/bodypart/proc/attach_limb(mob/living/carbon/new_limb_owner, special)
-	if(SEND_SIGNAL(new_limb_owner, COMSIG_CARBON_ATTACH_LIMB, src, special) & COMPONENT_NO_ATTACH)
 		return FALSE
 	// . = TRUE // - PARIAH STATION EDIT
 	moveToNullspace()
