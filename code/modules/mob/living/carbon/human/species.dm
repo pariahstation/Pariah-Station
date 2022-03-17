@@ -23,12 +23,15 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	/// Ex "[Plasmamen] are weak", "[Mothmen] are strong", "[Lizardpeople] don't like", "[Golems] hate"
 	var/plural_form
 	// Default color. If mutant colors are disabled, this is the color that will be used by that race.
+	
 	var/default_color = "#FFFFFF"
-
+/	//Pariah Modular Addition
 	var/bodyflag
 
+	///Pariah Modular Addition
 	var/bodytype
 
+	///Paraiah Modular Addition
 	var/species_clothing_path
 
 	///Whether or not the race has sexual characteristics (biological genders). At the moment this is only FALSE for skeletons and shadows
@@ -911,7 +914,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				else
 					standing += mutable_appearance(undershirt.icon, undershirt.icon_state, -BODY_LAYER)
 
-		if(species_human.socks && species_human.num_legs >= 2 && !(DIGITIGRADE in species_traits))
+		if(species_human.socks && species_human.num_legs >= 2 && !(BODYTYPE_DIGITIGRADE in species_traits))
 			var/datum/sprite_accessory/socks/socks = GLOB.socks_list[species_human.socks]
 			if(socks)
 				standing += mutable_appearance(socks.icon, socks.icon_state, -BODY_LAYER)
@@ -1211,7 +1214,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(ITEM_SLOT_FEET)
 			if(H.num_legs < 2)
 				return FALSE
-			if((DIGITIGRADE in species_traits) && !(I.item_flags & IGNORE_DIGITIGRADE))
+			if((BODYTYPE_DIGITIGRADE in species_traits) && !(I.item_flags & IGNORE_DIGITIGRADE))
 				if(!disable_warning)
 					to_chat(H, span_warning("The footwear around here isn't compatible with your feet!"))
 				return FALSE

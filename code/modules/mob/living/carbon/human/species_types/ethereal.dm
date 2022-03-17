@@ -154,12 +154,12 @@
 	H.visible_message(span_danger("[H] stops flickering and goes back to their normal state!"))
 
 	//PARIAH MODULAR EDIT START
-	//The following code is literally only to make admin-spawned ethereals not be black.
+	/*/The following code is literally only to make admin-spawned ethereals not be black.
 	C.dna.features["mcolor"] = C.dna.features["ethcolor"] //Ethcolor and Mut color are both dogshit and will be replaced
 	for(var/obj/item/bodypart/BP as anything in C.bodyparts)
 		if(BP.limb_id == SPECIES_ETHEREAL)
 			BP.update_limb(is_creating = TRUE)
-	//PARIAH MODULAR EDIT END
+	*///PARIAH MODULAR EDIT END
 
 /datum/species/ethereal/get_features()
 	var/list/features = ..()
