@@ -782,7 +782,7 @@
 		else
 			no_update = FALSE
 
-	if(HAS_TRAIT(C, TRAIT_HUSK) && IS_ORGANIC_LIMB(src)) // PARIAH STAITON EDIT START
+	if(HAS_TRAIT(limb_owner, TRAIT_HUSK) && IS_ORGANIC_LIMB(src)) // PARIAH STAITON EDIT START
 		dmg_overlay_type = "" //no damage overlay shown when husked
 		is_husked = TRUE
 
@@ -790,7 +790,7 @@
 		dmg_overlay_type = initial(dmg_overlay_type)
 		is_husked = FALSE
 
-	if(!dropping_limb && C.dna?.check_mutation(HULK)) //Please remove hulk from the game. I beg you.
+	if(!dropping_limb && limb_owner.dna?.check_mutation(/datum/mutation/human/hulk)) //Please remove hulk from the game. I beg you.
 		mutation_color = "00aa00"
 	else
 		mutation_color = null
@@ -815,12 +815,12 @@
 	if(!is_creating) //PARIAH STATION START
 		return
 
-	if(!animal_origin && ishuman(C)) //PARIAH STATION END
+	if(!animal_origin && ishuman(limb_owner)) //PARIAH STATION END
 		var/mob/living/carbon/human/human_owner = limb_owner
 		should_draw_greyscale = FALSE
 
 		var/datum/species/owner_species = human_owner.dna.species
-		species_flags_list = H.dna.species.species_traits //Literally only exists for a single use of NOBLOOD, but, no reason to remove it i guess...? - PARIAH STATION EDIT
+		species_flags_list = human_owner.dna.species.species_traits //Literally only exists for a single use of NOBLOOD, but, no reason to remove it i guess...? - PARIAH STATION EDIT
 
 		if(owner_species.use_skintones)
 			skin_tone = human_owner.skin_tone
@@ -831,9 +831,9 @@
 		body_gender = human_owner.body_type
 		should_draw_gender = owner_species.sexes
 		if(should_draw_gender) //Assigns the limb a gender for rendering - PARIAH STATION EDIT START
-			limb_gender = (H.gender == MALE) ? "m" : "f"
+			limb_gender = (human_owner.gender == MALE) ? "m" : "f"
 		//PARIAH STATION EDIT END
-		if(((MUTCOLORS in S.species_traits) || (DYNCOLORS in S.species_traits)) && uses_mutcolor) //Ethereal code. Motherfuckers. - PARIAH STATION EDIT
+		if(((MUTCOLORS in owner_species.species_traits) || (DYNCOLORS in owner_species.species_traits)) && uses_mutcolor) //Ethereal code. Motherfuckers. - PARIAH STATION EDIT
 			if(owner_species.fixed_mut_color)
 				species_color = owner_species.fixed_mut_color
 			else
