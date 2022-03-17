@@ -152,7 +152,7 @@
 		lip_style = null
 		stored_lipstick_trait = null
 
-	else if(!animal_origin && ishuman(C)) // PARIAH STATION EDIT
+	else if(!animal_origin && ishuman(head_owner)) // PARIAH STATION EDIT
 		var/mob/living/carbon/human/human_head_owner = head_owner
 		var/datum/species/owner_species = human_head_owner.dna.species
 
