@@ -215,22 +215,6 @@
 /obj/machinery/limbgrower/proc/build_limb(buildpath)
 	/// The limb we're making with our buildpath, so we can edit it.
 	var/obj/item/bodypart/limb = new buildpath(loc)
-	/// Species with greyscale limbs.
-	var/list/greyscale_species = list(SPECIES_HUMAN, SPECIES_LIZARD, SPECIES_ETHEREAL)
-
-//PARIAH MODULAR EDIT START
-/*	if(selected_category in greyscale_species) //Species with greyscale parts should be included here
-*		if(selected_category == SPECIES_HUMAN) //humans don't use the full colour spectrum, they use random_skin_tone
-*			limb.skin_tone = random_skin_tone()
-*		else
-*			limb.species_color = "#[random_color()]"
-*		limb.icon = 'icons/mob/human_parts_greyscale.dmi'
-*		limb.should_draw_greyscale = TRUE
-*	else
-*		limb.icon = 'icons/mob/human_parts.dmi'
-
-*/	// Set this limb up using the species name and body zone
-//PARIAH MODULAR EDIT END
 
 	limb.icon_state = "[selected_category]_[limb.body_zone]"
 	limb.name = "\improper biosynthetic [selected_category] [parse_zone(limb.body_zone)]"

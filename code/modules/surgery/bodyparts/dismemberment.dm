@@ -303,14 +303,15 @@
 	..()
 
 //Attach a limb to a human and drop any existing limb of that type.
-/obj/item/bodypart/proc/replace_limb(mob/living/carbon/C, special, is_creating = FALSE) //PARIAH STATION EDIT
+/obj/item/bodypart/proc/replace_limb(mob/living/carbon/limb_owner, special, is_creating = FALSE) //PARIAH STATION EDIT
 	if(!istype(limb_owner))
 		return
-	var/obj/item/bodypart/O = C.get_bodypart(body_zone) //PARIAH STATION EDIT
+	var/obj/item/bodypart/limb = limb_owner.get_bodypart(body_zone) //PARIAH STATION EDIT
 	if(limb)
-		limb.drop_limb(1)
-	return attach_limb(C, special, is_creating) //PARIAH STATION EDIT
-/obj/item/bodypart/head/replace_limb(mob/living/carbon/head_owner, special)
+		limb.drop_limb(TRUE)
+	return attach_limb(limb_owner, special, is_creating) //PARIAH STATION EDIT
+
+/obj/item/bodypart/head/replace_limb(mob/living/carbon/head_owner, special, is_creating = FALSE)
 	if(!istype(head_owner))
 		return
 	var/obj/item/bodypart/head/head = head_owner.get_bodypart(body_zone)
@@ -318,8 +319,8 @@
 		if(!special) //PARIAH STATION EDIT START
 			return
 		else
-			O.drop_limb(1)
-	return attach_limb(C, special, is_creating)
+			head.drop_limb(TRUE)
+	return attach_limb(head_owner, special, is_creating)
 
 /obj/item/bodypart/proc/attach_limb(mob/living/carbon/C, special, is_creating = FALSE)
 	var/obj/item/bodypart/chest/mob_chest = C.get_bodypart(BODY_ZONE_CHEST)

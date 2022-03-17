@@ -25,6 +25,12 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	// Default color. If mutant colors are disabled, this is the color that will be used by that race.
 	var/default_color = "#FFFFFF"
 
+	var/bodyflag
+
+	var/bodytype
+
+	var/species_clothing_path
+
 	///Whether or not the race has sexual characteristics (biological genders). At the moment this is only FALSE for skeletons and shadows
 	var/sexes = TRUE
 

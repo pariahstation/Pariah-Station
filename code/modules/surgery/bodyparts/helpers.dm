@@ -7,7 +7,7 @@
 
 	if(!zone)
 		zone = BODY_ZONE_CHEST
-	for(var/obj/item/bodypart/L as anything in bodyparts) //PARIAH STATION EDIT
+	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		if(bodypart.body_zone == zone)
 			return bodypart
 
@@ -109,12 +109,12 @@
 
 ///Remove all embedded objects from all limbs on the carbon mob
 /mob/living/carbon/proc/remove_all_embedded_objects()
-	for(var/obj/item/bodypart/L as anything in bodyparts) //PARIAH STATION EDIT
+	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		for(var/obj/item/embedded in bodypart.embedded_objects)
 			remove_embedded_object(embedded)
 
 /mob/living/carbon/proc/has_embedded_objects(include_harmless=FALSE)
-	for(var/obj/item/bodypart/L as anything in bodyparts) //PARIAH STATION EDIT
+	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		for(var/obj/item/embedded in bodypart.embedded_objects)
 			if(!include_harmless && embedded.isEmbedHarmless())
 				continue

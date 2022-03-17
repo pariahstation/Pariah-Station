@@ -152,8 +152,11 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	/// Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]" PARIAH MODULAR EDIT
 	var/list/attack_verb_continuous
 	var/list/attack_verb_simple
-	/// list() of species types, if a species cannot put items in a certain slot, but species type is in list, it will be able to wear that item PARIAH MODULAR EDIT
+	/// list() of species types, if a species cannot put items in a certain slot, but species type is in list, it will be able to wear that item - PARIAH MODULAR EDIT
 	var/list/species_exception = null
+
+	///A bitfield of a species to use as an alternative sprite for any given item. DMIs are stored in the species datum and called via proc in update_icons. - PARIAH MODULAR EDIT
+	var/sprite_sheets = null
 
 	///A weakref to the mob who threw the item
 	var/datum/weakref/thrownby = null //I cannot verbally describe how much I hate this var
