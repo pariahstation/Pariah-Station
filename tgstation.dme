@@ -4413,4 +4413,5 @@
 #include "modular_pariah\master_files\code\_globalvars\lists\chat.dm"
 #include "modular_pariah\modules\decay_subsystem\code\decaySS.dm"
 #include "modular_pariah\modules\decay_subsystem\code\decay_turf_handling.dm"
+#include "modular_pariah\modules\radiosound\code\headset.dm"
 // END_INCLUDE
