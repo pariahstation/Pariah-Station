@@ -4,6 +4,7 @@
 
 /datum/sprite_accessory/teshari_feathers/none
 	name = "None"
+	icon_state = "none"
 
 /datum/sprite_accessory/teshari_feathers/plain
 	name = "Plain"

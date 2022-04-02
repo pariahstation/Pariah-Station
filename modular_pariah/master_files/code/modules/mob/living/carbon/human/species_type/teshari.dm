@@ -11,7 +11,7 @@
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	mutant_bodyparts = list("teshari_feathers" = "None")
-	external_organs = list()
+	external_organs = list(/obj/item/organ/external/teshari_feathers = "None")
 	attack_verb = "slash"
 	attack_effect = ATTACK_EFFECT_CLAW
 	attack_sound = 'sound/weapons/slash.ogg'
