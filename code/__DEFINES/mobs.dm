@@ -122,6 +122,7 @@
 #define MONKEY_BODY (1 << 1)
 #define ALIEN_BODY (1 << 2)
 #define LARVA_BODY (1 << 3)
+#define TESHARI_BODY (1 << 4)
 /*see __DEFINES/inventory.dm for bodypart bitflag defines*/
 
 // Health/damage defines
