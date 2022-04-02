@@ -37,7 +37,10 @@
 	H.dna.features["moth_wings"] = pick(GLOB.moth_wings_list)
 	H.dna.features["moth_antennae"] = pick(GLOB.moth_antennae_list)
 	H.dna.features["pod_hair"] = pick(GLOB.pod_hair_list)
-	H.dna.features["teshari_ears"] = pick(GLOB.teshari_ears_list)
+
+	//PARIAH EDIT ADDITION
+	H.dna.features["teshari_feathers"] = pick(GLOB.teshari_feathers_list)
+	//PARIAH EDIT END
 
 	H.update_body(is_creating = TRUE)
 	H.update_hair(is_creating = TRUE)

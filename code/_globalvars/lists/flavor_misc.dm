@@ -42,9 +42,10 @@ GLOBAL_LIST_EMPTY(caps_list)
 GLOBAL_LIST_EMPTY(tails_list_monkey)
 GLOBAL_LIST_EMPTY(pod_hair_list)
 
-	//Teshari parts
-GLOBAL_LIST_EMPTY(teshari_ears_list)
+//PARIAH EDIT ADDITION
+GLOBAL_LIST_EMPTY(teshari_feathers_list)
 GLOBAL_LIST_EMPTY(teshari_tail_list)
+//PARIAH EDIT END
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Blue" = "#3399ff",

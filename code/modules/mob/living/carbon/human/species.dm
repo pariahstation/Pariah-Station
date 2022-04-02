@@ -739,6 +739,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.caps_list[source.dna.features["caps"]]
 				if("tail_monkey")
 					accessory = GLOB.tails_list_monkey[source.dna.features["tail_monkey"]]
+				//PARIAH EDIT ADDITON
+				if("teshari_feathers")
+					accessory = GLOB.teshari_feathers_list[source.dna.features["teshari_feathers"]]
+				//PARIAH EDIT END
 
 			if(!accessory || accessory.icon_state == "none")
 				continue

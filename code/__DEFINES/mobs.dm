@@ -78,6 +78,8 @@
 #define BODYTYPE_MONKEY (1<<4)
 ///The limb is snouted
 #define BODYTYPE_SNOUTED (1<<5)
+///ITS A SMALL BIRD-THING
+#define BODYTYPE_TESHARI (1<<6)
 
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"

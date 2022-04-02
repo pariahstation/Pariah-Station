@@ -10,7 +10,7 @@
 		TRAIT_CAN_STRIP,
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	mutant_bodyparts = list("teshari_ears" = "None")
+	mutant_bodyparts = list("teshari_feathers" = "None")
 	external_organs = list()
 	attack_verb = "slash"
 	attack_effect = ATTACK_EFFECT_CLAW

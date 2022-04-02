@@ -75,3 +75,10 @@ export const feature_vampire_status: Feature<string> = {
   name: "Vampire status",
   component: FeatureDropdownInput,
 };
+
+// PARIAH EDIT ADDITION
+
+export const feature_teshari_feathers: Feature<string> = {
+  name: "Teshari feathers",
+  component: FeatureDropdownInput,
+};

@@ -87,8 +87,10 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 	if(!GLOB.pod_hair_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/pod_hair, GLOB.pod_hair_list)
-	if(!GLOB.teshari_ears_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_ears, GLOB.teshari_ears_list)
+	//PARIAH EDIT ADDITION
+	if(!GLOB.teshari_feathers_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_feathers, GLOB.teshari_feathers_list)
+	//PARIAH EDIT END
 	//For now we will always return none for tail_human and ears.
 	return(list(
 		"mcolor" = "#[pick("7F","FF")][pick("7F","FF")][pick("7F","FF")]",
@@ -109,7 +111,7 @@
 		"moth_markings" = pick(GLOB.moth_markings_list),
 		"tail_monkey" = "None",
 		"pod_hair" = pick(GLOB.pod_hair_list),
-		"teshari_ears" = pick(GLOB.teshari_ears_list),
+		"teshari_feathers" = pick(GLOB.teshari_feathers_list),
 	))
 
 /proc/random_hairstyle(gender)
