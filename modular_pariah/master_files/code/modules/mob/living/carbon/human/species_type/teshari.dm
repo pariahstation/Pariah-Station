@@ -4,12 +4,11 @@
 	id = SPECIES_TESHARI
 	say_mod = "chirps"
 	default_color = "00FF00"
-	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE)
+	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE, NO_UNDERWEAR)
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
 	)
-	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	mutant_bodyparts = list("teshari_feathers" = "Plain")
 	external_organs = list(/obj/item/organ/external/teshari_feathers = "None")
 	attack_verb = "slash"

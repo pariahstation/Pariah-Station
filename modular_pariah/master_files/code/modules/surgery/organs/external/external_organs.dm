@@ -1,9 +1,10 @@
 /obj/item/organ/external/teshari_feathers
 	zone = BODY_ZONE_HEAD
-	slot = ORGAN_SLOT_EXTERNAL_POD_HAIR
+	slot = ORGAN_SLOT_EXTERNAL_TESH_FEATHERS
 	layers = EXTERNAL_FRONT|EXTERNAL_ADJACENT
 
 	feature_key = "teshari_feathers"
+	preference = "feature_teshari_feathers"
 
 	dna_block = DNA_TESHARI_FEATHERS
 

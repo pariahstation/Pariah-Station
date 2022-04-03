@@ -57,4 +57,3 @@
 /datum/sprite_accessory/teshari_feathers/twies
 	name = "Twies"
 	icon_state = "twies"
-
