@@ -4552,7 +4552,6 @@
 #include "modular_pariah\modules\customization\modules\mob\dead\new_player\sprite_accessories.dm"
 #include "modular_pariah\modules\customization\modules\mob\dead\new_player\body_markings\body_marking_sets.dm"
 #include "modular_pariah\modules\customization\modules\mob\dead\new_player\body_markings\body_markings.dm"
-#include "modular_pariah\modules\customization\modules\mob\living\carbon\human\carbon_update_icons.dm"
 #include "modular_pariah\modules\customization\modules\mob\living\carbon\human\human.dm"
 #include "modular_pariah\modules\customization\modules\mob\living\carbon\human\human_defines.dm"
 #include "modular_pariah\modules\customization\modules\reagents\chemistry\reagents.dm"
