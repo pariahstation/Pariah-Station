@@ -20,7 +20,9 @@
 	disliked_food = GRAIN | GROSS
 	coldmod = 0.67
 	heatmod = 1.3
-	payday_modifier = 0.65
+	brutemod = 1.5
+	burnmod = 1.5
+	payday_modifier = 0.75
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/teshari
 

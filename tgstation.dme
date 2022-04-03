@@ -4408,7 +4408,6 @@
 #include "modular_pariah\master_files\code\modules\client\preferences\erp_preferences.dm"
 #include "modular_pariah\master_files\code\modules\client\preferences\flavor_text.dm"
 #include "modular_pariah\master_files\code\modules\client\preferences\loadout_override_preference.dm"
-#include "modular_pariah\master_files\code\modules\client\preferences\species_features\teshari.dm"
 #include "modular_pariah\master_files\code\modules\mob\dead\new_player\preferences_setup.dm"
 #include "modular_pariah\master_files\code\modules\mob\living\emote_popup.dm"
 #include "modular_pariah\master_files\code\modules\mob\living\carbon\human\species_type\teshari.dm"
