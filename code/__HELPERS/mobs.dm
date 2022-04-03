@@ -58,6 +58,8 @@
 /proc/random_backpack()
 	return pick(GLOB.backpacklist)
 
+//SKYRAT EDIT REMOVAL - CUSTOMIZATION (moved to modular)
+/*
 /proc/random_features()
 	if(!GLOB.tails_list_human.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/human, GLOB.tails_list_human)
@@ -109,6 +111,8 @@
 		"tail_monkey" = "None",
 		"pod_hair" = pick(GLOB.pod_hair_list),
 	))
+*/
+//SKYRAT EDIT REMOVAL END
 
 /proc/random_hairstyle(gender)
 	switch(gender)

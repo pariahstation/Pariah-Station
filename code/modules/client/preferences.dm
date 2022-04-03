@@ -5,7 +5,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1 //Holder so it doesn't default to slot 1, rather the last one used
-	var/max_save_slots = 3
+	var/max_save_slots = 30 //SKYRAT EDIT CHANGE
 
 	//non-preference stuff
 	var/muted = 0
@@ -86,6 +86,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	QDEL_NULL(character_preview_view)
 	QDEL_LIST(middleware)
 	value_cache = null
+	//SKYRAT EDIT ADDITION
+	if(pref_species)
+		QDEL_NULL(pref_species)
+	//SKYRAT EDIT END
 	return ..()
 
 /datum/preferences/New(client/C)
@@ -99,7 +103,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			load_path(C.ckey)
 			unlock_content = !!C.IsByondMember()
 			if(unlock_content)
-				max_save_slots = 8
+				max_save_slots = 40 //SKYRAT EDIT CHANGE
 
 	// give them default keybinds and update their movement keys
 	key_bindings = deep_copy_list(GLOB.default_hotkeys)
@@ -157,10 +161,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		data["character_profiles"] = create_character_profiles()
 		tainted_character_profiles = FALSE
 
-	//PARIAH EDIT BEGIN
+	//SKYRAT EDIT BEGIN
 	data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR)
 	data["preview_selection"] = preview_pref
-	//PARIAH EDIT END
+
+	data["quirks_balance"] = GetQuirkBalance()
+	data["positive_quirk_count"] = GetPositiveQuirkCount()
+	//SKYRAT EDIT END
 
 	data["character_preferences"] = compile_character_preferences(user)
 
@@ -242,7 +249,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			if (istype(requested_preference, /datum/preference/name))
 				tainted_character_profiles = TRUE
-
+			//SKYRAT EDIT
+			update_mutant_bodyparts(requested_preference)
+			for (var/datum/preference_middleware/preference_middleware as anything in middleware)
+				if (preference_middleware.post_set_preference(usr, requested_preference_key, value))
+					return TRUE
+			//SKYRAT EDIT END
 			return TRUE
 		if ("set_color_preference")
 			var/requested_preference_key = params["preference"]
@@ -271,8 +283,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				return FALSE
 
 			return TRUE
-
-		//PARIAH EDIT ADDITION
+		//SKYRAT EDIT ADDITION
 		if("update_preview")
 			preview_pref = params["updated_preview"]
 			character_preview_view.update_body()
@@ -285,7 +296,41 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				var/datum/loadout_manager/tgui = new(usr)
 				tgui.ui_interact(usr)
 			return TRUE
-		//PARIAH EDIT END
+		if ("set_tricolor_preference")
+			var/requested_preference_key = params["preference"]
+			var/index_key = params["value"]
+
+			var/datum/preference/requested_preference = GLOB.preference_entries_by_key[requested_preference_key]
+			if (isnull(requested_preference))
+				return FALSE
+
+			var/default_value_list = read_preference(requested_preference.type)
+			if (!islist(default_value_list))
+				return FALSE
+			var/default_value = default_value_list[index_key]
+
+			// Yielding
+			var/new_color = input(
+				usr,
+				"Select new color",
+				null,
+				default_value || COLOR_WHITE,
+			) as color | null
+
+			if (!new_color)
+				return FALSE
+
+			default_value_list[index_key] = new_color
+
+			if (!update_preference(requested_preference, default_value_list))
+				return FALSE
+
+			return TRUE
+
+		// For the quirks in the prefs menu.
+		if ("get_quirks_balance")
+			return TRUE
+		//SKYRAT EDIT END
 
 
 	for (var/datum/preference_middleware/preference_middleware as anything in middleware)
@@ -393,8 +438,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 
 	client?.clear_map(assigned_map)
 
-	preferences?.character_preview_view = null
-
 	client = null
 	plane_masters = null
 	preferences = null
@@ -403,11 +446,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 
 /// Updates the currently displayed body
 /atom/movable/screen/character_preview_view/proc/update_body()
-	if (isnull(body))
-		create_body()
-	else
-		body.wipe_state()
+	create_body()
 	appearance = preferences.render_new_preview_appearance(body)
+
 
 /atom/movable/screen/character_preview_view/proc/create_body()
 	QDEL_NULL(body)
@@ -483,6 +524,11 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)
+	//SKYRAT EDIT ADDITION
+	for(var/key in augments)
+		var/datum/augment_item/aug = GLOB.augment_items[augments[key]]
+		bal -= aug.cost
+	//SKYRAT EDIT END
 	return bal
 
 /datum/preferences/proc/GetPositiveQuirkCount()
@@ -502,19 +548,25 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 
 /// Applies the given preferences to a human mob.
 /datum/preferences/proc/apply_prefs_to(mob/living/carbon/human/character, icon_updates = TRUE)
-	character.dna.features = list()
+	character.dna.features = MANDATORY_FEATURE_LIST //SKYRAT EDIT CHANGE - We need to instansiate the list with the basic features.
 
 	for (var/datum/preference/preference as anything in get_preferences_in_priority_order())
 		if (preference.savefile_identifier != PREFERENCE_CHARACTER)
 			continue
+	// SKYRAT EDIT
+		if(preference.is_accessible(src)) // Only apply preferences you can actually access.
+			preference.apply_to_human(character, read_preference(preference.type), src)
 
-		preference.apply_to_human(character, read_preference(preference.type))
-
+	for (var/datum/preference_middleware/preference_middleware as anything in middleware)
+		preference_middleware.apply_to_human(character, src)
+	// SKYRAT EDIT END
 	character.dna.real_name = character.real_name
 
 	if(icon_updates)
-		character.icon_render_keys = list()
-		character.update_body(is_creating = TRUE)
+		character.icon_render_key = null //turns out if you don't set this to null update_body_parts does nothing, since it assumes the operation was cached
+		character.update_body()
+		character.update_hair()
+		character.update_body_parts()
 
 
 /// Returns whether the parent mob should have the random hardcore settings enabled. Assumes it has a mind.

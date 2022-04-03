@@ -2,6 +2,10 @@
  * Ring Box
  */
 
+/*
+ * Ring Box
+ */
+
 /obj/item/storage/fancy/ringbox
 	name = "ring box"
 	desc = "A tiny box covered in soft red felt made for holding rings."
