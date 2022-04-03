@@ -1,11 +1,7 @@
 /datum/sprite_accessory/teshari_feathers
 	color_src = HAIR
 	icon = "modular_pariah/master_files/icons/mob/teshari_feathers.dmi"
-
-/datum/sprite_accessory/teshari_feathers/none
-	name = "None"
-	icon_state = "none"
-
+	
 /datum/sprite_accessory/teshari_feathers/plain
 	name = "Plain"
 	icon_state = "plain"
