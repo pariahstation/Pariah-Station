@@ -4505,7 +4505,6 @@
 #include "modular_pariah\modules\customization\game\objects\items\storage\belt.dm"
 #include "modular_pariah\modules\customization\game\objects\items\storage\rings.dm"
 #include "modular_pariah\modules\customization\game\objects\items\tanks\n2_tanks.dm"
-#include "modular_pariah\modules\customization\modules\client\preferences.dm"
 #include "modular_pariah\modules\customization\modules\client\loadout\backpack.dm"
 #include "modular_pariah\modules\customization\modules\client\loadout\clothing.dm"
 #include "modular_pariah\modules\customization\modules\clothing\clothing.dm"
