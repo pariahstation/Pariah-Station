@@ -551,4 +551,9 @@ GLOBAL_LIST_INIT(preference_entries_by_key, init_preference_entries_by_key())
 /datum/preference/text/is_valid(value)
 	return istext(value)
 
+/datum/preference/tri_color
+	abstract_type = /datum/preference/tri_color
+	var/type_to_check = /datum/preference/toggle/allow_mismatched_parts
+	var/actually_check = TRUE
+
 //PARIAH EDIT END

@@ -41,3 +41,4 @@
 				if (!islist(markings[marking][title]))
 					markings[marking][title] = list(sanitize_hexcolor(markings[marking][title]), FALSE)
 	return markings
+
