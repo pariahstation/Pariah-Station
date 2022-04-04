@@ -524,11 +524,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)
-	//SKYRAT EDIT ADDITION
-	for(var/key in augments)
-		var/datum/augment_item/aug = GLOB.augment_items[augments[key]]
-		bal -= aug.cost
-	//SKYRAT EDIT END
 	return bal
 
 /datum/preferences/proc/GetPositiveQuirkCount()
@@ -563,7 +558,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 	character.dna.real_name = character.real_name
 
 	if(icon_updates)
-		character.icon_render_key = null //turns out if you don't set this to null update_body_parts does nothing, since it assumes the operation was cached
+		character.icon_render_keys = null //turns out if you don't set this to null update_body_parts does nothing, since it assumes the operation was cached
 		character.update_body()
 		character.update_hair()
 		character.update_body_parts()

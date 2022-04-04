@@ -154,7 +154,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	genetic = TRUE
 
 /datum/sprite_accessory/socks
-	icon = 'modular_skyrat/master_files/icons/mob/clothing/underwear.dmi'
+	icon = 'modular_pariah/master_files/icons/mob/clothing/underwear.dmi'
 	use_static = TRUE
 
 /datum/sprite_accessory/socks/socks_knee
@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 	icon_state = "stockings_ripped"
 
 /datum/sprite_accessory/underwear
-	icon = 'modular_skyrat/master_files/icons/mob/clothing/underwear.dmi'
+	icon = 'modular_pariah/master_files/icons/mob/clothing/underwear.dmi'
 	///Whether the underwear uses a special sprite for digitigrade style (i.e. briefs, not panties). Adds a "_d" suffix to the icon state
 	var/has_digitigrade = FALSE
 
@@ -423,7 +423,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 
 
 /datum/sprite_accessory/undershirt
-	icon = 'modular_skyrat/master_files/icons/mob/clothing/underwear.dmi'
+	icon = 'modular_pariah/master_files/icons/mob/clothing/underwear.dmi'
 	use_static = TRUE
 
 /datum/sprite_accessory/undershirt/tanktop_alt

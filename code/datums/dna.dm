@@ -7,7 +7,7 @@
  * please do not forget to also include it in this list in the following format:
  *  "[dna block number]" = dna block size,
  * Failure to do that may result in bugs. Thanks.
- */
+
 GLOBAL_LIST_INIT(identity_block_lengths, list(
 		"[DNA_HAIR_COLOR_BLOCK]" = DNA_BLOCK_SIZE_COLOR,
 		"[DNA_FACIAL_HAIR_COLOR_BLOCK]" = DNA_BLOCK_SIZE_COLOR,
@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	var/total_block_len = 1
 	for(var/blocknumber in 1 to DNA_FEATURE_BLOCKS)
 		. += total_block_len
-		total_block_len += GET_UF_BLOCK_LEN(blocknumber)
+		total_block_len += GET_UF_BLOCK_LEN(blocknumber)*/
 
 /////////////////////////// DNA DATUM
 /datum/dna

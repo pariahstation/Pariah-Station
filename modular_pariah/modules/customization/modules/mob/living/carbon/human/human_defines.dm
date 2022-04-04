@@ -7,3 +7,5 @@
 	var/underwear_visibility = NONE
 	///The Examine Panel TGUI.
 	var/datum/examine_panel/tgui = new() //create the datum
+	///Whether the human is trying to hide their mutant bodyparts under their clothes intentially
+	var/try_hide_mutant_parts = FALSE
