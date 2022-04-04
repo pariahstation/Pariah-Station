@@ -1783,7 +1783,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 //Tail Wagging//
 ////////////////
 
-/datum/species/proc/can_wag_tail(mob/living/carbon/human/H)
+/*datum/species/proc/can_wag_tail(mob/living/carbon/human/H)
 	return FALSE
 
 /datum/species/proc/is_wagging_tail(mob/living/carbon/human/H)
@@ -1848,7 +1848,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 /datum/species/proc/start_wagging_tail(mob/living/carbon/human/H)
 
-/datum/species/proc/stop_wagging_tail(mob/living/carbon/human/H)
+/datum/species/proc/stop_wagging_tail(mob/living/carbon/human/H)*/
 
 ///////////////
 //FLIGHT SHIT//

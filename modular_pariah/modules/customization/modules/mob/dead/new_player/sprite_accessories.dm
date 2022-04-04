@@ -119,7 +119,7 @@ GLOBAL_LIST_EMPTY(cached_mutant_icon_files)
 /datum/sprite_accessory/spines
 	key = "spines"
 	generic = "Spines"
-	icon = 'modular_skyrat/master_files/icons/mob/mutant_bodyparts.dmi'
+	icon = 'modular_pariah/master_files/icons/mob/mutant_bodyparts.dmi'
 	special_render_case = TRUE
 	default_color = DEFAULT_SECONDARY
 	recommended_species = list(SPECIES_LIZARD, SPECIES_LIZARD_ASH, SPECIES_LIZARD_SILVER)

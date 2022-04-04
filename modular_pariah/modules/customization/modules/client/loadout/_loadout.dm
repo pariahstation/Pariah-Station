@@ -1,4 +1,4 @@
-/datum/loadout_item
+/*datum/loadout_item
 	var/name
 	///Category in which the item belongs to LOADOUT_CATEGORY_UNIFORM, LOADOUT_CATEGORY_BACKPACK etc.
 	var/category = LOADOUT_CATEGORY_NONE
