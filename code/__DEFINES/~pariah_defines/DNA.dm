@@ -35,3 +35,6 @@
 
 //Defines for an accessory to be randomed
 #define ACC_RANDOM		"random"
+
+
+#define MAXIMUM_MARKINGS_PER_LIMB 3

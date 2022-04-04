@@ -152,7 +152,7 @@
 	feature_key = "horns"
 	preference = "feature_lizard_horns"
 
-	dna_block = DNA_HORNS_BLOCK
+	//dna_block = DNA_HORNS_BLOCK //PARIAH EDIT REMOVAL
 
 /obj/item/organ/external/horns/can_draw_on_bodypart(mob/living/carbon/human/human)
 	if(!(human.head?.flags_inv & HIDEHAIR) || (human.wear_mask?.flags_inv & HIDEHAIR))
@@ -171,7 +171,7 @@
 	feature_key = "frills"
 	preference = "feature_lizard_frills"
 
-	dna_block = DNA_FRILLS_BLOCK
+	//dna_block = DNA_FRILLS_BLOCK //PARIAH EDIT REMOVAL
 
 /obj/item/organ/external/frills/can_draw_on_bodypart(mob/living/carbon/human/human)
 	if(!(human.head?.flags_inv & HIDEEARS))
@@ -191,7 +191,7 @@
 	feature_key = "snout"
 	preference = "feature_lizard_snout"
 
-	dna_block = DNA_SNOUT_BLOCK
+	//dna_block = DNA_SNOUT_BLOCK //PARIAH EDIT REMOVAL
 
 /obj/item/organ/external/snout/can_draw_on_bodypart(mob/living/carbon/human/human)
 	if(!(human.wear_mask?.flags_inv & HIDESNOUT) && !(human.head?.flags_inv & HIDESNOUT))
@@ -210,7 +210,7 @@
 	feature_key = "moth_antennae"
 	preference = "feature_moth_antennae"
 
-	dna_block = DNA_MOTH_ANTENNAE_BLOCK
+	//dna_block = DNA_MOTH_ANTENNAE_BLOCK //PARIAH EDIT REMOVAL
 
 	///Are we burned?
 	var/burnt = FALSE

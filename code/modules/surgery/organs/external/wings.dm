@@ -165,7 +165,7 @@
 	preference = "feature_moth_wings"
 	layers = EXTERNAL_BEHIND | EXTERNAL_FRONT
 
-	dna_block = DNA_MOTH_WINGS_BLOCK
+	//dna_block = DNA_MOTH_WINGS_BLOCK //PARIAH EDIT REMOVAL
 
 	///Are we burned?
 	var/burnt = FALSE
