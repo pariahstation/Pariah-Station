@@ -232,6 +232,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///Was the species changed from its original type at the start of the round?
 	var/roundstart_changed = FALSE
 
+	///Override of the eyes icon file, used for Vox and maybe more in the future - The future is now, with Teshari using it too///PARIAH EDIT
+	var/eyes_icon
+
 ///////////
 // PROCS //
 ///////////
