@@ -38,3 +38,13 @@
 
 
 #define MAXIMUM_MARKINGS_PER_LIMB 3
+//Species IDs. If you wanna look at tg's species ID defines, go look in the *other* DNA.dm file
+#define SPECIES_HUMANOID "humanoid"
+#define SPECIES_INSECT "insect"
+#define SPECIES_MAMMAL "mammal"
+#define SPECIES_IPC "ipc"
+#define SPECIES_SKRELL "skrell"
+#define SPECIES_TAJARAN "tajaran"
+#define SPECIES_VOX "vox"
+#define SPECIES_VULP "vulpkanin"
+#define SPECIES_TESHARI "teshari"

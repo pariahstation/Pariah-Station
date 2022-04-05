@@ -59,6 +59,7 @@
 
 	GLOB.emote_list = init_emote_list()
 
+	make_pariah_datum_references()
 	init_crafting_recipes(GLOB.crafting_recipes)
 
 /// Inits the crafting recipe list, sorting crafting recipe requirements in the process.
