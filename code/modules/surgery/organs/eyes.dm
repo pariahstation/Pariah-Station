@@ -450,6 +450,12 @@
 	eye_icon_state = "flyeyes"
 	icon_state = "eyeballs-fly"
 
+/obj/item/organ/eyes/teshari
+	name = "teshari eyes"
+	desc = "These eyes seem to have a large range."
+	eye_icon_state = "tesharieyes"
+	icon_state = "teshari-eyeballs"
+
 /obj/item/organ/eyes/fly/Insert(mob/living/carbon/eye_owner, special = FALSE)
 	. = ..()
 	ADD_TRAIT(eye_owner, TRAIT_FLASH_SENSITIVE, ORGAN_TRAIT)

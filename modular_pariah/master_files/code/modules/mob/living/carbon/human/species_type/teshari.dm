@@ -4,7 +4,7 @@
 	id = SPECIES_TESHARI
 	say_mod = "chirps"
 	default_color = "00FF00"
-	eyes_icon = 'modular_pariah/master_files/icons/mob/species/teshari_eyes.dmi'
+	mutanteyes = /obj/item/organ/eyes/teshari
 	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE, NO_UNDERWEAR)
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,

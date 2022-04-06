@@ -9,6 +9,7 @@
 	var/list/values = list()
 
 	var/icon/teshari_head = icon('modular_pariah/master_files/icons/mob/teshari_feathers.dmi', "teshari_feathers_m")
+	teshari_head.Blend(icon('icons/mob/human_face.dmi', "tesharieyes"), ICON_OVERLAY)
 
 	for(var/feather_style in GLOB.teshari_feathers_list)
 		var/datum/sprite_accessory/teshari_feathers = GLOB.teshari_feathers_list[feather_style]
