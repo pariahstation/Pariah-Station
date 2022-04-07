@@ -356,6 +356,9 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 			icon_file = DEFAULT_SHOES_FILE
 
+		if((dna.species.bodytype & BODYTYPE_TESHARI) && (worn_item.supports_variations_flags & CLOTHING_TESHARI_VARIATION))
+			icon_file = TESHARI_SHOES_FILE
+
 		shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file)
 
 		if(!shoes_overlay)
