@@ -130,7 +130,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/grab_sound
 	/// A path to an outfit that is important for species life e.g. plasmaman outfit
 	var/datum/outfit/outfit_important_for_life
-
+	///Does this species have a special set of overlay clothing, and if so, what is the name of the folder under .../clothing/species that contains them?
+	var/species_clothing_path
 	///Is this species a flying species? Used as an easy check for some things
 	var/flying_species = FALSE
 	///The actual flying ability given to flying species

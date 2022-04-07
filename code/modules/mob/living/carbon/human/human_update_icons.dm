@@ -468,6 +468,9 @@ There are several things that need to be remembered:
 			if(worn_item.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION)
 				icon_file = DIGITIGRADE_SUIT_FILE*/
 
+		if((dna.species.bodytype & BODYTYPE_TESHARI) && (worn_item.supports_variations_flags & CLOTHING_TESHARI_VARIATION))
+			icon_file = TESHARI_SUIT_FILE
+
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
 			handled_by_bodytype = FALSE
 			icon_file = DEFAULT_SUIT_FILE
