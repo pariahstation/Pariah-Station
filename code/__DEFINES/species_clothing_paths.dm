@@ -20,3 +20,4 @@
 #define TESHARI_SHOES_FILE 'modular_pariah/master_files/icons/mob/species/teshari/clothing/feet.dmi'
 //the dmi containing teshari oversuits
 #define TESHARI_SUIT_FILE 'modular_pariah/master_files/icons/mob/species/teshari/clothing/suit.dmi'
+#define TESHARI_UNIFORM_ICON ''

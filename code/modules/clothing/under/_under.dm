@@ -97,6 +97,11 @@
 		if(!alt_covers_chest)
 			body_parts_covered |= CHEST
 
+	if((supports_variations_flags & CLOTHING_TESHARI_VARIATION) && ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.dna.species.bodytype & BODYTYPE_TESHARI)
+		H.update_inv_w_uniform()
+
 	if((supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION) && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.dna.species.bodytype & BODYTYPE_DIGITIGRADE)

@@ -3,6 +3,7 @@
 	limb_id = SPECIES_TESHARI
 	uses_mutcolor = TRUE
 	is_dimorphic = FALSE
+	bodytype = BODYTYPE_TESHARI | BODYTYPE_ORGANIC
 
 /obj/item/bodypart/chest/teshari
 	icon_greyscale = 'modular_pariah/master_files/icons/mob/species/teshari/teshari_parts_greyscale.dmi'

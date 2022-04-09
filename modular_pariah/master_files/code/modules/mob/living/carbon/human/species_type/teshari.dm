@@ -3,6 +3,7 @@
 	plural_form = "Teshari"
 	id = SPECIES_TESHARI
 	say_mod = "chirps"
+	bodytype = BODYTYPE_TESHARI | BODYTYPE_ORGANIC
 	default_color = "00FF00"
 	mutanteyes = /obj/item/organ/eyes/teshari
 	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE, NO_UNDERWEAR)
