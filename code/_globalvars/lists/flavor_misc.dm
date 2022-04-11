@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(pod_hair_list)
 
 //PARIAH EDIT ADDITION
 GLOBAL_LIST_EMPTY(teshari_feathers_list)
-GLOBAL_LIST_EMPTY(teshari_tail_list)
+GLOBAL_LIST_EMPTY(teshari_tails_list)
 //PARIAH EDIT END
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(

@@ -62,14 +62,13 @@
 	icon = 'modular_pariah/master_files/icons/mob/tails.dmi'
 	em_block = TRUE
 
-/datum/sprite_accessory/teshari_tail/default
-	name = "Default"
-	icon_state = "default"
+/datum/sprite_accessory/teshari_tails/default
+	name = "Teshari Default Tail"
+	icon_state = "teshari_default"
 
-/datum/sprite_accessory/teshari_tail/fluffy
-	name = "Fluffy"
-	icon_state = "fluffy"
-
-/datum/sprite_accessory/teshari_tail/thin
-	name = "Thin"
-	icon_state = "thin"
+/datum/sprite_accessory/teshari_tails/fluffy
+	name = "Teshari Fluffy Tail"
+	icon_state = "teshari_fluffy"
+/datum/sprite_accessory/teshari_tails/thin
+	name = "Teshari Thin Tail"
+	icon_state = "teshari_thin"

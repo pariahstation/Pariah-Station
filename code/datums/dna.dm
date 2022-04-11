@@ -223,7 +223,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	if(features["teshari_feathers"])
 		L[DNA_TESHARI_FEATHERS] = construct_block(GLOB.teshari_feathers_list.Find(features["teshari_feathers"]), GLOB.teshari_feathers_list.len)
 	if(features["teshari_tails"])
-		L[DNA_TESHARI_TAIL_BLOCK] = construct_block(GLOB.teshari_tail_list.Find(features["teshari_tails"]), GLOB.teshari_tail_list.len)
+		L[DNA_TESHARI_TAIL_BLOCK] = construct_block(GLOB.teshari_tails_list.Find(features["teshari_tails"]), GLOB.teshari_tails_list.len)
 	//PARIAH EDIT END
 
 	for(var/blocknum in 1 to DNA_FEATURE_BLOCKS)
@@ -363,7 +363,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		if(DNA_TESHARI_FEATHERS)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_feathers_list.Find(features["teshari_feathers"]), GLOB.teshari_feathers_list.len))
 		if(DNA_TESHARI_TAIL_BLOCK)
-			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_tail_list.Find(features["teshari_tails"]), GLOB.teshari_tail_list.len))
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_tails_list.Find(features["teshari_tails"]), GLOB.teshari_tails_list.len))
 		//PARIAH EDIT END
 
 //Please use add_mutation or activate_mutation instead
@@ -622,7 +622,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	if(dna.features["teshari_feathers"])
 		dna.features["teshari_feathers"] = GLOB.teshari_feathers_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_FEATHERS), GLOB.teshari_feathers_list.len)]
 	if(dna.features["teshari_tails"])
-		dna.features["teshari_tails"] = GLOB.teshari_tail_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_TAIL_BLOCK), GLOB.teshari_tail_list.len)]
+		dna.features["teshari_tails"] = GLOB.teshari_tails_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_TAIL_BLOCK), GLOB.teshari_tails_list.len)]
 	//PARIAH EDIT END
 
 	for(var/obj/item/organ/external/external_organ in internal_organs)

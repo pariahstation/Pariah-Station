@@ -90,15 +90,15 @@
 	//PARIAH EDIT ADDITION
 	if(!GLOB.teshari_feathers_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_feathers, GLOB.teshari_feathers_list)
-	if(!GLOB.teshari_tail_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_tails, GLOB.teshari_tail_list)
+	if(!GLOB.teshari_tails_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_tails, GLOB.teshari_tails_list)
 	//PARIAH EDIT END
 	//For now we will always return none for tail_human and ears.
 	return(list(
 		"mcolor" = "#[pick("7F","FF")][pick("7F","FF")][pick("7F","FF")]",
 		"ethcolor" = GLOB.color_list_ethereal[pick(GLOB.color_list_ethereal)],
 		"tail_lizard" = pick(GLOB.tails_list_lizard),
-		"tail_teshari" = pick(GLOB.teshari_tail_list), //PARIAH MODULAR EDIT
+		"teshari_tails" = pick(GLOB.teshari_tails_list), //PARIAH MODULAR EDIT
 		"tail_human" = "None",
 		"wings" = "None",
 		"snout" = pick(GLOB.snouts_list),
