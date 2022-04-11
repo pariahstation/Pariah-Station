@@ -4415,6 +4415,7 @@
 #include "modular_pariah\master_files\code\modules\projectiles\guns\gun.dm"
 #include "modular_pariah\master_files\code\modules\projectiles\guns\ballistic\automatic.dm"
 #include "modular_pariah\master_files\code\modules\surgery\bodyparts\species_parts\teshari_bodyparts.dm"
+#include "modular_pariah\master_files\code\modules\surgery\organs\tails.dm"
 #include "modular_pariah\master_files\code\modules\surgery\organs\external\_external_organs.dm"
 #include "modular_pariah\master_files\code\modules\verbs\code\modules\client\looc.dm"
 #include "modular_pariah\master_files\code\modules\verbs\code\modules\client\mob\subtle.dm"

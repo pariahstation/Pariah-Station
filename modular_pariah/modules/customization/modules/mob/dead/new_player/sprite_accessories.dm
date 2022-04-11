@@ -57,3 +57,19 @@
 /datum/sprite_accessory/teshari_feathers/twies
 	name = "Twies"
 	icon_state = "twies"
+//TESHARI TAILS
+/datum/sprite_accessory/teshari_tails
+	icon = 'modular_pariah/master_files/icons/mob/tails.dmi'
+	em_block = TRUE
+
+/datum/sprite_accessory/teshari_tail/default
+	name = "Default"
+	icon_state = "default"
+
+/datum/sprite_accessory/teshari_tail/fluffy
+	name = "Fluffy"
+	icon_state = "fluffy"
+
+/datum/sprite_accessory/teshari_tail/thin
+	name = "Thin"
+	icon_state = "thin"

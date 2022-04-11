@@ -40,6 +40,7 @@
 
 	//PARIAH EDIT ADDITION
 	H.dna.features["teshari_feathers"] = pick(GLOB.teshari_feathers_list)
+	H.dna.features["teshari_tails"] = pick(GLOB.teshari_tail_list)
 	//PARIAH EDIT END
 
 	H.update_body(is_creating = TRUE)

@@ -37,6 +37,7 @@
 
 	//PARIAH EDIT ADDITION
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_feathers, GLOB.teshari_feathers_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_tails, GLOB.teshari_tail_list)
 	//PARIAH EDIT END
 
 	//Species

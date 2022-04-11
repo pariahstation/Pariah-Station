@@ -746,6 +746,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				//PARIAH EDIT ADDITON
 				if("teshari_feathers")
 					accessory = GLOB.teshari_feathers_list[source.dna.features["teshari_feathers"]]
+				if("teshari_tails")
+					accessory = GLOB.teshari_tail_list[source.dna.features["teshari_tails"]]
 				//PARIAH EDIT END
 
 			if(!accessory || accessory.icon_state == "none")
