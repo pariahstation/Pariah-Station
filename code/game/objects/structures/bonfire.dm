@@ -97,7 +97,7 @@
 
 /obj/structure/bonfire/proc/check_oxygen()
 	if(isopenturf(loc))
-		var/turf/open/bonfire_turf = loc
+		var/turf/simulated/open/bonfire_turf = loc
 		if(bonfire_turf.air)
 			var/loc_gases = bonfire_turf.air.gases
 			if(loc_gases[/datum/gas/oxygen] && loc_gases[/datum/gas/oxygen][MOLES] >= 5)

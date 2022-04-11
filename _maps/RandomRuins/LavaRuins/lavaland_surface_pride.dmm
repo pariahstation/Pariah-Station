@@ -1,47 +1,47 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/simulated/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "b" = (
 /turf/closed/mineral/volcanic/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "c" = (
-/turf/open/lava/smooth/lava_land_surface,
+/turf/simulated/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "e" = (
 /obj/structure/mirror/directional/west,
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "f" = (
 /obj/structure/mirror/directional/east,
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "g" = (
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "j" = (
 /obj/structure/mirror/directional/west,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "k" = (
 /obj/structure/mirror/directional/east,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "l" = (
 /obj/structure/mirror/directional/west,
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "m" = (
 /obj/structure/mirror/directional/east,
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "r" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/mineral/silver,
+/turf/simulated/open/floor/mineral/silver,
 /area/ruin/powered/pride)
 "G" = (
 /turf/closed/wall/mineral/diamond,
@@ -52,7 +52,7 @@
 /area/ruin/powered/pride)
 "Y" = (
 /obj/machinery/door/airlock/diamond,
-/turf/open/floor/mineral/silver{
+/turf/simulated/open/floor/mineral/silver{
 	blocks_air = 1
 	},
 /area/ruin/powered/pride)

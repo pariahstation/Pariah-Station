@@ -261,7 +261,7 @@
 					L.forceMove(T)
 			L.setDir(direct)
 		if(INCORPOREAL_MOVE_JAUNT) //Incorporeal move, but blocked by holy-watered tiles and salt piles.
-			var/turf/open/floor/stepTurf = get_step(L, direct)
+			var/turf/simulated/open/floor/stepTurf = get_step(L, direct)
 			if(stepTurf)
 				var/obj/effect/decal/cleanable/food/salt/salt = locate() in stepTurf
 				if(salt)

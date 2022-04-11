@@ -38,7 +38,7 @@
 	SEND_SIGNAL(current_turf, COMSIG_MOCK_SIGNAL)
 	TEST_ASSERT_EQUAL(watcher.times_called, 2, "After changing turf, connect_loc didn't reconnect it")
 
-	current_turf.ChangeTurf(/turf/open/floor/carpet)
+	current_turf.ChangeTurf(/turf/simulated/open/floor/carpet)
 	SEND_SIGNAL(current_turf, COMSIG_MOCK_SIGNAL)
 	TEST_ASSERT_EQUAL(watcher.times_called, 3, "After changing turf a second time, connect_loc didn't reconnect it")
 

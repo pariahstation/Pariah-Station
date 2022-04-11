@@ -68,7 +68,7 @@ Burning extracts:
 
 /obj/item/slimecross/burning/blue/do_effect(mob/user)
 	user.visible_message(span_danger("[src] flash-freezes the area!"))
-	for(var/turf/open/T in range(3, get_turf(user)))
+	for(var/turf/simulated/open/T in range(3, get_turf(user)))
 		T.MakeSlippery(TURF_WET_PERMAFROST, min_wet_time = 10, wet_time_to_add = 5)
 	for(var/mob/living/carbon/M in range(5, get_turf(user)))
 		if(M != user)
@@ -135,7 +135,7 @@ Burning extracts:
 /obj/item/slimecross/burning/silver/do_effect(mob/user)
 	var/amount = rand(3,6)
 	var/list/turfs = list()
-	for(var/turf/open/T in range(1,get_turf(user)))
+	for(var/turf/simulated/open/T in range(1,get_turf(user)))
 		turfs += T
 	for(var/i in 1 to amount)
 		var/path = get_random_food()

@@ -290,7 +290,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror, 28)
 	if(length(levels))
 		dest = locate(user_turf.x, user_turf.y, pick(levels))
 
-	user_turf.ChangeTurf(/turf/open/chasm, flags = CHANGETURF_INHERIT_AIR)
-	var/turf/open/chasm/new_chasm = user_turf
+	user_turf.ChangeTurf(/turf/simulated/open/chasm, flags = CHANGETURF_INHERIT_AIR)
+	var/turf/simulated/open/chasm/new_chasm = user_turf
 	new_chasm.set_target(dest)
 	new_chasm.drop(user)

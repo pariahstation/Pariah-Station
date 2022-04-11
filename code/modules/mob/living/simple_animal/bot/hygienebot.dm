@@ -94,7 +94,7 @@
 		for(var/AM in loc)
 			do_wash(AM)
 		if(isopenturf(loc) && !(bot_cover_flags & BOT_COVER_EMAGGED))
-			var/turf/open/tile = loc
+			var/turf/simulated/open/tile = loc
 			tile.MakeSlippery(TURF_WET_WATER, min_wet_time = 10 SECONDS, wet_time_to_add = 5 SECONDS)
 
 	switch(mode)

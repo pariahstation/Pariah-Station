@@ -1,11 +1,13 @@
 /*
 Contains helper procs for airflow, handled in /connection_group.
 */
-
 /mob/proc/airflow_stun()
+	return
+
+/mob/living/airflow_stun()
 	if(stat == 2)
 		return FALSE
-	if(last_airflow_stun > world.time - vsc.airflow_stun_cooldown)
+	if(last_airflow_stun > world.time - SSzas.settings.airflow_stun_cooldown)
 		return FALSE
 
 	if(!(status_flags & CANSTUN) && !(status_flags & CANWEAKEN))
@@ -14,7 +16,7 @@ Contains helper procs for airflow, handled in /connection_group.
 	if(buckled)
 		to_chat(src, "<span class='notice'>Air suddenly rushes past you!</span>")
 		return FALSE
-	if(!lying)
+	if(!body_position == LYING_DOWN)
 		to_chat(src, "<span class='warning'>The sudden rush of air knocks you over!</span>")
 
 	Knockdown(5)
@@ -27,7 +29,7 @@ Contains helper procs for airflow, handled in /connection_group.
 	return
 
 /mob/living/carbon/human/airflow_stun()
-	if(!slip_chance())
+	if(slip(5, loc, GALOSHES_DONT_HELP|SLIDE, 0, TRUE))
 		to_chat(src, "<span class='notice'>Air suddenly rushes past you!</span>")
 		return FALSE
 	..()
@@ -36,40 +38,35 @@ Contains helper procs for airflow, handled in /connection_group.
 
 	if(anchored && !ismob(src)) return FALSE
 
-	if(!isobj(src) && n < vsc.airflow_dense_pressure) return FALSE
+	if(!isobj(src) && n < SSzas.settings.airflow_dense_pressure) return FALSE
 
 	return 1
 
 /mob/check_airflow_movable(n)
-	if(n < vsc.airflow_heavy_pressure)
+	if(n < SSzas.settings.airflow_heavy_pressure)
 		return FALSE
 	return 1
 
 /mob/living/silicon/check_airflow_movable()
 	return FALSE
 
-
-/obj/check_airflow_movable(n)
-	if(isnull(w_class))
-		if(n < SSzas.settings.airflow_dense_pressure)
-			return FALSE //most non-item objs don't have a w_class yet
-	else
-		switch(w_class)
-			if(1,2)
-				if(n < SSzas.settings.airflow_lightest_pressure)
-					return FALSE
-			if(3)
-				if(n < SSzas.settings.airflow_light_pressure)
-					return FALSE
-			if(4,5)
-				if(n < SSzas.settings.airflow_medium_pressure)
-					return FALSE
-			if(6)
-				if(n < SSzas.settings.airflow_heavy_pressure)
-					return FALSE
-			if(7 to INFINITY)
-				if(n < SSzas.settings.airflow_dense_pressure)
-					return FALSE
+/obj/item/check_airflow_movable(n)
+	switch(w_class)
+		if(1,2)
+			if(n < SSzas.settings.airflow_lightest_pressure)
+				return FALSE
+		if(3)
+			if(n < SSzas.settings.airflow_light_pressure)
+				return FALSE
+		if(4,5)
+			if(n < SSzas.settings.airflow_medium_pressure)
+				return FALSE
+		if(6)
+			if(n < SSzas.settings.airflow_heavy_pressure)
+				return FALSE
+		if(7 to INFINITY)
+			if(n < SSzas.settings.airflow_dense_pressure)
+				return FALSE
 	return ..()
 
 
@@ -82,7 +79,7 @@ Contains helper procs for airflow, handled in /connection_group.
 	if(buckled)
 		return FALSE
 	var/obj/item/shoes/shoes = get_item_by_slot(ITEM_SLOT_FEET)
-	if(istype(shoes) && (shoes.clothing & ITEM_FLAG_NOSLIP))
+	if(istype(shoes) && (shoes.clothing_flags & NOSLIP))
 		return FALSE
 	if(HAS_TRAIT(src, TRAIT_NOSLIPALL))
 		return FALSE
@@ -112,7 +109,7 @@ Contains helper procs for airflow, handled in /connection_group.
 		M.show_message("<span class='danger'>\The [src] slams into \a [A]!</span>",1,"<span class='danger'>You hear a loud slam!</span>",2)
 	playsound(src.loc, "smash.ogg", 25, 1, -1)
 	var/weak_amt = istype(A,/obj/item) ? A:w_class : rand(1,5) //Heheheh
-	Weaken(weak_amt)
+	Knockdown(weak_amt)
 	. = ..()
 
 /obj/airflow_hit(atom/A)
@@ -132,25 +129,24 @@ Contains helper procs for airflow, handled in /connection_group.
 	if (prob(33))
 		loc:add_blood(src)
 		bloody_body(src)
-	var/b_loss = min(airflow_speed, (airborne_acceleration*2)) * vsc.airflow_damage
+	var/b_loss = min(airflow_speed, (airborne_acceleration*2)) * SSzas.settings.airflow_damage
 
-	apply_damage(b_loss/3, BRUTE, BP_HEAD, used_weapon = "Airflow")
+	apply_damage(b_loss/3, BRUTE, BODY_ZONE_HEAD)
 
-	apply_damage(b_loss/3, BRUTE, BP_CHEST, used_weapon =  "Airflow")
+	apply_damage(b_loss/3, BRUTE, BODY_ZONE_CHEST)
 
-	apply_damage(b_loss/3, BRUTE, BP_GROIN, used_weapon =  "Airflow")
 
 	if(airflow_speed > 10)
-		Paralyse(round(airflow_speed * vsc.airflow_stun))
+		Paralyze(round(airflow_speed * SSzas.settings.airflow_stun))
 		Stun(paralysis + 3)
 	else
-		Stun(round(airflow_speed * vsc.airflow_stun/2))
+		Stun(round(airflow_speed * SSzas.settings.airflow_stun/2))
 	. = ..()
 
 /zone/proc/movables()
 	. = list()
 	for(var/turf/T in contents)
-		for(var/atom/movable/A in T)
+		for(var/atom/movable/A as anything in T)
 			if(!A.simulated || A.anchored || istype(A, /obj/effect) || isobserver(A))
 				continue
 			. += A

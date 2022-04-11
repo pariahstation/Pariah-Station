@@ -166,7 +166,7 @@
 		team.nuke = nuke
 		team.update_objectives()
 
-	for(var/turf/open/spawned_turf as anything in ship.get_affected_turfs(battlecruiser_loading_turf)) //not as anything to filter out closed turfs
+	for(var/turf/simulated/open/spawned_turf as anything in ship.get_affected_turfs(battlecruiser_loading_turf)) //not as anything to filter out closed turfs
 		for(var/obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser/spawner in spawned_turf)
 			spawner.antag_team = team
 			if(candidates.len > 0)

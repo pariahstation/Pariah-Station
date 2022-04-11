@@ -1,7 +1,7 @@
 /datum/map_generator/cave_generator
 	var/name = "Cave Generator"
 	///Weighted list of the types that spawns if the turf is open
-	var/open_turf_types = list(/turf/open/misc/asteroid/airless = 1)
+	var/open_turf_types = list(/turf/simulated/open/misc/asteroid/airless = 1)
 	///Weighted list of the types that spawns if the turf is closed
 	var/closed_turf_types = list(/turf/closed/mineral/random = 1)
 
@@ -71,7 +71,7 @@
 
 		if(!closed)//Open turfs have some special behavior related to spawning flora and mobs.
 
-			var/turf/open/new_open_turf = new_turf
+			var/turf/simulated/open/new_open_turf = new_turf
 
 			///Spawning isn't done in procs to save on overhead on the 60k turfs we're going through.
 

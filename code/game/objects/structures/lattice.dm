@@ -60,7 +60,7 @@
 		to_chat(user, span_notice("You build a floor."))
 		var/turf/T = src.loc
 		if(isspaceturf(T))
-			T.PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+			T.PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 			qdel(src)
 			return TRUE
 	return FALSE
@@ -120,7 +120,7 @@
 		if(P.use(1))
 			to_chat(user, span_notice("You construct a floor plating, as lava settles around the rods."))
 			playsound(src, 'sound/weapons/genhit.ogg', 50, TRUE)
-			new /turf/open/floor/plating(locate(x, y, z))
+			new /turf/simulated/open/floor/plating(locate(x, y, z))
 		else
 			to_chat(user, span_warning("You need one floor tile to build atop [src]."))
 		return

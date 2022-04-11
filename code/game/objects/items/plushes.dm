@@ -410,7 +410,7 @@
 	if(clash_target)
 		return
 	var/obj/item/toy/plush/narplush/P = locate() in range(1, src)
-	if(P && istype(P.loc, /turf/open) && !P.clashing)
+	if(P && istype(P.loc, /turf/simulated/open) && !P.clashing)
 		clash_of_the_plushies(P)
 
 /obj/item/toy/plush/ratplush/proc/clash_of_the_plushies(obj/item/toy/plush/narplush/P)
@@ -495,7 +495,7 @@
 /obj/item/toy/plush/narplush/Moved()
 	. = ..()
 	var/obj/item/toy/plush/ratplush/P = locate() in range(1, src)
-	if(P && istype(P.loc, /turf/open) && !P.clash_target && !clashing)
+	if(P && istype(P.loc, /turf/simulated/open) && !P.clash_target && !clashing)
 		P.clash_of_the_plushies(src)
 
 /obj/item/toy/plush/lizard_plushie
@@ -674,7 +674,7 @@
 	playsound(src, 'sound/hallucinations/wail.ogg', 50, TRUE, -1)
 	var/list/available_spots = get_adjacent_open_turfs(loc)
 	if(available_spots.len) //If the user is in a confined space the plushie will drop normally as the user dies, but in the open the plush is placed one tile away from the user to prevent squeak spam
-		var/turf/open/random_open_spot = pick(available_spots)
+		var/turf/simulated/open/random_open_spot = pick(available_spots)
 		forceMove(random_open_spot)
 	user.dust(just_ash = FALSE, drop_items = TRUE)
 	return MANUAL_SUICIDE

@@ -8,7 +8,7 @@
  * Fake space
  */
 
-/turf/open/floor/wood
+/turf/simulated/open/floor/wood
 	desc = "Stylish dark wood."
 	icon_state = "wood"
 	floor_tile = /obj/item/stack/tile/wood
@@ -19,19 +19,19 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-/turf/open/floor/wood/setup_broken_states()
+/turf/simulated/open/floor/wood/setup_broken_states()
 	return list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
 
-/turf/open/floor/wood/examine(mob/user)
+/turf/simulated/open/floor/wood/examine(mob/user)
 	. = ..()
 	. += span_notice("There's a few <b>screws</b> and a <b>small crack</b> visible.")
 
-/turf/open/floor/wood/screwdriver_act(mob/living/user, obj/item/I)
+/turf/simulated/open/floor/wood/screwdriver_act(mob/living/user, obj/item/I)
 	if(..())
 		return TRUE
 	return pry_tile(I, user) ? TRUE : FALSE
 
-/turf/open/floor/wood/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+/turf/simulated/open/floor/wood/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	if(T.turf_type == type)
 		return
 	var/obj/item/tool = user.is_holding_item_of_type(/obj/item/screwdriver)
@@ -39,16 +39,16 @@
 		tool = user.is_holding_item_of_type(/obj/item/crowbar)
 	if(!tool)
 		return
-	var/turf/open/floor/plating/P = pry_tile(tool, user, TRUE)
+	var/turf/simulated/open/floor/plating/P = pry_tile(tool, user, TRUE)
 	if(!istype(P))
 		return
 	P.attackby(T, user, params)
 
-/turf/open/floor/wood/pry_tile(obj/item/C, mob/user, silent = FALSE)
+/turf/simulated/open/floor/wood/pry_tile(obj/item/C, mob/user, silent = FALSE)
 	C.play_tool_sound(src, 80)
 	return remove_tile(user, silent, (C.tool_behaviour == TOOL_SCREWDRIVER))
 
-/turf/open/floor/wood/remove_tile(mob/user, silent = FALSE, make_tile = TRUE, force_plating)
+/turf/simulated/open/floor/wood/remove_tile(mob/user, silent = FALSE, make_tile = TRUE, force_plating)
 	if(broken || burnt)
 		broken = FALSE
 		burnt = FALSE
@@ -64,38 +64,38 @@
 				to_chat(user, span_notice("You forcefully pry off the planks, destroying them in the process."))
 	return make_plating(force_plating)
 
-/turf/open/floor/wood/cold
+/turf/simulated/open/floor/wood/cold
 	temperature = 255.37
 
 //Used in Snowcabin.dm
-/turf/open/floor/wood/freezing
+/turf/simulated/open/floor/wood/freezing
 	temperature = 180
 
-/turf/open/floor/wood/airless
+/turf/simulated/open/floor/wood/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/wood/tile
+/turf/simulated/open/floor/wood/tile
 	icon_state = "wood_tile"
 	floor_tile = /obj/item/stack/tile/wood/tile
 
-/turf/open/floor/wood/tile/setup_broken_states()
+/turf/simulated/open/floor/wood/tile/setup_broken_states()
 	return list("wood_tile-broken", "wood_tile-broken2", "wood_tile-broken3")
 
-/turf/open/floor/wood/parquet
+/turf/simulated/open/floor/wood/parquet
 	icon_state = "wood_parquet"
 	floor_tile = /obj/item/stack/tile/wood/parquet
 
-/turf/open/floor/wood/parquet/setup_broken_states()
+/turf/simulated/open/floor/wood/parquet/setup_broken_states()
 	return list("wood_parquet-broken", "wood_parquet-broken2", "wood_parquet-broken3", "wood_parquet-broken4", "wood_parquet-broken5", "wood_parquet-broken6", "wood_parquet-broken7")
 
-/turf/open/floor/wood/large
+/turf/simulated/open/floor/wood/large
 	icon_state = "wood_large"
 	floor_tile = /obj/item/stack/tile/wood/large
 
-/turf/open/floor/wood/large/setup_broken_states()
+/turf/simulated/open/floor/wood/large/setup_broken_states()
 	return list("wood_large-broken", "wood_large-broken2", "wood_large-broken3")
 
-/turf/open/floor/bamboo
+/turf/simulated/open/floor/bamboo
 	desc = "A bamboo mat with a decorative trim."
 	icon = 'icons/turf/floors/bamboo_mat.dmi'
 	icon_state = "mat-0"
@@ -110,10 +110,10 @@
 	clawfootstep = FOOTSTEP_WOOD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/bamboo/setup_broken_states()
+/turf/simulated/open/floor/bamboo/setup_broken_states()
 	return list("damaged")
 
-/turf/open/floor/grass
+/turf/simulated/open/floor/grass
 	name = "grass patch"
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
 	icon_state = "grass0"
@@ -126,18 +126,18 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-/turf/open/floor/grass/setup_broken_states()
+/turf/simulated/open/floor/grass/setup_broken_states()
 	return list("sand")
 
-/turf/open/floor/grass/Initialize(mapload)
+/turf/simulated/open/floor/grass/Initialize(mapload)
 	. = ..()
 	spawniconchange()
 	AddComponent(/datum/component/diggable, /obj/item/stack/ore/glass, 2, "uproot")
 
-/turf/open/floor/grass/proc/spawniconchange()
+/turf/simulated/open/floor/grass/proc/spawniconchange()
 	icon_state = "grass[rand(0,3)]"
 
-/turf/open/floor/grass/fairy //like grass but fae-er
+/turf/simulated/open/floor/grass/fairy //like grass but fae-er
 	name = "fairygrass patch"
 	desc = "Something about this grass makes you want to frolic. Or get high."
 	icon_state = "fairygrass0"
@@ -146,10 +146,10 @@
 	light_power = 0.80
 	light_color = COLOR_BLUE_LIGHT
 
-/turf/open/floor/grass/fairy/spawniconchange()
+/turf/simulated/open/floor/grass/fairy/spawniconchange()
 	icon_state = "fairygrass[rand(0,3)]"
 
-/turf/open/floor/fake_snow
+/turf/simulated/open/floor/fake_snow
 	gender = PLURAL
 	name = "snow"
 	icon = 'icons/turf/snow.dmi'
@@ -168,20 +168,20 @@
 	clawfootstep = FOOTSTEP_SAND
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/fake_snow/Initialize(mapload)
+/turf/simulated/open/floor/fake_snow/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/diggable, /obj/item/stack/tile/mineral/snow, 2, "dig up")
 
-/turf/open/floor/fake_snow/setup_broken_states()
+/turf/simulated/open/floor/fake_snow/setup_broken_states()
 	return list("snow_dug")
 
-/turf/open/floor/fake_snow/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+/turf/simulated/open/floor/fake_snow/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	return
 
-/turf/open/floor/fake_snow/crowbar_act(mob/living/user, obj/item/I)
+/turf/simulated/open/floor/fake_snow/crowbar_act(mob/living/user, obj/item/I)
 	return
 
-/turf/open/floor/fakebasalt
+/turf/simulated/open/floor/fakebasalt
 	name = "aesthetic volcanic flooring"
 	desc = "Safely recreated turf for your hellplanet-scaping."
 	icon = 'icons/turf/floors.dmi'
@@ -195,14 +195,14 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-/turf/open/floor/fakebasalt/Initialize(mapload)
+/turf/simulated/open/floor/fakebasalt/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/diggable, /obj/item/stack/ore/glass/basalt, 2, "dig up")
 	if(prob(15))
 		icon_state = "basalt[rand(0, 12)]"
 		set_basalt_light(src)
 
-/turf/open/floor/carpet
+/turf/simulated/open/floor/carpet
 	name = "carpet"
 	desc = "Soft velvet carpeting. Feels good between your toes."
 	icon = 'icons/turf/floors/carpet.dmi'
@@ -220,18 +220,18 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 
-/turf/open/floor/carpet/setup_broken_states()
+/turf/simulated/open/floor/carpet/setup_broken_states()
 	return list("damaged")
 
-/turf/open/floor/carpet/examine(mob/user)
+/turf/simulated/open/floor/carpet/examine(mob/user)
 	. = ..()
 	. += span_notice("There's a <b>small crack</b> on the edge of it.")
 
-/turf/open/floor/carpet/Initialize(mapload)
+/turf/simulated/open/floor/carpet/Initialize(mapload)
 	. = ..()
 	update_appearance()
 
-/turf/open/floor/carpet/update_icon(updates=ALL)
+/turf/simulated/open/floor/carpet/update_icon(updates=ALL)
 	. = ..()
 	if(!. || !(updates & UPDATE_SMOOTHING))
 		return
@@ -243,16 +243,16 @@
 		if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 			QUEUE_SMOOTH_NEIGHBORS(src)
 
-/turf/open/floor/carpet/lone
+/turf/simulated/open/floor/carpet/lone
 	icon_state = "carpetsymbol"
 	smoothing_flags = NONE
 	floor_tile = /obj/item/stack/tile/carpet/symbol
 
-/turf/open/floor/carpet/lone/star
+/turf/simulated/open/floor/carpet/lone/star
 	icon_state = "carpetstar"
 	floor_tile = /obj/item/stack/tile/carpet/star
 
-/turf/open/floor/carpet/black
+/turf/simulated/open/floor/carpet/black
 	icon = 'icons/turf/floors/carpet_black.dmi'
 	icon_state = "carpet_black-255"
 	base_icon_state = "carpet_black"
@@ -260,7 +260,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_BLACK)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_BLACK)
 
-/turf/open/floor/carpet/blue
+/turf/simulated/open/floor/carpet/blue
 	icon = 'icons/turf/floors/carpet_blue.dmi'
 	icon_state = "carpet_blue-255"
 	base_icon_state = "carpet_blue"
@@ -268,7 +268,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_BLUE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_BLUE)
 
-/turf/open/floor/carpet/cyan
+/turf/simulated/open/floor/carpet/cyan
 	icon = 'icons/turf/floors/carpet_cyan.dmi'
 	icon_state = "carpet_cyan-255"
 	base_icon_state = "carpet_cyan"
@@ -276,7 +276,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_CYAN)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_CYAN)
 
-/turf/open/floor/carpet/green
+/turf/simulated/open/floor/carpet/green
 	icon = 'icons/turf/floors/carpet_green.dmi'
 	icon_state = "carpet_green-255"
 	base_icon_state = "carpet_green"
@@ -284,7 +284,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_GREEN)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_GREEN)
 
-/turf/open/floor/carpet/orange
+/turf/simulated/open/floor/carpet/orange
 	icon = 'icons/turf/floors/carpet_orange.dmi'
 	icon_state = "carpet_orange-255"
 	base_icon_state = "carpet_orange"
@@ -292,7 +292,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_ORANGE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_ORANGE)
 
-/turf/open/floor/carpet/purple
+/turf/simulated/open/floor/carpet/purple
 	icon = 'icons/turf/floors/carpet_purple.dmi'
 	icon_state = "carpet_purple-255"
 	base_icon_state = "carpet_purple"
@@ -300,7 +300,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_PURPLE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_PURPLE)
 
-/turf/open/floor/carpet/red
+/turf/simulated/open/floor/carpet/red
 	icon = 'icons/turf/floors/carpet_red.dmi'
 	icon_state = "carpet_red-255"
 	base_icon_state = "carpet_red"
@@ -308,7 +308,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_RED)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_RED)
 
-/turf/open/floor/carpet/royalblack
+/turf/simulated/open/floor/carpet/royalblack
 	icon = 'icons/turf/floors/carpet_royalblack.dmi'
 	icon_state = "carpet_royalblack-255"
 	base_icon_state = "carpet_royalblack"
@@ -316,7 +316,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_ROYAL_BLACK)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_ROYAL_BLACK)
 
-/turf/open/floor/carpet/royalblue
+/turf/simulated/open/floor/carpet/royalblue
 	icon = 'icons/turf/floors/carpet_royalblue.dmi'
 	icon_state = "carpet_royalblue-255"
 	base_icon_state = "carpet_royalblue"
@@ -324,7 +324,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_ROYAL_BLUE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_ROYAL_BLUE)
 
-/turf/open/floor/carpet/executive
+/turf/simulated/open/floor/carpet/executive
 	name = "executive carpet"
 	icon = 'icons/turf/floors/carpet_executive.dmi'
 	icon_state = "executive_carpet-255"
@@ -333,7 +333,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_EXECUTIVE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_EXECUTIVE)
 
-/turf/open/floor/carpet/stellar
+/turf/simulated/open/floor/carpet/stellar
 	name = "stellar carpet"
 	icon = 'icons/turf/floors/carpet_stellar.dmi'
 	icon_state = "stellar_carpet-255"
@@ -342,7 +342,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_STELLAR)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_STELLAR)
 
-/turf/open/floor/carpet/donk
+/turf/simulated/open/floor/carpet/donk
 	name = "Donk Co. carpet"
 	icon = 'icons/turf/floors/carpet_donk.dmi'
 	icon_state = "donk_carpet-255"
@@ -352,37 +352,37 @@
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_DONK)
 
 //*****Airless versions of all of the above.*****
-/turf/open/floor/carpet/airless
+/turf/simulated/open/floor/carpet/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/black/airless
+/turf/simulated/open/floor/carpet/black/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/blue/airless
+/turf/simulated/open/floor/carpet/blue/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/cyan/airless
+/turf/simulated/open/floor/carpet/cyan/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/green/airless
+/turf/simulated/open/floor/carpet/green/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/orange/airless
+/turf/simulated/open/floor/carpet/orange/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/purple/airless
+/turf/simulated/open/floor/carpet/purple/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/red/airless
+/turf/simulated/open/floor/carpet/red/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/royalblack/airless
+/turf/simulated/open/floor/carpet/royalblack/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/royalblue/airless
+/turf/simulated/open/floor/carpet/royalblue/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/narsie_act(force, ignore_mobs, probability = 20)
+/turf/simulated/open/floor/carpet/narsie_act(force, ignore_mobs, probability = 20)
 	. = (prob(probability) || force)
 	for(var/I in src)
 		var/atom/A = I
@@ -391,33 +391,33 @@
 		if(ismob(A) || .)
 			A.narsie_act()
 
-/turf/open/floor/carpet/break_tile()
+/turf/simulated/open/floor/carpet/break_tile()
 	broken = TRUE
 	update_appearance()
 
-/turf/open/floor/carpet/burn_tile()
+/turf/simulated/open/floor/carpet/burn_tile()
 	burnt = TRUE
 	update_appearance()
 
-/turf/open/floor/carpet/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+/turf/simulated/open/floor/carpet/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	return FALSE
 
 /// An emissive turf used to test emissive turfs.
-/turf/open/floor/emissive_test
+/turf/simulated/open/floor/emissive_test
 	name = "emissive test floor"
 	desc = "A glow-in-the-dark floor used to test emissive turfs."
 	floor_tile = /obj/item/stack/tile/emissive_test
 
-/turf/open/floor/emissive_test/update_overlays()
+/turf/simulated/open/floor/emissive_test/update_overlays()
 	. = ..()
 	. += emissive_appearance(icon, icon_state, alpha = src.alpha)
 
-/turf/open/floor/emissive_test/white
+/turf/simulated/open/floor/emissive_test/white
 	icon_state = "pure_white"
 	base_icon_state = "pure_white"
 	floor_tile = /obj/item/stack/tile/emissive_test/white
 
-/turf/open/floor/carpet/neon
+/turf/simulated/open/floor/carpet/neon
 	name = "neon carpet"
 	desc = "A rubbery pad inset with a phsophorescent pattern."
 	icon = 'icons/turf/floors/carpet_black.dmi'
@@ -436,12 +436,12 @@
 	/// The alpha used for the emissive decal.
 	var/emissive_alpha = 150
 
-/turf/open/floor/carpet/neon/Initialize(mapload)
+/turf/simulated/open/floor/carpet/neon/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/decal, neon_icon || icon, neon_icon_state || base_icon_state, dir, null, null, alpha, neon_color, smoothing_junction)
 	AddElement(/datum/element/decal, neon_icon || icon, neon_icon_state || base_icon_state, dir, EMISSIVE_PLANE, null, emissive_alpha, EMISSIVE_COLOR, smoothing_junction)
 
-/turf/open/floor/carpet/neon/simple
+/turf/simulated/open/floor/carpet/neon/simple
 	name = "simple neon carpet"
 	icon = 'icons/turf/floors/carpet_neon_simple.dmi'
 	icon_state = "base-255"
@@ -451,7 +451,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON)
 
-/turf/open/floor/carpet/neon/simple/nodots
+/turf/simulated/open/floor/carpet/neon/simple/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -459,7 +459,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/white
+/turf/simulated/open/floor/carpet/neon/simple/white
 	name = "simple white neon carpet"
 	desc = "A rubbery mat with a inset pattern of white phosphorescent dye."
 	neon_color = COLOR_WHITE
@@ -467,7 +467,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_WHITE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_WHITE)
 
-/turf/open/floor/carpet/neon/simple/white/nodots
+/turf/simulated/open/floor/carpet/neon/simple/white/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -475,7 +475,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_WHITE_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_WHITE_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/black
+/turf/simulated/open/floor/carpet/neon/simple/black
 	name = "simple black neon carpet"
 	desc = "A rubbery mat with a inset pattern of black phosphorescent dye."
 	neon_icon_state = "glow" // This one also lights up the edges of the lines.
@@ -484,7 +484,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLACK)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLACK)
 
-/turf/open/floor/carpet/neon/simple/black/nodots
+/turf/simulated/open/floor/carpet/neon/simple/black/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "glow-nodots"
@@ -493,7 +493,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLACK_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLACK_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/red
+/turf/simulated/open/floor/carpet/neon/simple/red
 	name = "simple red neon carpet"
 	desc = "A rubbery mat with a inset pattern of red phosphorescent dye."
 	neon_color = COLOR_RED
@@ -501,7 +501,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_RED)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_RED)
 
-/turf/open/floor/carpet/neon/simple/red/nodots
+/turf/simulated/open/floor/carpet/neon/simple/red/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -509,7 +509,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_RED_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_RED_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/orange
+/turf/simulated/open/floor/carpet/neon/simple/orange
 	name = "simple orange neon carpet"
 	desc = "A rubbery mat with a inset pattern of orange phosphorescent dye."
 	neon_color = COLOR_ORANGE
@@ -517,7 +517,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_ORANGE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_ORANGE)
 
-/turf/open/floor/carpet/neon/simple/orange/nodots
+/turf/simulated/open/floor/carpet/neon/simple/orange/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -525,7 +525,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_ORANGE_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_ORANGE_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/yellow
+/turf/simulated/open/floor/carpet/neon/simple/yellow
 	name = "simple yellow neon carpet"
 	desc = "A rubbery mat with a inset pattern of yellow phosphorescent dye."
 	neon_color = COLOR_YELLOW
@@ -533,7 +533,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_YELLOW)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_YELLOW)
 
-/turf/open/floor/carpet/neon/simple/yellow/nodots
+/turf/simulated/open/floor/carpet/neon/simple/yellow/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -541,7 +541,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_YELLOW_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_YELLOW_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/lime
+/turf/simulated/open/floor/carpet/neon/simple/lime
 	name = "simple lime neon carpet"
 	desc = "A rubbery mat with a inset pattern of lime phosphorescent dye."
 	neon_color = COLOR_LIME
@@ -549,7 +549,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_LIME)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_LIME)
 
-/turf/open/floor/carpet/neon/simple/lime/nodots
+/turf/simulated/open/floor/carpet/neon/simple/lime/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -557,7 +557,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_LIME_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_LIME_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/green
+/turf/simulated/open/floor/carpet/neon/simple/green
 	name = "simple green neon carpet"
 	desc = "A rubbery mat with a inset pattern of green phosphorescent dye."
 	neon_color = COLOR_GREEN
@@ -565,7 +565,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_GREEN)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_GREEN)
 
-/turf/open/floor/carpet/neon/simple/green/nodots
+/turf/simulated/open/floor/carpet/neon/simple/green/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -573,7 +573,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_GREEN_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_GREEN_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/teal
+/turf/simulated/open/floor/carpet/neon/simple/teal
 	name = "simple teal neon carpet"
 	desc = "A rubbery mat with a inset pattern of teal phosphorescent dye."
 	neon_color = COLOR_TEAL
@@ -581,7 +581,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_TEAL)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_TEAL)
 
-/turf/open/floor/carpet/neon/simple/teal/nodots
+/turf/simulated/open/floor/carpet/neon/simple/teal/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -589,7 +589,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_TEAL_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_TEAL_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/cyan
+/turf/simulated/open/floor/carpet/neon/simple/cyan
 	name = "simple cyan neon carpet"
 	desc = "A rubbery mat with a inset pattern of cyan phosphorescent dye."
 	neon_color = COLOR_CYAN
@@ -597,7 +597,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_CYAN)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_CYAN)
 
-/turf/open/floor/carpet/neon/simple/cyan/nodots
+/turf/simulated/open/floor/carpet/neon/simple/cyan/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -605,7 +605,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_CYAN_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_CYAN_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/blue
+/turf/simulated/open/floor/carpet/neon/simple/blue
 	name = "simple blue neon carpet"
 	desc = "A rubbery mat with a inset pattern of blue phosphorescent dye."
 	neon_color = COLOR_BLUE
@@ -613,7 +613,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLUE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLUE)
 
-/turf/open/floor/carpet/neon/simple/blue/nodots
+/turf/simulated/open/floor/carpet/neon/simple/blue/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -621,7 +621,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLUE_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_BLUE_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/purple
+/turf/simulated/open/floor/carpet/neon/simple/purple
 	name = "simple purple neon carpet"
 	desc = "A rubbery mat with a inset pattern of purple phosphorescent dye."
 	neon_color = COLOR_PURPLE
@@ -629,7 +629,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_PURPLE)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_PURPLE)
 
-/turf/open/floor/carpet/neon/simple/purple/nodots
+/turf/simulated/open/floor/carpet/neon/simple/purple/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -637,7 +637,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_PURPLE_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_PURPLE_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/violet
+/turf/simulated/open/floor/carpet/neon/simple/violet
 	name = "simple violet neon carpet"
 	desc = "A rubbery mat with a inset pattern of violet phosphorescent dye."
 	neon_color = COLOR_VIOLET
@@ -645,7 +645,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_VIOLET)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_VIOLET)
 
-/turf/open/floor/carpet/neon/simple/violet/nodots
+/turf/simulated/open/floor/carpet/neon/simple/violet/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -653,7 +653,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_VIOLET_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_VIOLET_NODOTS)
 
-/turf/open/floor/carpet/neon/simple/pink
+/turf/simulated/open/floor/carpet/neon/simple/pink
 	name = "simple pink neon carpet"
 	desc = "A rubbery mat with a inset pattern of pink phosphorescent dye."
 	neon_color = COLOR_LIGHT_PINK
@@ -661,7 +661,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_PINK)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_PINK)
 
-/turf/open/floor/carpet/neon/simple/pink/nodots
+/turf/simulated/open/floor/carpet/neon/simple/pink/nodots
 	icon_state = "base-nodots-255"
 	base_icon_state = "base-nodots"
 	neon_icon_state = "light-nodots"
@@ -669,94 +669,94 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET_SIMPLE_NEON_PINK_NODOTS)
 	canSmoothWith = list(SMOOTH_GROUP_CARPET_SIMPLE_NEON_PINK_NODOTS)
 
-/turf/open/floor/carpet/neon/airless
+/turf/simulated/open/floor/carpet/neon/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/airless
+/turf/simulated/open/floor/carpet/neon/simple/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/white/airless
+/turf/simulated/open/floor/carpet/neon/simple/white/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/black/airless
+/turf/simulated/open/floor/carpet/neon/simple/black/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/red/airless
+/turf/simulated/open/floor/carpet/neon/simple/red/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/orange/airless
+/turf/simulated/open/floor/carpet/neon/simple/orange/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/yellow/airless
+/turf/simulated/open/floor/carpet/neon/simple/yellow/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/lime/airless
+/turf/simulated/open/floor/carpet/neon/simple/lime/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/green/airless
+/turf/simulated/open/floor/carpet/neon/simple/green/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/teal/airless
+/turf/simulated/open/floor/carpet/neon/simple/teal/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/cyan/airless
+/turf/simulated/open/floor/carpet/neon/simple/cyan/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/blue/airless
+/turf/simulated/open/floor/carpet/neon/simple/blue/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/purple/airless
+/turf/simulated/open/floor/carpet/neon/simple/purple/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/violet/airless
+/turf/simulated/open/floor/carpet/neon/simple/violet/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/pink/airless
+/turf/simulated/open/floor/carpet/neon/simple/pink/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/white/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/white/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/black/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/black/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/red/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/red/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/orange/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/orange/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/yellow/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/yellow/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/lime/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/lime/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/green/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/green/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/teal/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/teal/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/cyan/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/cyan/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/blue/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/blue/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/purple/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/purple/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/violet/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/violet/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/carpet/neon/simple/pink/nodots/airless
+/turf/simulated/open/floor/carpet/neon/simple/pink/nodots/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/fakepit
+/turf/simulated/open/floor/fakepit
 	desc = "A clever illusion designed to look like a bottomless pit."
 	icon = 'icons/turf/floors/chasms.dmi'
 	icon_state = "chasms-0"
@@ -767,26 +767,26 @@
 	canSmoothWith = list(SMOOTH_GROUP_TURF_CHASM)
 	tiled_dirt = FALSE
 
-/turf/open/floor/fakepit/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+/turf/simulated/open/floor/fakepit/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	underlay_appearance.icon = 'icons/turf/floors.dmi'
 	underlay_appearance.icon_state = "basalt"
 	return TRUE
 
-/turf/open/floor/fakespace
+/turf/simulated/open/floor/fakespace
 	icon = 'icons/turf/space.dmi'
 	icon_state = "0"
 	floor_tile = /obj/item/stack/tile/fakespace
 	plane = PLANE_SPACE
 	tiled_dirt = FALSE
 
-/turf/open/floor/fakespace/setup_broken_states()
+/turf/simulated/open/floor/fakespace/setup_broken_states()
 	return list("damaged")
 
-/turf/open/floor/fakespace/Initialize(mapload)
+/turf/simulated/open/floor/fakespace/Initialize(mapload)
 	. = ..()
 	icon_state = SPACE_ICON_STATE
 
-/turf/open/floor/fakespace/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+/turf/simulated/open/floor/fakespace/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	underlay_appearance.icon = 'icons/turf/space.dmi'
 	underlay_appearance.icon_state = SPACE_ICON_STATE
 	underlay_appearance.plane = PLANE_SPACE

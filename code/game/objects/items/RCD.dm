@@ -301,7 +301,7 @@ GLOBAL_VAR_INIT(icon_holographic_window, init_holographic_window())
 	playsound(source, 'sound/items/rcdscan.ogg', 50, vary = TRUE, pressure_affected = FALSE)
 
 	var/turf/source_turf = get_turf(source)
-	for(var/turf/open/surrounding_turf in RANGE_TURFS(scan_range, source_turf))
+	for(var/turf/simulated/open/surrounding_turf in RANGE_TURFS(scan_range, source_turf))
 		var/rcd_memory = surrounding_turf.rcd_memory
 		if(!rcd_memory)
 			continue
@@ -1000,7 +1000,7 @@ GLOBAL_VAR_INIT(icon_holographic_window, init_holographic_window())
 						if(!istype(W))
 							return FALSE
 						var/list/candidates = list()
-						var/turf/open/winner = null
+						var/turf/simulated/open/winner = null
 						var/winning_dist = null
 						for(var/direction in GLOB.cardinals)
 							var/turf/C = get_step(W, direction)
@@ -1011,7 +1011,7 @@ GLOBAL_VAR_INIT(icon_holographic_window, init_holographic_window())
 							to_chat(user, span_warning("Valid target not found..."))
 							playsound(src.loc, 'sound/misc/compiler-failure.ogg', 30, TRUE)
 							return FALSE
-						for(var/turf/open/O in candidates)
+						for(var/turf/simulated/open/O in candidates)
 							if(istype(O))
 								var/x0 = O.x
 								var/y0 = O.y
@@ -1036,7 +1036,7 @@ GLOBAL_VAR_INIT(icon_holographic_window, init_holographic_window())
 				return FALSE
 
 			if(isfloorturf(A))
-				var/turf/open/floor/F = A
+				var/turf/simulated/open/floor/F = A
 				if(checkResource(floorcost, user))
 					to_chat(user, span_notice("You start building a floor light..."))
 					user.Beam(A,icon_state="light_beam", time = 15)

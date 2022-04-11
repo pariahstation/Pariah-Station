@@ -79,7 +79,7 @@
 			continue
 		do_turf_cone_effect(target_turf, level)
 		if(isopenturf(target_turf))
-			var/turf/open/open_turf = target_turf
+			var/turf/simulated/open/open_turf = target_turf
 			for(var/movable_content in open_turf)
 				if(isobj(movable_content))
 					do_obj_cone_effect(movable_content, level)

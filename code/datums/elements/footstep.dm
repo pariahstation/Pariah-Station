@@ -58,9 +58,9 @@
 	steps_for_living -= source
 	return ..()
 
-///Prepares a footstep for living mobs. Determines if it should get played. Returns the turf it should get played on. Note that it is always a /turf/open
+///Prepares a footstep for living mobs. Determines if it should get played. Returns the turf it should get played on. Note that it is always a /turf/simulated/open
 /datum/element/footstep/proc/prepare_step(mob/living/source)
-	var/turf/open/turf = get_turf(source)
+	var/turf/simulated/open/turf = get_turf(source)
 	if(!istype(turf))
 		return
 
@@ -97,7 +97,7 @@
 	if (SHOULD_DISABLE_FOOTSTEPS(source))
 		return
 
-	var/turf/open/source_loc = prepare_step(source)
+	var/turf/simulated/open/source_loc = prepare_step(source)
 	if(!source_loc)
 		return
 	if(isfile(footstep_sounds) || istext(footstep_sounds))
@@ -130,7 +130,7 @@
 		volume_multiplier = 0.6
 		range_adjustment = -2
 
-	var/turf/open/source_loc = prepare_step(source)
+	var/turf/simulated/open/source_loc = prepare_step(source)
 	if(!source_loc)
 		return
 
@@ -158,7 +158,7 @@
 	if (SHOULD_DISABLE_FOOTSTEPS(source))
 		return
 
-	var/turf/open/source_loc = get_turf(source)
+	var/turf/simulated/open/source_loc = get_turf(source)
 	if(!istype(source_loc))
 		return
 	playsound(source_loc, footstep_sounds, 50, falloff_distance = 1, vary = sound_vary)

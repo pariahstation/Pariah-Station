@@ -1,6 +1,5 @@
 /datum/pipeline
-	var/datum/gas_mixture/air
-	var/list/datum/gas_mixture/other_airs
+	var/list/datum/gas_mixture/gases = list() //All of the gas_mixtures continuously connected in this network
 
 	var/list/obj/machinery/atmospherics/pipe/members
 	var/list/obj/machinery/atmospherics/components/other_atmos_machines
@@ -11,22 +10,21 @@
 	var/building = FALSE
 
 /datum/pipeline/New()
-	other_airs = list()
 	members = list()
 	other_atmos_machines = list()
-	SSair.networks += src
+	SSzas.networks += src
 
 /datum/pipeline/Destroy()
-	SSair.networks -= src
+	SSzas.networks -= src
 	if(building)
-		SSair.remove_from_expansion(src)
+		SSzas.remove_from_expansion(src)
 	if(air?.volume)
 		temporarily_store_air()
 	for(var/obj/machinery/atmospherics/pipe/considered_pipe in members)
 		considered_pipe.parent = null
 		if(QDELETED(considered_pipe))
 			continue
-		SSair.add_to_rebuild_queue(considered_pipe)
+		SSzas.add_to_rebuild_queue(considered_pipe)
 	for(var/obj/machinery/atmospherics/components/considered_component in other_atmos_machines)
 		considered_component.nullify_pipenet(src)
 	return ..()
@@ -56,7 +54,7 @@
 		air = new
 
 	air.volume = volume
-	SSair.add_to_expansion(src, base)
+	SSzas.add_to_expansion(src, base)
 
 ///Has the same effect as build_pipeline(), but this doesn't queue its work, so overrun abounds. It's useful for the pregame
 /datum/pipeline/proc/build_pipeline_blocking(obj/machinery/atmospherics/base)
@@ -222,49 +220,4 @@
 
 /// Called when the pipenet needs to update and mix together all the air mixes
 /datum/pipeline/proc/reconcile_air()
-	var/list/datum/gas_mixture/gas_mixture_list = list()
-	var/list/datum/pipeline/pipeline_list = list()
-	pipeline_list += src
-
-	for(var/i = 1; i <= pipeline_list.len; i++) //can't do a for-each here because we may add to the list within the loop
-		var/datum/pipeline/pipeline = pipeline_list[i]
-		if(!pipeline)
-			continue
-		gas_mixture_list += pipeline.other_airs
-		gas_mixture_list += pipeline.air
-		for(var/obj/machinery/atmospherics/components/atmos_machine as anything in pipeline.other_atmos_machines)
-			if(!atmos_machine.custom_reconcilation)
-				continue
-			pipeline_list |= atmos_machine.return_pipenets_for_reconcilation(src)
-			gas_mixture_list |= atmos_machine.return_airs_for_reconcilation(src)
-
-	var/total_thermal_energy = 0
-	var/total_heat_capacity = 0
-	var/datum/gas_mixture/total_gas_mixture = new(0)
-
-	var/list/total_gases = total_gas_mixture.gases
-
-	for(var/datum/gas_mixture/gas_mixture as anything in gas_mixture_list)
-		total_gas_mixture.volume += gas_mixture.volume
-
-		// This is sort of a combined merge + heat_capacity calculation
-
-		var/list/giver_gases = gas_mixture.gases
-		//gas transfer
-		for(var/giver_id in giver_gases)
-			var/giver_gas_data = giver_gases[giver_id]
-			ASSERT_GAS(giver_id, total_gas_mixture)
-			total_gases[giver_id][MOLES] += giver_gas_data[MOLES]
-			total_heat_capacity += giver_gas_data[MOLES] * giver_gas_data[GAS_META][META_GAS_SPECIFIC_HEAT]
-
-		total_thermal_energy += THERMAL_ENERGY(gas_mixture)
-
-	total_gas_mixture.temperature = total_heat_capacity ? (total_thermal_energy / total_heat_capacity) : 0
-
-	total_gas_mixture.garbage_collect()
-
-	if(total_gas_mixture.volume > 0)
-		//Update individual gas_mixtures by volume ratio
-		for(var/mixture in gas_mixture_list)
-			var/datum/gas_mixture/gas_mixture = mixture
-			gas_mixture.copy_from(total_gas_mixture, gas_mixture.volume / total_gas_mixture.volume)
+	equalize_gases(gases)

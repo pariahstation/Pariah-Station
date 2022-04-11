@@ -29,7 +29,7 @@
 /// Do the flooding. Trigger temperature is the temperature we will flood at if we dont have a temp set at the start. Trigger referring to whatever triggered it.
 /datum/component/combustible_flooder/proc/flood(mob/user, trigger_temperature)
 	var/delete_parent = TRUE
-	var/turf/open/flooded_turf = get_turf(parent)
+	var/turf/simulated/open/flooded_turf = get_turf(parent)
 
 	// We do this check early so closed turfs are still be able to flood.
 	if(isturf(parent)) // Walls and floors.
@@ -38,7 +38,7 @@
 		delete_parent = FALSE
 
 	flooded_turf.atmos_spawn_air("[gas_id]=[gas_amount];TEMP=[temp_amount || trigger_temperature]")
-	
+
 	// Logging-related
 	var/admin_message = "[parent] ignited in [ADMIN_VERBOSEJMP(flooded_turf)]"
 	var/log_message = "[parent] ignited in [AREACOORD(flooded_turf)]"
@@ -52,28 +52,28 @@
 	log_game(log_message)
 
 	if(delete_parent && !QDELETED(parent))
-		qdel(parent) // For things with the explodable component like plasma mats this isn't necessary, but there's no harm. 
+		qdel(parent) // For things with the explodable component like plasma mats this isn't necessary, but there's no harm.
 	qdel(src)
 
 /// fire_act reaction.
 /datum/component/combustible_flooder/proc/flame_react(datum/source, exposed_temperature, exposed_volume)
 	SIGNAL_HANDLER
 
-	if(exposed_temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+	if(exposed_temperature > T100C)
 		flood(null, exposed_temperature)
 
 /// Hotspot reaction.
 /datum/component/combustible_flooder/proc/hotspots_react(datum/source, air, exposed_temperature)
 	SIGNAL_HANDLER
 
-	if(exposed_temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+	if(exposed_temperature > T100C)
 		flood(null, exposed_temperature)
 
 /// Being attacked by something
 /datum/component/combustible_flooder/proc/attackby_react(datum/source, obj/item/thing, mob/user, params)
 	SIGNAL_HANDLER
 
-	if(thing.get_temperature() > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+	if(thing.get_temperature() > T100C)
 		flood(user, thing.get_temperature())
 
 /// Shot by something
@@ -87,6 +87,6 @@
 /datum/component/combustible_flooder/proc/welder_react(datum/source, mob/user, obj/item/tool)
 	SIGNAL_HANDLER
 
-	if(tool.get_temperature() >= FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+	if(tool.get_temperature() >= T100C)
 		flood(user, tool.get_temperature())
 		return COMPONENT_BLOCK_TOOL_ATTACK

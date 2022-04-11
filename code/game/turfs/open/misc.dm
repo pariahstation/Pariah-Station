@@ -1,7 +1,7 @@
 /// Used as a parent type for types that want to allow construction, but do not want to be floors
 /// I wish I could use components for turfs at scale
 /// Please do not bloat this. Love you <3
-/turf/open/misc
+/turf/simulated/open/misc
 	name = "coder/mapper fucked up"
 	desc = "report on github please"
 	icon_state = "BROKEN"
@@ -22,7 +22,7 @@
 	heat_capacity = 10000
 	tiled_dirt = TRUE
 
-/turf/open/misc/attackby(obj/item/W, mob/user, params)
+/turf/simulated/open/misc/attackby(obj/item/W, mob/user, params)
 	. = ..()
 	if(.)
 		return TRUE
@@ -34,10 +34,10 @@
 		build_with_floor_tiles(W, user)
 		return TRUE
 
-/turf/open/misc/plating/asteroid/attack_paw(mob/user, list/modifiers)
+/turf/simulated/open/misc/plating/asteroid/attack_paw(mob/user, list/modifiers)
 	return attack_hand(user, modifiers)
 
-/turf/open/misc/ex_act(severity, target)
+/turf/simulated/open/misc/ex_act(severity, target)
 	. = ..()
 
 	if(target == src)
@@ -68,14 +68,14 @@
 				hotspot_expose(1000,CELL_VOLUME)
 
 
-/turf/open/misc/is_shielded()
+/turf/simulated/open/misc/is_shielded()
 	for(var/obj/structure/A in contents)
 		return TRUE
 
-/turf/open/misc/blob_act(obj/structure/blob/B)
+/turf/simulated/open/misc/blob_act(obj/structure/blob/B)
 	return
 
-/turf/open/misc/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
+/turf/simulated/open/misc/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)
 		if(RCD_FLOORWALL)
 			var/obj/structure/lattice/L = locate(/obj/structure/lattice, src)
@@ -102,11 +102,11 @@
 			return list("mode" = RCD_FURNISHING, "delay" = the_rcd.furnish_delay, "cost" = the_rcd.furnish_cost)
 	return FALSE
 
-/turf/open/misc/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
+/turf/simulated/open/misc/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
 			to_chat(user, span_notice("You build a floor."))
-			PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+			PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 			return TRUE
 		if(RCD_AIRLOCK) // I'm sorry
 			for(var/obj/machinery/door/door in src)

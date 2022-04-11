@@ -621,7 +621,7 @@
 		stop_gas()
 		return
 
-	var/turf/open/tray_turf = get_turf(tray)
+	var/turf/simulated/open/tray_turf = get_turf(tray)
 	if(abs(ONE_ATMOSPHERE - tray_turf.return_air().return_pressure()) > (seed.potency / 10 + 10)) // clouds can begin showing at around 50-60 potency in standard atmos
 		return
 

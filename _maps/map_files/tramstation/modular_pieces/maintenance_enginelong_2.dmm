@@ -2,7 +2,7 @@
 "a" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/modular_map_connector,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "b" = (
 /turf/closed/wall,
@@ -13,12 +13,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/trimline/neutral/filled/line,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/maintenance/tram/mid)
 "w" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/grille/broken,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "A" = (
 /obj/effect/decal/cleanable/dirt,
@@ -29,7 +29,7 @@
 /area/maintenance/starboard/lesser)
 "E" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "I" = (
 /obj/effect/decal/cleanable/dirt,
@@ -38,19 +38,19 @@
 	spawn_random_offset = 1;
 	spawn_scatter_radius = 4
 	},
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "P" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_one_access_txt = "12"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "V" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 
 (1,1,1) = {"

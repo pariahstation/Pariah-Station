@@ -10,20 +10,20 @@
 /turf/closed/wall,
 /area/template_noop)
 "g" = (
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/template_noop)
 "p" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "q" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/template_noop)
 "r" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/storage/toolbox/mechanical,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "x" = (
 /turf/closed/wall/rock/porous,
@@ -31,20 +31,20 @@
 "y" = (
 /obj/structure/ladder,
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "z" = (
 /turf/closed/wall,
 /area/template_noop)
 "A" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "D" = (
 /obj/structure/closet/crate,
 /obj/effect/spawner/random/maintenance/two,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "I" = (
 /turf/closed/mineral/random/stationside/asteroid/porus,
@@ -52,17 +52,17 @@
 "Q" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "T" = (
 /obj/structure/holosign/barrier/atmos,
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "W" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/stack/ore/glass,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/template_noop)
 
 (1,1,1) = {"

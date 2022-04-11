@@ -1,4 +1,4 @@
-//Most other defines used in reactions are located in ..\__DEFINES\reactions.dm
+/*//Most other defines used in reactions are located in ..\__DEFINES\reactions.dm
 #define SET_REACTION_RESULTS(amount) air.reaction_results[type] = amount
 
 /proc/init_gas_reactions()
@@ -58,12 +58,12 @@
 	/// A short string describing this reaction.
 	var/desc
 	/** REACTION FACTORS
-	 * 
+	 *
 	 * Describe (to a human) factors influencing this reaction in an assoc list format.
 	 * Also include gases formed by the reaction
 	 * Implement various interaction for different keys under subsystem/air/proc/atmos_handbook_init()
-	 * 
-	 * E.G. 
+	 *
+	 * E.G.
 	 * factor["Temperature"] = "Minimum temperature of 20 kelvins, maximum temperature of 100 kelvins"
 	 * factor["o2"] = "Minimum oxygen amount of 20 moles, more oxygen increases reaction rate up to 150 moles"
 	 */
@@ -105,7 +105,7 @@
 	if(!isturf(holder))
 		return
 
-	var/turf/open/location = holder
+	var/turf/simulated/open/location = holder
 	switch(air.temperature)
 		if(-INFINITY to WATER_VAPOR_DEPOSITION_POINT)
 			if(location?.freeze_turf())
@@ -224,10 +224,10 @@
 		air.temperature = (temperature * old_heat_capacity + energy_released) / new_heat_capacity
 
 	// Let the floor know a fire is happening
-	var/turf/open/location = holder
+	var/turf/simulated/open/location = holder
 	if(istype(location))
 		temperature = air.temperature
-		if(temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+		if(temperature > T100C)
 			location.hotspot_expose(temperature, CELL_VOLUME)
 
 	return REACTING
@@ -286,10 +286,10 @@
 			air.temperature = (temperature * old_heat_capacity + energy_released) / new_heat_capacity
 
 	//let the floor know a fire is happening
-	var/turf/open/location = holder
+	var/turf/simulated/open/location = holder
 	if(istype(location))
 		temperature = air.temperature
-		if(temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+		if(temperature > T100C)
 			location.hotspot_expose(temperature, CELL_VOLUME)
 
 	return burned_fuel ? REACTING : NO_REACTION
@@ -343,7 +343,7 @@
 
 	SET_REACTION_RESULTS(burned_fuel * effect_scale)
 
-	var/turf/open/location
+	var/turf/simulated/open/location
 	if(istype(holder, /datum/pipeline)) //Find the tile the reaction is occuring on, or a random part of the network if it's a pipenet.
 		var/datum/pipeline/pipenet = holder
 		location = pick(pipenet.members)
@@ -362,7 +362,7 @@
 	//let the floor know a fire is happening
 	if(istype(location))
 		temperature = air.temperature
-		if(temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+		if(temperature > T100C)
 			location.hotspot_expose(temperature, CELL_VOLUME)
 
 	return burned_fuel ? REACTING : NO_REACTION
@@ -544,7 +544,7 @@
 	var/list/cached_gases = air.gases
 	var/pressure = air.return_pressure()
 	// This slows down in relation to pressure, very quickly. Please don't expect it to be anything more then a snail
-	
+
 	// Bigger is better for these two values.
 	var/pressure_efficiency = (0.1 * ONE_ATMOSPHERE) / pressure // More pressure = more bad
 	var/ratio_efficiency = min(cached_gases[/datum/gas/nitrous_oxide][MOLES] / cached_gases[/datum/gas/plasma][MOLES], 1) // Malus to production if more plasma than n2o.
@@ -783,7 +783,7 @@
 
 	var/old_heat_capacity = air.heat_capacity()
 	air.assert_gases(/datum/gas/hypernoblium, /datum/gas/bz)
-	cached_gases[/datum/gas/tritium][MOLES] -= 5 * nob_formed 
+	cached_gases[/datum/gas/tritium][MOLES] -= 5 * nob_formed
 	cached_gases[/datum/gas/nitrogen][MOLES] -= 10 * nob_formed
 	cached_gases[/datum/gas/hypernoblium][MOLES] += nob_formed // I'm not going to nitpick, but N20H10 feels like it should be an explosive more than anything.
 	SET_REACTION_RESULTS(nob_formed)
@@ -853,14 +853,14 @@
 	requirements = list(
 		/datum/gas/halon = MINIMUM_MOLE_COUNT,
 		/datum/gas/oxygen = MINIMUM_MOLE_COUNT,
-		"MIN_TEMP" = FIRE_MINIMUM_TEMPERATURE_TO_EXIST,
+		"MIN_TEMP" = T100C,
 	)
 
 /datum/gas_reaction/halon_o2removal/react(datum/gas_mixture/air, datum/holder)
 	var/list/cached_gases = air.gases
 	var/temperature = air.temperature
 
-	var/heat_efficency = min(temperature / ( FIRE_MINIMUM_TEMPERATURE_TO_EXIST * 10), cached_gases[/datum/gas/halon][MOLES], cached_gases[/datum/gas/oxygen][MOLES] * INVERSE(20))
+	var/heat_efficency = min(temperature / ( T100C * 10), cached_gases[/datum/gas/halon][MOLES], cached_gases[/datum/gas/oxygen][MOLES] * INVERSE(20))
 	if (heat_efficency <= 0 || (cached_gases[/datum/gas/halon][MOLES] - heat_efficency < 0 ) || (cached_gases[/datum/gas/oxygen][MOLES] - heat_efficency * 20 < 0)) //Shouldn't produce gas from nothing.
 		return NO_REACTION
 
@@ -1112,7 +1112,7 @@
 	cached_gases[/datum/gas/hydrogen][MOLES] += produced_amount
 
 	SET_REACTION_RESULTS(produced_amount)
-	var/turf/open/location
+	var/turf/simulated/open/location
 	var/energy_released = produced_amount * PN_TRITIUM_CONVERSION_ENERGY
 	if(istype(holder,/datum/pipeline)) //Find the tile the reaction is occuring on, or a random part of the network if it's a pipenet.
 		var/datum/pipeline/pipenet = holder
@@ -1164,7 +1164,7 @@
 	cached_gases[/datum/gas/plasma][MOLES] += consumed_amount * 0.8
 
 	SET_REACTION_RESULTS(consumed_amount)
-	var/turf/open/location
+	var/turf/simulated/open/location
 	var/energy_released = consumed_amount * PN_BZASE_ENERGY
 	if(istype(holder,/datum/pipeline)) //Find the tile the reaction is occuring on, or a random part of the network if it's a pipenet.
 		var/datum/pipeline/pipenet = holder
@@ -1182,3 +1182,4 @@
 	return REACTING
 
 #undef SET_REACTION_RESULTS
+*/

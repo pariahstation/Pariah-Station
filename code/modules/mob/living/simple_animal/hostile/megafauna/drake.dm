@@ -271,8 +271,8 @@
 		M.take_damage(45, BRUTE, MELEE, 1)
 
 	// changes turf to lava temporarily
-	if(!istype(T, /turf/closed) && !istype(T, /turf/open/lava))
-		var/lava_turf = /turf/open/lava/smooth
+	if(!istype(T, /turf/closed) && !istype(T, /turf/simulated/open/lava))
+		var/lava_turf = /turf/simulated/open/lava/smooth
 		var/reset_turf = T.type
 		T.ChangeTurf(lava_turf, flags = CHANGETURF_INHERIT_AIR)
 		addtimer(CALLBACK(T, /turf.proc/ChangeTurf, reset_turf, null, CHANGETURF_INHERIT_AIR), reset_time, TIMER_OVERRIDE|TIMER_UNIQUE)

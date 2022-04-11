@@ -7,16 +7,16 @@
 /area/mafia)
 "g" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
 /area/mafia)
 "h" = (
 /obj/structure/grille/indestructable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "i" = (
-/turf/open/floor/fakespace,
+/turf/simulated/open/floor/fakespace,
 /area/mafia)
 "j" = (
 /turf/closed/indestructible/abductor{
@@ -25,25 +25,25 @@
 /area/mafia)
 "k" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "l" = (
 /obj/structure/closet/abductor,
-/turf/open/floor/plating/abductor,
+/turf/simulated/open/floor/plating/abductor,
 /area/mafia)
 "m" = (
 /obj/effect/landmark/mafia,
 /obj/structure/bed/abductor,
-/turf/open/floor/plating/abductor,
+/turf/simulated/open/floor/plating/abductor,
 /area/mafia)
 "n" = (
 /obj/effect/landmark/mafia,
 /obj/structure/bed/abductor,
-/turf/open/floor/plating/abductor2,
+/turf/simulated/open/floor/plating/abductor2,
 /area/mafia)
 "o" = (
 /obj/structure/closet/abductor,
-/turf/open/floor/plating/abductor2,
+/turf/simulated/open/floor/plating/abductor2,
 /area/mafia)
 "p" = (
 /obj/machinery/door/poddoor/preopen{
@@ -55,22 +55,22 @@
 /turf/closed/indestructible/fakeglass,
 /area/mafia)
 "q" = (
-/turf/open/floor/plating/abductor,
+/turf/simulated/open/floor/plating/abductor,
 /area/mafia)
 "r" = (
-/turf/open/floor/plating/abductor2,
+/turf/simulated/open/floor/plating/abductor2,
 /area/mafia)
 "t" = (
-/turf/open/floor/light/colour_cycle/dancefloor_a,
+/turf/simulated/open/floor/light/colour_cycle/dancefloor_a,
 /area/mafia)
 "u" = (
 /obj/effect/baseturf_helper/asteroid,
 /obj/effect/landmark/mafia/town_center,
-/turf/open/floor/light/colour_cycle/dancefloor_b,
+/turf/simulated/open/floor/light/colour_cycle/dancefloor_b,
 /area/mafia)
 "v" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "panelscorched"
 	},
 /area/mafia)
@@ -82,11 +82,11 @@
 	name = "Station Night Shutters"
 	},
 /obj/structure/window/reinforced/plasma/plastitanium,
-/turf/open/floor/plating/abductor2,
+/turf/simulated/open/floor/plating/abductor2,
 /area/mafia)
 "z" = (
 /obj/structure/grille/indestructable,
-/turf/open/floor/fakespace,
+/turf/simulated/open/floor/fakespace,
 /area/mafia)
 "B" = (
 /turf/closed/indestructible/abductor{
@@ -114,7 +114,7 @@
 	},
 /area/mafia)
 "H" = (
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/mafia)
 "I" = (
 /turf/closed/indestructible/abductor{

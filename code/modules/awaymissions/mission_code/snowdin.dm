@@ -156,17 +156,17 @@
 
 //liquid plasma!!!!!!//
 
-/turf/open/floor/iron/dark/snowdin
+/turf/simulated/open/floor/iron/dark/snowdin
 	initial_gas_mix = FROZEN_ATMOS
 	planetary_atmos = 1
 	temperature = 180
 
-/turf/open/lava/plasma
+/turf/simulated/open/lava/plasma
 	name = "liquid plasma"
 	desc = "A flowing stream of chilled liquid plasma. You probably shouldn't get in."
 	icon_state = "liquidplasma"
 	initial_gas_mix = "n2=82;plasma=24;TEMP=120"
-	baseturfs = /turf/open/lava/plasma
+	baseturfs = /turf/simulated/open/lava/plasma
 
 	light_range = 3
 	light_power = 0.75
@@ -174,7 +174,7 @@
 	immunity_trait = TRAIT_SNOWSTORM_IMMUNE
 	immunity_resistance_flags = FREEZE_PROOF
 
-/turf/open/lava/plasma/attackby(obj/item/I, mob/user, params)
+/turf/simulated/open/lava/plasma/attackby(obj/item/I, mob/user, params)
 	var/obj/item/reagent_containers/glass/C = I
 	if(C.reagents.total_volume >= C.volume)
 		to_chat(user, span_danger("[C] is full."))
@@ -182,7 +182,7 @@
 	C.reagents.add_reagent(/datum/reagent/toxin/plasma, rand(5, 10))
 	user.visible_message(span_notice("[user] scoops some plasma from the [src] with \the [C]."), span_notice("You scoop out some plasma from the [src] using \the [C]."))
 
-/turf/open/lava/plasma/do_burn(atom/movable/burn_target, delta_time = 1)
+/turf/simulated/open/lava/plasma/do_burn(atom/movable/burn_target, delta_time = 1)
 	. = TRUE
 	if(isobj(burn_target))
 		return FALSE // Does nothing against objects. Old code.
@@ -225,9 +225,9 @@
 			span_userdanger("Your senses numb as all of your remaining flesh is turned into a purple slurry, sloshing off your body and leaving only your bones to show in a vibrant purple!"))
 
 //mafia specific tame happy plasma (normal atmos, no slowdown)
-/turf/open/lava/plasma/mafia
+/turf/simulated/open/lava/plasma/mafia
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
-	baseturfs = /turf/open/lava/plasma/mafia
+	baseturfs = /turf/simulated/open/lava/plasma/mafia
 	slowdown = 0
 
 /////////// papers

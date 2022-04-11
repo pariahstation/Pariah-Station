@@ -102,7 +102,7 @@
 		obscuredTurfs -= visible_turf
 
 	for(var/turf/obscured_turf as anything in newly_obscured_turfs)
-		if(obscuredTurfs[obscured_turf] || istype(obscured_turf, /turf/open/ai_visible))
+		if(obscuredTurfs[obscured_turf] || istype(obscured_turf, /turf/simulated/open/ai_visible))
 			continue
 
 		var/image/static_image_to_allocate = inactive_static_images[length(inactive_static_images)]

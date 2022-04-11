@@ -268,7 +268,7 @@
 /// Builds with rods. This doesn't exist to be overriden, just to remove duplicate logic for turfs that want
 /// To support floor tile creation
 /// I'd make it a component, but one of these things is space. So no.
-/turf/simulated/open//proc/build_with_rods(obj/item/stack/rods/used_rods, mob/user)
+/turf/simulated/open/proc/build_with_rods(obj/item/stack/rods/used_rods, mob/user)
 	var/obj/structure/lattice/catwalk_bait = locate(/obj/structure/lattice, src)
 	var/obj/structure/lattice/catwalk/existing_catwalk = locate(/obj/structure/lattice/catwalk, src)
 	if(existing_catwalk)

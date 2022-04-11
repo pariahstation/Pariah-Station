@@ -31,7 +31,7 @@
 				continue
 
 			if(isfloorturf(T))
-				var/turf/open/floor/TF = T
+				var/turf/simulated/open/floor/TF = T
 				if(TF.burnt)
 					floor += 1
 				else

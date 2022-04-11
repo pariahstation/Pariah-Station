@@ -174,8 +174,8 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	return BRUTELOSS
 
 /obj/item/stack/sheet/iron/afterattack_secondary(atom/target, mob/user, proximity_flag, click_parameters)
-	if(istype(target, /turf/open))
-		var/turf/open/build_on = target
+	if(istype(target, /turf/simulated/open))
+		var/turf/simulated/open/build_on = target
 		if(!user.Adjacent(build_on))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 		if(isgroundlessturf(build_on))

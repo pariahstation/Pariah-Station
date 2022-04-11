@@ -110,7 +110,7 @@
 		var/list/area/shuttle/shuttle_areas = SSshuttle.supply.shuttle_areas
 		for(var/place in shuttle_areas)
 			var/area/shuttle/shuttle_area = place
-			for(var/turf/open/floor/T in shuttle_area)
+			for(var/turf/simulated/open/floor/T in shuttle_area)
 				if(T.is_blocked_turf())
 					continue
 				empty_shuttle_turfs += T

@@ -754,15 +754,15 @@
 	attack_verb_continuous = list("sears", "clubs", "burn")
 	attack_verb_simple = list("sear", "club", "burn")
 	hitsound = 'sound/weapons/sear.ogg'
-	var/turf_type = /turf/open/lava/smooth/weak
+	var/turf_type = /turf/simulated/open/lava/smooth/weak
 	var/transform_string = "lava"
-	var/reset_turf_type = /turf/open/misc/asteroid/basalt
+	var/reset_turf_type = /turf/simulated/open/misc/asteroid/basalt
 	var/reset_string = "basalt"
 	var/create_cooldown = 10 SECONDS
 	var/create_delay = 3 SECONDS
 	var/reset_cooldown = 5 SECONDS
 	var/timer = 0
-	var/static/list/banned_turfs = typecacheof(list(/turf/open/space/transit, /turf/closed))
+	var/static/list/banned_turfs = typecacheof(list(/turf/simulated/open/space/transit, /turf/closed))
 
 /obj/item/lava_staff/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
@@ -771,10 +771,10 @@
 	if(is_type_in_typecache(target, banned_turfs))
 		return
 	if(target in view(user.client.view, get_turf(user)))
-		var/turf/open/T = get_turf(target)
+		var/turf/simulated/open/T = get_turf(target)
 		if(!istype(T))
 			return
-		if(!istype(T, /turf/open/lava))
+		if(!istype(T, /turf/simulated/open/lava))
 			var/obj/effect/temp_visual/lavastaff/L = new /obj/effect/temp_visual/lavastaff(T)
 			L.alpha = 0
 			animate(L, alpha = 255, time = create_delay)
@@ -802,7 +802,7 @@
 	icon_state = "lavastaff_warn"
 	duration = 50
 
-/turf/open/lava/smooth/weak
+/turf/simulated/open/lava/smooth/weak
 	lava_damage = 10
 	lava_firestacks = 10
 	temperature_damage = 2500

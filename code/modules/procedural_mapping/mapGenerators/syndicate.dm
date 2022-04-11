@@ -2,7 +2,7 @@
 // Modules
 
 /datum/map_generator_module/bottom_layer/syndie_floor
-	spawnableTurfs = list(/turf/open/floor/mineral/plastitanium/red = 100)
+	spawnableTurfs = list(/turf/simulated/open/floor/mineral/plastitanium/red = 100)
 
 /datum/map_generator_module/border/syndie_walls
 	spawnableAtoms = list()

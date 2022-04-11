@@ -18,7 +18,7 @@
 
 /obj/effect/baseturf_helper/LateInitialize()
 	if(!baseturf_to_replace)
-		baseturf_to_replace = typecacheof(list(/turf/open/space,/turf/baseturf_bottom))
+		baseturf_to_replace = typecacheof(list(/turf/simulated/open/space,/turf/baseturf_bottom))
 	else if(!length(baseturf_to_replace))
 		baseturf_to_replace = list(baseturf_to_replace = TRUE)
 	else if(baseturf_to_replace[baseturf_to_replace[1]] != TRUE) // It's not associative
@@ -53,39 +53,39 @@
 
 /obj/effect/baseturf_helper/space
 	name = "space baseturf editor"
-	baseturf = /turf/open/space
+	baseturf = /turf/simulated/open/space
 
 /obj/effect/baseturf_helper/asteroid
 	name = "asteroid baseturf editor"
-	baseturf = /turf/open/misc/asteroid
+	baseturf = /turf/simulated/open/misc/asteroid
 
 /obj/effect/baseturf_helper/asteroid/airless
 	name = "asteroid airless baseturf editor"
-	baseturf = /turf/open/misc/asteroid/airless
+	baseturf = /turf/simulated/open/misc/asteroid/airless
 
 /obj/effect/baseturf_helper/asteroid/basalt
 	name = "asteroid basalt baseturf editor"
-	baseturf = /turf/open/misc/asteroid/basalt
+	baseturf = /turf/simulated/open/misc/asteroid/basalt
 
 /obj/effect/baseturf_helper/asteroid/snow
 	name = "asteroid snow baseturf editor"
-	baseturf = /turf/open/misc/asteroid/snow
+	baseturf = /turf/simulated/open/misc/asteroid/snow
 
 /obj/effect/baseturf_helper/beach/sand
 	name = "beach sand baseturf editor"
-	baseturf = /turf/open/misc/beach/sand
+	baseturf = /turf/simulated/open/misc/beach/sand
 
 /obj/effect/baseturf_helper/beach/water
 	name = "water baseturf editor"
-	baseturf = /turf/open/water/beach
+	baseturf = /turf/simulated/open/water/beach
 
 /obj/effect/baseturf_helper/lava
 	name = "lava baseturf editor"
-	baseturf = /turf/open/lava/smooth
+	baseturf = /turf/simulated/open/lava/smooth
 
 /obj/effect/baseturf_helper/lava_land/surface
 	name = "lavaland baseturf editor"
-	baseturf = /turf/open/lava/smooth/lava_land_surface
+	baseturf = /turf/simulated/open/lava/smooth/lava_land_surface
 
 
 /obj/effect/mapping_helpers

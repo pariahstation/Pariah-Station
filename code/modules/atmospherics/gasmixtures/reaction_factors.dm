@@ -29,7 +29,7 @@
 		/datum/gas/oxygen = "Oxygen is consumed equal to the amount of hydrogen available on the fast burn. Not consumed on the slow burn. Needs to be more than the hydrogen amount to trigger fast burn. Acts as the reaction rate on slow burn.",
 		/datum/gas/hydrogen = "[(1/HYDROGEN_BURN_H2_FACTOR)*100]% of the hydrogen is always consumed on the fast burn. [(1/HYDROGEN_BURN_OXY_FACTOR)*100]% of the oxygen amount is consumed on the slow burn. Need to be less than the oxygen amount to trigger fast burn. Acts as the reaction rate on fast burn.",
 		/datum/gas/water_vapor = "Water vapor is formed at [1/HYDROGEN_BURN_H2_FACTOR] reaction rate for the fast burn, [1/HYDROGEN_BURN_OXY_FACTOR]% reaction rate for the slow burn.",
-		"Temperature" = "Minimum temperature of [FIRE_MINIMUM_TEMPERATURE_TO_EXIST] kelvin to occur",
+		"Temperature" = "Minimum temperature of [T100C] kelvin to occur",
 		"Energy" = "[FIRE_HYDROGEN_ENERGY_RELEASED*HYDROGEN_OXYBURN_MULTIPLIER] joules of energy is released per rate for the fast burn, [FIRE_HYDROGEN_ENERGY_RELEASED] joules for the slow burn. Needs [MINIMUM_TRITIUM_OXYBURN_ENERGY] joules to start the fast burn.",
 	)
 
@@ -38,7 +38,7 @@
 		/datum/gas/oxygen = "Oxygen is consumed equal to the amount of tritium available on the fast burn. Not consumed on the slow burn. Need to be more than the tritium amount to trigger fast burn. Acts as the reaction rate on slow burn.",
 		/datum/gas/tritium = "[(1/TRITIUM_BURN_TRIT_FACTOR)*100]% of the tritium is always consumed on the fast burn. [(1/TRITIUM_BURN_OXY_FACTOR)*100]% of the oxygen amount is consumed on the slow burn. Need to be less than the oxygen amount to trigger fast burn. Acts as the reaction rate on fast burn.",
 		/datum/gas/water_vapor = "Water vapor is formed at [1/TRITIUM_BURN_TRIT_FACTOR]% reaction rate for the fast burn, [1/TRITIUM_BURN_OXY_FACTOR]% reaction rate for the slow burn.",
-		"Temperature" = "Minimum temperature of [FIRE_MINIMUM_TEMPERATURE_TO_EXIST] kelvin to occur",
+		"Temperature" = "Minimum temperature of [T100C] kelvin to occur",
 		"Energy" = "[FIRE_TRITIUM_ENERGY_RELEASED*TRITIUM_OXYBURN_MULTIPLIER] joules of energy is released per rate for the fast burn, [FIRE_TRITIUM_ENERGY_RELEASED] joules for the slow burn. Needs [MINIMUM_TRITIUM_OXYBURN_ENERGY] joules to start the fast burn.",
 		"Radiation" = "This reaction emits radiation proportional to the amount of energy released.",
 	)
@@ -121,7 +121,7 @@
 		/datum/gas/bz = "20 moles of BZ needs to be present for the reaction to occur. BZ is consumed at 0.25 reaction rate.",
 		/datum/gas/freon = "Freon is produced at 2.5 reaction rate",
 		"Energy" = "[FREON_FORMATION_ENERGY] joules of energy is absorbed per reaction rate",
-		"Temperature" = "Minimum temperature of [FIRE_MINIMUM_TEMPERATURE_TO_EXIST + 100] Kelvin to occur",
+		"Temperature" = "Minimum temperature of [T100C + 100] Kelvin to occur",
 	)
 
 /datum/gas_reaction/nobliumformation/init_factors()
@@ -149,9 +149,9 @@
 		/datum/gas/oxygen = "Oxygen is consumed at 20 reaction rate",
 		/datum/gas/carbon_dioxide = "Carbon dioxide is produced at 5 reaction rate.",
 		"Energy" = "[HALON_COMBUSTION_ENERGY] joules of energy is absorbed per reaction rate",
-		"Temperature" = "Can only occur above [FIRE_MINIMUM_TEMPERATURE_TO_EXIST] kelvin. Higher temperature increases the reaction rate.",
+		"Temperature" = "Can only occur above [T100C] kelvin. Higher temperature increases the reaction rate.",
 	)
-	
+
 /datum/gas_reaction/healium_formation/init_factors()
 	factor = list(
 		/datum/gas/bz = "BZ is consumed at 0.25 reaction rate",
@@ -169,7 +169,7 @@
 		"Temperature" = "Can only occur between [ZAUKER_FORMATION_MIN_TEMPERATURE] - [ZAUKER_FORMATION_MAX_TEMPERATURE] kelvin",
 		"Energy" = "[ZAUKER_FORMATION_ENERGY] joules of energy is absorbed per reaction rate",
 	)
-	
+
 /datum/gas_reaction/zauker_decomp/init_factors() //Fixed reaction rate
 	factor = list(
 		/datum/gas/zauker = "Zauker is consumed at 1 reaction rate",
@@ -186,7 +186,7 @@
 		"Energy" = "[PN_FORMATION_ENERGY] joules of energy is released per reaction rate",
 		"Temperature" = "Can only occur between [PN_FORMATION_MIN_TEMPERATURE] - [PN_FORMATION_MAX_TEMPERATURE] kelvin. Higher temperature increases the reaction rate.",
 	)
-	
+
 /datum/gas_reaction/proto_nitrate_hydrogen_response/init_factors() // Fixed reaction rate
 	factor = list(
 		/datum/gas/hydrogen = "[PN_HYDROGEN_CONVERSION_THRESHOLD] moles of hydrogen needs to be present for the reaction to occur. Hydrogen is consumed at 1 reaction rate.",

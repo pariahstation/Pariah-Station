@@ -40,7 +40,7 @@
 	var/list/connected_turfs = detect_room(origin = get_turf(src), max_size = fix_range)
 	var/datum/gas_mixture/base_mix = new
 	base_mix.parse_gas_string(OPENTURF_DEFAULT_ATMOS)
-	for(var/turf/open/turf_fix in connected_turfs)
+	for(var/turf/simulated/open/turf_fix in connected_turfs)
 		if(turf_fix.blocks_air)
 			continue
 		turf_fix.assume_air(base_mix)
@@ -68,7 +68,7 @@
 		if(!isopenturf(turf_loc))
 			continue
 		var/distance_from_center = max(get_dist(turf_loc, loc), 1)
-		var/turf/open/floor_loc = turf_loc
+		var/turf/simulated/open/floor_loc = turf_loc
 		floor_loc.atmos_spawn_air("n2=[n2_gas_amount / distance_from_center];o2=[o2_gas_amount / distance_from_center];TEMP=273")
 	qdel(src)
 
@@ -92,7 +92,7 @@
 		if(!isopenturf(turf_loc))
 			continue
 		var/distance_from_center = max(get_dist(turf_loc, loc), 1)
-		var/turf/open/floor_loc = turf_loc
+		var/turf/simulated/open/floor_loc = turf_loc
 		floor_loc.atmos_spawn_air("n2o=[n2o_gas_amount / distance_from_center];TEMP=273")
 	qdel(src)
 

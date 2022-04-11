@@ -1,10 +1,10 @@
-/turf/open/misc/grass
+/turf/simulated/open/misc/grass
 	name = "grass"
 	desc = "A patch of grass."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "grass0"
 	base_icon_state = "grass"
-	baseturfs = /turf/open/misc/sandy_dirt
+	baseturfs = /turf/simulated/open/misc/sandy_dirt
 	bullet_bounce_sound = null
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
@@ -16,11 +16,11 @@
 	layer = HIGH_TURF_LAYER
 	var/smooth_icon = 'icons/turf/floors/grass.dmi'
 
-/turf/open/misc/grass/break_tile()
+/turf/simulated/open/misc/grass/break_tile()
 	. = ..()
 	icon_state = "damaged"
 
-/turf/open/misc/grass/Initialize(mapload)
+/turf/simulated/open/misc/grass/Initialize(mapload)
 	. = ..()
 	if(smoothing_flags)
 		var/matrix/translation = new
@@ -28,5 +28,5 @@
 		transform = translation
 		icon = smooth_icon
 
-/turf/open/misc/grass/lavaland
+/turf/simulated/open/misc/grass/lavaland
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS

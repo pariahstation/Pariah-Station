@@ -8,30 +8,30 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/modular_map_connector,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "f" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/garbage,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "g" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/grille,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "m" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "q" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/plastic{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "u" = (
 /turf/template_noop,
@@ -39,12 +39,12 @@
 "z" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/cigbutt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "M" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/space_heater,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "T" = (
 /obj/effect/decal/cleanable/dirt,
@@ -54,16 +54,16 @@
 	pixel_y = 4
 	},
 /obj/item/pen,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "W" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/crowbar/red,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 "Z" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/security)
 
 (1,1,1) = {"

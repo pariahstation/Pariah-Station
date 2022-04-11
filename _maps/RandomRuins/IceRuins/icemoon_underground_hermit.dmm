@@ -1,100 +1,100 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aM" = (
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "bz" = (
 /obj/item/flashlight/lantern,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "bW" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "cI" = (
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "ec" = (
 /obj/item/clothing/suit/hooded/wintercoat,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "ei" = (
 /obj/machinery/hydroponics/soil,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "gr" = (
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "ha" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "hv" = (
 /obj/structure/bonfire/prelit,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "hN" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "ii" = (
 /obj/effect/mob_spawn/ghost_role/human/hermit,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "il" = (
 /obj/structure/barricade/wooden/crude/snow,
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "mN" = (
 /turf/closed/wall/mineral/wood,
 /area/ruin/powered/shuttle)
 "oJ" = (
 /obj/structure/sink,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "pI" = (
 /obj/item/chair/wood/wings,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "sC" = (
 /obj/item/gun/ballistic/rifle/boltaction/pipegun/prime,
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "sM" = (
 /obj/structure/chair/comfy/beige,
 /obj/machinery/light/directional/west,
 /obj/machinery/light/directional/north,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "wH" = (
 /obj/item/tank/internals/emergency_oxygen/engi,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "zd" = (
 /obj/item/storage/bag/plants/portaseeder,
 /obj/item/storage/medkit/surgery,
 /obj/item/storage/bag/ore,
 /obj/structure/table/wood,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "CR" = (
 /obj/item/flashlight/lantern,
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "GU" = (
 /obj/item/storage/toolbox/emergency,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "II" = (
 /obj/item/paper/guides/jobs/hydroponics,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "JI" = (
 /obj/machinery/door/airlock/wood{
 	name = "Frozen Shack"
 	},
 /obj/structure/fans/tiny/invisible,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/shuttle)
 "Oe" = (
 /obj/item/seeds/plump,
@@ -103,49 +103,49 @@
 /obj/item/seeds/reishi,
 /obj/structure/table/wood,
 /obj/item/food/grown/mushroom/glowshroom,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "ON" = (
 /obj/machinery/hydroponics/soil,
 /obj/machinery/light/directional/north,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "Qr" = (
 /obj/structure/barricade/wooden/snowed,
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "QD" = (
 /turf/template_noop,
 /area/template_noop)
 "Rr" = (
 /obj/structure/flora/tree/pine,
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "Si" = (
 /obj/structure/glowshroom/single,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "UL" = (
 /obj/item/pickaxe/improvised,
 /obj/structure/table/wood,
 /obj/item/knife/combat,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "WK" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "Xh" = (
 /obj/structure/flora/tree/jungle/small,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "XI" = (
 /obj/machinery/light/directional/east,
-/turf/open/floor/grass/fairy,
+/turf/simulated/open/floor/grass/fairy,
 /area/ruin/powered/shuttle)
 "Yi" = (
 /obj/item/shovel,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle)
 "YN" = (
 /turf/closed/mineral/snowmountain/icemoon,

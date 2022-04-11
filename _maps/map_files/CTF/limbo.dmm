@@ -3,31 +3,31 @@
 /obj/effect/turf_decal/siding/blue/corner{
 	dir = 4
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "aG" = (
 /obj/effect/portal/permanent{
 	id = "portal1"
 	},
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "aM" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door13"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "aU" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door1"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "bk" = (
 /obj/structure/trap/ctf/yellow,
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "bv" = (
 /obj/effect/turf_decal/siding/blue{
@@ -36,28 +36,28 @@
 /obj/effect/turf_decal/siding/blue/corner{
 	dir = 8
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "bH" = (
 /obj/effect/turf_decal/siding/wood/corner,
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "ce" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "cu" = (
 /obj/effect/turf_decal/tile/green/fourcorners,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "cV" = (
 /obj/structure/ladder/unbreakable/rune{
 	height = 1;
 	id = "blue_team"
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "ef" = (
 /obj/structure/window/reinforced/fulltile{
@@ -66,13 +66,13 @@
 	name = "hardened window";
 	atom_integrity = 5000
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ctf)
 "eg" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 1
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "ep" = (
 /obj/structure/barricade/security/ctf,
@@ -86,7 +86,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "fs" = (
 /obj/effect/turf_decal/tile/red{
@@ -99,14 +99,14 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "fH" = (
 /obj/effect/turf_decal/siding/wood/corner,
 /obj/effect/turf_decal/siding/red{
 	dir = 1
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "fK" = (
 /obj/effect/turf_decal/tile/red,
@@ -119,28 +119,28 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "gq" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "gJ" = (
 /obj/effect/portal/permanent{
 	id = "portal3"
 	},
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "hh" = (
 /obj/structure/barricade/security/ctf,
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "hl" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "hB" = (
 /turf/closed/indestructible/cult,
@@ -150,27 +150,27 @@
 /obj/effect/turf_decal/siding/blue{
 	dir = 4
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "in" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "is" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door9"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "iv" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "iN" = (
 /obj/effect/turf_decal/tile/green,
@@ -180,26 +180,26 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "jz" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 1
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "jK" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door6"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "kW" = (
 /obj/machinery/door/airlock/wood{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "lt" = (
 /obj/effect/turf_decal/tile/green,
@@ -209,17 +209,17 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "mG" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 10
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "mP" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "ng" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -228,7 +228,7 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "ny" = (
 /obj/effect/turf_decal/tile/blue{
@@ -241,20 +241,20 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "nB" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/red,
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "nP" = (
 /obj/effect/portal/permanent{
 	id = "portal2"
 	},
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "nQ" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -263,7 +263,7 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 1
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "od" = (
 /obj/effect/turf_decal/siding/blue,
@@ -273,34 +273,34 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "om" = (
 /obj/effect/turf_decal/siding/blue/corner,
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "oy" = (
 /obj/machinery/control_point,
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "oK" = (
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 1
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "oL" = (
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "oT" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 10
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "pb" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "pi" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -310,10 +310,10 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "pz" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ctf)
 "pD" = (
 /obj/effect/turf_decal/tile/green{
@@ -325,40 +325,40 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "pF" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door5"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "pR" = (
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 4
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "pX" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door8"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "qc" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door4"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "qd" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "qs" = (
 /obj/effect/turf_decal/siding/wood{
@@ -367,18 +367,18 @@
 /obj/structure/table/wood{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "qH" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/red,
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "rm" = (
 /obj/machinery/capture_the_flag/blue,
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "rB" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -387,37 +387,37 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 4
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "rZ" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door10"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "sl" = (
 /obj/effect/turf_decal/tile/yellow/fourcorners,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "st" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "tm" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "tS" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 6
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "uh" = (
 /turf/template_noop,
@@ -427,29 +427,29 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/red,
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "vK" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 4
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "wg" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "wu" = (
 /obj/effect/turf_decal/siding/blue,
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "wy" = (
 /obj/structure/table/wood{
 	resistance_flags = 64
 	},
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "wE" = (
 /obj/effect/turf_decal/tile/red{
@@ -458,28 +458,28 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "wS" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door15"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "wW" = (
 /obj/structure/trap/ctf/blue,
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "xw" = (
 /obj/structure/trap/ctf/yellow,
 /obj/effect/turf_decal/siding/yellow{
 	dir = 4
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "xC" = (
 /obj/effect/turf_decal/tile/yellow,
@@ -492,7 +492,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "yo" = (
 /turf/closed/indestructible/wood,
@@ -502,7 +502,7 @@
 	icon_state = "portal1";
 	id = "door7"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "yL" = (
 /obj/effect/turf_decal/siding/blue{
@@ -511,14 +511,14 @@
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "zH" = (
 /obj/effect/turf_decal/siding/wood/corner,
 /obj/effect/turf_decal/siding/red{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Ah" = (
 /obj/effect/turf_decal/tile/red,
@@ -531,30 +531,30 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "AD" = (
 /obj/structure/ladder/unbreakable/rune{
 	id = "blue_team"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Bf" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 5
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Bj" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door3"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Bl" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "Bw" = (
 /obj/effect/turf_decal/siding/blue{
@@ -563,14 +563,14 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Bx" = (
 /obj/machinery/door/airlock/wood{
 	resistance_flags = 64
 	},
 /obj/structure/trap/ctf/blue,
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "BK" = (
 /obj/effect/turf_decal/tile/red,
@@ -583,49 +583,49 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Cf" = (
 /obj/effect/turf_decal/siding/blue/corner{
 	dir = 8
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Ch" = (
 /obj/effect/turf_decal/tile/yellow,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Cn" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door16"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "CV" = (
 /obj/structure/toilet{
 	dir = 4
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ctf)
 "Df" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/yellow/corner,
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Dp" = (
 /obj/machinery/door/airlock/wood{
 	resistance_flags = 64
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ctf)
 "Ea" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Em" = (
 /obj/effect/turf_decal/siding/blue{
@@ -634,17 +634,17 @@
 /obj/effect/turf_decal/siding/blue/corner{
 	dir = 1
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Eq" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Ez" = (
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "EE" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -653,7 +653,7 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 4
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "EY" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -662,7 +662,7 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Fo" = (
 /obj/effect/turf_decal/tile/green{
@@ -671,18 +671,18 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "FH" = (
 /obj/effect/turf_decal/siding/blue/corner{
 	dir = 1
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Ga" = (
 /obj/structure/barricade/security/ctf,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "GC" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -691,30 +691,30 @@
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 8
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "GX" = (
 /obj/structure/barricade/security/ctf,
 /obj/structure/barricade/security/ctf,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "GZ" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door11"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Ha" = (
 /obj/effect/turf_decal/siding/yellow,
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Hn" = (
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 8
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Ho" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -726,13 +726,13 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Hs" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "HK" = (
 /obj/structure/ladder/unbreakable/rune{
@@ -740,16 +740,16 @@
 	height = 1;
 	id = "yellow_team"
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "HU" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Ia" = (
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Is" = (
 /obj/effect/turf_decal/siding/blue{
@@ -758,7 +758,7 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Iu" = (
 /obj/effect/turf_decal/siding/wood{
@@ -767,20 +767,20 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 4
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "IF" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 9
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "KY" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Ly" = (
 /obj/effect/turf_decal/tile/green{
@@ -789,24 +789,24 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "LC" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "LX" = (
 /obj/machinery/capture_the_flag/yellow,
-/turf/open/floor/circuit/green/off,
+/turf/simulated/open/floor/circuit/green/off,
 /area/ctf)
 "Mc" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door12"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Mr" = (
 /obj/effect/turf_decal/siding/wood{
@@ -815,20 +815,20 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "My" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "MB" = (
 /obj/machinery/door/airlock/wood{
 	resistance_flags = 64
 	},
 /obj/structure/trap/ctf/yellow,
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "ME" = (
 /obj/effect/turf_decal/siding/blue,
@@ -838,7 +838,7 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Nd" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -847,23 +847,23 @@
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 1
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Nh" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 5
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Np" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/turf_decal/siding/red{
 	dir = 1
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Nw" = (
-/turf/open/lava,
+/turf/simulated/open/lava,
 /area/ctf)
 "NQ" = (
 /obj/effect/turf_decal/siding/blue{
@@ -872,15 +872,15 @@
 /obj/effect/turf_decal/siding/blue/corner{
 	dir = 4
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Oq" = (
 /obj/structure/trap/ctf/blue,
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "OD" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ctf)
 "OF" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -889,14 +889,14 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 4
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Pi" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door2"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Pp" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -909,14 +909,14 @@
 	icon_state = "nim";
 	name = "wizard of yendor showcase"
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "PO" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "QJ" = (
 /obj/effect/turf_decal/siding/blue,
@@ -929,20 +929,20 @@
 	icon_state = "nim";
 	name = "wizard of yendor showcase"
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "QY" = (
 /obj/effect/turf_decal/siding/wood,
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Rg" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 4
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Rm" = (
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "RI" = (
 /obj/effect/turf_decal/tile/yellow{
@@ -955,53 +955,53 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/yellow,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Sh" = (
 /obj/structure/trap/ctf/yellow,
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "SB" = (
 /obj/structure/toilet{
 	dir = 8
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ctf)
 "SL" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 9
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Tw" = (
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "TK" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 6
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "TN" = (
 /obj/structure/ladder/unbreakable/rune{
 	color = "#ffff00";
 	id = "yellow_team"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Ul" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/blue/corner,
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "Uy" = (
 /obj/effect/turf_decal/tile/green,
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "UN" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1010,7 +1010,7 @@
 /obj/structure/table/wood{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "US" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -1019,29 +1019,29 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 8
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Vd" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Vz" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "VE" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 4
 	},
-/turf/open/floor/carpet/blue,
+/turf/simulated/open/floor/carpet/blue,
 /area/ctf)
 "WG" = (
 /obj/effect/turf_decal/siding/yellow/corner,
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "Xl" = (
 /turf/closed/indestructible/riveted/uranium,
@@ -1059,14 +1059,14 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Yl" = (
 /obj/effect/portal/permanent{
 	icon_state = "portal1";
 	id = "door14"
 	},
-/turf/open/floor/carpet/red,
+/turf/simulated/open/floor/carpet/red,
 /area/ctf)
 "Yq" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -1075,7 +1075,7 @@
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 4
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "YT" = (
 /obj/effect/turf_decal/tile/red{
@@ -1084,7 +1084,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Zi" = (
 /obj/effect/turf_decal/tile/green,
@@ -1094,7 +1094,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 "Zr" = (
 /obj/effect/turf_decal/siding/yellow{
@@ -1103,13 +1103,13 @@
 /obj/structure/bookcase/random{
 	resistance_flags = 64
 	},
-/turf/open/floor/carpet/orange,
+/turf/simulated/open/floor/carpet/orange,
 /area/ctf)
 "ZT" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/turf/open/floor/cult,
+/turf/simulated/open/floor/cult,
 /area/ctf)
 
 (1,1,1) = {"

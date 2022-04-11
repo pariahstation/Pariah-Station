@@ -162,7 +162,7 @@
 		playsound(game, 'sound/effects/bang.ogg', 50, TRUE)
 		return
 	playsound(game, 'sound/effects/bang.ogg', 100, TRUE)
-	for(var/turf/open/floor/smashed in orange(1, src))
+	for(var/turf/simulated/open/floor/smashed in orange(1, src))
 		smashed.ScrapeAway()
 	game.say("Something slams into the floor around [src], exposing it to space!")
 	if(game.hull)
@@ -171,8 +171,8 @@
 /datum/orion_event/hull_part/proc/fix_floor(obj/machinery/computer/arcade/orion_trail/game)
 	game.say("A new floor suddenly appears around [src]. What the hell?")
 	playsound(game, 'sound/weapons/genhit.ogg', 100, TRUE)
-	for(var/turf/open/space/fixed in orange(1, src))
-		fixed.PlaceOnTop(/turf/open/floor/plating)
+	for(var/turf/simulated/open/space/fixed in orange(1, src))
+		fixed.PlaceOnTop(/turf/simulated/open/floor/plating)
 
 #define BUTTON_EXPLORE_SHIP "Explore Ship"
 #define BUTTON_LEAVE_THE_DERELICT "Leave the Derelict"

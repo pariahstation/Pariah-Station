@@ -49,7 +49,7 @@ Now then, into the breach.
 4. Active turfs
     - This is the heart and soul of environmental atmos, see more details below
     - All you need to know right now is it manages moving gas from tile to tile
-    - Calls `process_cell()` on each `/turf/open` in the `active_turfs` list
+    - Calls `process_cell()` on each `/turf/simulated/open` in the `active_turfs` list
 5. Excited groups
     - Manages excited groups, which are core to working flow simulation
     - More details to come, they handle differences between gasmixtures when active turfs can't do the job
@@ -58,7 +58,7 @@ Now then, into the breach.
     - Calls `self_breakdown()` or `dismantle()` appropriately on the excited group.
 6. High pressure deltas
     - Takes the gas movement from Active Turfs and uses it to move objects on said turfs
-    - Calls `high_pressure_movements()` on each `/turf/open` in the `high_pressure_delta` list.
+    - Calls `high_pressure_movements()` on each `/turf/simulated/open` in the `high_pressure_delta` list.
     - Sets each turf's `pressure_difference` to 0
 7. Hotspots
     - These are what you might know as fire, at least the effect of it.

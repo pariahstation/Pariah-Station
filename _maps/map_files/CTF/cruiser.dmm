@@ -3,23 +3,23 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/ctf)
 "av" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/ctf)
 "bh" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "bN" = (
 /obj/effect/turf_decal/siding/purple/corner{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ctf)
 "cb" = (
 /obj/effect/turf_decal/tile/green{
@@ -29,7 +29,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "ck" = (
 /turf/closed/indestructible/syndicate,
@@ -46,7 +46,7 @@
 /area/ctf)
 "cu" = (
 /obj/machinery/capture_the_flag/green,
-/turf/open/floor/circuit/green,
+/turf/simulated/open/floor/circuit/green,
 /area/ctf)
 "cy" = (
 /obj/machinery/computer{
@@ -57,7 +57,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "cK" = (
 /obj/structure/window/reinforced/shuttle{
@@ -65,11 +65,11 @@
 	name = "hardened window";
 	atom_integrity = 5000
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ctf)
 "cO" = (
 /obj/item/ctf/green,
-/turf/open/floor/circuit/green/anim,
+/turf/simulated/open/floor/circuit/green/anim,
 /area/ctf)
 "dq" = (
 /obj/structure/window/reinforced/shuttle{
@@ -82,13 +82,13 @@
 	name = "hardened window";
 	atom_integrity = 5000
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ctf)
 "ds" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "dt" = (
 /obj/structure/window/reinforced{
@@ -99,7 +99,7 @@
 	resistance_flags = 64
 	},
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/ctf)
 "dS" = (
 /obj/machinery/computer{
@@ -112,21 +112,21 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "es" = (
 /obj/machinery/computer{
 	dir = 4;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "eM" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "fa" = (
 /obj/structure/shuttle/engine/huge,
@@ -138,7 +138,7 @@
 	set_cap = 1;
 	set_luminosity = 4
 	},
-/turf/open/floor/plating/abductor2,
+/turf/simulated/open/floor/plating/abductor2,
 /area/ctf)
 "fl" = (
 /obj/structure/table/abductor,
@@ -146,7 +146,7 @@
 	set_cap = 1;
 	set_luminosity = 4
 	},
-/turf/open/floor/plating/abductor,
+/turf/simulated/open/floor/plating/abductor,
 /area/ctf)
 "fS" = (
 /turf/closed/indestructible/alien,
@@ -158,35 +158,35 @@
 /obj/effect/turf_decal/siding/purple{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ctf)
 "gw" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/mineral/titanium/tiled,
+/turf/simulated/open/floor/mineral/titanium/tiled,
 /area/ctf)
 "gC" = (
 /obj/structure/table/reinforced/ctf,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "hc" = (
 /turf/template_noop,
 /area/template_noop)
 "ho" = (
-/turf/open/floor/circuit/off,
+/turf/simulated/open/floor/circuit/off,
 /area/ctf)
 "hQ" = (
 /obj/structure/table/reinforced/ctf,
 /obj/effect/turf_decal/trimline/red/warning{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "hW" = (
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ctf)
 "jq" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "jR" = (
 /obj/machinery/door/poddoor/shutters/radiation{
@@ -194,25 +194,25 @@
 	name = "secure containment vault";
 	resistance_flags = 64
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ctf)
 "kr" = (
 /obj/structure/table/reinforced/ctf,
 /obj/effect/turf_decal/trimline/red/warning{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "kU" = (
 /obj/effect/powerup/ammo,
-/turf/open/floor/circuit/red/anim,
+/turf/simulated/open/floor/circuit/red/anim,
 /area/ctf)
 "lB" = (
 /obj/effect/turf_decal/siding/white/corner{
 	color = "#121212";
 	dir = 1
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "lI" = (
 /obj/structure/window/reinforced{
@@ -231,7 +231,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "lS" = (
 /obj/structure/sign/warning/radiation/rad_area{
@@ -241,7 +241,7 @@
 /area/ctf)
 "lY" = (
 /obj/effect/turf_decal/tile/green/fourcorners,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "mb" = (
 /obj/effect/mob_spawn/corpse/human/abductor,
@@ -250,92 +250,92 @@
 	set_cap = 1;
 	set_luminosity = 4
 	},
-/turf/open/floor/plating/abductor2,
+/turf/simulated/open/floor/plating/abductor2,
 /area/space/nearstation)
 "me" = (
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "mr" = (
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ctf)
 "mW" = (
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/ctf)
 "nj" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "nx" = (
 /obj/machinery/computer{
 	dir = 8;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "nT" = (
 /obj/structure/window/reinforced{
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/tiled,
+/turf/simulated/open/floor/mineral/titanium/tiled,
 /area/ctf)
 "nV" = (
 /obj/structure/window/reinforced{
 	dir = 8;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/tiled,
+/turf/simulated/open/floor/mineral/titanium/tiled,
 /area/ctf)
 "ot" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "oL" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/tiled,
+/turf/simulated/open/floor/mineral/titanium/tiled,
 /area/ctf)
 "pR" = (
 /obj/machinery/capture_the_flag/red,
-/turf/open/floor/circuit/red,
+/turf/simulated/open/floor/circuit/red,
 /area/ctf)
 "rB" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "rI" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ctf)
 "rR" = (
 /obj/structure/shuttle/engine/large,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ctf)
 "sc" = (
 /obj/effect/turf_decal/tile/red,
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "sz" = (
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ctf)
 "tM" = (
 /obj/effect/turf_decal/tile/red/fourcorners,
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "tN" = (
 /obj/structure/table/reinforced/ctf,
 /obj/effect/turf_decal/trimline/green/warning{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "tW" = (
 /obj/machinery/button/door{
@@ -344,13 +344,13 @@
 	pixel_x = -28;
 	resistance_flags = 64
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ctf)
 "uo" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "uz" = (
 /obj/structure/table/reinforced/ctf,
@@ -359,7 +359,7 @@
 	name = "Vault Access";
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "uA" = (
 /obj/structure/table/reinforced/ctf,
@@ -370,7 +370,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "vy" = (
 /obj/effect/turf_decal/tile/red,
@@ -380,20 +380,20 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "vL" = (
 /obj/effect/turf_decal/siding/white{
 	color = "#121212";
 	dir = 8
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "vN" = (
 /obj/effect/turf_decal/siding/purple{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ctf)
 "vY" = (
 /obj/effect/turf_decal/tile/red,
@@ -403,10 +403,10 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "wO" = (
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "xl" = (
 /obj/effect/turf_decal/tile/green{
@@ -415,103 +415,103 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "xS" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "xU" = (
 /obj/machinery/computer{
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "yc" = (
 /obj/effect/turf_decal/siding/white/corner{
 	color = "#121212";
 	dir = 4
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "yn" = (
 /obj/effect/turf_decal/siding/white/corner{
 	color = "#121212"
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "yw" = (
 /obj/effect/turf_decal/siding/white/corner{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/simulated/open/floor/mineral/titanium/tiled/white,
 /area/ctf)
 "zg" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/green,
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "zs" = (
 /obj/structure/barricade/security/ctf,
 /obj/effect/turf_decal/tile/green/fourcorners,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "zx" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
 	set_luminosity = 4
 	},
-/turf/open/floor/plating/abductor2,
+/turf/simulated/open/floor/plating/abductor2,
 /area/space/nearstation)
 "zF" = (
 /obj/effect/turf_decal/trimline/green/warning{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "AN" = (
 /obj/effect/turf_decal/siding/white/corner{
 	color = "#121212";
 	dir = 8
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "Bh" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "Bi" = (
 /obj/effect/turf_decal/trimline/red/warning{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "Cb" = (
-/turf/open/floor/glass/reinforced,
+/turf/simulated/open/floor/glass/reinforced,
 /area/ctf)
 "Ce" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "Cq" = (
 /obj/effect/powerup/ammo,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/ctf)
 "CU" = (
 /obj/structure/window/reinforced{
 	dir = 4;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/tiled,
+/turf/simulated/open/floor/mineral/titanium/tiled,
 /area/ctf)
 "Db" = (
 /obj/effect/turf_decal/tile/red,
@@ -524,20 +524,20 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "Fc" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/ctf)
 "FM" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "FP" = (
 /obj/structure/window/reinforced{
@@ -556,20 +556,20 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "Gi" = (
 /obj/effect/turf_decal/siding/purple/corner{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ctf)
 "Gx" = (
 /obj/effect/light_emitter{
 	set_cap = 1;
 	set_luminosity = 4
 	},
-/turf/open/floor/plating/abductor,
+/turf/simulated/open/floor/plating/abductor,
 /area/space/nearstation)
 "GH" = (
 /obj/structure/window/reinforced{
@@ -584,7 +584,7 @@
 	resistance_flags = 64
 	},
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/ctf)
 "Hy" = (
 /obj/structure/barricade/security/ctf,
@@ -598,7 +598,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "HM" = (
 /obj/effect/turf_decal/tile/green,
@@ -608,7 +608,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "HN" = (
 /obj/structure/window/reinforced{
@@ -623,13 +623,13 @@
 	resistance_flags = 64
 	},
 /obj/structure/flora/ausbushes/fernybush,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/ctf)
 "HZ" = (
 /obj/effect/powerup/speed{
 	respawn_time = 600
 	},
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/ctf)
 "Iq" = (
 /obj/effect/turf_decal/tile/red{
@@ -642,59 +642,59 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "ID" = (
 /obj/effect/turf_decal/siding/white{
 	color = "#121212";
 	dir = 4
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "IN" = (
 /obj/effect/turf_decal/trimline/red/warning{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "IQ" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "Jr" = (
 /obj/effect/turf_decal/tile/green/fourcorners,
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "Jt" = (
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/simulated/open/floor/mineral/titanium/tiled/white,
 /area/ctf)
 "Ju" = (
-/turf/open/floor/circuit/red/anim,
+/turf/simulated/open/floor/circuit/red/anim,
 /area/ctf)
 "JL" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "JO" = (
-/turf/open/floor/circuit/green,
+/turf/simulated/open/floor/circuit/green,
 /area/ctf)
 "JP" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4;
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "KF" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "KO" = (
 /obj/structure/shuttle/engine/heater,
@@ -705,14 +705,14 @@
 /area/ctf)
 "KZ" = (
 /obj/effect/powerup/ammo,
-/turf/open/floor/circuit/green/anim,
+/turf/simulated/open/floor/circuit/green/anim,
 /area/ctf)
 "LQ" = (
-/turf/open/floor/circuit/green/anim,
+/turf/simulated/open/floor/circuit/green/anim,
 /area/ctf)
 "LS" = (
 /obj/item/ctf/red,
-/turf/open/floor/circuit/red/anim,
+/turf/simulated/open/floor/circuit/red/anim,
 /area/ctf)
 "MC" = (
 /obj/structure/barricade/security/ctf,
@@ -726,7 +726,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "MH" = (
 /obj/structure/table/reinforced/ctf,
@@ -739,7 +739,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "Na" = (
 /turf/closed/indestructible/opsglass,
@@ -748,7 +748,7 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/simulated/open/floor/mineral/titanium/tiled/white,
 /area/ctf)
 "NQ" = (
 /obj/effect/turf_decal/tile/green{
@@ -758,11 +758,11 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "OQ" = (
 /obj/structure/barricade/security/ctf,
-/turf/open/floor/circuit/off,
+/turf/simulated/open/floor/circuit/off,
 /area/ctf)
 "OX" = (
 /obj/machinery/button/door{
@@ -771,7 +771,7 @@
 	pixel_x = 28;
 	resistance_flags = 64
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ctf)
 "Pm" = (
 /obj/effect/turf_decal/tile/red,
@@ -781,34 +781,34 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "Pn" = (
 /obj/structure/trap/ctf/green,
 /obj/effect/turf_decal/tile/green/fourcorners,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "PU" = (
 /obj/effect/turf_decal/siding/white/corner{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/simulated/open/floor/mineral/titanium/tiled/white,
 /area/ctf)
 "Qe" = (
 /turf/template_noop,
 /area/ctf)
 "Qt" = (
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "QE" = (
 /obj/effect/turf_decal/siding/white/corner,
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/simulated/open/floor/mineral/titanium/tiled/white,
 /area/ctf)
 "QT" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/simulated/open/floor/mineral/titanium/tiled/white,
 /area/ctf)
 "Rc" = (
 /obj/effect/turf_decal/tile/red{
@@ -817,7 +817,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "Ri" = (
 /obj/structure/trap/ctf/red,
@@ -831,13 +831,13 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "Rl" = (
 /obj/effect/turf_decal/siding/white/corner{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium/tiled/white,
+/turf/simulated/open/floor/mineral/titanium/tiled/white,
 /area/ctf)
 "Rz" = (
 /obj/effect/turf_decal/tile/red{
@@ -850,7 +850,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red,
-/turf/open/floor/pod/dark,
+/turf/simulated/open/floor/pod/dark,
 /area/ctf)
 "RE" = (
 /obj/effect/turf_decal/tile/red{
@@ -862,7 +862,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "RH" = (
 /obj/effect/turf_decal/tile/red{
@@ -871,7 +871,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "RT" = (
 /obj/effect/turf_decal/tile/green{
@@ -883,31 +883,31 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "RV" = (
-/turf/open/floor/mineral/titanium/tiled,
+/turf/simulated/open/floor/mineral/titanium/tiled,
 /area/ctf)
 "Ss" = (
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/ctf)
 "SS" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ctf)
 "SU" = (
-/turf/open/floor/circuit/red,
+/turf/simulated/open/floor/circuit/red,
 /area/ctf)
 "Tb" = (
 /obj/structure/table/reinforced/ctf,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 "Us" = (
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "Vl" = (
 /obj/effect/turf_decal/siding/purple/corner,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ctf)
 "VL" = (
 /obj/effect/turf_decal/tile/red{
@@ -920,19 +920,19 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ctf)
 "VR" = (
 /obj/effect/turf_decal/siding/purple/corner{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ctf)
 "Wd" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ctf)
 "Wt" = (
 /obj/structure/table/reinforced/ctf,
@@ -943,30 +943,30 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "WB" = (
 /obj/effect/turf_decal/trimline/green/warning{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "YB" = (
 /obj/structure/table/reinforced/ctf,
 /obj/effect/turf_decal/trimline/green/warning{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/ctf)
 "Zf" = (
 /obj/effect/turf_decal/tile/green,
-/turf/open/floor/pod/light,
+/turf/simulated/open/floor/pod/light,
 /area/ctf)
 "Zk" = (
 /obj/machinery/computer{
 	resistance_flags = 64
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/ctf)
 
 (1,1,1) = {"

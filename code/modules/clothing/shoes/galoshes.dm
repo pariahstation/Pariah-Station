@@ -25,5 +25,5 @@
 /obj/item/clothing/shoes/galoshes/dry/proc/on_step()
 	SIGNAL_HANDLER
 
-	var/turf/open/t_loc = get_turf(src)
+	var/turf/simulated/open/t_loc = get_turf(src)
 	SEND_SIGNAL(t_loc, COMSIG_TURF_MAKE_DRY, TURF_WET_WATER, TRUE, INFINITY)

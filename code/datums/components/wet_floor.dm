@@ -51,7 +51,7 @@
 
 /datum/component/wet_floor/proc/update_overlay()
 	var/intended
-	if(!istype(parent, /turf/open/floor))
+	if(!istype(parent, /turf/simulated/open/floor))
 		intended = generic_turf_overlay
 	else
 		switch(highest_strength)
@@ -111,7 +111,7 @@
 		. = max(., time_left_list[i])
 
 /datum/component/wet_floor/process()
-	var/turf/open/T = parent
+	var/turf/simulated/open/T = parent
 	var/diff = world.time - last_process
 	var/decrease = 0
 	var/t = T.GetTemperature()

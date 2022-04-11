@@ -90,7 +90,7 @@
 		T = get_turf(src)
 	var/turf/target
 	var/eject_range = 5
-	var/turf/open/floor/floorturf
+	var/turf/simulated/open/floor/floorturf
 
 	if(isfloorturf(T) && T.overfloor_placed) // pop the tile if present
 		floorturf = T

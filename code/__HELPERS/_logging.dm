@@ -175,6 +175,8 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 	if(message_admins)
 		message_admins("[user ? "[ADMIN_LOOKUPFLW(user)] at [ADMIN_VERBOSEJMP(user)] " : ""][details][bomb ? " [bomb.name] at [ADMIN_VERBOSEJMP(bomb)]": ""][additional_details ? " [additional_details]" : ""].")
 
+//PARIAH EDIT REMOVAL - LINDA
+/*
 /// Logs the contents of the gasmix to the game log, prefixed by text
 /proc/log_atmos(text, datum/gas_mixture/mix)
 	var/message = text
@@ -183,6 +185,7 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 		var/list/gaslist = mix.gases[key]
 		message += "[gaslist[GAS_META][META_GAS_ID]]=[gaslist[MOLES]];"
 	log_game(message)
+*/
 
 /proc/log_say(text)
 	if (CONFIG_GET(flag/log_say))
@@ -349,8 +352,8 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 //PARIAH EDIT ADDITION START
 ///Reports the message to R_DEBUG and the world log.
 /proc/report_progress(var/progress_message)
-	admin_notice("<span class='boldannounce'>[progress_message]</span>", R_DEBUG)
-	log_world(message)
+	message_admins("<span class='boldannounce'>[progress_message]</span>", R_DEBUG)
+	log_world(progress_message)
 //PARIAH EDIT ADDITION END
 
 /* Helper procs for building detailed log lines */

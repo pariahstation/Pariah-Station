@@ -5,13 +5,13 @@
 "h" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/cigbutt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "r" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "x" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -20,7 +20,7 @@
 	},
 /obj/modular_map_connector,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "y" = (
 /turf/template_noop,
@@ -29,7 +29,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/item/vending_refill/clothing,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "A" = (
 /obj/structure/closet/crate/trashcart/laundry,
@@ -41,7 +41,7 @@
 /obj/effect/spawner/random/clothing/backpack,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "D" = (
 /obj/structure/closet/crate/trashcart/laundry,
@@ -50,27 +50,27 @@
 	},
 /obj/effect/spawner/random/clothing/costume,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "H" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/item/stack/sheet/cloth/five,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "M" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "P" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/food_packaging,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "U" = (
 /obj/effect/spawner/random/trash/mopbucket,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "W" = (
 /obj/structure/closet/crate/trashcart/laundry,
@@ -83,7 +83,7 @@
 /obj/effect/spawner/random/clothing/gloves,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 
 (1,1,1) = {"

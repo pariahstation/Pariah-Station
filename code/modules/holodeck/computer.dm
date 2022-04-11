@@ -15,7 +15,7 @@ Easiest way to add new holodeck programs:
 1. Define new map template datums in code/modules/holodeck/holodeck_map_templates, make sure they have the access flags
 of the holodeck you want them to be able to load, for the onstation holodeck the flag is STATION_HOLODECK.
 2. Create the new map templates in _maps/templates (remember theyre 9x10, and make sure they have area/noop or else it will fuck with linked)
-all turfs in holodeck programs MUST be of type /turf/open/floor/holofloor, OR /turf/open/floor/engine, or they will block future programs!
+all turfs in holodeck programs MUST be of type /turf/simulated/open/floor/holofloor, OR /turf/simulated/open/floor/engine, or they will block future programs!
 
 Note: if youre looking at holodeck code because you want to see how returns_created is handled so that templates return a list of atoms
 created from them: make sure you handle that list correctly! Either copy them by value and delete them or reference it and handle qdel'ing
@@ -27,7 +27,7 @@ and clear when youre done! if you dont i will use :newspaper2: on you
 
 /// typecache for turfs that should be considered ok during floorchecks.
 /// A linked turf being anything not in this typecache will cause the holodeck to perform an emergency shutdown.
-GLOBAL_LIST_INIT(typecache_holodeck_linked_floorcheck_ok, typecacheof(list(/turf/open/floor/holofloor, /turf/closed)))
+GLOBAL_LIST_INIT(typecache_holodeck_linked_floorcheck_ok, typecacheof(list(/turf/simulated/open/floor/holofloor, /turf/closed)))
 
 /obj/machinery/computer/holodeck
 	name = "holodeck control console"
@@ -259,9 +259,9 @@ GLOBAL_LIST_INIT(typecache_holodeck_linked_floorcheck_ok, typecacheof(list(/turf
 	//so that you cant bring turfs from previous programs into other ones (like putting the plasma burn turf into lounge for example)
 	for(var/turf/closed/holo_turf in linked)
 		for(var/baseturf in holo_turf.baseturfs)
-			if(ispath(baseturf, /turf/open/floor/holofloor))
+			if(ispath(baseturf, /turf/simulated/open/floor/holofloor))
 				holo_turf.baseturfs -= baseturf
-				holo_turf.baseturfs += /turf/open/floor/holofloor/plating
+				holo_turf.baseturfs += /turf/simulated/open/floor/holofloor/plating
 
 ///finalizes objects in the spawned list
 /obj/machinery/computer/holodeck/proc/finish_spawn()

@@ -84,7 +84,7 @@
 		return FALSE
 	if(!SSmapping.level_trait(T.z,ZTRAIT_STATION))
 		return FALSE
-	if(!istype(T, /turf/open/floor))
+	if(!istype(T, /turf/simulated/open/floor))
 		return FALSE
 	return TRUE
 

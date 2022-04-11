@@ -299,7 +299,7 @@
 	step_count = 0
 	mod.wearer.update_gravity(mod.wearer.has_gravity())
 	REMOVE_TRAIT(mod.wearer, TRAIT_SILENT_FOOTSTEPS, MOD_TRAIT)
-	var/turf/open/openspace/current_turf = get_turf(mod.wearer)
+	var/turf/simulated/open/openspace/current_turf = get_turf(mod.wearer)
 	if(istype(current_turf))
 		current_turf.zFall(mod.wearer, falling_from_move = TRUE)
 
@@ -308,8 +308,8 @@
 
 	if(you_fucked_up || mod.wearer.has_gravity() != NEGATIVE_GRAVITY)
 		return
-	var/turf/open/current_turf = get_turf(mod.wearer)
-	var/turf/open/openspace/turf_above = get_step_multiz(mod.wearer, UP)
+	var/turf/simulated/open/current_turf = get_turf(mod.wearer)
+	var/turf/simulated/open/openspace/turf_above = get_step_multiz(mod.wearer, UP)
 	if(current_turf && istype(turf_above))
 		current_turf.zFall(mod.wearer)
 	else if(!turf_above && istype(current_turf) && current_turf.planetary_atmos) //nothing holding you down

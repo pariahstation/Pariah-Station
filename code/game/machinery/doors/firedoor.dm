@@ -46,7 +46,7 @@
 	///The merger_id and merger_typecache variables are used to make rows of firelocks activate at the same time.
 	var/merger_id = "firelocks"
 	var/static/list/merger_typecache
-	
+
 	///Overlay object for the warning lights. This and some plane settings allows the lights to glow in the dark.
 	var/mutable_appearance/warn_lights
 
@@ -239,7 +239,7 @@
 /obj/machinery/door/firedoor/proc/unregister_adjacent_turfs(atom/loc)
 	for(var/dir in GLOB.cardinals)
 		var/turf/checked_turf = get_step(get_turf(loc), dir)
-	
+
 		if(!checked_turf)
 			continue
 
@@ -249,7 +249,7 @@
 /obj/machinery/door/firedoor/proc/check_atmos(turf/checked_turf)
 	var/datum/gas_mixture/environment = checked_turf.return_air()
 
-	if(environment?.temperature >= FIRE_MINIMUM_TEMPERATURE_TO_EXIST)
+	if(environment?.temperature >= T100C)
 		return FIRELOCK_ALARM_TYPE_HOT
 	if(environment?.temperature <= BODYTEMP_COLD_DAMAGE_LIMIT)
 		return FIRELOCK_ALARM_TYPE_COLD
@@ -278,7 +278,7 @@
 		issue_turfs -= checked_turf
 		if(!length(issue_turfs))
 			start_deactivation_process()
-	
+
 
 /**
  * Begins activation process of us and our neighbors.

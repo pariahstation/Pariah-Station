@@ -210,7 +210,7 @@
 
 /datum/chemical_reaction/slime/slimefreeze/proc/freeze(datum/reagents/holder)
 	if(holder?.my_atom)
-		var/turf/open/T = get_turf(holder.my_atom)
+		var/turf/simulated/open/T = get_turf(holder.my_atom)
 		if(istype(T))
 			var/datum/gas/gastype = /datum/gas/nitrogen
 			T.atmos_spawn_air("[initial(gastype.id)]=50;TEMP=2.7")
@@ -248,7 +248,7 @@
 
 /datum/chemical_reaction/slime/slimefire/proc/slime_burn(datum/reagents/holder)
 	if(holder?.my_atom)
-		var/turf/open/T = get_turf(holder.my_atom)
+		var/turf/simulated/open/T = get_turf(holder.my_atom)
 		if(istype(T))
 			T.atmos_spawn_air("plasma=50;TEMP=1000")
 

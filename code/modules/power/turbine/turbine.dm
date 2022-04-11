@@ -224,9 +224,9 @@
 	var/obj/machinery/power/turbine/turbine_outlet/turbine
 
 	///Reference to the input turf
-	var/turf/open/input_turf
+	var/turf/simulated/open/input_turf
 	///Reference to the output turf
-	var/turf/open/output_turf
+	var/turf/simulated/open/output_turf
 
 	///Rotation per minute the machine is doing
 	var/rpm

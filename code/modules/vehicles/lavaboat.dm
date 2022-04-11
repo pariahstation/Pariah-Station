@@ -9,7 +9,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	can_buckle = TRUE
 	key_type = /obj/item/oar
-	var/allowed_turf = /turf/open/lava
+	var/allowed_turf = /turf/simulated/open/lava
 
 /obj/vehicle/ridden/lavaboat/Initialize(mapload)
 	. = ..()

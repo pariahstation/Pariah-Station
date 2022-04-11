@@ -74,7 +74,7 @@
 	var/post_noise = FALSE
 
 /obj/item/toy/crayon/proc/isValidSurface(surface)
-	return istype(surface, /turf/open/floor)
+	return istype(surface, /turf/simulated/open/floor)
 
 /obj/item/toy/crayon/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is jamming [src] up [user.p_their()] nose and into [user.p_their()] brain. It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -676,7 +676,7 @@
 	post_noise = FALSE
 
 /obj/item/toy/crayon/spraycan/isValidSurface(surface)
-	return (istype(surface, /turf/open/floor) || istype(surface, /turf/closed/wall))
+	return (istype(surface, /turf/simulated/open/floor) || istype(surface, /turf/closed/wall))
 
 
 /obj/item/toy/crayon/spraycan/suicide_act(mob/user)
@@ -871,7 +871,7 @@
 	volume_multiplier = 5
 
 /obj/item/toy/crayon/spraycan/lubecan/isValidSurface(surface)
-	return istype(surface, /turf/open/floor)
+	return istype(surface, /turf/simulated/open/floor)
 
 /obj/item/toy/crayon/spraycan/mimecan
 	name = "silent spraycan"

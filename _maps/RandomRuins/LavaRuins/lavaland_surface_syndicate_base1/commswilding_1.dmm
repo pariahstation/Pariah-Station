@@ -7,11 +7,11 @@
 	dir = 1
 	},
 /obj/item/paper/monitorkey,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "c" = (
 /obj/structure/filingcabinet/security,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "e" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
@@ -19,7 +19,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "lavalandsyndi_telecomms"
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/syndicate_lava_base/telecomms)
 "f" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -40,7 +40,7 @@
 /turf/template_noop,
 /area/ruin/syndicate_lava_base/telecomms)
 "j" = (
-/turf/open/floor/circuit/green,
+/turf/simulated/open/floor/circuit/green,
 /area/ruin/syndicate_lava_base/telecomms)
 "l" = (
 /obj/machinery/light/small/directional/east,
@@ -50,16 +50,16 @@
 	},
 /obj/structure/noticeboard/directional/east,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "m" = (
 /obj/machinery/computer/camera_advanced,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "o" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "p" = (
 /obj/structure/table,
@@ -71,7 +71,7 @@
 	pixel_x = 26;
 	req_access_txt = "150"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "q" = (
 /obj/structure/chair{
@@ -83,12 +83,12 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "s" = (
 /obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "u" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -99,14 +99,14 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "y" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "z" = (
 /obj/structure/table/reinforced,
@@ -115,7 +115,7 @@
 	name = "Syndicate Radio Intercom"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "A" = (
 /obj/machinery/airalarm/syndicate{
@@ -124,25 +124,25 @@
 	},
 /obj/machinery/light/small/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "C" = (
 /obj/structure/chair/office{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "G" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "K" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "M" = (
 /obj/machinery/telecomms/relay/preset/ruskie{
@@ -150,7 +150,7 @@
 	},
 /obj/machinery/light/small/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "O" = (
 /obj/machinery/door/airlock/hatch{
@@ -158,21 +158,21 @@
 	req_access_txt = "150"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "R" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 "V" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/syndicate_lava_base/telecomms)
 "W" = (
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/telecomms)
 
 (1,1,1) = {"

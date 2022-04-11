@@ -76,7 +76,7 @@
 			filter_types |= translated_gas
 			continue
 
-	var/turf/open/our_turf = get_turf(src)
+	var/turf/simulated/open/our_turf = get_turf(src)
 
 	if(!isopenturf(our_turf))
 		return FALSE
@@ -100,7 +100,7 @@
 			filter_types -= translated_gas
 			continue
 
-	var/turf/open/our_turf = get_turf(src)
+	var/turf/simulated/open/our_turf = get_turf(src)
 	var/datum/gas_mixture/turf_gas
 
 	if(isopenturf(our_turf))
@@ -125,7 +125,7 @@
 			else
 				filter_types |= translated_gas
 
-	var/turf/open/our_turf = get_turf(src)
+	var/turf/simulated/open/our_turf = get_turf(src)
 
 	if(!isopenturf(our_turf))
 		return FALSE
@@ -239,7 +239,7 @@
 	if(!nodes[1] || !on)
 		on = FALSE
 		return FALSE
-	var/turf/open/us = loc
+	var/turf/simulated/open/us = loc
 	if(!istype(us))
 		return
 	scrub(us)
@@ -328,7 +328,7 @@
 	///whether we should attempt to start processing due to settings allowing us to take gas out of our environment
 	var/try_start_processing = FALSE
 
-	var/turf/open/our_turf = get_turf(src)
+	var/turf/simulated/open/our_turf = get_turf(src)
 	var/datum/gas_mixture/turf_gas = our_turf?.air
 
 	var/atom/signal_sender = signal.data["user"]

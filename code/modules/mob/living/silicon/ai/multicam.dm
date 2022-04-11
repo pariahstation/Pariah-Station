@@ -82,7 +82,7 @@
 
 //Turf, area, and landmark for the viewing room
 
-/turf/open/ai_visible
+/turf/simulated/open/ai_visible
 	name = ""
 	icon = 'icons/misc/pic_in_pic.dmi'
 	icon_state = "room_background"

@@ -1,11 +1,11 @@
-/turf/open/floor
+/turf/simulated/open/floor
 	//NOTE: Floor code has been refactored, many procs were removed and refactored
 	//- you should use istype() if you want to find out whether a floor has a certain type
 	//- floor_tile is now a path, and not a tile obj
 	name = "floor"
 	icon = 'icons/turf/floors.dmi'
 	base_icon_state = "floor"
-	baseturfs = /turf/open/floor/plating
+	baseturfs = /turf/simulated/open/floor/plating
 
 	footstep = FOOTSTEP_FLOOR
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
@@ -29,7 +29,7 @@
 	var/list/burnt_states
 
 
-/turf/open/floor/Initialize(mapload)
+/turf/simulated/open/floor/Initialize(mapload)
 	. = ..()
 	if (broken_states)
 		stack_trace("broken_states defined at the object level for [type], move it to setup_broken_states()")
@@ -50,18 +50,18 @@
 	if(is_station_level(z))
 		GLOB.station_turfs += src
 
-/turf/open/floor/proc/setup_broken_states()
+/turf/simulated/open/floor/proc/setup_broken_states()
 	return list("damaged1", "damaged2", "damaged3", "damaged4", "damaged5")
 
-/turf/open/floor/proc/setup_burnt_states()
+/turf/simulated/open/floor/proc/setup_burnt_states()
 	return
 
-/turf/open/floor/Destroy()
+/turf/simulated/open/floor/Destroy()
 	if(is_station_level(z))
 		GLOB.station_turfs -= src
 	return ..()
 
-/turf/open/floor/ex_act(severity, target)
+/turf/simulated/open/floor/ex_act(severity, target)
 	. = ..()
 
 	if(target == src)
@@ -79,7 +79,7 @@
 		if(EXPLODE_HEAVY)
 			switch(rand(1, 3))
 				if(1)
-					if(!length(baseturfs) || !ispath(baseturfs[baseturfs.len-1], /turf/open/floor))
+					if(!length(baseturfs) || !ispath(baseturfs[baseturfs.len-1], /turf/simulated/open/floor))
 						ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 						ReplaceWithLattice()
 					else
@@ -101,36 +101,36 @@
 				src.break_tile()
 				src.hotspot_expose(1000,CELL_VOLUME)
 
-/turf/open/floor/is_shielded()
+/turf/simulated/open/floor/is_shielded()
 	for(var/obj/structure/A in contents)
 		return 1
 
-/turf/open/floor/blob_act(obj/structure/blob/B)
+/turf/simulated/open/floor/blob_act(obj/structure/blob/B)
 	return
 
-/turf/open/floor/attack_paw(mob/user, list/modifiers)
+/turf/simulated/open/floor/attack_paw(mob/user, list/modifiers)
 	return attack_hand(user, modifiers)
 
-/turf/open/floor/attack_hand(mob/user, list/modifiers)
+/turf/simulated/open/floor/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	if(.)
 		return
 
 	SEND_SIGNAL(src, COMSIG_ATOM_ATTACK_HAND, user, modifiers)
 
-/turf/open/floor/proc/break_tile_to_plating()
-	var/turf/open/floor/plating/T = make_plating()
+/turf/simulated/open/floor/proc/break_tile_to_plating()
+	var/turf/simulated/open/floor/plating/T = make_plating()
 	if(!istype(T))
 		return
 	T.break_tile()
 
-/turf/open/floor/break_tile()
+/turf/simulated/open/floor/break_tile()
 	if(broken)
 		return
 	icon_state = pick(broken_states)
 	broken = 1
 
-/turf/open/floor/burn_tile()
+/turf/simulated/open/floor/burn_tile()
 	if(broken || burnt)
 		return
 	if(LAZYLEN(burnt_states))
@@ -139,25 +139,25 @@
 		icon_state = pick(broken_states)
 	burnt = 1
 
-/turf/open/floor/proc/make_plating(force = FALSE)
+/turf/simulated/open/floor/proc/make_plating(force = FALSE)
 	return ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 
 ///For when the floor is placed under heavy load. Calls break_tile(), but exists to be overridden by floor types that should resist crushing force.
-/turf/open/floor/proc/crush()
+/turf/simulated/open/floor/proc/crush()
 	break_tile()
 
-/turf/open/floor/ChangeTurf(path, new_baseturf, flags)
+/turf/simulated/open/floor/ChangeTurf(path, new_baseturf, flags)
 	if(!isfloorturf(src))
 		return ..() //fucking turfs switch the fucking src of the fucking running procs
-	if(!ispath(path, /turf/open/floor))
+	if(!ispath(path, /turf/simulated/open/floor))
 		return ..()
 	var/old_dir = dir
-	var/turf/open/floor/W = ..()
+	var/turf/simulated/open/floor/W = ..()
 	W.setDir(old_dir)
 	W.update_appearance()
 	return W
 
-/turf/open/floor/attackby(obj/item/object, mob/living/user, params)
+/turf/simulated/open/floor/attackby(obj/item/object, mob/living/user, params)
 	if(!object || !user)
 		return TRUE
 	. = ..()
@@ -171,26 +171,26 @@
 		return sheets.on_attack_floor(user, params)
 	return FALSE
 
-/turf/open/floor/crowbar_act(mob/living/user, obj/item/I)
+/turf/simulated/open/floor/crowbar_act(mob/living/user, obj/item/I)
 	if(overfloor_placed && pry_tile(I, user))
 		return TRUE
 
-/turf/open/floor/proc/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+/turf/simulated/open/floor/proc/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	if(T.turf_type == type && T.turf_dir == dir)
 		return
 	var/obj/item/crowbar/CB = user.is_holding_item_of_type(/obj/item/crowbar)
 	if(!CB)
 		return
-	var/turf/open/floor/plating/P = pry_tile(CB, user, TRUE)
+	var/turf/simulated/open/floor/plating/P = pry_tile(CB, user, TRUE)
 	if(!istype(P))
 		return
 	P.attackby(T, user, params)
 
-/turf/open/floor/proc/pry_tile(obj/item/I, mob/user, silent = FALSE)
+/turf/simulated/open/floor/proc/pry_tile(obj/item/I, mob/user, silent = FALSE)
 	I.play_tool_sound(src, 80)
 	return remove_tile(user, silent)
 
-/turf/open/floor/proc/remove_tile(mob/user, silent = FALSE, make_tile = TRUE, force_plating)
+/turf/simulated/open/floor/proc/remove_tile(mob/user, silent = FALSE, make_tile = TRUE, force_plating)
 	if(broken || burnt)
 		broken = FALSE
 		burnt = FALSE
@@ -203,15 +203,15 @@
 			spawn_tile()
 	return make_plating(force_plating)
 
-/turf/open/floor/proc/has_tile()
+/turf/simulated/open/floor/proc/has_tile()
 	return floor_tile
 
-/turf/open/floor/proc/spawn_tile()
+/turf/simulated/open/floor/proc/spawn_tile()
 	if(!has_tile())
 		return null
 	return new floor_tile(src)
 
-/turf/open/floor/singularity_pull(S, current_size)
+/turf/simulated/open/floor/singularity_pull(S, current_size)
 	..()
 	var/sheer = FALSE
 	switch(current_size)
@@ -224,22 +224,22 @@
 		if(STAGE_FIVE to INFINITY)
 			if(prob(70))
 				sheer = TRUE
-			else if(prob(50) && (/turf/open/space in baseturfs))
+			else if(prob(50) && (/turf/simulated/open/space in baseturfs))
 				ReplaceWithLattice()
 	if(sheer)
 		if(has_tile())
 			remove_tile(null, TRUE, TRUE, TRUE)
 
 
-/turf/open/floor/narsie_act(force, ignore_mobs, probability = 20)
+/turf/simulated/open/floor/narsie_act(force, ignore_mobs, probability = 20)
 	. = ..()
 	if(.)
-		ChangeTurf(/turf/open/floor/engine/cult, flags = CHANGETURF_INHERIT_AIR)
+		ChangeTurf(/turf/simulated/open/floor/engine/cult, flags = CHANGETURF_INHERIT_AIR)
 
-/turf/open/floor/acid_melt()
+/turf/simulated/open/floor/acid_melt()
 	ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 
-/turf/open/floor/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
+/turf/simulated/open/floor/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)
 		if(RCD_FLOORWALL)
 			return rcd_result_with_memory(
@@ -266,7 +266,7 @@
 			return list("mode" = RCD_FURNISHING, "delay" = the_rcd.furnish_delay, "cost" = the_rcd.furnish_cost)
 	return FALSE
 
-/turf/open/floor/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
+/turf/simulated/open/floor/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
 			to_chat(user, span_notice("You build a wall."))
@@ -349,16 +349,16 @@
 			return TRUE
 	return FALSE
 
-/turf/open/floor/material
+/turf/simulated/open/floor/material
 	name = "floor"
 	icon_state = "materialfloor"
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	floor_tile = /obj/item/stack/tile/material
 
-/turf/open/floor/material/has_tile()
+/turf/simulated/open/floor/material/has_tile()
 	return LAZYLEN(custom_materials)
 
-/turf/open/floor/material/spawn_tile()
+/turf/simulated/open/floor/material/spawn_tile()
 	. = ..()
 	if(.)
 		var/obj/item/stack/tile = .

@@ -85,7 +85,7 @@
 		return
 
 	if(overclocked)//Some of the gas from the mixture leaks to the environment when overclocked
-		var/turf/open/T = loc
+		var/turf/simulated/open/T = loc
 		if(istype(T))
 			var/datum/gas_mixture/leaked = removed.remove_ratio(VOLUME_PUMP_LEAK_AMOUNT)
 			T.assume_air(leaked)

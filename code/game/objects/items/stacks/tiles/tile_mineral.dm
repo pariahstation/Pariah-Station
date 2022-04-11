@@ -30,7 +30,7 @@
 	desc = "A tile made out of highly flammable plasma. This can only end well."
 	icon_state = "tile_plasma"
 	inhand_icon_state = "tile-plasma"
-	turf_type = /turf/open/floor/mineral/plasma
+	turf_type = /turf/simulated/open/floor/mineral/plasma
 	mineralType = "plasma"
 	mats_per_unit = list(/datum/material/plasma=MINERAL_MATERIAL_AMOUNT*0.25)
 	merge_type = /obj/item/stack/tile/mineral/plasma
@@ -41,7 +41,7 @@
 	desc = "A tile made out of uranium. You feel a bit woozy."
 	icon_state = "tile_uranium"
 	inhand_icon_state = "tile-uranium"
-	turf_type = /turf/open/floor/mineral/uranium
+	turf_type = /turf/simulated/open/floor/mineral/uranium
 	mineralType = "uranium"
 	mats_per_unit = list(/datum/material/uranium=MINERAL_MATERIAL_AMOUNT*0.25)
 	merge_type = /obj/item/stack/tile/mineral/uranium
@@ -52,7 +52,7 @@
 	desc = "A tile made out of gold, the swag seems strong here."
 	icon_state = "tile_gold"
 	inhand_icon_state = "tile-gold"
-	turf_type = /turf/open/floor/mineral/gold
+	turf_type = /turf/simulated/open/floor/mineral/gold
 	mineralType = "gold"
 	mats_per_unit = list(/datum/material/gold=MINERAL_MATERIAL_AMOUNT*0.25)
 	merge_type = /obj/item/stack/tile/mineral/gold
@@ -63,7 +63,7 @@
 	desc = "A tile made out of silver, the light shining from it is blinding."
 	icon_state = "tile_silver"
 	inhand_icon_state = "tile-silver"
-	turf_type = /turf/open/floor/mineral/silver
+	turf_type = /turf/simulated/open/floor/mineral/silver
 	mineralType = "silver"
 	mats_per_unit = list(/datum/material/silver=MINERAL_MATERIAL_AMOUNT*0.25)
 	merge_type = /obj/item/stack/tile/mineral/silver
@@ -74,7 +74,7 @@
 	desc = "A tile made out of diamond. Wow, just, wow."
 	icon_state = "tile_diamond"
 	inhand_icon_state = "tile-diamond"
-	turf_type = /turf/open/floor/mineral/diamond
+	turf_type = /turf/simulated/open/floor/mineral/diamond
 	mineralType = "diamond"
 	mats_per_unit = list(/datum/material/diamond=MINERAL_MATERIAL_AMOUNT*0.25)
 	merge_type = /obj/item/stack/tile/mineral/diamond
@@ -85,7 +85,7 @@
 	desc = "A non-slippery tile made out of bananium, HOOOOOOOOONK!"
 	icon_state = "tile_bananium"
 	inhand_icon_state = "tile-bananium"
-	turf_type = /turf/open/floor/mineral/bananium
+	turf_type = /turf/simulated/open/floor/mineral/bananium
 	mineralType = "bananium"
 	mats_per_unit = list(/datum/material/bananium=MINERAL_MATERIAL_AMOUNT*0.25)
 	material_flags = NONE //The slippery comp makes it unpractical for good clown decor. The material tiles should still slip.
@@ -99,7 +99,7 @@
 	icon_state = "tile_abductor"
 	inhand_icon_state = "tile-abductor"
 	mats_per_unit = list(/datum/material/alloy/alien=MINERAL_MATERIAL_AMOUNT*0.25)
-	turf_type = /turf/open/floor/mineral/abductor
+	turf_type = /turf/simulated/open/floor/mineral/abductor
 	mineralType = "abductor"
 	merge_type = /obj/item/stack/tile/mineral/abductor
 
@@ -109,7 +109,7 @@
 	desc = "Sleek titanium tiles, used for shuttles."
 	icon_state = "tile_titanium"
 	inhand_icon_state = "tile-shuttle"
-	turf_type = /turf/open/floor/mineral/titanium
+	turf_type = /turf/simulated/open/floor/mineral/titanium
 	mineralType = "titanium"
 	mats_per_unit = list(/datum/material/titanium=MINERAL_MATERIAL_AMOUNT*0.25)
 	merge_type = /obj/item/stack/tile/mineral/titanium
@@ -130,7 +130,7 @@
 	name = "yellow titanium tile"
 	singular_name = "yellow titanium floor tile"
 	desc = "Sleek yellow titanium tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/yellow
+	turf_type = /turf/simulated/open/floor/mineral/titanium/yellow
 	icon_state = "tile_titanium_yellow"
 	merge_type = /obj/item/stack/tile/mineral/titanium/yellow
 
@@ -138,7 +138,7 @@
 	name = "blue titanium tile"
 	singular_name = "blue titanium floor tile"
 	desc = "Sleek blue titanium tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/blue
+	turf_type = /turf/simulated/open/floor/mineral/titanium/blue
 	icon_state = "tile_titanium_blue"
 	merge_type = /obj/item/stack/tile/mineral/titanium/blue
 
@@ -146,7 +146,7 @@
 	name = "white titanium tile"
 	singular_name = "white titanium floor tile"
 	desc = "Sleek white titanium tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/white
+	turf_type = /turf/simulated/open/floor/mineral/titanium/white
 	icon_state = "tile_titanium_white"
 	merge_type = /obj/item/stack/tile/mineral/titanium/white
 
@@ -154,7 +154,7 @@
 	name = "purple titanium tile"
 	singular_name = "purple titanium floor tile"
 	desc = "Sleek purple titanium tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/purple
+	turf_type = /turf/simulated/open/floor/mineral/titanium/purple
 	icon_state = "tile_titanium_purple"
 	merge_type = /obj/item/stack/tile/mineral/titanium/purple
 
@@ -162,7 +162,7 @@
 	name = "tiled titanium tile"
 	singular_name = "tiled titanium floor tile"
 	desc = "Titanium floor tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/tiled
+	turf_type = /turf/simulated/open/floor/mineral/titanium/tiled
 	icon_state = "tile_titanium_tiled"
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled
 
@@ -170,7 +170,7 @@
 	name = "yellow titanium tile"
 	singular_name = "yellow titanium floor tile"
 	desc = "Yellow titanium floor tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/tiled/yellow
+	turf_type = /turf/simulated/open/floor/mineral/titanium/tiled/yellow
 	icon_state = "tile_titanium_tiled_yellow"
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/yellow
 
@@ -178,7 +178,7 @@
 	name = "blue titanium tile"
 	singular_name = "blue titanium floor tile"
 	desc = "Blue titanium floor tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/tiled/blue
+	turf_type = /turf/simulated/open/floor/mineral/titanium/tiled/blue
 	icon_state = "tile_titanium_tiled_blue"
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/blue
 
@@ -186,7 +186,7 @@
 	name = "white titanium tile"
 	singular_name = "white titanium floor tile"
 	desc = "White titanium floor tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/tiled/white
+	turf_type = /turf/simulated/open/floor/mineral/titanium/tiled/white
 	icon_state = "tile_titanium_tiled_white"
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/white
 
@@ -194,7 +194,7 @@
 	name = "purple titanium tile"
 	singular_name = "purple titanium floor tile"
 	desc = "Purple titanium floor tiles, used for shuttles."
-	turf_type = /turf/open/floor/mineral/titanium/tiled/purple
+	turf_type = /turf/simulated/open/floor/mineral/titanium/tiled/purple
 	icon_state = "tile_titanium_tiled_purple"
 	merge_type = /obj/item/stack/tile/mineral/titanium/tiled/purple
 
@@ -204,7 +204,7 @@
 	desc = "A tile made of plastitanium, used for very evil shuttles."
 	icon_state = "tile_plastitanium"
 	inhand_icon_state = "tile-darkshuttle"
-	turf_type = /turf/open/floor/mineral/plastitanium
+	turf_type = /turf/simulated/open/floor/mineral/plastitanium
 	mineralType = "plastitanium"
 	mats_per_unit = list(/datum/material/alloy/plastitanium=MINERAL_MATERIAL_AMOUNT*0.25)
 	merge_type = /obj/item/stack/tile/mineral/plastitanium
@@ -217,7 +217,7 @@
 	name = "red plastitanium tile"
 	singular_name = "red plastitanium floor tile"
 	desc = "A tile made of plastitanium, used for very red shuttles."
-	turf_type = /turf/open/floor/mineral/plastitanium/red
+	turf_type = /turf/simulated/open/floor/mineral/plastitanium/red
 	icon_state = "tile_plastitanium_red"
 	merge_type = /obj/item/stack/tile/mineral/plastitanium/red
 
@@ -227,6 +227,6 @@
 	desc = "A layer of snow."
 	icon_state = "tile_snow"
 	inhand_icon_state = "tile-silver"
-	turf_type = /turf/open/floor/fake_snow
+	turf_type = /turf/simulated/open/floor/fake_snow
 	mineralType = "snow"
 	merge_type = /obj/item/stack/tile/mineral/snow

@@ -62,7 +62,7 @@ All ShuttleMove procs go here
 	blocks_air = TRUE
 	air_update_turf(TRUE, TRUE)
 	if(isopenturf(newT))
-		var/turf/open/new_open = newT
+		var/turf/simulated/open/new_open = newT
 		new_open.copy_air_with_tile(src)
 	SEND_SIGNAL(src, COMSIG_TURF_ON_SHUTTLE_MOVE, newT)
 

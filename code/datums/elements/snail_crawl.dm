@@ -29,7 +29,7 @@
 /datum/element/snailcrawl/proc/lubricate(atom/movable/snail)
 	SIGNAL_HANDLER
 
-	var/turf/open/OT = get_turf(snail)
+	var/turf/simulated/open/OT = get_turf(snail)
 	if(istype(OT))
 		OT.MakeSlippery(TURF_WET_LUBE, 20)
 		return TRUE

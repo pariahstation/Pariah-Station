@@ -5,25 +5,25 @@
 "i" = (
 /obj/structure/ladder,
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 "m" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 "q" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 "s" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/spawner/random/trash/mess,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 "F" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 "I" = (
 /turf/closed/wall,
@@ -35,18 +35,18 @@
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/modular_map_connector,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/department/cargo)
 "M" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/spawner/random/structure/girder,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 "U" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
 /obj/item/pickaxe,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 "X" = (
 /turf/template_noop,
@@ -54,7 +54,7 @@
 "Z" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/moisture_trap,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/cargo)
 
 (1,1,1) = {"

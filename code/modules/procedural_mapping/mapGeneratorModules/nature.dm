@@ -28,7 +28,7 @@
 
 //Grass turfs
 /datum/map_generator_module/bottom_layer/grass_turfs
-	spawnableTurfs = list(/turf/open/floor/grass = 100)
+	spawnableTurfs = list(/turf/simulated/open/floor/grass = 100)
 
 
 //Grass tufts with a high spawn chance

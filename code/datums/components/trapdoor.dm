@@ -94,8 +94,8 @@
 ///signal called by turf changing
 /datum/component/trapdoor/proc/turf_changed_pre(datum/source, path, new_baseturfs, flags, post_change_callbacks)
 	SIGNAL_HANDLER
-	var/turf/open/dying_trapdoor = parent
-	if((!IS_OPEN(dying_trapdoor) && !IS_OPEN(path)) || path == /turf/open/floor/plating) //not a process of the trapdoor, so this trapdoor has been destroyed
+	var/turf/simulated/open/dying_trapdoor = parent
+	if((!IS_OPEN(dying_trapdoor) && !IS_OPEN(path)) || path == /turf/simulated/open/floor/plating) //not a process of the trapdoor, so this trapdoor has been destroyed
 		dying_trapdoor.visible_message(span_warning("The trapdoor mechanism in [dying_trapdoor] is broken!"))
 		if(assembly)
 			assembly.linked = FALSE
@@ -120,13 +120,13 @@
  * there are no checks for opening a trapdoor, but closed has some
  */
 /datum/component/trapdoor/proc/try_opening()
-	var/turf/open/trapdoor_turf = parent
+	var/turf/simulated/open/trapdoor_turf = parent
 	///we want to save this turf's decals as they were right before deletion, so this is the point where we begin listening
 	if(assembly)
 		RegisterSignal(parent, COMSIG_TURF_DECAL_DETACHED, .proc/decal_detached)
 	playsound(trapdoor_turf, 'sound/machines/trapdoor/trapdoor_open.ogg', 50)
 	trapdoor_turf.visible_message(span_warning("[trapdoor_turf] swings open!"))
-	trapdoor_turf.ChangeTurf(/turf/open/openspace, flags = CHANGETURF_INHERIT_AIR)
+	trapdoor_turf.ChangeTurf(/turf/simulated/open/openspace, flags = CHANGETURF_INHERIT_AIR)
 
 /**
  * ## try_closing
@@ -135,7 +135,7 @@
  * trapdoor can be blocked by building things on the openspace turf
  */
 /datum/component/trapdoor/proc/try_closing()
-	var/turf/open/trapdoor_turf = parent
+	var/turf/simulated/open/trapdoor_turf = parent
 	var/obj/structure/lattice/blocking = locate() in trapdoor_turf.contents
 	if(blocking)
 		trapdoor_turf.visible_message(span_warning("The trapdoor mechanism in [trapdoor_turf] tries to shut, but is jammed by [blocking]!"))

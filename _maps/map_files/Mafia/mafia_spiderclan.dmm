@@ -7,36 +7,36 @@
 	anchored = 1
 	},
 /obj/item/food/sashimi,
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/mafia)
 "c" = (
 /turf/closed/wall/rust,
 /area/mafia)
 "d" = (
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "e" = (
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
 /area/mafia)
 "f" = (
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "panelscorched"
 	},
 /area/mafia)
 "g" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
 /area/mafia)
 "h" = (
 /obj/structure/grille/indestructable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "i" = (
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
 /area/mafia)
@@ -50,22 +50,22 @@
 /area/mafia)
 "k" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "m" = (
 /obj/effect/landmark/mafia,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/mafia)
 "n" = (
 /obj/effect/landmark/mafia,
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/mafia)
 "o" = (
 /obj/structure/closet/cabinet{
 	anchored = 1
 	},
 /obj/item/food/sashimi,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/mafia)
 "p" = (
 /obj/machinery/door/poddoor/preopen{
@@ -80,22 +80,22 @@
 	},
 /area/mafia)
 "q" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/mafia)
 "r" = (
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/mafia)
 "t" = (
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/mafia)
 "u" = (
 /obj/effect/baseturf_helper/asteroid,
 /obj/effect/landmark/mafia/town_center,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/mafia)
 "v" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "panelscorched"
 	},
 /area/mafia)
@@ -107,7 +107,7 @@
 	icon_state = "katana";
 	name = "seppuku katana"
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/mafia)
 "S" = (
 /turf/closed/wall/mineral/wood,

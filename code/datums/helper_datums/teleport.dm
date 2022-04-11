@@ -122,7 +122,7 @@
 	. = FALSE
 	if(!isfloorturf(random_location))
 		return
-	var/turf/open/floor/floor_turf = random_location
+	var/turf/simulated/open/floor/floor_turf = random_location
 	var/area/destination_area = floor_turf.loc
 
 	if(no_teleport && (destination_area.area_flags & NOTELEPORT))
@@ -159,7 +159,7 @@
 
 	if(extended_safety_checks)
 		if(islava(floor_turf)) //chasms aren't /floor, and so are pre-filtered
-			var/turf/open/lava/lava_turf = floor_turf // Cyberboss: okay, this makes no sense and I don't understand the above comment, but I'm too lazy to check history to see what it's supposed to do right now
+			var/turf/simulated/open/lava/lava_turf = floor_turf // Cyberboss: okay, this makes no sense and I don't understand the above comment, but I'm too lazy to check history to see what it's supposed to do right now
 			if(!lava_turf.is_safe())
 				return
 

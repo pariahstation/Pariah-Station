@@ -2184,11 +2184,11 @@
  * extra damage, so jokers can't use half a stack of iron rods to make getting hit by the tram immediately lethal.
  */
 /mob/living/proc/tram_slam_land()
-	if(!istype(loc, /turf/open/openspace) && !istype(loc, /turf/open/floor/plating))
+	if(!istype(loc, /turf/simulated/open/openspace) && !istype(loc, /turf/simulated/open/floor/plating))
 		return
 
-	if(istype(loc, /turf/open/floor/plating))
-		var/turf/open/floor/smashed_plating = loc
+	if(istype(loc, /turf/simulated/open/floor/plating))
+		var/turf/simulated/open/floor/smashed_plating = loc
 		visible_message(span_danger("[src] is thrown violently into [smashed_plating], smashing through it and punching straight through!"),
 				span_userdanger("You're thrown violently into [smashed_plating], smashing through it and punching straight through!"))
 		apply_damage(rand(5,20), BRUTE, BODY_ZONE_CHEST)

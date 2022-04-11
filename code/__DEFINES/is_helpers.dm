@@ -15,30 +15,30 @@
 //#define isturf(A) (istype(A, /turf)) This is actually a byond built-in. Added here for completeness sake.
 
 GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
-	/turf/open/space,
-	/turf/open/chasm,
-	/turf/open/lava,
-	/turf/open/water,
-	/turf/open/openspace,
-	/turf/open/space/openspace
+	/turf/simulated/open/space,
+	/turf/simulated/open/chasm,
+	/turf/simulated/open/lava,
+	/turf/simulated/open/water,
+	/turf/simulated/open/openspace,
+	/turf/simulated/open/space/openspace
 	)))
 
 #define isgroundlessturf(A) (is_type_in_typecache(A, GLOB.turfs_without_ground))
 
 GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
-	/turf/open/openspace,
-	/turf/open/space/openspace
+	/turf/simulated/open/openspace,
+	/turf/simulated/open/space/openspace
 	)))
 
 #define isopenspaceturf(A) (is_type_in_typecache(A, GLOB.turfs_openspace))
 
-#define isopenturf(A) (istype(A, /turf/open))
+#define isopenturf(A) (istype(A, /turf/simulated/open))
 
-#define isindestructiblefloor(A) (istype(A, /turf/open/indestructible))
+#define isindestructiblefloor(A) (istype(A, /turf/simulated/open/indestructible))
 
-#define isspaceturf(A) (istype(A, /turf/open/space))
+#define isspaceturf(A) (istype(A, /turf/simulated/open/space))
 
-#define isfloorturf(A) (istype(A, /turf/open/floor))
+#define isfloorturf(A) (istype(A, /turf/simulated/open/floor))
 
 #define isclosedturf(A) (istype(A, /turf/closed))
 
@@ -48,11 +48,11 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 
 #define ismineralturf(A) (istype(A, /turf/closed/mineral))
 
-#define islava(A) (istype(A, /turf/open/lava))
+#define islava(A) (istype(A, /turf/simulated/open/lava))
 
-#define ischasm(A) (istype(A, /turf/open/chasm))
+#define ischasm(A) (istype(A, /turf/simulated/open/chasm))
 
-#define isplatingturf(A) (istype(A, /turf/open/floor/plating))
+#define isplatingturf(A) (istype(A, /turf/simulated/open/floor/plating))
 
 #define istransparentturf(A) (HAS_TRAIT(A, TURF_Z_TRANSPARENT_TRAIT))
 

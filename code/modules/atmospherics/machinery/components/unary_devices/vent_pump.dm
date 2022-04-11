@@ -100,7 +100,7 @@
 		on = FALSE
 	if(!on || welded)
 		return
-	var/turf/open/us = loc
+	var/turf/simulated/open/us = loc
 	if(!istype(us))
 		return
 	var/datum/gas_mixture/air_contents = airs[1]

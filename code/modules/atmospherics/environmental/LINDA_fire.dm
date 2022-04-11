@@ -20,7 +20,7 @@
  * Setting the conditions for the reaction to actually happen for gasmixtures
  * is handled by the hotspot itself, specifically perform_exposure().
  */
-/turf/open/hotspot_expose(exposed_temperature, exposed_volume, soh)
+/turf/simulated/open/hotspot_expose(exposed_temperature, exposed_volume, soh)
 	//If the air doesn't exist we just return false
 	var/list/air_gases = air?.gases
 	if(!air_gases)
@@ -45,7 +45,7 @@
 					active_hotspot.volume = exposed_volume
 		return
 
-	if((exposed_temperature > FIRE_MINIMUM_TEMPERATURE_TO_EXIST) && (plas > 0.5 || trit > 0.5 || h2 > 0.5))
+	if((exposed_temperature > T100C) && (plas > 0.5 || trit > 0.5 || h2 > 0.5))
 
 		active_hotspot = new /obj/effect/hotspot(src, exposed_volume*25, exposed_temperature)
 
@@ -78,7 +78,7 @@
 	 */
 	var/volume = 125
 	/// Temperature handles the initial ignition and the colouring.
-	var/temperature = FIRE_MINIMUM_TEMPERATURE_TO_EXIST
+	var/temperature = T100C
 	/// Whether the hotspot is new or not. Used for bypass logic.
 	var/just_spawned = TRUE
 	/// Whether the hotspot becomes passive and follows the gasmix temp instead of changing it.
@@ -115,7 +115,7 @@
  * Also calls fire_act() which handles burning.
  */
 /obj/effect/hotspot/proc/perform_exposure()
-	var/turf/open/location = loc
+	var/turf/simulated/open/location = loc
 	var/datum/gas_mixture/reference
 	if(!istype(location) || !(location.air))
 		return
@@ -223,7 +223,7 @@
 		just_spawned = FALSE
 		return
 
-	var/turf/open/location = loc
+	var/turf/simulated/open/location = loc
 	if(!istype(location))
 		qdel(src)
 		return
@@ -231,7 +231,7 @@
 	if(location.excited_group)
 		location.excited_group.reset_cooldowns()
 
-	if((temperature < FIRE_MINIMUM_TEMPERATURE_TO_EXIST) || (volume <= 1))
+	if((temperature < T100C) || (volume <= 1))
 		qdel(src)
 		return
 
@@ -250,7 +250,7 @@
 		if(location.air.temperature > FIRE_MINIMUM_TEMPERATURE_TO_SPREAD)
 			var/radiated_temperature = location.air.temperature*FIRE_SPREAD_RADIOSITY_SCALE
 			for(var/t in location.atmos_adjacent_turfs)
-				var/turf/open/T = t
+				var/turf/simulated/open/T = t
 				if(!T.active_hotspot)
 					T.hotspot_expose(radiated_temperature, CELL_VOLUME/4)
 
@@ -267,7 +267,7 @@
 
 /obj/effect/hotspot/Destroy()
 	SSair.hotspots -= src
-	var/turf/open/T = loc
+	var/turf/simulated/open/T = loc
 	if(istype(T) && T.active_hotspot == src)
 		T.active_hotspot = null
 	return ..()

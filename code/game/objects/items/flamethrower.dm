@@ -262,10 +262,10 @@
 		return 1 //It hit the flamethrower, not them
 
 
-/obj/item/assembly/igniter/proc/flamethrower_process(turf/open/location)
+/obj/item/assembly/igniter/proc/flamethrower_process(turf/simulated/open/location)
 	location.hotspot_expose(heat,2)
 
-/obj/item/assembly/igniter/proc/ignite_turf(obj/item/flamethrower/F,turf/open/location,release_amount = 0.05)
+/obj/item/assembly/igniter/proc/ignite_turf(obj/item/flamethrower/F,turf/simulated/open/location,release_amount = 0.05)
 	F.default_ignite(location,release_amount)
 
 /obj/item/flamethrower/proc/instant_refill()

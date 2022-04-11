@@ -95,11 +95,11 @@
 			return STARLIGHT_CAN_HEAL // No glass = can heal fully.
 
 		// Our turf is transparent, but it's NOT openspace - it's something like glass which reduces power
-		if(istransparentturf(turf_to_check) && !(istype(turf_to_check, /turf/open/openspace)))
+		if(istransparentturf(turf_to_check) && !(istype(turf_to_check, /turf/simulated/open/openspace)))
 			levels_of_glass += 1
 
 		// Our turf is transparent OR openspace - we can check higher or lower z-levels
-		if(istransparentturf(turf_to_check) || istype(turf_to_check, /turf/open/openspace))
+		if(istransparentturf(turf_to_check) || istype(turf_to_check, /turf/simulated/open/openspace))
 			// Check above or below us
 			if(direction == ZTRAIT_UP)
 				turf_to_check = turf_to_check.above()

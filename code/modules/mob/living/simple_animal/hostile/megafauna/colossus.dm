@@ -339,18 +339,18 @@
 
 	switch(terrain_theme)
 		if("lavaland")//Depressurizes the place... and free cult metal, I guess.
-			NewTerrainFloors = /turf/open/floor/fakebasalt
+			NewTerrainFloors = /turf/simulated/open/floor/fakebasalt
 			NewTerrainWalls = /turf/closed/wall/mineral/cult
 			NewFlora = list(/mob/living/simple_animal/hostile/asteroid/goldgrub)
 			florachance = 1
 		if("winter") //Snow terrain is slow to move in and cold! Get the assistants to shovel your driveway.
-			NewTerrainFloors = /turf/open/misc/snow/actually_safe
+			NewTerrainFloors = /turf/simulated/open/misc/snow/actually_safe
 			NewTerrainWalls = /turf/closed/wall/mineral/wood
 			NewTerrainChairs = /obj/structure/chair/wood
 			NewTerrainTables = /obj/structure/table/glass
 			NewFlora = list(/obj/structure/flora/grass/green, /obj/structure/flora/grass/brown, /obj/structure/flora/grass/both)
 		if("jungle") //Beneficial due to actually having breathable air. Plus, monkeys and bows and arrows.
-			NewTerrainFloors = /turf/open/floor/grass
+			NewTerrainFloors = /turf/simulated/open/floor/grass
 			NewTerrainWalls = /turf/closed/wall/mineral/wood
 			NewTerrainChairs = /obj/structure/chair/wood
 			NewTerrainTables = /obj/structure/table/wood
@@ -358,7 +358,7 @@
 							/obj/structure/flora/ausbushes/grassybush, /obj/structure/flora/ausbushes/sunnybush, /obj/structure/flora/tree/palm, /mob/living/carbon/human/species/monkey)
 			florachance = 20
 		if("ayy lmao") //Beneficial, turns stuff into alien alloy which is useful to cargo and research. Also repairs atmos.
-			NewTerrainFloors = /turf/open/floor/plating/abductor
+			NewTerrainFloors = /turf/simulated/open/floor/plating/abductor
 			NewTerrainWalls = /turf/closed/wall/mineral/abductor
 			NewTerrainChairs = /obj/structure/bed/abductor //ayys apparently don't have chairs. An entire species of people who only recline.
 			NewTerrainTables = /obj/structure/table/abductor
@@ -371,7 +371,7 @@
 				if(isturf(Stuff))
 					var/turf/T = Stuff
 					if((isspaceturf(T) || isfloorturf(T)) && NewTerrainFloors)
-						var/turf/open/O = T.ChangeTurf(NewTerrainFloors, flags = CHANGETURF_IGNORE_AIR)
+						var/turf/simulated/open/O = T.ChangeTurf(NewTerrainFloors, flags = CHANGETURF_IGNORE_AIR)
 						if(prob(florachance) && NewFlora.len && !O.is_blocked_turf(TRUE))
 							var/atom/Picked = pick(NewFlora)
 							new Picked(O)

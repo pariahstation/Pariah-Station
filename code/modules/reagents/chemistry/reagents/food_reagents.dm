@@ -185,7 +185,7 @@
 	if(FryLoss)
 		exposed_mob.adjustFireLoss(FryLoss)
 
-/datum/reagent/consumable/cooking_oil/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/consumable/cooking_oil/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(!istype(exposed_turf) || isgroundlessturf(exposed_turf) || (reac_volume < 5))
 		return
@@ -329,7 +329,7 @@
 	if(reac_volume < 1)
 		return
 	if(isopenturf(exposed_turf))
-		var/turf/open/exposed_open_turf = exposed_turf
+		var/turf/simulated/open/exposed_open_turf = exposed_turf
 		exposed_open_turf.MakeSlippery(wet_setting=TURF_WET_ICE, min_wet_time=100, wet_time_to_add=reac_volume SECONDS) // Is less effective in high pressure/high heat capacity environments. More effective in low pressure.
 		var/temperature = exposed_open_turf.air.temperature
 		var/heat_capacity = exposed_open_turf.air.heat_capacity()
@@ -471,7 +471,7 @@
 	taste_description = "slime"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/consumable/cornoil/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/consumable/cornoil/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(!istype(exposed_turf))
 		return

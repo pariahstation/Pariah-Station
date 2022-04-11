@@ -23,7 +23,7 @@
 			/obj/effect = "EFFECT",
 			/obj = "O",
 			/datum = "D",
-			/turf/open = "OPEN",
+			/turf/simulated/open = "OPEN",
 			/turf/closed = "CLOSED",
 			/turf = "T",
 			/mob/living/carbon = "CARBON",

@@ -5,38 +5,38 @@
 "c" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/cigbutt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 "d" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 "h" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 "o" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/moisture_trap,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 "y" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 "T" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/plastic{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 "U" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/garbage,
 /obj/structure/window/reinforced/spawner,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 "V" = (
 /turf/template_noop,
@@ -47,7 +47,7 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_one_access_txt = "12"
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/central/greater)
 
 (1,1,1) = {"

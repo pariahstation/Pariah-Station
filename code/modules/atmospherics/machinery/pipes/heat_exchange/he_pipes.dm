@@ -29,7 +29,7 @@
 		else if(local_turf.blocks_air)
 			environment_temperature = local_turf.temperature
 		else
-			var/turf/open/open_local = local_turf
+			var/turf/simulated/open/open_local = local_turf
 			environment_temperature = open_local.GetTemperature()
 	else
 		environment_temperature = local_turf.temperature

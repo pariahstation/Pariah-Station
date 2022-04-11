@@ -14,7 +14,7 @@
 	RegisterSignal(to_track, COMSIG_MOVABLE_MOVED, .proc/react_to_move)
 
 	if(!mapload && isopenturf(to_track.loc))
-		var/turf/open/new_open = to_track.loc
+		var/turf/simulated/open/new_open = to_track.loc
 		to_track.check_atmos_process(new_open, new_open.air, new_open.air.temperature) //Make sure you're properly registered
 
 	return ..()
@@ -32,7 +32,7 @@
 	SIGNAL_HANDLER
 	var/atom/atom_source = source
 	if(isopenturf(atom_source.loc))
-		var/turf/open/new_open = atom_source.loc
+		var/turf/simulated/open/new_open = atom_source.loc
 		atom_source.check_atmos_process(new_open, new_open.air, new_open.air.temperature) //Make sure you're properly registered
 
 /atom/proc/check_atmos_process(datum/source, datum/gas_mixture/air, exposed_temperature)
@@ -48,8 +48,8 @@
 		flags_1 &= ~ATMOS_IS_PROCESSING_1
 
 /atom/proc/process_exposure()
-	var/turf/open/spot = loc
-	if(!istype(loc, /turf/open))
+	var/turf/simulated/open/spot = loc
+	if(!istype(loc, /turf/simulated/open))
 		//If you end up in a locker or a wall reconsider your life decisions
 		atmos_end()
 		SSair.atom_process -= src
@@ -62,7 +62,7 @@
 		return
 	atmos_expose(spot.air, spot.air.temperature)
 
-/turf/open/process_exposure()
+/turf/simulated/open/process_exposure()
 	if(!should_atmos_process(air, air.temperature))
 		atmos_end()
 		SSair.atom_process -= src

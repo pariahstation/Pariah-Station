@@ -1,5 +1,5 @@
 /datum/map_generator_module/bottom_layer/cult_floor
-	spawnableTurfs = list(/turf/open/floor/engine/cult = 100)
+	spawnableTurfs = list(/turf/simulated/open/floor/engine/cult = 100)
 
 /datum/map_generator_module/border/cult_walls
 	spawnableTurfs = list(/turf/closed/wall/mineral/cult = 100)

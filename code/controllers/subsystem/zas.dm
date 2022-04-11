@@ -63,16 +63,20 @@ Class Procs:
 
 SUBSYSTEM_DEF(zas)
 	name = "ZAS"
-	priority = SS_PRIORITY_AIR
-	init_order = SS_INIT_AIR
+	priority = FIRE_PRIORITY_AIR
+	init_order = INIT_ORDER_AIR
 	flags = SS_POST_FIRE_TIMING
 
 	//The variable setting controller
 	var/zas_controller/settings
-
+	//XGM gas data
+	var/xgm_gas_data/gas_data
 	//Geometry lists
 	var/list/zones = list()
 	var/list/edges = list()
+
+	//Pipenets
+	var/list/networks = list()
 
 	//Geometry updates lists
 	var/list/tiles_to_update = list()
@@ -90,7 +94,7 @@ SUBSYSTEM_DEF(zas)
 	var/active_zones = 0
 	var/next_id = 1
 
-/datum/controller/subsystem/air/proc/Reboot()
+/datum/controller/subsystem/zas/proc/Reboot()
 	// Stop processing while we rebuild.
 	can_fire = FALSE
 
@@ -120,8 +124,8 @@ SUBSYSTEM_DEF(zas)
 	next_fire = world.time + wait
 	can_fire = TRUE
 
-/datum/controller/subsystem/air/stat_entry(msg)
-	if(rebooting)
+/datum/controller/subsystem/zas/stat_entry(msg)
+	if(!can_fire)
 		msg += "REBOOTING..."
 	else
 		msg += "TtU: [length(tiles_to_update)]"
@@ -131,10 +135,11 @@ SUBSYSTEM_DEF(zas)
 		msg += "AE: [length(active_edges)]"
 	return ..()
 
-/datum/controller/subsystem/air/Initialize(timeofday, simulate = TRUE)
+/datum/controller/subsystem/zas/Initialize(timeofday, simulate = TRUE)
 
 	var/starttime = REALTIMEOFDAY
 	settings = new
+	gas_data = new
 
 	report_progress("Processing Geometry...")
 
@@ -145,12 +150,13 @@ SUBSYSTEM_DEF(zas)
 
 		CHECK_TICK
 
-	report_progress({"Total Simulated Turfs: [simulated_turf_count]
-Total Zones: [zones.len]
-Total Edges: [edges.len]
-Total Active Edges: [active_edges.len ? "<span class='danger'>[active_edges.len]</span>" : "None"]
-Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_count]
-"})
+	report_progress(
+		{"Total Simulated Turfs: [simulated_turf_count]
+		Total Zones: [zones.len]
+		Total Edges: [edges.len]
+		Total Active Edges: [active_edges.len ? "<span class='danger'>[active_edges.len]</span>" : "None"]
+		Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_count]"}
+	)
 
 	report_progress("Geometry processing completed in [(REALTIMEOFDAY - starttime)/10] seconds!")
 
@@ -164,7 +170,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 
 	..(timeofday)
 
-/datum/controller/subsystem/air/fire(resumed = FALSE, no_mc_tick = FALSE)
+/datum/controller/subsystem/zas/fire(resumed = FALSE, no_mc_tick = FALSE)
 	if (!resumed)
 		processing_edges = active_edges.Copy()
 		processing_fires = active_fire_zones.Copy()
@@ -281,19 +287,51 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
 			return
+/**
+ * Adds a given machine to the processing system for SSAIR_ATMOSMACHINERY processing.
+ *
+ * Arguments:
+ * * machine - The machine to start processing. Can be any /obj/machinery.
+ */
+/datum/controller/subsystem/zas/proc/start_processing_machine(obj/machinery/machine)
+	if(machine.atmos_processing)
+		return
+	if(QDELETED(machine))
+		stack_trace("We tried to add a garbage collecting machine to SSzas. Don't")
+		return
+	machine.atmos_processing = TRUE
+	atmos_machinery += machine
 
-/datum/controller/subsystem/air/proc/add_zone(zone/z)
+/**
+ * Removes a given machine to the processing system for SSAIR_ATMOSMACHINERY processing.
+ *
+ * Arguments:
+ * * machine - The machine to stop processing.
+ */
+/datum/controller/subsystem/zas/proc/stop_processing_machine(obj/machinery/machine)
+	if(!machine.atmos_processing)
+		return
+	machine.atmos_processing = FALSE
+	atmos_machinery -= machine
+
+	// If we're currently processing atmos machines, there's a chance this machine is in
+	// the currentrun list, which is a cache of atmos_machinery. Remove it from that list
+	// as well to prevent processing qdeleted objects in the cache.
+	if(currentpart == SSAIR_ATMOSMACHINERY)
+		currentrun -= machine
+
+/datum/controller/subsystem/zas/proc/add_zone(zone/z)
 	zones += z
 	z.name = "Zone [next_id++]"
 	mark_zone_update(z)
 
-/datum/controller/subsystem/air/proc/remove_zone(zone/z)
+/datum/controller/subsystem/zas/proc/remove_zone(zone/z)
 	zones -= z
 	zones_to_update -= z
 	if (processing_zones)
 		processing_zones -= z
 
-/datum/controller/subsystem/air/proc/air_blocked(turf/A, turf/B)
+/datum/controller/subsystem/zas/proc/air_blocked(turf/A, turf/B)
 	#ifdef ZASDBG
 	ASSERT(isturf(A))
 	ASSERT(isturf(B))
@@ -305,7 +343,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	ATMOS_CANPASS_TURF(., B, A)
 	return ablock | .
 
-/datum/controller/subsystem/air/proc/merge(zone/A, zone/B)
+/datum/controller/subsystem/zas/proc/merge(zone/A, zone/B)
 	#ifdef ZASDBG
 	ASSERT(istype(A))
 	ASSERT(istype(B))
@@ -320,7 +358,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		B.c_merge(A)
 		mark_zone_update(A)
 
-/datum/controller/subsystem/air/proc/connect(turf/simulated/A, turf/simulated/B)
+/datum/controller/subsystem/zas/proc/connect(turf/simulated/A, turf/simulated/B)
 	#ifdef ZASDBG
 	ASSERT(istype(A))
 	ASSERT(isturf(B))
@@ -362,7 +400,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 
 	if(direct) c.mark_direct()
 
-/datum/controller/subsystem/air/proc/mark_for_update(turf/T)
+/datum/controller/subsystem/zas/proc/mark_for_update(turf/T)
 	#ifdef ZASDBG
 	ASSERT(isturf(T))
 	#endif
@@ -374,7 +412,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	#endif
 	T.needs_air_update = 1
 
-/datum/controller/subsystem/air/proc/mark_zone_update(zone/Z)
+/datum/controller/subsystem/zas/proc/mark_zone_update(zone/Z)
 	#ifdef ZASDBG
 	ASSERT(istype(Z))
 	#endif
@@ -383,7 +421,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	zones_to_update += Z
 	Z.needs_update = 1
 
-/datum/controller/subsystem/air/proc/mark_edge_sleeping(connection_edge/E)
+/datum/controller/subsystem/zas/proc/mark_edge_sleeping(connection_edge/E)
 	#ifdef ZASDBG
 	ASSERT(istype(E))
 	#endif
@@ -392,7 +430,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	active_edges -= E
 	E.sleeping = 1
 
-/datum/controller/subsystem/air/proc/mark_edge_active(connection_edge/E)
+/datum/controller/subsystem/zas/proc/mark_edge_active(connection_edge/E)
 	#ifdef ZASDBG
 	ASSERT(istype(E))
 	#endif
@@ -401,10 +439,10 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	active_edges += E
 	E.sleeping = 0
 
-/datum/controller/subsystem/air/proc/equivalent_pressure(zone/A, zone/B)
+/datum/controller/subsystem/zas/proc/equivalent_pressure(zone/A, zone/B)
 	return A.air.compare(B.air)
 
-/datum/controller/subsystem/air/proc/get_edge(zone/A, zone/B)
+/datum/controller/subsystem/zas/proc/get_edge(zone/A, zone/B)
 	if(istype(B))
 		for(var/connection_edge/zone/edge in A.edges)
 			if(edge.contains_zone(B))
@@ -422,7 +460,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		edge.recheck()
 		return edge
 
-/datum/controller/subsystem/air/proc/has_same_air(turf/A, turf/B)
+/datum/controller/subsystem/zas/proc/has_same_air(turf/A, turf/B)
 	if(A.initial_gas)
 		if(!B.initial_gas)
 			return 0
@@ -439,7 +477,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		return 0
 	return 1
 
-/datum/controller/subsystem/air/proc/remove_edge(connection_edge/E)
+/datum/controller/subsystem/zas/proc/remove_edge(connection_edge/E)
 	edges -= E
 	if(!E.sleeping)
 		active_edges -= E

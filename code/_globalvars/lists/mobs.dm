@@ -7,10 +7,10 @@ GLOBAL_LIST_EMPTY(directory) //all ckeys with associated client
 GLOBAL_LIST_EMPTY(stealthminID) //reference list with IDs that store ckeys, for stealthmins
 
 GLOBAL_LIST_INIT(dangerous_turfs, typecacheof(list(
-	/turf/open/lava,
-	/turf/open/chasm,
-	/turf/open/space,
-	/turf/open/openspace)))
+	/turf/simulated/open/lava,
+	/turf/simulated/open/chasm,
+	/turf/simulated/open/space,
+	/turf/simulated/open/openspace)))
 
 
 //Since it didn't really belong in any other category, I'm putting this here

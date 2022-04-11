@@ -125,7 +125,7 @@ SUBSYSTEM_DEF(mapping)
 		// needs to be whitelisted for underground too so place_below ruins work
 		seedRuins(ice_ruins, CONFIG_GET(number/icemoon_budget), list(/area/icemoon/surface/outdoors/unexplored, /area/icemoon/underground/unexplored), themed_ruins[ZTRAIT_ICE_RUINS])
 		for (var/ice_z in ice_ruins)
-			spawn_rivers(ice_z, 4, /turf/open/openspace/icemoon, /area/icemoon/surface/outdoors/unexplored/rivers)
+			spawn_rivers(ice_z, 4, /turf/simulated/open/openspace/icemoon, /area/icemoon/surface/outdoors/unexplored/rivers)
 
 	var/list/ice_ruins_underground = levels_by_trait(ZTRAIT_ICE_RUINS_UNDERGROUND)
 	if (ice_ruins_underground.len)
@@ -185,7 +185,7 @@ Used by the AI doomsday and the self-destruct nuke.
 			nuke_threats -= d
 
 	for(var/N in nuke_tiles)
-		var/turf/open/floor/circuit/C = N
+		var/turf/simulated/open/floor/circuit/C = N
 		C.update_appearance()
 
 /datum/controller/subsystem/mapping/Recover()
@@ -554,7 +554,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	var/block = block(A, B)
 	for(var/t in block)
 		// No need to empty() these, because it's world init and they're
-		// already /turf/open/space/basic.
+		// already /turf/simulated/open/space/basic.
 		var/turf/T = t
 		T.flags_1 |= UNUSED_RESERVATION_TURF
 	unused_turfs["[z]"] = block

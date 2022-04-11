@@ -393,7 +393,7 @@ DEFINE_BITFIELD(smoothing_junction, list(
 									underlay_appearance.icon_state = DEFAULT_UNDERLAY_ICON_STATE
 					underlays += underlay_appearance
 
-/turf/open/floor/set_smoothed_icon_state(new_junction)
+/turf/simulated/open/floor/set_smoothed_icon_state(new_junction)
 	if(broken || burnt)
 		return
 	return ..()

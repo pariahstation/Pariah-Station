@@ -1,4 +1,4 @@
-/*
+/*/*
 What are the archived variables for?
 Calculations are done using the archived variables with the results merged into the regular variables.
 This prevents race conditions that arise based on the order of tile processing.
@@ -724,3 +724,4 @@ GLOBAL_LIST_INIT(gaslist_cache, init_gaslist_cache())
 
 	output_air.merge(removed)
 	return TRUE
+*/

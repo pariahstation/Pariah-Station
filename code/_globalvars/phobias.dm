@@ -461,24 +461,24 @@ GLOBAL_LIST_INIT(phobia_objs, list(
 
 GLOBAL_LIST_INIT(phobia_turfs, list(
 	"space" = typecacheof(list(
-		/turf/open/floor/fakespace,
-		/turf/open/floor/holofloor/space,
-		/turf/open/space,
+		/turf/simulated/open/floor/fakespace,
+		/turf/simulated/open/floor/holofloor/space,
+		/turf/simulated/open/space,
 	)),
 	"the supernatural" = typecacheof(list(
 		/turf/closed/wall/mineral/cult,
-		/turf/open/floor/cult,
+		/turf/simulated/open/floor/cult,
 	)),
 	"aliens" = typecacheof(list(
 		/turf/closed/wall/mineral/abductor,
-		/turf/open/floor/mineral/abductor,
-		/turf/open/floor/plating/abductor,
-		/turf/open/floor/plating/abductor2,
+		/turf/simulated/open/floor/mineral/abductor,
+		/turf/simulated/open/floor/plating/abductor,
+		/turf/simulated/open/floor/plating/abductor2,
 	)),
 	"falling" = typecacheof(list(
-		/turf/open/chasm,
-		/turf/open/floor/fakepit,
-		/turf/open/openspace,
+		/turf/simulated/open/chasm,
+		/turf/simulated/open/floor/fakepit,
+		/turf/simulated/open/openspace,
 	)),
 ))
 

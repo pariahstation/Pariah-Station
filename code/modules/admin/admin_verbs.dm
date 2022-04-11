@@ -789,7 +789,7 @@ GLOBAL_PROTECT(admin_verbs_hideable)
 	if (amount > 0)
 		var/area/area
 		var/list/candidates
-		var/turf/open/floor/tile
+		var/turf/simulated/open/floor/tile
 		var/j,k
 
 		for (var/i = 1 to amount)

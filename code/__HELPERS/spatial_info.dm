@@ -321,7 +321,7 @@
 
 ///Returns the open turf next to the center in a specific direction
 /proc/get_open_turf_in_dir(atom/center, dir)
-	var/turf/open/get_turf = get_ranged_target_turf(center, dir, 1)
+	var/turf/simulated/open/get_turf = get_ranged_target_turf(center, dir, 1)
 	if(istype(get_turf))
 		return get_turf
 

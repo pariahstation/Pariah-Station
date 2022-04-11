@@ -13,10 +13,10 @@
 /obj/item/weldingtool/largetank,
 /obj/item/wirecutters,
 /obj/item/radio/off,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "d" = (
-/turf/open/openspace/icemoon,
+/turf/simulated/open/openspace/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
 "e" = (
 /obj/item/clothing/suit/hooded/explorer,
@@ -27,14 +27,14 @@
 /obj/item/storage/bag/ore,
 /obj/structure/closet,
 /obj/item/clothing/shoes/winterboots/ice_boots,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "f" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "g" = (
 /obj/structure/fireplace,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "h" = (
 /obj/structure/flora/rock/icy,
@@ -42,27 +42,27 @@
 /area/icemoon/surface/outdoors/nospawn)
 "j" = (
 /obj/structure/sink/kitchen,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "k" = (
 /obj/structure/closet/crate/freezer,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "l" = (
 /obj/machinery/vending/dinnerware,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "n" = (
 /obj/structure/mineral_door/wood,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "o" = (
 /obj/item/reagent_containers/food/drinks/bottle/beer,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "p" = (
 /obj/machinery/light/broken/directional/east,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "q" = (
 /obj/structure/table/wood,
@@ -72,18 +72,18 @@
 	info = "help...";
 	text = ""
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "r" = (
 /obj/item/chair/wood,
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/mob_spawn/corpse/human/miner/explorer,
 /obj/effect/decal/cleanable/blood/drip,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "s" = (
 /obj/effect/decal/cleanable/trail_holder,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "t" = (
 /turf/template_noop,
@@ -92,13 +92,13 @@
 /obj/structure/ladder{
 	travel_time = 40
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/unpowered)
 "W" = (
-/turf/open/openspace/icemoon,
+/turf/simulated/open/openspace/icemoon,
 /area/template_noop)
 "Y" = (
-/turf/open/openspace/icemoon/ruins,
+/turf/simulated/open/openspace/icemoon/ruins,
 /area/icemoon/surface/outdoors/nospawn)
 
 (1,1,1) = {"

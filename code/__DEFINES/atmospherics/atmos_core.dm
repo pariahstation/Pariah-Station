@@ -1,3 +1,4 @@
+/*
 //LISTMOS
 //indices of values in gas lists.
 ///Amount of total moles in said gas mixture
@@ -132,7 +133,7 @@
 ///Minimum temperature for fire to move to the next turf (150 °C or 433 K)
 #define FIRE_MINIMUM_TEMPERATURE_TO_SPREAD (150+T0C)
 ///Minimum temperature for fire to exist on a turf (100 °C or 373 K)
-#define FIRE_MINIMUM_TEMPERATURE_TO_EXIST (100+T0C)
+#define T100C (100+T0C)
 ///Multiplier for the temperature shared to other turfs
 #define FIRE_SPREAD_RADIOSITY_SCALE 0.85
 ///Helper for small fires to grow
@@ -177,3 +178,4 @@
 
 /// How many maximum iterations do we allow the Newton-Raphson approximation for gas pressure to do.
 #define ATMOS_PRESSURE_APPROXIMATION_ITERATIONS 10
+*/

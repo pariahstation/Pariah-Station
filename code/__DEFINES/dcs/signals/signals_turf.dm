@@ -14,7 +14,7 @@
 #define COMSIG_TURF_MULTIZ_NEW "turf_multiz_new"
 ///from base of turf/proc/onShuttleMove(): (turf/new_turf)
 #define COMSIG_TURF_ON_SHUTTLE_MOVE "turf_on_shuttle_move"
-///from /turf/open/temperature_expose(datum/gas_mixture/air, exposed_temperature)
+///from /turf/simulated/open/temperature_expose(datum/gas_mixture/air, exposed_temperature)
 #define COMSIG_TURF_EXPOSE "turf_expose"
 ///from /turf/proc/immediate_calculate_adjacent_turfs()
 #define COMSIG_TURF_CALCULATED_ADJACENT_ATMOS "turf_calculated_adjacent_atmos"

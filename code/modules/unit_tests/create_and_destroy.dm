@@ -96,7 +96,7 @@
 		if(ispath(type_path, /turf))
 			spawn_at.ChangeTurf(type_path, /turf/baseturf_skipover)
 			//We change it back to prevent pain, please don't ask
-			spawn_at.ChangeTurf(/turf/open/floor/wood, /turf/baseturf_skipover)
+			spawn_at.ChangeTurf(/turf/simulated/open/floor/wood, /turf/baseturf_skipover)
 			if(baseturf_count != length(spawn_at.baseturfs))
 				Fail("[type_path] changed the amount of baseturfs we have [baseturf_count] -> [length(spawn_at.baseturfs)]")
 				baseturf_count = length(spawn_at.baseturfs)

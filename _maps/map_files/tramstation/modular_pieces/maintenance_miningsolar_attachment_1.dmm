@@ -6,7 +6,7 @@
 /turf/closed/wall,
 /area/mine/explored)
 "l" = (
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "z" = (
 /obj/modular_map_connector,
@@ -14,12 +14,12 @@
 /area/template_noop)
 "B" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "J" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/stack/ore/iron,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "M" = (
 /turf/closed/wall/rock/porous,
@@ -27,16 +27,16 @@
 "R" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/stack/ore/glass,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "S" = (
 /obj/structure/ore_box,
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "Z" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/stack/rods/ten,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 
 (1,1,1) = {"

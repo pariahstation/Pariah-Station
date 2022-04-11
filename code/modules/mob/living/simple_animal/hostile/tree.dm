@@ -55,7 +55,7 @@
 	..()
 	if(!is_tree || !isopenturf(loc))
 		return
-	var/turf/open/T = src.loc
+	var/turf/simulated/open/T = src.loc
 	if(!T.air || !T.air.gases[/datum/gas/carbon_dioxide])
 		return
 

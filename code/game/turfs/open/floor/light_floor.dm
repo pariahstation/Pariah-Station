@@ -3,7 +3,7 @@
 #define LIGHTFLOOR_BREAKING 2
 #define LIGHTFLOOR_BROKEN 3
 
-/turf/open/floor/light
+/turf/simulated/open/floor/light
 	name = "light floor"
 	desc = "A wired glass tile embedded into the floor. Modify the color with a Multitool."
 	light_range = 5
@@ -25,10 +25,10 @@
 	///used for light floors that cycle colours
 	var/cycle = FALSE
 
-/turf/open/floor/light/setup_broken_states()
+/turf/simulated/open/floor/light/setup_broken_states()
 	return list("light_broken")
 
-/turf/open/floor/light/examine(mob/user)
+/turf/simulated/open/floor/light/examine(mob/user)
 	. = ..()
 	. += span_notice("There's a <b>small crack</b> on the edge of it.")
 	. += span_notice("Use a multitool on it to change colors.")
@@ -37,7 +37,7 @@
 		. += span_danger("The light bulb seems fried!")
 
 ///create radial menu
-/turf/open/floor/light/proc/populate_lighttile_designs()
+/turf/simulated/open/floor/light/proc/populate_lighttile_designs()
 	lighttile_designs = list(
 		LIGHT_COLOR_CYAN = image(icon = src.icon, icon_state = "light_on-1"),
 		COLOR_SOFT_RED = image(icon = src.icon, icon_state = "light_on-2"),
@@ -51,18 +51,18 @@
 		LIGHT_COLOR_FIRE = image(icon = src.icon, icon_state = "light_on-10")
 		)
 
-/turf/open/floor/light/Initialize(mapload)
+/turf/simulated/open/floor/light/Initialize(mapload)
 	. = ..()
 	update_appearance()
 	if(!length(lighttile_designs))
 		populate_lighttile_designs()
 
-/turf/open/floor/light/break_tile()
+/turf/simulated/open/floor/light/break_tile()
 	..()
 	state = pick(LIGHTFLOOR_FLICKER, LIGHTFLOOR_BREAKING, LIGHTFLOOR_BROKEN)/// pick a broken state
 	update_appearance()
 
-/turf/open/floor/light/update_appearance(updates)
+/turf/simulated/open/floor/light/update_appearance(updates)
 	. = ..()
 	if(!on)
 		set_light(0)
@@ -82,7 +82,7 @@
 		if(LIGHTFLOOR_BROKEN)
 			set_light(0)
 
-/turf/open/floor/light/update_icon_state()
+/turf/simulated/open/floor/light/update_icon_state()
 	if(!on)
 		icon_state = "light_off"
 		return ..()
@@ -90,9 +90,9 @@
 	switch(state)
 		if(LIGHTFLOOR_FINE)
 			if(cycle)
-				if(istype(src, /turf/open/floor/light/colour_cycle/dancefloor_a))
+				if(istype(src, /turf/simulated/open/floor/light/colour_cycle/dancefloor_a))
 					icon_state = "light_on-dancefloor_A"
-				else if(istype(src, /turf/open/floor/light/colour_cycle/dancefloor_b))
+				else if(istype(src, /turf/simulated/open/floor/light/colour_cycle/dancefloor_b))
 					icon_state = "light_on-dancefloor_B"
 				else
 					icon_state = "light_on-cycle_all"
@@ -106,18 +106,18 @@
 			icon_state = "light_off"
 	return ..()
 
-/turf/open/floor/light/ChangeTurf(path, new_baseturf, flags)
+/turf/simulated/open/floor/light/ChangeTurf(path, new_baseturf, flags)
 	set_light(0)
 	return ..()
 
-/turf/open/floor/light/screwdriver_act(mob/living/user, obj/item/I)
+/turf/simulated/open/floor/light/screwdriver_act(mob/living/user, obj/item/I)
 	. = ..()
 	if(!can_modify_colour && !cycle)
 		return
 	on = !on
 	update_appearance()
 
-/turf/open/floor/light/multitool_act(mob/living/user, obj/item/I)
+/turf/simulated/open/floor/light/multitool_act(mob/living/user, obj/item/I)
 	. = ..()
 	if(.)
 		return
@@ -129,7 +129,7 @@
 	currentcolor = choice
 	update_appearance()
 
-/turf/open/floor/light/attackby(obj/item/C, mob/user, params)
+/turf/simulated/open/floor/light/attackby(obj/item/C, mob/user, params)
 	if(..())
 		return
 	if(istype(C, /obj/item/light/bulb)) //only for light tiles
@@ -145,7 +145,7 @@
 		else
 			to_chat(user, span_notice("The light bulb seems fine, no need to replace it."))
 
-/turf/open/floor/light/emp_act(severity)
+/turf/simulated/open/floor/light/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
@@ -158,7 +158,7 @@
 	update_appearance()
 
 //Cycles through all of the colours
-/turf/open/floor/light/colour_cycle
+/turf/simulated/open/floor/light/colour_cycle
 	name = "dancefloor"
 	desc = "Funky floor."
 	icon_state = "light_on-cycle_all"
@@ -168,10 +168,10 @@
 
 //Two different "dancefloor" types so that you can have a checkered pattern
 // (also has a longer delay than colour_cycle between cycling colours)
-/turf/open/floor/light/colour_cycle/dancefloor_a
+/turf/simulated/open/floor/light/colour_cycle/dancefloor_a
 	icon_state = "light_on-dancefloor_A"
 
-/turf/open/floor/light/colour_cycle/dancefloor_b
+/turf/simulated/open/floor/light/colour_cycle/dancefloor_b
 	icon_state = "light_on-dancefloor_B"
 
 /**
@@ -181,7 +181,7 @@
  * * user The mob interacting with a menu
  * * multitool The multitool used to interact with a menu
  */
-/turf/open/floor/light/proc/check_menu(mob/living/user, obj/item/multitool)
+/turf/simulated/open/floor/light/proc/check_menu(mob/living/user, obj/item/multitool)
 	if(!istype(user))
 		return FALSE
 	if(user.incapacitated())

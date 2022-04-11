@@ -163,7 +163,7 @@
 //special poddoors that open when emergency shuttle docks at centcom
 /obj/machinery/door/poddoor/shuttledock
 	var/checkdir = 4 //door won't open if turf in this dir is `turftype`
-	var/turftype = /turf/open/space
+	var/turftype = /turf/simulated/open/space
 
 /obj/machinery/door/poddoor/shuttledock/proc/check()
 	var/turf/turf = get_step(src, checkdir)

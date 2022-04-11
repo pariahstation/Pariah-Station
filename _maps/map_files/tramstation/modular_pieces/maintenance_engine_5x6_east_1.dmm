@@ -4,7 +4,7 @@
 /area/template_noop)
 "g" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "h" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13,7 +13,7 @@
 	spawn_random_offset = 1;
 	spawn_scatter_radius = 4
 	},
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "i" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -21,7 +21,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/modular_map_connector,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "n" = (
 /turf/closed/wall,
@@ -37,14 +37,14 @@
 /obj/structure/closet,
 /obj/effect/spawner/random/maintenance/three,
 /obj/item/flashlight,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "C" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/plastic{
 	dir = 4
 	},
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "F" = (
 /obj/effect/decal/cleanable/dirt,
@@ -54,18 +54,18 @@
 	spawn_random_offset = 1;
 	spawn_scatter_radius = 4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "G" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "T" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /obj/item/lighter/greyscale,
 /obj/effect/spawner/random/entertainment/cigarette_pack,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "V" = (
 /obj/effect/decal/cleanable/dirt,
@@ -75,12 +75,12 @@
 	pixel_y = 7
 	},
 /obj/effect/spawner/random/bureaucracy/pen,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "X" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 
 (1,1,1) = {"

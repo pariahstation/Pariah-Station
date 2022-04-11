@@ -22,7 +22,7 @@
 	var/turf/own_turf = get_turf(owner)
 	if(!QDELETED(dash_target))
 		self_dist_to_target += get_dist(dash_target, own_turf)
-	for(var/turf/open/check_turf in RANGE_TURFS(dash_range, own_turf))
+	for(var/turf/simulated/open/check_turf in RANGE_TURFS(dash_range, own_turf))
 		var/turf_dist_to_target = 0
 		if(!QDELETED(dash_target))
 			turf_dist_to_target += get_dist(dash_target, check_turf)

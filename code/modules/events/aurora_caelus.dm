@@ -30,7 +30,7 @@
 	for(var/area in GLOB.sortedAreas)
 		var/area/A = area
 		if(A.area_flags & AREA_USES_STARLIGHT)
-			for(var/turf/open/space/S in A)
+			for(var/turf/simulated/open/space/S in A)
 				S.set_light(S.light_range * 3, S.light_power * 0.5)
 
 /datum/round_event/aurora_caelus/tick()
@@ -40,20 +40,20 @@
 		for(var/area in GLOB.sortedAreas)
 			var/area/A = area
 			if(A.area_flags & AREA_USES_STARLIGHT)
-				for(var/turf/open/space/S in A)
+				for(var/turf/simulated/open/space/S in A)
 					S.set_light(l_color = aurora_color)
 
 /datum/round_event/aurora_caelus/end()
 	for(var/area in GLOB.sortedAreas)
 		var/area/A = area
 		if(A.area_flags & AREA_USES_STARLIGHT)
-			for(var/turf/open/space/S in A)
+			for(var/turf/simulated/open/space/S in A)
 				fade_to_black(S)
 	priority_announce("The aurora caelus event is now ending. Starlight conditions will slowly return to normal. When this has concluded, please return to your workplace and continue work as normal. Have a pleasant shift, [station_name()], and thank you for watching with us.",
 	sound = 'sound/misc/notice2.ogg',
 	sender_override = "Nanotrasen Meteorology Division")
 
-/datum/round_event/aurora_caelus/proc/fade_to_black(turf/open/space/S)
+/datum/round_event/aurora_caelus/proc/fade_to_black(turf/simulated/open/space/S)
 	set waitfor = FALSE
 	var/new_light = initial(S.light_range)
 	while(S.light_range > new_light)

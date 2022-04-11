@@ -3,25 +3,25 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/simulated/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "c" = (
 /obj/structure/lattice,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/simulated/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "d" = (
 /turf/closed/wall,
 /area/ruin/unpowered)
 "e" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "f" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/cups,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -31,27 +31,27 @@
 	reagent_id = /datum/reagent/consumable/ethanol/bacchus_blessing
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "h" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "i" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "j" = (
 /obj/item/food/pizzaslice/mushroom,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -59,7 +59,7 @@
 /obj/structure/table/wood,
 /obj/effect/spawner/random/food_or_drink/pizzaparty,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -69,42 +69,42 @@
 /obj/effect/spawner/random/food_or_drink/pizzaparty,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "m" = (
 /obj/item/chair/wood/wings,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "n" = (
 /obj/structure/glowshroom/single,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "o" = (
 /obj/item/plate,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "p" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "q" = (
 /obj/item/chair/wood/wings,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -115,51 +115,51 @@
 	desc = "A festive party hat with the name 'timmy' scribbled on the front.";
 	name = "party hat"
 	},
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "s" = (
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "t" = (
 /obj/structure/chair/wood/wings,
 /obj/effect/decal/remains/human,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "u" = (
 /obj/structure/glowshroom/single,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "v" = (
 /obj/structure/lattice,
 /obj/item/chair/wood/wings,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/simulated/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "w" = (
 /obj/item/kitchen/fork,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "x" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/random/food_or_drink/pizzaparty,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "y" = (
 /obj/structure/table/wood,
 /obj/item/plate,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -167,7 +167,7 @@
 /obj/structure/table/wood,
 /obj/structure/glowshroom/single,
 /obj/item/a_gift,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -175,7 +175,7 @@
 /obj/structure/table/wood,
 /obj/item/plate,
 /obj/item/kitchen/fork,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -184,7 +184,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -192,47 +192,47 @@
 /obj/structure/table/wood,
 /obj/item/food/pizzaslice/margherita,
 /obj/item/plate,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "E" = (
 /obj/structure/table/wood,
 /obj/item/food/pizzaslice/meat,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "F" = (
 /obj/structure/table/wood,
 /obj/item/food/cake/birthday,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "G" = (
 /obj/structure/table/wood,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "H" = (
 /obj/item/chair/wood/wings,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "I" = (
 /obj/item/kitchen/fork,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "J" = (
 /obj/structure/glowshroom/single,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
@@ -242,45 +242,45 @@
 	},
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "L" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "M" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/a_gift,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "N" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/simulated/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "O" = (
 /obj/item/knife/kitchen,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "P" = (
 /obj/machinery/light/directional/east,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood{
+/turf/simulated/open/floor/wood{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)
 "Q" = (
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered)

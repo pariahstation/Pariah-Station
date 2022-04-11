@@ -6,30 +6,30 @@
 /obj/effect/turf_decal/sand/plating,
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/clothing/mask/gas,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/central)
 "k" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/central)
 "n" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/spawner/random/trash/cigbutt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/central)
 "o" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "s" = (
 /obj/structure/holosign/barrier/atmos,
 /obj/effect/turf_decal/sand/plating,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/maintenance/port/central)
 "w" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/food_packaging,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/central)
 "C" = (
 /turf/closed/wall/rock/porous,
@@ -41,7 +41,7 @@
 	req_one_access_txt = "12"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/central)
 "I" = (
 /obj/effect/decal/cleanable/dirt,
@@ -50,18 +50,18 @@
 /obj/item/pickaxe/rusted{
 	pixel_y = 5
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/central)
 "O" = (
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "P" = (
 /obj/item/stack/ore/glass,
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "S" = (
 /obj/effect/spawner/random/trash/garbage,
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "V" = (
 /turf/closed/wall,

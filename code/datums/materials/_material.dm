@@ -142,7 +142,7 @@ Simple datum which is instanced once per type and is used for every object of sa
 /datum/material/proc/on_applied_turf(turf/T, amount, material_flags)
 	if(isopenturf(T))
 		if(turf_sound_override)
-			var/turf/open/O = T
+			var/turf/simulated/open/O = T
 			O.footstep = turf_sound_override
 			O.barefootstep = turf_sound_override
 			O.clawfootstep = turf_sound_override

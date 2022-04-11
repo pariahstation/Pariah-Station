@@ -131,7 +131,7 @@
 /datum/component/riding/vehicle/lavaboat
 	ride_check_flags = NONE // not sure
 	keytype = /obj/item/oar
-	var/allowed_turf = /turf/open/lava
+	var/allowed_turf = /turf/simulated/open/lava
 
 /datum/component/riding/vehicle/lavaboat/handle_specials()
 	. = ..()
@@ -192,7 +192,7 @@
 
 /datum/component/riding/vehicle/scooter/skateboard/wheelys/skishoes/handle_specials()
 	. = ..()
-	allowed_turf_typecache = typecacheof(list(/turf/open/misc/asteroid/snow, /turf/open/misc/snow, /turf/open/floor/holofloor/snow, /turf/open/misc/ice, /turf/open/floor/fake_snow))
+	allowed_turf_typecache = typecacheof(list(/turf/simulated/open/misc/asteroid/snow, /turf/simulated/open/misc/snow, /turf/simulated/open/floor/holofloor/snow, /turf/simulated/open/misc/ice, /turf/simulated/open/floor/fake_snow))
 
 /datum/component/riding/vehicle/secway
 	keytype = /obj/item/key/security

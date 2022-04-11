@@ -292,7 +292,7 @@
 /obj/item/mecha_parts/mecha_equipment/rcd/action(mob/source, atom/target, list/modifiers)
 	if(!isturf(target) && !istype(target, /obj/machinery/door/airlock))
 		target = get_turf(target)
-	if(!action_checks(target) || get_dist(chassis, target)>3 || istype(target, /turf/open/space/transit))
+	if(!action_checks(target) || get_dist(chassis, target)>3 || istype(target, /turf/simulated/open/space/transit))
 		return
 	playsound(chassis, 'sound/machines/click.ogg', 50, TRUE)
 
@@ -305,7 +305,7 @@
 					return
 				W.ScrapeAway()
 			else if(isfloorturf(target))
-				var/turf/open/floor/F = target
+				var/turf/simulated/open/floor/F = target
 				if(!do_after_cooldown(target, source))
 					return
 				F.ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
@@ -315,13 +315,13 @@
 				qdel(target)
 		if(MODE_WALL)
 			if(isspaceturf(target))
-				var/turf/open/space/S = target
+				var/turf/simulated/open/space/S = target
 				to_chat(source, "[icon2html(src, source)][span_notice("Building Floor...")]")
 				if(!do_after_cooldown(S, source))
 					return
-				S.PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+				S.PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 			else if(isfloorturf(target))
-				var/turf/open/floor/F = target
+				var/turf/simulated/open/floor/F = target
 				to_chat(source, "[icon2html(src, source)][span_notice("Building Wall...")]")
 				if(!do_after_cooldown(F, source))
 					return

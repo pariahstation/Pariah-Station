@@ -1,4 +1,4 @@
-SUBSYSTEM_DEF(air)
+/*SUBSYSTEM_DEF(air)
 	name = "Atmospherics"
 	init_order = INIT_ORDER_AIR
 	priority = FIRE_PRIORITY_AIR
@@ -39,7 +39,7 @@ SUBSYSTEM_DEF(air)
 
 	//Special functions lists
 	var/list/turf/active_super_conductivity = list()
-	var/list/turf/open/high_pressure_delta = list()
+	var/list/turf/simulated/open/high_pressure_delta = list()
 	var/list/atom_process = list()
 	/// Reactions which will contribute to a hotspot's size.
 	var/list/hotspot_reactions
@@ -352,7 +352,7 @@ SUBSYSTEM_DEF(air)
 
 /datum/controller/subsystem/air/proc/process_high_pressure_delta(resumed = FALSE)
 	while (high_pressure_delta.len)
-		var/turf/open/T = high_pressure_delta[high_pressure_delta.len]
+		var/turf/simulated/open/T = high_pressure_delta[high_pressure_delta.len]
 		high_pressure_delta.len--
 		T.high_pressure_movements()
 		T.pressure_difference = 0
@@ -367,7 +367,7 @@ SUBSYSTEM_DEF(air)
 	//cache for sanic speed (lists are references anyways)
 	var/list/currentrun = src.currentrun
 	while(currentrun.len)
-		var/turf/open/T = currentrun[currentrun.len]
+		var/turf/simulated/open/T = currentrun[currentrun.len]
 		currentrun.len--
 		if (T)
 			T.process_cell(fire_count)
@@ -458,7 +458,7 @@ SUBSYSTEM_DEF(air)
 			return
 
 ///Removes a turf from processing, and causes its excited group to clean up so things properly adapt to the change
-/datum/controller/subsystem/air/proc/remove_from_active(turf/open/T)
+/datum/controller/subsystem/air/proc/remove_from_active(turf/simulated/open/T)
 	active_turfs -= T
 	if(currentpart == SSAIR_ACTIVETURFS)
 		currentrun -= T
@@ -473,7 +473,7 @@ SUBSYSTEM_DEF(air)
 			T.excited_group.garbage_collect() //Kill the excited group, it'll reform on its own later
 
 ///Puts an active turf to sleep so it doesn't process. Do this without cleaning up its excited group.
-/datum/controller/subsystem/air/proc/sleep_active_turf(turf/open/T)
+/datum/controller/subsystem/air/proc/sleep_active_turf(turf/simulated/open/T)
 	active_turfs -= T
 	if(currentpart == SSAIR_ACTIVETURFS)
 		currentrun -= T
@@ -484,7 +484,7 @@ SUBSYSTEM_DEF(air)
 		T.excited = FALSE
 
 ///Adds a turf to active processing, handles duplicates. Call this with blockchanges == TRUE if you want to nuke the assoc excited group
-/datum/controller/subsystem/air/proc/add_to_active(turf/open/T, blockchanges = FALSE)
+/datum/controller/subsystem/air/proc/add_to_active(turf/simulated/open/T, blockchanges = FALSE)
 	if(istype(T) && T.air)
 		T.significant_share_ticker = 0
 		if(blockchanges && T.excited_group) //This is used almost exclusivly for shuttles, so the excited group doesn't stay behind
@@ -551,7 +551,7 @@ SUBSYSTEM_DEF(air)
 		var/list/turfs_to_check = active_turfs.Copy()
 		do
 			var/list/new_turfs_to_check = list()
-			for(var/turf/open/T in turfs_to_check)
+			for(var/turf/simulated/open/T in turfs_to_check)
 				new_turfs_to_check += T.resolve_active_graph()
 			CHECK_TICK
 
@@ -570,7 +570,7 @@ SUBSYSTEM_DEF(air)
 		to_chat(world, span_boldannounce("[msg]"))
 		warning(msg)
 
-/turf/open/proc/resolve_active_graph()
+/turf/simulated/open/proc/resolve_active_graph()
 	. = list()
 	var/datum/excited_group/EG = excited_group
 	if (blocks_air || !air)
@@ -579,7 +579,7 @@ SUBSYSTEM_DEF(air)
 		EG = new
 		EG.add_turf(src)
 
-	for (var/turf/open/ET in atmos_adjacent_turfs)
+	for (var/turf/simulated/open/ET in atmos_adjacent_turfs)
 		if (ET.blocks_air || !ET.air)
 			continue
 
@@ -594,7 +594,7 @@ SUBSYSTEM_DEF(air)
 			ET.excited = TRUE
 			. += ET
 
-/turf/open/space/resolve_active_graph()
+/turf/simulated/open/space/resolve_active_graph()
 	return list()
 
 /datum/controller/subsystem/air/proc/setup_atmos_machinery()
@@ -719,7 +719,7 @@ GLOBAL_LIST_EMPTY(colored_images)
 		var/max = 0
 		#ifdef TRACK_MAX_SHARE
 		for(var/who in group.turf_list)
-			var/turf/open/lad = who
+			var/turf/simulated/open/lad = who
 			max = max(lad.max_share, max)
 		#endif
 		data["excited_groups"] += list(list(
@@ -793,3 +793,4 @@ GLOBAL_LIST_EMPTY(colored_images)
 					ui.user.client.images -= GLOB.colored_images
 				plane.alpha = 0
 			return TRUE
+*/

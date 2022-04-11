@@ -14,14 +14,14 @@
 	name = "white slippers"
 	},
 /obj/item/clothing/under/misc/pj/blue,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 "e" = (
 /obj/structure/mirror/directional/north,
 /obj/structure/sink{
 	pixel_y = 20
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 "f" = (
 /obj/machinery/shower{
@@ -29,10 +29,10 @@
 	reagent_id = /datum/reagent/water/holywater
 	},
 /obj/structure/curtain,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 "g" = (
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 "h" = (
 /obj/structure/table/wood,
@@ -43,46 +43,46 @@
 	name = "soul food";
 	tastes = list("nostalgia" = 1, "happiness" = 1)
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/bathhouse)
 "i" = (
 /obj/machinery/door/airlock/freezer{
 	name = "bath house airlock"
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 "j" = (
 /turf/closed/wall/mineral/wood,
 /area/ruin/powered/bathhouse)
 "k" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/bathhouse)
 "l" = (
 /obj/item/bikehorn/rubberducky,
 /obj/item/soap,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 "m" = (
 /obj/structure/bookcase/random,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/bathhouse)
 "n" = (
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "o" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/ruin/powered/bathhouse)
 "p" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 "q" = (
 /obj/item/bikehorn/rubberducky{
 	desc = "An old but clean looking rubber ducky. Something about it is very familiar..."
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/powered/bathhouse)
 
 (1,1,1) = {"

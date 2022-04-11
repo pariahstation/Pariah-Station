@@ -5,7 +5,7 @@
 "e" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/girder,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "k" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13,11 +13,11 @@
 /obj/effect/spawner/random/maintenance/three,
 /obj/item/crowbar,
 /obj/item/screwdriver,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "n" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "H" = (
 /obj/modular_map_connector,
@@ -25,7 +25,7 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_one_access_txt = "12"
 	},
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "I" = (
 /turf/template_noop,
@@ -36,12 +36,12 @@
 /obj/effect/spawner/random/maintenance/four,
 /obj/item/flashlight,
 /obj/effect/spawner/random/trash/janitor_supplies,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "Z" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/moisture_trap,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 
 (1,1,1) = {"

@@ -130,8 +130,8 @@
 		var/turf/closed/mineral/mineral_turf = target
 		mineral_turf.gets_drilled(mod.wearer)
 		drain_power(use_power_cost)
-	else if(istype(target, /turf/open/misc/asteroid))
-		var/turf/open/misc/asteroid/sand_turf = target
+	else if(istype(target, /turf/simulated/open/misc/asteroid))
+		var/turf/simulated/open/misc/asteroid/sand_turf = target
 		if(!sand_turf.can_dig(mod.wearer))
 			return
 		sand_turf.getDug()
@@ -361,22 +361,22 @@
 	. = ..()
 	if(!accretion_turfs)
 		accretion_turfs = typecacheof(list(
-			/turf/open/misc/asteroid,
-			/turf/open/misc/ashplanet,
-			/turf/open/misc/dirt,
+			/turf/simulated/open/misc/asteroid,
+			/turf/simulated/open/misc/ashplanet,
+			/turf/simulated/open/misc/dirt,
 		))
 	if(!keep_turfs)
 		keep_turfs = typecacheof(list(
-			/turf/open/misc/grass,
-			/turf/open/floor/plating/snowed,
-			/turf/open/misc/sandy_dirt,
-			/turf/open/misc/ironsand,
-			/turf/open/misc/ice,
-			/turf/open/indestructible/hierophant,
-			/turf/open/indestructible/boss,
-			/turf/open/indestructible/necropolis,
-			/turf/open/lava,
-			/turf/open/water,
+			/turf/simulated/open/misc/grass,
+			/turf/simulated/open/floor/plating/snowed,
+			/turf/simulated/open/misc/sandy_dirt,
+			/turf/simulated/open/misc/ironsand,
+			/turf/simulated/open/misc/ice,
+			/turf/simulated/open/indestructible/hierophant,
+			/turf/simulated/open/indestructible/boss,
+			/turf/simulated/open/indestructible/necropolis,
+			/turf/simulated/open/lava,
+			/turf/simulated/open/water,
 		))
 
 /obj/item/mod/module/ash_accretion/on_suit_activation()

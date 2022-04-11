@@ -32,7 +32,7 @@
 	/// A list of weakrefs to all of ourc urrent runes
 	var/list/datum/weakref/current_runes = list()
 	/// Turfs that you cannot draw carvings on
-	var/static/list/blacklisted_turfs = typecacheof(list(/turf/open/space, /turf/open/openspace, /turf/open/lava))
+	var/static/list/blacklisted_turfs = typecacheof(list(/turf/simulated/open/space, /turf/simulated/open/openspace, /turf/simulated/open/lava))
 
 /obj/item/melee/rune_carver/examine(mob/user)
 	. = ..()
@@ -64,7 +64,7 @@
 /*
  * Begin trying to carve a rune. Go through a few checks, then call do_carve_rune if successful.
  */
-/obj/item/melee/rune_carver/proc/try_carve_rune(turf/open/target_turf, mob/user)
+/obj/item/melee/rune_carver/proc/try_carve_rune(turf/simulated/open/target_turf, mob/user)
 	if(drawing)
 		target_turf.balloon_alert(user, "already carving!")
 		return
@@ -88,7 +88,7 @@
 /*
  * The actual proc that handles selecting the rune to draw and creating it.
  */
-/obj/item/melee/rune_carver/proc/do_carve_rune(turf/open/target_turf, mob/user)
+/obj/item/melee/rune_carver/proc/do_carve_rune(turf/simulated/open/target_turf, mob/user)
 	// Assoc list of [name] to [image] for the radial (to show tooltips)
 	var/static/list/choices = list()
 	// Assoc list of [name] to [path] for after the radial

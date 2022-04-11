@@ -107,7 +107,7 @@
 	. = ..()
 	if(!.)
 		return
-	var/turf/open/target_turf = get_turf(target)
+	var/turf/simulated/open/target_turf = get_turf(target)
 	if(!istype(target_turf) || target_turf.is_blocked_turf_ignore_climbable() || !(target_turf in view(mod.wearer)))
 		balloon_alert(mod.wearer, "invalid target!")
 		return

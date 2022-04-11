@@ -136,7 +136,7 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 /mob/living/carbon/human/proc/pl_head_protected()
 	//Checks if the head is adequately sealed.
 	if(head)
-		if(vsc.plc.plasmaguard_only)
+		if(SSzas.settings.plc.plasmaguard_only)
 			if(head.item_flags & PHORONGUARD)
 				return TRUE
 		else if(head.body_parts_covered & EYES)

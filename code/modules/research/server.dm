@@ -82,7 +82,7 @@
 	refresh_working()
 
 /obj/machinery/rnd/server/proc/get_env_temp()
-	var/turf/open/L = loc
+	var/turf/simulated/open/L = loc
 	if(isturf(L))
 		return L.temperature
 	return 0 //what

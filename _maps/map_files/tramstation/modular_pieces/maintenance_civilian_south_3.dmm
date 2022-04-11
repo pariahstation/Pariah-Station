@@ -12,11 +12,11 @@
 	pixel_y = 8
 	},
 /obj/item/stack/ore/iron,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/mine/explored)
 "f" = (
 /obj/item/wrench,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/port/aft)
 "k" = (
 /obj/modular_map_root/tramstation{
@@ -26,16 +26,16 @@
 /area/template_noop)
 "l" = (
 /obj/item/pickaxe/mini,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/port/aft)
 "m" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/ore_box,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "o" = (
 /obj/structure/cable,
-/turf/open/floor/catwalk_floor,
+/turf/simulated/open/floor/catwalk_floor,
 /area/maintenance/port/aft)
 "s" = (
 /obj/effect/decal/cleanable/dirt,
@@ -49,11 +49,11 @@
 /obj/item/gps/mining,
 /obj/item/storage/bag/ore,
 /obj/item/mining_scanner,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "w" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "z" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -63,12 +63,12 @@
 /obj/modular_map_connector,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/structure/cable,
-/turf/open/floor/catwalk_floor,
+/turf/simulated/open/floor/catwalk_floor,
 /area/maintenance/port/aft)
 "E" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/spawner/random/structure/girder,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/aft)
 "F" = (
 /obj/modular_map_root/tramstation{
@@ -86,31 +86,31 @@
 /obj/effect/turf_decal/sand/plating,
 /obj/machinery/power/floodlight,
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/aft)
 "K" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/aft)
 "M" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/aft)
 "N" = (
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/mine/explored)
 "P" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/effect/spawner/random/trash/garbage,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/aft)
 "Q" = (
 /turf/closed/wall,
 /area/maintenance/port/aft)
 "R" = (
 /obj/item/stack/ore/glass,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/mine/explored)
 
 (1,1,1) = {"

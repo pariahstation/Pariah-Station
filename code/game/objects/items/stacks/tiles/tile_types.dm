@@ -57,7 +57,7 @@
 		. += span_notice("Those could work as a [verb] throwing weapon.")
 
 
-/obj/item/stack/tile/proc/place_tile(turf/open/T)
+/obj/item/stack/tile/proc/place_tile(turf/simulated/open/T)
 	if(!turf_type || !use(1))
 		return
 	var/turf/placed_turf = T.PlaceOnTop(turf_type, flags = CHANGETURF_INHERIT_AIR)
@@ -71,7 +71,7 @@
 	desc = "A patch of grass like they use on space golf courses."
 	icon_state = "tile_grass"
 	inhand_icon_state = "tile-grass"
-	turf_type = /turf/open/floor/grass
+	turf_type = /turf/simulated/open/floor/grass
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/tile/grass
 
@@ -82,7 +82,7 @@
 	desc = "A patch of odd, glowing blue grass."
 	icon_state = "tile_fairygrass"
 	inhand_icon_state = "tile-fairygrass"
-	turf_type = /turf/open/floor/grass/fairy
+	turf_type = /turf/simulated/open/floor/grass/fairy
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/tile/fairygrass
 
@@ -93,7 +93,7 @@
 	desc = "An easy to fit wood floor tile. Use while in your hand to change what pattern you want."
 	icon_state = "tile-wood"
 	inhand_icon_state = "tile-wood"
-	turf_type = /turf/open/floor/wood
+	turf_type = /turf/simulated/open/floor/wood
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/tile/wood
 	tile_reskin_types = list(
@@ -107,21 +107,21 @@
 	name = "parquet wood floor tile"
 	singular_name = "parquet wood floor tile"
 	icon_state = "tile-wood_parquet"
-	turf_type = /turf/open/floor/wood/parquet
+	turf_type = /turf/simulated/open/floor/wood/parquet
 	merge_type = /obj/item/stack/tile/wood/parquet
 
 /obj/item/stack/tile/wood/large
 	name = "large wood floor tile"
 	singular_name = "large wood floor tile"
 	icon_state = "tile-wood_large"
-	turf_type = /turf/open/floor/wood/large
+	turf_type = /turf/simulated/open/floor/wood/large
 	merge_type = /obj/item/stack/tile/wood/large
 
 /obj/item/stack/tile/wood/tile
 	name = "tiled wood floor tile"
 	singular_name = "tiled wood floor tile"
 	icon_state = "tile-wood_tile"
-	turf_type = /turf/open/floor/wood/tile
+	turf_type = /turf/simulated/open/floor/wood/tile
 	merge_type = /obj/item/stack/tile/wood/tile
 
 //Bamboo
@@ -130,7 +130,7 @@
 	singular_name = "bamboo mat piece"
 	desc = "A piece of a bamboo mat with a decorative trim."
 	icon_state = "tile_bamboo"
-	turf_type = /turf/open/floor/bamboo
+	turf_type = /turf/simulated/open/floor/bamboo
 	merge_type = /obj/item/stack/tile/bamboo
 	resistance_flags = FLAMMABLE
 
@@ -142,7 +142,7 @@
 	desc = "Artificially made ashy soil themed on a hostile environment."
 	icon_state = "tile_basalt"
 	inhand_icon_state = "tile-basalt"
-	turf_type = /turf/open/floor/fakebasalt
+	turf_type = /turf/simulated/open/floor/fakebasalt
 	merge_type = /obj/item/stack/tile/basalt
 
 //Carpets
@@ -152,7 +152,7 @@
 	desc = "A piece of carpet. It is the same size as a floor tile."
 	icon_state = "tile-carpet"
 	inhand_icon_state = "tile-carpet"
-	turf_type = /turf/open/floor/carpet
+	turf_type = /turf/simulated/open/floor/carpet
 	resistance_flags = FLAMMABLE
 	tableVariant = /obj/structure/table/wood/fancy
 	merge_type = /obj/item/stack/tile/carpet
@@ -167,7 +167,7 @@
 	singular_name = "symbol carpet tile"
 	icon_state = "tile-carpet-symbol"
 	desc = "A piece of carpet. This one has a symbol on it."
-	turf_type = /turf/open/floor/carpet/lone
+	turf_type = /turf/simulated/open/floor/carpet/lone
 	merge_type = /obj/item/stack/tile/carpet/symbol
 	tile_rotate_dirs = list(SOUTH, NORTH, EAST, WEST, SOUTHEAST)
 
@@ -176,14 +176,14 @@
 	singular_name = "star carpet tile"
 	icon_state = "tile-carpet-star"
 	desc = "A piece of carpet. This one has a star on it."
-	turf_type = /turf/open/floor/carpet/lone/star
+	turf_type = /turf/simulated/open/floor/carpet/lone/star
 	merge_type = /obj/item/stack/tile/carpet/star
 
 /obj/item/stack/tile/carpet/black
 	name = "black carpet"
 	icon_state = "tile-carpet-black"
 	inhand_icon_state = "tile-carpet-black"
-	turf_type = /turf/open/floor/carpet/black
+	turf_type = /turf/simulated/open/floor/carpet/black
 	tableVariant = /obj/structure/table/wood/fancy/black
 	merge_type = /obj/item/stack/tile/carpet/black
 
@@ -191,7 +191,7 @@
 	name = "blue carpet"
 	icon_state = "tile-carpet-blue"
 	inhand_icon_state = "tile-carpet-blue"
-	turf_type = /turf/open/floor/carpet/blue
+	turf_type = /turf/simulated/open/floor/carpet/blue
 	tableVariant = /obj/structure/table/wood/fancy/blue
 	merge_type = /obj/item/stack/tile/carpet/blue
 
@@ -199,7 +199,7 @@
 	name = "cyan carpet"
 	icon_state = "tile-carpet-cyan"
 	inhand_icon_state = "tile-carpet-cyan"
-	turf_type = /turf/open/floor/carpet/cyan
+	turf_type = /turf/simulated/open/floor/carpet/cyan
 	tableVariant = /obj/structure/table/wood/fancy/cyan
 	merge_type = /obj/item/stack/tile/carpet/cyan
 
@@ -207,7 +207,7 @@
 	name = "green carpet"
 	icon_state = "tile-carpet-green"
 	inhand_icon_state = "tile-carpet-green"
-	turf_type = /turf/open/floor/carpet/green
+	turf_type = /turf/simulated/open/floor/carpet/green
 	tableVariant = /obj/structure/table/wood/fancy/green
 	merge_type = /obj/item/stack/tile/carpet/green
 
@@ -215,7 +215,7 @@
 	name = "orange carpet"
 	icon_state = "tile-carpet-orange"
 	inhand_icon_state = "tile-carpet-orange"
-	turf_type = /turf/open/floor/carpet/orange
+	turf_type = /turf/simulated/open/floor/carpet/orange
 	tableVariant = /obj/structure/table/wood/fancy/orange
 	merge_type = /obj/item/stack/tile/carpet/orange
 
@@ -223,7 +223,7 @@
 	name = "purple carpet"
 	icon_state = "tile-carpet-purple"
 	inhand_icon_state = "tile-carpet-purple"
-	turf_type = /turf/open/floor/carpet/purple
+	turf_type = /turf/simulated/open/floor/carpet/purple
 	tableVariant = /obj/structure/table/wood/fancy/purple
 	merge_type = /obj/item/stack/tile/carpet/purple
 
@@ -231,7 +231,7 @@
 	name = "red carpet"
 	icon_state = "tile-carpet-red"
 	inhand_icon_state = "tile-carpet-red"
-	turf_type = /turf/open/floor/carpet/red
+	turf_type = /turf/simulated/open/floor/carpet/red
 	tableVariant = /obj/structure/table/wood/fancy/red
 	merge_type = /obj/item/stack/tile/carpet/red
 
@@ -239,7 +239,7 @@
 	name = "royal black carpet"
 	icon_state = "tile-carpet-royalblack"
 	inhand_icon_state = "tile-carpet-royalblack"
-	turf_type = /turf/open/floor/carpet/royalblack
+	turf_type = /turf/simulated/open/floor/carpet/royalblack
 	tableVariant = /obj/structure/table/wood/fancy/royalblack
 	merge_type = /obj/item/stack/tile/carpet/royalblack
 
@@ -247,7 +247,7 @@
 	name = "royal blue carpet"
 	icon_state = "tile-carpet-royalblue"
 	inhand_icon_state = "tile-carpet-royalblue"
-	turf_type = /turf/open/floor/carpet/royalblue
+	turf_type = /turf/simulated/open/floor/carpet/royalblue
 	tableVariant = /obj/structure/table/wood/fancy/royalblue
 	merge_type = /obj/item/stack/tile/carpet/royalblue
 
@@ -255,21 +255,21 @@
 	name = "executive carpet"
 	icon_state = "tile_carpet_executive"
 	inhand_icon_state = "tile-carpet-royalblue"
-	turf_type = /turf/open/floor/carpet/executive
+	turf_type = /turf/simulated/open/floor/carpet/executive
 	merge_type = /obj/item/stack/tile/carpet/executive
 
 /obj/item/stack/tile/carpet/stellar
 	name = "stellar carpet"
 	icon_state = "tile_carpet_stellar"
 	inhand_icon_state = "tile-carpet-royalblue"
-	turf_type = /turf/open/floor/carpet/stellar
+	turf_type = /turf/simulated/open/floor/carpet/stellar
 	merge_type = /obj/item/stack/tile/carpet/stellar
 
 /obj/item/stack/tile/carpet/donk
 	name = "\improper Donk Co. promotional carpet"
 	icon_state = "tile_carpet_donk"
 	inhand_icon_state = "tile-carpet-orange"
-	turf_type = /turf/open/floor/carpet/donk
+	turf_type = /turf/simulated/open/floor/carpet/donk
 	merge_type = /obj/item/stack/tile/carpet/donk
 
 /obj/item/stack/tile/carpet/fifty
@@ -316,7 +316,7 @@
 	singular_name = "neon carpet tile"
 	desc = "A piece of rubbery mat inset with a phosphorescent pattern."
 	inhand_icon_state = "tile-neon"
-	turf_type = /turf/open/floor/carpet/neon
+	turf_type = /turf/simulated/open/floor/carpet/neon
 	merge_type = /obj/item/stack/tile/carpet/neon
 
 	// Neon overlay
@@ -354,7 +354,7 @@
 	icon_state = "tile_carpet_neon_simple"
 	neon_icon_state = "tile_carpet_neon_simple_light"
 	neon_inhand_icon_state = "tile-neon-glow"
-	turf_type = /turf/open/floor/carpet/neon/simple
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple
 	merge_type = /obj/item/stack/tile/carpet/neon/simple
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple,
@@ -365,7 +365,7 @@
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
 	neon_inhand_icon_state = "tile-neon-glow-nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple,
 		/obj/item/stack/tile/carpet/neon/simple/nodots,
@@ -374,7 +374,7 @@
 /obj/item/stack/tile/carpet/neon/simple/white
 	name = "simple white neon carpet"
 	singular_name = "simple white neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/white
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/white
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/white
 	neon_color = COLOR_WHITE
 	tile_reskin_types = list(
@@ -385,7 +385,7 @@
 /obj/item/stack/tile/carpet/neon/simple/white/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/white/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/white/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/white/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/white,
@@ -396,7 +396,7 @@
 	name = "simple black neon carpet"
 	singular_name = "simple black neon carpet tile"
 	neon_icon_state = "tile_carpet_neon_simple_glow"
-	turf_type = /turf/open/floor/carpet/neon/simple/black
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/black
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/black
 	neon_color = COLOR_BLACK
 	tile_reskin_types = list(
@@ -407,7 +407,7 @@
 /obj/item/stack/tile/carpet/neon/simple/black/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_glow_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/black/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/black/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/black/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/black,
@@ -417,7 +417,7 @@
 /obj/item/stack/tile/carpet/neon/simple/red
 	name = "simple red neon carpet"
 	singular_name = "simple red neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/red
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/red
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/red
 	neon_color = COLOR_RED
 	tile_reskin_types = list(
@@ -428,7 +428,7 @@
 /obj/item/stack/tile/carpet/neon/simple/red/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/red/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/red/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/red/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/red,
@@ -438,7 +438,7 @@
 /obj/item/stack/tile/carpet/neon/simple/orange
 	name = "simple orange neon carpet"
 	singular_name = "simple orange neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/orange
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/orange
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/orange
 	neon_color = COLOR_ORANGE
 	tile_reskin_types = list(
@@ -449,7 +449,7 @@
 /obj/item/stack/tile/carpet/neon/simple/orange/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/orange/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/orange/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/orange/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/orange,
@@ -459,7 +459,7 @@
 /obj/item/stack/tile/carpet/neon/simple/yellow
 	name = "simple yellow neon carpet"
 	singular_name = "simple yellow neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/yellow
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/yellow
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/yellow
 	neon_color = COLOR_YELLOW
 	tile_reskin_types = list(
@@ -470,7 +470,7 @@
 /obj/item/stack/tile/carpet/neon/simple/yellow/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/yellow/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/yellow/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/yellow/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/yellow,
@@ -480,7 +480,7 @@
 /obj/item/stack/tile/carpet/neon/simple/lime
 	name = "simple lime neon carpet"
 	singular_name = "simple lime neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/lime
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/lime
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/lime
 	neon_color = COLOR_LIME
 	tile_reskin_types = list(
@@ -491,7 +491,7 @@
 /obj/item/stack/tile/carpet/neon/simple/lime/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/lime/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/lime/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/lime/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/lime,
@@ -501,7 +501,7 @@
 /obj/item/stack/tile/carpet/neon/simple/green
 	name = "simple green neon carpet"
 	singular_name = "simple green neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/green
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/green
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/green
 	neon_color = COLOR_GREEN
 	tile_reskin_types = list(
@@ -512,7 +512,7 @@
 /obj/item/stack/tile/carpet/neon/simple/green/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/green/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/green/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/green/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/green,
@@ -522,7 +522,7 @@
 /obj/item/stack/tile/carpet/neon/simple/teal
 	name = "simple teal neon carpet"
 	singular_name = "simple teal neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/teal
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/teal
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/teal
 	neon_color = COLOR_TEAL
 	tile_reskin_types = list(
@@ -533,7 +533,7 @@
 /obj/item/stack/tile/carpet/neon/simple/teal/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/teal/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/teal/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/teal/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/teal,
@@ -543,7 +543,7 @@
 /obj/item/stack/tile/carpet/neon/simple/cyan
 	name = "simple cyan neon carpet"
 	singular_name = "simple cyan neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/cyan
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/cyan
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/cyan
 	neon_color = COLOR_CYAN
 	tile_reskin_types = list(
@@ -554,7 +554,7 @@
 /obj/item/stack/tile/carpet/neon/simple/cyan/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/cyan/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/cyan/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/cyan/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/cyan,
@@ -564,7 +564,7 @@
 /obj/item/stack/tile/carpet/neon/simple/blue
 	name = "simple blue neon carpet"
 	singular_name = "simple blue neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/blue
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/blue
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/blue
 	neon_color = COLOR_BLUE
 	tile_reskin_types = list(
@@ -575,7 +575,7 @@
 /obj/item/stack/tile/carpet/neon/simple/blue/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/blue/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/blue/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/blue/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/blue,
@@ -585,7 +585,7 @@
 /obj/item/stack/tile/carpet/neon/simple/purple
 	name = "simple purple neon carpet"
 	singular_name = "simple purple neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/purple
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/purple
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/purple
 	neon_color = COLOR_PURPLE
 	tile_reskin_types = list(
@@ -596,7 +596,7 @@
 /obj/item/stack/tile/carpet/neon/simple/purple/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/purple/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/purple/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/purple/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/purple,
@@ -606,7 +606,7 @@
 /obj/item/stack/tile/carpet/neon/simple/violet
 	name = "simple violet neon carpet"
 	singular_name = "simple violet neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/violet
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/violet
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/violet
 	neon_color = COLOR_VIOLET
 	tile_reskin_types = list(
@@ -617,7 +617,7 @@
 /obj/item/stack/tile/carpet/neon/simple/violet/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/violet/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/violet/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/violet/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/violet,
@@ -627,7 +627,7 @@
 /obj/item/stack/tile/carpet/neon/simple/pink
 	name = "simple pink neon carpet"
 	singular_name = "simple pink neon carpet tile"
-	turf_type = /turf/open/floor/carpet/neon/simple/pink
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/pink
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/pink
 	neon_color = COLOR_LIGHT_PINK
 	tile_reskin_types = list(
@@ -638,7 +638,7 @@
 /obj/item/stack/tile/carpet/neon/simple/pink/nodots
 	icon_state = "tile_carpet_neon_simple_nodots"
 	neon_icon_state = "tile_carpet_neon_simple_light_nodots"
-	turf_type = /turf/open/floor/carpet/neon/simple/pink/nodots
+	turf_type = /turf/simulated/open/floor/carpet/neon/simple/pink/nodots
 	merge_type = /obj/item/stack/tile/carpet/neon/simple/pink/nodots
 	tile_reskin_types = list(
 		/obj/item/stack/tile/carpet/neon/simple/pink,
@@ -912,7 +912,7 @@
 	desc = "A piece of carpet with a convincing star pattern."
 	icon_state = "tile_space"
 	inhand_icon_state = "tile-space"
-	turf_type = /turf/open/floor/fakespace
+	turf_type = /turf/simulated/open/floor/fakespace
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/tile/fakespace
 
@@ -925,7 +925,7 @@
 	desc = "A piece of carpet with a forced perspective illusion of a pit. No way this could fool anyone!"
 	icon_state = "tile_pit"
 	inhand_icon_state = "tile-basalt"
-	turf_type = /turf/open/floor/fakepit
+	turf_type = /turf/simulated/open/floor/fakepit
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/tile/fakepit
 
@@ -939,7 +939,7 @@
 	desc = "A high-traction floor tile. It feels rubbery in your hand."
 	icon_state = "tile_noslip"
 	inhand_icon_state = "tile-noslip"
-	turf_type = /turf/open/floor/noslip
+	turf_type = /turf/simulated/open/floor/noslip
 	merge_type = /obj/item/stack/tile/noslip
 
 /obj/item/stack/tile/noslip/thirty
@@ -952,7 +952,7 @@
 	desc = "A blue circuit tile."
 	icon_state = "tile_bcircuit"
 	inhand_icon_state = "tile-bcircuit"
-	turf_type = /turf/open/floor/circuit
+	turf_type = /turf/simulated/open/floor/circuit
 	merge_type = /obj/item/stack/tile/circuit
 
 /obj/item/stack/tile/circuit/green
@@ -961,11 +961,11 @@
 	desc = "A green circuit tile."
 	icon_state = "tile_gcircuit"
 	inhand_icon_state = "tile-gcircuit"
-	turf_type = /turf/open/floor/circuit/green
+	turf_type = /turf/simulated/open/floor/circuit/green
 	merge_type = /obj/item/stack/tile/circuit/green
 
 /obj/item/stack/tile/circuit/green/anim
-	turf_type = /turf/open/floor/circuit/green/anim
+	turf_type = /turf/simulated/open/floor/circuit/green/anim
 	merge_type = /obj/item/stack/tile/circuit/green/anim
 
 /obj/item/stack/tile/circuit/red
@@ -974,11 +974,11 @@
 	desc = "A red circuit tile."
 	icon_state = "tile_rcircuit"
 	inhand_icon_state = "tile-rcircuit"
-	turf_type = /turf/open/floor/circuit/red
+	turf_type = /turf/simulated/open/floor/circuit/red
 	merge_type = /obj/item/stack/tile/circuit/red
 
 /obj/item/stack/tile/circuit/red/anim
-	turf_type = /turf/open/floor/circuit/red/anim
+	turf_type = /turf/simulated/open/floor/circuit/red/anim
 	merge_type = /obj/item/stack/tile/circuit/red/anim
 
 //Pod floor
@@ -988,7 +988,7 @@
 	desc = "A grooved floor tile."
 	icon_state = "tile_pod"
 	inhand_icon_state = "tile-pod"
-	turf_type = /turf/open/floor/pod
+	turf_type = /turf/simulated/open/floor/pod
 	merge_type = /obj/item/stack/tile/pod
 	tile_reskin_types = list(
 		/obj/item/stack/tile/pod,
@@ -1001,7 +1001,7 @@
 	singular_name = "light pod floor tile"
 	desc = "A lightly colored grooved floor tile."
 	icon_state = "tile_podlight"
-	turf_type = /turf/open/floor/pod/light
+	turf_type = /turf/simulated/open/floor/pod/light
 	merge_type = /obj/item/stack/tile/pod/light
 
 /obj/item/stack/tile/pod/dark
@@ -1009,7 +1009,7 @@
 	singular_name = "dark pod floor tile"
 	desc = "A darkly colored grooved floor tile."
 	icon_state = "tile_poddark"
-	turf_type = /turf/open/floor/pod/dark
+	turf_type = /turf/simulated/open/floor/pod/dark
 	merge_type = /obj/item/stack/tile/pod/dark
 
 /obj/item/stack/tile/plastic
@@ -1018,7 +1018,7 @@
 	desc = "A tile of cheap, flimsy plastic flooring."
 	icon_state = "tile_plastic"
 	mats_per_unit = list(/datum/material/plastic=500)
-	turf_type = /turf/open/floor/plastic
+	turf_type = /turf/simulated/open/floor/plastic
 	merge_type = /obj/item/stack/tile/plastic
 
 /obj/item/stack/tile/material
@@ -1027,13 +1027,13 @@
 	desc = "The ground you walk on."
 	throwforce = 10
 	icon_state = "material_tile"
-	turf_type = /turf/open/floor/material
+	turf_type = /turf/simulated/open/floor/material
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS
 	merge_type = /obj/item/stack/tile/material
 
-/obj/item/stack/tile/material/place_tile(turf/open/T)
+/obj/item/stack/tile/material/place_tile(turf/simulated/open/T)
 	. = ..()
-	var/turf/open/floor/material/F = .
+	var/turf/simulated/open/floor/material/F = .
 	F?.set_custom_materials(mats_per_unit)
 
 /obj/item/stack/tile/eighties
@@ -1041,7 +1041,7 @@
 	singular_name = "retro floor tile"
 	desc = "A stack of floor tiles that remind you of an age of funk. Use in your hand to pick between a black or red pattern."
 	icon_state = "tile_eighties"
-	turf_type = /turf/open/floor/eighties
+	turf_type = /turf/simulated/open/floor/eighties
 	merge_type = /obj/item/stack/tile/eighties
 	tile_reskin_types = list(
 		/obj/item/stack/tile/eighties,
@@ -1056,7 +1056,7 @@
 	singular_name = "red retro floor tile"
 	desc = "A stack of REDICAL floor tiles! Use in your hand to pick between a black or red pattern!" //i am so sorry
 	icon_state = "tile_eightiesred"
-	turf_type = /turf/open/floor/eighties/red
+	turf_type = /turf/simulated/open/floor/eighties/red
 	merge_type = /obj/item/stack/tile/eighties/red
 
 /obj/item/stack/tile/bronze
@@ -1064,7 +1064,7 @@
 	singular_name = "bronze floor tile"
 	desc = "A clangy tile made of high-quality bronze. Clockwork construction techniques allow the clanging to be minimized."
 	icon_state = "tile_brass"
-	turf_type = /turf/open/floor/bronze
+	turf_type = /turf/simulated/open/floor/bronze
 	mats_per_unit = list(/datum/material/bronze=500)
 	merge_type = /obj/item/stack/tile/bronze
 	tile_reskin_types = list(
@@ -1077,14 +1077,14 @@
 	name = "flat bronze tile"
 	singular_name = "flat bronze floor tile"
 	icon_state = "tile_reebe"
-	turf_type = /turf/open/floor/bronze/flat
+	turf_type = /turf/simulated/open/floor/bronze/flat
 	merge_type = /obj/item/stack/tile/bronze/flat
 
 /obj/item/stack/tile/bronze/filled
 	name = "filled bronze tile"
 	singular_name = "filled bronze floor tile"
 	icon_state = "tile_brass_filled"
-	turf_type = /turf/open/floor/bronze/filled
+	turf_type = /turf/simulated/open/floor/bronze/filled
 	merge_type = /obj/item/stack/tile/bronze/filled
 
 /obj/item/stack/tile/cult
@@ -1092,7 +1092,7 @@
 	singular_name = "engraved floor tile"
 	desc = "A strange tile made from runed metal. Doesn't seem to actually have any paranormal powers."
 	icon_state = "tile_cult"
-	turf_type = /turf/open/floor/cult
+	turf_type = /turf/simulated/open/floor/cult
 	mats_per_unit = list(/datum/material/runedmetal=500)
 	merge_type = /obj/item/stack/tile/cult
 
@@ -1101,7 +1101,7 @@
 	name = "emissive test tile"
 	singular_name = "emissive test floor tile"
 	desc = "A glow-in-the-dark floor tile used to test emissive turfs."
-	turf_type = /turf/open/floor/emissive_test
+	turf_type = /turf/simulated/open/floor/emissive_test
 	merge_type = /obj/item/stack/tile/emissive_test
 
 /obj/item/stack/tile/emissive_test/update_overlays()
@@ -1118,7 +1118,7 @@
 /obj/item/stack/tile/emissive_test/white
 	name = "white emissive test tile"
 	singular_name = "white emissive test floor tile"
-	turf_type = /turf/open/floor/emissive_test/white
+	turf_type = /turf/simulated/open/floor/emissive_test/white
 	merge_type = /obj/item/stack/tile/emissive_test/white
 
 /obj/item/stack/tile/emissive_test/white/sixty
@@ -1132,7 +1132,7 @@
 	icon_state = "maint_catwalk"
 	inhand_icon_state = "tile-catwalk"
 	mats_per_unit = list(/datum/material/iron=100)
-	turf_type = /turf/open/floor/catwalk_floor
+	turf_type = /turf/simulated/open/floor/catwalk_floor
 	merge_type = /obj/item/stack/tile/catwalk_tile //Just to be cleaner, these all stack with eachother
 	tile_reskin_types = list(
 		/obj/item/stack/tile/catwalk_tile,
@@ -1151,37 +1151,37 @@
 	name = "iron catwalk floor"
 	singular_name = "iron catwalk floor tile"
 	icon_state = "iron_catwalk"
-	turf_type = /turf/open/floor/catwalk_floor/iron
+	turf_type = /turf/simulated/open/floor/catwalk_floor/iron
 
 /obj/item/stack/tile/catwalk_tile/iron_white
 	name = "white catwalk floor"
 	singular_name = "white catwalk floor tile"
 	icon_state = "whiteiron_catwalk"
-	turf_type = /turf/open/floor/catwalk_floor/iron_white
+	turf_type = /turf/simulated/open/floor/catwalk_floor/iron_white
 
 /obj/item/stack/tile/catwalk_tile/iron_dark
 	name = "dark catwalk floor"
 	singular_name = "dark catwalk floor tile"
 	icon_state = "darkiron_catwalk"
-	turf_type = /turf/open/floor/catwalk_floor/iron_dark
+	turf_type = /turf/simulated/open/floor/catwalk_floor/iron_dark
 
 /obj/item/stack/tile/catwalk_tile/flat_white
 	name = "flat white catwalk floor"
 	singular_name = "flat white catwalk floor tile"
 	icon_state = "flatwhite_catwalk"
-	turf_type = /turf/open/floor/catwalk_floor/flat_white
+	turf_type = /turf/simulated/open/floor/catwalk_floor/flat_white
 
 /obj/item/stack/tile/catwalk_tile/titanium
 	name = "titanium catwalk floor"
 	singular_name = "titanium catwalk floor tile"
 	icon_state = "titanium_catwalk"
-	turf_type = /turf/open/floor/catwalk_floor/titanium
+	turf_type = /turf/simulated/open/floor/catwalk_floor/titanium
 
 /obj/item/stack/tile/catwalk_tile/iron_smooth //this is the greenish one
 	name = "smooth iron catwalk floor"
 	singular_name = "smooth iron catwalk floor tile"
 	icon_state = "smoothiron_catwalk"
-	turf_type = /turf/open/floor/catwalk_floor/iron_smooth
+	turf_type = /turf/simulated/open/floor/catwalk_floor/iron_smooth
 
 // Glass floors
 /obj/item/stack/tile/glass
@@ -1189,7 +1189,7 @@
 	singular_name = "glass floor tile"
 	desc = "Glass window floors, to let you see... Whatever that is down there."
 	icon_state = "tile_glass"
-	turf_type = /turf/open/floor/glass
+	turf_type = /turf/simulated/open/floor/glass
 	inhand_icon_state = "tile-glass"
 	merge_type = /obj/item/stack/tile/glass
 	mats_per_unit = list(/datum/material/glass=MINERAL_MATERIAL_AMOUNT * 0.25) // 4 tiles per sheet
@@ -1203,7 +1203,7 @@
 	desc = "Reinforced glass window floors. These bad boys are 50% stronger than their predecessors!"
 	icon_state = "tile_rglass"
 	inhand_icon_state = "tile-rglass"
-	turf_type = /turf/open/floor/glass/reinforced
+	turf_type = /turf/simulated/open/floor/glass/reinforced
 	merge_type = /obj/item/stack/tile/rglass
 	mats_per_unit = list(/datum/material/iron=MINERAL_MATERIAL_AMOUNT * 0.125, /datum/material/glass=MINERAL_MATERIAL_AMOUNT * 0.25) // 4 tiles per sheet
 

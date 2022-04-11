@@ -111,7 +111,7 @@
 	A.atmos_spawn_air("plasma=[volume];TEMP=[holder.chem_temp]")
 	holder.del_reagent(type)
 
-/datum/reagent/toxin/plasma/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/toxin/plasma/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	if(!istype(exposed_turf))
 		return
 	var/temp = holder ? holder.chem_temp : T20C

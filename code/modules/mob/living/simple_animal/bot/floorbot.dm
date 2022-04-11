@@ -198,23 +198,23 @@
 				target = T
 		if(!target)
 			process_type = HULL_BREACH //Ensures the floorbot does not try to "fix" space areas or shuttle docking zones.
-			target = scan(/turf/open/space)
+			target = scan(/turf/simulated/open/space)
 
 		if(!target && placetiles) //Finds a floor without a tile and gives it one.
 			process_type = PLACE_TILE //The target must be the floor and not a tile. The floor must not already have a floortile.
-			target = scan(/turf/open/floor)
+			target = scan(/turf/simulated/open/floor)
 
 		if(!target && fixfloors) //Repairs damaged floors and tiles.
 			process_type = FIX_TILE
-			target = scan(/turf/open/floor)
+			target = scan(/turf/simulated/open/floor)
 
 		if(!target && replacetiles && tilestack) //Replace a floor tile with custom tile
 			process_type = REPLACE_TILE //The target must be a tile. The floor must already have a floortile.
-			target = scan(/turf/open/floor)
+			target = scan(/turf/simulated/open/floor)
 
 	if(!target && bot_cover_flags & BOT_COVER_EMAGGED) //We are emagged! Time to rip up the floors!
 		process_type = TILE_EMAG
-		target = scan(/turf/open/floor)
+		target = scan(/turf/simulated/open/floor)
 
 
 	if(!target)
@@ -237,7 +237,7 @@
 			if(isturf(target) && !(bot_cover_flags & BOT_COVER_EMAGGED))
 				repair(target)
 			else if(bot_cover_flags & BOT_COVER_EMAGGED && isfloorturf(target))
-				var/turf/open/floor/F = target
+				var/turf/simulated/open/floor/F = target
 				toggle_magnet()
 				mode = BOT_REPAIRING
 				if(isplatingturf(F))
@@ -284,7 +284,7 @@
 //Floorbots, having several functions, need sort out special conditions here.
 /mob/living/simple_animal/bot/floorbot/process_scan(scan_target)
 	var/result
-	var/turf/open/floor/F
+	var/turf/simulated/open/floor/F
 	move_resist = initial(move_resist)
 	switch(process_type)
 		if(HULL_BREACH) //The most common job, patching breaches in the station's hull.
@@ -335,18 +335,18 @@
 		if(do_after(src, 50, target = target_turf) && mode == BOT_REPAIRING)
 			if(autotile) //Build the floor and include a tile.
 				if(replacetiles && tilestack)
-					target_turf.PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)	//make sure a hull is actually below the floor tile
+					target_turf.PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)	//make sure a hull is actually below the floor tile
 					tilestack.place_tile(target_turf)
 					if(!tilestack)
 						speak("Requesting refill of custom floor tiles to continue replacing.")
 				else
-					target_turf.PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)	//make sure a hull is actually below the floor tile
-					target_turf.PlaceOnTop(/turf/open/floor/iron, flags = CHANGETURF_INHERIT_AIR)
+					target_turf.PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)	//make sure a hull is actually below the floor tile
+					target_turf.PlaceOnTop(/turf/simulated/open/floor/iron, flags = CHANGETURF_INHERIT_AIR)
 			else //Build a hull plating without a floor tile.
-				target_turf.PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+				target_turf.PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 
 	else
-		var/turf/open/floor/F = target_turf
+		var/turf/simulated/open/floor/F = target_turf
 		var/success = FALSE
 		var/was_replacing = replacetiles
 
@@ -376,10 +376,10 @@
 				F.burnt = FALSE
 				F.icon_state = initial(F.icon_state)
 			else if(istype(is_this_maints, /area/maintenance))	//place catwalk if it's plating and we're in maints
-				F.PlaceOnTop(/turf/open/floor/catwalk_floor, flags = CHANGETURF_INHERIT_AIR)
+				F.PlaceOnTop(/turf/simulated/open/floor/catwalk_floor, flags = CHANGETURF_INHERIT_AIR)
 			else	//place normal tile if it's plating anywhere else
 				F = F.make_plating(TRUE) || F
-				F.PlaceOnTop(/turf/open/floor/iron, flags = CHANGETURF_INHERIT_AIR)
+				F.PlaceOnTop(/turf/simulated/open/floor/iron, flags = CHANGETURF_INHERIT_AIR)
 
 	if(!QDELETED(src))
 		go_idle()

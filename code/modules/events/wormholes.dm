@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(all_wormholes) // So we can pick wormholes to teleport to
 	endWhen = rand(40, 80)
 
 /datum/round_event/wormholes/start()
-	for(var/turf/open/floor/T in world)
+	for(var/turf/simulated/open/floor/T in world)
 		if(is_station_level(T.z))
 			pick_turfs += T
 

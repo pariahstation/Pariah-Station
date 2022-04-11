@@ -9,36 +9,36 @@
 	},
 /obj/item/clothing/under/syndicate/tacticool,
 /obj/item/clothing/under/syndicate/tacticool/skirt,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/mafia)
 "c" = (
 /turf/closed/wall/rust,
 /area/mafia)
 "d" = (
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "e" = (
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
 /area/mafia)
 "f" = (
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "panelscorched"
 	},
 /area/mafia)
 "g" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
 /area/mafia)
 "h" = (
 /obj/structure/grille/indestructable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "i" = (
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
 /area/mafia)
@@ -48,11 +48,11 @@
 	name = "Maintenance"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "k" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/mafia)
 "m" = (
 /obj/structure/closet/syndicate{
@@ -62,11 +62,11 @@
 /obj/item/clothing/under/syndicate/tacticool,
 /obj/item/clothing/under/syndicate/tacticool/skirt,
 /obj/effect/turf_decal/tile/red/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "n" = (
 /obj/effect/landmark/mafia,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/mafia)
 "o" = (
 /obj/effect/turf_decal/tile/red,
@@ -79,7 +79,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "p" = (
 /obj/machinery/door/poddoor/preopen{
@@ -105,26 +105,26 @@
 	dir = 1;
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "r" = (
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/mafia)
 "s" = (
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/mafia)
 "t" = (
-/turf/open/floor/circuit/red,
+/turf/simulated/open/floor/circuit/red,
 /area/mafia)
 "u" = (
 /obj/effect/baseturf_helper/asteroid,
 /obj/effect/landmark/mafia/town_center,
 /obj/structure/chair,
-/turf/open/floor/circuit/red,
+/turf/simulated/open/floor/circuit/red,
 /area/mafia)
 "v" = (
 /obj/mafia_game_board,
-/turf/open/floor/plating{
+/turf/simulated/open/floor/plating{
 	icon_state = "panelscorched"
 	},
 /area/mafia)
@@ -146,13 +146,13 @@
 	dir = 4;
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "y" = (
 /obj/structure/chair/office{
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/mafia)
 "z" = (
 /obj/effect/turf_decal/tile/red,
@@ -168,21 +168,21 @@
 /obj/structure/chair/office{
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "A" = (
 /obj/structure/chair/office{
 	dir = 8;
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/mafia)
 "B" = (
 /obj/structure/chair/office{
 	dir = 4;
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/mafia)
 "C" = (
 /obj/effect/turf_decal/tile/red,
@@ -199,14 +199,14 @@
 	dir = 8;
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "E" = (
 /obj/structure/chair/office{
 	dir = 1;
 	name = "tactical swivel chair"
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/mafia)
 "F" = (
 /obj/effect/turf_decal/tile/red,
@@ -225,7 +225,7 @@
 	},
 /obj/item/clothing/under/syndicate/tacticool,
 /obj/item/clothing/under/syndicate/tacticool/skirt,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "G" = (
 /obj/effect/turf_decal/tile/red,
@@ -244,7 +244,7 @@
 	name = "red closet"
 	},
 /obj/item/clothing/under/syndicate/tacticool/skirt,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 "H" = (
 /obj/effect/turf_decal/tile/red,
@@ -258,7 +258,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/mafia,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/mafia)
 
 (1,1,1) = {"

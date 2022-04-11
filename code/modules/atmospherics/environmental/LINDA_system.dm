@@ -14,12 +14,12 @@
 /turf
 	can_atmos_pass = ATMOS_PASS_NO
 
-/turf/open
+/turf/simulated/open
 	can_atmos_pass = ATMOS_PASS_PROC
 
 ///Do NOT use this to see if 2 turfs are connected, it mutates state, and we cache that info anyhow.
 ///Use TURFS_CAN_SHARE or TURF_SHARES depending on your usecase
-/turf/open/can_atmos_pass(turf/target_turf, vertical = FALSE)
+/turf/simulated/open/can_atmos_pass(turf/target_turf, vertical = FALSE)
 	var/can_pass = TRUE
 	var/direction = vertical ? get_dir_multiz(src, target_turf) : get_dir(src, target_turf)
 	var/opposite_direction = REVERSE_DIR(direction)
@@ -143,12 +143,12 @@
 	air_update_turf(TRUE, TRUE) //You aren't
 
 /atom/proc/atmos_spawn_air(text) //because a lot of people loves to copy paste awful code lets just make an easy proc to spawn your plasma fires
-	var/turf/open/local_turf = get_turf(src)
+	var/turf/simulated/open/local_turf = get_turf(src)
 	if(!istype(local_turf))
 		return
 	local_turf.atmos_spawn_air(text)
 
-/turf/open/atmos_spawn_air(text)
+/turf/simulated/open/atmos_spawn_air(text)
 	if(!text || !air)
 		return
 

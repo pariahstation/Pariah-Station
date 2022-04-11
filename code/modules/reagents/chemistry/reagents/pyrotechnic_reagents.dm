@@ -57,11 +57,11 @@
 /datum/reagent/clf3/expose_turf(turf/exposed_turf, reac_volume)
 	. = ..()
 	if(isplatingturf(exposed_turf))
-		var/turf/open/floor/plating/target_plating = exposed_turf
+		var/turf/simulated/open/floor/plating/target_plating = exposed_turf
 		if(prob(10 + target_plating.burnt + 5*target_plating.broken)) //broken or burnt plating is more susceptible to being destroyed
 			target_plating.ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 	if(isfloorturf(exposed_turf) && prob(reac_volume))
-		var/turf/open/floor/target_floor = exposed_turf
+		var/turf/simulated/open/floor/target_floor = exposed_turf
 		target_floor.make_plating()
 	else if(prob(reac_volume))
 		exposed_turf.burn_tile()
@@ -365,7 +365,7 @@
 	taste_description = "the inside of a fire extinguisher"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/firefighting_foam/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/firefighting_foam/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if (!istype(exposed_turf))
 		return

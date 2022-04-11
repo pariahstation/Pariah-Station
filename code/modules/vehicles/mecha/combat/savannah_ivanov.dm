@@ -171,7 +171,7 @@
 	var/turf/landed_on = get_turf(chassis)
 	for(var/thing in range(1, chassis))
 		if(isopenturf(thing))
-			var/turf/open/floor/crushed_tile = thing
+			var/turf/simulated/open/floor/crushed_tile = thing
 			crushed_tile.break_tile()
 			continue
 		if(isclosedturf(thing) && thing == landed_on)

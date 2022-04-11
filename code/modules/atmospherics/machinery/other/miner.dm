@@ -46,7 +46,7 @@
 		broken_message = span_boldnotice("VENT BLOCKED")
 		set_broken(TRUE)
 		return FALSE
-	var/turf/open/OT = T
+	var/turf/simulated/open/OT = T
 	if(OT.planetary_atmos)
 		broken_message = span_boldwarning("DEVICE NOT ENCLOSED IN A PRESSURIZED ENVIRONMENT")
 		set_broken(TRUE)
@@ -130,7 +130,7 @@
 			mine_gas(delta_time)
 
 /obj/machinery/atmospherics/miner/proc/mine_gas(delta_time = 2)
-	var/turf/open/O = get_turf(src)
+	var/turf/simulated/open/O = get_turf(src)
 	if(!isopenturf(O))
 		return FALSE
 	var/datum/gas_mixture/merger = new

@@ -315,7 +315,7 @@
 		. = FALSE //getting choked
 
 	if(isturf(loc) && isopenturf(loc))
-		var/turf/open/ST = loc
+		var/turf/simulated/open/ST = loc
 		if(ST.air)
 			var/ST_gases = ST.air.gases
 			ST.air.assert_gases(arglist(GLOB.hardcoded_gases))

@@ -1,4 +1,4 @@
-/turf/open/misc/ashplanet
+/turf/simulated/open/misc/ashplanet
 	icon = 'icons/turf/mining.dmi'
 	gender = PLURAL
 	name = "ash"
@@ -6,7 +6,7 @@
 	base_icon_state = "ash"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	desc = "The ground is covered in volcanic ash."
-	baseturfs = /turf/open/misc/ashplanet/wateryrock //I assume this will be a chasm eventually, once this becomes an actual surface
+	baseturfs = /turf/simulated/open/misc/ashplanet/wateryrock //I assume this will be a chasm eventually, once this becomes an actual surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 
@@ -18,7 +18,7 @@
 	var/smooth_icon = 'icons/turf/floors/ash.dmi'
 
 
-/turf/open/misc/ashplanet/Initialize(mapload)
+/turf/simulated/open/misc/ashplanet/Initialize(mapload)
 	. = ..()
 	if(smoothing_flags & SMOOTH_BITMASK)
 		var/matrix/M = new
@@ -27,19 +27,19 @@
 		icon = smooth_icon
 		icon_state = "[icon_state]-[smoothing_junction]"
 
-/turf/open/misc/ashplanet/break_tile()
+/turf/simulated/open/misc/ashplanet/break_tile()
 	return
 
-/turf/open/misc/ashplanet/burn_tile()
+/turf/simulated/open/misc/ashplanet/burn_tile()
 	return
 
-/turf/open/misc/ashplanet/ash
+/turf/simulated/open/misc/ashplanet/ash
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_FLOOR_ASH)
 	canSmoothWith = list(SMOOTH_GROUP_FLOOR_ASH, SMOOTH_GROUP_CLOSED_TURFS)
 	layer = HIGH_TURF_LAYER
 	slowdown = 1
 
-/turf/open/misc/ashplanet/rocky
+/turf/simulated/open/misc/ashplanet/rocky
 	gender = PLURAL
 	name = "rocky ground"
 	icon_state = "rockyash"
@@ -53,7 +53,7 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/misc/ashplanet/wateryrock
+/turf/simulated/open/misc/ashplanet/wateryrock
 	gender = PLURAL
 	name = "wet rocky ground"
 	smoothing_flags = NONE
@@ -65,6 +65,6 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/misc/ashplanet/wateryrock/Initialize(mapload)
+/turf/simulated/open/misc/ashplanet/wateryrock/Initialize(mapload)
 	icon_state = "[icon_state][rand(1, 9)]"
 	. = ..()

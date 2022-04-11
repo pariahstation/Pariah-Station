@@ -6,7 +6,7 @@
 	flags_1 = CONDUCT_1
 	attack_verb_continuous = list("bashes", "batters", "bludgeons", "thrashes", "smashes")
 	attack_verb_simple = list("bash", "batter", "bludgeon", "thrash", "smash")
-	turf_type = /turf/open/floor/light
+	turf_type = /turf/simulated/open/floor/light
 	merge_type = /obj/item/stack/tile/light
 	var/state = 0
 
@@ -20,7 +20,7 @@
 	else
 		return ..()
 
-/obj/item/stack/tile/light/place_tile(turf/open/T)
+/obj/item/stack/tile/light/place_tile(turf/simulated/open/T)
 	. = ..()
-	var/turf/open/floor/light/F = .
+	var/turf/simulated/open/floor/light/F = .
 	F?.state = state

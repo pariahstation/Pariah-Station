@@ -20,9 +20,9 @@
 	var/lifetime = 40
 	var/reagent_divisor = 7
 	var/static/list/blacklisted_turfs = typecacheof(list(
-		/turf/open/space/transit,
-		/turf/open/chasm,
-		/turf/open/lava,
+		/turf/simulated/open/space/transit,
+		/turf/simulated/open/chasm,
+		/turf/simulated/open/lava,
 	))
 	var/slippery_foam = TRUE
 
@@ -40,7 +40,7 @@
 /obj/effect/particle_effect/foam/firefighting/process()
 	..()
 
-	var/turf/open/T = get_turf(src)
+	var/turf/simulated/open/T = get_turf(src)
 	var/obj/effect/hotspot/hotspot = (locate(/obj/effect/hotspot) in T)
 	if(hotspot && istype(T) && T.air)
 		qdel(hotspot)
@@ -125,7 +125,7 @@
 	if(metal)
 		var/turf/T = get_turf(src)
 		if(isspaceturf(T)) //Block up any exposed space
-			T.PlaceOnTop(/turf/open/floor/plating/foam, flags = CHANGETURF_INHERIT_AIR)
+			T.PlaceOnTop(/turf/simulated/open/floor/plating/foam, flags = CHANGETURF_INHERIT_AIR)
 		for(var/direction in GLOB.cardinals)
 			var/turf/cardinal_turf = get_step(T, direction)
 			if(get_area(cardinal_turf) != get_area(T)) //We're at an area boundary, so let's block off this turf!
@@ -357,7 +357,7 @@
 /obj/structure/foamedmetal/resin/Initialize(mapload)
 	. = ..()
 	if(isopenturf(loc))
-		var/turf/open/O = loc
+		var/turf/simulated/open/O = loc
 		O.ClearWet()
 		if(O.air)
 			var/datum/gas_mixture/G = O.air

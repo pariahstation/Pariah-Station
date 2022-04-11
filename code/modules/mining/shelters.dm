@@ -6,8 +6,8 @@
 	var/list/banned_areas
 	var/list/banned_objects
 	has_ceiling = TRUE
-	ceiling_turf = /turf/open/floor/engine/hull
-	ceiling_baseturfs = list(/turf/open/floor/plating)
+	ceiling_turf = /turf/simulated/open/floor/engine/hull
+	ceiling_baseturfs = list(/turf/simulated/open/floor/plating)
 
 /datum/map_template/shelter/New()
 	. = ..()

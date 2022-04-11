@@ -1,5 +1,5 @@
 /zas_controller
-	var/plasma_controller/plc
+	var/pl_control/plc
 
 	var/fire_consuption_rate = 0.25
 	var/fire_consuption_rate_NAME = "Fire - Air Consumption Ratio"

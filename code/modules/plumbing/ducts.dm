@@ -360,8 +360,8 @@ All the important duct code:
 	check_attach_turf(target)
 
 /obj/item/stack/ducts/proc/check_attach_turf(atom/target)
-	if(istype(target, /turf/open) && use(1))
-		var/turf/open/open_turf = target
+	if(istype(target, /turf/simulated/open) && use(1))
+		var/turf/simulated/open/open_turf = target
 		new /obj/machinery/duct(open_turf, FALSE, GLOB.pipe_paint_colors[duct_color], layers[duct_layer])
 		playsound(get_turf(src), 'sound/machines/click.ogg', 50, TRUE)
 

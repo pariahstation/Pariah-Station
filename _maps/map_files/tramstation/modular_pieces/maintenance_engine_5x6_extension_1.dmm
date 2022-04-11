@@ -7,37 +7,37 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
 /obj/item/crowbar,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "h" = (
 /turf/template_noop,
 /area/template_noop)
 "y" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "E" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/girder,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "F" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/two,
 /obj/item/clothing/mask/gas,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "G" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/girder,
 /obj/structure/grille,
 /obj/modular_map_connector,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "L" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 
 (1,1,1) = {"

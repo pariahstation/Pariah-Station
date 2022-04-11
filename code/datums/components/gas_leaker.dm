@@ -31,7 +31,7 @@
 	src.leak_rate = leak_rate
 
 /datum/component/gas_leaker/Destroy(force, silent)
-	SSair.stop_processing_machine(src)
+	SSzas.stop_processing_machine(src)
 	return ..()
 
 /datum/component/gas_leaker/RegisterWithParent()

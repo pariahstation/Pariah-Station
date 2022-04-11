@@ -3,7 +3,7 @@
 	description = "Base experiment for scanning atoms with materials"
 	exp_tag = "Material Scan"
 	total_requirement = 8
-	possible_types = list(/obj/structure/chair, /obj/structure/toilet, /obj/structure/table, /turf/closed/wall, /turf/open/floor)
+	possible_types = list(/obj/structure/chair, /obj/structure/toilet, /obj/structure/table, /turf/closed/wall, /turf/simulated/open/floor)
 	///List of materials that can be required.
 	var/possible_material_types = list()
 	///List of materials actually required, indexed by the atom that is required.

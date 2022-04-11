@@ -8,7 +8,7 @@
 
 	blood_master.equip_to_slot_if_possible(holds_blood, ITEM_SLOT_FEET)
 
-	var/turf/open/move_to = get_step(blood_master, get_dir(blood_master, run_loc_floor_top_right))
+	var/turf/simulated/open/move_to = get_step(blood_master, get_dir(blood_master, run_loc_floor_top_right))
 	//We need to not be "on" the same tile as the pool
 	blood_master.forceMove(move_to)
 

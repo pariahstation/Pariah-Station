@@ -1,4 +1,4 @@
-/turf/open/space
+/turf/simulated/open/space
 	icon = 'icons/turf/space.dmi'
 	icon_state = "0"
 	name = "\proper space"
@@ -22,7 +22,7 @@
 	bullet_bounce_sound = null
 	vis_flags = VIS_INHERIT_ID //when this be added to vis_contents of something it be associated with something on clicking, important for visualisation of turf in openspace and interraction with openspace that show you turf.
 
-/turf/open/space/basic/New() //Do not convert to Initialize
+/turf/simulated/open/space/basic/New() //Do not convert to Initialize
 	//This is used to optimize the map loader
 	return
 
@@ -31,7 +31,7 @@
  *
  * Doesn't call parent, see [/atom/proc/Initialize]
  */
-/turf/open/space/Initialize(mapload)
+/turf/simulated/open/space/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE)
 	icon_state = SPACE_ICON_STATE
 	air = space_gas
@@ -76,31 +76,31 @@
 	return INITIALIZE_HINT_NORMAL
 
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
-/turf/open/space/attack_ghost(mob/dead/observer/user)
+/turf/simulated/open/space/attack_ghost(mob/dead/observer/user)
 	if(destination_z)
 		var/turf/T = locate(destination_x, destination_y, destination_z)
 		user.forceMove(T)
 
-/turf/open/space/Initalize_Atmos(times_fired)
+/turf/simulated/open/space/Initalize_Atmos(times_fired)
 	return
 
-/turf/open/space/TakeTemperature(temp)
+/turf/simulated/open/space/TakeTemperature(temp)
 
-/turf/open/space/RemoveLattice()
+/turf/simulated/open/space/RemoveLattice()
 	return
 
-/turf/open/space/AfterChange()
+/turf/simulated/open/space/AfterChange()
 	..()
 	atmos_overlay_types = null
 
-/turf/open/space/Assimilate_Air()
+/turf/simulated/open/space/Assimilate_Air()
 	return
 
 //IT SHOULD RETURN NULL YOU MONKEY, WHY IN TARNATION WHAT THE FUCKING FUCK
-/turf/open/space/remove_air(amount)
+/turf/simulated/open/space/remove_air(amount)
 	return null
 
-/turf/open/space/proc/update_starlight()
+/turf/simulated/open/space/proc/update_starlight()
 	if(CONFIG_GET(flag/starlight))
 		for(var/t in RANGE_TURFS(1,src)) //RANGE_TURFS is in code\__HELPERS\game.dm
 			if(isspaceturf(t))
@@ -110,16 +110,16 @@
 			return
 		set_light(0)
 
-/turf/open/space/attack_paw(mob/user, list/modifiers)
+/turf/simulated/open/space/attack_paw(mob/user, list/modifiers)
 	return attack_hand(user, modifiers)
 
-/turf/open/space/proc/CanBuildHere()
+/turf/simulated/open/space/proc/CanBuildHere()
 	return TRUE
 
-/turf/open/space/handle_slip()
+/turf/simulated/open/space/handle_slip()
 	return
 
-/turf/open/space/attackby(obj/item/C, mob/user, params)
+/turf/simulated/open/space/attackby(obj/item/C, mob/user, params)
 	..()
 	if(!CanBuildHere())
 		return
@@ -129,7 +129,7 @@
 		build_with_floor_tiles(C, user)
 
 
-/turf/open/space/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+/turf/simulated/open/space/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
 	if(!arrived || src != arrived.loc)
 		return
@@ -162,33 +162,33 @@
 			current_pull = current_pull.pulling
 
 
-/turf/open/space/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
+/turf/simulated/open/space/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return
 
-/turf/open/space/singularity_act()
+/turf/simulated/open/space/singularity_act()
 	return
 
-/turf/open/space/can_have_cabling()
+/turf/simulated/open/space/can_have_cabling()
 	if(locate(/obj/structure/lattice/catwalk, src))
 		return TRUE
 	return FALSE
 
-/turf/open/space/is_transition_turf()
+/turf/simulated/open/space/is_transition_turf()
 	if(destination_x || destination_y || destination_z)
 		return TRUE
 
 
-/turf/open/space/acid_act(acidpwr, acid_volume)
+/turf/simulated/open/space/acid_act(acidpwr, acid_volume)
 	return FALSE
 
-/turf/open/space/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+/turf/simulated/open/space/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	underlay_appearance.icon = 'icons/turf/space.dmi'
 	underlay_appearance.icon_state = SPACE_ICON_STATE
 	underlay_appearance.plane = PLANE_SPACE
 	return TRUE
 
 
-/turf/open/space/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
+/turf/simulated/open/space/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	if(!CanBuildHere())
 		return FALSE
 
@@ -201,18 +201,18 @@
 				return list("mode" = RCD_FLOORWALL, "delay" = 0, "cost" = 3)
 	return FALSE
 
-/turf/open/space/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
+/turf/simulated/open/space/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
 			to_chat(user, span_notice("You build a floor."))
-			PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+			PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 			return TRUE
 	return FALSE
 
-/turf/open/space/rust_heretic_act()
+/turf/simulated/open/space/rust_heretic_act()
 	return FALSE
 
-/turf/open/space/ReplaceWithLattice()
+/turf/simulated/open/space/ReplaceWithLattice()
 	var/dest_x = destination_x
 	var/dest_y = destination_y
 	var/dest_z = destination_z
@@ -221,27 +221,27 @@
 	destination_y = dest_y
 	destination_z = dest_z
 
-/turf/open/space/openspace
+/turf/simulated/open/space/openspace
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "invisible"
 
-/turf/open/space/openspace/Initialize(mapload) // handle plane and layer here so that they don't cover other obs/turfs in Dream Maker
+/turf/simulated/open/space/openspace/Initialize(mapload) // handle plane and layer here so that they don't cover other obs/turfs in Dream Maker
 	. = ..()
 	overlays += GLOB.openspace_backdrop_one_for_all //Special grey square for projecting backdrop darkness filter on it.
 	icon_state = "invisible"
 	return INITIALIZE_HINT_LATELOAD
 
-/turf/open/space/openspace/LateInitialize()
+/turf/simulated/open/space/openspace/LateInitialize()
 	. = ..()
 	AddElement(/datum/element/turf_z_transparency, is_openspace = TRUE)
 
-/turf/open/space/openspace/zAirIn()
+/turf/simulated/open/space/openspace/zAirIn()
 	return TRUE
 
-/turf/open/space/openspace/zAirOut()
+/turf/simulated/open/space/openspace/zAirOut()
 	return TRUE
 
-/turf/open/space/openspace/zPassIn(atom/movable/A, direction, turf/source)
+/turf/simulated/open/space/openspace/zPassIn(atom/movable/A, direction, turf/source)
 	if(direction == DOWN)
 		for(var/obj/contained_object in contents)
 			if(contained_object.obj_flags & BLOCK_Z_IN_DOWN)
@@ -254,7 +254,7 @@
 		return TRUE
 	return FALSE
 
-/turf/open/space/openspace/zPassOut(atom/movable/A, direction, turf/destination)
+/turf/simulated/open/space/openspace/zPassOut(atom/movable/A, direction, turf/destination)
 	if(A.anchored)
 		return FALSE
 	if(direction == DOWN)

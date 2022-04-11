@@ -70,7 +70,7 @@
 	update_mob()
 	playsound(loc, 'sound/effects/empulse.ogg', 50, TRUE)
 	radiation_pulse(src, max_range = rad_range, threshold = rad_threshold, chance = 100)
-	for (var/turf/open/floor/floor in view(freeze_range, loc))
+	for (var/turf/simulated/open/floor/floor in view(freeze_range, loc))
 		floor.MakeSlippery(TURF_WET_PERMAFROST, 6 MINUTES)
 		for(var/mob/living/carbon/victim in floor)
 			victim.adjustStaminaLoss(stamina_damage)

@@ -1,10 +1,10 @@
 ///LAVA
 
-/turf/open/lava
+/turf/simulated/open/lava
 	name = "lava"
 	icon_state = "lava"
 	gender = PLURAL //"That's some lava."
-	baseturfs = /turf/open/lava //lava all the way down
+	baseturfs = /turf/simulated/open/lava //lava all the way down
 	slowdown = 2
 
 	light_range = 2
@@ -27,30 +27,30 @@
 	/// objects with these flags won't burn.
 	var/immunity_resistance_flags = LAVA_PROOF
 
-/turf/open/lava/ex_act(severity, target)
+/turf/simulated/open/lava/ex_act(severity, target)
 	return
 
-/turf/open/lava/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
+/turf/simulated/open/lava/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return
 
-/turf/open/lava/Melt()
+/turf/simulated/open/lava/Melt()
 	to_be_destroyed = FALSE
 	return src
 
-/turf/open/lava/acid_act(acidpwr, acid_volume)
+/turf/simulated/open/lava/acid_act(acidpwr, acid_volume)
 	return FALSE
 
-/turf/open/lava/MakeDry(wet_setting = TURF_WET_WATER)
+/turf/simulated/open/lava/MakeDry(wet_setting = TURF_WET_WATER)
 	return
 
-/turf/open/lava/airless
+/turf/simulated/open/lava/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/lava/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+/turf/simulated/open/lava/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	if(burn_stuff(arrived))
 		START_PROCESSING(SSobj, src)
 
-/turf/open/lava/Exited(atom/movable/gone, direction)
+/turf/simulated/open/lava/Exited(atom/movable/gone, direction)
 	. = ..()
 	if(isliving(gone))
 		var/mob/living/L = gone
@@ -59,51 +59,51 @@
 		if(!L.on_fire)
 			L.update_fire()
 
-/turf/open/lava/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
+/turf/simulated/open/lava/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
 	if(burn_stuff(AM))
 		START_PROCESSING(SSobj, src)
 
-/turf/open/lava/process(delta_time)
+/turf/simulated/open/lava/process(delta_time)
 	if(!burn_stuff(null, delta_time))
 		STOP_PROCESSING(SSobj, src)
 
-/turf/open/lava/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
+/turf/simulated/open/lava/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)
 		if(RCD_FLOORWALL)
 			return list("mode" = RCD_FLOORWALL, "delay" = 0, "cost" = 3)
 	return FALSE
 
-/turf/open/lava/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
+/turf/simulated/open/lava/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
 	switch(passed_mode)
 		if(RCD_FLOORWALL)
 			to_chat(user, span_notice("You build a floor."))
-			PlaceOnTop(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
+			PlaceOnTop(/turf/simulated/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
 			return TRUE
 	return FALSE
 
-/turf/open/lava/rust_heretic_act()
+/turf/simulated/open/lava/rust_heretic_act()
 	return FALSE
 
-/turf/open/lava/singularity_act()
+/turf/simulated/open/lava/singularity_act()
 	return
 
-/turf/open/lava/singularity_pull(S, current_size)
+/turf/simulated/open/lava/singularity_pull(S, current_size)
 	return
 
-/turf/open/lava/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+/turf/simulated/open/lava/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	underlay_appearance.icon = 'icons/turf/floors.dmi'
 	underlay_appearance.icon_state = "basalt"
 	return TRUE
 
-/turf/open/lava/GetHeatCapacity()
+/turf/simulated/open/lava/GetHeatCapacity()
 	. = 700000
 
-/turf/open/lava/GetTemperature()
+/turf/simulated/open/lava/GetTemperature()
 	. = 5000
 
-/turf/open/lava/TakeTemperature(temp)
+/turf/simulated/open/lava/TakeTemperature(temp)
 
-/turf/open/lava/attackby(obj/item/C, mob/user, params)
+/turf/simulated/open/lava/attackby(obj/item/C, mob/user, params)
 	..()
 	if(istype(C, /obj/item/stack/rods/lava))
 		var/obj/item/stack/rods/lava/R = C
@@ -119,7 +119,7 @@
 			to_chat(user, span_warning("You need one rod to build a heatproof lattice."))
 		return
 
-/turf/open/lava/proc/is_safe()
+/turf/simulated/open/lava/proc/is_safe()
 	//if anything matching this typecache is found in the lava, we don't burn things
 	var/static/list/lava_safeties_typecache = typecacheof(list(/obj/structure/lattice/catwalk, /obj/structure/stone_tile, /obj/structure/lattice/lava))
 	var/list/found_safeties = typecache_filter_list(contents, lava_safeties_typecache)
@@ -136,7 +136,7 @@
 #define LAVA_BE_BURNING 2
 
 ///Proc that sets on fire something or everything on the turf that's not immune to lava. Returns TRUE to make the turf start processing.
-/turf/open/lava/proc/burn_stuff(atom/movable/to_burn, delta_time = 1)
+/turf/simulated/open/lava/proc/burn_stuff(atom/movable/to_burn, delta_time = 1)
 	if(is_safe())
 		return FALSE
 
@@ -152,7 +152,7 @@
 					continue
 		. = TRUE
 
-/turf/open/lava/proc/can_burn_stuff(atom/movable/burn_target)
+/turf/simulated/open/lava/proc/can_burn_stuff(atom/movable/burn_target)
 	if(burn_target.movement_type & (FLYING|FLOATING)) //you're flying over it.
 		return LAVA_BE_IGNORING
 
@@ -194,7 +194,7 @@
 #undef LAVA_BE_PROCESSING
 #undef LAVA_BE_BURNING
 
-/turf/open/lava/proc/do_burn(atom/movable/burn_target, delta_time = 1)
+/turf/simulated/open/lava/proc/do_burn(atom/movable/burn_target, delta_time = 1)
 	. = TRUE
 	if(isobj(burn_target))
 		var/obj/burn_obj = burn_target
@@ -222,9 +222,9 @@
 		burn_living.adjust_fire_stacks(lava_firestacks * delta_time)
 		burn_living.IgniteMob()
 
-/turf/open/lava/smooth
+/turf/simulated/open/lava/smooth
 	name = "lava"
-	baseturfs = /turf/open/lava/smooth
+	baseturfs = /turf/simulated/open/lava/smooth
 	icon = 'icons/turf/floors/lava.dmi'
 	icon_state = "lava-255"
 	base_icon_state = "lava"
@@ -232,10 +232,10 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_FLOOR_LAVA)
 	canSmoothWith = list(SMOOTH_GROUP_FLOOR_LAVA)
 
-/turf/open/lava/smooth/lava_land_surface
+/turf/simulated/open/lava/smooth/lava_land_surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
-	baseturfs = /turf/open/lava/smooth/lava_land_surface
+	baseturfs = /turf/simulated/open/lava/smooth/lava_land_surface
 
-/turf/open/lava/smooth/airless
+/turf/simulated/open/lava/smooth/airless
 	initial_gas_mix = AIRLESS_ATMOS

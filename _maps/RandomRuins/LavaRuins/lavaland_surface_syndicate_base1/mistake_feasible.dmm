@@ -12,7 +12,7 @@
 /mob/living/carbon/human/species/monkey{
 	faction = list("neutral","Syndicate")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "c" = (
 /obj/machinery/door/firedoor,
@@ -27,7 +27,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "d" = (
 /obj/structure/table/reinforced,
@@ -35,7 +35,7 @@
 /obj/item/taperecorder,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "f" = (
 /obj/structure/chair{
@@ -48,16 +48,16 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "h" = (
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "j" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "l" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -65,7 +65,7 @@
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "m" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
@@ -74,13 +74,13 @@
 	id = "lavalandsyndi";
 	name = "Syndicate Research Experimentation Shutters"
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/syndicate_lava_base/testlab)
 "n" = (
 /obj/structure/sign/warning/explosives/alt{
 	pixel_x = -32
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "p" = (
 /obj/structure/table/reinforced,
@@ -92,7 +92,7 @@
 	pixel_x = -6;
 	pixel_y = -3
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "q" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -101,7 +101,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4{
 	dir = 10
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "r" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
@@ -112,7 +112,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/syndicate_lava_base/testlab)
 "s" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -121,14 +121,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "t" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "u" = (
 /obj/machinery/door/airlock/hatch{
@@ -137,7 +137,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "w" = (
 /obj/machinery/airalarm/syndicate{
@@ -147,7 +147,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "x" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4{
@@ -156,7 +156,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "y" = (
 /obj/effect/decal/cleanable/dirt,
@@ -167,7 +167,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "z" = (
 /obj/machinery/firealarm/directional/south,
@@ -175,7 +175,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "B" = (
 /obj/machinery/light/small/directional/north,
@@ -190,13 +190,13 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "C" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "D" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -212,7 +212,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
 /obj/modular_map_connector,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "G" = (
 /obj/machinery/light/small/directional/south,
@@ -220,7 +220,7 @@
 /obj/item/storage/box/monkeycubes/syndicate,
 /obj/item/storage/box/monkeycubes/syndicate,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "I" = (
 /obj/structure/sign/warning/securearea,
@@ -229,17 +229,17 @@
 "K" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "L" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/syndicate_lava_base/testlab)
 "P" = (
 /obj/structure/sign/warning/explosives/alt{
 	pixel_x = 32
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "R" = (
 /obj/structure/table/reinforced,
@@ -249,16 +249,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "S" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "U" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "V" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4{
@@ -267,11 +267,11 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "W" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "X" = (
 /obj/effect/decal/cleanable/dirt,
@@ -280,11 +280,11 @@
 /obj/machinery/power/apc/auto_name/directional/south{
 	req_access_txt = "150"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 "Y" = (
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/ruin/syndicate_lava_base/testlab)
 "Z" = (
 /obj/structure/bed/roller,
@@ -295,7 +295,7 @@
 /mob/living/carbon/human/species/monkey{
 	faction = list("neutral","Syndicate")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/syndicate_lava_base/testlab)
 
 (1,1,1) = {"

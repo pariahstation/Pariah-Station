@@ -1,10 +1,10 @@
 /**********************Asteroid**************************/
 
-/turf/open/misc/asteroid //floor piece
+/turf/simulated/open/misc/asteroid //floor piece
 	gender = PLURAL
 	name = "asteroid sand"
 	desc = "It's coarse and rough and gets everywhere."
-	baseturfs = /turf/open/misc/asteroid
+	baseturfs = /turf/simulated/open/misc/asteroid
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	base_icon_state = "asteroid"
@@ -15,7 +15,7 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 	/// Base turf type to be created by the tunnel
-	var/turf_type = /turf/open/misc/asteroid
+	var/turf_type = /turf/simulated/open/misc/asteroid
 	/// Probability floor has a different icon state
 	var/floor_variance = 20
 	/// Itemstack to drop when dug by a shovel
@@ -25,10 +25,10 @@
 	/// Icon state to use when broken
 	var/broken_state = "asteroid_dug"
 
-/turf/open/misc/asteroid/break_tile()
+/turf/simulated/open/misc/asteroid/break_tile()
 	icon_state = broken_state
 
-/turf/open/misc/asteroid/Initialize(mapload)
+/turf/simulated/open/misc/asteroid/Initialize(mapload)
 	var/proper_name = name
 	. = ..()
 	name = proper_name
@@ -36,30 +36,30 @@
 		icon_state = "[base_icon_state][rand(0,12)]"
 
 /// Drops itemstack when dug and changes icon
-/turf/open/misc/asteroid/proc/getDug()
+/turf/simulated/open/misc/asteroid/proc/getDug()
 	dug = TRUE
 	new digResult(src, 5)
 	icon_state = "[base_icon_state]_dug"
 
 /// If the user can dig the turf
-/turf/open/misc/asteroid/proc/can_dig(mob/user)
+/turf/simulated/open/misc/asteroid/proc/can_dig(mob/user)
 	if(!dug)
 		return TRUE
 	if(user)
 		to_chat(user, span_warning("Looks like someone has dug here already!"))
 
-/turf/open/misc/asteroid/burn_tile()
+/turf/simulated/open/misc/asteroid/burn_tile()
 	return
-/turf/open/misc/asteroid/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
-	return
-
-/turf/open/misc/asteroid/MakeDry()
+/turf/simulated/open/misc/asteroid/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return
 
-/turf/open/misc/asteroid/ex_act(severity, target)
+/turf/simulated/open/misc/asteroid/MakeDry()
 	return
 
-/turf/open/misc/asteroid/attackby(obj/item/W, mob/user, params)
+/turf/simulated/open/misc/asteroid/ex_act(severity, target)
+	return
+
+/turf/simulated/open/misc/asteroid/attackby(obj/item/W, mob/user, params)
 	. = ..()
 	if(.)
 		return TRUE
@@ -85,10 +85,10 @@
 			SEND_SIGNAL(W, COMSIG_PARENT_ATTACKBY, O)
 
 
-/turf/open/floor/plating/lavaland_baseturf
-	baseturfs = /turf/open/misc/asteroid/basalt/lava_land_surface
+/turf/simulated/open/floor/plating/lavaland_baseturf
+	baseturfs = /turf/simulated/open/misc/asteroid/basalt/lava_land_surface
 
-/turf/open/misc/asteroid/dug //When you want one of these to be already dug.
+/turf/simulated/open/misc/asteroid/dug //When you want one of these to be already dug.
 	dug = TRUE
 	base_icon_state = "asteroid_dug"
 	icon_state = "asteroid_dug"
@@ -96,9 +96,9 @@
 /// Used by ashstorms to replenish basalt tiles that have been dug up without going through all of them.
 GLOBAL_LIST_EMPTY(dug_up_basalt)
 
-/turf/open/misc/asteroid/basalt
+/turf/simulated/open/misc/asteroid/basalt
 	name = "volcanic floor"
-	baseturfs = /turf/open/misc/asteroid/basalt
+	baseturfs = /turf/simulated/open/misc/asteroid/basalt
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "basalt"
 	base_icon_state = "basalt"
@@ -106,26 +106,26 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 	digResult = /obj/item/stack/ore/glass/basalt
 	broken_state = "basalt_dug"
 
-/turf/open/misc/asteroid/basalt/getDug()
+/turf/simulated/open/misc/asteroid/basalt/getDug()
 	set_light(0)
 	GLOB.dug_up_basalt |= src
 	return ..()
 
-/turf/open/misc/asteroid/basalt/Destroy()
+/turf/simulated/open/misc/asteroid/basalt/Destroy()
 	GLOB.dug_up_basalt -= src
 	return ..()
 
-/turf/open/misc/asteroid/basalt/lava //lava underneath
-	baseturfs = /turf/open/lava/smooth
+/turf/simulated/open/misc/asteroid/basalt/lava //lava underneath
+	baseturfs = /turf/simulated/open/lava/smooth
 
-/turf/open/misc/asteroid/basalt/airless
+/turf/simulated/open/misc/asteroid/basalt/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/misc/asteroid/basalt/Initialize(mapload)
+/turf/simulated/open/misc/asteroid/basalt/Initialize(mapload)
 	. = ..()
 	set_basalt_light(src)
 
-/proc/set_basalt_light(turf/open/floor/B)
+/proc/set_basalt_light(turf/simulated/open/floor/B)
 	switch(B.icon_state)
 		if("basalt1", "basalt2", "basalt3")
 			B.set_light(2, 0.6, LIGHT_COLOR_LAVA) //more light
@@ -134,27 +134,27 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 
 ///////Surface. The surface is warm, but survivable without a suit. Internals are required. The floors break to chasms, which drop you into the underground.
 
-/turf/open/misc/asteroid/basalt/lava_land_surface
+/turf/simulated/open/misc/asteroid/basalt/lava_land_surface
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	planetary_atmos = TRUE
-	baseturfs = /turf/open/lava/smooth/lava_land_surface
+	baseturfs = /turf/simulated/open/lava/smooth/lava_land_surface
 
-/turf/open/misc/asteroid/lowpressure
+/turf/simulated/open/misc/asteroid/lowpressure
 	initial_gas_mix = OPENTURF_LOW_PRESSURE
-	baseturfs = /turf/open/misc/asteroid/lowpressure
-	turf_type = /turf/open/misc/asteroid/lowpressure
+	baseturfs = /turf/simulated/open/misc/asteroid/lowpressure
+	turf_type = /turf/simulated/open/misc/asteroid/lowpressure
 
-/turf/open/misc/asteroid/airless
+/turf/simulated/open/misc/asteroid/airless
 	initial_gas_mix = AIRLESS_ATMOS
-	baseturfs = /turf/open/misc/asteroid/airless
-	turf_type = /turf/open/misc/asteroid/airless
+	baseturfs = /turf/simulated/open/misc/asteroid/airless
+	turf_type = /turf/simulated/open/misc/asteroid/airless
 
-/turf/open/misc/asteroid/snow
+/turf/simulated/open/misc/asteroid/snow
 	gender = PLURAL
 	name = "snow"
 	desc = "Looks cold."
 	icon = 'icons/turf/snow.dmi'
-	baseturfs = /turf/open/misc/asteroid/snow
+	baseturfs = /turf/simulated/open/misc/asteroid/snow
 	icon_state = "snow"
 	base_icon_state = "snow"
 	broken_state = "snow_dug"
@@ -167,7 +167,7 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 	digResult = /obj/item/stack/sheet/mineral/snow
 	var/burnt = FALSE
 
-/turf/open/misc/asteroid/snow/burn_tile()
+/turf/simulated/open/misc/asteroid/snow/burn_tile()
 	if(!burnt)
 		visible_message(span_danger("[src] melts away!."))
 		slowdown = 0
@@ -176,20 +176,20 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 		return TRUE
 	return FALSE
 
-/turf/open/misc/asteroid/snow/icemoon
-	baseturfs = /turf/open/openspace/icemoon
+/turf/simulated/open/misc/asteroid/snow/icemoon
+	baseturfs = /turf/simulated/open/openspace/icemoon
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
 	slowdown = 0
 
-/turf/open/lava/plasma/ice_moon
+/turf/simulated/open/lava/plasma/ice_moon
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
-	baseturfs = /turf/open/lava/plasma/ice_moon
+	baseturfs = /turf/simulated/open/lava/plasma/ice_moon
 	planetary_atmos = TRUE
 
-/turf/open/misc/asteroid/snow/ice
+/turf/simulated/open/misc/asteroid/snow/ice
 	name = "icy snow"
 	desc = "Looks colder."
-	baseturfs = /turf/open/misc/asteroid/snow/ice
+	baseturfs = /turf/simulated/open/misc/asteroid/snow/ice
 	initial_gas_mix = "n2=82;plasma=24;TEMP=120"
 	floor_variance = 0
 	icon_state = "snow-ice"
@@ -199,32 +199,32 @@ GLOBAL_LIST_EMPTY(dug_up_basalt)
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/misc/asteroid/snow/ice/break_tile()
+/turf/simulated/open/misc/asteroid/snow/ice/break_tile()
 	return
 
-/turf/open/misc/asteroid/snow/ice/icemoon
-	baseturfs = /turf/open/misc/asteroid/snow/ice/icemoon
+/turf/simulated/open/misc/asteroid/snow/ice/icemoon
+	baseturfs = /turf/simulated/open/misc/asteroid/snow/ice/icemoon
 	initial_gas_mix = ICEMOON_DEFAULT_ATMOS
 	planetary_atmos = TRUE
 	slowdown = 0
 
-/turf/open/misc/asteroid/snow/ice/burn_tile()
+/turf/simulated/open/misc/asteroid/snow/ice/burn_tile()
 	return FALSE
 
-/turf/open/misc/asteroid/snow/airless
+/turf/simulated/open/misc/asteroid/snow/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/misc/asteroid/snow/temperatre
+/turf/simulated/open/misc/asteroid/snow/temperatre
 	initial_gas_mix = "o2=22;n2=82;TEMP=255.37"
 
 //Used in SnowCabin.dm
-/turf/open/misc/asteroid/snow/snow_cabin
+/turf/simulated/open/misc/asteroid/snow/snow_cabin
 	temperature = 180
 
-/turf/open/misc/asteroid/snow/atmosphere
+/turf/simulated/open/misc/asteroid/snow/atmosphere
 	initial_gas_mix = FROZEN_ATMOS
 	planetary_atmos = FALSE
 
-/turf/open/misc/asteroid/snow/standard_air
+/turf/simulated/open/misc/asteroid/snow/standard_air
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	planetary_atmos = FALSE

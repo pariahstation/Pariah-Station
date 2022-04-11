@@ -369,7 +369,7 @@
 
 /// Incorporeal move check: blocked by holy-watered tiles and salt piles.
 /mob/living/simple_animal/revenant/proc/incorporeal_move_check(atom/destination)
-	var/turf/open/floor/stepTurf = get_turf(destination)
+	var/turf/simulated/open/floor/stepTurf = get_turf(destination)
 	if(stepTurf)
 		var/obj/effect/decal/cleanable/food/salt/salt = locate() in stepTurf
 		if(salt)

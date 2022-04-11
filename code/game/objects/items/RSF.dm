@@ -40,7 +40,7 @@ RSF
 	///An associated list of fuel and it's value
 	var/list/matter_by_item = list(/obj/item/rcd_ammo = 10,)
 	///A list of surfaces that we are allowed to place things on.
-	var/list/allowed_surfaces = list(/turf/open/floor, /obj/structure/table)
+	var/list/allowed_surfaces = list(/turf/simulated/open/floor, /obj/structure/table)
 	///The unit of mesure of the matter, for use in text
 	var/discriptor = "fabrication-units"
 	///The verb that describes what we're doing, for use in text

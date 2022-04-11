@@ -60,7 +60,7 @@ Regenerative extracts:
 
 /obj/item/slimecross/regenerative/blue/core_effect(mob/living/target, mob/user)
 	if(isturf(target.loc))
-		var/turf/open/T = get_turf(target)
+		var/turf/simulated/open/T = get_turf(target)
 		T.MakeSlippery(TURF_WET_WATER, min_wet_time = 10, wet_time_to_add = 5)
 		target.visible_message(span_warning("The milky goo in the extract gets all over the floor!"))
 
@@ -141,7 +141,7 @@ Regenerative extracts:
 /obj/item/slimecross/regenerative/bluespace
 	colour = "bluespace"
 	effect_desc = "Fully heals the target and teleports them to where this core was created."
-	var/turf/open/T
+	var/turf/simulated/open/T
 
 /obj/item/slimecross/regenerative/bluespace/core_effect(mob/living/target, mob/user)
 	var/turf/old_location = get_turf(target)

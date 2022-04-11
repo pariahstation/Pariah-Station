@@ -152,7 +152,7 @@
 			return TRUE
 
 	else if(isturf(target))
-		var/turf/open/T = target
+		var/turf/simulated/open/T = target
 		if(T.active_hotspot)
 			return TRUE
 
@@ -191,7 +191,7 @@
 			target_fire = scan(/mob/living, old_target_fire, scan_range) // Scan for burning humans first
 
 		if(target_fire == null && extinguish_fires)
-			target_fire = scan(/turf/open, old_target_fire, scan_range) // Scan for burning turfs second
+			target_fire = scan(/turf/simulated/open, old_target_fire, scan_range) // Scan for burning turfs second
 
 		old_target_fire = target_fire
 
@@ -297,7 +297,7 @@
 	var/turf/T = get_turf(Tsec)
 
 	if(isopenturf(T))
-		var/turf/open/theturf = T
+		var/turf/simulated/open/theturf = T
 		theturf.MakeSlippery(TURF_WET_WATER, min_wet_time = 10 SECONDS, wet_time_to_add = 5 SECONDS)
 	return ..()
 

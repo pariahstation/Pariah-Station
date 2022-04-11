@@ -13,16 +13,16 @@
 
 	///Blacklist of turfs that cannot have thermite on it
 	var/static/list/blacklist = typecacheof(list(
-		/turf/open/lava,
-		/turf/open/space,
-		/turf/open/water,
-		/turf/open/chasm,
+		/turf/simulated/open/lava,
+		/turf/simulated/open/space,
+		/turf/simulated/open/water,
+		/turf/simulated/open/chasm,
 	))
 	///List of turfs that are immune to thermite
 	var/static/list/immunelist = typecacheof(list(
 		/turf/closed/wall/mineral/diamond,
 		/turf/closed/indestructible,
-		/turf/open/indestructible,
+		/turf/simulated/open/indestructible,
 	))
 	///List of turfs that take extra thermite to burn through
 	var/static/list/resistlist = typecacheof(list(

@@ -5,7 +5,7 @@
 "c" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/clothing/head/hardhat,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "e" = (
 /obj/effect/turf_decal/sand/plating,
@@ -15,20 +15,20 @@
 	name = "sand-covered note"
 	},
 /obj/item/stack/ore/glass,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "h" = (
 /obj/structure/table,
 /obj/item/folder/blue,
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "i" = (
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "k" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/maintenance/three,
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/mine/explored)
 "s" = (
 /turf/closed/wall/rock/porous,
@@ -36,18 +36,18 @@
 "w" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/stack/ore/glass,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "H" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/shovel{
 	pixel_x = -5
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "R" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/mine/explored)
 "W" = (
 /obj/structure/barricade/wooden,

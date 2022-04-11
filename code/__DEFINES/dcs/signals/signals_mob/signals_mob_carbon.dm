@@ -13,7 +13,7 @@
 #define COMSIG_CARBON_DISARM_COLLIDE "carbon_disarm_collision"
 	#define COMSIG_CARBON_SHOVE_HANDLED (1<<0)
 
-///When a carbon slips. Called on /turf/open/handle_slip()
+///When a carbon slips. Called on /turf/simulated/open/handle_slip()
 #define COMSIG_ON_CARBON_SLIP "carbon_slip"
 ///When a carbon gets a vending machine tilted on them
 #define COMSIG_ON_VENDOR_CRUSH "carbon_vendor_crush"

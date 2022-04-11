@@ -21,7 +21,7 @@
 
 // Miaster:
 /// The minimum temperature miasma begins being sterilized at.
-#define MIASTER_STERILIZATION_TEMP (FIRE_MINIMUM_TEMPERATURE_TO_EXIST + 70)
+#define MIASTER_STERILIZATION_TEMP (T100C + 70)
 /// The maximum ratio of water vapor to other gases miasma can be sterilized at.
 #define MIASTER_STERILIZATION_MAX_HUMIDITY 0.1
 /// The minimum amount of miasma that will be sterilized in a reaction tick.
@@ -39,7 +39,7 @@
 
 // - Plasma:
 /// Minimum temperature to burn plasma
-#define PLASMA_MINIMUM_BURN_TEMPERATURE FIRE_MINIMUM_TEMPERATURE_TO_EXIST
+#define PLASMA_MINIMUM_BURN_TEMPERATURE T100C
 /// Upper temperature ceiling for plasmafire reaction calculations for fuel consumption
 #define PLASMA_UPPER_TEMPERATURE (PLASMA_MINIMUM_BURN_TEMPERATURE + 1270)
 /// The maximum and default amount of plasma consumed as oxydizer per mole of plasma burnt.
@@ -55,7 +55,7 @@
 
 // - Hydrogen:
 /// The minimum temperature hydrogen combusts at.
-#define HYDROGEN_MINIMUM_BURN_TEMPERATURE FIRE_MINIMUM_TEMPERATURE_TO_EXIST
+#define HYDROGEN_MINIMUM_BURN_TEMPERATURE T100C
 /// The minimum thermal energy necessary for hydrogen fires to use the [HYDROGEN_OXYBURN_MULTIPLIER]. Used to prevent overpowered hydrogen/oxygen singletank bombs to moderate success.
 #define MINIMUM_HYDROGEN_OXYBURN_ENERGY 2e6
 /// A multiplier to released hydrogen fire energy when in an oxygen-rich mix.
@@ -69,7 +69,7 @@
 
 // - Tritium:
 /// The minimum temperature tritium combusts at.
-#define TRITIUM_MINIMUM_BURN_TEMPERATURE FIRE_MINIMUM_TEMPERATURE_TO_EXIST
+#define TRITIUM_MINIMUM_BURN_TEMPERATURE T100C
 /// The minimum thermal energy necessary for tritium fires to use the [TRITIUM_OXYBURN_MULTIPLIER]. Used to prevent overpowered tritium/oxygen singletank bombs to moderate success.
 #define MINIMUM_TRITIUM_OXYBURN_ENERGY 2e6
 /// A multiplier to all secondary tritium fire effects when in an oxygen-rich mix.
@@ -136,7 +136,7 @@
 
 // BZ:
 /// The maximum temperature BZ can form at. Deliberately set lower than the minimum burn temperature for most combustible gases in an attempt to prevent long fuse singlecaps.
-#define BZ_FORMATION_MAX_TEMPERATURE (FIRE_MINIMUM_TEMPERATURE_TO_EXIST - 60) // Yes, someone used this as a bomb timer. I hate players.
+#define BZ_FORMATION_MAX_TEMPERATURE (T100C - 60) // Yes, someone used this as a bomb timer. I hate players.
 /// The amount of energy ~2.5 moles of BZ forming from N2O and plasma releases.
 #define BZ_FORMATION_ENERGY FIRE_CARBON_ENERGY_RELEASED
 
@@ -154,22 +154,22 @@
 /// The minimum temperature necessary for nitrium to form from tritium, nitrogen, and BZ.
 #define NITRIUM_FORMATION_MIN_TEMP 1500
 /// A scaling divisor for the rate of nitrium formation relative to mix temperature.
-#define NITRIUM_FORMATION_TEMP_DIVISOR (FIRE_MINIMUM_TEMPERATURE_TO_EXIST * 8)
+#define NITRIUM_FORMATION_TEMP_DIVISOR (T100C * 8)
 /// The amount of thermal energy consumed when a mole of nitrium is formed from tritium, nitrogen, and BZ.
 #define NITRIUM_FORMATION_ENERGY 100000
 
 /// The maximum temperature nitrium can decompose into nitrogen and hydrogen at.
 #define NITRIUM_DECOMPOSITION_MAX_TEMP (T0C + 70) //Pretty warm, explicitly not fire temps. Time bombs are cool, but not that cool. If it makes you feel any better it's close.
 /// A scaling divisor for the rate of nitrium decomposition relative to mix temperature.
-#define NITRIUM_DECOMPOSITION_TEMP_DIVISOR (FIRE_MINIMUM_TEMPERATURE_TO_EXIST * 8)
+#define NITRIUM_DECOMPOSITION_TEMP_DIVISOR (T100C * 8)
 /// The amount of energy released when a mole of nitrium decomposes into nitrogen and hydrogen.
 #define NITRIUM_DECOMPOSITION_ENERGY 30000
 
 // Freon:
 /// The minimum temperature freon can form from plasma, CO2, and BZ at.
-#define FREON_FORMATION_MIN_TEMPERATURE FIRE_MINIMUM_TEMPERATURE_TO_EXIST + 100
+#define FREON_FORMATION_MIN_TEMPERATURE T100C + 100
 /// A scaling divisor for the rate of freon formation relative to mix temperature.
-#define FREON_FORMATION_TEMP_DIVISOR (FIRE_MINIMUM_TEMPERATURE_TO_EXIST * 10)
+#define FREON_FORMATION_TEMP_DIVISOR (T100C * 10)
 /// The amount of energy 2.5 moles of freon forming from plasma, CO2, and BZ consumes.
 #define FREON_FORMATION_ENERGY 100
 

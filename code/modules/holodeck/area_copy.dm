@@ -133,8 +133,8 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars,list(
 
 		for(var/V in T.vars - GLOB.duplicate_forbidden_vars)
 			if(V == "air")
-				var/turf/open/O1 = B
-				var/turf/open/O2 = T
+				var/turf/simulated/open/O1 = B
+				var/turf/simulated/open/O2 = T
 				O1.air.copy_from(O2.return_air())
 				continue
 			B.vars[V] = T.vars[V]

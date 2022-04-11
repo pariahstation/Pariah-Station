@@ -34,8 +34,8 @@ GLOBAL_VAR_INIT(glowshrooms, 0)
 
 	/// Turfs where the glowshroom cannot spread to
 	var/static/list/blacklisted_glowshroom_turfs = typecacheof(list(
-		/turf/open/lava,
-		/turf/open/water,
+		/turf/simulated/open/lava,
+		/turf/simulated/open/water,
 	))
 
 /obj/structure/glowshroom/glowcap
@@ -143,7 +143,7 @@ GLOBAL_VAR_INIT(glowshrooms, 0)
 	//Lets collect a list of possible viewable turfs BEFORE we iterate for yield so we don't call view multiple
 	//times when there's no real chance of the viewable range changing, really you could do this once on item
 	//spawn and most people probably would not notice.
-	for(var/turf/open/floor/earth in oview(2,src))
+	for(var/turf/simulated/open/floor/earth in oview(2,src))
 		if(is_type_in_typecache(earth, blacklisted_glowshroom_turfs))
 			continue
 		if(!TURF_SHARES(earth))

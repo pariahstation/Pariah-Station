@@ -170,7 +170,7 @@
  * Water reaction to turf
  */
 
-/datum/reagent/water/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/water/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(!istype(exposed_turf))
 		return
@@ -345,7 +345,7 @@
  * Water reaction to turf
  */
 
-/datum/reagent/hydrogen_peroxide/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/hydrogen_peroxide/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(!istype(exposed_turf))
 		return
@@ -418,7 +418,7 @@
 	var/lube_kind = TURF_WET_LUBE ///What kind of slipperiness gets added to turfs
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/lube/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/lube/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(!istype(exposed_turf))
 		return
@@ -786,7 +786,7 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 
-/datum/reagent/oxygen/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/oxygen/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(istype(exposed_turf))
 		var/temp = holder ? holder.chem_temp : T20C
@@ -820,7 +820,7 @@
 	taste_mult = 0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/nitrogen/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/nitrogen/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	if(istype(exposed_turf))
 		var/temp = holder ? holder.chem_temp : T20C
 		exposed_turf.atmos_spawn_air("n2=[reac_volume/20];TEMP=[temp]")
@@ -1365,7 +1365,7 @@
 	ph = 6
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/carbondioxide/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/carbondioxide/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	if(istype(exposed_turf))
 		var/temp = holder ? holder.chem_temp : T20C
 		exposed_turf.atmos_spawn_air("co2=[reac_volume/20];TEMP=[temp]")
@@ -1381,7 +1381,7 @@
 	ph = 5.8
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/nitrous_oxide/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/nitrous_oxide/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(istype(exposed_turf))
 		var/temp = holder ? holder.chem_temp : T20C
@@ -1800,11 +1800,11 @@
 	reagent_state = LIQUID
 	color = "#771100"
 	taste_description = "carpet" // Your tounge feels furry.
-	var/carpet_type = /turf/open/floor/carpet
+	var/carpet_type = /turf/simulated/open/floor/carpet
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/expose_turf(turf/exposed_turf, reac_volume)
-	if(isopenturf(exposed_turf) && exposed_turf.turf_flags & IS_SOLID && !istype(exposed_turf, /turf/open/floor/carpet))
+	if(isopenturf(exposed_turf) && exposed_turf.turf_flags & IS_SOLID && !istype(exposed_turf, /turf/simulated/open/floor/carpet))
 		exposed_turf.PlaceOnTop(carpet_type, flags = CHANGETURF_INHERIT_AIR)
 	..()
 
@@ -1813,7 +1813,7 @@
 	description = "The carpet also comes in... BLAPCK" //yes, the typo is intentional
 	color = "#1E1E1E"
 	taste_description = "licorice"
-	carpet_type = /turf/open/floor/carpet/black
+	carpet_type = /turf/simulated/open/floor/carpet/black
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/blue
@@ -1821,7 +1821,7 @@
 	description = "For those that really need to chill out for a while."
 	color = "#0000DC"
 	taste_description = "frozen carpet"
-	carpet_type = /turf/open/floor/carpet/blue
+	carpet_type = /turf/simulated/open/floor/carpet/blue
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/cyan
@@ -1829,7 +1829,7 @@
 	description = "For those that need a throwback to the years of using poison as a construction material. Smells like asbestos."
 	color = "#00B4FF"
 	taste_description = "asbestos"
-	carpet_type = /turf/open/floor/carpet/cyan
+	carpet_type = /turf/simulated/open/floor/carpet/cyan
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/green
@@ -1837,7 +1837,7 @@
 	description = "For those that need the perfect flourish for green eggs and ham."
 	color = "#A8E61D"
 	taste_description = "Green" //the caps is intentional
-	carpet_type = /turf/open/floor/carpet/green
+	carpet_type = /turf/simulated/open/floor/carpet/green
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/orange
@@ -1845,7 +1845,7 @@
 	description = "For those that prefer a healthy carpet to go along with their healthy diet."
 	color = "#E78108"
 	taste_description = "orange juice"
-	carpet_type = /turf/open/floor/carpet/orange
+	carpet_type = /turf/simulated/open/floor/carpet/orange
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/purple
@@ -1853,7 +1853,7 @@
 	description = "For those that need to waste copious amounts of healing jelly in order to look fancy."
 	color = "#91D865"
 	taste_description = "jelly"
-	carpet_type = /turf/open/floor/carpet/purple
+	carpet_type = /turf/simulated/open/floor/carpet/purple
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/red
@@ -1861,7 +1861,7 @@
 	description = "For those that need an even redder carpet."
 	color = "#731008"
 	taste_description = "blood and gibs"
-	carpet_type = /turf/open/floor/carpet/red
+	carpet_type = /turf/simulated/open/floor/carpet/red
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/royal
@@ -1889,7 +1889,7 @@
 	description = "For those that feel the need to show off their timewasting skills."
 	color = "#000000"
 	taste_description = "royalty"
-	carpet_type = /turf/open/floor/carpet/royalblack
+	carpet_type = /turf/simulated/open/floor/carpet/royalblack
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/royal/blue
@@ -1897,7 +1897,7 @@
 	description = "For those that feel the need to show off their timewasting skills.. in BLUE."
 	color = "#5A64C8"
 	taste_description = "blueyalty" //also intentional
-	carpet_type = /turf/open/floor/carpet/royalblue
+	carpet_type = /turf/simulated/open/floor/carpet/royalblue
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/neon
@@ -1907,7 +1907,7 @@
 	taste_description = "neon"
 	ph = 6
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon
+	carpet_type = /turf/simulated/open/floor/carpet/neon
 
 /datum/reagent/carpet/neon/simple_white
 	name = "Simple White Neon Carpet"
@@ -1915,7 +1915,7 @@
 	color = LIGHT_COLOR_HALOGEN
 	taste_description = "sodium vapor"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/white
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/white
 
 /datum/reagent/carpet/neon/simple_red
 	name = "Simple Red Neon Carpet"
@@ -1923,7 +1923,7 @@
 	color = COLOR_RED
 	taste_description = "neon hallucinations"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/red
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/red
 
 /datum/reagent/carpet/neon/simple_orange
 	name = "Simple Orange Neon Carpet"
@@ -1931,7 +1931,7 @@
 	color = COLOR_ORANGE
 	taste_description = "neon spines"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/orange
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/orange
 
 /datum/reagent/carpet/neon/simple_yellow
 	name = "Simple Yellow Neon Carpet"
@@ -1939,7 +1939,7 @@
 	color = COLOR_YELLOW
 	taste_description = "stabilized neon"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/yellow
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/yellow
 
 /datum/reagent/carpet/neon/simple_lime
 	name = "Simple Lime Neon Carpet"
@@ -1947,7 +1947,7 @@
 	color = COLOR_LIME
 	taste_description = "neon citrus"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/lime
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/lime
 
 /datum/reagent/carpet/neon/simple_green
 	name = "Simple Green Neon Carpet"
@@ -1955,7 +1955,7 @@
 	color = COLOR_GREEN
 	taste_description = "radium"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/green
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/green
 
 /datum/reagent/carpet/neon/simple_teal
 	name = "Simple Teal Neon Carpet"
@@ -1963,7 +1963,7 @@
 	color = COLOR_TEAL
 	taste_description = "neon tobacco"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/teal
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/teal
 
 /datum/reagent/carpet/neon/simple_cyan
 	name = "Simple Cyan Neon Carpet"
@@ -1971,7 +1971,7 @@
 	color = COLOR_DARK_CYAN
 	taste_description = "neon air"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/cyan
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/cyan
 
 /datum/reagent/carpet/neon/simple_blue
 	name = "Simple Blue Neon Carpet"
@@ -1979,7 +1979,7 @@
 	color = COLOR_NAVY
 	taste_description = "neon blue"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/blue
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/blue
 
 /datum/reagent/carpet/neon/simple_purple
 	name = "Simple Purple Neon Carpet"
@@ -1987,7 +1987,7 @@
 	color = COLOR_PURPLE
 	taste_description = "neon hell"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/purple
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/purple
 
 /datum/reagent/carpet/neon/simple_violet
 	name = "Simple Violet Neon Carpet"
@@ -1995,7 +1995,7 @@
 	color = COLOR_VIOLET
 	taste_description = "neon hell"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/violet
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/violet
 
 /datum/reagent/carpet/neon/simple_pink
 	name = "Simple Pink Neon Carpet"
@@ -2003,7 +2003,7 @@
 	color = COLOR_PINK
 	taste_description = "neon pink"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/pink
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/pink
 
 /datum/reagent/carpet/neon/simple_black
 	name = "Simple Black Neon Carpet"
@@ -2011,7 +2011,7 @@
 	color = COLOR_BLACK
 	taste_description = "neon ash"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/black
+	carpet_type = /turf/simulated/open/floor/carpet/neon/simple/black
 
 /datum/reagent/bromine
 	name = "Bromine"
@@ -2250,7 +2250,7 @@
 	ph = 10.7
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/drying_agent/expose_turf(turf/open/exposed_turf, reac_volume)
+/datum/reagent/drying_agent/expose_turf(turf/simulated/open/exposed_turf, reac_volume)
 	. = ..()
 	if(!istype(exposed_turf))
 		return
@@ -2819,7 +2819,7 @@
 
 /datum/reagent/ants/expose_obj(obj/exposed_obj, reac_volume)
 	. = ..()
-	var/turf/open/my_turf = exposed_obj.loc // No dumping ants on an object in a storage slot
+	var/turf/simulated/open/my_turf = exposed_obj.loc // No dumping ants on an object in a storage slot
 	if(!istype(my_turf)) //Are we actually in an open turf?
 		return
 	var/static/list/accepted_types = typecacheof(list(/obj/machinery/atmospherics, /obj/structure/cable, /obj/structure/disposalpipe))

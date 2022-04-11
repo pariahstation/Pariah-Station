@@ -22,7 +22,7 @@
 	source.toggle_internals(lab_rat)
 	TEST_ASSERT(!lab_rat.internal, "toggle_internals() failed to toggle internals")
 
-	var/turf/open/to_fill = run_loc_floor_bottom_left
+	var/turf/simulated/open/to_fill = run_loc_floor_bottom_left
 	//Prep the floor
 	to_fill.initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	to_fill.air = new
@@ -62,7 +62,7 @@
 	//Prep the mob
 	lab_rat.forceMove(run_loc_floor_bottom_left)
 
-	var/turf/open/to_fill = run_loc_floor_bottom_left
+	var/turf/simulated/open/to_fill = run_loc_floor_bottom_left
 	//Prep the floor
 	to_fill.initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	to_fill.air = new
@@ -74,6 +74,6 @@
 
 /datum/unit_test/breath_sanity_ashwalker/Destroy()
 	//Reset initial_gas_mix to avoid future issues on other tests
-	var/turf/open/to_fill = run_loc_floor_bottom_left
+	var/turf/simulated/open/to_fill = run_loc_floor_bottom_left
 	to_fill.initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	return ..()

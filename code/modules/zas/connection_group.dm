@@ -49,7 +49,7 @@ Class Procs:
 	flow(list/movable, differential, repelled)
 		Airflow proc causing all objects in movable to be checked against a pressure differential.
 		If repelled is true, the objects move away from any turf in connecting_turfs, otherwise they approach.
-		A check against vsc.lightest_airflow_pressure should generally be performed before calling this.
+		A check against SSzas.settings.lightest_airflow_pressure should generally be performed before calling this.
 
 	get_connected_zone(zone/from)
 		Helper proc that allows getting the other zone of an edge given one of them.
@@ -99,11 +99,11 @@ Class Procs:
 		var/atom/movable/M = movable[i]
 
 		//If they're already being tossed, don't do it again.
-		if(M.last_airflow > world.time - vsc.airflow_delay) continue
+		if(M.last_airflow > world.time - SSzas.settings.airflow_delay) continue
 		if(M.airflow_speed) continue
 
 		//Check for knocking people over
-		if(ismob(M) && differential > vsc.airflow_stun_pressure)
+		if(ismob(M) && differential > SSzas.settings.airflow_stun_pressure)
 			if(M:status_flags & GODMODE) continue
 			M:airflow_stun()
 
@@ -158,7 +158,7 @@ Class Procs:
 	var/equiv = A.air.share_ratio(B.air, coefficient)
 
 	var/differential = A.air.return_pressure() - B.air.return_pressure()
-	if(abs(differential) >= vsc.airflow_lightest_pressure)
+	if(abs(differential) >= SSzas.settings.airflow_lightest_pressure)
 		var/list/attracted
 		var/list/repelled
 		if(differential > 0)

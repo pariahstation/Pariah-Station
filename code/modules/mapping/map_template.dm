@@ -23,7 +23,7 @@
 
 	// vars for automatic ceiling generation
 	var/has_ceiling = FALSE
-	var/turf/ceiling_turf = /turf/open/floor/plating
+	var/turf/ceiling_turf = /turf/simulated/open/floor/plating
 	var/list/ceiling_baseturfs = list()
 
 /datum/map_template/New(path = null, rename = null, cache = FALSE)
@@ -193,7 +193,7 @@
 	for (var/turf/turf in affected_turfs)
 		var/turf/ceiling = get_step_multiz(turf, UP)
 		if (ceiling)
-			if (istype(ceiling, /turf/open/openspace) || istype(ceiling, /turf/open/space/openspace))
+			if (istype(ceiling, /turf/simulated/open/openspace) || istype(ceiling, /turf/simulated/open/space/openspace))
 				ceiling.ChangeTurf(ceiling_turf, ceiling_baseturfs, CHANGETURF_INHERIT_AIR)
 
 /datum/map_template/proc/post_load()

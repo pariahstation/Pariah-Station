@@ -116,7 +116,7 @@ require only minor tweaks.
 	ZTRAIT_ASHSTORM = TRUE, \
 	ZTRAIT_LAVA_RUINS = TRUE, \
 	ZTRAIT_BOMBCAP_MULTIPLIER = 2, \
-	ZTRAIT_BASETURF = /turf/open/lava/smooth/lava_land_surface)
+	ZTRAIT_BASETURF = /turf/simulated/open/lava/smooth/lava_land_surface)
 ///Z level traits for Away Missions
 #define ZTRAITS_AWAY list(ZTRAIT_AWAY = TRUE)
 ///Z level traits for Secret Away Missions
@@ -137,7 +137,7 @@ require only minor tweaks.
 #define CAMERA_LOCK_CENTCOM 4
 
 //Reserved/Transit turf type
-#define RESERVED_TURF_TYPE /turf/open/space/basic //What the turf is when not being used
+#define RESERVED_TURF_TYPE /turf/simulated/open/space/basic //What the turf is when not being used
 
 //Ruin Generation
 

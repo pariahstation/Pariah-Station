@@ -1,5 +1,5 @@
 
-/turf/open/floor/engine
+/turf/simulated/open/floor/engine
 	name = "reinforced floor"
 	desc = "Extremely sturdy."
 	icon_state = "engine"
@@ -14,46 +14,46 @@
 	tiled_dirt = FALSE
 
 
-/turf/open/floor/engine/examine(mob/user)
+/turf/simulated/open/floor/engine/examine(mob/user)
 	. += ..()
 	. += span_notice("The reinforcement rods are <b>wrenched</b> firmly in place.")
 
-/turf/open/floor/engine/airless
+/turf/simulated/open/floor/engine/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/engine/break_tile()
+/turf/simulated/open/floor/engine/break_tile()
 	return //unbreakable
 
-/turf/open/floor/engine/burn_tile()
+/turf/simulated/open/floor/engine/burn_tile()
 	return //unburnable
 
-/turf/open/floor/engine/make_plating(force = FALSE)
+/turf/simulated/open/floor/engine/make_plating(force = FALSE)
 	if(force)
 		return ..()
 	return //unplateable
 
-/turf/open/floor/engine/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+/turf/simulated/open/floor/engine/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	return
 
-/turf/open/floor/engine/crowbar_act(mob/living/user, obj/item/I)
+/turf/simulated/open/floor/engine/crowbar_act(mob/living/user, obj/item/I)
 	return
 
-/turf/open/floor/engine/wrench_act(mob/living/user, obj/item/I)
+/turf/simulated/open/floor/engine/wrench_act(mob/living/user, obj/item/I)
 	..()
 	to_chat(user, span_notice("You begin removing rods..."))
 	if(I.use_tool(src, user, 30, volume=80))
-		if(!istype(src, /turf/open/floor/engine))
+		if(!istype(src, /turf/simulated/open/floor/engine))
 			return TRUE
 		if(floor_tile)
 			new floor_tile(src, 2)
 		ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 	return TRUE
 
-/turf/open/floor/engine/acid_act(acidpwr, acid_volume)
+/turf/simulated/open/floor/engine/acid_act(acidpwr, acid_volume)
 	acidpwr = min(acidpwr, 50) //we reduce the power so reinf floor never get melted.
 	return ..()
 
-/turf/open/floor/engine/ex_act(severity, target)
+/turf/simulated/open/floor/engine/ex_act(severity, target)
 	if(target == src)
 		ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 		return TRUE
@@ -63,7 +63,7 @@
 	switch(severity)
 		if(EXPLODE_DEVASTATE)
 			if(prob(80))
-				if(!length(baseturfs) || !ispath(baseturfs[baseturfs.len-1], /turf/open/floor))
+				if(!length(baseturfs) || !ispath(baseturfs[baseturfs.len-1], /turf/simulated/open/floor))
 					ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 					ReplaceWithLattice()
 				else
@@ -76,7 +76,7 @@
 			if(prob(50))
 				ScrapeAway(flags = CHANGETURF_INHERIT_AIR)
 
-/turf/open/floor/engine/singularity_pull(S, current_size)
+/turf/simulated/open/floor/engine/singularity_pull(S, current_size)
 	..()
 	if(current_size >= STAGE_FIVE)
 		if(floor_tile)
@@ -86,10 +86,10 @@
 		else if(prob(30))
 			ReplaceWithLattice()
 
-/turf/open/floor/engine/attack_paw(mob/user, list/modifiers)
+/turf/simulated/open/floor/engine/attack_paw(mob/user, list/modifiers)
 	return attack_hand(user, modifiers)
 
-/turf/open/floor/engine/attack_hand(mob/user, list/modifiers)
+/turf/simulated/open/floor/engine/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	if(.)
 		return
@@ -97,97 +97,97 @@
 
 //air filled floors; used in atmos pressure chambers
 
-/turf/open/floor/engine/n2o
+/turf/simulated/open/floor/engine/n2o
 	article = "an"
 	name = "\improper N2O floor"
 	initial_gas_mix = ATMOS_TANK_N2O
 
-/turf/open/floor/engine/co2
+/turf/simulated/open/floor/engine/co2
 	name = "\improper CO2 floor"
 	initial_gas_mix = ATMOS_TANK_CO2
 
-/turf/open/floor/engine/plasma
+/turf/simulated/open/floor/engine/plasma
 	name = "plasma floor"
 	initial_gas_mix = ATMOS_TANK_PLASMA
 
-/turf/open/floor/engine/o2
+/turf/simulated/open/floor/engine/o2
 	name = "\improper O2 floor"
 	initial_gas_mix = ATMOS_TANK_O2
 
-/turf/open/floor/engine/n2
+/turf/simulated/open/floor/engine/n2
 	article = "an"
 	name = "\improper N2 floor"
 	initial_gas_mix = ATMOS_TANK_N2
 
-/turf/open/floor/engine/bz
+/turf/simulated/open/floor/engine/bz
 	name = "\improper BZ floor"
 	initial_gas_mix = ATMOS_TANK_BZ
 
-/turf/open/floor/engine/freon
+/turf/simulated/open/floor/engine/freon
 	name = "\improper Freon floor"
 	initial_gas_mix = ATMOS_TANK_FREON
 
-/turf/open/floor/engine/halon
+/turf/simulated/open/floor/engine/halon
 	name = "\improper Halon floor"
 	initial_gas_mix = ATMOS_TANK_HALON
 
-/turf/open/floor/engine/healium
+/turf/simulated/open/floor/engine/healium
 	name = "\improper Healium floor"
 	initial_gas_mix = ATMOS_TANK_HEALIUM
 
-/turf/open/floor/engine/h2
+/turf/simulated/open/floor/engine/h2
 	article = "an"
 	name = "\improper H2 floor"
 	initial_gas_mix = ATMOS_TANK_H2
 
-/turf/open/floor/engine/hypernoblium
+/turf/simulated/open/floor/engine/hypernoblium
 	name = "\improper Hypernoblium floor"
 	initial_gas_mix = ATMOS_TANK_HYPERNOBLIUM
 
-/turf/open/floor/engine/miasma
+/turf/simulated/open/floor/engine/miasma
 	name = "\improper Miasma floor"
 	initial_gas_mix = ATMOS_TANK_MIASMA
 
-/turf/open/floor/engine/nitrium
+/turf/simulated/open/floor/engine/nitrium
 	name = "\improper nitrium floor"
 	initial_gas_mix = ATMOS_TANK_NITRIUM
 
-/turf/open/floor/engine/pluoxium
+/turf/simulated/open/floor/engine/pluoxium
 	name = "\improper Pluoxium floor"
 	initial_gas_mix = ATMOS_TANK_PLUOXIUM
 
-/turf/open/floor/engine/proto_nitrate
+/turf/simulated/open/floor/engine/proto_nitrate
 	name = "\improper Proto-Nitrate floor"
 	initial_gas_mix = ATMOS_TANK_PROTO_NITRATE
 
-/turf/open/floor/engine/tritium
+/turf/simulated/open/floor/engine/tritium
 	name = "\improper Tritium floor"
 	initial_gas_mix = ATMOS_TANK_TRITIUM
 
-/turf/open/floor/engine/h2o
+/turf/simulated/open/floor/engine/h2o
 	article = "an"
 	name = "\improper H2O floor"
 	initial_gas_mix = ATMOS_TANK_H2O
 
-/turf/open/floor/engine/zauker
+/turf/simulated/open/floor/engine/zauker
 	name = "\improper Zauker floor"
 	initial_gas_mix = ATMOS_TANK_ZAUKER
 
-/turf/open/floor/engine/helium
+/turf/simulated/open/floor/engine/helium
 	name = "\improper Helium floor"
 	initial_gas_mix = ATMOS_TANK_HELIUM
 
-/turf/open/floor/engine/antinoblium
+/turf/simulated/open/floor/engine/antinoblium
 	name = "\improper Antinoblium floor"
 	initial_gas_mix = ATMOS_TANK_ANTINOBLIUM
 
-/turf/open/floor/engine/air
+/turf/simulated/open/floor/engine/air
 	name = "air floor"
 	initial_gas_mix = ATMOS_TANK_AIRMIX
 
 
 
-/turf/open/floor/engine/cult
+/turf/simulated/open/floor/engine/cult
 	name = "engraved floor"
 	desc = "The air smells strange over this sinister flooring."
 	icon_state = "cult"
@@ -195,31 +195,31 @@
 	var/obj/effect/cult_turf/overlay/floor/bloodcult/realappearance
 
 
-/turf/open/floor/engine/cult/Initialize(mapload)
+/turf/simulated/open/floor/engine/cult/Initialize(mapload)
 	. = ..()
 	icon_state = "plating" //we're redefining the base icon_state here so that the Conceal/Reveal Presence spell works for cultists
 	new /obj/effect/temp_visual/cult/turf/floor(src)
 	realappearance = new /obj/effect/cult_turf/overlay/floor/bloodcult(src)
 	realappearance.linked = src
 
-/turf/open/floor/engine/cult/Destroy()
+/turf/simulated/open/floor/engine/cult/Destroy()
 	be_removed()
 	return ..()
 
-/turf/open/floor/engine/cult/ChangeTurf(path, new_baseturf, flags)
+/turf/simulated/open/floor/engine/cult/ChangeTurf(path, new_baseturf, flags)
 	if(path != type)
 		be_removed()
 	return ..()
 
-/turf/open/floor/engine/cult/proc/be_removed()
+/turf/simulated/open/floor/engine/cult/proc/be_removed()
 	QDEL_NULL(realappearance)
 
-/turf/open/floor/engine/cult/airless
+/turf/simulated/open/floor/engine/cult/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/engine/vacuum
+/turf/simulated/open/floor/engine/vacuum
 	name = "vacuum floor"
 	initial_gas_mix = AIRLESS_ATMOS
 
-/turf/open/floor/engine/telecomms
+/turf/simulated/open/floor/engine/telecomms
 	initial_gas_mix = TCOMMS_ATMOS

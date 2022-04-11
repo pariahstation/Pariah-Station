@@ -5,16 +5,16 @@
 "b" = (
 /obj/structure/ore_box,
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "d" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/item/clothing/mask/gas,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "e" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "i" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -23,11 +23,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/modular_map_connector,
 /obj/effect/mapping_helpers/airlock/abandoned,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "k" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "q" = (
 /turf/closed/wall,
@@ -42,31 +42,31 @@
 /obj/item/pickaxe/rusted,
 /obj/effect/turf_decal/sand/plating,
 /obj/item/tank/internals/emergency_oxygen,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "H" = (
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/starboard/lesser)
 "K" = (
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/starboard/lesser)
 "L" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/starboard/lesser)
 "O" = (
 /obj/effect/spawner/random/structure/girder,
 /obj/item/stack/sheet/iron,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/starboard/lesser)
 "P" = (
 /obj/item/relic,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/starboard/lesser)
 "Q" = (
 /obj/item/stack/ore/glass,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/starboard/lesser)
 
 (1,1,1) = {"

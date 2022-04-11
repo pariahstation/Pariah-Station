@@ -42,16 +42,16 @@
 	var/list/validturfs = list()
 	var/list/cultturfs = list()
 	for(var/nearby_turf in circle_view_turfs(src, 5))
-		if(istype(nearby_turf, /turf/open/floor/engine/cult))
+		if(istype(nearby_turf, /turf/simulated/open/floor/engine/cult))
 			cultturfs |= nearby_turf
 			continue
 		var/static/list/blacklisted_pylon_turfs = typecacheof(list(
 			/turf/closed,
-			/turf/open/floor/engine/cult,
-			/turf/open/space,
-			/turf/open/lava,
-			/turf/open/chasm,
-			/turf/open/misc/asteroid,
+			/turf/simulated/open/floor/engine/cult,
+			/turf/simulated/open/space,
+			/turf/simulated/open/lava,
+			/turf/simulated/open/chasm,
+			/turf/simulated/open/misc/asteroid,
 		))
 		if(is_type_in_typecache(nearby_turf, blacklisted_pylon_turfs))
 			continue
@@ -59,13 +59,13 @@
 
 	if(length(validturfs))
 		var/turf/converted_turf = pick(validturfs)
-		if(istype(converted_turf, /turf/open/floor/plating))
-			converted_turf.PlaceOnTop(/turf/open/floor/engine/cult, flags = CHANGETURF_INHERIT_AIR)
+		if(istype(converted_turf, /turf/simulated/open/floor/plating))
+			converted_turf.PlaceOnTop(/turf/simulated/open/floor/engine/cult, flags = CHANGETURF_INHERIT_AIR)
 		else
-			converted_turf.ChangeTurf(/turf/open/floor/engine/cult, flags = CHANGETURF_INHERIT_AIR)
+			converted_turf.ChangeTurf(/turf/simulated/open/floor/engine/cult, flags = CHANGETURF_INHERIT_AIR)
 
 	else if (length(cultturfs))
-		var/turf/open/floor/engine/cult/cult_turf = pick(cultturfs)
+		var/turf/simulated/open/floor/engine/cult/cult_turf = pick(cultturfs)
 		new /obj/effect/temp_visual/cult/turf/floor(cult_turf)
 
 	else

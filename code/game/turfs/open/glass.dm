@@ -1,10 +1,10 @@
-/turf/open/floor/glass
+/turf/simulated/open/floor/glass
 	name = "glass floor"
 	desc = "Don't jump on it, or do, I'm not your mom."
 	icon = 'icons/turf/floors/glass.dmi'
 	icon_state = "glass-0"
 	base_icon_state = "glass"
-	baseturfs = /turf/open/openspace
+	baseturfs = /turf/simulated/open/openspace
 	underfloor_accessibility = UNDERFLOOR_VISIBLE
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_FLOOR_TRANSPARENT_GLASS)
@@ -15,19 +15,19 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	floor_tile = /obj/item/stack/tile/glass
 
-/turf/open/floor/glass/setup_broken_states()
+/turf/simulated/open/floor/glass/setup_broken_states()
 	return list("glass-damaged1", "glass-damaged2", "glass-damaged3")
 
-/turf/open/floor/glass/Initialize(mapload)
+/turf/simulated/open/floor/glass/Initialize(mapload)
 	icon_state = "" //Prevent the normal icon from appearing behind the smooth overlays
 	..()
 	return INITIALIZE_HINT_LATELOAD
 
-/turf/open/floor/glass/LateInitialize()
+/turf/simulated/open/floor/glass/LateInitialize()
 	. = ..()
 	AddElement(/datum/element/turf_z_transparency)
 
-/turf/open/floor/glass/reinforced
+/turf/simulated/open/floor/glass/reinforced
 	name = "reinforced glass floor"
 	desc = "Do jump on it, it can take it."
 	icon = 'icons/turf/floors/reinf_glass.dmi'
@@ -35,7 +35,7 @@
 	base_icon_state = "reinf_glass"
 	floor_tile = /obj/item/stack/tile/rglass
 
-/turf/open/floor/glass/reinforced/icemoon
+/turf/simulated/open/floor/glass/reinforced/icemoon
 	name = "reinforced glass floor"
 	desc = "Do jump on it, it can take it."
 	icon = 'icons/turf/floors/reinf_glass.dmi'
@@ -44,5 +44,5 @@
 	floor_tile = /obj/item/stack/tile/rglass
 	initial_gas_mix = "ICEMOON_ATMOS"
 
-/turf/open/floor/glass/reinforced/setup_broken_states()
+/turf/simulated/open/floor/glass/reinforced/setup_broken_states()
 	return list("reinf_glass-damaged1", "reinf_glass-damaged2", "reinf_glass-damaged3")

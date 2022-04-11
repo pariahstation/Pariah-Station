@@ -30,7 +30,7 @@
 	///The return point indicator
 	var/obj/effect/overlay/holo_pad_hologram/eigenstate
 	///The point you're returning to after the reagent is removed
-	var/turf/open/location_return = null
+	var/turf/simulated/open/location_return = null
 
 /datum/reagent/eigenstate/on_new(list/data)
 	. = ..()

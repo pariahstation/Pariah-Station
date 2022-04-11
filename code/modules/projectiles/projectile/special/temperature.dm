@@ -34,6 +34,6 @@
 /obj/projectile/temp/cryo/on_range()
 	var/turf/T = get_turf(src)
 	if(isopenturf(T))
-		var/turf/open/O = T
+		var/turf/simulated/open/O = T
 		O.freeze_turf()
 	return ..()

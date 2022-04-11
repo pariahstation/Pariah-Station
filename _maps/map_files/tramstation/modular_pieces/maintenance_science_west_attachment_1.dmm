@@ -7,27 +7,27 @@
 /obj/structure/sign/poster/official/plasma_effects{
 	pixel_y = 32
 	},
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/department/medical)
 "l" = (
 /obj/structure/tank_holder/extinguisher,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/department/medical)
 "m" = (
 /obj/structure/tank_holder/extinguisher,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/department/medical)
 "n" = (
 /obj/machinery/vending/wallmed/directional/west,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/department/medical)
 "s" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/department/medical)
 "y" = (
 /obj/structure/window/reinforced/spawner/east,
@@ -36,7 +36,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/medical)
 "J" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -45,7 +45,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/medical)
 "S" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -54,7 +54,7 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/department/medical)
 "U" = (
 /obj/modular_map_connector,
@@ -62,7 +62,7 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_one_access_txt = "12"
 	},
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/department/medical)
 
 (1,1,1) = {"

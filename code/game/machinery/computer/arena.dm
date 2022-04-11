@@ -32,7 +32,7 @@
 	/// Name of currently loaded template
 	var/current_arena_template = "None"
 	// What turf arena clears to
-	var/empty_turf_type = /turf/open/indestructible
+	var/empty_turf_type = /turf/simulated/open/indestructible
 	// List of team ids
 	var/list/teams = list(ARENA_RED_TEAM,ARENA_GREEN_TEAM)
 	/// List of hud instances indedxed by team id
@@ -98,7 +98,7 @@
 
 /obj/machinery/computer/arena/proc/clear_arena()
 	for(var/turf/T in get_arena_turfs())
-		T.empty(turf_type = /turf/open/indestructible)
+		T.empty(turf_type = /turf/simulated/open/indestructible)
 	current_arena_template = "None"
 
 /obj/machinery/computer/arena/proc/load_arena(arena_template,mob/user)

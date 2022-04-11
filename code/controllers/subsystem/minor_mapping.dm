@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(minor_mapping)
 	var/list/exposed_wires = find_exposed_wires()
 
 	var/mob/living/simple_animal/mouse/mouse
-	var/turf/open/proposed_turf
+	var/turf/simulated/open/proposed_turf
 
 
 	while((num_mice > 0) && exposed_wires.len)
@@ -50,7 +50,7 @@ SUBSYSTEM_DEF(minor_mapping)
 	var/list/all_turfs
 	for(var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
 		all_turfs += block(locate(1,1,z), locate(world.maxx,world.maxy,z))
-	for(var/turf/open/floor/plating/T in all_turfs)
+	for(var/turf/simulated/open/floor/plating/T in all_turfs)
 		if(T.is_blocked_turf())
 			continue
 		if(locate(/obj/structure/cable) in T)

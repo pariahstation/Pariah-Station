@@ -217,7 +217,7 @@
  *
  * Note: the following functions don't call the base for optimization and must copypasta handling:
  * * [/turf/proc/Initialize]
- * * [/turf/open/space/proc/Initialize]
+ * * [/turf/simulated/open/space/proc/Initialize]
  */
 /atom/proc/Initialize(mapload, ...)
 	SHOULD_NOT_SLEEP(TRUE)
@@ -1960,7 +1960,7 @@
 
 	if(isspaceturf(gravity_turf)) // Turf never has gravity
 		return 0
-	if(istype(gravity_turf, /turf/open/openspace)) //openspace in a space area doesn't get gravity
+	if(istype(gravity_turf, /turf/simulated/open/openspace)) //openspace in a space area doesn't get gravity
 		if(istype(get_area(gravity_turf), /area/space))
 			return 0
 

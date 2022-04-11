@@ -8,10 +8,10 @@
 	pixel_x = 11;
 	pixel_y = 8
 	},
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "w" = (
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/port/aft)
 "x" = (
 /obj/modular_map_connector,
@@ -20,11 +20,11 @@
 	req_one_access_txt = "12"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 "G" = (
 /obj/item/stack/ore/glass,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/port/aft)
 "I" = (
 /obj/item/stack/ore/iron{
@@ -33,15 +33,15 @@
 	},
 /obj/effect/decal/remains/human,
 /obj/item/clothing/accessory/clown_enjoyer_pin,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/maintenance/port/aft)
 "V" = (
 /obj/effect/turf_decal/sand/plating,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/maintenance/port/aft)
 "W" = (
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron/smooth,
+/turf/simulated/open/floor/iron/smooth,
 /area/maintenance/port/aft)
 
 (1,1,1) = {"
