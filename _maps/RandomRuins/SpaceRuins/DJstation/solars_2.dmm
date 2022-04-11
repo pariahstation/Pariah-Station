@@ -15,7 +15,7 @@
 "P" = (
 /obj/structure/cable,
 /obj/machinery/power/solar/fake,
-/turf/open/floor/iron/solarpanel/airless,
+/turf/simulated/open/floor/iron/solarpanel/airless,
 /area/ruin/space/djstation/solars)
 "U" = (
 /obj/structure/lattice,

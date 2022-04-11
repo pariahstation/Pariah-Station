@@ -4,14 +4,14 @@
 /area/icemoon/surface)
 "e" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "h" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/item/clothing/suit/bronze,
 /obj/item/clothing/shoes/bronze,
 /obj/item/clothing/head/bronze,
-/turf/open/floor/bronze{
+/turf/simulated/open/floor/bronze{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/icemoon/surface)
@@ -19,33 +19,33 @@
 /obj/item/nullrod/spear{
 	name = "empowered bronze spear"
 	},
-/turf/open/floor/bronze{
+/turf/simulated/open/floor/bronze{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/icemoon/surface)
 "o" = (
-/turf/open/floor/bronze{
+/turf/simulated/open/floor/bronze{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/icemoon/surface)
 "A" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "B" = (
-/turf/open/genturf,
+/turf/simulated/open/genturf,
 /area/mine/unexplored)
 "C" = (
 /obj/structure/fluff/clockwork/blind_eye,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "D" = (
 /obj/structure/fluff/clockwork/alloy_shards/large,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "G" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium_gearbit,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "I" = (
 /obj/structure/table/bronze,
@@ -53,48 +53,48 @@
 	desc = "You can still feel the embers of a once great empire in your hand...";
 	name = "drained clockwork slab"
 	},
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "J" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "K" = (
 /obj/structure/table/bronze,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "L" = (
 /mob/living/simple_animal/hostile/megafauna/clockwork_defender,
-/turf/open/floor/bronze{
+/turf/simulated/open/floor/bronze{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/icemoon/surface)
 "M" = (
 /obj/structure/fluff/clockwork/fallen_armor,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "N" = (
 /turf/closed/mineral/random/snow,
 /area/icemoon/surface/outdoors/nospawn)
 "O" = (
 /obj/structure/fluff/clockwork/alloy_shards,
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "W" = (
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "X" = (
 /obj/machinery/door/airlock/bronze{
 	use_power = 0
 	},
-/turf/open/floor/bronze,
+/turf/simulated/open/floor/bronze,
 /area/icemoon/surface)
 "Y" = (
 /obj/item/paper{
 	info = "We tried to use the power of this moon to bring him back, but we've failed... I've contained what remains of his power here... if you find this, make sure those Nar-Sian Dogs don't last a second."
 	},
 /obj/item/pen,
-/turf/open/floor/bronze{
+/turf/simulated/open/floor/bronze{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/icemoon/surface)

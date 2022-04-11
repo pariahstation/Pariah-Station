@@ -5,13 +5,13 @@
 	view_range = 7;
 	x_offset = 6
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "ab" = (
 /obj/machinery/computer/shuttle/hunter{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "ac" = (
 /obj/structure/fans/tiny,
@@ -35,7 +35,7 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "Interpolship"
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "ae" = (
 /obj/effect/turf_decal/stripes{
@@ -44,28 +44,28 @@
 /obj/machinery/button/door/directional/north{
 	id = "Interpolship"
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "af" = (
 /obj/effect/turf_decal/stripes{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "ag" = (
 /obj/effect/turf_decal/delivery,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "ah" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "aj" = (
 /obj/structure/closet/crate/eva,
 /obj/effect/turf_decal/box,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "ak" = (
 /obj/structure/chair/comfy/shuttle{
@@ -75,7 +75,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/box,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "al" = (
 /obj/effect/turf_decal/stripes{
@@ -84,11 +84,11 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "bY" = (
 /obj/structure/chair/comfy/shuttle,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "hB" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -101,29 +101,29 @@
 /area/shuttle/hunter)
 "lp" = (
 /obj/machinery/fugitive_capture,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "rR" = (
 /obj/machinery/door/airlock/titanium,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "te" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/poddoor/shutters{
 	id = "Interpolship"
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "Am" = (
 /obj/effect/mob_spawn/ghost_role/human/fugitive/spacepol{
 	dir = 8
 	},
 /obj/effect/turf_decal/box,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "An" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/hunter)
 "Pq" = (
 /turf/template_noop,
@@ -132,10 +132,10 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 "RO" = (
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
 
 (1,1,1) = {"

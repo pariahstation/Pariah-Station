@@ -6,41 +6,41 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "af" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "ap" = (
 /obj/structure/chair/wood/wings{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ar" = (
 /obj/structure/chair/wood{
 	dir = 1
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "as" = (
 /obj/structure/window/reinforced,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "aF" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "aH" = (
 /obj/structure/grille/broken,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "aN" = (
 /obj/structure/window/reinforced,
@@ -48,7 +48,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "aO" = (
 /obj/structure/sign/plaques/kiddie{
@@ -62,7 +62,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "aR" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -73,7 +73,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "aW" = (
 /obj/structure/window/reinforced{
@@ -81,32 +81,32 @@
 	layer = 2.9
 	},
 /obj/structure/lattice,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "bb" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bc" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-22"
 	},
 /obj/item/radio/intercom/directional/north,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bd" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "be" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bl" = (
 /obj/structure/window/reinforced,
@@ -114,13 +114,13 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "bn" = (
 /obj/machinery/light/small/directional/east,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bo" = (
 /obj/structure/table/wood,
@@ -128,14 +128,14 @@
 	pixel_y = 8
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bq" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "bu" = (
 /obj/structure/sign/painting/library_secure{
@@ -146,14 +146,14 @@
 	pixel_y = 8
 	},
 /obj/item/pestle,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bv" = (
 /obj/structure/shuttle/engine/propulsion,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "bx" = (
 /obj/structure/shuttle/engine/propulsion,
@@ -161,7 +161,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "by" = (
 /obj/effect/decal/cleanable/dirt,
@@ -169,7 +169,7 @@
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bC" = (
 /obj/structure/shuttle/engine/heater,
@@ -184,19 +184,19 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "bI" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "bK" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/watermelon/holy,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "bT" = (
 /obj/structure/window/reinforced{
@@ -204,29 +204,29 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/lattice,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "cu" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/machinery/light/small/directional/east,
 /obj/item/flashlight/lantern,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "cx" = (
 /obj/machinery/vending/games,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "cC" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "cT" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "cY" = (
 /obj/machinery/camera/directional/south{
@@ -234,7 +234,7 @@
 	network = list("ss13","monastery")
 	},
 /obj/machinery/power/smes,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "cZ" = (
 /obj/structure/table/wood,
@@ -242,7 +242,7 @@
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "dn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -257,23 +257,23 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/airalarm/directional/north,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "dp" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "du" = (
 /obj/machinery/door/airlock/external/ruin,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "dF" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/power/terminal,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "dJ" = (
 /obj/machinery/light/small/directional/east,
@@ -281,13 +281,13 @@
 	c_tag = "Monastery Dining Room";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "dR" = (
 /obj/machinery/atmospherics/components/tank/air{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "dX" = (
 /obj/structure/window/reinforced{
@@ -296,7 +296,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "dY" = (
 /obj/structure/table/wood,
@@ -306,7 +306,7 @@
 	c_tag = "Monastery Library";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "eu" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -314,22 +314,22 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/machinery/light/small/directional/south,
 /obj/machinery/airalarm/directional/south,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "eA" = (
 /obj/structure/closet/crate/bin,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "eG" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 9
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "eL" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/light/dim/directional/north,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "eM" = (
 /obj/effect/turf_decal/tile/yellow,
@@ -337,10 +337,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "eQ" = (
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "eR" = (
 /obj/structure/sign/painting/library_private{
@@ -350,7 +350,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "eW" = (
 /obj/effect/turf_decal/tile/red{
@@ -362,26 +362,26 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "fh" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Monastery Asteroid Dock Staboard";
 	network = list("ss13","monastery")
 	},
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "fm" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "fn" = (
 /obj/effect/spawner/xmastree,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "fp" = (
 /obj/effect/turf_decal/stripes/line{
@@ -393,30 +393,30 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "fq" = (
 /obj/structure/chair/wood,
-/turf/open/floor/iron/chapel{
+/turf/simulated/open/floor/iron/chapel{
 	dir = 1
 	},
 /area/shuttle/escape)
 "fr" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/station_crash/devastating,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "fv" = (
 /obj/structure/bookcase/random/religion,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "fA" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "fL" = (
 /obj/structure/window/reinforced{
@@ -424,7 +424,7 @@
 	},
 /obj/structure/lattice,
 /obj/structure/window/reinforced,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "fT" = (
 /obj/structure/table/wood,
@@ -432,42 +432,42 @@
 /obj/machinery/airalarm/directional/north,
 /obj/effect/decal/cleanable/cobweb,
 /obj/item/camera,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "fY" = (
 /obj/structure/table/wood,
 /obj/item/camera,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "gl" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "gp" = (
 /obj/machinery/door/airlock{
 	name = "Garden"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "gO" = (
 /obj/structure/flora/ausbushes/leafybush,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "gW" = (
 /obj/structure/closet/crate/bin,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "hq" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "hC" = (
 /obj/structure/shuttle/engine/propulsion,
@@ -475,19 +475,19 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "hI" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 4;
 	name = "Air Out"
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "hN" = (
 /obj/machinery/door/airlock/external/ruin,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "hQ" = (
 /obj/machinery/light/small/directional/south,
@@ -503,7 +503,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "hV" = (
 /obj/structure/window/reinforced{
@@ -514,7 +514,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "hW" = (
 /obj/structure/flora/ausbushes/leafybush,
@@ -523,7 +523,7 @@
 	c_tag = "Monastery Asteroid Primary Entrance";
 	network = list("ss13","monastery")
 	},
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "hY" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -534,7 +534,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "hZ" = (
 /obj/structure/table/wood,
@@ -543,7 +543,7 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ib" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -562,7 +562,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "io" = (
 /obj/structure/lattice,
@@ -571,17 +571,17 @@
 "it" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "iw" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "iB" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/photocopier,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "iE" = (
 /obj/item/storage/crayons{
@@ -593,37 +593,37 @@
 /obj/structure/sign/poster/official/soft_cap_pop_art{
 	pixel_y = 32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "iI" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "iJ" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "iM" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel"
 	},
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "iS" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "iT" = (
 /obj/machinery/door/airlock/external/ruin,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "iV" = (
 /obj/machinery/camera/directional/west{
@@ -633,7 +633,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "iW" = (
 /obj/machinery/light/small/directional/north,
@@ -645,10 +645,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "jc" = (
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "jd" = (
 /obj/machinery/light/small/directional/north,
@@ -656,7 +656,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "jf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -665,16 +665,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 5
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "jk" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/sign/warning/vacuum/external,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "jn" = (
 /obj/machinery/door/poddoor/massdriver_chapel,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "js" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -684,7 +684,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "jt" = (
 /obj/structure/shuttle/engine/heater,
@@ -695,10 +695,10 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "jx" = (
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "jG" = (
 /obj/structure/shuttle/engine/heater,
@@ -708,30 +708,30 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "jR" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/escape)
 "jS" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "jU" = (
 /obj/item/shovel/spade,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "jW" = (
 /obj/structure/window/reinforced,
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium/red/brig,
+/turf/simulated/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "ka" = (
 /obj/structure/flora/ausbushes/fernybush,
@@ -740,13 +740,13 @@
 	network = list("ss13","monastery")
 	},
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "kh" = (
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ki" = (
 /obj/machinery/light/small/directional/north,
@@ -754,28 +754,28 @@
 	c_tag = "Chapel Crematorium";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "kn" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ko" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
 /obj/machinery/door/airlock/external/ruin,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "kt" = (
 /obj/structure/table/wood,
 /obj/item/instrument/saxophone,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "kv" = (
 /obj/structure/sign/warning/vacuum/external,
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "kw" = (
 /obj/structure/chair/wood,
@@ -785,7 +785,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "kI" = (
 /obj/structure/chair/wood{
@@ -793,80 +793,80 @@
 	},
 /obj/machinery/light/small/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "kJ" = (
 /obj/structure/lattice,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "kM" = (
 /obj/structure/table/wood/fancy,
 /obj/item/folder,
 /obj/item/pen,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "kN" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "lc" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/ruin,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "lj" = (
 /obj/structure/lattice/catwalk,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "lm" = (
 /obj/machinery/meter,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "lB" = (
-/turf/open/floor/iron/chapel{
+/turf/simulated/open/floor/iron/chapel{
 	dir = 8
 	},
 /area/shuttle/escape)
 "lE" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "lP" = (
 /obj/structure/table/wood/fancy,
 /obj/item/storage/box/bodybags,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "lX" = (
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "me" = (
 /obj/structure/table/wood/fancy,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "mi" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "mm" = (
 /obj/structure/lattice/catwalk,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "mn" = (
 /obj/structure/chair/wood,
 /obj/item/radio/intercom/chapel{
 	pixel_x = -27
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "mw" = (
 /obj/structure/cable,
@@ -874,25 +874,25 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "my" = (
 /obj/structure/toilet{
 	pixel_y = 8
 	},
-/turf/open/floor/iron/showroomfloor,
+/turf/simulated/open/floor/iron/showroomfloor,
 /area/shuttle/escape)
 "mG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "mH" = (
 /obj/machinery/door/morgue{
 	name = "Confession Booth"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "mK" = (
 /obj/machinery/camera/directional/south{
@@ -907,7 +907,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "mP" = (
 /obj/machinery/door/airlock/grunge{
@@ -920,17 +920,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "mQ" = (
 /obj/machinery/hydroponics/soil,
 /obj/machinery/light/small/directional/north,
 /obj/item/seeds/watermelon/holy,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "nb" = (
 /obj/effect/spawner/random/trash/mess,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "nd" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
@@ -938,11 +938,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "nf" = (
 /obj/structure/chair/wood,
-/turf/open/floor/iron/chapel,
+/turf/simulated/open/floor/iron/chapel,
 /area/shuttle/escape)
 "nh" = (
 /obj/effect/turf_decal/stripes/corner{
@@ -953,14 +953,14 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "nl" = (
 /obj/machinery/light/small/directional/east,
 /obj/machinery/computer/pod/old/mass_driver_controller/chapelgun{
 	pixel_x = 24
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "nr" = (
 /turf/closed/wall,
@@ -971,42 +971,42 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "nK" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/tinted/fulltile,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "nQ" = (
 /obj/structure/window/reinforced{
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "oa" = (
 /obj/structure/chair/wood,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "ob" = (
 /obj/machinery/skill_station,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oc" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "od" = (
 /obj/machinery/vending/wardrobe/curator_wardrobe,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "om" = (
 /obj/structure/window/reinforced{
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "ov" = (
 /obj/machinery/light/small/directional/east,
@@ -1014,25 +1014,25 @@
 	c_tag = "Chapel Starboard";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ow" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/frame/computer,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ox" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/components/tank/air,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oH" = (
 /obj/structure/sign/picture_frame/portrait{
@@ -1042,14 +1042,14 @@
 	icon_state = "plant-21";
 	pixel_y = 3
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oI" = (
 /obj/machinery/airalarm/unlocked{
 	pixel_y = 23;
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oS" = (
 /obj/structure/chair/wood{
@@ -1058,11 +1058,11 @@
 /obj/item/radio/intercom/chapel{
 	pixel_x = 29
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oT" = (
 /obj/item/flashlight/lantern,
-/turf/open/floor/iron/chapel{
+/turf/simulated/open/floor/iron/chapel{
 	dir = 8
 	},
 /area/shuttle/escape)
@@ -1075,7 +1075,7 @@
 /obj/item/food/breadslice/plain{
 	pixel_y = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oX" = (
 /obj/machinery/door/window/right/directional/north{
@@ -1084,13 +1084,13 @@
 	name = "Secure Art Exhibit";
 	req_access_txt = "37"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "oZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "pr" = (
 /obj/structure/shuttle/engine/heater,
@@ -1100,11 +1100,11 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "pv" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "pw" = (
 /obj/effect/turf_decal/tile/yellow,
@@ -1112,7 +1112,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "pB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -1121,30 +1121,30 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 5
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "pC" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/sign/painting/library{
 	pixel_x = -32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "pD" = (
 /obj/structure/chair/wood/wings{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "pO" = (
-/turf/open/floor/iron/chapel{
+/turf/simulated/open/floor/iron/chapel{
 	dir = 1
 	},
 /area/shuttle/escape)
 "pS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "qe" = (
 /obj/item/radio/intercom/directional/north,
@@ -1158,7 +1158,7 @@
 /obj/item/clothing/suit/chaplainsuit/nun,
 /obj/item/clothing/suit/chaplainsuit/holidaypriest,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "qi" = (
 /obj/structure/table/wood,
@@ -1168,18 +1168,18 @@
 	pixel_y = 4
 	},
 /obj/item/pen,
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "qj" = (
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "qm" = (
 /obj/item/flashlight/lantern{
 	icon_state = "lantern-on"
 	},
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "qp" = (
 /obj/machinery/door/airlock/grunge{
@@ -1191,18 +1191,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "qx" = (
 /obj/machinery/door/airlock/external/ruin,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "qA" = (
 /obj/structure/window/reinforced,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "qC" = (
 /obj/machinery/airalarm/directional/north,
@@ -1213,7 +1213,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "qJ" = (
 /obj/effect/turf_decal/tile/red{
@@ -1224,11 +1224,11 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "qT" = (
 /obj/structure/bookcase/random/nonfiction,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "qU" = (
 /obj/machinery/light/small/directional/north,
@@ -1236,19 +1236,19 @@
 	c_tag = "Chapel Port Access";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rb" = (
 /obj/machinery/light/small/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rh" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rj" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -1258,28 +1258,28 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rk" = (
 /obj/structure/chair/wood,
 /obj/machinery/firealarm/directional/west,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ru" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel Access"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rw" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rA" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/newscaster/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rL" = (
 /obj/machinery/door/window/left/directional/east{
@@ -1289,7 +1289,7 @@
 	name = "Coffin Storage";
 	req_one_access_txt = "22"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rQ" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -1297,37 +1297,37 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "rX" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "sa" = (
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "sc" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "sf" = (
 /obj/machinery/power/terminal{
 	dir = 1
 	},
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "sg" = (
 /obj/structure/table/wood,
 /obj/item/stack/package_wrap,
 /obj/item/coin/gold,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "sm" = (
 /obj/structure/cable,
@@ -1337,7 +1337,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "sq" = (
 /obj/effect/landmark/start/chaplain,
@@ -1347,7 +1347,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 10
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "sz" = (
 /obj/machinery/light/small/directional/north,
@@ -1356,7 +1356,7 @@
 	network = list("ss13","monastery")
 	},
 /obj/structure/chair/wood,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "sD" = (
 /obj/structure/table/wood/fancy,
@@ -1367,13 +1367,13 @@
 /obj/item/reagent_containers/food/drinks/trophy{
 	pixel_y = 10
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "sF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 10
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "sK" = (
 /obj/effect/turf_decal/tile/red/fourcorners,
@@ -1383,7 +1383,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 5
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "sT" = (
 /obj/effect/turf_decal/tile/red{
@@ -1396,12 +1396,12 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "td" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "tm" = (
 /obj/structure/table/wood/fancy,
@@ -1410,48 +1410,48 @@
 	pixel_y = 8
 	},
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "tz" = (
 /obj/structure/table/wood/fancy,
 /obj/item/storage/fancy/candle_box,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "tR" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/libraryconsole/bookmanagement,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "tT" = (
 /obj/machinery/bookbinder,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ua" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "uc" = (
 /obj/structure/bookcase/random/religion,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "un" = (
 /obj/effect/turf_decal/sand,
 /obj/structure/cable,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "uu" = (
 /obj/structure/table/wood,
 /obj/item/storage/photo_album,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ux" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "uC" = (
 /obj/effect/turf_decal/tile/yellow{
@@ -1460,21 +1460,21 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "uO" = (
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium/red/brig,
+/turf/simulated/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "uX" = (
 /obj/machinery/power/smes,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "va" = (
 /obj/structure/bookcase/random/fiction,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vb" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -1485,13 +1485,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "vj" = (
 /obj/item/kirbyplants{
@@ -1504,14 +1504,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 5
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vk" = (
 /obj/machinery/light/small/directional/south,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vn" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1523,7 +1523,7 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vE" = (
 /obj/machinery/door/airlock/grunge{
@@ -1531,7 +1531,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vJ" = (
 /obj/machinery/door/airlock/grunge{
@@ -1539,7 +1539,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vO" = (
 /obj/machinery/door/airlock/grunge{
@@ -1547,21 +1547,21 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vU" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-21";
 	pixel_y = 3
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vW" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Chapel Office";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vX" = (
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -1573,7 +1573,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "vY" = (
 /obj/item/kirbyplants{
@@ -1586,23 +1586,23 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "wp" = (
-/turf/open/floor/iron/chapel{
+/turf/simulated/open/floor/iron/chapel{
 	dir = 4
 	},
 /area/shuttle/escape)
 "wt" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "wS" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Monastery Secondary Dock";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "xd" = (
 /obj/item/kirbyplants{
@@ -1614,11 +1614,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 10
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "xl" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "xm" = (
 /obj/machinery/shower{
@@ -1627,13 +1627,13 @@
 	},
 /obj/machinery/light/small/directional/west,
 /obj/item/bikehorn/rubberducky,
-/turf/open/floor/iron/showroomfloor,
+/turf/simulated/open/floor/iron/showroomfloor,
 /area/shuttle/escape)
 "xt" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-22"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "xw" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -1645,17 +1645,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "xB" = (
 /obj/machinery/vending/wardrobe/chap_wardrobe,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "xZ" = (
 /obj/structure/cable,
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yc" = (
 /turf/closed/wall/mineral/iron,
@@ -1666,28 +1666,28 @@
 	name = "Coffin Storage";
 	req_one_access_txt = "22"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yh" = (
 /obj/item/extinguisher,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "yl" = (
 /obj/structure/sign/painting/library{
 	pixel_x = -32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yo" = (
 /obj/structure/bookcase/random/adult,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yr" = (
 /obj/structure/closet,
@@ -1695,13 +1695,13 @@
 /obj/item/storage/book/bible,
 /obj/item/storage/book/bible,
 /obj/item/storage/book/bible,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "yu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 10
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yA" = (
 /obj/machinery/door/morgue{
@@ -1714,18 +1714,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yC" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "yE" = (
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "yO" = (
 /obj/structure/closet{
@@ -1740,7 +1740,7 @@
 /obj/item/melee/flyswatter,
 /obj/item/melee/flyswatter,
 /obj/item/melee/flyswatter,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "yP" = (
 /obj/structure/table/wood,
@@ -1753,25 +1753,25 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yR" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel"
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "yZ" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "zb" = (
 /obj/effect/turf_decal/tile/yellow,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "zh" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -1785,66 +1785,66 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 10
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "zp" = (
 /obj/item/storage/bag/plants,
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/item/storage/bag/plants/portaseeder,
 /obj/item/storage/bag/plants/portaseeder,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "zr" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "zw" = (
 /obj/machinery/door/airlock/external/ruin{
 	name = "Pod Docking Bay"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "zB" = (
 /obj/structure/flora/ausbushes/pointybush,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "zE" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "zF" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/west,
 /obj/item/storage/crayons,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "zP" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/mug/tea,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "zQ" = (
 /obj/machinery/light/small/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "zU" = (
 /obj/structure/dresser,
 /obj/structure/sign/picture_frame/portrait{
 	pixel_y = 28
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "zX" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/pointybush,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Ab" = (
 /obj/structure/closet{
@@ -1856,30 +1856,30 @@
 /obj/item/honey_frame,
 /obj/item/honey_frame,
 /obj/item/honey_frame,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Ac" = (
 /obj/item/reagent_containers/glass/bucket,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Ad" = (
 /obj/structure/chair{
 	dir = 1
 	},
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "Am" = (
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "An" = (
 /obj/structure/table/wood,
 /obj/item/plate,
 /obj/item/kitchen/fork,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ax" = (
-/turf/open/floor/mineral/plastitanium/red/brig,
+/turf/simulated/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "Ay" = (
 /obj/structure/chair/wood,
@@ -1889,12 +1889,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "AF" = (
 /obj/structure/table/wood,
 /obj/item/food/grown/harebell,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "AG" = (
 /obj/machinery/light/small/directional/north,
@@ -1909,17 +1909,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "AJ" = (
 /obj/item/flashlight/lantern{
 	icon_state = "lantern-on"
 	},
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "AM" = (
 /obj/structure/flora/tree/jungle/small,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "AW" = (
 /obj/item/clothing/under/misc/burial,
@@ -1927,7 +1927,7 @@
 /obj/item/clothing/under/misc/burial,
 /obj/item/clothing/under/misc/burial,
 /obj/structure/table/wood,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Bd" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1936,21 +1936,21 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Bh" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Bp" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/beebox,
 /obj/item/queen_bee/bought,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Br" = (
 /obj/effect/turf_decal/tile/red/fourcorners,
@@ -1961,7 +1961,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "BA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -1970,7 +1970,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "BC" = (
 /obj/structure/table/wood/fancy,
@@ -1985,11 +1985,11 @@
 	throwforce = 8
 	},
 /obj/machinery/light/dim/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "BG" = (
 /obj/effect/turf_decal/tile/red/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "BQ" = (
 /obj/machinery/door/airlock{
@@ -2002,7 +2002,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "BR" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2011,7 +2011,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "BX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2020,12 +2020,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Cg" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Cn" = (
 /obj/item/reagent_containers/glass/bucket,
@@ -2033,13 +2033,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 9
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Cw" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/table/wood,
 /obj/machinery/newscaster/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Cz" = (
 /obj/item/radio/intercom/directional/east,
@@ -2048,46 +2048,46 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "CA" = (
 /obj/item/hatchet,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "CJ" = (
 /obj/structure/bookcase/random/adult,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "CM" = (
 /obj/structure/chair/wood{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "CN" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "CR" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/item/storage/fancy/candle_box,
 /obj/structure/table/wood,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Dc" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/machinery/light/small/directional/west,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/cable,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Dk" = (
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "Dn" = (
 /obj/item/paint/paint_remover{
@@ -2098,38 +2098,38 @@
 /obj/structure/sign/poster/official/fruit_bowl{
 	pixel_y = 32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Dr" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Monastery Kitchen";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Ds" = (
 /obj/machinery/holopad,
 /obj/item/flashlight/lantern,
-/turf/open/floor/iron/chapel,
+/turf/simulated/open/floor/iron/chapel,
 /area/shuttle/escape)
 "Dt" = (
 /obj/structure/flora/ausbushes,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "Dv" = (
 /obj/item/storage/book/bible,
 /obj/structure/cable,
 /obj/structure/altar_of_gods,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Dw" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "DE" = (
 /obj/machinery/vending/dinnerware,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "DG" = (
 /obj/structure/cable,
@@ -2139,7 +2139,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "DM" = (
 /obj/machinery/door/airlock{
@@ -2151,37 +2151,37 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "DS" = (
 /obj/machinery/door/airlock/external/ruin,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "DV" = (
 /obj/structure/bed,
 /obj/item/bedsheet/green,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "DW" = (
 /obj/machinery/airalarm/directional/west,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "DY" = (
 /obj/structure/cable,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Eb" = (
 /obj/structure/water_source/puddle,
 /obj/item/reagent_containers/glass/bucket,
 /obj/effect/landmark/event_spawn,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "En" = (
 /obj/structure/flora/ausbushes/sunnybush,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Ep" = (
 /obj/machinery/camera/directional/west{
@@ -2192,7 +2192,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Eu" = (
 /obj/machinery/door/airlock/grunge{
@@ -2201,7 +2201,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ew" = (
 /obj/structure/table,
@@ -2209,45 +2209,45 @@
 /obj/machinery/light/small/directional/north,
 /obj/effect/decal/cleanable/cobweb,
 /obj/item/radio/intercom/directional/north,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Ex" = (
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "ED" = (
 /obj/machinery/door/window/right/directional/north{
 	name = "Secure Art Exhibit";
 	req_access_txt = "37"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "EL" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/carrot,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "ET" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "EU" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/wheat,
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Fa" = (
 /obj/structure/table/wood,
 /obj/item/disk/nuclear/fake,
 /obj/item/barcodescanner,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ff" = (
 /obj/structure/flora/ausbushes/genericbush,
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Fh" = (
 /obj/structure/closet/cabinet,
@@ -2261,7 +2261,7 @@
 	pixel_x = -25;
 	specialfunctions = 4
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "Fm" = (
 /obj/structure/table/wood,
@@ -2269,12 +2269,12 @@
 	pixel_x = -2;
 	pixel_y = 2
 	},
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "Fp" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Fx" = (
 /obj/structure/table,
@@ -2286,7 +2286,7 @@
 /obj/item/storage/box/ingredients/wildcard{
 	layer = 3.1
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "FA" = (
 /obj/machinery/button/crematorium{
@@ -2296,7 +2296,7 @@
 /obj/structure/bodycontainer/crematorium{
 	id = "foo"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "FF" = (
 /obj/machinery/door/airlock/grunge{
@@ -2304,12 +2304,12 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "FK" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "FO" = (
 /obj/machinery/door/airlock/grunge{
@@ -2325,15 +2325,15 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "FY" = (
 /obj/structure/table/wood,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Gb" = (
 /obj/structure/closet/crate/bin,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Gg" = (
 /obj/effect/turf_decal/stripes/corner{
@@ -2342,26 +2342,26 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Gk" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/harebell,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Gu" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/easel,
 /obj/item/canvas/twentythree_nineteen,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "Gv" = (
 /obj/structure/chair/wood,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Gy" = (
 /obj/structure/closet/crate/coffin,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "GB" = (
 /obj/effect/turf_decal/sand,
@@ -2372,26 +2372,26 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "GD" = (
 /obj/structure/chair,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "GN" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "GU" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Hc" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Hf" = (
 /obj/machinery/door/airlock{
@@ -2404,7 +2404,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "Ho" = (
 /turf/closed/mineral,
@@ -2421,35 +2421,35 @@
 	pixel_x = -25;
 	specialfunctions = 4
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "HD" = (
-/turf/open/floor/iron/chapel,
+/turf/simulated/open/floor/iron/chapel,
 /area/shuttle/escape)
 "HL" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/poppy,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "HS" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/brflowers,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Ig" = (
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Ih" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Il" = (
 /obj/structure/sign/painting/library{
 	pixel_y = 32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "It" = (
 /obj/machinery/light/small/directional/south,
@@ -2461,7 +2461,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Iv" = (
 /obj/machinery/door/airlock{
@@ -2473,7 +2473,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Iw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2482,16 +2482,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ID" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "IK" = (
 /obj/structure/destructible/cult/item_dispenser/archives/library,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "IL" = (
 /obj/item/kirbyplants{
@@ -2502,19 +2502,19 @@
 	network = list("ss13","monastery")
 	},
 /obj/machinery/firealarm/directional/north,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "IM" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "IR" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/palebush,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "IT" = (
 /obj/machinery/light/small/directional/east,
@@ -2524,32 +2524,32 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Jf" = (
 /obj/machinery/power/smes{
 	charge = 5e+006
 	},
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Jg" = (
 /obj/structure/closet/emcloset,
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Jl" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "Jp" = (
 /obj/structure/table,
 /obj/item/crowbar,
 /obj/item/clothing/mask/gas,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Jt" = (
 /obj/structure/table/wood/fancy,
@@ -2557,7 +2557,7 @@
 	icon_state = "lantern-on";
 	pixel_y = 8
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Ju" = (
 /obj/structure/rack{
@@ -2570,7 +2570,7 @@
 	c_tag = "Monastery Archives Aft";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Jv" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -2579,12 +2579,12 @@
 	c_tag = "Monastery Garden";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Jy" = (
 /obj/machinery/light/small/directional/north,
 /obj/effect/turf_decal/tile/yellow,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Jz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2593,7 +2593,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "JA" = (
 /obj/machinery/door/airlock/grunge{
@@ -2605,7 +2605,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "JG" = (
 /turf/template_noop,
@@ -2614,13 +2614,13 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "JS" = (
 /obj/machinery/door/airlock{
 	name = "Bathroom"
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "JW" = (
 /obj/machinery/door/airlock/grunge{
@@ -2630,14 +2630,14 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "JX" = (
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 11
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "JZ" = (
 /obj/docking_port/mobile/emergency{
@@ -2653,81 +2653,81 @@
 "Kd" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Kf" = (
 /obj/structure/table/wood,
 /obj/item/nullrod,
-/turf/open/floor/carpet/black,
+/turf/simulated/open/floor/carpet/black,
 /area/shuttle/escape)
 "Kg" = (
 /obj/structure/window/reinforced/fulltile,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Kl" = (
 /obj/machinery/chem_master/condimaster,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Km" = (
 /obj/item/flashlight/lantern,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Kn" = (
 /obj/structure/flora/ausbushes/leafybush,
 /obj/structure/flora/ausbushes/reedbush,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "KE" = (
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/firealarm/directional/west,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "KH" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-08"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "KK" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/sign/painting/library{
 	pixel_x = 32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "KV" = (
 /obj/structure/toilet{
 	pixel_y = 8
 	},
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/iron/showroomfloor,
+/turf/simulated/open/floor/iron/showroomfloor,
 /area/shuttle/escape)
 "La" = (
 /obj/structure/cable,
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Lg" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Monastery Asteroid Dock Port";
 	network = list("ss13","monastery")
 	},
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "Li" = (
 /obj/structure/bookcase/random/adult,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ll" = (
 /obj/structure/sign/warning/vacuum/external{
 	pixel_y = 32
 	},
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Lq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -2736,18 +2736,18 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Lu" = (
 /obj/structure/bookcase/random/religion,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Lz" = (
 /obj/item/clothing/suit/apron/chef,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 5
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "LC" = (
 /obj/machinery/light/small/directional/west,
@@ -2755,7 +2755,7 @@
 	c_tag = "Chapel Port";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "LK" = (
 /turf/closed/wall/r_wall,
@@ -2764,7 +2764,7 @@
 /obj/item/paper{
 	text = "Lord, today let our dreams runneth on prayer. Amen."
 	},
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "LP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2773,7 +2773,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "LU" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -2782,13 +2782,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Mb" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/west,
 /obj/item/instrument/violin,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "Md" = (
 /obj/machinery/light/small/directional/east,
@@ -2796,7 +2796,7 @@
 	c_tag = "Monastery Archives Starboard";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Mf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -2805,24 +2805,24 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 9
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ms" = (
 /obj/structure/window/reinforced{
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "Mt" = (
 /obj/structure/lattice,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/shuttle/escape)
 "MC" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "MF" = (
 /obj/machinery/door/airlock/grunge{
@@ -2836,7 +2836,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "MX" = (
 /obj/structure/cable,
@@ -2846,13 +2846,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Na" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 9
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Nb" = (
 /obj/structure/shuttle/engine/propulsion,
@@ -2864,7 +2864,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Nf" = (
 /obj/structure/table,
@@ -2872,29 +2872,29 @@
 /obj/item/kitchen/rollingpin,
 /obj/item/knife/kitchen,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Nh" = (
 /obj/item/wrench,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Nm" = (
 /obj/structure/sign/painting/library_private{
 	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Np" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Nt" = (
 /obj/structure/sign/painting/library_private{
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Nw" = (
 /obj/machinery/door/airlock/grunge{
@@ -2905,13 +2905,13 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "NJ" = (
 /obj/structure/table,
 /obj/item/storage/crayons,
 /obj/item/wrench,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "NL" = (
 /obj/machinery/door/airlock/grunge{
@@ -2924,17 +2924,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "NS" = (
 /obj/machinery/newscaster/directional/east,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "NX" = (
 /obj/structure/chair{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Oc" = (
 /obj/machinery/door/airlock/grunge{
@@ -2946,7 +2946,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Og" = (
 /obj/effect/turf_decal/tile/red{
@@ -2958,7 +2958,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Oi" = (
 /obj/machinery/light/small/directional/west,
@@ -2969,30 +2969,30 @@
 	c_tag = "Monastery Cemetery";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Om" = (
 /obj/structure/table/wood/fancy,
 /obj/item/storage/fancy/candle_box,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Or" = (
 /obj/structure/chair/wood,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ov" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "OB" = (
 /obj/structure/chair/wood,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "OH" = (
 /obj/machinery/door/airlock/maintenance{
@@ -3002,25 +3002,25 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "OJ" = (
 /obj/effect/station_crash/devastating,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "OM" = (
 /obj/item/cultivator,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "OW" = (
 /obj/item/seeds/banana,
 /obj/item/seeds/grass,
 /obj/item/seeds/grape,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "OY" = (
 /obj/structure/window/reinforced,
-/turf/open/floor/mineral/plastitanium/red/brig,
+/turf/simulated/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "Pb" = (
 /obj/structure/shuttle/engine/heater,
@@ -3031,68 +3031,68 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Pe" = (
 /obj/structure/flora/ausbushes/fernybush,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "Pp" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Pu" = (
 /obj/machinery/seed_extractor,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Pw" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/sign/painting/library{
 	pixel_y = 32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Py" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/sugarcane,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Pz" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "PA" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 2
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "PB" = (
 /obj/structure/lattice,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "PC" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "PD" = (
 /obj/structure/table/wood,
 /obj/item/food/grown/poppy,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "PJ" = (
 /obj/structure/table/wood,
 /obj/item/clothing/head/pharaoh,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "PU" = (
 /obj/machinery/door/airlock/grunge{
@@ -3101,12 +3101,12 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "PY" = (
 /obj/structure/filingcabinet,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Qg" = (
 /obj/machinery/door/airlock/grunge{
@@ -3114,7 +3114,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Qj" = (
 /obj/structure/table/wood,
@@ -3124,26 +3124,26 @@
 	pixel_y = 4
 	},
 /obj/item/pen,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Qq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Qs" = (
 /obj/structure/table/wood,
 /obj/item/newspaper,
 /obj/item/reagent_containers/food/drinks/coffee,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Qt" = (
 /obj/structure/sign/painting/library_private{
 	pixel_x = 32
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Qv" = (
 /obj/item/storage/box/matches{
@@ -3151,7 +3151,7 @@
 	pixel_y = 8
 	},
 /obj/structure/table/wood,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Qw" = (
 /obj/structure/sign/painting/library_secure{
@@ -3161,11 +3161,11 @@
 /obj/item/stack/sheet/bone{
 	pixel_y = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "QG" = (
 /obj/structure/reagent_dispensers/watertank/high,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "QH" = (
 /obj/effect/turf_decal/tile/purple{
@@ -3174,35 +3174,35 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "QS" = (
 /obj/machinery/airalarm/directional/north,
 /obj/item/storage/medkit/regular,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "QX" = (
 /obj/structure/table,
 /obj/item/plate,
 /obj/item/kitchen/fork,
-/turf/open/misc/asteroid,
+/turf/simulated/open/misc/asteroid,
 /area/shuttle/escape)
 "QY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Rd" = (
 /obj/machinery/hydroponics/soil,
 /obj/machinery/light/small/directional/south,
 /obj/item/seeds/poppy,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Rg" = (
 /obj/structure/bed,
 /obj/item/bedsheet/yellow,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "Rj" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -3211,7 +3211,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Rs" = (
 /obj/effect/turf_decal/stripes/line,
@@ -3220,7 +3220,7 @@
 	dir = 1
 	},
 /obj/machinery/power/terminal,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Rv" = (
 /obj/structure/closet/crate,
@@ -3235,7 +3235,7 @@
 /obj/item/canvas/nineteen_nineteen,
 /obj/item/wirecutters,
 /obj/machinery/firealarm/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Rx" = (
 /obj/item/storage/toolbox/mechanical,
@@ -3244,31 +3244,31 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Rz" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "RA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "RG" = (
 /obj/structure/bookcase/random/nonfiction,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "RJ" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Monastery Art Gallery";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "RM" = (
 /obj/machinery/mass_driver/chapelgun,
@@ -3277,28 +3277,28 @@
 	name = "Mass Driver"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "RQ" = (
 /obj/machinery/vending/hydronutrients,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "RZ" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/sugarcane,
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Sb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/dim/directional/east,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Sc" = (
 /obj/structure/table/wood,
 /obj/item/food/grown/poppy,
 /obj/item/food/grown/harebell,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Se" = (
 /obj/machinery/door/airlock/grunge{
@@ -3314,17 +3314,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Sg" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Si" = (
 /obj/structure/table/wood/fancy,
 /obj/item/storage/book/bible,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Sj" = (
 /obj/structure/extinguisher_cabinet/directional/west,
@@ -3337,7 +3337,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Sk" = (
 /obj/item/toy/crayon/spraycan{
@@ -3348,7 +3348,7 @@
 /obj/structure/table/wood,
 /obj/machinery/newscaster/directional/north,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Sq" = (
 /obj/structure/table/wood/fancy,
@@ -3362,23 +3362,23 @@
 	pixel_y = 6
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Sr" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ss" = (
 /obj/machinery/light/dim/directional/west,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Su" = (
 /obj/item/wrench,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "SC" = (
 /obj/structure/chair/wood,
-/turf/open/floor/iron/chapel{
+/turf/simulated/open/floor/iron/chapel{
 	dir = 4
 	},
 /area/shuttle/escape)
@@ -3386,33 +3386,33 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "SK" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "SQ" = (
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/item/stack/rods/fifty,
 /obj/machinery/atmospherics/pipe/layer_manifold,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "SR" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/wine{
 	pixel_y = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "SU" = (
 /obj/structure/window/reinforced{
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/floor/mineral/plastitanium/red/brig,
+/turf/simulated/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "SV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -3421,7 +3421,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "SX" = (
 /obj/machinery/light/small/directional/north,
@@ -3432,7 +3432,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Tb" = (
 /obj/machinery/light/small/directional/east,
@@ -3445,11 +3445,11 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Tc" = (
 /obj/structure/shuttle/engine/heater,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Tf" = (
 /obj/machinery/door/airlock{
@@ -3457,14 +3457,14 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ti" = (
 /obj/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Tk" = (
 /obj/structure/cable,
@@ -3474,30 +3474,30 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Tm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Tp" = (
 /obj/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Tt" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Tx" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/trophy{
 	pixel_y = 8
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Tz" = (
 /obj/effect/turf_decal/stripes/line{
@@ -3508,33 +3508,33 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "TJ" = (
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 11
 	},
-/turf/open/floor/iron/showroomfloor,
+/turf/simulated/open/floor/iron/showroomfloor,
 /area/shuttle/escape)
 "TR" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "TU" = (
 /obj/machinery/computer/emergency_shuttle{
 	use_power = 0
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ua" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Ud" = (
 /obj/item/toy/crayon/black,
@@ -3551,14 +3551,14 @@
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Up" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Ur" = (
 /obj/effect/turf_decal/stripes/corner,
@@ -3568,7 +3568,7 @@
 	dir = 10
 	},
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Uv" = (
 /obj/effect/turf_decal/stripes/corner{
@@ -3576,12 +3576,12 @@
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "UC" = (
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/wheat,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "UJ" = (
 /obj/machinery/light/small/directional/west,
@@ -3589,13 +3589,13 @@
 	c_tag = "Monastery Archives Port";
 	network = list("ss13","monastery")
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "UK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "UQ" = (
 /obj/machinery/door/airlock/external/ruin{
@@ -3604,7 +3604,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Ve" = (
 /obj/effect/turf_decal/stripes/line{
@@ -3614,28 +3614,28 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Vg" = (
 /obj/structure/bookcase{
 	name = "Forbidden Knowledge"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Vi" = (
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Vl" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Vt" = (
 /obj/structure/table/wood,
 /obj/item/folder/yellow,
 /obj/item/pen,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Vv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3643,17 +3643,17 @@
 	pixel_x = 32
 	},
 /obj/machinery/newscaster/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "VA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 5
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "VE" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "VF" = (
 /obj/structure/window/reinforced,
@@ -3664,7 +3664,7 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
 	name = "Outlet Injector"
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/escape)
 "VM" = (
 /obj/machinery/mass_driver/chapelgun,
@@ -3673,7 +3673,7 @@
 	layer = 2.9
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "VN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -3688,11 +3688,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "We" = (
 /obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Wh" = (
 /obj/machinery/door/airlock/external/ruin{
@@ -3704,44 +3704,44 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Wl" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Wo" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Wp" = (
 /obj/machinery/airalarm/directional/east,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Ws" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/libraryconsole,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Wz" = (
 /obj/structure/bookcase/random/reference,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "WF" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "WG" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "WH" = (
 /obj/structure/cable,
 /obj/machinery/light/dim/directional/west,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "WJ" = (
 /obj/machinery/shower{
@@ -3749,19 +3749,19 @@
 	pixel_y = -4
 	},
 /obj/item/soap/homemade,
-/turf/open/floor/iron/showroomfloor,
+/turf/simulated/open/floor/iron/showroomfloor,
 /area/shuttle/escape)
 "WM" = (
 /obj/structure/displaycase/trophy,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "WO" = (
 /obj/machinery/light/dim/directional/east,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "WQ" = (
 /obj/machinery/biogenerator,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/shuttle/escape)
 "Xb" = (
 /obj/structure/table/wood,
@@ -3769,7 +3769,7 @@
 	icon_state = "plant-22";
 	pixel_y = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Xk" = (
 /obj/structure/table/wood,
@@ -3778,11 +3778,11 @@
 	pixel_y = 10
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Xm" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Xs" = (
 /obj/structure/window/reinforced{
@@ -3791,13 +3791,13 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Xu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Xx" = (
 /obj/structure/window/reinforced{
@@ -3807,7 +3807,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "XF" = (
 /obj/effect/turf_decal/stripes/line{
@@ -3817,29 +3817,29 @@
 	dir = 1;
 	name = "Outlet Injector"
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/escape)
 "XI" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "XK" = (
 /obj/structure/closet/crate/bin,
 /obj/item/reagent_containers/glass/rag,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "XL" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "XN" = (
 /obj/structure/chair/wood,
-/turf/open/floor/iron/chapel{
+/turf/simulated/open/floor/iron/chapel{
 	dir = 8
 	},
 /area/shuttle/escape)
@@ -3847,7 +3847,7 @@
 /obj/machinery/light/small/directional/north,
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "XQ" = (
 /obj/structure/chair/wood,
@@ -3857,7 +3857,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "XY" = (
 /obj/effect/turf_decal/tile/red/fourcorners,
@@ -3868,7 +3868,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "XZ" = (
 /obj/structure/cable,
@@ -3876,37 +3876,37 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Yc" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "Ye" = (
 /obj/structure/shuttle/engine/propulsion,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Ym" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "YC" = (
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "YD" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "YE" = (
 /obj/effect/turf_decal/tile/red{
@@ -3916,11 +3916,11 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "YO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "YU" = (
 /obj/structure/window/reinforced{
@@ -3931,19 +3931,19 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/shuttle/escape)
 "YZ" = (
 /obj/structure/table/wood,
 /obj/item/storage/bag/books,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Za" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Zb" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -3952,27 +3952,27 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/shuttle/escape)
 "Zf" = (
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "Zh" = (
 /obj/machinery/door/window/brigdoor{
 	dir = 4;
 	req_one_access_txt = "63"
 	},
-/turf/open/floor/mineral/plastitanium/red/brig,
+/turf/simulated/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "Zj" = (
 /mob/living/simple_animal/butterfly,
-/turf/open/floor/grass,
+/turf/simulated/open/floor/grass,
 /area/shuttle/escape)
 "Zl" = (
 /obj/machinery/light/small/directional/west,
 /obj/machinery/libraryscanner,
 /obj/machinery/newscaster/directional/south,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "Zn" = (
 /obj/structure/window/reinforced,
@@ -3980,7 +3980,7 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/open/floor/mineral/plastitanium/red/brig,
+/turf/simulated/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "Zr" = (
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -3988,12 +3988,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "ZA" = (
 /obj/structure/table/wood/fancy,
 /obj/item/storage/photo_album,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 "ZM" = (
 /obj/structure/cable,
@@ -4003,7 +4003,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ZU" = (
 /obj/machinery/door/airlock/grunge{
@@ -4013,11 +4013,11 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/escape)
 "ZZ" = (
 /obj/structure/cable,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/shuttle/escape)
 
 (1,1,1) = {"

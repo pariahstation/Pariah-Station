@@ -9,7 +9,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 "j" = (
 /obj/machinery/button/door{
@@ -19,7 +19,7 @@
 	pixel_x = 25;
 	specialfunctions = 4
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 "k" = (
 /obj/machinery/porta_turret/syndicate/energy{
@@ -35,7 +35,7 @@
 /area/shuttle/sbc_fighter2)
 "o" = (
 /obj/machinery/computer/shuttle/starfury/fighter/fighter_two,
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 "q" = (
 /obj/structure/shuttle/engine/propulsion/burst,
@@ -56,13 +56,13 @@
 	dir = 1;
 	name = "tactical chair"
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 "t" = (
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/fighter/fighter_two{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 "u" = (
 /obj/machinery/door/airlock/external{
@@ -72,14 +72,14 @@
 	},
 /obj/docking_port/mobile/syndicate_fighter/fighter_two,
 /obj/structure/fans/tiny,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/sbc_fighter2)
 "v" = (
 /obj/machinery/computer/security{
 	dir = 8;
 	network = list("SBC_Fighter2")
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 "x" = (
 /obj/machinery/porta_turret/syndicate/energy/heavy{
@@ -94,13 +94,13 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 "V" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/sbc_fighter2)
 "W" = (
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter2)
 
 (1,1,1) = {"

@@ -3,18 +3,18 @@
 /turf/closed/indestructible/necropolis,
 /area/shuttle_arena)
 "b" = (
-/turf/open/indestructible/necropolis/air,
+/turf/simulated/open/indestructible/necropolis/air,
 /area/shuttle_arena)
 "c" = (
 /obj/effect/forcefield/arena_shuttle,
-/turf/open/indestructible/necropolis/air,
+/turf/simulated/open/indestructible/necropolis/air,
 /area/shuttle_arena)
 "d" = (
-/turf/open/lava/smooth,
+/turf/simulated/open/lava/smooth,
 /area/shuttle_arena)
 "e" = (
 /obj/effect/landmark/shuttle_arena_entrance,
-/turf/open/indestructible/necropolis/air,
+/turf/simulated/open/indestructible/necropolis/air,
 /area/shuttle_arena)
 "f" = (
 /turf/template_noop,

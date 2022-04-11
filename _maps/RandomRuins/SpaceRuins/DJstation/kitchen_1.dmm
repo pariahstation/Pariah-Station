@@ -23,7 +23,7 @@
 	pixel_y = 5
 	},
 /obj/item/storage/box/donkpockets,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "n" = (
 /obj/effect/turf_decal/tile/bar{
@@ -32,7 +32,7 @@
 /obj/effect/turf_decal/tile/bar,
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light/directional/south,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "o" = (
 /obj/effect/turf_decal/tile/bar{
@@ -41,7 +41,7 @@
 /obj/effect/turf_decal/tile/bar,
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "u" = (
 /obj/effect/turf_decal/tile/bar{
@@ -50,7 +50,7 @@
 /obj/effect/turf_decal/tile/bar,
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/bin,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "x" = (
 /obj/structure/disposaloutlet{
@@ -59,7 +59,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "panelscorched"
 	},
 /area/ruin/space/djstation)
@@ -82,7 +82,7 @@
 /area/ruin/space/djstation)
 "N" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "O" = (
 /obj/machinery/door/airlock/public/glass{
@@ -95,7 +95,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/bar,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "S" = (
 /obj/structure/disposalpipe/segment,
@@ -114,7 +114,7 @@
 /obj/machinery/microwave{
 	pixel_y = 8
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 
 (1,1,1) = {"

@@ -1,18 +1,18 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 "b" = (
 /turf/closed/mineral/random/snow,
 /area/icemoon/surface/outdoors/unexplored)
 "c" = (
-/turf/open/water/cursed_spring,
+/turf/simulated/open/water/cursed_spring,
 /area/icemoon/surface/outdoors/noteleport)
 "d" = (
 /obj/item/paper/crumpled{
 	info = "When one falls into this hot spring, they shall forever be turned into..."
 	},
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/simulated/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors)
 
 (1,1,1) = {"

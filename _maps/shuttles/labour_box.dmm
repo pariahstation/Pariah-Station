@@ -4,29 +4,29 @@
 /area/shuttle/labor)
 "b" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/labor)
 "c" = (
 /obj/machinery/computer/shuttle/labor{
 	dir = 4
 	},
 /obj/structure/reagent_dispensers/wall/peppertank/directional/west,
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/labor)
 "d" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/labor)
 "e" = (
 /obj/structure/table,
 /obj/item/folder/red,
 /obj/item/restraints/handcuffs,
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/labor)
 "f" = (
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/labor)
 "g" = (
 /obj/machinery/button/flasher{
@@ -36,7 +36,7 @@
 	req_access_txt = "1"
 	},
 /obj/machinery/light/directional/south,
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/labor)
 "h" = (
 /obj/machinery/mineral/stacking_unit_console{
@@ -44,42 +44,42 @@
 	pixel_x = 30;
 	pixel_y = 30
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/labor)
 "i" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Labor Shuttle Airlock";
 	req_access_txt = "2"
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/labor)
 "j" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Labor Shuttle Airlock";
 	req_access_txt = "2"
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/labor)
 "k" = (
 /obj/machinery/mineral/stacking_machine/laborstacker{
 	input_dir = 2;
 	output_dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/shuttle/labor)
 "l" = (
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/labor)
 "m" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/labor)
 "n" = (
 /obj/machinery/mineral/labor_claim_console{
 	machinedir = 1;
 	pixel_x = 30
 	},
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/labor)
 "o" = (
 /obj/structure/chair/comfy/shuttle{
@@ -88,11 +88,11 @@
 /obj/machinery/flasher/directional/east{
 	id = "gulagshuttleflasher"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/labor)
 "p" = (
 /obj/structure/closet/crate,
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/labor)
 "q" = (
 /obj/docking_port/mobile{
@@ -105,7 +105,7 @@
 	port_direction = 4
 	},
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/labor)
 "r" = (
 /obj/structure/shuttle/engine/heater,
@@ -113,17 +113,17 @@
 	dir = 1;
 	layer = 2.9
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/labor)
 "s" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/labor)
 "W" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Labor Shuttle Airlock"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/labor)
 
 (1,1,1) = {"

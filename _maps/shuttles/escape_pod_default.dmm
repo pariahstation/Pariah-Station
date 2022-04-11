@@ -10,7 +10,7 @@
 /obj/machinery/computer/shuttle/pod{
 	pixel_x = -32
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "N" = (
 /obj/machinery/door/airlock/titanium{
@@ -19,11 +19,11 @@
 /obj/docking_port/mobile/pod{
 	port_direction = 2
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "Q" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/pod_1)
 "U" = (
 /obj/structure/chair/comfy/shuttle{
@@ -34,7 +34,7 @@
 	pixel_x = -26
 	},
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "Z" = (
 /obj/structure/shuttle/engine/propulsion/burst,

@@ -10,7 +10,7 @@
 /obj/structure/table,
 /obj/item/reagent_containers/dropper,
 /obj/item/assembly/igniter,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -30,7 +30,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -50,7 +50,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -61,7 +61,7 @@
 	},
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -77,7 +77,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -97,7 +97,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -110,7 +110,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -123,7 +123,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -139,7 +139,7 @@
 /obj/structure/window{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -155,7 +155,7 @@
 	dir = 4
 	},
 /obj/item/storage/box/masks,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -168,7 +168,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -181,7 +181,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -200,7 +200,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -216,13 +216,13 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
 "jr" = (
 /obj/effect/turf_decal/tile/blue,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -236,7 +236,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -250,7 +250,7 @@
 	},
 /obj/structure/table,
 /obj/item/storage/box/syringes,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -265,7 +265,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -278,7 +278,7 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-10"
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -290,7 +290,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -307,7 +307,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -321,7 +321,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -346,12 +346,12 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
 "tI" = (
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -363,7 +363,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -375,7 +375,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -390,7 +390,7 @@
 	dir = 4
 	},
 /obj/structure/bed/roller,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -400,7 +400,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -412,7 +412,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -429,7 +429,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -443,7 +443,7 @@
 /obj/structure/table,
 /obj/item/paper_bin,
 /obj/item/pen,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -455,7 +455,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -467,7 +467,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -479,7 +479,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -492,7 +492,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -511,7 +511,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -526,7 +526,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -540,7 +540,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -553,7 +553,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -565,7 +565,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -576,7 +576,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -594,7 +594,7 @@
 /obj/item/reagent_containers/glass/beaker,
 /obj/item/reagent_containers/glass/beaker,
 /obj/item/reagent_containers/glass/beaker,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -605,7 +605,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -617,7 +617,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -631,7 +631,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -641,7 +641,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -653,7 +653,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -662,7 +662,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -679,7 +679,7 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-21"
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -687,7 +687,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -704,7 +704,7 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-08"
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -718,7 +718,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -735,7 +735,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -748,7 +748,7 @@
 	},
 /obj/structure/table,
 /obj/item/reagent_containers/glass/beaker/large,
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -764,7 +764,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -773,7 +773,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -789,7 +789,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -808,7 +808,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -825,7 +825,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -836,7 +836,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -849,7 +849,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)
@@ -864,7 +864,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/turf/open/floor/holofloor{
+/turf/simulated/open/floor/holofloor{
 	icon_state = "white"
 	},
 /area/template_noop)

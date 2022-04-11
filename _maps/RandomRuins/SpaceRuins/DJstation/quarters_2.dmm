@@ -4,14 +4,14 @@
 /area/template_noop)
 "d" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/iron/dark/textured,
+/turf/simulated/open/floor/iron/dark/textured,
 /area/ruin/space/djstation)
 "f" = (
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 12
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/simulated/open/floor/iron/dark/textured,
 /area/ruin/space/djstation)
 "i" = (
 /turf/closed/wall,
@@ -22,7 +22,7 @@
 	},
 /obj/effect/turf_decal/siding/yellow,
 /obj/structure/curtain,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "p" = (
 /obj/machinery/door/airlock/public/glass{
@@ -32,7 +32,7 @@
 /area/template_noop)
 "v" = (
 /obj/structure/bed/maint,
-/turf/open/floor/iron/dark/textured,
+/turf/simulated/open/floor/iron/dark/textured,
 /area/ruin/space/djstation)
 "B" = (
 /obj/machinery/door/airlock/public/glass{
@@ -43,7 +43,7 @@
 /area/template_noop)
 "J" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "M" = (
 /obj/structure/toilet{
@@ -51,11 +51,11 @@
 	},
 /obj/effect/turf_decal/siding/yellow,
 /obj/structure/curtain,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "V" = (
 /obj/effect/spawner/random/structure/closet_maintenance,
-/turf/open/floor/iron/dark/textured,
+/turf/simulated/open/floor/iron/dark/textured,
 /area/ruin/space/djstation)
 "W" = (
 /obj/structure/lattice,
@@ -68,7 +68,7 @@
 /area/space/nearstation)
 "Z" = (
 /obj/machinery/duct,
-/turf/open/floor/iron/dark/textured,
+/turf/simulated/open/floor/iron/dark/textured,
 /area/ruin/space/djstation)
 
 (1,1,1) = {"

@@ -6,24 +6,24 @@
 /turf/closed/mineral/random,
 /area/ruin/unpowered/no_grav)
 "c" = (
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/ruin/unpowered/no_grav)
 "d" = (
 /turf/closed/wall/mineral/bananium,
 /area/ruin/unpowered)
 "e" = (
 /obj/machinery/door/airlock/bananium,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "f" = (
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/ruin/unpowered)
 "g" = (
 /obj/effect/mob_spawn/corpse/human/clown,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "h" = (
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "i" = (
 /obj/structure/closet/crate,
@@ -32,14 +32,14 @@
 /obj/item/stack/ore/bananium,
 /obj/item/stack/ore/bananium,
 /obj/item/stack/ore/bananium,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "j" = (
 /obj/structure/closet/crate{
 	icon_state = "crateopen"
 	},
 /obj/item/stack/ore/bananium,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "k" = (
 /obj/structure/closet/secure_closet{
@@ -49,7 +49,7 @@
 /obj/item/clothing/shoes/clown_shoes/banana_shoes,
 /obj/item/gps/spaceruin,
 /obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "l" = (
 /obj/structure/shuttle/engine/heater{
@@ -60,7 +60,7 @@
 	color = "#FFFF00";
 	dir = 8
 	},
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	color = "#FFFF00"
 	},
 /area/ruin/unpowered)
@@ -78,11 +78,11 @@
 /obj/item/shard{
 	icon_state = "small"
 	},
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/ruin/unpowered)
 "p" = (
 /obj/item/stack/ore/bananium,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "q" = (
 /obj/item/shard{
@@ -91,17 +91,17 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/turf/open/misc/asteroid/airless,
+/turf/simulated/open/misc/asteroid/airless,
 /area/ruin/unpowered)
 "r" = (
 /obj/effect/mob_spawn/corpse/human/clown{
 	name = "Clown Pilot"
 	},
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "s" = (
 /obj/item/paper/fluff/ruins/crashedclownship/true_nation,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "t" = (
 /obj/structure/grille{
@@ -118,7 +118,7 @@
 	color = "#FFFF00";
 	dir = 8
 	},
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	color = "#FFFF00"
 	},
 /area/ruin/unpowered)
@@ -127,21 +127,21 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "v" = (
 /obj/item/shard{
 	icon_state = "medium"
 	},
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "w" = (
 /obj/item/storage/bag/ore,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "x" = (
 /obj/item/pickaxe,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "y" = (
 /obj/structure/closet/crate,
@@ -149,11 +149,11 @@
 /obj/item/stack/ore/bananium,
 /obj/item/stack/ore/bananium,
 /obj/item/stack/ore/bananium,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 "z" = (
 /obj/item/shovel,
-/turf/open/floor/mineral/bananium/airless,
+/turf/simulated/open/floor/mineral/bananium/airless,
 /area/ruin/unpowered)
 
 (1,1,1) = {"

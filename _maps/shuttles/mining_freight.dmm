@@ -4,29 +4,29 @@
 /area/shuttle/mining)
 "b" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/mining)
 "c" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/emergency,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/shuttle/mining)
 "d" = (
 /obj/machinery/computer/shuttle/mining/common,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/shuttle/mining)
 "e" = (
 /obj/structure/table,
 /obj/item/radio,
 /obj/item/radio/intercom/directional/north,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/shuttle/mining)
 "f" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/shuttle/mining)
 "g" = (
 /obj/structure/chair/comfy/shuttle{
@@ -35,13 +35,13 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/shuttle/mining)
 "h" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/shuttle/mining)
 "i" = (
 /obj/structure/sign/nanotrasen,
@@ -55,14 +55,14 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/shuttle/mining)
 "k" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/shuttle/mining)
 "l" = (
 /obj/effect/turf_decal/stripes/line,
@@ -72,7 +72,7 @@
 /obj/machinery/atmospherics/components/binary/valve{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/yellow,
+/turf/simulated/open/floor/mineral/titanium/yellow,
 /area/shuttle/mining)
 "m" = (
 /obj/machinery/door/airlock/titanium{
@@ -90,30 +90,30 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/mining)
 "n" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/shuttle/mining)
 "o" = (
 /obj/structure/closet/crate,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/airalarm/directional/west,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/shuttle/mining)
 "p" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/structure/shuttle/engine/heater,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/template_noop)
 "q" = (
 /obj/structure/ore_box,
 /obj/effect/turf_decal/delivery,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/shuttle/mining)
 "r" = (
 /obj/structure/sign/warning/fire,
@@ -121,7 +121,7 @@
 /area/shuttle/mining)
 "s" = (
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/mining)
 
 (1,1,1) = {"

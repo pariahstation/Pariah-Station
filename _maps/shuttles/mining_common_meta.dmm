@@ -4,28 +4,28 @@
 /area/shuttle/mining)
 "b" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/mining)
 "c" = (
 /obj/structure/table,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "d" = (
 /obj/machinery/computer/shuttle/mining/common,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "e" = (
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/mining)
 "f" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "g" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/mining)
 "h" = (
 /obj/machinery/door/airlock/titanium{
@@ -40,11 +40,11 @@
 	port_direction = 4;
 	width = 7
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/mining)
 "i" = (
 /obj/structure/closet/crate,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "j" = (
 /obj/structure/shuttle/engine/heater,
@@ -58,21 +58,21 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/mining)
 "k" = (
 /obj/structure/ore_box,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/mining)
 "l" = (
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/mining)
 "Q" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium,
+/turf/simulated/open/floor/mineral/titanium,
 /area/shuttle/mining)
 
 (1,1,1) = {"

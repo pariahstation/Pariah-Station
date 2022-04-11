@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space)
 "ab" = (
 /turf/closed/indestructible{
@@ -9,85 +9,85 @@
 /area/awaymission/challenge/start)
 "ac" = (
 /obj/structure/girder,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/start)
 "ad" = (
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/start)
 "ae" = (
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged5"
 	},
 /area/awaymission/challenge/start)
 "af" = (
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
 "ag" = (
 /obj/item/clothing/suit/space/syndicate/blue,
 /obj/item/clothing/head/helmet/space/syndicate/blue,
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
 "ah" = (
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "ai" = (
 /obj/item/flashlight{
 	icon_state = "flashlight-on"
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "aj" = (
 /obj/effect/landmark/awaystart,
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged3"
 	},
 /area/awaymission/challenge/start)
 "ak" = (
 /obj/effect/decal/remains/human,
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged4"
 	},
 /area/awaymission/challenge/start)
 "al" = (
 /obj/effect/landmark/awaystart,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "am" = (
 /obj/item/clothing/suit/space/syndicate/green,
 /obj/item/clothing/head/helmet/space/syndicate/green,
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
 "an" = (
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged3"
 	},
 /area/awaymission/challenge/start)
 "ao" = (
 /obj/item/clothing/suit/space/syndicate/orange,
 /obj/item/clothing/head/helmet/space/syndicate/orange,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "ap" = (
 /obj/item/gun/energy/laser/retro,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "aq" = (
 /obj/item/stack/rods,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "ar" = (
 /obj/effect/decal/cleanable/oil,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "as" = (
 /obj/effect/decal/remains/robot,
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
@@ -95,30 +95,30 @@
 /turf/closed/wall,
 /area/awaymission/challenge/start)
 "av" = (
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged4"
 	},
 /area/awaymission/challenge/start)
 "aw" = (
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
 "ax" = (
 /obj/effect/decal/cleanable/oil,
 /mob/living/simple_animal/hostile/syndicate,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/start)
 "ay" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/start)
 "az" = (
 /obj/item/clothing/suit/space/syndicate/black,
 /obj/item/clothing/head/helmet/space/syndicate/black,
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/start)
@@ -129,10 +129,10 @@
 /area/awaymission/challenge/main)
 "aB" = (
 /obj/structure/girder,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aD" = (
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged3"
 	},
 /area/awaymission/challenge/main)
@@ -140,85 +140,85 @@
 /turf/closed/wall,
 /area/awaymission/challenge/main)
 "aF" = (
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aG" = (
-/turf/open/floor/iron/airless{
+/turf/simulated/open/floor/iron/airless{
 	icon_state = "damaged2"
 	},
 /area/awaymission/challenge/main)
 "aH" = (
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "aI" = (
 /obj/machinery/power/emitter/ctf,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aJ" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "aK" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "aL" = (
 /obj/effect/decal/cleanable/oil,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "aM" = (
 /obj/machinery/light/directional/east,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "aN" = (
 /obj/effect/decal/cleanable/oil,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aO" = (
 /obj/structure/window/reinforced,
 /obj/machinery/power/emitter/ctf,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aP" = (
 /obj/structure/window/reinforced,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aQ" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/oil,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aR" = (
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "aS" = (
 /obj/machinery/power/emitter/ctf{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aT" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aU" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "aV" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aW" = (
 /obj/machinery/power/emitter/ctf{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aX" = (
 /obj/machinery/porta_turret{
@@ -226,33 +226,33 @@
 	installation = /obj/item/gun/energy/lasercannon;
 	set_obj_flags = "EMAGGED"
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aY" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/end{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "aZ" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/end{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "ba" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bb" = (
 /obj/item/multitool,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bc" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bd" = (
 /obj/structure/window/reinforced{
@@ -264,7 +264,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "be" = (
 /obj/structure/window/reinforced{
@@ -273,7 +273,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bf" = (
 /obj/machinery/power/emitter/ctf{
@@ -285,7 +285,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bg" = (
 /obj/structure/window/reinforced{
@@ -297,7 +297,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bi" = (
 /obj/machinery/power/emitter/ctf{
@@ -309,18 +309,18 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bj" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bk" = (
 /obj/machinery/power/emitter/ctf{
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bl" = (
 /obj/structure/window/reinforced{
@@ -332,11 +332,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bm" = (
 /obj/machinery/door/window,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bn" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -349,11 +349,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bp" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "br" = (
 /obj/structure/window/reinforced{
@@ -362,18 +362,18 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bs" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/oil,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bt" = (
 /obj/item/storage/toolbox/electrical,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bu" = (
 /obj/structure/window/reinforced{
@@ -383,12 +383,12 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bv" = (
 /obj/structure/window/reinforced,
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bw" = (
 /obj/structure/window/reinforced{
@@ -398,7 +398,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bx" = (
 /obj/machinery/power/emitter/ctf{
@@ -407,28 +407,28 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "by" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bz" = (
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bA" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/middle,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bB" = (
 /obj/item/clothing/gloves/color/yellow,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "bC" = (
 /obj/structure/window/reinforced{
@@ -437,7 +437,7 @@
 /obj/machinery/power/emitter/ctf{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bD" = (
 /obj/structure/window/reinforced{
@@ -446,20 +446,20 @@
 /obj/machinery/power/emitter/ctf{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bF" = (
-/turf/open/floor/iron/white/corner{
+/turf/simulated/open/floor/iron/white/corner{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/awaymission/challenge/main)
 "bG" = (
-/turf/open/floor/iron/white/side{
+/turf/simulated/open/floor/iron/white/side{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/awaymission/challenge/main)
 "bH" = (
-/turf/open/floor/iron/white/corner{
+/turf/simulated/open/floor/iron/white/corner{
 	dir = 8;
 	initial_gas_mix = "TEMP=2.7"
 	},
@@ -468,7 +468,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bJ" = (
 /obj/structure/window/reinforced{
@@ -477,7 +477,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bK" = (
 /obj/structure/window/reinforced{
@@ -486,7 +486,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bL" = (
 /obj/machinery/power/emitter/ctf{
@@ -495,13 +495,13 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bM" = (
 /obj/machinery/power/emitter/ctf{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bN" = (
 /obj/machinery/power/emitter/ctf{
@@ -510,7 +510,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bO" = (
 /obj/machinery/power/emitter/ctf{
@@ -519,7 +519,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bP" = (
 /turf/closed/indestructible{
@@ -528,7 +528,7 @@
 /area/awaymission/challenge/end)
 "bQ" = (
 /obj/item/gun/ballistic/revolver/russian,
-/turf/open/floor/iron/white/side{
+/turf/simulated/open/floor/iron/white/side{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/awaymission/challenge/main)
@@ -538,7 +538,7 @@
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/awaymission/challenge/end)
 "bS" = (
 /obj/machinery/computer/security/telescreen{
@@ -548,18 +548,18 @@
 	pixel_y = 30
 	},
 /obj/structure/table/reinforced,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "bT" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/machinery/light/directional/south,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bU" = (
 /obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron/white{
+/turf/simulated/open/floor/iron/white{
 	initial_gas_mix = "TEMP=2.7"
 	},
 /area/awaymission/challenge/main)
@@ -568,12 +568,12 @@
 	dir = 8
 	},
 /obj/machinery/light/directional/south,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/awaymission/challenge/main)
 "bW" = (
 /obj/machinery/light/directional/north,
 /obj/structure/filingcabinet,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "bX" = (
 /obj/machinery/computer/security/telescreen{
@@ -582,36 +582,36 @@
 	network = "";
 	pixel_y = 30
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "bY" = (
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "bZ" = (
 /obj/structure/mirror/directional/north,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/challenge/end)
 "ca" = (
 /obj/machinery/light/directional/north,
 /obj/structure/rack,
 /obj/item/clothing/suit/armor/heavy,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/challenge/end)
 "cb" = (
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/awaymission/challenge/end)
 "cc" = (
 /obj/structure/chair{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "cd" = (
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "ce" = (
 /mob/living/simple_animal/hostile/syndicate/ranged/smg/space,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "cf" = (
 /obj/machinery/door/airlock/centcom{
@@ -628,64 +628,64 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "cg" = (
 /obj/item/radio/intercom/directional/west,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "ch" = (
 /obj/structure/chair/comfy/black,
 /mob/living/simple_animal/hostile/syndicate{
 	name = "Syndicate Commander"
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "ci" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "cj" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/challenge/end)
 "ck" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/revolver/mateba,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/challenge/end)
 "cl" = (
 /mob/living/simple_animal/hostile/syndicate/melee/sword,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "cm" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cn" = (
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cp" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cq" = (
 /obj/structure/table/wood,
 /obj/item/melee/chainofcommand,
 /obj/item/stamp,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "cr" = (
 /obj/structure/table/wood,
 /obj/item/paper/fluff/gateway,
 /obj/item/folder/blue,
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "cs" = (
 /obj/structure/table/wood,
@@ -693,48 +693,48 @@
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/turf/open/floor/carpet,
+/turf/simulated/open/floor/carpet,
 /area/awaymission/challenge/end)
 "ct" = (
 /obj/structure/rack,
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/silenced,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/challenge/end)
 "cu" = (
 /mob/living/simple_animal/hostile/syndicate/melee/sword,
-/turf/open/floor/mineral/plastitanium,
+/turf/simulated/open/floor/mineral/plastitanium,
 /area/awaymission/challenge/end)
 "cv" = (
 /obj/structure/chair{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/challenge/end)
 "cw" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/l6_saw,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/challenge/end)
 "cx" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Security";
 	req_access_txt = "109"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "cy" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cz" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cA" = (
 /obj/structure/sign/warning/securearea,
@@ -747,33 +747,33 @@
 	name = "Administrator";
 	req_access_txt = "109"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "cC" = (
 /obj/item/storage/toolbox/electrical,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cD" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cE" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cF" = (
 /mob/living/simple_animal/hostile/syndicate/ranged/smg,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "cG" = (
 /obj/machinery/light/directional/east,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "cH" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cI" = (
 /obj/structure/window/reinforced{
@@ -782,7 +782,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cJ" = (
 /obj/structure/window/reinforced{
@@ -791,7 +791,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cK" = (
 /obj/structure/window/reinforced{
@@ -800,7 +800,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cL" = (
 /obj/structure/window/reinforced{
@@ -809,66 +809,66 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "cM" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/directional{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/awaymission/challenge/end)
 "cN" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/middle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/awaymission/challenge/end)
 "cO" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/directional{
 	dir = 5
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/awaymission/challenge/end)
 "cP" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/middle{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/awaymission/challenge/end)
 "cW" = (
 /obj/machinery/gateway/away{
 	calibrated = 0
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "db" = (
 /obj/structure/window/reinforced,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "dc" = (
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "dd" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "de" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/end,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/awaymission/challenge/end)
 "df" = (
 /obj/structure/table,
 /obj/item/paper/pamphlet/gateway,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "dh" = (
 /obj/structure/table,
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "di" = (
 /obj/structure/table,
@@ -882,57 +882,57 @@
 /obj/item/implanter/explosive{
 	pixel_y = 12
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "dj" = (
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/turf/open/space,
+/turf/simulated/open/space,
 /area/space/nearstation)
 "dk" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Gateway Access";
 	req_access_txt = "109"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "dl" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/end{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/awaymission/challenge/end)
 "dm" = (
 /obj/structure/cable,
 /mob/living/simple_animal/hostile/syndicate{
 	name = "Syndicate Technician"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "do" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "dp" = (
 /obj/structure/closet/emcloset,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "dq" = (
 /obj/machinery/power/smes/magical,
 /obj/structure/cable,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "dr" = (
 /obj/machinery/power/terminal{
 	dir = 8
 	},
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "ds" = (
 /obj/structure/closet/l3closet,
-/turf/open/floor/circuit,
+/turf/simulated/open/floor/circuit,
 /area/awaymission/challenge/end)
 "hR" = (
 /obj/machinery/computer/security/telescreen{
@@ -945,25 +945,25 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)"
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "zK" = (
 /obj/item/storage/medkit/fire,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/awaymission/challenge/main)
 "GX" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "Io" = (
 /obj/structure/table,
 /obj/item/storage/medkit/regular,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 "Kv" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/awaymission/challenge/end)
 
 (1,1,1) = {"

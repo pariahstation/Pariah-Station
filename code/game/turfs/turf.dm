@@ -27,6 +27,13 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	///The max temperature of the fire which it was subjected to
 	var/max_fire_temperature_sustained = 0
 
+	// Initial air contents (in moles)
+	var/list/initial_gas
+
+	//Properties for airtight tiles (/wall)
+	var/thermal_conductivity = 0.05
+	var/heat_capacity = 1
+
 	var/blocks_air = FALSE
 
 	var/list/image/blueprint_data //for the station blueprints, images of objects eg: pipes
@@ -92,7 +99,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
  * Please note, space tiles do not run this code.
  * This is done because it's called so often that any extra code just slows things down too much
  * If you add something relevant here add it there too
- * [/turf/open/space/Initialize]
+ * [/turf/simulated/open/space/Initialize]
  */
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE)
@@ -385,7 +392,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 		return (mover.movement_type & PHASING)
 	return TRUE
 
-/turf/open/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+/turf/simulated/open/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
 	//melting
 	if(isobj(arrived) && air && air.temperature > T0C)
@@ -448,7 +455,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 			SEND_SIGNAL(O, COMSIG_OBJ_HIDE, underfloor_accessibility < UNDERFLOOR_VISIBLE)
 
 // override for space turfs, since they should never hide anything
-/turf/open/space/levelupdate()
+/turf/simulated/open/space/levelupdate()
 	return
 
 // Removes all signs of lattice on the pos of the turf -Donkieyo
@@ -690,7 +697,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
  * * simulated_only: Do we only worry about turfs with simulated atmos, most notably things that aren't space?
 */
 /turf/proc/reachableAdjacentTurfs(caller, ID, simulated_only)
-	var/static/space_type_cache = typecacheof(/turf/open/space)
+	var/static/space_type_cache = typecacheof(/turf/simulated/open/space)
 	. = list()
 
 	for(var/iter_dir in GLOB.cardinals)

@@ -9,22 +9,22 @@
 	spawn_loot_count = 2;
 	spawn_random_offset = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/space/djstation)
 "c" = (
 /obj/structure/toilet{
 	dir = 4
 	},
 /obj/machinery/duct,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "d" = (
 /obj/machinery/light/directional/east,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/space/djstation)
 "f" = (
 /obj/machinery/duct,
-/turf/open/floor/wood/tile,
+/turf/simulated/open/floor/wood/tile,
 /area/ruin/space/djstation)
 "h" = (
 /obj/structure/table/reinforced/plastitaniumglass,
@@ -33,7 +33,7 @@
 	spawn_loot_double = 0;
 	spawn_random_offset = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/space/djstation)
 "i" = (
 /turf/closed/wall,
@@ -48,18 +48,18 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "t" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/wood/tile,
+/turf/simulated/open/floor/wood/tile,
 /area/ruin/space/djstation)
 "u" = (
 /obj/machinery/duct,
 /obj/machinery/door/airlock/silver{
 	name = "Bedroom"
 	},
-/turf/open/floor/wood/tile,
+/turf/simulated/open/floor/wood/tile,
 /area/ruin/space/djstation)
 "v" = (
 /obj/structure/window/plasma,
@@ -67,7 +67,7 @@
 /obj/item/flashlight/lamp/green{
 	pixel_y = 4
 	},
-/turf/open/floor/carpet/purple,
+/turf/simulated/open/floor/carpet/purple,
 /area/ruin/space/djstation)
 "x" = (
 /obj/effect/spawner/random/trash/soap{
@@ -75,16 +75,16 @@
 	},
 /obj/structure/table/reinforced/rglass,
 /obj/machinery/duct,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "z" = (
 /obj/structure/bed,
 /obj/item/bedsheet/rainbow,
-/turf/open/floor/carpet/purple,
+/turf/simulated/open/floor/carpet/purple,
 /area/ruin/space/djstation)
 "A" = (
 /obj/effect/spawner/random/clothing/wardrobe_closet,
-/turf/open/floor/wood/tile,
+/turf/simulated/open/floor/wood/tile,
 /area/ruin/space/djstation)
 "B" = (
 /obj/machinery/door/airlock/public/glass{
@@ -96,18 +96,18 @@
 "C" = (
 /obj/machinery/duct,
 /obj/machinery/light/directional/south,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "D" = (
-/turf/open/floor/carpet/purple,
+/turf/simulated/open/floor/carpet/purple,
 /area/ruin/space/djstation)
 "H" = (
 /obj/machinery/duct,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "J" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "L" = (
 /obj/structure/bed{
@@ -116,28 +116,28 @@
 /obj/item/bedsheet/purple{
 	dir = 4
 	},
-/turf/open/floor/carpet/purple,
+/turf/simulated/open/floor/carpet/purple,
 /area/ruin/space/djstation)
 "N" = (
 /obj/structure/window/plasma,
 /obj/structure/table/wood,
 /obj/effect/spawner/random/exotic/languagebook,
-/turf/open/floor/carpet/purple,
+/turf/simulated/open/floor/carpet/purple,
 /area/ruin/space/djstation)
 "T" = (
 /obj/structure/dresser,
 /obj/machinery/duct,
-/turf/open/floor/wood/tile,
+/turf/simulated/open/floor/wood/tile,
 /area/ruin/space/djstation)
 "U" = (
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom"
 	},
 /obj/machinery/duct,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "V" = (
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/space/djstation)
 "W" = (
 /obj/structure/lattice,
@@ -148,7 +148,7 @@
 /obj/structure/sink{
 	pixel_y = 17
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "Y" = (
 /obj/structure/lattice,
@@ -157,7 +157,7 @@
 /area/space/nearstation)
 "Z" = (
 /obj/machinery/duct,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/space/djstation)
 
 (1,1,1) = {"

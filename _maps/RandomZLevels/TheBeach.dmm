@@ -3,7 +3,7 @@
 /turf/closed/indestructible/sandstone,
 /area/awaymission/beach)
 "ab" = (
-/turf/open/indestructible/binary{
+/turf/simulated/open/indestructible/binary{
 	density = 1;
 	desc = "I can't move through this.";
 	icon = 'icons/misc/beach.dmi';
@@ -12,45 +12,45 @@
 	},
 /area/awaymission/beach)
 "ac" = (
-/turf/open/water/beach,
+/turf/simulated/open/water/beach,
 /area/awaymission/beach)
 "ad" = (
-/turf/open/misc/beach/coastline_b{
+/turf/simulated/open/misc/beach/coastline_b{
 	dir = 1
 	},
 /area/awaymission/beach)
 "ae" = (
-/turf/open/misc/beach/coastline_b{
+/turf/simulated/open/misc/beach/coastline_b{
 	dir = 8
 	},
 /area/awaymission/beach)
 "af" = (
-/turf/open/misc/beach/coastline_t{
+/turf/simulated/open/misc/beach/coastline_t{
 	dir = 9
 	},
 /area/awaymission/beach)
 "ag" = (
-/turf/open/misc/beach/coastline_t{
+/turf/simulated/open/misc/beach/coastline_t{
 	dir = 1
 	},
 /area/awaymission/beach)
 "ah" = (
-/turf/open/misc/beach/coastline_t{
+/turf/simulated/open/misc/beach/coastline_t{
 	dir = 5
 	},
 /area/awaymission/beach)
 "ai" = (
-/turf/open/misc/beach/coastline_b{
+/turf/simulated/open/misc/beach/coastline_b{
 	dir = 4
 	},
 /area/awaymission/beach)
 "aj" = (
-/turf/open/misc/beach/coastline_t{
+/turf/simulated/open/misc/beach/coastline_t{
 	dir = 8
 	},
 /area/awaymission/beach)
 "ak" = (
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "al" = (
 /obj/effect/overlay/palmtree_r{
@@ -58,10 +58,10 @@
 	icon_state = "palm2";
 	name = "\proper island palm tree"
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "am" = (
-/turf/open/misc/beach/coastline_t{
+/turf/simulated/open/misc/beach/coastline_t{
 	dir = 4
 	},
 /area/awaymission/beach)
@@ -70,23 +70,23 @@
 	pixel_x = 17;
 	pixel_y = 7
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "ao" = (
-/turf/open/misc/beach/coastline_t{
+/turf/simulated/open/misc/beach/coastline_t{
 	dir = 10
 	},
 /area/awaymission/beach)
 "ap" = (
-/turf/open/misc/beach/coastline_t,
+/turf/simulated/open/misc/beach/coastline_t,
 /area/awaymission/beach)
 "aq" = (
-/turf/open/misc/beach/coastline_t{
+/turf/simulated/open/misc/beach/coastline_t{
 	dir = 6
 	},
 /area/awaymission/beach)
 "ar" = (
-/turf/open/misc/beach/coastline_b,
+/turf/simulated/open/misc/beach/coastline_b,
 /area/awaymission/beach)
 "as" = (
 /obj/structure/flora/rock{
@@ -97,7 +97,7 @@
 	desc = "It can't be smoked.";
 	name = "sea weed"
 	},
-/turf/open/indestructible/binary{
+/turf/simulated/open/indestructible/binary{
 	density = 1;
 	desc = "I can't move through this.";
 	icon = 'icons/misc/beach.dmi';
@@ -110,7 +110,7 @@
 	desc = "A volcanic rock.";
 	name = "coastal rock"
 	},
-/turf/open/indestructible/binary{
+/turf/simulated/open/indestructible/binary{
 	density = 1;
 	desc = "I can't move through this.";
 	icon = 'icons/misc/beach.dmi';
@@ -138,100 +138,100 @@
 	name = "foam cutlass";
 	throwforce = 0
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "av" = (
-/turf/open/water/beach{
+/turf/simulated/open/water/beach{
 	desc = "What's the difference?";
 	name = "coastline water"
 	},
 /area/awaymission/beach)
 "aw" = (
-/turf/open/misc/beach/coastline_b{
+/turf/simulated/open/misc/beach/coastline_b{
 	dir = 6
 	},
 /area/awaymission/beach)
 "ax" = (
-/turf/open/misc/beach/coastline_b{
+/turf/simulated/open/misc/beach/coastline_b{
 	dir = 10
 	},
 /area/awaymission/beach)
 "ay" = (
-/turf/open/misc/beach/coastline_t/sandwater_inner{
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 4
 	},
 /area/awaymission/beach)
 "az" = (
-/turf/open/misc/beach/coastline_t/sandwater_inner{
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 1
 	},
 /area/awaymission/beach)
 "aA" = (
 /obj/effect/overlay/palmtree_l,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aB" = (
 /mob/living/simple_animal/crab/kreb,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aC" = (
 /obj/item/flashlight/flare/torch,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aD" = (
 /obj/effect/overlay/coconut,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aE" = (
 /obj/structure/chair{
 	dir = 4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aF" = (
 /obj/structure/bonfire/prelit,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aG" = (
 /obj/item/clothing/mask/gas/tiki_mask,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aH" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind{
 	pixel_x = -17;
 	pixel_y = 17
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aI" = (
 /obj/item/melee/skateboard/hoverboard{
 	pixel_x = -16;
 	pixel_y = 1
 	},
-/turf/open/water/beach,
+/turf/simulated/open/water/beach,
 /area/awaymission/beach)
 "aK" = (
 /mob/living/simple_animal/crab,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aO" = (
 /obj/effect/baseturf_helper/beach/sand,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aQ" = (
 /obj/machinery/gateway/away,
 /obj/effect/turf_decal/sand,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aS" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime{
 	pixel_x = -12;
 	pixel_y = 14
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "aT" = (
-/turf/open/misc/beach/coastline_t/sandwater_inner{
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 8
 	},
 /area/awaymission/beach)
@@ -239,56 +239,56 @@
 /turf/closed/wall/mineral/sandstone,
 /area/awaymission/beach)
 "aY" = (
-/turf/open/misc/beach/coastline_b{
+/turf/simulated/open/misc/beach/coastline_b{
 	dir = 5
 	},
 /area/awaymission/beach)
 "aZ" = (
 /obj/effect/overlay/palmtree_r,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "ba" = (
 /obj/effect/turf_decal/sand,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bb" = (
 /obj/structure/dresser{
 	density = 0;
 	pixel_y = 18
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bc" = (
 /obj/structure/mirror/directional/north,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bd" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "be" = (
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bf" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 9
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bg" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bh" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 5
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bi" = (
 /obj/machinery/button/door/directional/east{
@@ -297,7 +297,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bj" = (
 /obj/machinery/button/door/directional/west{
@@ -306,12 +306,12 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bk" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/glasses/heat,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bl" = (
 /obj/structure/bed,
@@ -322,7 +322,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bm" = (
 /obj/structure/bed,
@@ -333,7 +333,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bn" = (
 /obj/structure/bed,
@@ -344,58 +344,58 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bo" = (
-/turf/open/misc/beach/coastline_t/sandwater_inner,
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner,
 /area/awaymission/beach)
 "bp" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 8
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bq" = (
 /obj/effect/turf_decal/sand,
 /obj/machinery/telecomms/allinone,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "br" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bs" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "changlinhut2";
 	name = "changing room"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bt" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "changlinhut1";
 	name = "changing room"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bu" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 3
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bv" = (
 /obj/effect/overlay/palmtree_r,
 /obj/effect/overlay/coconut,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bw" = (
-/turf/open/misc/beach/coastline_b{
+/turf/simulated/open/misc/beach/coastline_b{
 	dir = 9
 	},
 /area/awaymission/beach)
@@ -404,19 +404,19 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 10
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "by" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bz" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 6
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bA" = (
 /obj/structure{
@@ -425,28 +425,28 @@
 	icon_state = "signpost";
 	name = "directions signpost"
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bB" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "theloveshack1";
 	name = "Beach Hut"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bC" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "theloveshack2";
 	name = "Beach Hut"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bD" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "theloveshack3";
 	name = "Beach Hut"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bE" = (
 /obj/effect/overlay/palmtree_l{
@@ -456,13 +456,13 @@
 	pixel_x = -7;
 	pixel_y = 7
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bF" = (
 /obj/structure/bedsheetbin,
 /obj/effect/turf_decal/sand,
 /obj/structure/table/wood,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bG" = (
 /obj/item/clothing/shoes/sandal,
@@ -470,40 +470,40 @@
 /obj/item/clothing/shoes/sandal,
 /obj/structure/closet/crate,
 /obj/effect/turf_decal/sand,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bH" = (
 /obj/structure/closet/athletic_mixed,
 /obj/effect/turf_decal/sand,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bI" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "loveshack";
 	name = "Beach Hut"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bJ" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "theloveshack4";
 	name = "Beach Hut"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bK" = (
 /obj/machinery/door/airlock/sandstone{
 	id_tag = "theloveshack5";
 	name = "Beach Hut"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bL" = (
 /obj/structure/toilet{
 	pixel_y = 8
 	},
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bM" = (
 /obj/structure/mirror/directional/east,
@@ -511,7 +511,7 @@
 /obj/structure/sink{
 	pixel_y = 32
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bN" = (
 /obj/structure/mirror/directional/west,
@@ -519,25 +519,25 @@
 /obj/structure/sink{
 	pixel_y = 32
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bO" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/tequila{
 	pixel_y = 2
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bP" = (
 /obj/item/trash/chips{
 	pixel_x = -18;
 	pixel_y = 7
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bQ" = (
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bR" = (
 /obj/effect/turf_decal/sand,
@@ -547,7 +547,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bS" = (
 /obj/effect/turf_decal/sand,
@@ -557,7 +557,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bT" = (
 /obj/structure/bed,
@@ -568,7 +568,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bU" = (
 /obj/structure/bed,
@@ -579,13 +579,13 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bV" = (
 /obj/structure/sign/poster/ripped{
 	pixel_x = 32
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "bW" = (
 /obj/structure/bed,
@@ -596,7 +596,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "bX" = (
 /obj/machinery/door/airlock/sandstone{
@@ -604,7 +604,7 @@
 	name = "restroom stall"
 	},
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bY" = (
 /obj/machinery/door/airlock/sandstone{
@@ -612,35 +612,35 @@
 	name = "restroom stall"
 	},
 /obj/effect/turf_decal/sand,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/awaymission/beach)
 "bZ" = (
 /obj/structure/dresser{
 	density = 0
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "ca" = (
 /obj/machinery/computer/security/telescreen/entertainment/directional/south,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cb" = (
 /obj/structure/sign/poster/contraband/syndicate_recruitment{
 	pixel_x = -28
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cc" = (
 /obj/item/trash/can{
 	pixel_x = 14;
 	pixel_y = 7
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cd" = (
 /obj/effect/turf_decal/sand,
 /obj/machinery/vending/cola/starkist,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cf" = (
 /obj/effect/turf_decal/sand,
@@ -648,21 +648,21 @@
 	pixel_y = -32
 	},
 /obj/machinery/vending/cigarette/beach,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cg" = (
 /obj/effect/turf_decal/sand,
 /obj/machinery/vending/cola/space_up,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "ch" = (
 /obj/effect/overlay/palmtree_l,
 /obj/effect/overlay/coconut,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "ci" = (
 /obj/structure/closet/gmcloset,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cj" = (
 /obj/structure/closet/secure_closet/bar,
@@ -672,22 +672,22 @@
 /obj/item/storage/box/drinkingglasses,
 /obj/item/storage/box/drinkingglasses,
 /obj/item/storage/box/drinkingglasses,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "ck" = (
 /obj/effect/mob_spawn/corpse/human/bartender,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cl" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/shaker,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cn" = (
 /obj/machinery/vending/boozeomat/all_access{
 	desc = "A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one. May not work for bartenders that don't have Nanotrasen bank accounts."
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "co" = (
 /obj/structure/table/wood,
@@ -695,17 +695,17 @@
 /obj/structure/sign/picture_frame{
 	pixel_y = 32
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cp" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cq" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cr" = (
 /obj/structure/closet/secure_closet/freezer/kitchen{
@@ -720,25 +720,25 @@
 /obj/item/reagent_containers/food/condiment/sugar,
 /obj/item/reagent_containers/food/condiment/sugar,
 /obj/item/reagent_containers/food/condiment/enzyme,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cs" = (
 /obj/machinery/processor,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "ct" = (
 /obj/effect/turf_decal/stripes/white/corner,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cu" = (
 /obj/effect/turf_decal/stripes/white/line,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cv" = (
 /obj/effect/turf_decal/stripes/white/corner{
 	dir = 8
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cw" = (
 /obj/structure/closet/secure_closet/freezer/meat/open,
@@ -752,36 +752,36 @@
 /obj/item/food/meat/slab/rawcrab,
 /obj/item/food/meat/slab/rawcrab,
 /obj/item/food/meat/slab/rawcrab,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cx" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cy" = (
 /obj/effect/turf_decal/stripes/white/full,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cz" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cA" = (
 /obj/structure/mineral_door/wood{
 	name = "bar"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cC" = (
 /obj/structure/table/wood,
 /obj/item/food/burger/crab{
 	pixel_x = -11
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cD" = (
 /obj/structure/table/wood,
@@ -792,40 +792,40 @@
 	pixel_x = -14;
 	pixel_y = 9
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cE" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/soda_cans/dr_gibb,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cF" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "cG" = (
 /obj/item/toy/beach_ball,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cH" = (
 /obj/structure/chair/stool/directional/south,
 /obj/effect/turf_decal/sand,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cI" = (
 /obj/structure/sign/barsign{
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/sand,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cJ" = (
 /obj/effect/turf_decal/stripes/white/corner,
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cL" = (
 /obj/structure/table,
@@ -834,12 +834,12 @@
 /obj/item/clothing/head/collectable/petehat{
 	pixel_y = 5
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cM" = (
 /obj/structure/table,
 /obj/item/food/chips,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cN" = (
 /obj/structure/table,
@@ -849,11 +849,11 @@
 /obj/item/reagent_containers/food/drinks/soda_cans/air,
 /obj/item/reagent_containers/food/drinks/soda_cans/canned_laughter,
 /obj/item/reagent_containers/food/drinks/soda_cans/tonic,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cO" = (
 /obj/structure/chair,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cP" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime{
@@ -865,7 +865,7 @@
 	pixel_y = -7
 	},
 /obj/structure/fluff/beach_umbrella,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cQ" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/starkist{
@@ -873,14 +873,14 @@
 	pixel_y = -6
 	},
 /obj/structure/fluff/beach_umbrella/cap,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cR" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/cola{
 	pixel_x = -8;
 	pixel_y = -4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cS" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/dr_gibb{
@@ -888,11 +888,11 @@
 	pixel_y = -9
 	},
 /obj/structure/fluff/beach_umbrella/engine,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cT" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cU" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/cola{
@@ -903,20 +903,20 @@
 	pixel_x = 15
 	},
 /obj/structure/fluff/beach_umbrella/science,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cV" = (
 /obj/effect/overlay/coconut{
 	pixel_x = -5;
 	pixel_y = 4
 	},
-/turf/open/misc/beach/coastline_t/sandwater_inner,
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner,
 /area/awaymission/beach)
 "cW" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime{
 	pixel_x = -12
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cX" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/cola{
@@ -924,87 +924,87 @@
 	pixel_y = -5
 	},
 /obj/structure/fluff/beach_umbrella/security,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cY" = (
 /obj/item/reagent_containers/food/drinks/soda_cans/starkist{
 	pixel_x = -6
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "cZ" = (
 /obj/item/clothing/head/collectable/paper{
 	desc = "What looks like an ordinary paper hat is actually a rare and valuable collector's edition paper hat. Keep away from fire, Curators, and ocean waves."
 	},
-/turf/open/water/beach,
+/turf/simulated/open/water/beach,
 /area/awaymission/beach)
 "da" = (
 /mob/living/simple_animal/parrot,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "db" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/suit/jacket/letterman_nanotrasen,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "dc" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/suit/jacket/letterman_syndie,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "dd" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/suit/jacket/letterman_red,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "de" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/suit/jacket/letterman,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "df" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/neck/necklace/dope,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "dg" = (
 /obj/item/clothing/glasses/heat,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "hw" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/ale,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "iy" = (
 /obj/item/toy/seashell,
-/turf/open/misc/beach/coastline_t,
+/turf/simulated/open/misc/beach/coastline_t,
 /area/awaymission/beach)
 "kK" = (
 /obj/item/toy/seashell{
 	pixel_x = 5;
 	pixel_y = 4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "kS" = (
 /obj/item/toy/seashell{
 	pixel_x = -7;
 	pixel_y = 5
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "lx" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/spawner/random/vending/snackvend,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "lA" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/maltliquor{
 	pixel_y = 3
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "mF" = (
 /obj/structure/table/wood,
@@ -1012,97 +1012,97 @@
 	pixel_x = 9;
 	pixel_y = 8
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "mV" = (
 /obj/item/reagent_containers/food/drinks/bottle/beer/light{
 	pixel_x = -14;
 	pixel_y = 15
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "oE" = (
 /obj/structure/table/wood,
 /obj/item/food/burger/crab,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "sG" = (
 /obj/structure/table/wood,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/reagent_containers/food/drinks/bottle/beer,
 /obj/item/reagent_containers/food/drinks/bottle/beer,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "wr" = (
 /obj/item/toy/seashell{
 	pixel_y = -5
 	},
-/turf/open/misc/beach/coastline_t,
+/turf/simulated/open/misc/beach/coastline_t,
 /area/awaymission/beach)
 "wz" = (
 /obj/item/toy/seashell{
 	pixel_x = -8;
 	pixel_y = 9
 	},
-/turf/open/misc/beach/coastline_t/sandwater_inner{
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 8
 	},
 /area/awaymission/beach)
 "xA" = (
 /obj/structure/table/wood,
 /obj/item/camera,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "yp" = (
 /obj/item/flashlight/flare/torch{
 	pixel_x = 15;
 	pixel_y = -7
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "zc" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_y = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "ze" = (
 /obj/item/toy/seashell{
 	pixel_x = 12;
 	pixel_y = -5
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "zZ" = (
 /obj/effect/turf_decal/sand,
 /obj/effect/baseturf_helper/beach/water,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "AR" = (
 /obj/item/toy/seashell{
 	pixel_x = 8;
 	pixel_y = 14
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "Bd" = (
 /obj/item/toy/seashell{
 	pixel_x = 12;
 	pixel_y = 5
 	},
-/turf/open/misc/beach/coastline_t/sandwater_inner,
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner,
 /area/awaymission/beach)
 "EG" = (
 /obj/item/flashlight/flare/torch{
 	pixel_x = -2;
 	pixel_y = 8
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "He" = (
 /obj/structure/fluff/beach_umbrella/syndi,
-/turf/open/misc/beach/coastline_t/sandwater_inner{
+/turf/simulated/open/misc/beach/coastline_t/sandwater_inner{
 	dir = 1
 	},
 /area/awaymission/beach)
@@ -1111,18 +1111,18 @@
 	pixel_x = 12;
 	pixel_y = 9
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "MD" = (
 /obj/item/toy/seashell,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "MP" = (
 /obj/item/flashlight/flare/torch{
 	pixel_x = 7;
 	pixel_y = -5
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "Nr" = (
 /obj/structure/table,
@@ -1132,14 +1132,14 @@
 /obj/item/reagent_containers/food/drinks/bottle/beer,
 /obj/item/reagent_containers/food/drinks/bottle/beer,
 /obj/item/reagent_containers/food/drinks/bottle/beer,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "QQ" = (
 /obj/item/reagent_containers/food/drinks/bottle/rum{
 	pixel_y = 2
 	},
 /obj/structure/table/wood,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "QU" = (
 /obj/structure/closet/crate/freezer,
@@ -1152,41 +1152,41 @@
 /obj/item/food/meat/slab/gorilla,
 /obj/item/food/meat/slab/gorilla,
 /obj/item/food/meat/slab/gorilla,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "SR" = (
 /obj/machinery/food_cart,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "Tr" = (
 /obj/structure/table/wood,
 /obj/item/storage/photo_album,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "Vx" = (
 /obj/item/reagent_containers/food/drinks/bottle/wine{
 	pixel_y = 4
 	},
 /obj/structure/table/wood,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/awaymission/beach)
 "Ws" = (
 /obj/item/toy/seashell{
 	pixel_x = -10;
 	pixel_y = -4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "Za" = (
 /obj/item/flashlight/flare/torch{
 	pixel_x = 10;
 	pixel_y = -4
 	},
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 "ZL" = (
 /obj/machinery/grill,
-/turf/open/misc/beach/sand,
+/turf/simulated/open/misc/beach/sand,
 /area/awaymission/beach)
 
 (1,1,1) = {"

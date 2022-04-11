@@ -17,7 +17,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/turf/open/floor/plastic,
+/turf/simulated/open/floor/plastic,
 /area/ruin/space/djstation)
 "o" = (
 /turf/template_noop,
@@ -27,14 +27,14 @@
 /obj/structure/disposaloutlet{
 	dir = 1
 	},
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/space/djstation)
 "F" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "J" = (
 /obj/machinery/door/airlock/public/glass{
@@ -55,7 +55,7 @@
 "O" = (
 /obj/structure/lattice,
 /obj/effect/spawner/random/structure/grille,
-/turf/open/space/basic,
+/turf/simulated/open/space/basic,
 /area/space/nearstation)
 "P" = (
 /obj/structure/rack,
@@ -65,7 +65,7 @@
 	spawn_random_offset = 1
 	},
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/plastic,
+/turf/simulated/open/floor/plastic,
 /area/ruin/space/djstation)
 "S" = (
 /obj/structure/rack,
@@ -74,18 +74,18 @@
 	spawn_loot_count = 6;
 	spawn_random_offset = 1
 	},
-/turf/open/floor/plastic,
+/turf/simulated/open/floor/plastic,
 /area/ruin/space/djstation)
 "V" = (
 /obj/structure/lattice,
 /turf/template_noop,
 /area/space/nearstation)
 "W" = (
-/turf/open/floor/plastic,
+/turf/simulated/open/floor/plastic,
 /area/ruin/space/djstation)
 "Y" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 
 (1,1,1) = {"

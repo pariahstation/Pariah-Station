@@ -9,7 +9,7 @@
 	req_access_txt = "150"
 	},
 /obj/docking_port/mobile/syndicate_fighter/fighter_three,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/sbc_fighter3)
 "f" = (
 /obj/structure/rack,
@@ -18,7 +18,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 "g" = (
 /obj/structure/shuttle/engine/propulsion/burst,
@@ -35,14 +35,14 @@
 	pixel_x = 25;
 	specialfunctions = 4
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 "y" = (
 /obj/machinery/computer/security{
 	dir = 8;
 	network = list("SBC_Fighter2")
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 "E" = (
 /obj/machinery/turretid{
@@ -59,7 +59,7 @@
 	dir = 1;
 	name = "tactical chair"
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 "F" = (
 /obj/machinery/porta_turret/syndicate/energy{
@@ -99,16 +99,16 @@
 /area/shuttle/sbc_fighter3)
 "J" = (
 /obj/machinery/computer/shuttle/starfury/fighter/fighter_three,
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 "Q" = (
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 "T" = (
 /obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/fighter/fighter_three{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 "Z" = (
 /obj/structure/rack,
@@ -117,7 +117,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/turf/simulated/open/floor/mineral/plastitanium/red,
 /area/shuttle/sbc_fighter3)
 
 (1,1,1) = {"

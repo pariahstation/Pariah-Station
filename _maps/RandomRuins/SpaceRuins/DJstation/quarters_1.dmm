@@ -5,11 +5,11 @@
 "d" = (
 /obj/machinery/duct,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/ruin/space/djstation)
 "f" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "i" = (
 /turf/closed/wall,
@@ -17,7 +17,7 @@
 "k" = (
 /obj/structure/bed,
 /obj/item/bedsheet/random,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/ruin/space/djstation)
 "p" = (
 /obj/machinery/door/airlock/public/glass{
@@ -27,7 +27,7 @@
 /area/template_noop)
 "u" = (
 /obj/machinery/duct,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/ruin/space/djstation)
 "v" = (
 /obj/structure/toilet{
@@ -35,7 +35,7 @@
 	},
 /obj/machinery/duct,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "A" = (
 /obj/structure/bed{
@@ -44,7 +44,7 @@
 /obj/item/bedsheet/random{
 	dir = 4
 	},
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/ruin/space/djstation)
 "B" = (
 /obj/machinery/door/airlock/public/glass{
@@ -58,26 +58,26 @@
 /obj/machinery/shower{
 	pixel_y = 12
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "J" = (
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom"
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "M" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/ruin/space/djstation)
 "R" = (
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = 11
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "V" = (
 /obj/machinery/duct,
@@ -93,7 +93,7 @@
 /turf/template_noop,
 /area/space/nearstation)
 "Z" = (
-/turf/open/floor/iron/grimy,
+/turf/simulated/open/floor/iron/grimy,
 /area/ruin/space/djstation)
 
 (1,1,1) = {"

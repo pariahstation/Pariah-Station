@@ -8,7 +8,7 @@
 /area/space/nearstation)
 "c" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "e" = (
 /obj/structure/lattice,
@@ -19,7 +19,7 @@
 /obj/machinery/door/window{
 	name = "Kitchen Coldroom"
 	},
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "g" = (
 /obj/structure/table,
@@ -31,24 +31,24 @@
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "h" = (
 /obj/structure/window/reinforced,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "i" = (
 /obj/structure/table,
 /obj/item/storage/bag/tray,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "j" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "k" = (
 /obj/structure/closet/secure_closet/freezer/meat,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "r" = (
 /obj/structure/disposalpipe/segment,
@@ -56,18 +56,18 @@
 /area/ruin/space/djstation)
 "z" = (
 /obj/machinery/oven,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "A" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "F" = (
 /obj/structure/table,
 /obj/machinery/microwave{
 	pixel_y = 6
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "I" = (
 /obj/structure/disposalpipe/trunk{
@@ -76,11 +76,11 @@
 /obj/structure/disposaloutlet{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/space/djstation)
 "J" = (
 /obj/machinery/griddle,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "L" = (
 /turf/closed/wall,
@@ -88,20 +88,20 @@
 "M" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "N" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "O" = (
 /obj/structure/table,
 /obj/item/book/manual/wiki/cooking_to_serve_man,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "Q" = (
 /obj/structure/closet/secure_closet/freezer/kitchen/mining,
-/turf/open/floor/iron/freezer,
+/turf/simulated/open/floor/iron/freezer,
 /area/ruin/space/djstation)
 "R" = (
 /obj/structure/table,
@@ -114,7 +114,7 @@
 	spawn_loot_count = 5;
 	spawn_random_offset = 1
 	},
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "T" = (
 /obj/machinery/door/airlock/public/glass{
@@ -130,14 +130,14 @@
 	},
 /obj/item/kitchen/rollingpin,
 /obj/item/knife/kitchen,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "W" = (
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "Y" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/iron/white,
+/turf/simulated/open/floor/iron/white,
 /area/ruin/space/djstation)
 "Z" = (
 /obj/machinery/door/airlock/public/glass{

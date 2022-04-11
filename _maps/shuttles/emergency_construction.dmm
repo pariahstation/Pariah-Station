@@ -9,7 +9,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/escape)
 "c" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -22,23 +22,23 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/escape)
 "e" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "f" = (
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "g" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Airlock"
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "h" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "i" = (
 /obj/machinery/door/airlock/titanium{
@@ -51,7 +51,7 @@
 	preferred_direction = 2;
 	width = 26
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "j" = (
 /obj/structure/table,
@@ -67,7 +67,7 @@
 	pixel_y = -2
 	},
 /obj/item/airlock_painter,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "k" = (
 /obj/structure/table,
@@ -80,7 +80,7 @@
 	pixel_x = 2;
 	pixel_y = -4
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "l" = (
 /obj/structure/table,
@@ -132,7 +132,7 @@
 	pixel_x = -6;
 	pixel_y = -6
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "m" = (
 /obj/structure/table,
@@ -145,7 +145,7 @@
 	pixel_y = -2
 	},
 /obj/item/stack/rods/fifty,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "n" = (
 /obj/structure/table,
@@ -157,7 +157,7 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "o" = (
 /obj/structure/table,
@@ -169,7 +169,7 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 "p" = (
 /turf/closed/wall/mineral/titanium,
@@ -178,7 +178,7 @@
 /obj/machinery/computer/emergency_shuttle{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/escape)
 
 (1,1,1) = {"

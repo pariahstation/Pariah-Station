@@ -11,36 +11,36 @@
 	name = "mining elevator";
 	width = 5
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/snowdin/elevator2)
 "b" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/snowdin/elevator2)
 "c" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Elevator Access"
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/snowdin/elevator2)
 "d" = (
 /turf/closed/wall,
 /area/shuttle/snowdin/elevator2)
 "e" = (
 /obj/machinery/computer/shuttle/snowdin/mining,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/shuttle/snowdin/elevator2)
 "f" = (
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/shuttle/snowdin/elevator2)
 "g" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/shuttle/snowdin/elevator2)
 "i" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/engine,
+/turf/simulated/open/floor/engine,
 /area/shuttle/snowdin/elevator2)
 "j" = (
 /turf/closed/wall/rust,

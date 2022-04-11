@@ -30,57 +30,57 @@
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/space/has_grav/powered/authorship)
 "g" = (
 /obj/structure/table/wood,
 /obj/item/clothing/under/shorts/black,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "h" = (
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "i" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp,
 /obj/machinery/light/directional/north,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "j" = (
 /obj/structure/closet,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "k" = (
 /obj/machinery/vending/assist,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "l" = (
 /obj/structure/table/wood,
 /obj/item/clothing/shoes/sandal,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "m" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "n" = (
 /obj/structure/table/wood,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "p" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/has_grav/powered/authorship)
 "q" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/libraryconsole/bookmanagement,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "r" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
 /obj/item/pen,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "s" = (
 /obj/machinery/door/poddoor{
@@ -90,31 +90,31 @@
 	id = "goonwizship1";
 	name = "Strange Ship Door Button"
 	},
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "u" = (
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "v" = (
 /obj/structure/chair{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "w" = (
 /obj/structure/table/wood,
 /obj/item/paper,
 /obj/item/pen,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "x" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "y" = (
 /mob/living/simple_animal/bot/medbot/derelict,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "z" = (
 /turf/closed/wall/mineral/plastitanium{
@@ -123,7 +123,7 @@
 /area/ruin/space/has_grav/powered/authorship)
 "A" = (
 /obj/structure/chair,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "B" = (
 /turf/closed/wall/mineral/plastitanium{
@@ -134,11 +134,11 @@
 "C" = (
 /obj/machinery/light/directional/south,
 /obj/structure/bed,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 "D" = (
 /obj/machinery/door/airlock/external/ruin,
-/turf/open/floor/mineral/titanium/purple,
+/turf/simulated/open/floor/mineral/titanium/purple,
 /area/ruin/space/has_grav/powered/authorship)
 
 (1,1,1) = {"

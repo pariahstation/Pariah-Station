@@ -1,10 +1,13 @@
 ////////////////////////////////
-/proc/message_admins(msg)
+//PARIAH EDIT ADDITION: message_admins by rights
+/proc/message_admins(msg, rights =  R_ADMIN)
 	msg = "<span class=\"admin\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message\">[msg]</span></span>"
-	to_chat(GLOB.admins,
-		type = MESSAGE_TYPE_ADMINLOG,
-		html = msg,
-		confidential = TRUE)
+	for(var/mob/M as anything in GLOB.player_list)
+		if(check_rights_for(M.client, R_DEBUG))
+			to_chat(GLOB.admins,
+				type = MESSAGE_TYPE_ADMINLOG,
+				html = msg,
+				confidential = TRUE)
 
 /proc/relay_msg_admins(msg)
 	msg = "<span class=\"admin\"><span class=\"prefix\">RELAY:</span> <span class=\"message\">[msg]</span></span>"

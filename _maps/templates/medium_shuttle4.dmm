@@ -12,7 +12,7 @@
 /area/ruin/powered/shuttle/medium_4)
 "d" = (
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/oldshuttle,
+/turf/simulated/open/floor/oldshuttle,
 /area/ruin/powered/shuttle/medium_4)
 "e" = (
 /turf/closed/indestructible/oldshuttle/corner,
@@ -23,7 +23,7 @@
 	},
 /area/ruin/powered/shuttle/medium_4)
 "g" = (
-/turf/open/floor/oldshuttle,
+/turf/simulated/open/floor/oldshuttle,
 /area/ruin/powered/shuttle/medium_4)
 "h" = (
 /turf/closed/indestructible/oldshuttle/corner{
@@ -34,7 +34,7 @@
 /obj/structure/closet{
 	icon_state = "oldcloset"
 	},
-/turf/open/floor/oldshuttle,
+/turf/simulated/open/floor/oldshuttle,
 /area/ruin/powered/shuttle/medium_4)
 "j" = (
 /obj/structure/shuttle/engine/propulsion/burst{
@@ -51,15 +51,15 @@
 /obj/structure/chair/old{
 	dir = 1
 	},
-/turf/open/floor/oldshuttle,
+/turf/simulated/open/floor/oldshuttle,
 /area/ruin/powered/shuttle/medium_4)
 "r" = (
 /obj/machinery/power/generator,
-/turf/open/floor/oldshuttle,
+/turf/simulated/open/floor/oldshuttle,
 /area/ruin/powered/shuttle/medium_4)
 "s" = (
 /obj/machinery/power/smes,
-/turf/open/floor/oldshuttle,
+/turf/simulated/open/floor/oldshuttle,
 /area/ruin/powered/shuttle/medium_4)
 "t" = (
 /obj/structure/shuttle/engine/propulsion/burst/left,
@@ -71,7 +71,7 @@
 /area/ruin/powered/shuttle/medium_4)
 "v" = (
 /obj/structure/shuttle/engine/propulsion/burst/right,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/simulated/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/powered/shuttle/medium_4)
 "w" = (
 /obj/structure/shuttle/engine/propulsion/burst,

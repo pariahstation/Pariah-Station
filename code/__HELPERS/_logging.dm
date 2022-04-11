@@ -346,6 +346,12 @@ GLOBAL_LIST_INIT(testing_global_profiler, list("_PROFILE_NAME" = "Global"))
 /proc/shutdown_logging()
 	rustg_log_close_all()
 
+//PARIAH EDIT ADDITION START
+///Reports the message to R_DEBUG and the world log.
+/proc/report_progress(var/progress_message)
+	admin_notice("<span class='boldannounce'>[progress_message]</span>", R_DEBUG)
+	log_world(message)
+//PARIAH EDIT ADDITION END
 
 /* Helper procs for building detailed log lines */
 /proc/key_name(whom, include_link = null, include_name = TRUE)

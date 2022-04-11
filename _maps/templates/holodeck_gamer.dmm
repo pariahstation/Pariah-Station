@@ -1,22 +1,22 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "d" = (
 /obj/machinery/computer/arcade/battle,
-/turf/open/floor/holofloor/basalt,
+/turf/simulated/open/floor/holofloor/basalt,
 /area/template_noop)
 "x" = (
 /obj/machinery/computer/arcade,
-/turf/open/floor/holofloor/basalt,
+/turf/simulated/open/floor/holofloor/basalt,
 /area/template_noop)
 "C" = (
 /obj/machinery/computer/arcade/orion_trail,
-/turf/open/floor/holofloor/basalt,
+/turf/simulated/open/floor/holofloor/basalt,
 /area/template_noop)
 "D" = (
 /obj/machinery/computer/arcade/amputation,
-/turf/open/floor/holofloor/basalt,
+/turf/simulated/open/floor/holofloor/basalt,
 /area/template_noop)
 "I" = (
-/turf/open/floor/holofloor/basalt,
+/turf/simulated/open/floor/holofloor/basalt,
 /area/template_noop)
 
 (1,1,1) = {"

@@ -4,27 +4,27 @@
 /area/ruin/space/djstation)
 "b" = (
 /obj/machinery/duct,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "g" = (
 /obj/modular_map_root/djstation{
 	key = "kitchen"
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "h" = (
 /obj/item/stack/tile/iron{
 	pixel_x = -10;
 	pixel_y = -6
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "i" = (
 /obj/machinery/duct,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "k" = (
-/turf/open/floor/iron/vaporwave,
+/turf/simulated/open/floor/iron/vaporwave,
 /area/ruin/space/djstation)
 "n" = (
 /obj/structure/table,
@@ -37,11 +37,11 @@
 	dir = 8
 	},
 /obj/structure/window,
-/turf/open/floor/iron/vaporwave,
+/turf/simulated/open/floor/iron/vaporwave,
 /area/ruin/space/djstation)
 "q" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "r" = (
 /obj/item/stack/tile/iron{
@@ -50,16 +50,16 @@
 	},
 /obj/machinery/light/small/directional/east,
 /obj/machinery/duct,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "v" = (
 /obj/structure/table,
 /obj/item/paper/fluff/ruins/djstation,
 /obj/structure/window,
-/turf/open/floor/iron/vaporwave,
+/turf/simulated/open/floor/iron/vaporwave,
 /area/ruin/space/djstation)
 "w" = (
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "y" = (
 /obj/structure/lattice,
@@ -76,24 +76,24 @@
 	dir = 8
 	},
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/iron/vaporwave,
+/turf/simulated/open/floor/iron/vaporwave,
 /area/ruin/space/djstation)
 "A" = (
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "H" = (
 /obj/structure/chair,
-/turf/open/floor/iron/vaporwave,
+/turf/simulated/open/floor/iron/vaporwave,
 /area/ruin/space/djstation)
 "J" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "K" = (
 /obj/modular_map_connector,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation)
 "M" = (
 /obj/structure/table,
@@ -108,14 +108,14 @@
 	dir = 4
 	},
 /obj/structure/window,
-/turf/open/floor/iron/vaporwave,
+/turf/simulated/open/floor/iron/vaporwave,
 /area/ruin/space/djstation)
 "U" = (
 /obj/machinery/duct,
 /obj/modular_map_root/djstation{
 	key = "quarters"
 	},
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/space/djstation)
 "V" = (
 /obj/structure/lattice,

@@ -16,7 +16,7 @@
 /area/template_noop)
 "ad" = (
 /obj/structure/girder,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg2"
 	},
 /area/ruin/unpowered)
@@ -33,10 +33,10 @@
 /turf/template_noop,
 /area/template_noop)
 "ag" = (
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "ah" = (
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg1"
 	},
 /area/ruin/unpowered)
@@ -52,7 +52,7 @@
 /area/template_noop)
 "ak" = (
 /obj/item/stack/rods,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg2"
 	},
 /area/ruin/unpowered)
@@ -66,64 +66,64 @@
 /area/template_noop)
 "am" = (
 /obj/item/stack/rods,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/unpowered)
 "an" = (
 /obj/machinery/light/broken/directional/west,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "ao" = (
 /obj/structure/closet/emcloset,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "ap" = (
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "aq" = (
 /obj/structure/girder,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "ar" = (
 /obj/structure/girder,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/unpowered)
 "as" = (
 /obj/item/stack/sheet/iron,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg2"
 	},
 /area/ruin/unpowered)
 "at" = (
 /obj/item/stack/rods,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "au" = (
 /obj/item/stack/sheet/iron,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "av" = (
 /obj/effect/decal/remains/human,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aw" = (
 /obj/item/stack/sheet/iron,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "ax" = (
 /mob/living/simple_animal/hostile/retaliate/ghost,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "ay" = (
 /obj/item/stack/tile/iron/base,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg2"
 	},
 /area/ruin/unpowered)
@@ -145,13 +145,13 @@
 /area/template_noop)
 "aB" = (
 /obj/item/stack/tile/iron/base,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg1"
 	},
 /area/ruin/unpowered)
 "aC" = (
 /obj/machinery/light/broken/directional/south,
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aD" = (
 /obj/item/stack/sheet/iron,
@@ -159,7 +159,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg2"
 	},
 /area/ruin/unpowered)
@@ -167,7 +167,7 @@
 /obj/structure/door_assembly/door_assembly_mhatch{
 	name = "broken airlock"
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/unpowered)
 "aF" = (
 /obj/machinery/door/airlock/public/glass,
@@ -175,7 +175,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aG" = (
 /obj/structure/door_assembly/door_assembly_public{
@@ -185,36 +185,36 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aH" = (
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/unpowered)
 "aI" = (
 /obj/structure/table,
 /obj/machinery/microwave,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "aJ" = (
 /obj/structure/table,
 /obj/item/storage/box/drinkingglasses,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "aK" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
 /obj/machinery/light/broken/directional/north,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "aL" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "aM" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aN" = (
 /obj/item/plate,
@@ -222,7 +222,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aO" = (
 /obj/item/chair,
@@ -230,24 +230,24 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aP" = (
 /obj/machinery/light/broken/directional/north,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "aQ" = (
 /obj/item/stack/tile/iron/base,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/unpowered)
 "aR" = (
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "aS" = (
 /obj/structure/table_frame,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "aT" = (
 /obj/item/kitchen/fork,
@@ -255,25 +255,25 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aU" = (
 /obj/structure/table/wood,
 /obj/item/shard,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "aV" = (
 /obj/structure/table/wood,
 /obj/item/plate,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "aW" = (
 /obj/structure/table,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "aX" = (
 /obj/item/chair/stool/bar,
@@ -281,7 +281,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "aY" = (
 /obj/structure/lattice,
@@ -295,16 +295,16 @@
 /area/template_noop)
 "ba" = (
 /mob/living/simple_animal/hostile/retaliate/ghost,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "bb" = (
 /obj/item/food/donkpocket,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "bc" = (
 /obj/structure/table,
 /obj/item/shard,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "bd" = (
 /obj/structure/chair/stool/bar/directional/west,
@@ -312,51 +312,51 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "be" = (
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg2"
 	},
 /area/ruin/unpowered)
 "bg" = (
 /obj/item/stack/sheet/iron,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg1"
 	},
 /area/ruin/unpowered)
 "bh" = (
 /obj/machinery/light/broken/directional/west,
 /obj/structure/table_frame,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "bi" = (
 /obj/item/stack/sheet/iron,
 /obj/item/clothing/head/chefhat,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "bj" = (
 /obj/item/plate,
 /obj/effect/decal/remains/human,
-/turf/open/floor/iron/cafeteria/airless,
+/turf/simulated/open/floor/iron/cafeteria/airless,
 /area/ruin/unpowered)
 "bk" = (
 /obj/structure/table_frame/wood,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "bl" = (
 /obj/structure/girder,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg1"
 	},
 /area/ruin/unpowered)
 "bm" = (
 /obj/item/chair,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
@@ -367,20 +367,20 @@
 "bp" = (
 /obj/item/stack/sheet/iron,
 /obj/structure/girder,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg1"
 	},
 /area/ruin/unpowered)
 "bq" = (
 /obj/item/stack/tile/iron/base,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered)
 "br" = (
 /obj/structure/girder,
 /obj/item/stack/sheet/iron,
-/turf/open/floor/plating/airless{
+/turf/simulated/open/floor/plating/airless{
 	icon_state = "platingdmg1"
 	},
 /area/ruin/unpowered)
@@ -425,7 +425,7 @@
 	dir = 4;
 	icon_state = "pile"
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "bz" = (
 /obj/structure/lattice,
@@ -454,7 +454,7 @@
 	dir = 4;
 	icon_state = "singular"
 	},
-/turf/open/floor/iron/airless,
+/turf/simulated/open/floor/iron/airless,
 /area/ruin/unpowered)
 "bE" = (
 /obj/structure/lattice,

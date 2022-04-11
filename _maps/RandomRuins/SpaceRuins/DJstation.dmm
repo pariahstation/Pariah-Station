@@ -7,7 +7,7 @@
 "d" = (
 /obj/structure/cable,
 /obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "e" = (
 /obj/structure/lattice,
@@ -18,17 +18,17 @@
 /obj/structure/closet/crate,
 /obj/item/gps/spaceruin,
 /obj/effect/spawner/random/maintenance/three,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "i" = (
 /obj/structure/reagent_dispensers/plumbed{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "n" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "o" = (
 /turf/template_noop,
@@ -45,33 +45,33 @@
 "w" = (
 /obj/machinery/door/airlock/maintenance_hatch,
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "x" = (
 /obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/duct,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "y" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "A" = (
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "C" = (
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "D" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance_hatch,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "E" = (
 /obj/machinery/power/solar/fake,
 /obj/structure/cable,
-/turf/open/floor/iron/solarpanel/airless,
+/turf/simulated/open/floor/iron/solarpanel/airless,
 /area/ruin/space/djstation/solars)
 "G" = (
 /obj/structure/cable,
@@ -79,23 +79,23 @@
 /obj/structure/closet/crate,
 /obj/item/clothing/head/ushanka,
 /obj/effect/spawner/random/maintenance/two,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "I" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/duct,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "M" = (
 /obj/structure/cable,
 /obj/structure/closet/crate,
 /obj/effect/spawner/random/maintenance/five,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "N" = (
 /obj/machinery/duct,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "O" = (
 /obj/structure/lattice/catwalk,
@@ -105,7 +105,7 @@
 "P" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "R" = (
 /obj/machinery/power/smes/magical{
@@ -113,14 +113,14 @@
 	name = "power storage unit"
 	},
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "S" = (
 /obj/machinery/power/terminal{
 	dir = 1
 	},
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "U" = (
 /obj/modular_map_root/djstation{
@@ -133,14 +133,14 @@
 	pixel_y = -32
 	},
 /obj/effect/spawner/random/maintenance,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "W" = (
 /obj/machinery/door/airlock/external/ruin{
 	name = "Ruskie DJ Station"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "X" = (
 /obj/machinery/door/airlock/external/ruin{
@@ -149,11 +149,11 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "Y" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/space/djstation/service)
 "Z" = (
 /obj/structure/lattice/catwalk,

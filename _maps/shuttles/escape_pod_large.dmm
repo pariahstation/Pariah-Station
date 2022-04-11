@@ -6,21 +6,21 @@
 /obj/item/storage/pod{
 	pixel_x = -24
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "r" = (
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "u" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/shuttle/pod_1)
 "A" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/east,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "B" = (
 /turf/closed/wall/mineral/titanium,
@@ -28,33 +28,33 @@
 "C" = (
 /obj/machinery/computer/shuttle/monastery_shuttle,
 /obj/machinery/light/directional/north,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "H" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "J" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
 /obj/machinery/status_display/evac/directional/west,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "L" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "M" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
 	},
 /obj/machinery/status_display/evac/directional/east,
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "O" = (
 /obj/machinery/door/airlock/titanium{
@@ -66,7 +66,7 @@
 	port_direction = 2;
 	width = 5
 	},
-/turf/open/floor/mineral/titanium/blue,
+/turf/simulated/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "W" = (
 /turf/template_noop,

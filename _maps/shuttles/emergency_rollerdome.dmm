@@ -6,64 +6,64 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "ce" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "cP" = (
 /obj/effect/spawner/random/entertainment/arcade,
-/turf/open/floor/eighties,
+/turf/simulated/open/floor/eighties,
 /area/shuttle/escape)
 "dJ" = (
 /obj/effect/turf_decal/siding/wood,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "eR" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/shaker,
 /obj/item/storage/box/drinkingglasses,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "fX" = (
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks/beer{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "hD" = (
 /obj/machinery/door/airlock/gold/glass,
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "hF" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/escape)
 "im" = (
 /obj/machinery/computer/emergency_shuttle,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "ln" = (
 /obj/machinery/vending/games,
-/turf/open/floor/eighties,
+/turf/simulated/open/floor/eighties,
 /area/shuttle/escape)
 "ns" = (
 /obj/structure/table/wood/shuttle_bar,
 /obj/effect/fun_balloon/sentience/emergency_shuttle{
 	group_name = "snack bar drone at Uncle Pete's Rollerdome"
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "nw" = (
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "nN" = (
 /obj/structure/railing{
@@ -72,39 +72,39 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "nT" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "od" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/escape)
 "pa" = (
 /obj/structure/table/reinforced,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "pj" = (
 /turf/template_noop,
 /area/template_noop)
 "pI" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "qU" = (
 /obj/machinery/light/directional/east,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "ss" = (
 /obj/docking_port/mobile/emergency{
 	name = "Uncle Pete's Rollerdome"
 	},
 /obj/machinery/door/airlock/gold/glass,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "tG" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -112,7 +112,7 @@
 "uN" = (
 /obj/structure/table/wood/shuttle_bar,
 /obj/item/storage/bag/tray,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "vq" = (
 /obj/structure/railing{
@@ -121,34 +121,34 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "wf" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/turf/open/floor/plating/elevatorshaft,
+/turf/simulated/open/floor/plating/elevatorshaft,
 /area/shuttle/escape)
 "wn" = (
 /obj/structure/chair/comfy/brown{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "xK" = (
 /obj/structure/chair/comfy/brown{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "ze" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/siding/wood,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "zs" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "zt" = (
 /obj/structure/table/wood,
@@ -157,28 +157,28 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "zx" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "zZ" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "AT" = (
 /obj/structure/etherealball,
-/turf/open/floor/light,
+/turf/simulated/open/floor/light,
 /area/shuttle/escape)
 "Cg" = (
-/turf/open/floor/eighties,
+/turf/simulated/open/floor/eighties,
 /area/shuttle/escape)
 "Dh" = (
 /obj/effect/spawner/random/vending/snackvend,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "DR" = (
 /obj/structure/railing{
@@ -187,42 +187,42 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Hi" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "HA" = (
 /obj/effect/spawner/random/vending/colavend,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "HS" = (
-/turf/open/floor/light,
+/turf/simulated/open/floor/light,
 /area/shuttle/escape)
 "Jq" = (
 /obj/machinery/computer/security{
 	dir = 8
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "JR" = (
 /obj/machinery/vending/boozeomat,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Ky" = (
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "KJ" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced/spawner/north,
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/shuttle/escape)
 "Ow" = (
 /obj/structure/table,
 /obj/item/storage/box/drinkingglasses,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Ox" = (
 /obj/structure/table/wood/shuttle_bar,
@@ -233,40 +233,40 @@
 /obj/item/pizzabox/margherita,
 /obj/item/pizzabox/pineapple,
 /obj/item/pizzabox/vegetable,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "OG" = (
 /obj/machinery/computer/communications{
 	dir = 8
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "ON" = (
 /obj/machinery/vending/donksofttoyvendor,
-/turf/open/floor/eighties,
+/turf/simulated/open/floor/eighties,
 /area/shuttle/escape)
 "Qf" = (
 /obj/machinery/computer/crew{
 	dir = 4
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Qv" = (
 /mob/living/simple_animal/drone/snowflake/bardrone,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "QO" = (
 /obj/machinery/door/airlock/gold/glass,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Ry" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/railing,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "RN" = (
 /obj/machinery/jukebox/disco/indestructible,
-/turf/open/floor/light,
+/turf/simulated/open/floor/light,
 /area/shuttle/escape)
 "TU" = (
 /obj/structure/railing{
@@ -275,31 +275,31 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "We" = (
 /obj/structure/chair/comfy/brown{
 	dir = 8
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Wg" = (
 /obj/structure/table/wood/shuttle_bar,
 /obj/item/storage/bag/tray,
 /obj/item/food/cake/birthday,
 /obj/item/knife/kitchen,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Yr" = (
 /obj/structure/table/wood/poker,
 /obj/item/storage/box/drinkingglasses,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey,
 /obj/machinery/light/directional/south,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "Zo" = (
 /obj/structure/table/wood/shuttle_bar,
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 "ZN" = (
 /obj/effect/turf_decal/siding/wood{
@@ -308,7 +308,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/open/floor/wood,
+/turf/simulated/open/floor/wood,
 /area/shuttle/escape)
 
 (1,1,1) = {"

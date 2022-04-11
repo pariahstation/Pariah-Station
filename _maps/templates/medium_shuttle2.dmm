@@ -15,7 +15,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/simulated/open/floor/plating/airless,
 /area/ruin/powered/shuttle/medium_2)
 "d" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -31,51 +31,51 @@
 /area/ruin/powered/shuttle/medium_2)
 "h" = (
 /obj/effect/turf_decal/tile/yellow/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 "i" = (
 /turf/closed/wall/mineral/titanium/overspace,
 /area/ruin/powered/shuttle/medium_2)
 "k" = (
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 "l" = (
 /obj/machinery/door/airlock/external/glass/ruin,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle/medium_2)
 "m" = (
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/powered/shuttle/medium_2)
 "n" = (
 /obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 "o" = (
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 "r" = (
 /obj/structure/table,
-/turf/open/floor/iron,
+/turf/simulated/open/floor/iron,
 /area/ruin/powered/shuttle/medium_2)
 "t" = (
 /obj/machinery/sleeper{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 "v" = (
 /obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle/medium_2)
 "w" = (
 /obj/machinery/power/smes/magical,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle/medium_2)
 "x" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
+/turf/simulated/open/floor/plating,
 /area/ruin/powered/shuttle/medium_2)
 "B" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -84,19 +84,19 @@
 /obj/structure/table,
 /obj/item/storage/medkit/regular,
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 "H" = (
 /obj/structure/chair/comfy{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/yellow/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 "Z" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/yellow/fourcorners,
-/turf/open/floor/iron/dark,
+/turf/simulated/open/floor/iron/dark,
 /area/ruin/powered/shuttle/medium_2)
 
 (1,1,1) = {"
