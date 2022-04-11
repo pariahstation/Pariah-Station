@@ -11,8 +11,9 @@
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
 	)
-	mutant_bodyparts = list("teshari_feathers" = "Plain")
+	mutant_bodyparts = list("tail_teshari" = "Teshari Default Tail","teshari_feathers" = "Plain")
 	external_organs = list(/obj/item/organ/external/teshari_feathers = "None")
+	mutant_organs = list(/obj/item/organ/tail/teshari)
 	attack_verb = "slash"
 	attack_effect = ATTACK_EFFECT_CLAW
 	attack_sound = 'sound/weapons/slash.ogg'

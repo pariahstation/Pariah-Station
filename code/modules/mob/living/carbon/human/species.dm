@@ -746,8 +746,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				//PARIAH EDIT ADDITON
 				if("teshari_feathers")
 					accessory = GLOB.teshari_feathers_list[source.dna.features["teshari_feathers"]]
-				if("teshari_tails")
-					accessory = GLOB.teshari_tails_list[source.dna.features["teshari_tails"]]
+				if("tail_teshari")
+					accessory = GLOB.teshari_tails_list[source.dna.features["tail_teshari"]]
 				//PARIAH EDIT END
 
 			if(!accessory || accessory.icon_state == "none")
@@ -756,7 +756,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			var/mutable_appearance/accessory_overlay = mutable_appearance(accessory.icon, layer = -layer)
 
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
-			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey" || bodypart == "tail_teshari")
 				bodypart = "tail"
 			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
 				bodypart = "waggingtail"
