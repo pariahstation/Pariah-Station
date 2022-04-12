@@ -109,7 +109,7 @@
 		if(prob(50 / severity))
 			on = !on
 			if(on)
-				SSair.start_processing_machine(src)
+				SSzas.start_processing_machine(src)
 		update_appearance()
 
 /obj/machinery/portable_atmospherics/scrubber/ui_interact(mob/user, datum/tgui/ui)
@@ -158,7 +158,7 @@
 		if("power")
 			on = !on
 			if(on)
-				SSair.start_processing_machine(src)
+				SSzas.start_processing_machine(src)
 			. = TRUE
 		if("eject")
 			if(holding)

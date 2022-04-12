@@ -56,7 +56,7 @@
 	SIGNAL_HANDLER
 	// Hello fellow atmospherics machines, I too am definitely an atmos machine like you!
 	// This component needs to tick at the same rate as the atmos system
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 
 /datum/component/gas_leaker/proc/process_obj(obj/master, list/airs=list())
 	airs += master.return_air()

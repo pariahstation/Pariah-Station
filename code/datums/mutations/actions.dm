@@ -42,13 +42,13 @@
 /obj/effect/proc_holder/spell/targeted/olfaction/cast(list/targets, mob/living/user = usr)
 	//can we sniff? is there miasma in the air?
 	var/datum/gas_mixture/air = user.loc.return_air()
-	var/list/cached_gases = air.gases
-
+	var/list/cached_gases = air.gas
+	/*PARIAH EDIT REMOVAL - MIASMA
 	if(cached_gases[/datum/gas/miasma])
 		user.adjust_disgust(sensitivity * 45)
 		to_chat(user, span_warning("With your overly sensitive nose, you get a whiff of stench and feel sick! Try moving to a cleaner area!"))
 		return
-
+	*/
 	var/atom/sniffed = user.get_active_held_item()
 	if(sniffed)
 		var/old_target = tracking_target
@@ -163,7 +163,7 @@
 
 /obj/effect/proc_holder/spell/cone/staggered/firebreath/do_turf_cone_effect(turf/target_turf, level)
 	// Further turfs experience less exposed_temperature and exposed_volume
-	new /obj/effect/hotspot(target_turf) // for style
+	//new /obj/effect/hotspot(target_turf) // for style
 	target_turf.hotspot_expose(max(500, 900 - (100 * level)), max(50, 200 - (50 * level)), 1)
 
 /obj/effect/proc_holder/spell/cone/staggered/firebreath/do_mob_cone_effect(mob/living/target_mob, level)

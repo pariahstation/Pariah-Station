@@ -28,7 +28,7 @@
 	var/list/expansion_queue = list()
 	/// List of turfs to recalculate adjacent turfs on before processing
 	var/list/adjacent_rebuild = list()
-	/// A list of machines that will be processed when currentpart == SSAIR_ATMOSMACHINERY. Use SSair.begin_processing_machine and SSair.stop_processing_machine to add and remove machines.
+	/// A list of machines that will be processed when currentpart == SSAIR_ATMOSMACHINERY. Use SSair.begin_processing_machine and SSzas.stop_processing_machine to add and remove machines.
 	var/list/obj/machinery/atmos_machinery = list()
 
 	var/list/pipe_init_dirs_cache = list()

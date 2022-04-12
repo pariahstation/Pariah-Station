@@ -50,7 +50,7 @@
 
 	var/plas = open_turf_gases.get_gas(GAS_PLASMA)
 	var/oxy = open_turf_gases.get_gas(GAS_OXYGEN)
-	var/n2 = open_turf_gases.get_gas(GAS_N2O)
+	var/n2 = open_turf_gases.get_gas(GAS_N2)
 	var/co2 = open_turf_gases.get_gas(GAS_CO2)
 
 	//open_turf.air.garbage_collect()

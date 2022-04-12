@@ -32,7 +32,7 @@
 	. = ..()
 	if(ispath(cell))
 		cell = new cell(src)
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 	update_appearance()
 
 /obj/machinery/electrolyzer/Destroy()
@@ -201,7 +201,7 @@
 			usr.visible_message(span_notice("[usr] switches [on ? "on" : "off"] \the [src]."), span_notice("You switch [on ? "on" : "off"] \the [src]."))
 			update_appearance()
 			if (on)
-				SSair.start_processing_machine(src)
+				SSzas.start_processing_machine(src)
 			. = TRUE
 		if("eject")
 			if(panel_open && cell)

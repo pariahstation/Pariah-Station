@@ -343,7 +343,7 @@
 
 	calculate_parts_limits()
 
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 	return TRUE
 
 /**
@@ -357,7 +357,7 @@
 	input_turf = null
 	output_turf = null
 	all_parts_connected = FALSE
-	SSair.stop_processing_machine(src)
+	SSzas.stop_processing_machine(src)
 
 /obj/machinery/power/turbine/core_rotor/on_deconstruction()
 	if(all_parts_connected)

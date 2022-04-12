@@ -78,6 +78,9 @@ SUBSYSTEM_DEF(zas)
 	//Pipenets
 	var/list/networks = list()
 
+	//Atmos Machines
+	var/list/atmos_machinery = list()
+
 	//Geometry updates lists
 	var/list/tiles_to_update = list()
 	var/list/zones_to_update = list()
@@ -91,6 +94,16 @@ SUBSYSTEM_DEF(zas)
 	var/tmp/list/processing_hotspots
 	var/tmp/list/processing_zones
 
+	//Currently processing
+	var/list/curr_tiles
+	var/list/curr_defer
+	var/list/curr_edges
+	var/list/curr_fire
+	var/list/curr_hotspot
+	var/list/curr_zones
+	var/list/curr_machines
+
+	var/current_process = SSZAS_TILES
 	var/active_zones = 0
 	var/next_id = 1
 
@@ -170,125 +183,132 @@ SUBSYSTEM_DEF(zas)
 
 	..(timeofday)
 
-/datum/controller/subsystem/zas/fire(resumed = FALSE, no_mc_tick = FALSE)
+/datum/controller/subsystem/zas/fire(resumed = FALSE)
 	if (!resumed)
 		processing_edges = active_edges.Copy()
 		processing_fires = active_fire_zones.Copy()
 		processing_hotspots = active_hotspots.Copy()
 
-	var/list/curr_tiles = tiles_to_update
-	var/list/curr_defer = deferred
-	var/list/curr_edges = processing_edges
-	var/list/curr_fire = processing_fires
-	var/list/curr_hotspot = processing_hotspots
-	var/list/curr_zones = zones_to_update
+	curr_tiles = tiles_to_update
+	if(current_process == SSZAS_TILES || !resumed)
+		while (curr_tiles.len)
+			var/turf/T = curr_tiles[curr_tiles.len]
+			curr_tiles.len--
 
-	while (curr_tiles.len)
-		var/turf/T = curr_tiles[curr_tiles.len]
-		curr_tiles.len--
+			if (!T)
+				if (MC_TICK_CHECK)
+					return
 
-		if (!T)
-			if (no_mc_tick)
-				CHECK_TICK
-			else if (MC_TICK_CHECK)
+				continue
+
+			//check if the turf is self-zone-blocked
+			var/c_airblock
+			ATMOS_CANPASS_TURF(c_airblock, T, T)
+			if(c_airblock & ZONE_BLOCKED)
+				deferred += T
+				if (MC_TICK_CHECK)
+					return
+				continue
+
+			T.update_air_properties()
+			T.post_update_air_properties()
+			T.needs_air_update = 0
+			#ifdef ZASDBG
+			T.overlays -= mark
+			updated++
+			#endif
+
+			if (MC_TICK_CHECK)
 				return
 
-			continue
+	current_process = SSZAS_DEFERRED_TILES
+	curr_defer = deferred
+	if(current_process == SSZAS_DEFERRED_TILES)
+		while (curr_defer.len)
+			var/turf/T = curr_defer[curr_defer.len]
+			curr_defer.len--
 
-		//check if the turf is self-zone-blocked
-		var/c_airblock
-		ATMOS_CANPASS_TURF(c_airblock, T, T)
-		if(c_airblock & ZONE_BLOCKED)
-			deferred += T
-			if (no_mc_tick)
-				CHECK_TICK
-			else if (MC_TICK_CHECK)
+			T.update_air_properties()
+			T.post_update_air_properties()
+			T.needs_air_update = 0
+			#ifdef ZASDBG
+			T.overlays -= mark
+			updated++
+			#endif
+
+			if (MC_TICK_CHECK)
 				return
-			continue
 
-		T.update_air_properties()
-		T.post_update_air_properties()
-		T.needs_air_update = 0
-		#ifdef ZASDBG
-		T.overlays -= mark
-		updated++
-		#endif
+	current_process = SSZAS_EDGES
+	curr_edges = processing_edges
+	if(current_process == SSZAS_EDGES)
+		while (curr_edges.len)
+			var/connection_edge/edge = curr_edges[curr_edges.len]
+			curr_edges.len--
 
-		if (no_mc_tick)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			return
+			if (!edge)
+				if (MC_TICK_CHECK)
+					return
+				continue
 
-	while (curr_defer.len)
-		var/turf/T = curr_defer[curr_defer.len]
-		curr_defer.len--
-
-		T.update_air_properties()
-		T.post_update_air_properties()
-		T.needs_air_update = 0
-		#ifdef ZASDBG
-		T.overlays -= mark
-		updated++
-		#endif
-
-		if (no_mc_tick)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			return
-
-	while (curr_edges.len)
-		var/connection_edge/edge = curr_edges[curr_edges.len]
-		curr_edges.len--
-
-		if (!edge)
-			if (no_mc_tick)
-				CHECK_TICK
-			else if (MC_TICK_CHECK)
+			edge.tick()
+			if (MC_TICK_CHECK)
 				return
-			continue
 
-		edge.tick()
+	current_process = SSZAS_FIRES
+	curr_fire = processing_fires
+	if(current_process == SSZAS_FIRES)
+		while (curr_fire.len)
+			var/zone/Z = curr_fire[curr_fire.len]
+			curr_fire.len--
 
-		if (no_mc_tick)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			return
+			Z.process_fire()
 
-	while (curr_fire.len)
-		var/zone/Z = curr_fire[curr_fire.len]
-		curr_fire.len--
+			if (MC_TICK_CHECK)
+				return
 
-		Z.process_fire()
+	current_process = SSZAS_HOTSPOTS
+	curr_hotspot = processing_hotspots
+	if(current_process == SSZAS_HOTSPOTS)
+		while (curr_hotspot.len)
+			var/obj/fire/F = curr_hotspot[curr_hotspot.len]
+			curr_hotspot.len--
 
-		if (no_mc_tick)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			return
+			F.Process()
 
-	while (curr_hotspot.len)
-		var/obj/fire/F = curr_hotspot[curr_hotspot.len]
-		curr_hotspot.len--
+			if (MC_TICK_CHECK)
+				return
 
-		F.Process()
+	current_process = SSZAS_ZONES
+	curr_zones = processing_zones
+	if(current_process == SSZAS_ZONES)
+		while (curr_zones.len)
+			var/zone/Z = curr_zones[curr_zones.len]
+			curr_zones.len--
 
-		if (no_mc_tick)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			return
+			Z.tick()
+			Z.needs_update = FALSE
 
-	while (curr_zones.len)
-		var/zone/Z = curr_zones[curr_zones.len]
-		curr_zones.len--
+			if (MC_TICK_CHECK)
+				return
 
-		Z.tick()
-		Z.needs_update = FALSE
+	current_process = SSZAS_MACHINES
+	curr_machines = atmos_machinery
+	if(current_process == SSZAS_MACHINES)
+		while (curr_machines.len)
+			var/obj/machinery/atmospherics/current_machine = curr_machines[curr_machines.len]
+			curr_machines.len--
 
-		if (no_mc_tick)
-			CHECK_TICK
-		else if (MC_TICK_CHECK)
-			return
+			if(!current_machine)
+				atmos_machinery -= current_machine
+			if(current_machine.process_atmos() == PROCESS_KILL)
+				stop_processing_machine(current_machine)
 
-/*
+			if(MC_TICK_CHECK)
+				return
+
+	current_process = SSZAS_TILES
+
 /**
  * Adds a given machine to the processing system for SSAIR_ATMOSMACHINERY processing.
  *
@@ -305,7 +325,7 @@ SUBSYSTEM_DEF(zas)
 	atmos_machinery += machine
 
 /**
- * Removes a given machine to the processing system for SSAIR_ATMOSMACHINERY processing.
+ * Removes a given machine to the processing system for SSZAS_MACHINES processing.
  *
  * Arguments:
  * * machine - The machine to stop processing.
@@ -319,9 +339,9 @@ SUBSYSTEM_DEF(zas)
 	// If we're currently processing atmos machines, there's a chance this machine is in
 	// the currentrun list, which is a cache of atmos_machinery. Remove it from that list
 	// as well to prevent processing qdeleted objects in the cache.
-	if(currentpart == SSAIR_ATMOSMACHINERY)
-		currentrun -= machine
-*/
+	if(current_process == SSZAS_MACHINES)
+		curr_machines -= machine
+
 /datum/controller/subsystem/zas/proc/add_zone(zone/z)
 	zones += z
 	z.name = "Zone [next_id++]"

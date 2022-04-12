@@ -278,7 +278,7 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 	air_contents.gases[/datum/gas/hydrogen][MOLES] = 300
 	air_contents.gases[/datum/gas/tritium][MOLES] = 300
 	air_contents.temperature = 10000
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix
 	name = "Anesthetic mix"
@@ -290,7 +290,7 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 	air_contents.add_gases(/datum/gas/oxygen, /datum/gas/nitrous_oxide)
 	air_contents.gases[/datum/gas/oxygen][MOLES] = (O2_ANESTHETIC * maximum_pressure * filled) * air_contents.volume / (R_IDEAL_GAS_EQUATION * air_contents.temperature)
 	air_contents.gases[/datum/gas/nitrous_oxide][MOLES] = (N2O_ANESTHETIC * maximum_pressure * filled) * air_contents.volume / (R_IDEAL_GAS_EQUATION * air_contents.temperature)
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 
 /**
  * Getter for the amount of time left in the timer of prototype canisters
@@ -367,13 +367,13 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 	if(starter_temp)
 		air_contents.temperature = starter_temp
 	air_contents.gases[gas_type][MOLES] = (maximum_pressure * filled) * air_contents.volume / (R_IDEAL_GAS_EQUATION * air_contents.temperature)
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 
 /obj/machinery/portable_atmospherics/canister/air/create_gas()
 	air_contents.add_gases(/datum/gas/oxygen, /datum/gas/nitrogen)
 	air_contents.gases[/datum/gas/oxygen][MOLES] = (O2STANDARD * maximum_pressure * filled) * air_contents.volume / (R_IDEAL_GAS_EQUATION * air_contents.temperature)
 	air_contents.gases[/datum/gas/nitrogen][MOLES] = (N2STANDARD * maximum_pressure * filled) * air_contents.volume / (R_IDEAL_GAS_EQUATION * air_contents.temperature)
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 
 /obj/machinery/portable_atmospherics/canister/update_icon_state()
 	if(machine_stat & BROKEN)
@@ -497,7 +497,7 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 	. = ..()
 	if(!. || QDELETED(src))
 		return
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 
 /obj/machinery/portable_atmospherics/canister/atom_break(damage_flag)
 	. = ..()
@@ -667,7 +667,7 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 			var/n = 0
 			valve_open = !valve_open
 			if(valve_open)
-				SSair.start_processing_machine(src)
+				SSzas.start_processing_machine(src)
 				logmsg = "Valve was <b>opened</b> by [key_name(usr)], starting a transfer into \the [holding || "air"].<br>"
 				if(!holding)
 					var/list/gaseslog = list() //list for logging all gases in canister

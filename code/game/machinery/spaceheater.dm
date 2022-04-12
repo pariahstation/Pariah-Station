@@ -48,10 +48,10 @@
 	if(ispath(cell))
 		cell = new cell(src)
 	update_appearance()
-	SSair.start_processing_machine(src)
+	SSzas.start_processing_machine(src)
 
 /obj/machinery/space_heater/Destroy()
-	SSair.stop_processing_machine(src)
+	SSzas.stop_processing_machine(src)
 	return..()
 
 /obj/machinery/space_heater/on_deconstruction()
@@ -265,7 +265,7 @@
 	usr.visible_message(span_notice("[usr] switches [on ? "on" : "off"] \the [src]."), span_notice("You switch [on ? "on" : "off"] \the [src]."))
 	update_appearance()
 	if (on)
-		SSair.start_processing_machine(src)
+		SSzas.start_processing_machine(src)
 
 ///For use with heating reagents in a ghetto way
 /obj/machinery/space_heater/improvised_chem_heater
