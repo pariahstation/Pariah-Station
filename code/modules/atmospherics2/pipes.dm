@@ -16,14 +16,15 @@
 		//minimum pressure before check_pressure(...) should be called
 	var/obj/machinery/clamp/clamp // Linked stasis clamp
 
-	can_buckle = 1
-	buckle_require_restraints = 1
-	buckle_lying = -1
+	can_buckle = TRUE
+	buckle_requires_restraints = TRUE
+	buckle_lying = NO_BUCKLE_LYING
 	var/datum/sound_token/sound_token
 	build_icon_state = "simple"
 	build_icon = 'icons/obj/pipe-item.dmi'
 	pipe_class = PIPE_CLASS_BINARY
-	atom_flags = ATOM_FLAG_CAN_BE_PAINTED
+	paintable = TRUE
+	vis_flags = VIS_INHERIT_PLANE
 
 /obj/machinery/atmospherics/pipe/drain_power()
 	return -1

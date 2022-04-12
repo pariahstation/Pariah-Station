@@ -22,8 +22,8 @@
 #define SOUND_MINIMUM_PRESSURE 10
 
 #define PRESSURE_DAMAGE_COEFFICIENT 4   // The amount of pressure damage someone takes is equal to (pressure / HAZARD_HIGH_PRESSURE)*PRESSURE_DAMAGE_COEFFICIENT, with the maximum of MAX_PRESSURE_DAMAGE.
-#define    MAX_HIGH_PRESSURE_DAMAGE 4   // This used to be 20... I got this much random rage for some retarded decision by polymorph?! Polymorph now lies in a pool of blood with a katana jammed in his spleen. ~Errorage --PS: The katana did less than 20 damage to him :(
-#define         LOW_PRESSURE_DAMAGE 0.6 // The amount of damage someone takes when in a low pressure area. (The pressure threshold is so low that it doesn't make sense to do any calculations, so it just applies this flat value).
+#define MAX_HIGH_PRESSURE_DAMAGE 4   // This used to be 20... I got this much random rage for some retarded decision by polymorph?! Polymorph now lies in a pool of blood with a katana jammed in his spleen. ~Errorage --PS: The katana did less than 20 damage to him :(
+#define LOW_PRESSURE_DAMAGE 0.6 // The amount of damage someone takes when in a low pressure area. (The pressure threshold is so low that it doesn't make sense to do any calculations, so it just applies this flat value).
 
 #define MINIMUM_PRESSURE_DIFFERENCE_TO_SUSPEND (MINIMUM_AIR_TO_SUSPEND*R_IDEAL_GAS_EQUATION*T20C)/CELL_VOLUME			// Minimum pressure difference between zones to suspend
 #define MINIMUM_AIR_RATIO_TO_SUSPEND 0.05 // Minimum ratio of air that must move to/from a tile to suspend group processing
@@ -124,3 +124,30 @@
 #define GAS_SULFUR				"sulfurdioxide"
 #define GAS_STEAM				"water"
 #define GAS_PLASMA				"phoron"
+
+// For use with pipe rotate verb
+#define PIPE_ROTATE_STANDARD 0 // usual rotate
+#define PIPE_ROTATE_TWODIR   1 // Sanitizes cardinal directions to just two, leaves corner directions alone
+#define PIPE_ROTATE_ONEDIR   2 // Only has one dir, south
+
+//Connection Type Definitions
+#define CONNECT_TYPE_REGULAR        1
+#define CONNECT_TYPE_SUPPLY         2
+#define CONNECT_TYPE_SCRUBBER       4
+#define CONNECT_TYPE_HE				8
+#define CONNECT_TYPE_FUEL           16
+
+#define DISPOSAL_FLIP_NONE          0
+#define DISPOSAL_FLIP_FLIP          1
+#define DISPOSAL_FLIP_LEFT          2
+#define DISPOSAL_FLIP_RIGHT         4
+
+//Pipe classifications
+#define PIPE_CLASS_OTHER            0
+#define PIPE_CLASS_UNARY            1
+#define PIPE_CLASS_BINARY           2
+#define PIPE_CLASS_TRINARY          3
+#define PIPE_CLASS_QUATERNARY       4
+#define PIPE_CLASS_OMNI             5
+
+#define ADIABATIC_EXPONENT          0.667 //Actually adiabatic exponent - 1.
