@@ -123,4 +123,4 @@
 #define GAS_CHLORINE			"chlorine"
 #define GAS_SULFUR				"sulfurdioxide"
 #define GAS_STEAM				"water"
-#define GAS_PHORON				"phoron"
+#define GAS_PLASMA				"phoron"

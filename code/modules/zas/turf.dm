@@ -43,7 +43,7 @@
 
 			var/turf/simulated/sim = unsim
 			if(TURF_HAS_VALID_ZONE(sim))
-				SSair.connect(sim, src)
+				SSzas.connect(sim, src)
 
 // Helper for can_safely_remove_from_zone().
 #define GET_ZONE_NEIGHBOURS(T, ret) \
@@ -270,7 +270,7 @@
 /turf/simulated/return_air()
 	if(zone)
 		if(!zone.invalid)
-			SSair.mark_zone_update(zone)
+			SSzas.mark_zone_update(zone)
 			return zone.air
 		else
 			if(!air)

@@ -155,6 +155,8 @@
 	var/damage_deflection = 0
 
 	var/resistance_flags = NONE // INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ON_FIRE | UNACIDABLE | ACID_PROOF
+	///Simulated by ZAS.
+	var/simulated = TRUE
 
 /**
  * Called when an atom is created in byond (built in engine proc)
@@ -217,7 +219,7 @@
  *
  * Note: the following functions don't call the base for optimization and must copypasta handling:
  * * [/turf/proc/Initialize]
- * * [/turf/simulated/open/space/proc/Initialize]
+ * * [/turf/space/proc/Initialize]
  */
 /atom/proc/Initialize(mapload, ...)
 	SHOULD_NOT_SLEEP(TRUE)

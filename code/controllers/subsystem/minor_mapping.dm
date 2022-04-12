@@ -15,11 +15,11 @@ SUBSYSTEM_DEF(minor_mapping)
 
 	var/mob/living/simple_animal/mouse/mouse
 	var/turf/simulated/open/proposed_turf
-
+	var/datum/gas_mixture/muh_gas
 
 	while((num_mice > 0) && exposed_wires.len)
 		proposed_turf = pick_n_take(exposed_wires)
-
+		muh_gas = proposed_turf.return_air()
 		if(!istype(proposed_turf))
 			continue
 
@@ -30,7 +30,7 @@ SUBSYSTEM_DEF(minor_mapping)
 				mouse.forceMove(proposed_turf)
 		else
 			mouse = new /mob/living/simple_animal/hostile/regalrat/controlled(proposed_turf)
-		if(proposed_turf.air.has_gas(/datum/gas/oxygen, 5))
+		if(muh_gas.get_gas(GAS_OXYGEN) > 5)
 			num_mice -= 1
 			mouse = null
 

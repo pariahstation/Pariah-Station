@@ -490,9 +490,9 @@
 	if(M.loc)
 		environment = M.loc.return_air()
 	if(environment)
-		gases = environment.gases
-		if(gases[/datum/gas/plasma])
-			. += power * min(0.5, gases[/datum/gas/plasma][MOLES] * HEALING_PER_MOL)
+		gases = environment.gas
+		if(gases[GAS_PLASMA])
+			. += power * min(0.5, gases[GAS_PLASMA] * HEALING_PER_MOL)
 	if(M.reagents.has_reagent(/datum/reagent/toxin/plasma, needs_metabolizing = TRUE))
 		. += power * 0.75 //Determines how much the symptom heals if injected or ingested
 

@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "ac" = (
 /turf/closed/mineral/random/labormineral,

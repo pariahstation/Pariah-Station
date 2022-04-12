@@ -12,7 +12,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "ap" = (
 /obj/structure/chair/wood/wings{
@@ -29,7 +29,7 @@
 /area/shuttle/escape)
 "as" = (
 /obj/structure/window/reinforced,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "aF" = (
 /obj/machinery/light/small/directional/south,
@@ -40,7 +40,7 @@
 /area/shuttle/escape)
 "aH" = (
 /obj/structure/grille/broken,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "aN" = (
 /obj/structure/window/reinforced,
@@ -48,7 +48,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "aO" = (
 /obj/structure/sign/plaques/kiddie{
@@ -73,7 +73,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "aW" = (
 /obj/structure/window/reinforced{
@@ -81,7 +81,7 @@
 	layer = 2.9
 	},
 /obj/structure/lattice,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "bb" = (
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -99,7 +99,7 @@
 "bd" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "be" = (
 /obj/machinery/light/small/directional/west,
@@ -114,7 +114,7 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "bn" = (
 /obj/machinery/light/small/directional/east,
@@ -204,7 +204,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "cu" = (
 /obj/structure/table/wood,
@@ -264,7 +264,7 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "du" = (
 /obj/machinery/door/airlock/external/ruin,
@@ -296,7 +296,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "dY" = (
 /obj/structure/table/wood,
@@ -376,7 +376,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "fn" = (
 /obj/effect/spawner/xmastree,
@@ -416,7 +416,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "fL" = (
 /obj/structure/window/reinforced{
@@ -424,7 +424,7 @@
 	},
 /obj/structure/lattice,
 /obj/structure/window/reinforced,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "fT" = (
 /obj/structure/table/wood,
@@ -446,7 +446,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "gp" = (
 /obj/machinery/door/airlock{
@@ -467,7 +467,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "hC" = (
 /obj/structure/shuttle/engine/propulsion,
@@ -514,7 +514,7 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "hW" = (
 /obj/structure/flora/ausbushes/leafybush,
@@ -576,7 +576,7 @@
 "iw" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "iB" = (
 /obj/machinery/light/small/directional/west,
@@ -719,7 +719,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "jU" = (
 /obj/item/shovel/spade,
@@ -800,7 +800,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "kM" = (
 /obj/structure/table/wood/fancy,
@@ -824,7 +824,7 @@
 /area/shuttle/escape)
 "lj" = (
 /obj/structure/lattice/catwalk,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "lm" = (
 /obj/machinery/meter,
@@ -859,7 +859,7 @@
 /area/shuttle/escape)
 "mm" = (
 /obj/structure/lattice/catwalk,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "mn" = (
 /obj/structure/chair/wood,
@@ -983,7 +983,7 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "oa" = (
 /obj/structure/chair/wood,
@@ -1006,7 +1006,7 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "ov" = (
 /obj/machinery/light/small/directional/east,
@@ -1202,7 +1202,7 @@
 /area/shuttle/escape)
 "qA" = (
 /obj/structure/window/reinforced,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "qC" = (
 /obj/machinery/airalarm/directional/north,
@@ -2508,7 +2508,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "IR" = (
 /obj/structure/flora/ausbushes/ywflowers,
@@ -2543,7 +2543,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "Jp" = (
 /obj/structure/table,
@@ -2812,11 +2812,11 @@
 	dir = 8;
 	layer = 2.9
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "Mt" = (
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/shuttle/escape)
 "MC" = (
 /obj/structure/cable,
@@ -3074,7 +3074,7 @@
 /area/shuttle/escape)
 "PB" = (
 /obj/structure/lattice,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "PC" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
@@ -3897,7 +3897,7 @@
 	dir = 1;
 	pixel_y = 1
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "YC" = (
 /obj/machinery/light/small/directional/west,
@@ -3931,7 +3931,7 @@
 	dir = 4;
 	layer = 2.9
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/escape)
 "YZ" = (
 /obj/structure/table/wood,

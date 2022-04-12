@@ -86,7 +86,7 @@ Class Procs:
 /connection_edge/proc/contains_zone(zone/Z)
 
 /connection_edge/proc/erase()
-	SSair.remove_edge(src)
+	SSzas.remove_edge(src)
 //	log_game("[type] Erased.")
 
 

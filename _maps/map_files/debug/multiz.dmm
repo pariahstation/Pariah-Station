@@ -1,13 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "ab" = (
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "ac" = (
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ad" = (
 /turf/closed/wall/r_wall,
@@ -15,14 +15,14 @@
 "ae" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "af" = (
 /turf/simulated/open/floor/plating,
 /area/maintenance/department/bridge)
 "ag" = (
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ah" = (
 /turf/closed/wall/r_wall,
@@ -52,12 +52,12 @@
 /area/engineering/atmos)
 "an" = (
 /obj/structure/lattice/catwalk,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ao" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ap" = (
 /obj/machinery/airalarm/directional/north{

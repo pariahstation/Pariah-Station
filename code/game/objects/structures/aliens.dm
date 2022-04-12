@@ -150,7 +150,7 @@
 	var/obj/structure/alien/weeds/node/parent_node
 	///the list of turfs that the weeds will not be able to grow over
 	var/static/list/blacklisted_turfs = list(
-		/turf/simulated/open/space,
+		/turf/space,
 		/turf/simulated/open/chasm,
 		/turf/simulated/open/lava,
 		/turf/simulated/open/water,

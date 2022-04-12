@@ -35,7 +35,7 @@
 	symbol = "CH3Br"
 
 /datum/xgm_gas/phoron
-	id = GAS_PHORON
+	id = GAS_PLASMA
 	name = "Phoron"
 
 	//Note that this has a significant impact on TTV yield.

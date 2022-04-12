@@ -51,7 +51,7 @@
 
 	if(moles > 0 && abs(temperature - temp) > MINIMUM_TEMPERATURE_DELTA_TO_CONSIDER)
 		var/self_heat_capacity = heat_capacity()
-		var/giver_heat_capacity = gas_data.specific_heat[gasid] * moles
+		var/giver_heat_capacity = SSzas.gas_data.specific_heat[gasid] * moles
 		var/combined_heat_capacity = giver_heat_capacity + self_heat_capacity
 		if(combined_heat_capacity != 0)
 			temperature = (temp * giver_heat_capacity + temperature * self_heat_capacity) / combined_heat_capacity
@@ -137,7 +137,7 @@
 /datum/gas_mixture/proc/heat_capacity()
 	. = 0
 	for(var/g in gas)
-		. += gas_data.specific_heat[g] * gas[g]
+		. += SSzas.gas_data.specific_heat[g] * gas[g]
 	. *= group_multiplier
 
 
@@ -192,8 +192,8 @@
 		return SPECIFIC_ENTROPY_VACUUM	//that gas isn't here
 
 	//group_multiplier gets divided out in volume/gas[gasid] - also, V/(m*T) = R/(partial pressure)
-	var/molar_mass = gas_data.molar_mass[gasid]
-	var/specific_heat = gas_data.specific_heat[gasid]
+	var/molar_mass = SSzas.gas_data.molar_mass[gasid]
+	var/specific_heat = SSzas.gas_data.specific_heat[gasid]
 	var/safe_temp = max(temperature, TCMB) // We're about to divide by this.
 	return R_IDEAL_GAS_EQUATION * ( log( (IDEAL_GAS_ENTROPY_CONSTANT*volume/(gas[gasid] * safe_temp)) * (molar_mass*specific_heat*safe_temp)**(2/3) + 1 ) +  15 )
 
@@ -275,11 +275,11 @@
 
 	var/sum = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & flag)
+		if(SSzas.gas_data.flags[g] & flag)
 			sum += gas[g]
 
 	for(var/g in gas)
-		if(gas_data.flags[g] & flag)
+		if(SSzas.gas_data.flags[g] & flag)
 			removed.gas[g] = QUANTIZE((gas[g] / sum) * amount)
 			gas[g] -= removed.gas[g] / group_multiplier
 
@@ -293,7 +293,7 @@
 /datum/gas_mixture/proc/get_by_flag(flag)
 	. = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & flag)
+		if(SSzas.gas_data.flags[g] & flag)
 			. += gas[g]
 
 //Copies gas and temperature from another gas_mixture.
@@ -347,11 +347,11 @@
 //Two lists can be passed by reference if you need know specifically which graphics were added and removed.
 /datum/gas_mixture/proc/check_tile_graphic(list/graphic_add = null, list/graphic_remove = null)
 	for(var/obj/effect/gas_overlay/O in graphic)
-		if(gas[O.gas_id] <= gas_data.overlay_limit[O.gas_id])
+		if(gas[O.gas_id] <= SSzas.gas_data.overlay_limit[O.gas_id])
 			LAZYADD(graphic_remove, O)
-	for(var/g in gas_data.overlay_limit)
+	for(var/g in SSzas.gas_data.overlay_limit)
 		//Overlay isn't applied for this gas, check if it's valid and needs to be added.
-		if(gas[g] > gas_data.overlay_limit[g])
+		if(gas[g] > SSzas.gas_data.overlay_limit[g])
 			var/tile_overlay = get_tile_overlay(g)
 			if(!(tile_overlay in graphic))
 				LAZYADD(graphic_add, tile_overlay)
@@ -505,7 +505,7 @@
 
 /datum/gas_mixture/proc/get_mass()
 	for(var/g in gas)
-		. += gas[g] * gas_data.molar_mass[g] * group_multiplier
+		. += gas[g] * SSzas.gas_data.molar_mass[g] * group_multiplier
 
 /datum/gas_mixture/proc/specific_mass()
 	var/M = get_total_moles()

@@ -134,7 +134,7 @@ Class Procs:
 				return
 			else
 				edge.remove_connection(src)
-				edge = SSair.get_edge(A.zone, B)
+				edge = SSzas.get_edge(A.zone, B)
 				edge.add_connection(src)
 				zoneA = A.zone
 

@@ -356,7 +356,7 @@
 	var/static/list/blacklisted_turfs = typecacheof(list(
 		/turf/simulated/open/indestructible,
 		/turf/closed/indestructible,
-		/turf/simulated/open/space,
+		/turf/space,
 		/turf/simulated/open/lava,
 		/turf/simulated/open/chasm
 	))

@@ -126,7 +126,7 @@
 		damage = max(damage + (min(removed.temperature - ((T0C + HEAT_PENALTY_THRESHOLD) + (45 * psyCoeff)), 0) / 150 ), 0)
 
 	//Check for holes in the SM inner chamber
-	for(var/turf/simulated/open/space/turf_to_check in RANGE_TURFS(1, loc))
+	for(var/turf/space/turf_to_check in RANGE_TURFS(1, loc))
 		if(LAZYLEN(turf_to_check.atmos_adjacent_turfs))
 			var/integrity = get_integrity_percent()
 			if(integrity < 10)

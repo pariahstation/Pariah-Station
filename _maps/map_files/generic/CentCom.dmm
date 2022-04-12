@@ -1,9 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "ad" = (
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "al" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1628,7 +1628,7 @@
 	desc = "I bet you think you're pretty clever... well you are.";
 	name = "easter egg"
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "fT" = (
 /obj/structure/table/wood,
@@ -1652,7 +1652,7 @@
 /area/start)
 "fZ" = (
 /obj/effect/landmark/ctf,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "ga" = (
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -1758,7 +1758,7 @@
 /area/centcom/courtroom)
 "gt" = (
 /obj/effect/landmark/mafia_game_area,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "gu" = (
 /turf/closed/indestructible/splashscreen,
@@ -2802,7 +2802,7 @@
 	name = "CentCom";
 	width = 20
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "jD" = (
 /obj/effect/turf_decal/loading_area{
@@ -3376,7 +3376,7 @@
 	},
 /area/abductor_ship)
 "lI" = (
-/turf/simulated/open/space/transit,
+/turf/space/transit,
 /area/space)
 "lJ" = (
 /obj/machinery/door/airlock/centcom{
@@ -4488,7 +4488,7 @@
 	name = "CentCom Ferry Dock";
 	width = 5
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "pB" = (
 /obj/effect/turf_decal/stripes/line{
@@ -6158,7 +6158,7 @@
 	name = "CentCom Emergency Shuttle Dock";
 	width = 50
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "vj" = (
 /turf/simulated/open/floor/wood,
@@ -9208,7 +9208,7 @@
 /area/centcom/courtroom)
 "GX" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/simulated/open/space,
+/turf/space,
 /area/wizard_station)
 "Ha" = (
 /obj/structure/table/wood,
@@ -9283,7 +9283,7 @@
 	desc = "I bet you think you're pretty clever... well you are.";
 	name = "easter egg"
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "HH" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -9730,7 +9730,7 @@
 	roundstart_template = /datum/map_template/shuttle/emergency/backup;
 	width = 8
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "Km" = (
 /obj/machinery/light/directional/west,
@@ -9800,7 +9800,7 @@
 	name = "recovery ship";
 	width = 3
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "KM" = (
 /obj/docking_port/stationary{
@@ -9810,7 +9810,7 @@
 	name = "recovery ship";
 	width = 3
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "KN" = (
 /obj/structure/window/reinforced,
@@ -9951,7 +9951,7 @@
 	name = "recovery ship";
 	width = 3
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "Lt" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -9981,7 +9981,7 @@
 	name = "recovery ship";
 	width = 5
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "LA" = (
 /obj/structure/table,

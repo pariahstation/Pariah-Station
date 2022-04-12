@@ -70,7 +70,7 @@ SUBSYSTEM_DEF(zas)
 	//The variable setting controller
 	var/zas_controller/settings
 	//XGM gas data
-	var/xgm_gas_data/gas_data
+	var/datum/xgm_gas_data/gas_data
 	//Geometry lists
 	var/list/zones = list()
 	var/list/edges = list()
@@ -139,7 +139,7 @@ SUBSYSTEM_DEF(zas)
 
 	var/starttime = REALTIMEOFDAY
 	settings = new
-	gas_data = new
+	gas_data = new /datum/xgm_gas_data
 
 	report_progress("Processing Geometry...")
 
@@ -287,6 +287,8 @@ SUBSYSTEM_DEF(zas)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
 			return
+
+/*
 /**
  * Adds a given machine to the processing system for SSAIR_ATMOSMACHINERY processing.
  *
@@ -319,7 +321,7 @@ SUBSYSTEM_DEF(zas)
 	// as well to prevent processing qdeleted objects in the cache.
 	if(currentpart == SSAIR_ATMOSMACHINERY)
 		currentrun -= machine
-
+*/
 /datum/controller/subsystem/zas/proc/add_zone(zone/z)
 	zones += z
 	z.name = "Zone [next_id++]"

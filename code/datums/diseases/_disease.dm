@@ -126,7 +126,9 @@
 		if(end == start)
 			return TRUE
 		var/turf/Temp = get_step_towards(end, start)
-		if(!TURFS_CAN_SHARE(end, Temp)) //Don't go through a wall
+		var/canpass
+		ATMOS_CANPASS_TURF(canpass, start, end)
+		if(canpass & AIR_BLOCKED) //Don't go through a wall
 			return FALSE
 		end = Temp
 

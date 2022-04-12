@@ -1,4 +1,4 @@
-//DO NOT USE THESE FOR ACCESSING ATMOS DATA, THEY MUTATE THINGS WHEN CALLED. I WILL BEAT YOU WITH A STICK. See the actual proc for more details
+/*//DO NOT USE THESE FOR ACCESSING ATMOS DATA, THEY MUTATE THINGS WHEN CALLED. I WILL BEAT YOU WITH A STICK. See the actual proc for more details
 ///Check if an atom (A) and a turf (O) allow gas passage based on the atom's can_atmos_pass var, do not use.
 ///(V) is if the share is vertical or not. True or False
 #define CANATMOSPASS(A, O, V) ( A.can_atmos_pass == ATMOS_PASS_PROC ? A.can_atmos_pass(O, V) : ( A.can_atmos_pass == ATMOS_PASS_DENSITY ? !A.density : A.can_atmos_pass ) )
@@ -74,3 +74,4 @@ GLOBAL_LIST_INIT(atmos_adjacent_savings, list(0,0))
 	turf.air.archive();\
 	turf.archived_cycle = SSair.times_fired;\
 	turf.temperature_archived = turf.temperature;
+*/

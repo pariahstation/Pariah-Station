@@ -55,7 +55,7 @@
 "O" = (
 /obj/structure/lattice,
 /obj/effect/spawner/random/structure/grille,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space/nearstation)
 "P" = (
 /obj/structure/rack,

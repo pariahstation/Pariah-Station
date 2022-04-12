@@ -13,7 +13,7 @@
 	pass_flags_self = PASSDOORS
 	max_integrity = 350
 	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, FIRE = 80, ACID = 70)
-	can_atmos_pass = ATMOS_PASS_DENSITY
+	atmos_canpass = CANPASS_DENSITY
 	flags_1 = PREVENT_CLICK_UNDER_1
 	receive_ricochet_chance_mod = 0.8
 	damage_deflection = 10
@@ -183,7 +183,7 @@
 /obj/machinery/door/proc/bumpopen(mob/user)
 	if(operating || !can_open_with_hands)
 		return
-		
+
 	add_fingerprint(user)
 	if(!density || (obj_flags & EMAGGED))
 		return

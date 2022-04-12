@@ -48,7 +48,7 @@
 		var/static/list/blacklisted_pylon_turfs = typecacheof(list(
 			/turf/closed,
 			/turf/simulated/open/floor/engine/cult,
-			/turf/simulated/open/space,
+			/turf/space,
 			/turf/simulated/open/lava,
 			/turf/simulated/open/chasm,
 			/turf/simulated/open/misc/asteroid,

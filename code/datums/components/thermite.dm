@@ -14,7 +14,7 @@
 	///Blacklist of turfs that cannot have thermite on it
 	var/static/list/blacklist = typecacheof(list(
 		/turf/simulated/open/lava,
-		/turf/simulated/open/space,
+		/turf/space,
 		/turf/simulated/open/water,
 		/turf/simulated/open/chasm,
 	))

@@ -45,19 +45,19 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 
 /obj/item/can_contaminate()
 	//Clothing can be contaminated, with exceptions for certain items which cannot be washed in washing_machine.dm
-	if(obj_flags & PHORONGUARD)
+	if(obj_flags & PLASMAGUARD)
 		return FALSE
 	return TRUE
 
 /obj/item/contaminate()
 	//Do a contamination overlay? Temporary measure to keep contamination less deadly than it was.
-	if(!contaminated)
-		contaminated = 1
-		add_overlay(contamination_overlay)
+	if(!flags_1 & CONTAMINATED_1)
+		flags_1 |= CONTAMINATED_1
+		add_overlay(GLOB.contamination_overlay)
 
 /obj/item/decontaminate()
-	contaminated = 0
-	cut_overlay(contamination_overlay)
+	flags_1 ~= CONTAMINATED_1
+	cut_overlay(GLOB.contamination_overlay)
 
 
 /mob/living/carbon/human/contaminate()
@@ -98,19 +98,8 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 
 	//Burn eyes if exposed.
 	if(SSzas.settings.plc.eye_burns)
-		if(!head)
-			if(!wear_mask)
-				burn_eyes()
-			else
-				if(!(wear_mask.body_parts_covered & EYES))
-					burn_eyes()
-		else
-			if(!(head.body_parts_covered & EYES))
-				if(!wear_mask)
-					burn_eyes()
-				else
-					if(!(wear_mask.body_parts_covered & EYES))
-						burn_eyes()
+		if(!is_eyes_covered())
+			burn_eyes()
 
 	//Genetic Corruption
 	if(SSzas.settings.plc.genetic_corruption)
@@ -123,13 +112,13 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 	return
 
 /mob/living/carbon/human/burn_eyes()
-	var/obj/item/organ/internal/eyes/E = getorganslot(ORGAN_SLOT_EYES)
+	var/obj/item/organ/eyes/E = getorganslot(ORGAN_SLOT_EYES)
 	if(E && !E.phoron_guard)
 		if(prob(20))
 			to_chat(src, "<span class='danger'>Your eyes burn!</span>")
 			E.applyOrganDamage(2.5)
 		eye_blurry = min(eye_blurry+1.5,50)
-		if (prob(max(0,E.damage - 15) + 1) &&!eye_blind)
+		if (prob(max(0, E.damage - 15) + 1) &&!eye_blind)
 			to_chat(src, "<span class='danger'>You are blinded!</span>")
 			eye_blind += 20
 
@@ -137,9 +126,9 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 	//Checks if the head is adequately sealed.
 	if(head)
 		if(SSzas.settings.plc.plasmaguard_only)
-			if(head.item_flags & PHORONGUARD)
+			if(head.item_flags & PLASMAGUARD)
 				return TRUE
-		else if(head.body_parts_covered & EYES)
+		else if(is_eyes_covered())
 			return TRUE
 	return FALSE
 
@@ -151,10 +140,10 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 			continue
 		if(istype(protection, /obj/item/clothing))
 			var/obj/item/clothing/clothing_item = protection
-			if(SSzas.settings.plc.phoronguard_only && !((clothing_item.clothing_flags & THICKMATERIAL) || (clothing_item.clothing_flags & GAS_FILTERING) || (clothing_item.obj_flags & PHORONGUARD)))
+			if(SSzas.settings.plc.plasmaguard_only && !((clothing_item.clothing_flags & THICKMATERIAL) || (clothing_item.clothing_flags & GAS_FILTERING) || (clothing_item.obj_flags & PLASMAGUARD)))
 				return FALSE
 
-		else if(SSzas.settings.plc.phoronguard_only && !(protection.obj_flags & PHORONGUARD))
+		else if(SSzas.settings.plc.plasmaguard_only && !(protection.obj_flags & PLASMAGUARD))
 			return FALSE
 
 		coverage |= protection.body_parts_covered
@@ -162,7 +151,7 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 	if(SSzas.settings.plc.plasmaguard_only)
 		return TRUE
 
-	return (~(coverage) & (UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS) == 0)
+	return (~(coverage) & (CHEST|LEGS|FEET|ARMS|HANDS) == 0)
 
 /mob/living/carbon/human/proc/suit_contamination()
 	//Runs over the things that can be contaminated and does so.
@@ -182,6 +171,6 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 		if(!env)
 			return
 		for(var/g in env.gas)
-			if(gas_data.flags[g] & XGM_GAS_CONTAMINANT && env.gas[g] > gas_data.overlay_limit[g] + 1)
+			if(SSzas.gas_data.flags[g] & XGM_GAS_CONTAMINANT && env.gas[g] > gas_data.overlay_limit[g] + 1)
 				I.contaminate()
 				break

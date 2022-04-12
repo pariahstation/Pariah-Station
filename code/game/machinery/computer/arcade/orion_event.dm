@@ -171,7 +171,7 @@
 /datum/orion_event/hull_part/proc/fix_floor(obj/machinery/computer/arcade/orion_trail/game)
 	game.say("A new floor suddenly appears around [src]. What the hell?")
 	playsound(game, 'sound/weapons/genhit.ogg', 100, TRUE)
-	for(var/turf/simulated/open/space/fixed in orange(1, src))
+	for(var/turf/space/fixed in orange(1, src))
 		fixed.PlaceOnTop(/turf/simulated/open/floor/plating)
 
 #define BUTTON_EXPLORE_SHIP "Explore Ship"

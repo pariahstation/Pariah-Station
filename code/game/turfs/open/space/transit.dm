@@ -1,37 +1,37 @@
-/turf/simulated/open/space/transit
+/turf/space/transit
 	name = "\proper hyperspace"
 	icon_state = "black"
 	dir = SOUTH
-	baseturfs = /turf/simulated/open/space/transit
+	baseturfs = /turf/space/transit
 	flags_1 = NOJAUNT //This line goes out to every wizard that ever managed to escape the den. I'm sorry.
 	explosion_block = INFINITY
 
-/turf/simulated/open/space/transit/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+/turf/space/transit/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	. = ..()
 	underlay_appearance.icon_state = "speedspace_ns_[get_transit_state(asking_turf)]"
 	underlay_appearance.transform = turn(matrix(), get_transit_angle(asking_turf))
 
-/turf/simulated/open/space/transit/south
+/turf/space/transit/south
 	dir = SOUTH
 
-/turf/simulated/open/space/transit/north
+/turf/space/transit/north
 	dir = NORTH
 
-/turf/simulated/open/space/transit/horizontal
+/turf/space/transit/horizontal
 	dir = WEST
 
-/turf/simulated/open/space/transit/west
+/turf/space/transit/west
 	dir = WEST
 
-/turf/simulated/open/space/transit/east
+/turf/space/transit/east
 	dir = EAST
 
-/turf/simulated/open/space/transit/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+/turf/space/transit/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
 	if(!locate(/obj/structure/lattice) in src)
 		throw_atom(arrived)
 
-/turf/simulated/open/space/transit/proc/throw_atom(atom/movable/AM)
+/turf/space/transit/proc/throw_atom(atom/movable/AM)
 	if(!AM || istype(AM, /obj/docking_port) || istype(AM, /obj/effect/abstract))
 		return
 	if(AM.loc != src) // Multi-tile objects are "in" multiple locs but its loc is it's true placement.
@@ -71,21 +71,21 @@
 	AM.forceMove(T)
 
 
-/turf/simulated/open/space/transit/CanBuildHere()
+/turf/space/transit/CanBuildHere()
 	return SSshuttle.is_in_shuttle_bounds(src)
 
 
-/turf/simulated/open/space/transit/Initialize(mapload)
+/turf/space/transit/Initialize(mapload)
 	. = ..()
 	update_appearance()
 	for(var/atom/movable/AM in src)
 		throw_atom(AM)
 
-/turf/simulated/open/space/transit/update_icon()
+/turf/space/transit/update_icon()
 	. = ..()
 	transform = turn(matrix(), get_transit_angle(src))
 
-/turf/simulated/open/space/transit/update_icon_state()
+/turf/space/transit/update_icon_state()
 	icon_state = "speedspace_ns_[get_transit_state(src)]"
 	return ..()
 

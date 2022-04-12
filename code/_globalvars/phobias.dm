@@ -463,7 +463,7 @@ GLOBAL_LIST_INIT(phobia_turfs, list(
 	"space" = typecacheof(list(
 		/turf/simulated/open/floor/fakespace,
 		/turf/simulated/open/floor/holofloor/space,
-		/turf/simulated/open/space,
+		/turf/space,
 	)),
 	"the supernatural" = typecacheof(list(
 		/turf/closed/wall/mineral/cult,

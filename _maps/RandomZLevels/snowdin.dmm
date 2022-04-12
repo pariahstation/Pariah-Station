@@ -20,7 +20,7 @@
 /turf/closed/indestructible/rock/snow,
 /area/awaymission/snowdin/cave/mountain)
 "ad" = (
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "ae" = (
 /turf/closed/mineral/snowmountain,

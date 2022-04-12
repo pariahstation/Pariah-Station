@@ -3,25 +3,25 @@
 /turf/closed/mineral/random,
 /area/space/nearstation)
 "ab" = (
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "ad" = (
 /obj/structure/shuttle/engine/propulsion/right{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate2)
 "ae" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate2)
 "af" = (
 /obj/structure/shuttle/engine/propulsion/left{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate2)
 "ah" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -84,19 +84,19 @@
 /obj/structure/shuttle/engine/propulsion/right{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate3)
 "ax" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate3)
 "ay" = (
 /obj/structure/shuttle/engine/propulsion/left{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate3)
 "aA" = (
 /obj/structure/table/reinforced,
@@ -143,19 +143,19 @@
 /obj/structure/shuttle/engine/propulsion/right{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate1)
 "aQ" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate1)
 "aR" = (
 /obj/structure/shuttle/engine/propulsion/left{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate1)
 "aT" = (
 /obj/machinery/sleeper,
@@ -336,7 +336,7 @@
 /obj/structure/shuttle/engine/propulsion/right{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/cruiser)
 "bJ" = (
 /obj/machinery/door/airlock/external/ruin,
@@ -346,7 +346,7 @@
 /obj/structure/shuttle/engine/propulsion/left{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/cruiser)
 "bL" = (
 /turf/closed/wall/mineral/plastitanium{
@@ -402,7 +402,7 @@
 /obj/structure/shuttle/engine/propulsion/burst/left{
 	dir = 8
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/cruiser)
 "bY" = (
 /obj/structure/shuttle/engine/heater{
@@ -443,7 +443,7 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/cruiser)
 "cg" = (
 /obj/structure/table/reinforced,
@@ -665,7 +665,7 @@
 /obj/structure/shuttle/engine/propulsion/right{
 	dir = 8
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/cruiser)
 "dg" = (
 /obj/effect/mob_spawn/corpse/human/engineer{
@@ -1735,7 +1735,7 @@
 /area/awaymission/spacebattle/syndicate7)
 "hd" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate4)
 "he" = (
 /obj/item/pickaxe,
@@ -1787,7 +1787,7 @@
 /obj/structure/shuttle/engine/propulsion/right{
 	dir = 4
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate7)
 "hn" = (
 /obj/structure/closet/crate/large,
@@ -1826,7 +1826,7 @@
 /obj/structure/shuttle/engine/propulsion/left{
 	dir = 4
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate7)
 "hw" = (
 /obj/structure/closet/crate/large,
@@ -2066,7 +2066,7 @@
 /obj/structure/shuttle/engine/propulsion/burst/right{
 	dir = 8
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/cruiser)
 "iw" = (
 /obj/effect/mob_spawn/corpse/human/engineer{
@@ -2078,11 +2078,11 @@
 /area/awaymission/spacebattle/cruiser)
 "ix" = (
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "iy" = (
 /obj/effect/mob_spawn/corpse/human/syndicatesoldier,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "iz" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -2139,7 +2139,7 @@
 /area/space/nearstation)
 "iS" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "iT" = (
 /obj/machinery/door/airlock/external/ruin,
@@ -2154,7 +2154,7 @@
 /area/awaymission/spacebattle/syndicate5)
 "iX" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate5)
 "iZ" = (
 /turf/closed/wall/mineral/plastitanium,
@@ -2190,7 +2190,7 @@
 /area/awaymission/spacebattle/syndicate6)
 "jj" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/spacebattle/syndicate6)
 "jl" = (
 /turf/closed/wall/mineral/plasma,
@@ -2577,11 +2577,11 @@
 /area/awaymission/spacebattle/cruiser)
 "kE" = (
 /obj/item/shard,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "kF" = (
 /obj/item/stack/rods,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "kG" = (
 /obj/item/ammo_casing/c10mm,
@@ -2599,17 +2599,17 @@
 /area/awaymission/spacebattle/cruiser)
 "kI" = (
 /obj/item/stack/sheet/iron,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "kJ" = (
 /obj/item/shard,
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "kK" = (
 /obj/structure/lattice,
 /obj/item/stack/rods,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "kL" = (
 /obj/structure/closet/crate,

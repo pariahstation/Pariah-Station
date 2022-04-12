@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/simulated/open/space/bluespace,
+/turf/space/bluespace,
 /area/hilbertshotel)
 "ab" = (
 /turf/closed/indestructible/hotelwall,

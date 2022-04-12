@@ -383,7 +383,7 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /obj/machinery/light/floor,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/pirate/flying_dutchman)
 "pG" = (
 /obj/structure/window/reinforced/shuttle/survival_pod,
@@ -788,7 +788,7 @@
 "Oe" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/shuttle/pirate/flying_dutchman)
 "OL" = (
 /obj/effect/turf_decal/siding/wood/corner{

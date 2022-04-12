@@ -594,7 +594,7 @@
 			ET.excited = TRUE
 			. += ET
 
-/turf/simulated/open/space/resolve_active_graph()
+/turf/space/resolve_active_graph()
 	return list()
 
 /datum/controller/subsystem/air/proc/setup_atmos_machinery()

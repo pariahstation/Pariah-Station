@@ -32,7 +32,7 @@
 	/// A list of weakrefs to all of ourc urrent runes
 	var/list/datum/weakref/current_runes = list()
 	/// Turfs that you cannot draw carvings on
-	var/static/list/blacklisted_turfs = typecacheof(list(/turf/simulated/open/space, /turf/simulated/open/openspace, /turf/simulated/open/lava))
+	var/static/list/blacklisted_turfs = typecacheof(list(/turf/space, /turf/simulated/open/openspace, /turf/simulated/open/lava))
 
 /obj/item/melee/rune_carver/examine(mob/user)
 	. = ..()

@@ -48,7 +48,7 @@
 	/// A static typecache of all tools we can scribe with.
 	var/static/list/scribing_tools = typecacheof(list(/obj/item/pen, /obj/item/toy/crayon))
 	/// A blacklist of turfs we cannot scribe on.
-	var/static/list/blacklisted_rune_turfs = typecacheof(list(/turf/simulated/open/space, /turf/simulated/open/openspace, /turf/simulated/open/lava, /turf/simulated/open/chasm))
+	var/static/list/blacklisted_rune_turfs = typecacheof(list(/turf/space, /turf/simulated/open/openspace, /turf/simulated/open/lava, /turf/simulated/open/chasm))
 
 /datum/antagonist/heretic/Destroy()
 	LAZYNULL(sac_targets)

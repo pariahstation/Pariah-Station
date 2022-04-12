@@ -99,7 +99,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
  * Please note, space tiles do not run this code.
  * This is done because it's called so often that any extra code just slows things down too much
  * If you add something relevant here add it there too
- * [/turf/simulated/open/space/Initialize]
+ * [/turf/space/Initialize]
  */
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE)
@@ -455,7 +455,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 			SEND_SIGNAL(O, COMSIG_OBJ_HIDE, underfloor_accessibility < UNDERFLOOR_VISIBLE)
 
 // override for space turfs, since they should never hide anything
-/turf/simulated/open/space/levelupdate()
+/turf/space/levelupdate()
 	return
 
 // Removes all signs of lattice on the pos of the turf -Donkieyo
@@ -697,7 +697,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
  * * simulated_only: Do we only worry about turfs with simulated atmos, most notably things that aren't space?
 */
 /turf/proc/reachableAdjacentTurfs(caller, ID, simulated_only)
-	var/static/space_type_cache = typecacheof(/turf/simulated/open/space)
+	var/static/space_type_cache = typecacheof(/turf/space)
 	. = list()
 
 	for(var/iter_dir in GLOB.cardinals)

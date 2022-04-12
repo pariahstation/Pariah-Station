@@ -158,7 +158,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	for(var/turf/closed/indestructible/hoteldoor/door in currentArea)
 		door.parentSphere = src
 		door.desc = "The door to this hotel room. The placard reads 'Room [currentRoomnumber]'. Strangely, this door doesn't even seem openable. The doorknob, however, seems to buzz with unusual energy...<br />[span_info("Alt-Click to look through the peephole.")]"
-	for(var/turf/simulated/open/space/bluespace/BSturf in currentArea)
+	for(var/turf/space/bluespace/BSturf in currentArea)
 		BSturf.parentSphere = src
 
 /obj/item/hilbertshotel/proc/ejectRooms()
@@ -244,24 +244,24 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	footstep = FOOTSTEP_FLOOR
 	tiled_dirt = FALSE
 
-/turf/simulated/open/space/bluespace
+/turf/space/bluespace
 	name = "\proper bluespace hyperzone"
 	icon_state = "bluespace"
 	base_icon_state = "bluespace"
-	baseturfs = /turf/simulated/open/space/bluespace
+	baseturfs = /turf/space/bluespace
 	flags_1 = NOJAUNT
 	explosion_block = INFINITY
 	var/obj/item/hilbertshotel/parentSphere
 
-/turf/simulated/open/space/bluespace/Initialize(mapload)
+/turf/space/bluespace/Initialize(mapload)
 	. = ..()
 	update_icon_state()
 
-/turf/simulated/open/space/bluespace/update_icon_state()
+/turf/space/bluespace/update_icon_state()
 	icon_state = base_icon_state
 	return ..()
 
-/turf/simulated/open/space/bluespace/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
+/turf/space/bluespace/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	. = ..()
 	if(parentSphere && arrived.forceMove(get_turf(parentSphere)))
 		do_sparks(3, FALSE, get_turf(arrived))

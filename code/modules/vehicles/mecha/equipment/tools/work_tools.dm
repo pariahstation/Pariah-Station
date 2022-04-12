@@ -292,7 +292,7 @@
 /obj/item/mecha_parts/mecha_equipment/rcd/action(mob/source, atom/target, list/modifiers)
 	if(!isturf(target) && !istype(target, /obj/machinery/door/airlock))
 		target = get_turf(target)
-	if(!action_checks(target) || get_dist(chassis, target)>3 || istype(target, /turf/simulated/open/space/transit))
+	if(!action_checks(target) || get_dist(chassis, target)>3 || istype(target, /turf/space/transit))
 		return
 	playsound(chassis, 'sound/machines/click.ogg', 50, TRUE)
 
@@ -315,7 +315,7 @@
 				qdel(target)
 		if(MODE_WALL)
 			if(isspaceturf(target))
-				var/turf/simulated/open/space/S = target
+				var/turf/space/S = target
 				to_chat(source, "[icon2html(src, source)][span_notice("Building Floor...")]")
 				if(!do_after_cooldown(S, source))
 					return

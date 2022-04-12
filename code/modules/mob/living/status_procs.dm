@@ -61,6 +61,9 @@
 	return S
 
 /* KNOCKDOWN */
+/mob/proc/Knockdown()
+	return
+
 /mob/living/proc/IsKnockdown() //If we're knocked down
 	return has_status_effect(/datum/status_effect/incapacitating/knockdown)
 

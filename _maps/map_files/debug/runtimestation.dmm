@@ -1,13 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "ab" = (
 /obj/structure/lattice,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ac" = (
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ad" = (
 /turf/closed/wall/r_wall,
@@ -15,7 +15,7 @@
 "ae" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "af" = (
 /turf/simulated/open/floor/plating,
@@ -42,12 +42,12 @@
 /area/engineering/atmos)
 "an" = (
 /obj/structure/lattice/catwalk,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ao" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
-/turf/simulated/open/space,
+/turf/space,
 /area/space/nearstation)
 "ap" = (
 /obj/structure/closet/secure_closet/engineering_electrical{
@@ -1135,7 +1135,7 @@
 	roundstart_template = /datum/map_template/shuttle/labour/generic;
 	width = 9
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "ec" = (
 /obj/docking_port/stationary{
@@ -1270,7 +1270,7 @@
 	name = "port bay 2";
 	width = 5
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "eF" = (
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -1301,7 +1301,7 @@
 	name = "Cargo Bay";
 	width = 12
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "eL" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -1457,10 +1457,10 @@
 	name = "SS13: Auxiliary Dock, Station-Port";
 	width = 28
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "fg" = (
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "fh" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -1514,7 +1514,7 @@
 	name = "Runtimestation emergency evac bay";
 	width = 29
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "fq" = (
 /obj/machinery/camera/autoname/directional/west,
@@ -2122,7 +2122,7 @@
 	id = "pod_lavaland";
 	name = "lavaland"
 	},
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "tV" = (
 /obj/structure/bot,

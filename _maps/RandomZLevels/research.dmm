@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/simulated/open/space,
+/turf/space,
 /area/space)
 "ab" = (
 /turf/closed/mineral,
@@ -17,7 +17,7 @@
 /obj/structure/shuttle/engine/propulsion/right{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/research/interior/engineering)
 "ai" = (
 /obj/machinery/door/airlock/external/ruin,
@@ -27,7 +27,7 @@
 /obj/structure/shuttle/engine/propulsion/left{
 	dir = 1
 	},
-/turf/simulated/open/space,
+/turf/space,
 /area/awaymission/research/interior/engineering)
 "ak" = (
 /turf/closed/wall/mineral/plastitanium{

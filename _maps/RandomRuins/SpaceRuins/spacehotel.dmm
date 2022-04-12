@@ -2357,7 +2357,7 @@
 "wT" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/ruin/space/has_grav/hotel)
 "wW" = (
 /obj/structure/chair/plastic,
@@ -4225,7 +4225,7 @@
 /area/ruin/space/has_grav/hotel/guestroom/room_1)
 "Uw" = (
 /obj/machinery/door/airlock/external/glass,
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/ruin/space/has_grav/hotel/power)
 "UD" = (
 /obj/effect/turf_decal/stripes/end,

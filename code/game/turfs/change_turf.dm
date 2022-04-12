@@ -1,10 +1,10 @@
 // This is a list of turf types we dont want to assign to baseturfs unless through initialization or explicitly
 GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
-	/turf/simulated/open/space,
+	/turf/space,
 	/turf/baseturf_bottom,
 	)))
 
-/turf/proc/empty(turf_type=/turf/simulated/open/space, baseturf_type, list/ignore_typecache, flags)
+/turf/proc/empty(turf_type=/turf/space, baseturf_type, list/ignore_typecache, flags)
 	// Remove all atoms except observers, landmarks, docking ports
 	var/static/list/ignored_atoms = typecacheof(list(/mob/dead, /obj/effect/landmark, /obj/docking_port))
 	var/list/allowed_contents = typecache_filter_list_reverse(get_all_contents_ignoring(ignore_typecache), ignored_atoms)
@@ -54,16 +54,16 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 		if(null)
 			return
 		if(/turf/baseturf_bottom)
-			path = SSmapping.level_trait(z, ZTRAIT_BASETURF) || /turf/simulated/open/space
+			path = SSmapping.level_trait(z, ZTRAIT_BASETURF) || /turf/space
 			if (!ispath(path))
 				path = text2path(path)
 				if (!ispath(path))
 					warning("Z-level [z] has invalid baseturf '[SSmapping.level_trait(z, ZTRAIT_BASETURF)]'")
-					path = /turf/simulated/open/space
-		if(/turf/simulated/open/space/basic)
+					path = /turf/space
+		if(/turf/space/basic)
 			// basic doesn't initialize and this will cause issues
 			// no warning though because this can happen naturaly as a result of it being built on top of
-			path = /turf/simulated/open/space
+			path = /turf/space
 
 	if(!GLOB.use_preloader && path == type && !(flags & CHANGETURF_FORCEOP) && (baseturfs == new_baseturfs)) // Don't no-op if the map loader requires it to be reconstructed, or if this is a new set of baseturfs
 		return src
@@ -138,7 +138,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 		if(lighting_object && !lighting_object.needs_update)
 			lighting_object.update()
 
-		for(var/turf/simulated/open/space/space_tile in RANGE_TURFS(1, src))
+		for(var/turf/space/space_tile in RANGE_TURFS(1, src))
 			space_tile.update_starlight()
 
 	var/area/thisarea = get_area(W)

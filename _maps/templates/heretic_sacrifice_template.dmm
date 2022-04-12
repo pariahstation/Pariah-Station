@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ab" = (
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/space)
 "cd" = (
 /obj/effect/decal/cleanable/ash{

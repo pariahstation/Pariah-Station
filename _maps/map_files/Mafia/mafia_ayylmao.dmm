@@ -114,7 +114,7 @@
 	},
 /area/mafia)
 "H" = (
-/turf/simulated/open/space/basic,
+/turf/space/basic,
 /area/mafia)
 "I" = (
 /turf/closed/indestructible/abductor{

@@ -10,7 +10,7 @@ Contains helper procs for airflow, handled in /connection_group.
 	if(last_airflow_stun > world.time - SSzas.settings.airflow_stun_cooldown)
 		return FALSE
 
-	if(!(status_flags & CANSTUN) && !(status_flags & CANWEAKEN))
+	if(!(status_flags & CANSTUN) && !(status_flags & CANKNOCKDOWN))
 		to_chat(src, "<span class='notice'>You stay upright as the air rushes past you.</span>")
 		return FALSE
 	if(buckled)
@@ -78,7 +78,7 @@ Contains helper procs for airflow, handled in /connection_group.
 		return FALSE
 	if(buckled)
 		return FALSE
-	var/obj/item/shoes/shoes = get_item_by_slot(ITEM_SLOT_FEET)
+	var/obj/item/clothing/shoes = get_item_by_slot(ITEM_SLOT_FEET)
 	if(istype(shoes) && (shoes.clothing_flags & NOSLIP))
 		return FALSE
 	if(HAS_TRAIT(src, TRAIT_NOSLIPALL))
@@ -126,9 +126,6 @@ Contains helper procs for airflow, handled in /connection_group.
 //	for(var/mob/M in hearers(src))
 //		M.show_message("<span class='danger'>[src] slams into [A]!</span>",1,"<span class='danger'>You hear a loud slam!</span>",2)
 	playsound(src.loc, "punch", 25, 1, -1)
-	if (prob(33))
-		loc:add_blood(src)
-		bloody_body(src)
 	var/b_loss = min(airflow_speed, (airborne_acceleration*2)) * SSzas.settings.airflow_damage
 
 	apply_damage(b_loss/3, BRUTE, BODY_ZONE_HEAD)
@@ -147,6 +144,6 @@ Contains helper procs for airflow, handled in /connection_group.
 	. = list()
 	for(var/turf/T in contents)
 		for(var/atom/movable/A as anything in T)
-			if(!A.simulated || A.anchored || istype(A, /obj/effect) || isobserver(A))
+			if(!A.simulated || A.anchored)
 				continue
 			. += A

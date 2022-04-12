@@ -6,7 +6,7 @@
 	requires_power = FALSE
 	static_lighting = FALSE
 	base_lighting_alpha = 255
-	
+
 /area/awaymission/snowdin/outside
 	name = "Snowdin Tundra Plains"
 	icon_state = "awaycontent25"

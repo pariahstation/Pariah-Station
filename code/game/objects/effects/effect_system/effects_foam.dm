@@ -20,7 +20,7 @@
 	var/lifetime = 40
 	var/reagent_divisor = 7
 	var/static/list/blacklisted_turfs = typecacheof(list(
-		/turf/simulated/open/space/transit,
+		/turf/space/transit,
 		/turf/simulated/open/chasm,
 		/turf/simulated/open/lava,
 	))

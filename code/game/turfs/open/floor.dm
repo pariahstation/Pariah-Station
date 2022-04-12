@@ -224,7 +224,7 @@
 		if(STAGE_FIVE to INFINITY)
 			if(prob(70))
 				sheer = TRUE
-			else if(prob(50) && (/turf/simulated/open/space in baseturfs))
+			else if(prob(50) && (/turf/space in baseturfs))
 				ReplaceWithLattice()
 	if(sheer)
 		if(has_tile())

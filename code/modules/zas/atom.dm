@@ -8,6 +8,7 @@
 	return (!density || !height || air_group)
 
 /turf/CanPass(atom/movable/mover, turf/target, height=1.5,air_group=0)
+	. = ..()
 	if(!target) return 0
 
 	if(istype(mover)) // turf/Enter(...) will perform more advanced checks
