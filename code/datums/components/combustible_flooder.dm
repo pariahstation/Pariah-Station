@@ -37,7 +37,7 @@
 		flooded_turf = parent_turf.ScrapeAway(1, CHANGETURF_INHERIT_AIR)
 		delete_parent = FALSE
 
-	flooded_turf.return_air().adjust_gas_temp(gas_id, temp_ammount || trigger_temperature)
+	flooded_turf.return_air().adjust_gas_temp(gas_id, temp_amount || trigger_temperature)
 
 	// Logging-related
 	var/admin_message = "[parent] ignited in [ADMIN_VERBOSEJMP(flooded_turf)]"

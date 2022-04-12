@@ -1,3 +1,10 @@
+GLOBAL_LIST_INIT(reverse_dir, list( // reverse_dir[dir] = reverse of dir
+	     2,  1,  3,  8, 10,  9, 11,  4,  6,  5,  7, 12, 14, 13, 15,
+	32, 34, 33, 35, 40, 42,	41, 43, 36, 38, 37, 39, 44, 46, 45, 47,
+	16, 18, 17, 19, 24, 26, 25, 27, 20, 22, 21,	23, 28, 30, 29, 31,
+	48, 50, 49, 51, 56, 58, 57, 59, 52, 54, 53, 55, 60, 62, 61, 63
+))
+
 /turf/simulated/var/zone/zone
 /turf/simulated/var/open_directions
 
@@ -199,7 +206,7 @@
 					if(verbose) log_game("Connecting to [sim.zone]")
 					#endif
 
-					SSair.connect(src, sim)
+					SSzas.connect(src, sim)
 
 
 			#ifdef ZASDBG
@@ -227,7 +234,7 @@
 	//At this point, a zone should have happened. If it hasn't, don't add more checks, fix the bug.
 
 	for(var/turf/T in postponed)
-		SSair.connect(src, T)
+		SSzas.connect(src, T)
 
 /turf/proc/post_update_air_properties()
 	if(connections) connections.update_all()
@@ -268,6 +275,8 @@
 	return 1
 
 /turf/simulated/return_air()
+	RETURN_TYPE(/datum/gas_mixture)
+
 	if(zone)
 		if(!zone.invalid)
 			SSzas.mark_zone_update(zone)

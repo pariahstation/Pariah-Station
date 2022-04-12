@@ -51,7 +51,7 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 
 /obj/item/contaminate()
 	//Do a contamination overlay? Temporary measure to keep contamination less deadly than it was.
-	if(!flags_1 & CONTAMINATED_1)
+	if(!(flags_1 & CONTAMINATED_1))
 		flags_1 |= CONTAMINATED_1
 		add_overlay(GLOB.contamination_overlay)
 
@@ -113,7 +113,7 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 
 /mob/living/carbon/human/burn_eyes()
 	var/obj/item/organ/eyes/E = getorganslot(ORGAN_SLOT_EYES)
-	if(E && !E.phoron_guard)
+	if(E && !E.status == ORGAN_ROBOTIC)
 		if(prob(20))
 			to_chat(src, "<span class='danger'>Your eyes burn!</span>")
 			E.applyOrganDamage(2.5)
@@ -171,6 +171,6 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, image('icons/effects/contaminat
 		if(!env)
 			return
 		for(var/g in env.gas)
-			if(SSzas.gas_data.flags[g] & XGM_GAS_CONTAMINANT && env.gas[g] > gas_data.overlay_limit[g] + 1)
+			if(SSzas.gas_data.flags[g] & XGM_GAS_CONTAMINANT && env.gas[g] > SSzas.gas_data.overlay_limit[g] + 1)
 				I.contaminate()
 				break
