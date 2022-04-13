@@ -32,7 +32,7 @@
 	var/mob/living/simple_animal/mouse/movement_target
 	gold_core_spawnable = FRIENDLY_SPAWN
 	collar_type = "cat"
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH EDIT
 	held_state = "cat2"
 	///In the case 'melee_damage_upper' is somehow raised above 0
 	attack_verb_continuous = "claws"
@@ -44,6 +44,7 @@
 
 /mob/living/simple_animal/pet/cat/Initialize(mapload)
 	. = ..()
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	AddElement(/datum/element/pet_bonus, "purrs!")
 	add_verb(src, /mob/living/proc/toggle_resting)
 	add_cell_sample()

@@ -88,7 +88,7 @@
 /obj/item/clothing/under/rank/civilian/hydroponics/skirt
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
-obj/item/clothing/under/rank/civilian/hydroponics
+/obj/item/clothing/under/rank/civilian/hydroponics
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/under/rank/civilian/clown

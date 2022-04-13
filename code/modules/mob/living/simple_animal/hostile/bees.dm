@@ -42,7 +42,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BUG
 	gold_core_spawnable = FRIENDLY_SPAWN
 	search_objects = 1 //have to find those plant trays!
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH MODULAR EDIT
 	held_w_class = WEIGHT_CLASS_TINY
 
 	//Spaceborn beings don't get hurt by space
@@ -60,6 +60,7 @@
 
 /mob/living/simple_animal/hostile/bee/Initialize(mapload)
 	. = ..()
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 	generate_bee_visuals()

@@ -21,7 +21,7 @@
 	harm_intent_damage = 4
 	obj_damage = 5
 	melee_damage_lower = 5
-	melee_damage_upper = 10 // Higher health than a base carp, so much lower damage. 
+	melee_damage_upper = 10 // Higher health than a base carp, so much lower damage.
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
@@ -35,7 +35,7 @@
 	response_harm_simple = "kick"
 	gold_core_spawnable = FRIENDLY_SPAWN
 	faction = list("neutral")
-	can_be_held = FALSE
+	//can_be_held = FALSE //PARIAH MODULAR EDIT
 	footstep_type = FOOTSTEP_MOB_CLAW
 	health = 100
 	maxHealth = 100
@@ -44,5 +44,6 @@
 
 /mob/living/simple_animal/hostile/ant/Initialize(mapload)
 	. = ..()
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 	AddElement(/datum/element/pet_bonus, "clacks happily!")

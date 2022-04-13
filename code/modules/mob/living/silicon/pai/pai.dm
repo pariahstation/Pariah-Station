@@ -14,7 +14,7 @@
 	health = 500
 	maxHealth = 500
 	layer = LOW_MOB_LAYER
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH EDIT
 	move_force = 0
 	pull_force = 0
 	move_resist = 0
@@ -151,6 +151,7 @@
 
 /mob/living/silicon/pai/Initialize(mapload)
 	var/obj/item/paicard/pai_card = loc
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	START_PROCESSING(SSfastprocess, src)
 	GLOB.pai_list += src
 	make_laws()

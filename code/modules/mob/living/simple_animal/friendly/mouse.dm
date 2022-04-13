@@ -27,7 +27,7 @@
 	var/body_color //brown, gray and white, leave blank for random
 	gold_core_spawnable = FRIENDLY_SPAWN
 	var/chew_probability = 1
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH MODULAR EDIT
 	held_w_class = WEIGHT_CLASS_TINY
 	held_state = "mouse_gray"
 	faction = list("rat")
@@ -36,6 +36,7 @@
 	. = ..()
 	if(body_color == null)
 		body_color = pick("brown","gray","white")
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT) //PARIAH MODULAR EDIT
 	AddElement(/datum/element/animal_variety, "mouse", body_color, FALSE)
 	AddComponent(/datum/component/squeak, list('sound/effects/mousesqueek.ogg' = 1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE) //as quiet as a mouse or whatever
 	add_cell_sample()

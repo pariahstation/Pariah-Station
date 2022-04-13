@@ -878,7 +878,11 @@
 /mob/living/carbon/human/mouse_buckle_handling(mob/living/M, mob/living/user)
 	if(pulling != M || grab_state != GRAB_AGGRESSIVE || stat != CONSCIOUS)
 		return FALSE
-
+//If they can be picked up, and we can't (prevents recursion), try to pick the target mob up as an item. //PARIAH MODULAR EDIT
+	if(HAS_TRAIT((M), TRAIT_HOLDABLE) && !HAS_TRAIT(src, TRAIT_HOLDABLE))
+		if((M).mob_try_pickup(user))
+			return
+	//PARIAH MODULAR EDIT END
 	//If they dragged themselves to you and you're currently aggressively grabbing them try to piggyback
 	if(user == M && can_piggyback(M))
 		piggyback(M)

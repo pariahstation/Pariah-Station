@@ -21,7 +21,7 @@
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
 	gold_core_spawnable = FRIENDLY_SPAWN
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH MODULAR EDIT
 	held_state = "fox"
 	///In the case 'melee_damage_upper' is somehow raised above 0
 	attack_verb_continuous = "bites"
@@ -33,6 +33,7 @@
 
 /mob/living/simple_animal/pet/fox/Initialize(mapload)
 	. = ..()
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	AddElement(/datum/element/pet_bonus, "pants and yaps happily!")
 
 //Captain fox

@@ -21,7 +21,7 @@
 	emote_hear = list("hops.")
 	emote_see = list("hops around","bounces up and down")
 	butcher_results = list(/obj/item/food/meat/slab = 1)
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH MODULAR EDIT
 	density = FALSE
 	speak_chance = 2
 	turns_per_move = 3
@@ -41,6 +41,7 @@
 
 /mob/living/simple_animal/rabbit/Initialize(mapload)
 	. = ..()
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	AddElement(/datum/element/pet_bonus, "hops around happily!")
 	AddElement(/datum/element/animal_variety, icon_prefix, pick("brown","black","white"), TRUE)
 

@@ -329,6 +329,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_ANTICONVULSANT "anticonvulsant"
 /// The holder of this trait has antennae or whatever that hurt a ton when noogied
 #define TRAIT_ANTENNAE "antennae"
+/// The holder of this trait can be picked up and held by another mob that does NOT have this trait. //PARIAH MODULAR
+#define TRAIT_HOLDABLE "holdable"
 /// Blowing kisses actually does damage to the victim
 #define TRAIT_KISS_OF_DEATH "kiss_of_death"
 /// Used to activate french kissing

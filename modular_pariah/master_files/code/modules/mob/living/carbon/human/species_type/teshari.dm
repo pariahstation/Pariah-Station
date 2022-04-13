@@ -10,6 +10,7 @@
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
+		TRAIT_HOLDABLE,
 	)
 	mutant_bodyparts = list("tail_teshari" = "Teshari Default Tail","teshari_feathers" = "Plain")
 	external_organs = list(/obj/item/organ/external/teshari_feathers = "None")

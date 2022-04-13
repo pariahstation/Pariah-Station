@@ -10,7 +10,7 @@
 	emote_see = list("dozes off.", "looks around sleepily.")
 	speak_chance = 1
 	turns_per_move = 5
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH MODULAR EDIT
 	butcher_results = list(/obj/item/food/meat/slab = 3)
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
@@ -36,6 +36,7 @@
 
 /mob/living/simple_animal/sloth/Initialize(mapload)
 	. = ..()
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	AddElement(/datum/element/pet_bonus, "slowly smiles!")
 
 //Cargo Sloth
