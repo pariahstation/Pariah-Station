@@ -4433,6 +4433,7 @@
 #include "modular_pariah\master_files\code\modules\verbs\code\modules\client\looc.dm"
 #include "modular_pariah\master_files\code\modules\verbs\code\modules\client\mob\subtle.dm"
 #include "modular_pariah\master_files\icons\mob\species\teshari\teshari_clothing.dm"
+#include "modular_pariah\master_files\icons\mob\species\teshari\teshari_feet.dm"
 #include "modular_pariah\master_files\icons\mob\species\teshari\teshari_under.dm"
 #include "modular_pariah\modules\aesthetics\abductor\abductor.dm"
 #include "modular_pariah\modules\aesthetics\airalarm\code\airalarm.dm"

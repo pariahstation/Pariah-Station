@@ -486,11 +486,12 @@ There are several things that need to be remembered:
 		if(dna.species.bodytype & BODYTYPE_DIGITIGRADE)
 			if(worn_item.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION)
 				icon_file = wear_suit.worn_icon_digitigrade || DIGITIGRADE_SUIT_FILE //PARIAH EDIT
+
+
+		if(dna.species.bodytype & BODYTYPE_TESHARI)
+			if(worn_item.supports_variations_flags & CLOTHING_TESHARI_VARIATION)
+				icon_file = wear_suit.worn_icon_digitigrade || TESHARI_SUIT_FILE
 		//PARIAH EDIT END
-
-		if((dna.species.bodytype & BODYTYPE_TESHARI) && (worn_item.supports_variations_flags & CLOTHING_TESHARI_VARIATION))
-			icon_file = TESHARI_SUIT_FILE
-
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
 			handled_by_bodytype = FALSE
 			icon_file = DEFAULT_SUIT_FILE

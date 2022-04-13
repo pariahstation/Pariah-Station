@@ -7,13 +7,7 @@
 /obj/item/clothing/suit/bomb_suit
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
-/obj/item/clothing/suit/armor/riot
-	supports_variations_flags = CLOTHING_TESHARI_VARIATION
-
 /obj/item/clothing/suit/armor/hos/trenchcoat
-	supports_variations_flags = CLOTHING_TESHARI_VARIATION
-
-/obj/item/clothing/suit/armor/hos/hos_formal
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/hos/trenchcoat
@@ -101,4 +95,18 @@
 //BOTANY
 /obj/item/clothing/suit/apron/overalls
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+//SECURITY
+/obj/item/clothing/suit/armor/vest
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
+/obj/item/clothing/suit/armor/riot
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+/obj/item/clothing/suit/armor/hos/trenchcoat
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+/obj/item/clothing/suit/armor/vest/capcarapace/syndicate
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+/obj/item/clothing/suit/armor/hos/hos_formal
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
