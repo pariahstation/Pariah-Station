@@ -133,6 +133,9 @@ There are several things that need to be remembered:
 			if((dna?.species.bodytype & BODYTYPE_DIGITIGRADE) && (U.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION))
 				icon_file = DIGITIGRADE_UNIFORM_FILE
 
+			if((dna.species.bodytype & BODYTYPE_TESHARI) && (U.supports_variations_flags & CLOTHING_TESHARI_VARIATION))
+				icon_file = TESHARI_UNIFORM_FILE
+
 			//Female sprites have lower priority than digitigrade sprites
 			else if(dna.species.sexes && (dna.species.bodytype & BODYTYPE_HUMANOID) && physique == FEMALE && U.adjusted != NO_FEMALE_UNIFORM) //Agggggggghhhhh
 				woman = TRUE

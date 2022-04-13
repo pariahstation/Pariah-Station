@@ -58,13 +58,7 @@
 /obj/item/clothing/suit/toggle/jacket/sci
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
-/obj/item/clothing/suit/toggle/jacket/med
-	supports_variations_flags = CLOTHING_TESHARI_VARIATION
-
 /obj/item/clothing/suit/toggle/jacket/supply
-	supports_variations_flags = CLOTHING_TESHARI_VARIATION
-
-/obj/item/clothing/suit/toggle/jacket/sec
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/toggle/jacket/sec
@@ -85,3 +79,26 @@
 
 /obj/item/clothing/suit/bio_suit/cmo
 	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+//MINING
+/obj/item/clothing/suit/hooded/cloak/drake
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+/obj/item/clothing/suit/hooded/explorer
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+//MEDBAY
+
+/obj/item/clothing/suit/apron/surgical
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+/obj/item/clothing/suit/toggle/labcoat/hospitalgown
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+/obj/item/clothing/suit/toggle/jacket/med
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
+//BOTANY
+/obj/item/clothing/suit/apron/overalls
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
+
