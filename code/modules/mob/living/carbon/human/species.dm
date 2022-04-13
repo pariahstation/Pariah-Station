@@ -237,7 +237,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	///Override of the eyes icon file, used for Vox and maybe more in the future - The future is now, with Teshari using it too///PARIAH EDIT
 	var/eyes_icon
-
+	///Path to BODYTYPE_CUSTOM species worn icons. An assoc list of ITEM_SLOT_X => /icon
+	var/list/custom_worn_icons = list()
 ///////////
 // PROCS //
 ///////////

@@ -26,8 +26,15 @@
 #define TESHARI_SHOES_FILE 'modular_pariah/master_files/icons/mob/species/teshari/clothing/feet.dmi'
 //the dmi containing teshari oversuits
 #define TESHARI_SUIT_FILE 'modular_pariah/master_files/icons/mob/species/teshari/clothing/suit.dmi'
-#define TESHARI_UNIFORM_ICON ''
 //PARIAH EDIT END
-
+#define TESHARI_ACCESSORIES_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/accessories.dmi'
+#define TESHARI_BACK_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/back.dmi'
+#define TESHARI_BELT_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/belt.dmi'
+#define TESHARI_EYES_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/eyes.dmi'
+#define TESHARI_HANDS_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/hands.dmi'
+#define TESHARI_HEAD_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing//head.dmi'
+#define TESHARI_MASK_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/mask.dmi'
+#define TESHARI_NECK_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/neck.dmi'
+#define TESHARI_EARS_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/ears.dmi'
 
 
