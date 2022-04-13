@@ -33,7 +33,7 @@
 	. = ..()
 	if(set_dir)
 		setDir(set_dir)
-	air_update_turf(TRUE, TRUE)
+	SSzas.mark_for_update(loc)
 
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_EXIT = .proc/on_exit,
@@ -44,7 +44,7 @@
 
 /obj/structure/windoor_assembly/Destroy()
 	set_density(FALSE)
-	air_update_turf(TRUE, FALSE)
+	SSzas.mark_for_update(loc)
 	return ..()
 
 /obj/structure/windoor_assembly/Move()

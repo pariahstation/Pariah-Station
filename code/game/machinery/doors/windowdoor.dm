@@ -73,7 +73,8 @@
 		playsound(src, SFX_SHATTER, 70, TRUE)
 	electronics = null
 	var/turf/floor = get_turf(src)
-	floor.air_update_turf(TRUE, FALSE)
+	//floor.air_update_turf(TRUE, FALSE)
+	SSzas.mark_for_update(floor)
 	return ..()
 
 /obj/machinery/door/window/update_icon_state()
@@ -214,7 +215,7 @@
 	icon_state ="[base_state]open"
 	sleep(10)
 	set_density(FALSE)
-	air_update_turf(TRUE, FALSE)
+	SSzas.mark_for_update(loc)
 	update_freelook_sight()
 
 	if(operating == 1) //emag again
@@ -236,7 +237,7 @@
 	icon_state = base_state
 
 	set_density(TRUE)
-	air_update_turf(TRUE, TRUE)
+	SSzas.mark_for_update(loc)
 	update_freelook_sight()
 	sleep(10)
 

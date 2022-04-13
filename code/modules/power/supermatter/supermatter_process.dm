@@ -22,7 +22,7 @@
 	var/datum/gas_mixture/removed
 	if(produces_gas)
 		//Remove gas from surrounding area
-		removed = env.remove(gasefficency * env.total_moles())
+		removed = env.remove(gasefficency * env.get_total_moles())
 	else
 		// Pass all the gas related code an empty gas container
 		removed = new()
@@ -35,7 +35,7 @@
 		else
 			psy_overlay = FALSE
 	damage_archived = damage
-	if(!removed || !removed.total_moles() || isspaceturf(local_turf)) //we're in space or there is no gas to process
+	if(!removed || !removed.get_total_moles() || isspaceturf(local_turf)) //we're in space or there is no gas to process
 		if(takes_damage)
 			damage += max((power / 1000) * DAMAGE_INCREASE_MULTIPLIER, 0.1) // always does at least some damage
 		if(!istype(env, /datum/gas_mixture/immutable) && produces_gas && power) //There is no gas to process, but we are not in a space turf. Lets make them.
@@ -44,14 +44,13 @@
 			//Can't do stuff if it's null, so lets make a new gasmix.
 			removed = new()
 			//Since there is no gas to process, we will produce as if heat penalty is 1 and temperature at TCMB.
-			removed.assert_gases(/datum/gas/plasma, /datum/gas/oxygen)
 			removed.temperature = ((device_energy) / THERMAL_RELEASE_MODIFIER)
 			removed.temperature = max(TCMB, min(removed.temperature, 2500))
 			removed.gases[/datum/gas/plasma][MOLES] = max((device_energy) / PLASMA_RELEASE_MODIFIER, 0)
 			removed.gases[/datum/gas/oxygen][MOLES] = max(((device_energy + TCMB) - T0C) / OXYGEN_RELEASE_MODIFIER, 0)
 			removed.garbage_collect()
 			env.merge(removed)
-			air_update_turf(FALSE, FALSE)
+			SSzas.mark_for_update(loc)
 	else
 		if(takes_damage)
 			//causing damage

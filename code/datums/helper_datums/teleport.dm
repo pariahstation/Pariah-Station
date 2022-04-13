@@ -132,15 +132,7 @@
 	if(!floor_gas_mixture)
 		return
 
-
-	var/trace_gases
-	for(var/id in floor_gases)
-		trace_gases = TRUE
-		break
-
 	// Can most things breathe?
-	if(trace_gases)
-		return
 	if(!(floor_gas_mixture.get_gas(GAS_OXYGEN)>= 16))
 		return
 	if(floor_gas_mixture.get_gas(GAS_PLASMA))

@@ -1,4 +1,4 @@
-/obj/machinery/power/generator
+/*/obj/machinery/power/generator
 	name = "thermoelectric generator"
 	desc = "It's a high efficiency thermoelectric generator."
 	icon_state = "teg"
@@ -228,3 +228,4 @@
 	if(cold_circ)
 		cold_circ.generator = null
 		cold_circ = null
+*/

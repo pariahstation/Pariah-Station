@@ -77,6 +77,8 @@ SUBSYSTEM_DEF(zas)
 
 	//Pipenets
 	var/list/networks = list()
+	var/list/rebuild_queue = list()
+	var/list/expansion_queue = list()
 
 	//Atmos Machines
 	var/list/atmos_machinery = list()
@@ -102,6 +104,7 @@ SUBSYSTEM_DEF(zas)
 	var/list/curr_hotspot
 	var/list/curr_zones
 	var/list/curr_machines
+
 
 	var/current_process = SSZAS_TILES
 	var/active_zones = 0
@@ -341,6 +344,17 @@ SUBSYSTEM_DEF(zas)
 	// as well to prevent processing qdeleted objects in the cache.
 	if(current_process == SSZAS_MACHINES)
 		curr_machines -= machine
+
+/datum/controller/subsystem/zas/proc/add_to_rebuild_queue(obj/machinery/atmospherics/atmos_machine)
+	if(istype(atmos_machine, /obj/machinery/atmospherics) && !atmos_machine.rebuilding)
+		rebuild_queue += atmos_machine
+		atmos_machine.rebuilding = TRUE
+
+/datum/controller/subsystem/zas/proc/add_to_expansion(datum/pipeline/line, starting_point)
+	var/list/new_packet = new(SSAIR_REBUILD_QUEUE)
+	new_packet[SSZAS_REBUILD_PIPELINE] = line
+	new_packet[SSZAS_REBUILD_QUEUE] = list(starting_point)
+	expansion_queue += list(new_packet)
 
 /datum/controller/subsystem/zas/proc/add_zone(zone/z)
 	zones += z

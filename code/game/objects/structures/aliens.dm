@@ -68,10 +68,10 @@
 
 /obj/structure/alien/resin/Initialize(mapload)
 	. = ..()
-	air_update_turf(TRUE, TRUE)
+	SSzas.mark_for_update(loc)
 
 /obj/structure/alien/resin/Destroy()
-	air_update_turf(TRUE, FALSE)
+	SSzas.mark_for_update(loc)
 	. = ..()
 
 /obj/structure/alien/resin/Move()

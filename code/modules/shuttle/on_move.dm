@@ -58,9 +58,9 @@ All ShuttleMove procs go here
 	var/depth = baseturfs.len - shuttle_boundary + 1
 	newT.CopyOnTop(src, 1, depth, TRUE)
 	newT.blocks_air = TRUE
-	newT.air_update_turf(TRUE, FALSE)
+	SSzas.mark_for_update(new)
 	blocks_air = TRUE
-	air_update_turf(TRUE, TRUE)
+	SSzas.mark_for_update(loc)
 	if(isopenturf(newT))
 		var/turf/simulated/open/new_open = newT
 		new_open.copy_air_with_tile(src)
@@ -86,9 +86,9 @@ All ShuttleMove procs go here
 
 /turf/proc/lateShuttleMove(turf/oldT)
 	blocks_air = initial(blocks_air)
-	air_update_turf(TRUE, blocks_air)
+	SSzas.mark_for_update(loc)
 	oldT.blocks_air = initial(oldT.blocks_air)
-	oldT.air_update_turf(TRUE, oldT.blocks_air)
+	SSzas.mark_for_update(oldT)
 
 
 /////////////////////////////////////////////////////////////////////////////////////

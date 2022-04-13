@@ -151,3 +151,36 @@
 #define PIPE_CLASS_OMNI             5
 
 #define ADIABATIC_EXPONENT          0.667 //Actually adiabatic exponent - 1.
+
+// These balance how easy or hard it is to create huge pressure gradients with pumps and filters.
+// Lower values means it takes longer to create large pressures differences.
+// Has no effect on pumping gasses from high pressure to low, only from low to high.
+#define ATMOS_PUMP_EFFICIENCY   2.5
+#define ATMOS_FILTER_EFFICIENCY 2.5
+
+// Will not bother pumping or filtering if the gas source as fewer than this amount of moles, to help with performance.
+#define MINIMUM_MOLES_TO_PUMP   0.01
+#define MINIMUM_MOLES_TO_FILTER 0.04
+
+///Moves the icon of the device based on the piping layer and on the direction
+#define PIPING_LAYER_SHIFT(T, PipingLayer) \
+	if(T.dir & (NORTH|SOUTH)) { \
+		T.pixel_x = (PipingLayer - PIPING_LAYER_DEFAULT) * PIPING_LAYER_P_X;\
+	} \
+	if(T.dir & (EAST|WEST)) { \
+		T.pixel_y = (PipingLayer - PIPING_LAYER_DEFAULT) * PIPING_LAYER_P_Y;\
+	}
+
+///Moves the icon of the device based on the piping layer and on the direction, the shift amount is dictated by more_shift
+#define PIPING_FORWARD_SHIFT(T, PipingLayer, more_shift) \
+	if(T.dir & (NORTH|SOUTH)) { \
+		T.pixel_y += more_shift * (PipingLayer - PIPING_LAYER_DEFAULT);\
+	} \
+	if(T.dir & (EAST|WEST)) { \
+		T.pixel_x += more_shift * (PipingLayer - PIPING_LAYER_DEFAULT);\
+	}
+
+///Moves the icon of the device based on the piping layer on both x and y
+#define PIPING_LAYER_DOUBLE_SHIFT(T, PipingLayer) \
+	T.pixel_x = (PipingLayer - PIPING_LAYER_DEFAULT) * PIPING_LAYER_P_X;\
+	T.pixel_y = (PipingLayer - PIPING_LAYER_DEFAULT) * PIPING_LAYER_P_Y;

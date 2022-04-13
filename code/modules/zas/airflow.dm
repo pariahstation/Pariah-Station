@@ -123,8 +123,9 @@ Contains helper procs for airflow, handled in /connection_group.
 	airflow_dest = null
 
 /mob/living/carbon/human/airflow_hit(atom/A)
-//	for(var/mob/M in hearers(src))
-//		M.show_message("<span class='danger'>[src] slams into [A]!</span>",1,"<span class='danger'>You hear a loud slam!</span>",2)
+	for(var/mob/M in hearers(src))
+		M.show_message("<span class='danger'>[src] slams into [A]!</span>",1,"<span class='danger'>You hear a loud slam!</span>",2)
+
 	playsound(src.loc, "punch", 25, 1, -1)
 	var/b_loss = min(airflow_speed, (airborne_acceleration*2)) * SSzas.settings.airflow_damage
 

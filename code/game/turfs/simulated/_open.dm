@@ -182,7 +182,7 @@
 
 /turf/simulated/open/TakeTemperature(temp)
 	air.temperature += temp
-	air_update_turf(FALSE, FALSE)
+	SSzas.mark_for_update(loc)
 
 /turf/simulated/open/proc/freeze_turf()
 	for(var/obj/I in contents)

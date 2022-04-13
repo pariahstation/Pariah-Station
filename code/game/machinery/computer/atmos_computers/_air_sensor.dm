@@ -48,6 +48,6 @@
 		"sigtype" = "status",
 		"tag" = id_tag,
 		"timestamp" = world.time,
-		"gasmix" = gas_mixture_parser(air_sample),
+		//"gasmix" = gas_mixture_parser(air_sample),
 	))
 	radio_connection.post_signal(src, signal, filter = RADIO_ATMOSIA)

@@ -125,7 +125,7 @@
 		delta_temperature *= -1
 	if(delta_temperature)
 		enviroment.temperature += delta_temperature
-		air_update_turf(FALSE, FALSE)
+		SSzas.mark_for_update(loc)
 	cell.use(required_energy / efficiency)
 
 /obj/machinery/space_heater/RefreshParts()

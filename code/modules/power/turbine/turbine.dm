@@ -471,7 +471,7 @@
 	//the compressor compresses down the gases from 2500 L to 1000 L
 	//the temperature and pressure rises up, you can regulate this to increase/decrease the amount of gas moved in.
 	var/compressor_work = do_calculations(input_turf_mixture, compressor.machine_gasmix, regulated = TRUE)
-	input_turf.air_update_turf(TRUE)
+	SSzas.mark_for_update(input_turf)
 	var/compressor_pressure = max(compressor.machine_gasmix.return_pressure(), 0.01)
 
 	//the rotor moves the gases that expands from 1000 L to 3000 L, they cool down and both temperature and pressure lowers

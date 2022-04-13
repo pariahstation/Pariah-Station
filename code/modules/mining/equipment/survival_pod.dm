@@ -262,10 +262,10 @@
 
 /obj/structure/fans/Initialize(mapload)
 	. = ..()
-	air_update_turf(TRUE, TRUE)
+	SSzas.mark_for_update(loc)
 
 /obj/structure/fans/Destroy()
-	air_update_turf(TRUE, FALSE)
+	SSzas.mark_for_update(loc)
 	. = ..()
 //Invisible, indestructible fans
 /obj/structure/fans/tiny/invisible

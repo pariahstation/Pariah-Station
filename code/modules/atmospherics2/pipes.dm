@@ -1,13 +1,13 @@
 #define SOUND_ID "pipe_leakage"
 
 /obj/machinery/atmospherics/pipe
-
 	var/datum/gas_mixture/air_temporary // used when reconstructing a pipeline that broke
-	var/datum/pipeline/parent
+	var/datum/pipeline/parent = null
 	var/volume = 0
 	var/leaking = 0		// Do not set directly, use set_leaking(TRUE/FALSE)
 	use_power = NO_POWER_USE
-	uncreated_component_parts = null // No apc connection
+	damage_deflection = 12
+	can_unwrench = TRUE
 
 	var/maximum_pressure = 210 * ONE_ATMOSPHERE
 	var/fatigue_pressure = 170 * ONE_ATMOSPHERE
@@ -32,10 +32,10 @@
 /obj/machinery/atmospherics/pipe/Initialize()
 	. = ..()
 	if(istype(get_turf(src), /turf/simulated/wall) || istype(get_turf(src), /turf/simulated/shuttle/wall) || istype(get_turf(src), /turf/unsimulated/wall))
-		level = 1
+		piping_layer = 1
 
 /obj/machinery/atmospherics/pipe/hides_under_flooring()
-	return level != 2
+	return piping_layer != 2
 
 /obj/machinery/atmospherics/pipe/proc/set_leaking(var/new_leaking)
 	if(new_leaking && !leaking)
@@ -115,7 +115,7 @@
 
 	if(isWrench(W))
 		var/turf/T = src.loc
-		if (level==1 && isturf(T) && !T.is_plating())
+		if (piping_layer==1 && isturf(T) && !T.is_plating())
 			to_chat(user, "<span class='warning'>You must remove the plating first.</span>")
 			return 1
 
@@ -184,7 +184,7 @@
 	var/minimum_temperature_difference = 300
 	var/thermal_conductivity = 0 //WALL_HEAT_TRANSFER_COEFFICIENT No
 
-	level = 1
+	piping_layer = 1
 
 	rotate_class = PIPE_ROTATE_TWODIR
 	connect_dir_type = SOUTH | NORTH // Overridden if dir is not a cardinal for bent pipes. For straight pipes this is correct.
@@ -318,7 +318,7 @@
 		return
 
 	var/turf/T = loc
-	if(level == 1 && !T.is_plating()) hide(1)
+	if(piping_layer == 1 && !T.is_plating()) hide(1)
 	update_icon()
 
 /obj/machinery/atmospherics/pipe/simple/disconnect(obj/machinery/atmospherics/reference)
@@ -338,7 +338,7 @@
 
 /obj/machinery/atmospherics/pipe/simple/visible
 	icon_state = "intact"
-	level = 2
+	piping_layer = 2
 
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers
 	name = "Scrubbers pipe"
@@ -384,7 +384,7 @@
 
 /obj/machinery/atmospherics/pipe/simple/hidden
 	icon_state = "intact"
-	level = 1
+	piping_layer = 1
 	alpha = 128		//set for the benefit of mapping - this is reset to opaque when the pipe is spawned in game
 
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers
@@ -441,7 +441,7 @@
 
 	var/obj/machinery/atmospherics/node3
 	build_icon_state = "manifold"
-	level = 1
+	piping_layer = 1
 
 	pipe_class = PIPE_CLASS_TRINARY
 	connect_dir_type = NORTH | EAST | WEST
@@ -594,12 +594,12 @@
 		return
 
 	var/turf/T = get_turf(src)
-	if(level == 1 && !T.is_plating()) hide(1)
+	if(piping_layer == 1 && !T.is_plating()) hide(1)
 	update_icon()
 
 /obj/machinery/atmospherics/pipe/manifold/visible
 	icon_state = "map"
-	level = 2
+	piping_layer = 2
 
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers
 	name="Scrubbers pipe manifold"
@@ -642,7 +642,7 @@
 
 /obj/machinery/atmospherics/pipe/manifold/hidden
 	icon_state = "map"
-	level = 1
+	piping_layer = 1
 	alpha = 128		//set for the benefit of mapping - this is reset to opaque when the pipe is spawned in game
 
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers
@@ -697,7 +697,7 @@
 	var/obj/machinery/atmospherics/node3
 	var/obj/machinery/atmospherics/node4
 	build_icon_state = "manifold4w"
-	level = 1
+	piping_layer = 1
 
 	pipe_class = PIPE_CLASS_QUATERNARY
 	rotate_class = PIPE_ROTATE_ONEDIR
@@ -863,12 +863,12 @@
 		return
 
 	var/turf/T = get_turf(src)
-	if(level == 1 && !T.is_plating()) hide(1)
+	if(piping_layer == 1 && !T.is_plating()) hide(1)
 	update_icon()
 
 /obj/machinery/atmospherics/pipe/manifold4w/visible
 	icon_state = "map_4way"
-	level = 2
+	piping_layer = 2
 
 /obj/machinery/atmospherics/pipe/manifold4w/visible/scrubbers
 	name="4-way scrubbers pipe manifold"
@@ -911,7 +911,7 @@
 
 /obj/machinery/atmospherics/pipe/manifold4w/hidden
 	icon_state = "map_4way"
-	level = 1
+	piping_layer = 1
 	alpha = 128		//set for the benefit of mapping - this is reset to opaque when the pipe is spawned in game
 
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers
@@ -958,7 +958,7 @@
 	desc = "An endcap for pipes."
 	icon = 'icons/atmos/pipes.dmi'
 	icon_state = ""
-	level = 2
+	piping_layer = 2
 	volume = 35
 
 	pipe_class = PIPE_CLASS_UNARY
@@ -1021,11 +1021,11 @@
 				break
 
 	var/turf/T = src.loc			// hide if turf is not intact
-	if(level == 1 && !T.is_plating()) hide(1)
+	if(piping_layer == 1 && !T.is_plating()) hide(1)
 	update_icon()
 
 /obj/machinery/atmospherics/pipe/cap/visible
-	level = 2
+	piping_layer = 2
 	icon_state = "cap"
 
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers
@@ -1051,7 +1051,7 @@
 	connect_types = CONNECT_TYPE_FUEL
 
 /obj/machinery/atmospherics/pipe/cap/hidden
-	level = 1
+	piping_layer = 1
 	icon_state = "cap"
 	alpha = 128
 
@@ -1084,7 +1084,7 @@
 	name = "Vent"
 	desc = "A large air vent."
 
-	level = 1
+	piping_layer = 1
 
 	volume = 250
 
@@ -1251,7 +1251,7 @@
 
 /obj/machinery/atmospherics/proc/add_underlay_adapter(var/turf/T, var/obj/machinery/atmospherics/node, var/direction, var/icon_connect_type) //modified from add_underlay, does not make exposed underlays
 	if(node)
-		if(!T.is_plating() && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
+		if(!T.is_plating() && node.piping_layer == 1 && istype(node, /obj/machinery/atmospherics/pipe))
 			underlays += icon_manager.get_atmos_icon("underlay", direction, color_cache_name(node), "down" + icon_connect_type)
 		else
 			underlays += icon_manager.get_atmos_icon("underlay", direction, color_cache_name(node), "intact" + icon_connect_type)

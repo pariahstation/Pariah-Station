@@ -84,7 +84,7 @@
 	ui_interact(user)
 	return TRUE
 
-/obj/machinery/atmospherics/unary/heater/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+/*/obj/machinery/atmospherics/unary/heater/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	// this is the data which will be sent to the ui
 	var/data[0]
 	data["on"] = use_power ? 1 : 0
@@ -130,12 +130,14 @@
 		set_power_level(new_setting)
 
 	add_fingerprint(usr)
-
+*/
 //upgrading parts
 /obj/machinery/atmospherics/unary/heater/RefreshParts()
 	..()
-	var/cap_rating = clamp(total_component_rating_of_type(/obj/item/stock_parts/capacitor), 1, 20)
-	var/bin_rating = clamp(total_component_rating_of_type(/obj/item/stock_parts/matter_bin), 0, 10)
+	var/obj/item/stock_parts/matter_bin/bin = locate(obj/item/stock_parts/matter_bin) in component_parts
+	var/obj/item/stock_parts/capacitor/cap = locate(obj/item/stock_parts/capacitor) in component_parts
+	var/cap_rating = cap.get_part_rating()
+	var/bin_rating = bin.get_part_rating()
 
 	max_power_rating = initial(max_power_rating) * cap_rating / 2
 	max_temperature = max(initial(max_temperature) - T20C, 0) * ((bin_rating * 4 + cap_rating) / 5) + T20C

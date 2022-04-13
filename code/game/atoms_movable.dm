@@ -113,11 +113,10 @@
 	unbuckle_all_mobs(force = TRUE)
 
 	if(loc)
-		/*
 		//Restore air flow if we were blocking it (movables with ATMOS_PASS_PROC will need to do this manually if necessary)
-		if(((can_atmos_pass == ATMOS_PASS_DENSITY && density) || can_atmos_pass == ATMOS_PASS_NO) && isturf(loc))
-			can_atmos_pass = ATMOS_PASS_YES
-			air_update_turf(TRUE, FALSE)*/
+		if(((can_atmospass == ATMOS_PASS_DENSITY && density) || can_atmos_pass == ATMOS_PASS_NO) && isturf(loc))
+			can_atmospass = ATMOS_PASS_YES
+			SSzas.mark_for_update(loc)
 		loc.handle_atom_del(src)
 
 	if(opacity)
