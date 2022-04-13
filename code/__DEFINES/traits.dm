@@ -359,6 +359,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_ELITE_CHALLENGER "elite_challenger"
 /// For living mobs. It signals that the mob shouldn't have their data written in an external json for persistence.
 #define TRAIT_DONT_WRITE_MEMORY "dont_write_memory"
+/// This mob can be painted with the spraycan
+#define TRAIT_SPRAY_PAINTABLE "spray_paintable"
 
 #define TRAIT_NOBLEED "nobleed" //This carbon doesn't bleed
 /// This atom can ignore the "is on a turf" check for simple AI datum attacks, allowing them to attack from bags or lockers as long as any other conditions are met
@@ -428,6 +430,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 // Normally only present in the mind of a Research Director.
 #define TRAIT_ROD_SUPLEX "rod_suplex"
 
+/// This mob is currently in rod form.
+#define TRAIT_ROD_FORM "rod_form"
+
 //SKILLS
 #define TRAIT_UNDERWATER_BASKETWEAVING_KNOWLEDGE "underwater_basketweaving"
 #define TRAIT_WINE_TASTER "wine_taster"
@@ -462,6 +467,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Used for limbs.
 #define TRAIT_DISABLED_BY_WOUND "disabled-by-wound"
 
+/// Mobs with this trait can't send the mining shuttle console when used outside the station itself
+#define TRAIT_FORBID_MINING_SHUTTLE_CONSOLE_OUTSIDE_STATION "forbid_mining_shuttle_console_outside_station"
 
 //important_recursive_contents traits
 /*
@@ -606,7 +613,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// trait denoting someone will sometimes recover out of crit
 #define TRAIT_UNBREAKABLE "unbreakable"
-
 
 //Medical Categories for quirks
 #define CAT_QUIRK_ALL 0
@@ -828,6 +834,9 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// This human wants to see the color of their glasses, for some reason
 #define TRAIT_SEE_GLASS_COLORS "see_glass_colors"
+
+/// this mob is under the effects of the power chord
+#define TRAIT_POWER_CHORD "power_chord"
 
 // Radiation defines
 
