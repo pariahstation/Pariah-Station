@@ -1,7 +1,7 @@
 /datum/preference/choiced/teshari_feathers
 	savefile_key = "feature_teshari_feathers"
 	savefile_identifier = PREFERENCE_CHARACTER
-	category = PREFERENCE_CATEGORY_FEATURES
+	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
 	main_feature_name = "Feathers"
 	should_generate_icons = TRUE
 

@@ -25,12 +25,13 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
-	can_be_held = TRUE 
+	//can_be_held = TRUE //PARIAH MODULAR EDIT
 	var/static/list/edibles = typecacheof(list(/mob/living/simple_animal/butterfly, /mob/living/basic/cockroach)) //list of atoms, however turfs won't affect AI, but will affect consumption.
 
 /mob/living/simple_animal/hostile/lizard/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/pet_bonus, "sticks its tongue out contentedly!")
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 
 /mob/living/simple_animal/hostile/lizard/CanAttack(atom/the_target)//Can we actually attack a possible target?

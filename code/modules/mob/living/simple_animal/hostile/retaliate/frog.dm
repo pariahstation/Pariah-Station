@@ -28,7 +28,7 @@
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
 	gold_core_spawnable = FRIENDLY_SPAWN
-	can_be_held = TRUE
+	//can_be_held = TRUE //PARIAH MODULAR EDIT
 	held_w_class = WEIGHT_CLASS_TINY
 	worn_slot_flags = ITEM_SLOT_HEAD
 	head_icon = 'icons/mob/animal_item_head.dmi'
@@ -37,6 +37,7 @@
 /mob/living/simple_animal/hostile/retaliate/frog/Initialize(mapload)
 	. = ..()
 
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 
 	if(prob(1))
