@@ -79,7 +79,7 @@
 ///The limb is snouted
 #define BODYTYPE_SNOUTED (1<<5)
 ///ITS A SMALL BIRD-THING
-#define BODYTYPE_TESHARI (1<<6)
+#define BODYTYPE_CUSTOM (1<<6)
 
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"

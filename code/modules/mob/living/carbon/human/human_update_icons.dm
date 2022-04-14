@@ -133,7 +133,7 @@ There are several things that need to be remembered:
 			if((dna?.species.bodytype & BODYTYPE_DIGITIGRADE) && (U.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION))
 				icon_file = DIGITIGRADE_UNIFORM_FILE
 
-			else if(dna.species.bodytype & BODYTYPE_TESHARI)
+			else if(dna.species.bodytype & BODYTYPE_CUSTOM)
 				icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_UNIFORM, w_uniform)
 
 			//Female sprites have lower priority than digitigrade sprites
@@ -220,7 +220,7 @@ There are several things that need to be remembered:
 		var/icon_file
 		var/handled_by_bodytype = TRUE
 
-		if(dna.species.bodytype & BODYTYPE_TESHARI)
+		if(dna.species.bodytype & BODYTYPE_CUSTOM)
 			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_GLOVES, gloves)
 
 		if(!icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item)))
@@ -255,7 +255,7 @@ There are several things that need to be remembered:
 
 		var/handled_by_bodytype = TRUE
 		var/icon_file
-		if(dna.species.bodytype & BODYTYPE_TESHARI)
+		if(dna.species.bodytype & BODYTYPE_CUSTOM)
 			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_GLASSES, glasses)
 
 		if(!(head?.flags_inv & HIDEEYES) && !(wear_mask?.flags_inv & HIDEEYES))
@@ -293,7 +293,7 @@ There are several things that need to be remembered:
 		var/handled_by_bodytype = TRUE
 		var/icon_file
 
-		if(dna.species.bodytype & BODYTYPE_TESHARI)
+		if(dna.species.bodytype & BODYTYPE_CUSTOM)
 			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_EARS, ears)
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
@@ -325,7 +325,7 @@ There are several things that need to be remembered:
 			var/icon_file
 			var/handled_by_bodytype = TRUE
 
-			if(dna.species.bodytype & BODYTYPE_TESHARI)
+			if(dna.species.bodytype & BODYTYPE_CUSTOM)
 				icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_NECK, wear_neck)
 
 			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
@@ -369,7 +369,7 @@ There are several things that need to be remembered:
 				icon_file = shoes.worn_icon_digitigrade || DIGITIGRADE_SHOES_FILE //PARIAH EDIT
 		//PARIAH EDIT END
 
-		else if(dna.species.bodytype & BODYTYPE_TESHARI)
+		else if(dna.species.bodytype & BODYTYPE_CUSTOM)
 			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_SHOES, shoes)
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
@@ -428,9 +428,9 @@ There are several things that need to be remembered:
 		var/icon_file
 
 		//PARIAH EDIT ADDITION
-		if(dna.species.bodytype & BODYTYPE_TESHARI)
+		if(dna.species.bodytype & BODYTYPE_CUSTOM)
 			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_HEAD, head)
-		if(!icon_file && (dna.species.bodytype & BODYTYPE_TESHARI) && (worn_item.supports_variations_flags & CLOTHING_SNOUTED_VARIATION))
+		if(!icon_file && (dna.species.bodytype & BODYTYPE_CUSTOM) && (worn_item.supports_variations_flags & CLOTHING_SNOUTED_VARIATION))
 			icon_file = worn_item.worn_icon_muzzled || SNOUTED_HEAD_FILE
 		//PARIAH EDIT END
 
@@ -501,9 +501,9 @@ There are several things that need to be remembered:
 				icon_file = wear_suit.worn_icon_digitigrade || DIGITIGRADE_SUIT_FILE //PARIAH EDIT
 
 
-		if(dna.species.bodytype & BODYTYPE_TESHARI)
+		if(dna.species.bodytype & BODYTYPE_CUSTOM)
 			if(worn_item.supports_variations_flags & CLOTHING_TESHARI_VARIATION)
-				icon_file = wear_suit.worn_icon_digitigrade || TESHARI_SUIT_FILE
+				icon_file = wear_suit.worn_icon_digitigrade || TESHARI_SUIT_ICON
 		//PARIAH EDIT END
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
 			handled_by_bodytype = FALSE
@@ -600,7 +600,7 @@ There are several things that need to be remembered:
 		var/icon_file = 'icons/mob/clothing/back.dmi'
 		var/handled_by_bodytype = TRUE
 
-		if(dna.species.bodytype & BODYTYPE_TESHARI)
+		if(dna.species.bodytype & BODYTYPE_CUSTOM)
 			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_MISC, back)
 
 		if(!icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item)))

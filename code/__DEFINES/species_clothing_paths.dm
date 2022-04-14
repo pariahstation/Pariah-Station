@@ -21,11 +21,11 @@
 #define DIGITIGRADE_SUIT_FILE 'modular_pariah/master_files/icons/mob/clothing/suit_digi.dmi'
 
 //TESHARI PATHS//PARIAH EDIT
-#define TESHARI_UNIFORM_FILE 'modular_pariah/master_files/icons/mob/species/teshari/clothing/uniform.dmi'
+#define TESHARI_UNIFORM_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/uniform.dmi'
 //The dmi for teshari shoes
-#define TESHARI_SHOES_FILE 'modular_pariah/master_files/icons/mob/species/teshari/clothing/feet.dmi'
+#define TESHARI_SHOES_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/feet.dmi'
 //the dmi containing teshari oversuits
-#define TESHARI_SUIT_FILE 'modular_pariah/master_files/icons/mob/species/teshari/clothing/suit.dmi'
+#define TESHARI_SUIT_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/suit.dmi'
 //PARIAH EDIT END
 #define TESHARI_ACCESSORIES_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/accessories.dmi'
 #define TESHARI_BACK_ICON 'modular_pariah/master_files/icons/mob/species/teshari/clothing/back.dmi'
