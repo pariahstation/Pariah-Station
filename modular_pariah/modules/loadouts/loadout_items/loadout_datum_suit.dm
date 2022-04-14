@@ -443,7 +443,3 @@ GLOBAL_LIST_INIT(loadout_exosuits, generate_loadout_items(/datum/loadout_item/su
 	name = "Cream Furred Jacket"
 	item_path = /obj/item/clothing/suit/brownfurrich/cream
 
-/datum/loadout_item/suit/blondie
-	name = "Cowboy Vest"
-	item_path = /obj/item/clothing/suit/cowboyvest
-
