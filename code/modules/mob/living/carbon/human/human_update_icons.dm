@@ -133,8 +133,8 @@ There are several things that need to be remembered:
 			if((dna?.species.bodytype & BODYTYPE_DIGITIGRADE) && (U.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION))
 				icon_file = DIGITIGRADE_UNIFORM_FILE
 
-			if((dna.species.bodytype & BODYTYPE_TESHARI) && (U.supports_variations_flags & CLOTHING_TESHARI_VARIATION))
-				icon_file = TESHARI_UNIFORM_FILE
+			else if(dna.species.bodytype & BODYTYPE_TESHARI)
+				icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_UNIFORM, w_uniform)
 
 			//Female sprites have lower priority than digitigrade sprites
 			else if(dna.species.sexes && (dna.species.bodytype & BODYTYPE_HUMANOID) && physique == FEMALE && U.adjusted != NO_FEMALE_UNIFORM) //Agggggggghhhhh
@@ -218,7 +218,10 @@ There are several things that need to be remembered:
 		var/obj/item/worn_item = gloves
 		update_hud_gloves(worn_item)
 		var/icon_file
-		var/handled_by_bodytype
+		var/handled_by_bodytype = TRUE
+
+		if(dna.species.bodytype & BODYTYPE_TESHARI)
+			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_GLOVES, gloves)
 
 		if(!icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item)))
 			icon_file = 'icons/mob/clothing/hands.dmi'
@@ -250,8 +253,11 @@ There are several things that need to be remembered:
 		var/mutable_appearance/glasses_overlay
 		update_hud_glasses(worn_item)
 
-		var/handled_by_bodytype
+		var/handled_by_bodytype = TRUE
 		var/icon_file
+		if(dna.species.bodytype & BODYTYPE_TESHARI)
+			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_GLASSES, glasses)
+
 		if(!(head?.flags_inv & HIDEEYES) && !(wear_mask?.flags_inv & HIDEEYES))
 
 			if(!icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item)))
@@ -287,6 +293,9 @@ There are several things that need to be remembered:
 		var/handled_by_bodytype = TRUE
 		var/icon_file
 
+		if(dna.species.bodytype & BODYTYPE_TESHARI)
+			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_EARS, ears)
+
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
 			handled_by_bodytype = FALSE
 			icon_file = 'icons/mob/clothing/ears.dmi'
@@ -315,6 +324,9 @@ There are several things that need to be remembered:
 			var/mutable_appearance/neck_overlay
 			var/icon_file
 			var/handled_by_bodytype = TRUE
+
+			if(dna.species.bodytype & BODYTYPE_TESHARI)
+				icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_NECK, wear_neck)
 
 			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
 				handled_by_bodytype = FALSE
@@ -357,13 +369,13 @@ There are several things that need to be remembered:
 				icon_file = shoes.worn_icon_digitigrade || DIGITIGRADE_SHOES_FILE //PARIAH EDIT
 		//PARIAH EDIT END
 
+		else if(dna.species.bodytype & BODYTYPE_TESHARI)
+			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_SHOES, shoes)
+
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
 			handled_by_bodytype = FALSE
 			icon_file = DEFAULT_SHOES_FILE
 
-
-		if((dna.species.bodytype & BODYTYPE_TESHARI) && (worn_item.supports_variations_flags & CLOTHING_TESHARI_VARIATION))
-			icon_file = TESHARI_SHOES_FILE
 
 		shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file)
 
@@ -416,9 +428,10 @@ There are several things that need to be remembered:
 		var/icon_file
 
 		//PARIAH EDIT ADDITION
-		if(dna.species.bodytype & BODYTYPE_SNOUTED)
-			if(worn_item.supports_variations_flags & CLOTHING_SNOUTED_VARIATION)
-				icon_file = head.worn_icon_snouted || SNOUTED_HEAD_FILE
+		if(dna.species.bodytype & BODYTYPE_TESHARI)
+			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_HEAD, head)
+		if(!icon_file && (dna.species.bodytype & BODYTYPE_TESHARI) && (worn_item.supports_variations_flags & CLOTHING_SNOUTED_VARIATION))
+			icon_file = worn_item.worn_icon_muzzled || SNOUTED_HEAD_FILE
 		//PARIAH EDIT END
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
@@ -586,6 +599,9 @@ There are several things that need to be remembered:
 		update_hud_back(worn_item)
 		var/icon_file = 'icons/mob/clothing/back.dmi'
 		var/handled_by_bodytype = TRUE
+
+		if(dna.species.bodytype & BODYTYPE_TESHARI)
+			icon_file = dna.species.generate_custom_worn_icon(LOADOUT_ITEM_MISC, back)
 
 		if(!icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item)))
 			icon_file = 'icons/mob/clothing/back.dmi'

@@ -12,6 +12,10 @@
 	name = "Beret Worn"
 	json_config = 'modular_pariah/modules/GAGS/json_configs/beret/beret_worn.json'
 
+/datum/greyscale_config/beret/worn/teshari
+	name = "Beret Worn - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/beret_teshari.dmi'
+
 /datum/greyscale_config/beret_badge
 	name = "Beret With Badge"
 	icon_file = 'modular_pariah/modules/GAGS/icons/beret.dmi'
@@ -21,6 +25,10 @@
 	name = "Beret With Badge Worn"
 	json_config = 'modular_pariah/modules/GAGS/json_configs/beret/beret_badge_worn.json'
 
+/datum/greyscale_config/beret_badge/worn/teshari
+	name = "Beret With Badge Worn - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/beret_teshari.dmi'
+
 /datum/greyscale_config/beret_badge_fancy
 	name = "Beret With Fancy Badge"
 	icon_file = 'modular_pariah/modules/GAGS/icons/beret.dmi'
@@ -29,6 +37,10 @@
 /datum/greyscale_config/beret_badge_fancy/worn
 	name = "Beret With Fancy Badge Worn"
 	json_config = 'modular_pariah/modules/GAGS/json_configs/beret/beret_badge_fancy_worn.json'
+
+/datum/greyscale_config/beret_badge_fancy/worn/teshari
+	name = "Beret With Fancy Badge Worn - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/beret_teshari.dmi'
 
 //MUSHROOM CAP
 
@@ -93,6 +105,10 @@
 /datum/greyscale_config/ranger_poncho/worn
 	name = "Ranger Poncho Worn"
 	json_config = 'modular_pariah/modules/GAGS/json_configs/ranger_poncho/ranger_poncho_worn.json'
+
+/datum/greyscale_config/ranger_poncho/worn/teshari
+	name = "Ranger Poncho Worn - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/ranger_poncho_teshari.dmi'
 
 // CLOAKS
 /datum/greyscale_config/cloak
@@ -180,6 +196,14 @@
 	name = "Worn Prison Jumpsuit - Digitigrade"
 	icon_file = 'modular_pariah/modules/GAGS/icons/jumpsuit_digi.dmi'
 
+/datum/greyscale_config/jumpsuit_worn/teshari
+	name = "Worn Jumpsuit - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/jumpsuit_teshari.dmi'
+
+/datum/greyscale_config/jumpsuit_prison_worn/teshari
+	name = "Worn Prison Jumpsuit - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/jumpsuit_teshari.dmi'
+
 // KILT
 
 /datum/greyscale_config/kilt
@@ -205,6 +229,14 @@
 	name = "Worn Orange Sneakers - Digitigrade"
 	icon_file = 'modular_pariah/modules/GAGS/icons/sneakers_digi.dmi'
 
+/datum/greyscale_config/sneakers_worn/teshari
+	name = "Worn Sneakers - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/sneakers_teshari.dmi'
+
+/datum/greyscale_config/sneakers_orange_worn/teshari
+	name = "Worn Orange Sneakers - Teshari"
+	icon_file = 'modular_pariah/modules/GAGS/icons/sneakers_teshari.dmi'
+
 // WRAPS
 
 /datum/greyscale_config/wraps
@@ -215,3 +247,57 @@
 /datum/greyscale_config/wraps/worn
 	name = "Cloth Wraps (Worn)"
 	json_config = 'modular_pariah/modules/GAGS/json_configs/wraps/wraps_worn.json'
+
+//TESHARI FALLBACKS
+/datum/greyscale_config/teshari
+	name = "Teshari Clothing"
+	icon_file = 'modular_pariah/modules/GAGS/icons/teshari_fallbacks.dmi'
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/under.json'
+
+/datum/greyscale_config/teshari/under
+	name = "Teshari Under"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/under.json'
+
+/datum/greyscale_config/teshari/under_skirt
+	name = "Teshari Skirt"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/under_skirt.json'
+
+/datum/greyscale_config/teshari/shoes
+	name = "Teshari Shoes"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/shoes.json'
+
+/datum/greyscale_config/teshari/gloves
+	name = "Teshari Gloves"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/gloves.json'
+
+/datum/greyscale_config/teshari/glasses
+	name = "Teshari Glasses"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/glasses.json'
+
+/datum/greyscale_config/teshari/coat
+	name = "Teshari Coat"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/coat.json'
+
+/datum/greyscale_config/teshari/armor
+	name = "Teshari Armor"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/armor.json'
+
+/datum/greyscale_config/teshari/spacesuit
+	name = "Teshari Spacesuit"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/spacesuit.json'
+
+/datum/greyscale_config/teshari/cloak
+	name = "Teshari Cloak"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/cloak.json'
+
+/datum/greyscale_config/teshari/tie
+	name = "Teshari Tie"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/tie.json'
+
+/datum/greyscale_config/teshari/scarf
+	name = "Teshari Scarf"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/scarf.json'
+
+/datum/greyscale_config/teshari/hardsuit
+	name = "Teshari Hardsuit"
+	json_config = 'modular_pariah/modules/GAGS/json_configs/teshari_fallbacks/hardsuit.json'

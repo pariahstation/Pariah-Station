@@ -1,0 +1,1 @@
+GLOBAL_LIST_EMPTY(species_clothing_fallback_cache)
