@@ -4515,7 +4515,6 @@
 #include "modular_pariah\modules\customization\modules\clothing\hands\rings.dm"
 #include "modular_pariah\modules\customization\modules\clothing\head\head.dm"
 #include "modular_pariah\modules\customization\modules\clothing\head\jobs.dm"
-#include "modular_pariah\modules\customization\modules\clothing\head\trek.dm"
 #include "modular_pariah\modules\customization\modules\clothing\masks\breath.dm"
 #include "modular_pariah\modules\customization\modules\clothing\neck\_neck.dm"
 #include "modular_pariah\modules\customization\modules\clothing\neck\cloaks.dm"
