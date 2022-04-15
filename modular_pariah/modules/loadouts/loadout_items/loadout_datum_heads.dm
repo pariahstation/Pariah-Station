@@ -292,14 +292,6 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 	item_path = /obj/item/clothing/head/beret/science/fancy/robo
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
 
-/datum/loadout_item/head/brfed
-	name = "Brown Fedora"
-	item_path = /obj/item/clothing/head/fedora/fedbrown
-
-/datum/loadout_item/head/blfed
-	name = "Black Fedora"
-	item_path = /obj/item/clothing/head/fedora/fedblack
-
 /datum/loadout_item/head/poppy
 	name = "Poppy Flower"
 	item_path = /obj/item/food/grown/poppy
