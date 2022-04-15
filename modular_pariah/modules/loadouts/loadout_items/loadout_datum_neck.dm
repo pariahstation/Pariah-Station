@@ -105,14 +105,6 @@ GLOBAL_LIST_INIT(loadout_necks, generate_loadout_items(/datum/loadout_item/neck)
 	item_path = /obj/item/clothing/neck/stethoscope
 	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER)
 
-/datum/loadout_item/neck/ponchocowboy
-	name = "Green cowboy poncho"
-	item_path = /obj/item/clothing/neck/cowboylea
-
-/datum/loadout_item/neck/ranger_poncho_greyscale
-	name = "Greyscale ranger poncho"
-	item_path = /obj/item/clothing/neck/ranger_poncho
-
 /datum/loadout_item/neck/mantle
 	name = "Mantle"
 	item_path = /obj/item/clothing/neck/mantle

@@ -4,6 +4,6 @@
 // Thanks.
 // - AxieTheAxolotl, Spritetainer
 
-/obj/item/clothing/head/pariah
-	icon = 'modular_pariah/master_files/icons/obj/clothing/hats.dmi'
-	worn_icon = 'modular_pariah/master_files/icons/mob/clothing/head.dmi'
+/obj/item/clothing/suit/pariah
+	icon = 'modular_pariah/master_files/icons/obj/clothing/suits.dmi'
+	worn_icon = 'modular_pariah/master_files/icons/mob/clothing/suit.dmi'
