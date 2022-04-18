@@ -109,7 +109,7 @@ GLOBAL_LIST_INIT(loadout_glasses, generate_loadout_items(/datum/loadout_item/gla
 /datum/loadout_item/glasses/sechud
 	name = "Security Hud"
 	item_path = /obj/item/clothing/glasses/hud/security
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY,)
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY, JOB_ORDERLY)
 
 //Add later
 /*

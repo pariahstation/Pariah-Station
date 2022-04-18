@@ -146,7 +146,7 @@ GLOBAL_LIST_INIT(loadout_exosuits, generate_loadout_items(/datum/loadout_item/su
 /datum/loadout_item/suit/coat_med
 	name = "Medical winter coat"
 	item_path = /obj/item/clothing/suit/hooded/wintercoat/medical
-	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR) // Reserve it to Medical Doctors, Orderlies, and their boss, the Chief Medical Officer
+	restricted_roles = list(JOB_CHIEF_MEDICAL_OFFICER, JOB_MEDICAL_DOCTOR, JOB_ORDERLY) // Reserve it to Medical Doctors, Orderlies, and their boss, the Chief Medical Officer
 
 /datum/loadout_item/suit/coat_sci
 	name = "Science winter coat"
