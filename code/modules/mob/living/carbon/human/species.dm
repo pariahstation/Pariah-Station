@@ -133,6 +133,11 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	/// A path to an outfit that is important for species life e.g. plasmaman outfit
 	var/datum/outfit/outfit_important_for_life
 
+	//PARIAH EDIT ADDITION
+	///Icon file used for eyes, defaults to 'icons/mob/human_face.dmi'
+	var/species_eye_path
+	//PARIAH EDIT END
+
 	///Is this species a flying species? Used as an easy check for some things
 	var/flying_species = FALSE
 	///The actual flying ability given to flying species
@@ -233,6 +238,11 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	///Was the species changed from its original type at the start of the round?
 	var/roundstart_changed = FALSE
+
+	//PARIAH EDIT ADDITION
+	///Override of the eyes icon file
+	var/eyes_icon
+	//PARIAH EDIT END
 
 ///////////
 // PROCS //
@@ -565,12 +575,14 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				add_pixel_x = species_human.dna.species.offset_features[OFFSET_FACE][1]
 				add_pixel_y = species_human.dna.species.offset_features[OFFSET_FACE][2]
 			if(!eye_organ)
-				no_eyeslay = mutable_appearance('icons/mob/human_face.dmi', "eyes_missing", -BODY_LAYER)
+				// no_eyeslay = mutable_appearance('icons/mob/human_face.dmi', "eyes_missing", -BODY_LAYER) //ORIGINAL
+				no_eyeslay = mutable_appearance(species_eye_path || 'icons/mob/human_face.dmi', "eyes_missing", -BODY_LAYER)
 				no_eyeslay.pixel_x += add_pixel_x
 				no_eyeslay.pixel_y += add_pixel_y
 				standing += no_eyeslay
 			if(!no_eyeslay)//we need eyes
-				eye_overlay = mutable_appearance('icons/mob/human_face.dmi', eye_organ.eye_icon_state, -BODY_LAYER)
+				// eye_overlay = mutable_appearance('icons/mob/human_face.dmi', eye_organ.eye_icon_state, -BODY_LAYER) //ORIGINAL
+				eye_overlay = mutable_appearance(species_eye_path || 'icons/mob/human_face.dmi', eye_organ.eye_icon_state, -BODY_LAYER) //PARIAH EDIT
 				if(eye_organ.overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
 					eye_overlay.overlays += emissive_appearance(eye_overlay.icon, eye_overlay.icon_state, alpha = eye_overlay.alpha)
 
