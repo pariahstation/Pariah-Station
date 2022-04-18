@@ -4582,4 +4582,10 @@
 #include "modular_pariah\modules\loadouts\loadout_ui\loadout_outfit_helpers.dm"
 #include "modular_pariah\modules\pixel_shift\code\pixel_shift.dm"
 #include "modular_pariah\modules\radiosound\code\headset.dm"
+#include "modular_pariah\modules\skrell\code\modules\client\preferences\species\skrell.dm"
+#include "modular_pariah\modules\skrell\code\modules\language\language_holder.dm"
+#include "modular_pariah\modules\skrell\code\modules\language\skrell.dm"
+#include "modular_pariah\modules\skrell\code\modules\mob\living\carbon\human\skrell_headtails.dm"
+#include "modular_pariah\modules\skrell\code\modules\mob\living\carbon\human\species_types\skrell.dm"
+#include "modular_pariah\modules\skrell\code\modules\surgery\bodyparts\species_parts\skrell_bodyparts.dm"
 // END_INCLUDE
