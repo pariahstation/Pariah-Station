@@ -135,11 +135,21 @@
 	new /obj/item/encryptionkey/headset_sci(src)
 
 /obj/structure/closet/secure_closet/security/med
+	name = "\proper orderly's locker"
+	req_access = list(ACCESS_BRIG_ENTRANCE, ACCESS_MEDICAL)
+	icon_state = "med_secure"
 
+//PARIAH EDIT - Overridden for orderlies
 /obj/structure/closet/secure_closet/security/med/PopulateContents()
-	..()
-	new /obj/item/clothing/accessory/armband/medblue(src)
-	new /obj/item/encryptionkey/headset_med(src)
+	new /obj/item/radio/headset/headset_med(src)
+	new /obj/item/clothing/shoes/sneakers/white(src)
+	new /obj/item/clothing/under/rank/security/officer/blueshirt/orderly(src)
+	new /obj/item/clothing/head/helmet/blueshirt/orderly(src)
+	new /obj/item/clothing/suit/armor/vest/blueshirt/orderly(src)
+	new /obj/item/restraints/handcuffs/cable/blue(src)
+	new /obj/item/assembly/flash/handheld(src)
+	new /obj/item/melee/baton/security/loaded/orderly(src)
+	new /obj/item/clothing/glasses/hud/security(src)
 
 /obj/structure/closet/secure_closet/detective
 	name = "\improper detective's cabinet"

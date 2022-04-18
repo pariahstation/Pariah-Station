@@ -38,6 +38,8 @@ Geneticist=2,2
 Virologist=1,1
 Psychologist=1,1
 
+Orderly=2,2
+
 Scientist=5,3
 Roboticist=2,2
 

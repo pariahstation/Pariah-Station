@@ -58,6 +58,7 @@
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 #define JOB_VIROLOGIST "Virologist"
+#define JOB_ORDERLY "Orderly" //PARIAH EDIT ADDITION
 //Science
 #define JOB_SCIENTIST "Scientist"
 #define JOB_ROBOTICIST "Roboticist"
@@ -135,6 +136,7 @@
 #define JOB_DISPLAY_ORDER_DETECTIVE 33
 #define JOB_DISPLAY_ORDER_SECURITY_OFFICER 34
 #define JOB_DISPLAY_ORDER_PRISONER 35
+#define JOB_DISPLAY_ORDER_ORDERLY 36 //PARIAH EDIT ADDITION
 
 
 #define DEPARTMENT_UNASSIGNED "No department assigned"

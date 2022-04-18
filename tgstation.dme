@@ -4580,6 +4580,9 @@
 #include "modular_pariah\modules\loadouts\loadout_items\under\loadout_datum_under.dm"
 #include "modular_pariah\modules\loadouts\loadout_ui\loadout_manager.dm"
 #include "modular_pariah\modules\loadouts\loadout_ui\loadout_outfit_helpers.dm"
+#include "modular_pariah\modules\orderlies\code\clothing.dm"
+#include "modular_pariah\modules\orderlies\code\items.dm"
+#include "modular_pariah\modules\orderlies\code\orderly.dm"
 #include "modular_pariah\modules\pixel_shift\code\pixel_shift.dm"
 #include "modular_pariah\modules\radiosound\code\headset.dm"
 // END_INCLUDE

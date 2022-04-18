@@ -114,6 +114,9 @@
 
 #define SECHUD_CHEF "hudchef"
 
+//PARIAH EDIT ADDITION - Pariah Jobs
+#define SECHUD_ORDERLY "hudorderly"
+
 #define SECHUD_DEATH_COMMANDO "huddeathcommando"
 
 #define SECHUD_EMERGENCY_RESPONSE_TEAM_COMMANDER "hudemergencyresponseteamcommander"

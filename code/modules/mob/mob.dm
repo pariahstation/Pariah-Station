@@ -108,7 +108,7 @@
 			if(HUD_LIST_LIST)
 				hud_list[hud] = list()
 			else
-				var/image/I = image('icons/mob/huds/hud.dmi', src, "")
+				var/image/I = image('modular_pariah/master_files/icons/mob/huds/hud.dmi', src, "") //PARAIH EDIT
 				I.appearance_flags = RESET_COLOR|RESET_TRANSFORM
 				hud_list[hud] = I
 
