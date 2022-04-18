@@ -336,6 +336,35 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 				qdel(src)
 				return
 
+
+	if(CONFIG_GET(flag/panic_bunker_discord_require))
+		if(!SSdbcore.Connect())
+			var/msg = "Database connection failure. Key [key] not checked for Discord account requirement."
+
+			if(!CONFIG_GET(flag/sql_enabled))
+				msg += "\nDB IS NOT ENABLED - THIS IS NOT A BUG\nDiscord account links cannot be checked without a database!"
+
+			log_world(msg)
+			message_admins(msg)
+		else
+			if(!discord_is_link_valid(ckey))
+				var/discord_otp = discord_get_or_generate_one_time_token_for_ckey(ckey)
+
+				to_chat(src, SPAN_DANGER(CONFIG_GET(string/panic_bunker_discord_register_message)))
+				to_chat(src, SPAN_BOLDNOTICE("Your One-Time-Password is: [discord_otp]"))
+				to_chat(src, SPAN_USERDANGER("DO NOT SHARE THIS OTP WITH ANYONE"))
+				var/discord_prefix = CONFIG_GET(string/discordbotcommandprefix)
+				to_chat(src, SPAN_NOTICE("To link your Discord account, head to the Discord Guild and paste the following message:<hr/><code>[discord_prefix]verify [discord_otp]</code><hr/>\n"))
+
+				if(connecting_admin)
+					log_admin("The admin [key] has been allowed to bypass the Discord account link requirement")
+					message_admins(SPAN_ADMINNOTICE("The admin [key] has been allowed to bypass the Discord account link requirement"))
+					to_chat(src, "As an admin, you have been allowed to bypass the Discord account link requirement")
+				else
+					log_access("Failed Login: [key] - No valid Discord account link registered.")
+					qdel(src)
+					return
+
 	if(SSinput.initialized)
 		set_macros()
 
