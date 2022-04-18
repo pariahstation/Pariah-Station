@@ -1,5 +1,5 @@
 /datum/language/skrell
-	name = "Skrellian"
+	name = "Sk’Xrum"
 	desc = "The language of the skrells. A bunch of warbling and musical tone."
 	space_chance = 100
 	flags = TONGUELESS_SPEECH
