@@ -79,6 +79,11 @@
 ///The limb is snouted
 #define BODYTYPE_SNOUTED (1<<5)
 
+//PARIAH EDIT ADDITION
+///The limb has skrelly bits
+#define BODYTYPE_SKRELL (1<<6)
+//PARIAH EDIT END
+
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"
 #define SPECIES_ANDROID "android"

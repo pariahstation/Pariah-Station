@@ -86,6 +86,10 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 #define ismonkey(A) (is_species(A, /datum/species/monkey))
 #define isandroid(A) (is_species(A, /datum/species/android))
 
+//PARIAH EDIT ADDITION
+#define isskrell(A) (is_species(A, /datum/species/skrell))
+//PARIAH EDIT END
+
 //More carbon mobs
 #define isalien(A) (istype(A, /mob/living/carbon/alien))
 

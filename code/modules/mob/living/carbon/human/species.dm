@@ -741,6 +741,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.caps_list[source.dna.features["caps"]]
 				if("tail_monkey")
 					accessory = GLOB.tails_list_monkey[source.dna.features["tail_monkey"]]
+				//PARIAH EDIT ADDITION
+				if("headtails")
+					accessory = GLOB.headtails_list[source.dna.features["headtails"]]
+				//PARIAH EDIT END
 
 			if(!accessory || accessory.icon_state == "none")
 				continue

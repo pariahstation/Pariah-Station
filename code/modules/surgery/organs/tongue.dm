@@ -30,7 +30,8 @@
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
 		/datum/language/terrum,
-		/datum/language/nekomimetic
+		/datum/language/nekomimetic,
+		/datum/language/skrell, //PARIAH EDIT ADDITION
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)
