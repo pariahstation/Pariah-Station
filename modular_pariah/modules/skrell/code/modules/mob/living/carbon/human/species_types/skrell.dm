@@ -159,3 +159,21 @@ GLOBAL_LIST_EMPTY(headtails_list)
 		/datum/language/skrell,
 	))
 
+/datum/species/skrell/random_name(gender,unique,lastname,attempts)
+	. = ""
+
+	var/full_name = ""
+	var/new_name = ""
+	var/static/list/syllables = list("qr","qrr","xuq","qil","quum","xuqm","vol","xrim","zaoo","qu-uu","qix","qoo","zix")
+	for(var/x = rand(1,2) to 0 step -1)
+		new_name += pick(syllables)
+		full_name += pick(syllables)
+
+	full_name += " [capitalize(new_name)]"
+	. += "[capitalize(full_name)]"
+
+	if(unique && attempts < 10)
+		if(findname(new_name))
+			. = .(gender, TRUE, null, attempts++)
+
+	return .
