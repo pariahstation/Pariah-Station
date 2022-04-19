@@ -57122,7 +57122,12 @@
 	dir = 8
 	},
 /obj/machinery/firealarm/directional/west,
-/obj/structure/chair/stool/directional/east,
+/obj/machinery/computer/cryopod{
+	pixel_x = -32;
+	pixel_y = 32
+	},
+/obj/machinery/cryopod,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/commons/locker)
 "owo" = (
@@ -68979,7 +68984,8 @@
 	dir = 8
 	},
 /obj/machinery/status_display/evac/directional/north,
-/obj/structure/table,
+/obj/machinery/cryopod,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/commons/locker)
 "skt" = (
@@ -70295,16 +70301,16 @@
 /obj/machinery/button/door/directional/east{
 	id = "commissaryshutter";
 	name = "Commissary Shutter Toggle";
-	pixel_y = 7;
-	pixel_x = 26
+	pixel_x = 26;
+	pixel_y = 7
 	},
 /obj/machinery/button/door/directional/east{
 	id = "commissarydoor";
 	name = "Commissary Door Lock";
 	normaldoorcontrol = 1;
+	pixel_x = 26;
 	pixel_y = -2;
-	specialfunctions = 4;
-	pixel_x = 26
+	specialfunctions = 4
 	},
 /turf/open/floor/iron,
 /area/commons/vacant_room/commissary)
@@ -71441,7 +71447,8 @@
 	dir = 8
 	},
 /obj/machinery/light/directional/north,
-/obj/structure/chair/stool/directional/west,
+/obj/machinery/cryopod,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/commons/locker)
 "tcq" = (
