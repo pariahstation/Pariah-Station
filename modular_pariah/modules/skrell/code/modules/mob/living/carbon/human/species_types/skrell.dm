@@ -1,9 +1,5 @@
 GLOBAL_LIST_EMPTY(headtails_list)
 
-/randomize_human(mob/living/carbon/human/H)
-	H.dna.features["headtails"] = pick(GLOB.headtails_list)
-	. = ..()
-
 // The datum for Skrell.
 /datum/species/skrell
 	name = "Skrell"
@@ -74,13 +70,13 @@ GLOBAL_LIST_EMPTY(headtails_list)
 
 /obj/item/organ/external/headtails/can_draw_on_bodypart(mob/living/carbon/human/human)
 	. = TRUE
-	if(istype(human.head) && (human.head.flags_inv & HIDEHAIR))
-		. = FALSE
-	if(istype(human.wear_mask) && (human.wear_mask.flags_inv & HIDEHAIR))
-		. = FALSE
+	if(human.head && (human.head.flags_inv & HIDEHAIR))
+		return FALSE
+	if(human.wear_mask && (human.wear_mask.flags_inv & HIDEHAIR))
+		return FALSE
 	var/obj/item/bodypart/head/our_head = human.get_bodypart(BODY_ZONE_HEAD)
 	if(our_head && !IS_ORGANIC_LIMB(our_head))
-		. = FALSE
+		return FALSE
 
 /obj/item/organ/external/headtails/get_global_feature_list()
 	return GLOB.headtails_list
@@ -138,28 +134,12 @@ GLOBAL_LIST_EMPTY(headtails_list)
 
 /obj/item/organ/tongue/skrell
 	name = "internal vocal sacs"
-	desc = "An Strange looking sac."
+	desc = "A strange looking sac."
 	icon = 'modular_pariah/modules/skrell/icons/obj/skrell_organ.dmi'
 	icon_state = "tongue"
 	taste_sensitivity = 5
-	var/static/list/languages_possible_skrell = typecacheof(list(
-		/datum/language/common,
-		/datum/language/uncommon,
-		/datum/language/draconic,
-		/datum/language/codespeak,
-		/datum/language/monkey,
-		/datum/language/narsie,
-		/datum/language/beachbum,
-		/datum/language/aphasia,
-		/datum/language/piratespeak,
-		/datum/language/moffic,
-		/datum/language/sylvan,
-		/datum/language/shadowtongue,
-		/datum/language/terrum,
-		/datum/language/skrell,
-	))
 
-/datum/species/skrell/random_name(gender,unique,lastname,attempts)
+/datum/species/skrell/random_name(gender, unique, lastname, attempts)
 	. = ""
 
 	var/full_name = ""
