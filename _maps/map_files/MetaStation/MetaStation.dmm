@@ -11193,7 +11193,7 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/burgundy,
 /turf/open/space,
-/area/space)
+/area/space/nearstation)
 "cTY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/brig{
@@ -27840,10 +27840,6 @@
 	},
 /turf/open/floor/iron,
 /area/security/brig)
-"iZs" = (
-/obj/effect/spawner/random/structure/grille,
-/turf/open/space/basic,
-/area/space)
 "iZK" = (
 /obj/structure/chair/office/light{
 	dir = 8
@@ -48934,11 +48930,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/medical/abandoned)
-"qBq" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/marker_beacon/burgundy,
-/turf/open/space/basic,
-/area/space)
 "qBs" = (
 /turf/closed/wall/r_wall,
 /area/maintenance/aft/lesser)
@@ -52802,11 +52793,6 @@
 	icon_state = "platingdmg2"
 	},
 /area/maintenance/port/fore)
-"sdt" = (
-/obj/structure/lattice,
-/obj/effect/spawner/random/structure/grille,
-/turf/open/space/basic,
-/area/space)
 "sdF" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -77917,7 +77903,7 @@ aaa
 aaa
 aaa
 aaa
-qBq
+quc
 lMJ
 bNb
 aRA
@@ -78945,7 +78931,7 @@ aaa
 aaa
 aaa
 aaa
-qBq
+quc
 lMJ
 bNb
 aRA
@@ -79950,7 +79936,7 @@ rrt
 rrt
 rrt
 rrt
-iZs
+aUn
 rrt
 rrt
 rrt
@@ -80464,7 +80450,7 @@ dJN
 lMJ
 rNf
 rNf
-aaa
+lMJ
 lMJ
 jXe
 lMJ
@@ -82263,8 +82249,8 @@ lMJ
 lMJ
 lMJ
 lMJ
-aaa
-aaa
+lMJ
+lMJ
 lMJ
 lMJ
 lMJ
@@ -94577,7 +94563,7 @@ aaa
 aaa
 aaa
 aaa
-qBq
+quc
 lMJ
 jue
 aax
@@ -119359,7 +119345,7 @@ aaa
 aaa
 aaa
 aaa
-sdt
+rrt
 lMJ
 aaa
 lMJ
