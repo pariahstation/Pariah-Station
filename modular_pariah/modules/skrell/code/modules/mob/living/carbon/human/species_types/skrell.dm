@@ -106,7 +106,6 @@ GLOBAL_LIST_EMPTY(headtails_list)
 	safe_plasma_max = 40
 	safe_co2_max = 40
 
-	cold_message = "You can't stand the freezing cold with every breath you take!"
 	cold_level_1_threshold = 248
 	cold_level_2_threshold = 220
 	cold_level_3_threshold = 170
@@ -115,7 +114,6 @@ GLOBAL_LIST_EMPTY(headtails_list)
 	cold_level_3_damage = COLD_GAS_DAMAGE_LEVEL_3
 	cold_damage_type = BRUTE
 
-	hot_message = "You can't stand the searing heat with every breath you take!"
 	heat_level_1_threshold = 318
 	heat_level_2_threshold = 348
 	heat_level_3_threshold = 1000
