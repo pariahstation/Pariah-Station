@@ -113,33 +113,59 @@
 	..()
 	new /obj/item/storage/belt/security/full(src)
 
+//PARIAH EDIT CHANGE BEGIN - DEP_GUARD_OUTFITS
 /obj/structure/closet/secure_closet/security/cargo
+	name = "cargo guard's locker"
+	icon_state = "qm"
 
 /obj/structure/closet/secure_closet/security/cargo/PopulateContents()
 	..()
 	new /obj/item/clothing/accessory/armband/cargo(src)
 	new /obj/item/encryptionkey/headset_cargo(src)
+	new /obj/item/clothing/shoes/sneakers/black(src)
+	new /obj/item/clothing/head/helmet/blueshirt/dep_guard(src)
+	new /obj/item/clothing/suit/armor/vest/blueshirt/dep_guard/cargo(src)
+	new /obj/item/clothing/under/rank/security/officer/blueshirt/dep_guard/cargo(src)
 
 /obj/structure/closet/secure_closet/security/engine
+	name = "engineering guard's locker"
+	icon_state = "eng_secure"
 
 /obj/structure/closet/secure_closet/security/engine/PopulateContents()
 	..()
 	new /obj/item/clothing/accessory/armband/engine(src)
 	new /obj/item/encryptionkey/headset_eng(src)
+	new /obj/item/clothing/shoes/workboots(src)
+	new /obj/item/clothing/head/helmet/blueshirt/dep_guard(src)
+	new /obj/item/clothing/suit/armor/vest/blueshirt/dep_guard/engineering(src)
+	new /obj/item/clothing/under/rank/security/officer/blueshirt/dep_guard/engineering(src)
 
 /obj/structure/closet/secure_closet/security/science
+	name = "science guard's locker"
+	icon_state = "science"
 
 /obj/structure/closet/secure_closet/security/science/PopulateContents()
 	..()
 	new /obj/item/clothing/accessory/armband/science(src)
 	new /obj/item/encryptionkey/headset_sci(src)
+	new /obj/item/clothing/shoes/sneakers/black(src)
+	new /obj/item/clothing/head/helmet/blueshirt/dep_guard(src)
+	new /obj/item/clothing/suit/armor/vest/blueshirt/dep_guard/science(src)
+	new /obj/item/clothing/under/rank/security/officer/blueshirt/dep_guard/science(src)
 
 /obj/structure/closet/secure_closet/security/med
+	name = "medbay guard's locker"
+	icon_state = "med_secure"
 
 /obj/structure/closet/secure_closet/security/med/PopulateContents()
 	..()
 	new /obj/item/clothing/accessory/armband/medblue(src)
 	new /obj/item/encryptionkey/headset_med(src)
+	new /obj/item/clothing/shoes/sneakers/white(src)
+	new /obj/item/clothing/head/helmet/blueshirt/dep_guard(src)
+	new /obj/item/clothing/suit/armor/vest/blueshirt/dep_guard/medbay(src)
+	new /obj/item/clothing/under/rank/security/officer/blueshirt/dep_guard/medbay(src)
+//PARIAH EDIT END
 
 /obj/structure/closet/secure_closet/detective
 	name = "\improper detective's cabinet"
