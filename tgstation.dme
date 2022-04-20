@@ -4474,7 +4474,6 @@
 #include "modular_pariah\modules\aesthetics\mining_shop\code\mining_shop.dm"
 #include "modular_pariah\modules\aesthetics\morgue\code\morgue.dm"
 #include "modular_pariah\modules\aesthetics\newscaster\code\newscaster.dm"
-#include "modular_pariah\modules\aesthetics\pda\pda.dm"
 #include "modular_pariah\modules\aesthetics\plasticflaps\code\plasticflaps.dm"
 #include "modular_pariah\modules\aesthetics\rack\code\rack.dm"
 #include "modular_pariah\modules\aesthetics\requests\code\requests_console.dm"

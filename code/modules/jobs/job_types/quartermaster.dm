@@ -43,22 +43,16 @@
 	name = "Quartermaster"
 	jobtype = /datum/job/quartermaster
 
-	id = /obj/item/card/id/advanced/silver //PARIAH EDIT
+	id = /obj/item/card/id/advanced/silver //PARIAH EDIT ADDITION
 	id_trim = /datum/id_trim/job/quartermaster
 	uniform = /obj/item/clothing/under/rank/cargo/qm
-<<<<<<< HEAD
 	backpack_contents = list(
-		/obj/item/modular_computer/tablet/preset/cargo/quartermaster = 1,
-		/obj/item/modular_computer/tablet/preset/advanced/command = 1,
 		/obj/item/melee/baton/telescopic = 1
-		)
-	belt = /obj/item/pda/quartermaster
+	)
+	// belt = /obj/item/modular_computer/tablet/pda/quartermaster //ORIGINAL
+	belt = /obj/item/modular_computer/tablet/pda/heads/quartermaster //PARIAH EDIT
 	// ears = /obj/item/radio/headset/headset_cargo //ORIGINAL
 	ears = /obj/item/radio/headset/heads/qm //PARIAH EDIT
-=======
-	belt = /obj/item/modular_computer/tablet/pda/quartermaster
-	ears = /obj/item/radio/headset/headset_cargo
->>>>>>> cd1b891d79c (Modular Tablets: Converting PDAs to the NtOS System (#65755))
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	l_hand = /obj/item/clipboard

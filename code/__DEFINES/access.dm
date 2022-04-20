@@ -473,6 +473,10 @@
  * If a PDA is in this list, it can always be painted with ACCESS_CHANGE_IDS.
  * Used to see pda_region in [/datum/controller/subsystem/id_access/proc/setup_tgui_lists]
  */
+/* PARIAH EDIT
+Replaced /pda/quartermaster with /pda/heads/quartermaster and moved it closer to other command PDAs
+Comment here because it really doesn't like them anywhere else here
+*/
 #define PDA_PAINTING_REGIONS list( \
 	/obj/item/modular_computer/tablet/pda = list(REGION_GENERAL), \
 	/obj/item/modular_computer/tablet/pda/clown = list(REGION_GENERAL), \
@@ -490,9 +494,9 @@
 	/obj/item/modular_computer/tablet/pda/heads/cmo = list(REGION_COMMAND), \
 	/obj/item/modular_computer/tablet/pda/heads/ce = list(REGION_COMMAND), \
 	/obj/item/modular_computer/tablet/pda/heads/rd = list(REGION_COMMAND), \
+	/obj/item/modular_computer/tablet/pda/heads/quartermaster = list(REGION_COMMAND), \
 	/obj/item/modular_computer/tablet/pda/captain = list(REGION_COMMAND), \
 	/obj/item/modular_computer/tablet/pda/cargo = list(REGION_SUPPLY), \
-	/obj/item/modular_computer/tablet/pda/quartermaster = list(REGION_SUPPLY), \
 	/obj/item/modular_computer/tablet/pda/shaftminer = list(REGION_SUPPLY), \
 	/obj/item/modular_computer/tablet/pda/chaplain = list(REGION_GENERAL), \
 	/obj/item/modular_computer/tablet/pda/lawyer = list(REGION_GENERAL, REGION_SECURITY), \
