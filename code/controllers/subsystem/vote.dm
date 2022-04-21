@@ -312,7 +312,7 @@ SUBSYSTEM_DEF(vote)
 				initiate_vote("custom",usr.key)
 		//PARIAH EDIT ADDITION BEGIN - autotransfer
 		if("transfer")
-			if(usr.client.holder && upper_admin)
+			if(check_rights(R_ADMIN))
 				initiate_vote("transfer",usr.key)
 		//PARIAH EDIT ADDITION END
 		if("vote")
