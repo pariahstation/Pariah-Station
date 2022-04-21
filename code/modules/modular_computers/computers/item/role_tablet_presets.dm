@@ -219,6 +219,7 @@
 	saved_identification = "John Doe"
 	saved_job = "Citizen"
 	invisible = TRUE
+	device_theme = "syndicate"
 
 /obj/item/modular_computer/tablet/pda/clear
 	name = "clear PDA"
