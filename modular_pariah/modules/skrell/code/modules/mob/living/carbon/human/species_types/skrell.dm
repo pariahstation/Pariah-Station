@@ -155,3 +155,30 @@ GLOBAL_LIST_EMPTY(headtails_list)
 			. = .(gender, TRUE, null, attempts++)
 
 	return .
+
+//Skrell lore
+
+/datum/species/skrell/get_species_description()
+	return "Skrells are aquatic humanoids coming from the planet of Qerrbalak, often deeply ceremonial and focused on learning more about the galaxy. \
+		Their inherent fondness for learning and technology has resulted in them advancing further in science when compared to humanity, \
+		however progress has mostly gone stagnant due to recent political turmoil and the economic crisis back home."
+
+/datum/species/skrell/get_species_lore()
+	return list(
+		"Skrellian society is obviously quite different from that of humanity, and many outsiders often call Skrell emotionless however this is wrong,  \
+		as Skrell lack facial muscles and frequently make use of their tone of voice, movement and more. \
+		Skrell also sees things far more in the long term side of things because of their long lifespan.",
+
+		"Despite the good relations enjoyed with most other species, there is a deep fear within the federation of foreign influence, and because of this   \
+		fear, the federation adopted a rather isolationist foreign policy which was mostly caused by the recent political turmoil and  \
+		economic crash.",
+
+		"The economic crash also known as \"Qerrbalak recession\" was caused when a large disaster happened on huge mining facility at Urmx housing one  \
+		of the federations biggest plasma mines, this disaster was caused when a fire erupted in one of the lower tunnels of XM-2 a mining site, this \
+		caused an immense plasmafire that raged for 6 years and lead to the casualities of 84 employees of the facility, with 4356 being injured and around  \
+		50.0000 people living on the planet being directly affected.",
+
+		"Not only did this fire destroy one of the biggest mining sites of the federation, but as well affected various other nearby sites causing a huge scarcity in plasma. \
+		As plasma supply dropped around various worlds in federation such as Qerrbalak were unable to maintain the demand in plasma, and caused a \
+		huge rise in unemployment and caused a stock crash in the plasma market in federation.",
+	)
