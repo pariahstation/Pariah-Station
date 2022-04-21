@@ -7,3 +7,6 @@
 
 	///Alternative job titles stored in preferences. Assoc list, ie. alt_job_titles["Scientist"] = "Cytologist"
 	var/list/alt_job_titles = list()
+
+	///Whether the user wants to see body size being shown in the preview
+	var/show_body_size = FALSE

@@ -75,7 +75,8 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	var/stability = 100
 	///Did we take something like mutagen? In that case we cant get our genes scanned to instantly cheese all the powers.
 	var/scrambled = FALSE
-	var/current_body_size = BODY_SIZE_NORMAL //This is a size multiplier, it starts at "1".
+	///Current body size, used for proper re-sizing and keeping track of that
+	var/current_body_size = BODY_SIZE_NORMAL
 
 /datum/dna/New(mob/living/new_holder)
 	if(istype(new_holder))
