@@ -4495,7 +4495,6 @@
 #include "modular_pariah\modules\alternative_job_titles\code\alt_job_titles.dm"
 #include "modular_pariah\modules\alternative_job_titles\code\job.dm"
 #include "modular_pariah\modules\autotransfer\code\autotransfer.dm"
-#include "modular_pariah\modules\autotransfer\code\autotransfer_config.dm"
 #include "modular_pariah\modules\autotransfer\code\shuttle.dm"
 #include "modular_pariah\modules\contractor\code\datums\contract.dm"
 #include "modular_pariah\modules\contractor\code\datums\contractor_datum.dm"
