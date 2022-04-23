@@ -23197,6 +23197,15 @@
 "deb" = (
 /turf/closed/wall/r_wall,
 /area/engineering/gravity_generator)
+"dec" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/canister_frame/machine/unfinished_canister_frame,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating{
+	icon_state = "platingdmg1"
+	},
+/area/maintenance/disposal/incinerator)
 "deB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/neutral{
@@ -31873,6 +31882,10 @@
 "gif" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line,
+<<<<<<< HEAD
+=======
+/obj/structure/cable,
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai_upload)
 "gih" = (
@@ -35107,6 +35120,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/cable,
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 /turf/open/floor/engine,
 /area/ai_monitored/turret_protected/ai_upload)
 "hnt" = (
@@ -41914,15 +41931,6 @@
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/medical/virology)
-"juw" = (
-/obj/machinery/light/directional/east,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/engineering/supermatter/room)
 "juS" = (
 /turf/closed/wall/r_wall,
 /area/service/chapel/dock)
@@ -45238,8 +45246,14 @@
 /area/service/chapel/dock)
 "kzL" = (
 /obj/item/kirbyplants/random,
+<<<<<<< HEAD
 /obj/machinery/status_display/ai/directional/west,
 /obj/effect/decal/cleanable/dirt,
+=======
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "kzS" = (
@@ -53473,6 +53487,15 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
+"nkP" = (
+/obj/machinery/light/directional/east,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/obj/machinery/power/apc/sm_apc/directional/south,
+/turf/open/floor/plating{
+	icon_state = "panelscorched"
+	},
+/area/engineering/supermatter/room)
 "nlh" = (
 /obj/structure/frame/machine,
 /obj/effect/turf_decal/stripes/line{
@@ -64346,7 +64369,13 @@
 /area/commons/storage/primary)
 "qNC" = (
 /obj/item/kirbyplants/random,
+<<<<<<< HEAD
 /obj/machinery/status_display/ai/directional/west,
+=======
+/obj/structure/sign/poster/contraband/self_ai_liberation{
+	pixel_x = -32
+	},
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
 "qNE" = (
@@ -111615,7 +111644,11 @@ aaa
 aaa
 acm
 lbb
+<<<<<<< HEAD
 kxF
+=======
+dec
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 kho
 kho
 njj
@@ -123697,7 +123730,7 @@ dwl
 rRG
 ewE
 doL
-juw
+nkP
 tRp
 aeu
 aeu

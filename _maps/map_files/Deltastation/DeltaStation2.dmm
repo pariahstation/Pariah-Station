@@ -26900,6 +26900,14 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/aft)
+"fHO" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister,
+/obj/effect/turf_decal/box/red,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
 "fHS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -35154,6 +35162,20 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/port/lesser)
+"hYe" = (
+/obj/structure/table/glass,
+/obj/item/folder/blue,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/chemistry,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/cmo)
 "hYu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -51269,13 +51291,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
-"mDS" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating,
-/area/engineering/supermatter/room)
 "mDX" = (
 /obj/structure/chair/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -53049,6 +53064,14 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai)
+"nke" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister,
+/obj/effect/turf_decal/box/red,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
 "nkI" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -56776,6 +56799,15 @@
 	},
 /turf/open/floor/iron,
 /area/service/hydroponics)
+"opa" = (
+/obj/structure/table/reinforced,
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/gps/mining,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron,
+/area/cargo/qm)
 "opc" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/blue/fourcorners,
@@ -67863,6 +67895,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/medical/medbay/central)
+"rFD" = (
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/airalarm/directional/south,
+/obj/effect/turf_decal/bot,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/structure/rack,
+/turf/open/floor/iron/dark,
+/area/command/heads_quarters/ce)
 "rFH" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -71849,6 +71894,20 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/hop)
+"sNs" = (
+/obj/structure/table,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/machinery/camera/directional/east{
+	c_tag = "Science - Research Director's Office";
+	name = "science camera";
+	network = list("ss13","rd")
+	},
+/obj/effect/turf_decal/bot,
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/iron,
+/area/command/heads_quarters/rd)
 "sNC" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -88907,6 +88966,13 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
+"ybm" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/directional/north,
+/obj/machinery/power/apc/sm_apc/directional/north,
+/turf/open/floor/plating,
+/area/engineering/supermatter/room)
 "ybr" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -111320,7 +111386,7 @@ aaa
 qYo
 aaa
 xPF
-mDS
+ybm
 oQT
 vyR
 fzQ
@@ -112089,7 +112155,11 @@ eys
 eys
 eys
 wLP
+<<<<<<< HEAD
 diR
+=======
+rFD
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 xPF
 uIZ
 xPF
@@ -122154,6 +122224,7 @@ fkw
 nvS
 nKL
 iTK
+<<<<<<< HEAD
 aXj
 gdC
 aXj
@@ -122175,6 +122246,29 @@ vFQ
 jGS
 xNj
 vpG
+=======
+axN
+reX
+axN
+bcf
+noS
+cWk
+lAF
+cWk
+hpa
+bcf
+hdB
+oxW
+nke
+oxW
+oxW
+yhj
+oxW
+npu
+ejK
+rtj
+sNR
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 dLY
 dPI
 wja
@@ -122678,6 +122772,7 @@ stN
 jCD
 qFZ
 drP
+<<<<<<< HEAD
 qbR
 oaD
 kuQ
@@ -122689,6 +122784,19 @@ ggS
 uVM
 iob
 bbs
+=======
+wKA
+imr
+oxW
+mVr
+eXi
+fUd
+eIz
+xDt
+fHO
+nmL
+jbO
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 dLY
 dPK
 paL
@@ -124470,7 +124578,11 @@ eui
 ugG
 tuR
 qnm
+<<<<<<< HEAD
 pyS
+=======
+sNs
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 gGK
 fyh
 fXW
@@ -134238,7 +134350,11 @@ rUH
 rUH
 tBh
 ojk
+<<<<<<< HEAD
 juh
+=======
+hYe
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 lxL
 qgk
 qnO
@@ -135702,7 +135818,11 @@ tVB
 vNS
 gkV
 nHI
+<<<<<<< HEAD
 pQy
+=======
+opa
+>>>>>>> b0a6680b95e (increase roundstart power available to SM rooms (#66393))
 iKB
 tVB
 otC
