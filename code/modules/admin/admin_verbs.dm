@@ -74,8 +74,6 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/toggle_AI_interact, /*toggle admin ability to interact with machines as an AI*/
 	/datum/admins/proc/open_shuttlepanel, /* Opens shuttle manipulator UI */
 	/client/proc/respawn_character,
-	/datum/admins/proc/toggleaooc,		//PARIAH EDIT ADDITION - ADMIN
-	/datum/admins/proc/togglesooc,		//PARIAH EDIT ADDITION - ADMIN
 	/datum/admins/proc/open_borgopanel,
 	/datum/admins/proc/view_all_circuits,
 	/datum/admins/proc/view_all_sdql_spells,
