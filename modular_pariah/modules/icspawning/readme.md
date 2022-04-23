@@ -4,7 +4,7 @@ MODULE ID: ICSPAWNING
 
 ### Description:
 
-Adds a control click function to ghosts which allows an admin to spawn the player in via a supply pod or teleportation with effects, also adds a bluespace tech loadout and some bluespace tech items.
+Adds a verb and a context menu action which allows an admin to spawn an observer in via a supply pod or teleportation with effects.
 
 ### TG Proc Changes:
 
@@ -16,13 +16,11 @@ N/A
 
 ### Included files:
 
-- ./cards_ids.dm
-- ./observer.dm
+- ./admin_procs.dm
 - ./spell.dm
-- ./standard.dm
 
 ### Credits:
 
-LYNXEMS - Pariah Porting
+LYNXEMS - Pariah Porting and Edits
 Gandalf2k15 - SR Porting
 BunBun - Cration
