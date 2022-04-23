@@ -209,12 +209,6 @@ GLOBAL_LIST_EMPTY(headtails_list)
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
-			SPECIES_PERK_ICON = "thermometer",
-			SPECIES_PERK_NAME = "Temperature Intolerance",
-			SPECIES_PERK_DESC = "Skrell lungs cannot handle temperature differences.",
-		),
-		list(
-			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
 			SPECIES_PERK_ICON = "sun",
 			SPECIES_PERK_NAME = "High Light Sensitivity",
 			SPECIES_PERK_DESC = "Skrell eyes are sensitive to bright lights and are more susceptible to damage when not sufficiently protected.",
