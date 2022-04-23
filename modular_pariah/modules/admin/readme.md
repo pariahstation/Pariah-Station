@@ -4,7 +4,7 @@ MODULE ID: ADMIN
 
 ### Description:
 
-Adds multuple admin features, loud asay, ticket handling, pie smite, SOOC, AOOC.
+Adds multuple admin features, loud asay, ticket handling, pie smite.
 
 ### TG Proc Changes:
 
@@ -25,6 +25,7 @@ Adds multuple admin features, loud asay, ticket handling, pie smite, SOOC, AOOC.
 - N/A
 
 ### Credits:
-LYNXEMS - Pariah Port
+
+LYNXEMS - Pariah Port and Stripping
 Gandalf2k15 - Porting and Refactoring
 Akrilla - OG code
