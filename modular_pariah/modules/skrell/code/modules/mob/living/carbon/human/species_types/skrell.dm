@@ -6,7 +6,7 @@ GLOBAL_LIST_EMPTY(headtails_list)
 	id = SPECIES_SKRELL
 	say_mod = "warbles"
 	default_color = "42F58D"
-	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE, NO_SLIP_WHEN_WALKING)
+	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE)
 	inherent_traits = list(TRAIT_ADVANCEDTOOLUSER, TRAIT_CAN_STRIP, TRAIT_LIGHT_DRINKER)
 	external_organs = list(/obj/item/organ/external/headtails = "Long")
 	liked_food = VEGETABLES | FRUIT
@@ -182,3 +182,49 @@ GLOBAL_LIST_EMPTY(headtails_list)
 		As plasma supply dropped around various worlds in federation such as Qerrbalak were unable to maintain the demand in plasma, and caused a \
 		huge rise in unemployment and caused a stock crash in the plasma market in federation.",
 	)
+
+//Skrell features
+
+/datum/species/skrell/create_pref_unique_perks()
+	var/list/to_add = list()
+
+	to_add += list(
+		list(
+			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+			SPECIES_PERK_ICON = "biohazard",
+			SPECIES_PERK_NAME = "Toxin Tolerance",
+			SPECIES_PERK_DESC = "Skrell have a higher resistance to toxins.",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+			SPECIES_PERK_ICON = "syringe",
+			SPECIES_PERK_NAME = "Haemocyanin-Based Circulatory System",
+			SPECIES_PERK_DESC = "Skrell blood is restored faster with copper, iron still works.",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "thermometer",
+			SPECIES_PERK_NAME = "Temperature Intolerance",
+			SPECIES_PERK_DESC = "Skrell lungs cannot handle temperature differences.",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "thermometer",
+			SPECIES_PERK_NAME = "Temperature Intolerance",
+			SPECIES_PERK_DESC = "Skrell lungs cannot handle temperature differences.",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "sun",
+			SPECIES_PERK_NAME = "High Light Sensitivity",
+			SPECIES_PERK_DESC = "Skrell eyes are sensitive to bright lights and are more susceptible to damage when not sufficiently protected.",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "wine-bottle",
+			SPECIES_PERK_NAME = "Low Alcohol Tolerance",
+			SPECIES_PERK_DESC = "Skrell have a low tolerance to alcohol, resulting in them feeling the effects of it much earlier compared to other species."
+		),
+	)
+
+	return to_add
