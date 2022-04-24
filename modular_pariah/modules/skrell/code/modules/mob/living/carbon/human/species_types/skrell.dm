@@ -43,7 +43,6 @@ GLOBAL_LIST_EMPTY(headtails_list)
 /datum/species/skrell/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.dna.features["mcolor"] = sanitize_hexcolor(COLOR_BLUE_GRAY)
 	human.update_body()
-	human.update_body_parts()
 
 // Preset Skrell species
 /mob/living/carbon/human/species/skrell
@@ -54,10 +53,10 @@ GLOBAL_LIST_EMPTY(headtails_list)
 	blood_type = "S"
 
 // Copper restores blood for Skrell instead of iron.
-/datum/reagent/copper/on_mob_life(mob/living/carbon/C, delta_time)
-	if((isskrell(C)) && (C.blood_volume < BLOOD_VOLUME_NORMAL))
-		C.blood_volume += 0.5 * delta_time
-	..()
+/datum/species/skrell/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H, delta_time, times_fired)
+	if(chem.type == /datum/reagent/copper)
+		H.blood_volume += 0.5 * delta_time
+		return TRUE
 
 // Organ for Skrell head tentacles.
 /obj/item/organ/external/headtails
@@ -73,9 +72,6 @@ GLOBAL_LIST_EMPTY(headtails_list)
 	if(human.head && (human.head.flags_inv & HIDEHAIR))
 		return FALSE
 	if(human.wear_mask && (human.wear_mask.flags_inv & HIDEHAIR))
-		return FALSE
-	var/obj/item/bodypart/head/our_head = human.get_bodypart(BODY_ZONE_HEAD)
-	if(our_head && !IS_ORGANIC_LIMB(our_head))
 		return FALSE
 
 /obj/item/organ/external/headtails/get_global_feature_list()
