@@ -195,7 +195,7 @@ GLOBAL_LIST_EMPTY(headtails_list)
 			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
 			SPECIES_PERK_ICON = "syringe",
 			SPECIES_PERK_NAME = "Haemocyanin-Based Circulatory System",
-			SPECIES_PERK_DESC = "Skrell blood is restored faster with copper, iron still works.",
+			SPECIES_PERK_DESC = "Skrell blood is restored faster with copper, iron doesn't work.",
 		),
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
