@@ -4518,6 +4518,7 @@
 #include "modular_pariah\modules\alternative_job_titles\code\job.dm"
 #include "modular_pariah\modules\autotransfer\code\autotransfer.dm"
 #include "modular_pariah\modules\autotransfer\code\shuttle.dm"
+#include "modular_pariah\modules\announcer\code\baystation_announcer.dm"
 #include "modular_pariah\modules\contractor\code\datums\contract.dm"
 #include "modular_pariah\modules\contractor\code\datums\contractor_datum.dm"
 #include "modular_pariah\modules\contractor\code\datums\contractor_hub.dm"
