@@ -511,6 +511,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 		preference.apply_to_human(character, read_preference(preference.type))
 
 	character.dna.real_name = character.real_name
+	character.dna.update_body_size() //PARIAH EDIT
 
 	if(icon_updates)
 		character.icon_render_keys = list()
