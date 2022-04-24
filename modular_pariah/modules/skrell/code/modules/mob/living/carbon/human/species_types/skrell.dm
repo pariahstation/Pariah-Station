@@ -57,6 +57,9 @@ GLOBAL_LIST_EMPTY(headtails_list)
 	if(chem.type == /datum/reagent/copper)
 		H.blood_volume += 0.5 * delta_time
 		return TRUE
+	if(chem.type == /datum/reagent/iron)
+		H.blood_volume += 0
+		return TRUE
 
 // Organ for Skrell head tentacles.
 /obj/item/organ/external/headtails

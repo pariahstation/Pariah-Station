@@ -1020,7 +1020,7 @@
 	ph = 6
 
 /datum/reagent/iron/on_mob_life(mob/living/carbon/C, delta_time, times_fired)
-	if((C.blood_volume < BLOOD_VOLUME_NORMAL) && !(isskrell(C))) //PARIAH EDIT
+	if(C.blood_volume < BLOOD_VOLUME_NORMAL)
 		C.blood_volume += 0.25 * delta_time
 	..()
 
