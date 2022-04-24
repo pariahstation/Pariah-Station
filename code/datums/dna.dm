@@ -219,6 +219,14 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		L[DNA_MONKEY_TAIL_BLOCK] = construct_block(GLOB.tails_list_monkey.Find(features["tail_monkey"]), GLOB.tails_list_monkey.len)
 	if(features["pod_hair"])
 		L[DNA_POD_HAIR_BLOCK] = construct_block(GLOB.pod_hair_list.Find(features["pod_hair"]), GLOB.pod_hair_list.len)
+	//PARIAH EDIT ADDITION BEGIN - Species
+	if(features["body_markings_tajaran"])
+		L[DNA_TAJARAN_MARKINGS_BLOCK] = construct_block(GLOB.body_markings_list_tajaran.Find(features["body_markings_tajaran"]), GLOB.body_markings_list_tajaran.len)
+	if(features["tail_tajaran"])
+		L[DNA_TAJARAN_TAIL_BLOCK] = construct_block(GLOB.tails_list_tajaran.Find(features["tail_tajaran"]), GLOB.tails_list_tajaran.len)
+	if(features["snout_tajaran"])
+		L[DNA_TAJARAN_SNOUT_BLOCK] = construct_block(GLOB.snouts_list_tajaran.Find(features["snout_tajaran"]), GLOB.snouts_list_tajaran.len)
+	//PARIAH EDIT ADDITION END
 
 	for(var/blocknum in 1 to DNA_FEATURE_BLOCKS)
 		. += L[blocknum] || random_string(GET_UI_BLOCK_LEN(blocknum), GLOB.hex_characters)
@@ -605,6 +613,14 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		dna.features["tail_monkey"] = GLOB.tails_list_monkey[deconstruct_block(get_uni_feature_block(features, DNA_MONKEY_TAIL_BLOCK), GLOB.tails_list_monkey.len)]
 	if(dna.features["pod_hair"])
 		dna.features["pod_hair"] = GLOB.pod_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_POD_HAIR_BLOCK), GLOB.pod_hair_list.len)]
+	//PARIAH EDIT ADDITION BEGIN - Species
+	if(dna.features["body_markings_tajaran"])
+		dna.features["body_markings_tajaran"] = GLOB.body_markings_list_tajaran[deconstruct_block(get_uni_feature_block(features, DNA_TAJARAN_MARKINGS_BLOCK), GLOB.body_markings_list_tajaran.len)]
+	if(dna.features["tail_tajaran"])
+		dna.features["tail_tajaran"] = GLOB.tails_list_tajaran[deconstruct_block(get_uni_feature_block(features, DNA_TAJARAN_TAIL_BLOCK), GLOB.tails_list_tajaran.len)]
+	if(dna.features["snout_tajaran"])
+		dna.features["snout_tajaran"] = GLOB.snouts_list_tajaran[deconstruct_block(get_uni_feature_block(features, DNA_TAJARAN_SNOUT_BLOCK), GLOB.snouts_list_tajaran.len)]
+	//PARIAH EDIT ADDITION END
 
 	for(var/obj/item/organ/external/external_organ in internal_organs)
 		external_organ.mutate_feature(features, src)

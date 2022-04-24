@@ -87,6 +87,14 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 	if(!GLOB.pod_hair_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/pod_hair, GLOB.pod_hair_list)
+	//PARIAH EDIT ADDITION - Species
+	if (!GLOB.body_markings_list_tajaran.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/body_markings_tajaran, GLOB.body_markings_list_tajaran.len)
+	if (!GLOB.tails_list_tajaran.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, GLOB.tails_list_tajaran.len)
+	if (!GLOB.snouts_list_tajaran.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/snouts_tajaran, GLOB.snouts_list_tajaran.len)
+	//PARIAH EDIT END
 
 	//For now we will always return none for tail_human and ears.
 	return(list(
@@ -108,6 +116,11 @@
 		"moth_markings" = pick(GLOB.moth_markings_list),
 		"tail_monkey" = "None",
 		"pod_hair" = pick(GLOB.pod_hair_list),
+		//PARIAH EDIT ADDITION - Species
+		"body_markings_tajaran" = pick(GLOB.body_markings_list_tajaran),
+		"tail_tajaran" = pick(GLOB.tails_list_tajaran),
+		"snout_tajaran" = pick(GLOB.snouts_list_tajaran),
+		//PARIAH EDIT END
 	))
 
 /proc/random_hairstyle(gender)

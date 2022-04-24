@@ -34,6 +34,12 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/monkey, GLOB.tails_list_monkey)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/pod_hair, GLOB.pod_hair_list)
+	// PARIAH EDIT ADDITION START - SPECIES
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, GLOB.tails_list_tajaran)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails_animated/tajaran, GLOB.animated_tails_list_tajaran)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/body_markings_tajaran, GLOB.body_markings_list_tajaran)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/snouts_tajaran, GLOB.snouts_list_tajaran)
+	// PARIAH EDIT ADDITION END - SPECIES
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))

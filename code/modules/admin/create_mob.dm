@@ -37,6 +37,11 @@
 	H.dna.features["moth_wings"] = pick(GLOB.moth_wings_list)
 	H.dna.features["moth_antennae"] = pick(GLOB.moth_antennae_list)
 	H.dna.features["pod_hair"] = pick(GLOB.pod_hair_list)
+	//PARIAH EDIT ADDITION BEGIN - Species
+	H.dna.features["body_markings_tajaran"] = pick(GLOB.body_markings_list_tajaran)
+	H.dna.features["tail_tajaran"] = pick(GLOB.tails_list_tajaran)
+	H.dna.features["snout_tajaran"] = pick(GLOB.snouts_list_tajaran)
+	//PARIAH EDIT ADDITION END
 
 	H.update_body(is_creating = TRUE)
 	H.update_hair(is_creating = TRUE)

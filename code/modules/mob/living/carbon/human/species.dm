@@ -41,6 +41,14 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/examine_limb_id
 	///Never, Optional, or Forced digi legs?
 	var/digitigrade_customization = DIGITIGRADE_NEVER
+
+	// PARIAH EDIT BEGIN - DIGITGRADE
+	///Path to Right Digi leg
+	var/digitigrade_r_leg = /obj/item/bodypart/r_leg/digitigrade
+	///Path to Left Digi leg
+	var/digitigrade_l_leg = /obj/item/bodypart/l_leg/digitigrade
+	// PARIAH EDIT END - DIGITIGRADE
+
 	///Does the species use skintones or not? As of now only used by humans.
 	var/use_skintones = FALSE
 	///If your race bleeds something other than bog standard blood, change this to reagent id. For example, ethereals bleed liquid electricity.
@@ -717,6 +725,18 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(!source.dna.features["ears"] || source.dna.features["ears"] == "None" || source.head && (source.head.flags_inv & HIDEHAIR) || (source.wear_mask && (source.wear_mask.flags_inv & HIDEHAIR)) || !noggin || !IS_ORGANIC_LIMB(noggin))
 			bodyparts_to_add -= "ears"
 
+	//PARIAH EDIT ADDITION BEGIN - Species
+	if(mutant_bodyparts["tail_tajaran"])
+		if(source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tail_tajaran"
+
+	if(mutant_bodyparts["waggingtail_tajaran"])
+		if(source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "waggingtail_tajaran"
+		else if (mutant_bodyparts["tail_tajaran"])
+			bodyparts_to_add -= "waggingtail_tajaran"
+	//PARIAH EDIT ADDITION END
+
 	if(!bodyparts_to_add)
 		return
 
@@ -750,6 +770,14 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.caps_list[source.dna.features["caps"]]
 				if("tail_monkey")
 					accessory = GLOB.tails_list_monkey[source.dna.features["tail_monkey"]]
+				//PARIAH EDIT ADDITION BEGIN - Species
+				if("tail_tajaran")
+					accessory = GLOB.tails_list_tajaran[source.dna.features["tail_tajaran"]]
+				if("waggingtail_tajaran")
+					accessory = GLOB.animated_tails_list_tajaran[source.dna.features["tail_tajaran"]]
+				if("body_markings_tajaran")
+					accessory = GLOB.body_markings_list_tajaran[source.dna.features["body_markings_tajaran"]]
+				//PARIAH EDIT ADDITION END
 
 			if(!accessory || accessory.icon_state == "none")
 				continue
@@ -757,9 +785,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			var/mutable_appearance/accessory_overlay = mutable_appearance(accessory.icon, layer = -layer)
 
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
-			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey" || bodypart == "tail_tajaran") //PARIAH EDIT - Species
 				bodypart = "tail"
-			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
+			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human" || bodypart == "waggingtail_tajaran") //PARIAH EDIT - Species
 				bodypart = "waggingtail"
 
 			if(accessory.gender_specific)
@@ -2349,8 +2377,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	//Note for future: Potentionally add a new C.dna.species() to build a template species for more accurate limb replacement
 
 	if((new_species.digitigrade_customization == DIGITIGRADE_OPTIONAL && target.dna.features["legs"] == "Digitigrade Legs") || new_species.digitigrade_customization == DIGITIGRADE_FORCED)
-		new_species.bodypart_overrides[BODY_ZONE_R_LEG] = /obj/item/bodypart/r_leg/digitigrade
-		new_species.bodypart_overrides[BODY_ZONE_L_LEG] = /obj/item/bodypart/l_leg/digitigrade
+		new_species.bodypart_overrides[BODY_ZONE_R_LEG] = new_species.digitigrade_r_leg // PARIAH EDIT - Species
+		new_species.bodypart_overrides[BODY_ZONE_L_LEG] = new_species.digitigrade_l_leg // PARIAH EDIT - Species
 
 	for(var/obj/item/bodypart/old_part as anything in target.bodyparts)
 		if(old_part.change_exempt_flags & BP_BLOCK_CHANGE_SPECIES)
