@@ -16,10 +16,3 @@
 #define REAGENT_SYNTHETIC 2
 
 #define MANDATORY_FEATURE_LIST list("flavor_text" = "")
-
-//Species
-#define DNA_TAJARAN_MARKINGS_BLOCK 17
-#define DNA_TAJARAN_TAIL_BLOCK 18
-#define DNA_TAJARAN_SNOUT_BLOCK 19
-
-#define ORGAN_SLOT_EXTERNAL

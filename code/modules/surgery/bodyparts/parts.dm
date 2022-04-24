@@ -271,6 +271,7 @@
 	px_y = 12
 	max_stamina_damage = 50
 	can_be_disabled = TRUE
+	var/digitigrade_variant = /obj/item/bodypart/l_leg/digitigrade // PARIAH EDIT
 
 
 /obj/item/bodypart/l_leg/set_owner(new_owner)
@@ -361,6 +362,7 @@
 	px_y = 12
 	max_stamina_damage = 50
 	can_be_disabled = TRUE
+	var/digitigrade_variant = /obj/item/bodypart/r_leg/digitigrade // PARIAH EDIT
 
 
 /obj/item/bodypart/r_leg/set_owner(new_owner)

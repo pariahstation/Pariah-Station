@@ -39,8 +39,6 @@ GLOBAL_LIST_EMPTY(snouts_list_tajaran)
 		BODY_ZONE_L_LEG = /obj/item/bodypart/l_leg/tajaran,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/tajaran,
 	)
-	digitigrade_l_leg = /obj/item/bodypart/l_leg/digitigrade_tajaran
-	digitigrade_r_leg = /obj/item/bodypart/r_leg/digitigrade_tajaran
 
 //I wag in death
 /datum/species/tajaran/spec_death(gibbed, mob/living/carbon/human/H)

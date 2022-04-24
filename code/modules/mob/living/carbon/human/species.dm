@@ -42,13 +42,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///Never, Optional, or Forced digi legs?
 	var/digitigrade_customization = DIGITIGRADE_NEVER
 
-	// PARIAH EDIT BEGIN - DIGITGRADE
-	///Path to Right Digi leg
-	var/digitigrade_r_leg = /obj/item/bodypart/r_leg/digitigrade
-	///Path to Left Digi leg
-	var/digitigrade_l_leg = /obj/item/bodypart/l_leg/digitigrade
-	// PARIAH EDIT END - DIGITIGRADE
-
 	///Does the species use skintones or not? As of now only used by humans.
 	var/use_skintones = FALSE
 	///If your race bleeds something other than bog standard blood, change this to reagent id. For example, ethereals bleed liquid electricity.
@@ -2377,8 +2370,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	//Note for future: Potentionally add a new C.dna.species() to build a template species for more accurate limb replacement
 
 	if((new_species.digitigrade_customization == DIGITIGRADE_OPTIONAL && target.dna.features["legs"] == "Digitigrade Legs") || new_species.digitigrade_customization == DIGITIGRADE_FORCED)
-		new_species.bodypart_overrides[BODY_ZONE_R_LEG] = new_species.digitigrade_r_leg // PARIAH EDIT - Species
-		new_species.bodypart_overrides[BODY_ZONE_L_LEG] = new_species.digitigrade_l_leg // PARIAH EDIT - Species
+		new_species.bodypart_overrides[BODY_ZONE_R_LEG] = new_species.bodypart_overrides[BODY_ZONE_R_LEG].digitigrade_variant // PARIAH EDIT - Species
+		new_species.bodypart_overrides[BODY_ZONE_L_LEG] = new_species.bodypart_overrides[BODY_ZONE_L_LEG].digitigrade_variant // PARIAH EDIT - Species
 
 	for(var/obj/item/bodypart/old_part as anything in target.bodyparts)
 		if(old_part.change_exempt_flags & BP_BLOCK_CHANGE_SPECIES)

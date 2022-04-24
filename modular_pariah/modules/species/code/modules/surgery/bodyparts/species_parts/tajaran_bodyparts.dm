@@ -25,19 +25,18 @@
 	icon_greyscale = 'modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi'
 	limb_id = SPECIES_TAJARAN
 	uses_mutcolor = TRUE
+	digitigrade_variant = /obj/item/bodypart/l_leg/digitigrade/tajaran
 
 /obj/item/bodypart/r_leg/tajaran
 	icon_greyscale = 'modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi'
 	limb_id = SPECIES_TAJARAN
 	uses_mutcolor = TRUE
+	digitigrade_variant = /obj/item/bodypart/r_leg/digitigrade/tajaran
 
-/obj/item/bodypart/l_leg/digitigrade_tajaran
+/obj/item/bodypart/l_leg/digitigrade/tajaran
 	icon_greyscale = 'modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi'
-	uses_mutcolor = TRUE
-	limb_id = "digitigrade"
-	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC | BODYTYPE_DIGITIGRADE
 
-/obj/item/bodypart/l_leg/digitigrade_tajaran/update_limb(dropping_limb = FALSE, is_creating = FALSE)
+/obj/item/bodypart/l_leg/digitigrade/tajaran/update_limb(dropping_limb = FALSE, is_creating = FALSE)
 	. = ..()
 	if(ishuman(owner))
 		var/mob/living/carbon/human/human_owner = owner
@@ -54,13 +53,10 @@
 		else
 			limb_id = "tajaran"
 
-/obj/item/bodypart/r_leg/digitigrade_tajaran
+/obj/item/bodypart/r_leg/digitigrade/tajaran
 	icon_greyscale = 'modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi'
-	uses_mutcolor = TRUE
-	limb_id = "digitigrade"
-	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC | BODYTYPE_DIGITIGRADE
 
-/obj/item/bodypart/r_leg/digitigrade_tajaran/update_limb(dropping_limb = FALSE, is_creating = FALSE)
+/obj/item/bodypart/r_leg/digitigrade/tajaran/update_limb(dropping_limb = FALSE, is_creating = FALSE)
 	. = ..()
 	if(ishuman(owner))
 		var/mob/living/carbon/human/human_owner = owner
