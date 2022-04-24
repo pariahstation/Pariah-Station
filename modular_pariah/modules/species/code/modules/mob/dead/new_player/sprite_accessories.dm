@@ -25,9 +25,9 @@
 /datum/sprite_accessory/snouts_tajaran/standard
 	name = "Tajaran"
 	icon_state = "tajaran"
+	hasinner = 1
 
-/datum/sprite_accessory/ears/tajaran
-	name = "Cat"
+/datum/sprite_accessory/ears/cat/tajaran
+	name = "Tajaran"
 	icon_state = "cat"
 	hasinner = 1
-	color_src = HAIR

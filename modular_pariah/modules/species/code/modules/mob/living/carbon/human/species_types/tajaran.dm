@@ -20,7 +20,7 @@ GLOBAL_LIST_EMPTY(snouts_list_tajaran)
 	mutant_bodyparts = list("tail_tajaran" = "Standard", "body_markings_tajaran" = "None", "legs" = "Normal Legs")
 	external_organs = list(/obj/item/organ/external/snout/tajaran = "Standard")
 	mutant_organs = list(/obj/item/organ/tail/tajaran)
-	mutantears = /obj/item/organ/ears/cat
+	mutantears = /obj/item/organ/ears/tajaran
 	attack_verb = "slash"
 	attack_effect = ATTACK_EFFECT_CLAW
 	attack_sound = 'sound/weapons/slash.ogg'
