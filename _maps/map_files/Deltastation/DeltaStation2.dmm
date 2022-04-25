@@ -669,12 +669,47 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/science/robotics/lab)
+"afv" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Office"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/office)
 "afy" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/greater)
+"afC" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_access_txt = "12"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/maintenance/port/fore)
 "afG" = (
 /obj/machinery/computer/camera_advanced/base_construction/aux{
 	dir = 8
@@ -714,6 +749,15 @@
 	},
 /turf/open/floor/iron,
 /area/construction/mining/aux_base)
+"agd" = (
+/obj/machinery/light/directional/east,
+/obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "agh" = (
 /obj/structure/rack,
 /obj/item/circuitboard/machine/teleporter_hub{
@@ -1182,6 +1226,15 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/pharmacy)
+"aov" = (
+/obj/structure/table/reinforced,
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/gps/mining,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron,
+/area/cargo/qm)
 "aox" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/tank_holder/oxygen,
@@ -1879,6 +1932,7 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central/aft)
+<<<<<<< HEAD
 "ayi" = (
 /obj/machinery/door/airlock/security/glass{
 	id_tag = "gulagdoor";
@@ -1895,6 +1949,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ayk" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -2184,6 +2240,7 @@
 	},
 /turf/open/space/basic,
 /area/space)
+<<<<<<< HEAD
 "aDu" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Crematorium";
@@ -2195,6 +2252,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/service/chapel/funeral)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "aDx" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/easel,
@@ -2345,6 +2404,22 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+"aFa" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command{
+	name = "Telecomms Control Room";
+	req_access_txt = "19; 61"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/tcommsat/computer)
 "aFi" = (
 /turf/closed/wall,
 /area/security/checkpoint/supply)
@@ -2490,6 +2565,7 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/port/greater)
+<<<<<<< HEAD
 "aGA" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Library Access"
@@ -2497,6 +2573,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/service/library)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "aGH" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating{
@@ -2916,6 +2994,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/tcommsat/computer)
+<<<<<<< HEAD
 "aMf" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "permabolt3";
@@ -2930,6 +3009,8 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "aMi" = (
 /obj/structure/weightmachine/weightlifter,
 /obj/effect/turf_decal/tile/brown/half/contrasted,
@@ -3013,6 +3094,18 @@
 	},
 /turf/open/floor/iron/dark,
 /area/security/courtroom)
+"aMW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/door/poddoor/shutters/window{
+	id = "gatewayshutters";
+	name = "Gateway Chamber Shutters"
+	},
+/turf/open/floor/iron,
+/area/command/gateway)
 "aMY" = (
 /obj/machinery/status_display/evac/directional/north,
 /obj/machinery/power/emitter{
@@ -3086,6 +3179,19 @@
 /obj/item/clothing/mask/cigarette/cigar,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/captain)
+"aOp" = (
+/obj/machinery/door/airlock/research/glass/incinerator/ordmix_exterior{
+	name = "Burn Chamber Exterior Airlock"
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/engine/vacuum,
+/area/science/mixing/chamber)
 "aOr" = (
 /obj/machinery/holopad,
 /obj/effect/turf_decal/bot,
@@ -3132,6 +3238,25 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
+"aOF" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Permabrig Cell 5"
+	},
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
 "aOS" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "cargocell";
@@ -3270,6 +3395,21 @@
 	dir = 4
 	},
 /area/commons/fitness/recreation)
+"aPU" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Auxiliary Tool Storage";
+	req_access_txt = "12"
+	},
+/obj/effect/landmark/navigate_destination,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/commons/storage/tools)
 "aQe" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3818,8 +3958,29 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/maintenance/solars/port/fore)
+<<<<<<< HEAD
 "aVB" = (
 /obj/structure/tank_dispenser,
+=======
+"aVE" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/door/airlock/command{
+	name = "Telecomms Server Room";
+	req_access_txt = "61"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark/telecomms,
+/area/tcommsat/server)
+"aVG" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -3830,6 +3991,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/security/checkpoint/customs/aft)
+<<<<<<< HEAD
 "aWf" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "permabolt1";
@@ -3844,6 +4006,8 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "aWg" = (
 /obj/structure/weightmachine/weightlifter,
 /obj/effect/decal/cleanable/dirt,
@@ -3908,6 +4072,18 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/maintenance/department/crew_quarters/bar)
+"aWH" = (
+/obj/machinery/door/airlock/research/glass{
+	name = "Ordnance Lab";
+	req_access_txt = "8"
+	},
+/obj/machinery/atmospherics/pipe/heat_exchanging/junction/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark/airless,
+/area/science/mixing/chamber)
 "aWK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/kirbyplants/random,
@@ -3998,6 +4174,7 @@
 "aXI" = (
 /turf/closed/wall,
 /area/service/bar)
+<<<<<<< HEAD
 "aXR" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "brigprison";
@@ -4010,6 +4187,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/iron,
 /area/security/prison)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "aXU" = (
 /obj/docking_port/stationary{
 	dwidth = 1;
@@ -4295,11 +4474,6 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/commons/dorms)
-"bcd" = (
-/obj/effect/spawner/structure/window/reinforced/plasma,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
-/turf/open/floor/plating,
-/area/engineering/supermatter/room)
 "bce" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4331,6 +4505,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/security/prison)
+"bcF" = (
+/obj/machinery/camera/directional/east{
+	c_tag = "Telecomms - Cooling Room";
+	name = "telecomms camera";
+	network = list("ss13","tcomms")
+	},
+/obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/tcommsat/server)
 "bcI" = (
 /obj/structure/cable,
 /obj/machinery/computer/security/telescreen{
@@ -4538,6 +4724,16 @@
 	},
 /turf/open/floor/iron,
 /area/security/checkpoint/supply)
+"beQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/effect/turf_decal/box/corners{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/engineering/main)
 "bfx" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -5210,6 +5406,7 @@
 /obj/structure/lattice,
 /turf/open/space,
 /area/space/nearstation)
+<<<<<<< HEAD
 "bpH" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -5226,6 +5423,8 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "bpI" = (
 /obj/structure/cable,
 /obj/structure/chair/office{
@@ -5725,6 +5924,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+<<<<<<< HEAD
 "bvY" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -5733,6 +5933,8 @@
 	},
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "bvZ" = (
 /obj/effect/turf_decal/tile/red/half/contrasted,
 /turf/open/floor/iron,
@@ -5887,6 +6089,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+<<<<<<< HEAD
 "byE" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -5895,6 +6098,8 @@
 	},
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "byF" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/briefcase{
@@ -6005,13 +6210,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/security/armory)
-"bzJ" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/medical/cryo)
 "bzO" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/stripes/line{
@@ -6178,6 +6376,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
 /area/medical/psychology)
+<<<<<<< HEAD
 "bBO" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -6193,6 +6392,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/hallway/primary/central/fore)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "bBR" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron,
@@ -6306,6 +6507,13 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
+"bDa" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/iron/white,
+/area/science/research)
 "bDh" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -6361,6 +6569,27 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+"bEc" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-right"
+	},
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
 "bEf" = (
 /obj/machinery/door/window{
 	base_state = "rightsecure";
@@ -6645,12 +6874,36 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
 /area/engineering/atmos/storage)
+"bGm" = (
+/obj/machinery/door/airlock/research/glass{
+	name = "Ordnance Lab";
+	req_access_txt = "8"
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/atmospherics/pipe/smart/simple/purple/visible{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/airless,
+/area/science/mixing/chamber)
 "bGM" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood,
 /area/command/meeting_room/council)
+"bGR" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/science/xenobiology)
 "bGW" = (
 /obj/effect/landmark/event_spawn,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -8016,6 +8269,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/warden)
+<<<<<<< HEAD
 "bVF" = (
 /obj/structure/chair{
 	dir = 1
@@ -8024,6 +8278,30 @@
 	dir = 1
 	},
 /area/commons/fitness/recreation)
+=======
+"bVx" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Evidence Storage"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/security/warden)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "bWb" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -8849,6 +9127,10 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
+"ced" = (
+/obj/effect/spawner/random/structure/girder,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "ces" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
@@ -8877,6 +9159,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/maintenance/disposal/incinerator)
+<<<<<<< HEAD
 "ceJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch{
@@ -8892,6 +9175,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ceP" = (
 /obj/structure/chair{
 	name = "Prosecution"
@@ -9050,6 +9335,16 @@
 	},
 /turf/open/floor/iron/dark,
 /area/service/theater)
+"cgR" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
 "cgY" = (
 /obj/structure/dresser,
 /turf/open/floor/iron/grimy,
@@ -9120,6 +9415,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/primary/central/aft)
+"chV" = (
+/obj/structure/cable,
+/obj/machinery/camera/directional/north{
+	c_tag = "Atmospherics - Incinerator";
+	name = "atmospherics camera"
+	},
+/obj/structure/extinguisher_cabinet/directional/north,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
+/area/maintenance/disposal/incinerator)
 "cid" = (
 /obj/machinery/telecomms/bus/preset_four,
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted{
@@ -9176,6 +9482,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/courtroom)
+<<<<<<< HEAD
 "ciB" = (
 /obj/machinery/door/airlock/hatch{
 	name = "MiniSat Exterior Access";
@@ -9184,6 +9491,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/aisat/exterior)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ciI" = (
 /obj/structure/chair/office/light{
 	dir = 4
@@ -9383,6 +9692,25 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
+"cle" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "MiniSat Maintenance";
+	req_access_txt = "16"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
 "clm" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
@@ -10607,6 +10935,7 @@
 /obj/machinery/light_switch/directional/south,
 /turf/open/floor/wood,
 /area/command/meeting_room/council)
+<<<<<<< HEAD
 "cyk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -10618,6 +10947,8 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/iron,
 /area/commons/storage/tools)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "cyl" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 4
@@ -10722,6 +11053,7 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central/aft)
+<<<<<<< HEAD
 "czq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -10734,6 +11066,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/court,
 /turf/open/floor/iron,
 /area/security/courtroom)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "czv" = (
 /obj/machinery/conveyor{
 	dir = 8;
@@ -10868,6 +11202,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/carpet,
 /area/commons/dorms)
+<<<<<<< HEAD
 "cBW" = (
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -10881,6 +11216,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/tcommsat/server)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "cCw" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
@@ -11041,6 +11378,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
 /area/service/hydroponics)
+<<<<<<< HEAD
 "cFQ" = (
 /obj/machinery/door/airlock/command{
 	name = "Head of Security's Quarters"
@@ -11055,6 +11393,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/hos,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "cFY" = (
 /obj/machinery/atmospherics/components/binary/valve/digital{
 	dir = 8;
@@ -11147,6 +11487,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
 /area/maintenance/port/greater)
+<<<<<<< HEAD
 "cHc" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -11158,6 +11499,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "cHl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
@@ -11504,6 +11847,19 @@
 "cMO" = (
 /turf/closed/wall,
 /area/maintenance/department/electrical)
+"cMX" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/components/unary/thermomachine/heater/on{
+	dir = 8
+	},
+/turf/open/floor/iron/dark/corner,
+/area/engineering/atmos/pumproom)
 "cMY" = (
 /turf/closed/wall/r_wall,
 /area/science/xenobiology)
@@ -14808,10 +15164,35 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/psychology)
+"dfW" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	piping_layer = 2
+	},
+/turf/open/floor/iron/dark,
+/area/science/mixing)
 "dfX" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"dfY" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access_txt = "5;12"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "medbay-passthrough"
+	},
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/medical/medbay/central)
 "dgd" = (
 /obj/structure/cable,
 /obj/effect/landmark/event_spawn,
@@ -15565,11 +15946,6 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/starboard/aft)
-"dkP" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/spawner/random/structure/girder,
-/turf/open/floor/plating,
-/area/maintenance/port/fore)
 "dkR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -16309,6 +16685,14 @@
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/iron,
 /area/engineering/atmos/storage/gas)
+"dqI" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister,
+/obj/effect/turf_decal/box/red,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
 "dqJ" = (
 /obj/machinery/computer/turbine_computer{
 	dir = 1;
@@ -16932,6 +17316,12 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/science/genetics)
+"dwh" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/turf/open/floor/iron/cafeteria,
+/area/engineering/atmos/pumproom)
 "dwv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/siding/purple{
@@ -18156,6 +18546,42 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
+"dGu" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "MiniSat Antechamber";
+	req_access_txt = "16"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/radio/intercom/directional/north,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
+"dGB" = (
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/door/airlock/command{
+	name = "Telecomms Server Room";
+	req_access_txt = "61"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/tcommsat/server)
 "dGJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/conveyor{
@@ -18213,6 +18639,7 @@
 /obj/effect/spawner/structure/window/reinforced/tinted,
 /turf/open/floor/plating/airless,
 /area/science/test_area)
+<<<<<<< HEAD
 "dGZ" = (
 /obj/machinery/atmospherics/components/binary/thermomachine/freezer{
 	piping_layer = 2
@@ -18236,6 +18663,8 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "dHk" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -18531,6 +18960,13 @@
 /obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+"dJq" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/components/unary/thermomachine/heater/on{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "dJs" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 1;
@@ -19284,12 +19720,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/medical/virology)
-"dPt" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden{
-	dir = 4
-	},
-/turf/closed/wall,
-/area/engineering/atmos/project)
 "dPH" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
@@ -20709,6 +21139,12 @@
 "eal" = (
 /turf/closed/wall/r_wall,
 /area/maintenance/solars/port/aft)
+"eam" = (
+/obj/structure/cable,
+/turf/open/floor/plating{
+	icon_state = "platingdmg1"
+	},
+/area/maintenance/port/fore)
 "eao" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -21664,6 +22100,26 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/engineering/gravity_generator)
+"eft" = (
+/obj/machinery/door/airlock/command{
+	name = "Head of Security's Quarters"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/hos,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/heads_quarters/hos)
 "efu" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/west,
@@ -21683,6 +22139,20 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/security/checkpoint/escape)
+"efy" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Permabrig Visitation"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/security/prison)
 "efz" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/red/half/contrasted{
@@ -21733,6 +22203,31 @@
 	},
 /turf/open/floor/iron,
 /area/security/checkpoint/escape)
+"efG" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Transferring Control"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+<<<<<<< HEAD
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+=======
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
+/turf/open/floor/iron,
+/area/security/execution/transfer)
 "efJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -21742,20 +22237,6 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/port/greater)
-"efK" = (
-/obj/machinery/door/airlock/security{
-	name = "Brig"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/sign/poster/official/nanotrasen_logo{
-	pixel_x = -32
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/mapping_helpers/airlock/access/all/security/general,
-/turf/open/floor/iron,
-/area/security/brig)
 "efN" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -21979,6 +22460,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+<<<<<<< HEAD
 "eig" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -21995,6 +22477,8 @@
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "eiq" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -22074,6 +22558,31 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+<<<<<<< HEAD
+=======
+"ejG" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Permabrig Cell 2"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
+"ejK" = (
+/obj/machinery/newscaster/directional/west,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ejS" = (
 /obj/item/circular_saw,
 /obj/item/surgicaldrill{
@@ -22113,6 +22622,23 @@
 /obj/item/bedsheet/dorms,
 /turf/open/floor/carpet,
 /area/commons/dorms)
+"ekC" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	aiControlDisabled = 1;
+	name = "Education Chamber"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/armory,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/security/execution/education)
 "ekE" = (
 /obj/structure/mirror/directional/west,
 /obj/structure/sink{
@@ -22321,6 +22847,7 @@
 "enp" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
@@ -22329,6 +22856,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/closed/wall/r_wall,
 /area/command/heads_quarters/rd)
+=======
+/obj/machinery/status_display/evac/directional/east,
+/obj/item/kirbyplants/photosynthetic{
+	pixel_y = 10
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/ai_upload)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "enx" = (
 /obj/machinery/atmospherics/pipe/bridge_pipe/purple/visible{
 	dir = 4
@@ -22684,6 +23219,13 @@
 /obj/structure/chair/stool/directional/east,
 /turf/open/floor/iron/dark,
 /area/service/theater)
+"esl" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/medical/cryo)
 "esm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral{
@@ -22752,15 +23294,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/command/heads_quarters/rd)
-"euq" = (
-/obj/machinery/door/poddoor/shutters/preopen{
-	id = "cmoshutter";
-	name = "CMO Office Shutters"
-	},
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/command/heads_quarters/cmo)
 "euw" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/techstorage/medical_all,
@@ -22897,11 +23430,12 @@
 "ewz" = (
 /turf/closed/wall,
 /area/maintenance/department/crew_quarters/bar)
-"ewR" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
+"ewM" = (
+/obj/machinery/door/airlock/public/glass{
+	id_tag = "permabolt3";
+	name = "Cell 5"
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
@@ -22909,6 +23443,24 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/maintenance/department/science)
+=======
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "permashut5"
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "exd" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Science - Aft Center";
@@ -23505,20 +24057,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/commons/locker)
-"eGk" = (
-/obj/structure/cable,
-/obj/machinery/light/directional/north,
-/obj/machinery/airalarm/unlocked{
-	dir = 1;
-	pixel_y = 23
-	},
-/obj/machinery/atmospherics/components/binary/thermomachine/heater{
-	dir = 8
-	},
-/obj/effect/turf_decal/delivery,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
-/area/maintenance/disposal/incinerator)
 "eGr" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/package_wrap,
@@ -23600,6 +24138,19 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/command/heads_quarters/rd)
+"eHH" = (
+/obj/machinery/door/airlock/command/glass{
+	name = "Server Access";
+	req_access_txt = "30"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/science/server)
 "eHJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -24010,6 +24561,20 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/engineering/main)
+"eNX" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Library Access"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/service/library)
 "eOw" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -25104,6 +25669,7 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/starboard/aft)
+<<<<<<< HEAD
 "feg" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
@@ -25114,6 +25680,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/maintenance/port/greater)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "fej" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -25777,6 +26345,7 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/solars/port/fore)
+<<<<<<< HEAD
 "fqe" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -25789,6 +26358,8 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "fql" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment{
@@ -26383,13 +26954,6 @@
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron,
 /area/engineering/hallway)
-"fzf" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/random/directional/south,
-/turf/open/floor/plating,
-/area/maintenance/port/fore)
 "fzh" = (
 /obj/structure/closet/toolcloset,
 /obj/effect/turf_decal/bot,
@@ -27102,6 +27666,14 @@
 	},
 /turf/open/floor/iron,
 /area/security/holding_cell)
+"fKh" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on,
+/obj/machinery/light_switch/directional/east{
+	pixel_x = 21
+	},
+/turf/open/floor/iron/dark,
+/area/science/server)
 "fKj" = (
 /turf/open/floor/carpet/green,
 /area/commons/lounge)
@@ -27388,6 +27960,7 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/maintenance/port/greater)
+<<<<<<< HEAD
 "fPj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/highsecurity{
@@ -27403,6 +27976,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "fPm" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -28021,6 +28596,13 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/engineering/atmos)
+"fYD" = (
+/obj/effect/turf_decal/tile/purple/anticorner/contrasted{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/turf/open/floor/iron/white,
+/area/science/xenobiology)
 "fYL" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
@@ -28165,6 +28747,23 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/maintenance/port/greater)
+"gaM" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Gear Room"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/security/lockers)
 "gaN" = (
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
@@ -28429,6 +29028,27 @@
 	},
 /turf/open/floor/iron/checker,
 /area/hallway/secondary/service)
+"geu" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-right"
+	},
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
 "geJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/poddoor/shutters{
@@ -28791,6 +29411,7 @@
 	icon_state = "panelscorched"
 	},
 /area/maintenance/starboard)
+<<<<<<< HEAD
 "gjB" = (
 /obj/machinery/door/airlock/security{
 	name = "Interrogation Monitoring"
@@ -28802,6 +29423,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron/dark,
 /area/security/interrogation)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gjJ" = (
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -29276,6 +29899,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
+<<<<<<< HEAD
 "gpS" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "permabolt2";
@@ -29292,6 +29916,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gpV" = (
 /obj/item/clothing/gloves/color/latex,
 /obj/item/clothing/suit/apron/surgical,
@@ -29648,6 +30274,17 @@
 	},
 /turf/open/floor/iron,
 /area/service/hydroponics)
+"gvL" = (
+/obj/machinery/door/airlock/hatch{
+	name = "MiniSat Exterior Access";
+	req_one_access_txt = "32;19"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/end{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/aisat/exterior)
 "gvN" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -29732,6 +30369,24 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/science/research)
+"gxb" = (
+/obj/machinery/door/airlock/security{
+	name = "Brig"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/poster/official/nanotrasen_logo{
+	pixel_x = -32
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron,
+/area/security/brig)
 "gxc" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/medical{
@@ -29818,6 +30473,19 @@
 /obj/structure/sign/poster/random/directional/west,
 /turf/open/floor/wood,
 /area/hallway/secondary/service)
+<<<<<<< HEAD
+=======
+"gyk" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/closet/bombcloset,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
+"gyp" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gyy" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
@@ -30093,6 +30761,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/service/hydroponics)
+<<<<<<< HEAD
 "gCp" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -30118,6 +30787,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/commons/dorms/cryo)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gCC" = (
 /obj/structure/disposalpipe/trunk,
 /obj/item/radio/intercom/directional/north,
@@ -30243,8 +30914,13 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/iron,
 /area/hallway/primary/central/fore)
+<<<<<<< HEAD
 "gEc" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
+=======
+"gEk" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 	dir = 1
 	},
 /obj/effect/turf_decal/box,
@@ -30307,6 +30983,7 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
 "gFE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible/layer2,
 /obj/machinery/atmospherics/pipe/smart/simple/dark/visible{
@@ -30322,6 +30999,8 @@
 	},
 /turf/open/floor/engine,
 /area/maintenance/disposal/incinerator)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gFM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/status_display/ai/directional/south,
@@ -30764,6 +31443,7 @@
 	},
 /turf/open/floor/iron,
 /area/construction/mining/aux_base)
+<<<<<<< HEAD
 "gLz" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Permabrig Cell 5"
@@ -30777,6 +31457,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gLJ" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/r_wall,
@@ -31012,6 +31694,7 @@
 /obj/effect/turf_decal/tile/blue,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+<<<<<<< HEAD
 "gOY" = (
 /obj/structure/cable,
 /obj/machinery/power/smes/engineering{
@@ -31019,6 +31702,8 @@
 	},
 /turf/open/floor/circuit/green,
 /area/engineering/main)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gPa" = (
 /obj/effect/turf_decal/trimline/yellow/corner{
 	dir = 8
@@ -31034,6 +31719,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/maintenance/port/greater)
+"gPs" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/neutral/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/maintenance/port/fore)
 "gPw" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
@@ -31117,17 +31810,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/security/courtroom)
-"gQZ" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on/coldroom{
-	dir = 8
-	},
-/obj/effect/turf_decal/delivery,
-/obj/item/wrench{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/turf/open/floor/iron/dark,
-/area/service/kitchen/coldroom)
 "gRa" = (
 /obj/effect/landmark/start/hangover,
 /obj/structure/disposalpipe/segment{
@@ -31374,6 +32056,7 @@
 	},
 /turf/open/floor/iron,
 /area/science/lobby)
+<<<<<<< HEAD
 "gUo" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31389,6 +32072,8 @@
 	},
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gUp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -31457,6 +32142,20 @@
 	},
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
+"gWo" = (
+/obj/structure/table/glass,
+/obj/item/folder/blue,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/chemistry,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/cmo)
 "gWr" = (
 /obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
 	dir = 10
@@ -31731,13 +32430,13 @@
 	},
 /turf/open/floor/iron,
 /area/command/heads_quarters/ce)
-"gZY" = (
+"gZZ" = (
+/obj/structure/disposalpipe/segment,
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/vault{
 	name = "Vault Door";
@@ -31753,6 +32452,13 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/command/nuke_storage)
+=======
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/execution/transfer)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "haa" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -31779,6 +32485,26 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central/aft)
+"hap" = (
+/obj/machinery/door/airlock/public/glass{
+	id_tag = "permabolt1";
+	name = "Cell 1"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "permashut1"
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
 "hbd" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -32007,6 +32733,20 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space,
 /area/solars/starboard/fore)
+"heb" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Warden's Office"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/effect/mapping_helpers/airlock/access/all/security/armory,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/security/warden)
 "hef" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -32486,6 +33226,23 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/science/lab)
+"hlk" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Security Transferring Center"
+	},
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/security/execution/transfer)
 "hll" = (
 /obj/structure/table/wood,
 /obj/item/folder/red,
@@ -32536,6 +33293,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/engineering/gravity_generator)
+<<<<<<< HEAD
 "hmu" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/components/binary/tank_compressor{
@@ -32544,6 +33302,25 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/science/mixing/launch)
+=======
+"hmr" = (
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/machinery/door/airlock/command{
+	name = "Telecomms Server Room";
+	req_access_txt = "61"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/tcommsat/server)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "hmx" = (
 /obj/docking_port/stationary/random{
 	id = "pod_lavaland";
@@ -33523,6 +34300,7 @@
 /obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+<<<<<<< HEAD
 "hAo" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -33532,6 +34310,26 @@
 	},
 /turf/open/floor/iron,
 /area/science/research)
+=======
+"hAu" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Permabrig Cell 4"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "hAv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -33621,6 +34419,7 @@
 /obj/structure/tank_holder/extinguisher,
 /turf/open/floor/iron,
 /area/science/xenobiology)
+<<<<<<< HEAD
 "hBQ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -33630,6 +34429,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/security/courtroom)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "hBY" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/landmark/xeno_spawn,
@@ -34172,6 +34973,7 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/medical/medbay/lobby)
+<<<<<<< HEAD
 "hJC" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel Quarters";
@@ -34181,6 +34983,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/service/chapel/office)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "hJD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -34802,6 +35606,7 @@
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron,
 /area/security/checkpoint/science/research)
+<<<<<<< HEAD
 "hTl" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Permabrig Cell 1"
@@ -34814,6 +35619,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "hTs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -34903,6 +35710,7 @@
 /obj/item/bedsheet/dorms,
 /turf/open/floor/iron/grimy,
 /area/commons/dorms)
+<<<<<<< HEAD
 "hUS" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
@@ -34915,6 +35723,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/court,
 /turf/open/floor/iron,
 /area/security/courtroom)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "hVi" = (
 /obj/machinery/light/small/directional/south,
 /obj/machinery/camera/directional/south{
@@ -35302,6 +36112,7 @@
 	icon_state = "wood-broken"
 	},
 /area/service/abandoned_gambling_den)
+<<<<<<< HEAD
 "ibn" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Library Access"
@@ -35310,6 +36121,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/service/library)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ibv" = (
 /obj/structure/table/wood,
 /obj/item/storage/photo_album/chapel,
@@ -35643,6 +36456,23 @@
 /obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
+"igG" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 8
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/iron/dark,
+/area/engineering/supermatter/room)
 "igQ" = (
 /obj/effect/landmark/event_spawn,
 /obj/structure/cable,
@@ -35862,6 +36692,30 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/science/xenobiology)
+"ikh" = (
+/obj/machinery/door/airlock/research/glass/incinerator/ordmix_interior{
+	name = "Burn Chamber Interior Airlock"
+	},
+/obj/machinery/button/ignition/incinerator/ordmix{
+	pixel_x = -6;
+	pixel_y = -24
+	},
+/obj/machinery/button/door/incinerator_vent_ordmix{
+	pixel_x = 8;
+	pixel_y = -24
+	},
+/obj/machinery/embedded_controller/radio/airlock_controller/incinerator_ordmix{
+	pixel_y = 32
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/science/mixing/chamber)
 "iki" = (
 /obj/machinery/shieldgen,
 /obj/effect/turf_decal/bot,
@@ -35920,6 +36774,7 @@
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/engine/co2,
 /area/engineering/atmos)
+<<<<<<< HEAD
 "ikW" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -35931,6 +36786,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ild" = (
 /obj/structure/table_frame,
 /obj/effect/decal/cleanable/dirt,
@@ -35993,6 +36850,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+<<<<<<< HEAD
 "ilP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -36003,6 +36861,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/security/courtroom)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ilY" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -36533,10 +37393,17 @@
 	dir = 4
 	},
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
 "isa" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/aisat/exterior)
+=======
+"isb" = (
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "isg" = (
 /obj/structure/sign/warning/nosmoking,
 /turf/closed/wall,
@@ -36877,6 +37744,30 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
+"iyh" = (
+/obj/machinery/door/airlock/command{
+	name = "Chief Medical Officer's Quarters";
+	req_access_txt = "40"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "CMO"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/cmo)
 "iyQ" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -37491,6 +38382,19 @@
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron,
 /area/security/checkpoint/escape)
+<<<<<<< HEAD
+=======
+"iHb" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 1
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/engineering/atmos/pumproom)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "iHq" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -37505,6 +38409,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/office)
+<<<<<<< HEAD
 "iHI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -37520,6 +38425,8 @@
 	},
 /turf/open/floor/engine/vacuum,
 /area/science/mixing/chamber)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "iHU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/contraband/random/directional/east,
@@ -38019,16 +38926,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/security/detectives_office)
-"iPx" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 1
-	},
-/obj/effect/turf_decal/delivery,
-/obj/effect/turf_decal/tile/red/half/contrasted{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/engineering/atmos/pumproom)
 "iPP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -38306,13 +39203,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/maintenance/port/greater)
-"iTE" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/obj/effect/turf_decal/tile/purple/fourcorners,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron,
-/area/science/research)
 "iTF" = (
 /obj/structure/cable,
 /turf/open/floor/iron/grimy,
@@ -38405,6 +39295,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/hallway/primary/central/fore)
+"iUO" = (
+/obj/structure/cable,
+/obj/machinery/power/smes/engineering,
+/obj/machinery/light_switch/directional/east,
+/turf/open/floor/circuit/green,
+/area/engineering/main)
 "iUP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/yellow{
@@ -38531,6 +39427,24 @@
 	},
 /turf/open/floor/iron/dark,
 /area/security/checkpoint/customs/fore)
+"iWC" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Permabrig Cell 1"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
 "iWD" = (
 /obj/structure/table,
 /obj/item/toy/cards/deck,
@@ -38690,6 +39604,20 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/lesser)
+"iZz" = (
+/obj/structure/cable,
+/obj/machinery/light/directional/north,
+/obj/machinery/airalarm/unlocked{
+	dir = 1;
+	pixel_y = 23
+	},
+/obj/machinery/atmospherics/components/unary/thermomachine/heater{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
+/area/maintenance/disposal/incinerator)
 "iZA" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -39639,6 +40567,23 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/white,
 /area/science/research)
+"jop" = (
+/obj/machinery/door/airlock/command{
+	name = "Research Division Server Room";
+	req_access_txt = "30"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/science/server)
 "joA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/blobstart,
@@ -40452,6 +41397,7 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/atmos/project)
+<<<<<<< HEAD
 "jAv" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/command{
@@ -40475,6 +41421,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/science/mixing/launch)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "jAC" = (
 /obj/item/clothing/suit/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
@@ -40555,6 +41503,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/maintenance/port/aft)
+<<<<<<< HEAD
 "jAK" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "permabolt3";
@@ -40569,6 +41518,8 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "jAO" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -40623,6 +41574,26 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/service/cafeteria)
+"jBY" = (
+/obj/machinery/door/airlock/security/glass{
+	id_tag = "gulagdoor";
+	name = "Security Transferring Center"
+	},
+/obj/structure/cable,
+/obj/effect/mapping_helpers/airlock/unres{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/security/execution/transfer)
 "jCl" = (
 /turf/open/floor/iron,
 /area/service/hydroponics)
@@ -40755,6 +41726,20 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/wood,
 /area/command/corporate_showroom)
+"jDU" = (
+/obj/machinery/door/airlock/grunge{
+	name = "Chapel Morgue";
+	req_access_txt = "27"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/service/chapel)
 "jDY" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -41299,18 +42284,6 @@
 	},
 /turf/open/floor/iron/checker,
 /area/service/janitor)
-"jMn" = (
-/obj/machinery/camera/directional/east{
-	c_tag = "Telecomms - Cooling Room";
-	name = "telecomms camera";
-	network = list("ss13","tcomms")
-	},
-/obj/effect/turf_decal/delivery,
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/tcommsat/server)
 "jMq" = (
 /obj/structure/safe,
 /obj/item/clothing/neck/stethoscope,
@@ -41366,6 +42339,11 @@
 	heat_capacity = 1e+006
 	},
 /area/maintenance/port/greater)
+"jNc" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "jNi" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -41438,6 +42416,7 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/dark,
 /area/medical/morgue)
+<<<<<<< HEAD
 "jOQ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -41450,6 +42429,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/service/lawyer,
 /turf/open/floor/iron,
 /area/service/lawoffice)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "jOR" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
@@ -42401,6 +43382,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/grimy,
 /area/service/chapel/office)
+<<<<<<< HEAD
 "kdg" = (
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -42411,6 +43393,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/tcommsat/server)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "kdv" = (
 /obj/structure/table/reinforced,
 /obj/machinery/microwave{
@@ -42640,16 +43624,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
-"kgo" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
-/obj/machinery/atmospherics/pipe/bridge_pipe/supply/visible{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/purple/anticorner/contrasted{
-	dir = 1
-	},
-/turf/open/floor/iron/white,
-/area/science/xenobiology)
 "kgt" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral,
@@ -42792,14 +43766,6 @@
 	},
 /turf/open/floor/iron,
 /area/security/prison)
-"kiQ" = (
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 4
-	},
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "kiT" = (
 /obj/effect/landmark/start/hangover,
 /obj/effect/turf_decal/tile/neutral{
@@ -42912,23 +43878,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
-"kkJ" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 8
-	},
-/obj/effect/turf_decal/bot,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral,
-/turf/open/floor/iron/dark,
-/area/engineering/supermatter/room)
 "kkO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -42975,6 +43924,18 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/maintenance/department/engine/atmos)
+<<<<<<< HEAD
+=======
+"klf" = (
+/obj/machinery/atmospherics/components/binary/valve/digital,
+/turf/open/floor/iron/white,
+/area/science/storage)
+"klg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/smart/simple/yellow/visible,
+/turf/open/floor/iron,
+/area/engineering/atmos)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "kli" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/fire/firefighter,
@@ -43023,11 +43984,35 @@
 	},
 /turf/open/floor/iron/dark,
 /area/engineering/atmos)
+<<<<<<< HEAD
 "klT" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/science/storage)
+=======
+"kme" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/door/airlock/vault{
+	name = "Vault Door";
+	req_access_txt = "53"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/hallway/primary/central/fore)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "kml" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/hidden{
@@ -43296,6 +44281,24 @@
 	},
 /turf/open/floor/iron/checker,
 /area/service/hydroponics/garden/abandoned)
+"krw" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-left"
+	},
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
 "krH" = (
 /obj/machinery/computer/atmos_control/mix_tank{
 	dir = 4
@@ -43667,6 +44670,7 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
+<<<<<<< HEAD
 "kwr" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/iron/dark,
@@ -43691,6 +44695,12 @@
 	},
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
+=======
+"kwx" = (
+/obj/structure/table,
+/turf/open/floor/iron,
+/area/commons/fitness/recreation)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "kwF" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -43997,6 +45007,20 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central/aft)
+"kCt" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_access_txt = "12"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron,
+/area/maintenance/port/greater)
 "kCu" = (
 /obj/structure/railing{
 	dir = 10
@@ -44612,11 +45636,28 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/storage_shared)
+<<<<<<< HEAD
 "kMr" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/science/mixing/launch)
+=======
+"kMk" = (
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab";
+	req_access_txt = "8"
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/dark/visible,
+/obj/structure/cable,
+/obj/machinery/door/firedoor/heavy,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/science/mixing)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "kMv" = (
 /obj/effect/turf_decal/siding/yellow/corner{
 	dir = 8
@@ -45012,6 +46053,25 @@
 	},
 /turf/open/floor/iron/checker,
 /area/service/theater)
+"kSj" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Detective's Office"
+	},
+/obj/effect/landmark/navigate_destination,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/detective,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/security/detectives_office)
 "kSo" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -45947,6 +47007,22 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/qm)
+"lhJ" = (
+/obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/airlock/research/glass{
+	name = "Ordnance Lab";
+	req_access_txt = "8"
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/white,
+/area/science/storage)
 "lhY" = (
 /turf/closed/wall/r_wall,
 /area/ai_monitored/command/nuke_storage)
@@ -46025,6 +47101,20 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/port/fore)
+"liG" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/purple,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/maintenance/department/science)
 "liI" = (
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/snack,
@@ -46049,12 +47139,40 @@
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/wood,
 /area/commons/dorms)
+"lja" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "medbay-passthrough"
+	},
+/obj/machinery/door/airlock/medical{
+	name = "Medbay";
+	req_access_txt = "5"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/medical/medbay/central)
 "ljg" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
+"ljh" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/random/directional/west,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "ljn" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -46099,6 +47217,7 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
+<<<<<<< HEAD
 "lkx" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
@@ -46112,6 +47231,8 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/department/science)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "lkE" = (
 /obj/structure/closet/crate,
 /obj/effect/turf_decal/bot,
@@ -46162,6 +47283,7 @@
 	dir = 4
 	},
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
 "lln" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -46175,6 +47297,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "lls" = (
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 4
@@ -46534,6 +47658,21 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/maintenance/port/lesser)
+"lqc" = (
+/obj/machinery/door/airlock/grunge{
+	name = "Chapel Quarters";
+	req_access_txt = "27"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/service/chapel/office)
 "lqq" = (
 /turf/open/floor/wood,
 /area/service/library/abandoned)
@@ -46566,6 +47705,29 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/iron,
 /area/engineering/gravity_generator)
+"lqN" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Office"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/office)
 "lqP" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -46651,17 +47813,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/service/library)
-"lsv" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/random/directional/west,
-/turf/open/floor/plating,
-/area/maintenance/port/fore)
 "lsy" = (
 /obj/structure/cable,
 /turf/closed/wall,
 /area/security/checkpoint/medical)
+<<<<<<< HEAD
 "lsz" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -46674,6 +47830,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/tcommsat/computer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "lsG" = (
 /turf/open/floor/iron,
 /area/security/prison)
@@ -46934,13 +48092,6 @@
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted,
 /turf/open/floor/iron/dark,
 /area/security/checkpoint/customs/fore)
-"lvO" = (
-/obj/effect/turf_decal/delivery,
-/obj/machinery/atmospherics/components/binary/thermomachine/heater/on{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "lvW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -46963,6 +48114,7 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/hop)
+<<<<<<< HEAD
 "lwc" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "gatewayshutters";
@@ -46974,6 +48126,8 @@
 	},
 /turf/open/floor/iron,
 /area/command/gateway)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "lwe" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
 /obj/effect/decal/cleanable/dirt,
@@ -47600,6 +48754,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark/corner,
 /area/maintenance/disposal/incinerator)
+"lDA" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp,
+/obj/effect/turf_decal/tile/purple,
+/obj/item/radio/intercom/directional/east,
+/obj/machinery/newscaster/directional/south,
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/rd)
 "lDI" = (
 /obj/structure/reagent_dispensers/plumbed{
 	dir = 1
@@ -47641,6 +48803,22 @@
 	},
 /turf/open/floor/iron,
 /area/science/research/abandoned)
+"lEn" = (
+/obj/machinery/door/airlock/grunge{
+	name = "Chapel Office";
+	req_access_txt = "27"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/landmark/navigate_destination,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/service/chapel)
 "lEo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -48695,14 +49873,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
-"lSn" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 8
-	},
-/obj/machinery/firealarm/directional/west,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/white,
-/area/science/research)
 "lSw" = (
 /obj/structure/closet,
 /obj/effect/spawner/random/maintenance/two,
@@ -48894,6 +50064,22 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/hallway/secondary/entry)
+"lVf" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/corner,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/aisat/exterior)
+"lVn" = (
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister,
+/obj/effect/turf_decal/box/red,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
 "lVw" = (
 /obj/structure/sink{
 	dir = 4;
@@ -49272,6 +50458,12 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron,
 /area/cargo/storage)
+"lZF" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
+/turf/open/floor/iron,
+/area/science/xenobiology)
 "lZN" = (
 /obj/structure/table/reinforced,
 /obj/machinery/status_display/ai/directional/north,
@@ -49763,6 +50955,12 @@
 	},
 /turf/open/floor/iron,
 /area/commons/toilet/locker)
+"mfE" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/random/directional/south,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "mfK" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -50521,6 +51719,7 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
+<<<<<<< HEAD
 "mri" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -50534,6 +51733,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
 /turf/open/floor/iron/dark,
 /area/security/execution/education)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "mrr" = (
 /obj/machinery/holopad,
 /obj/structure/cable,
@@ -50609,6 +51810,24 @@
 /obj/effect/turf_decal/loading_area,
 /turf/open/floor/iron,
 /area/command/teleporter)
+"msu" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Permabrig Cell 3"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
 "msw" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Central Hallway - Science Aft";
@@ -50630,6 +51849,21 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron/dark/smooth_large,
 /area/service/hydroponics)
+"msO" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Prisoner Workroom"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison)
 "msU" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -50830,20 +52064,6 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/maintenance/fore)
-"mwC" = (
-/obj/structure/cable,
-/obj/machinery/camera/directional/north{
-	c_tag = "Atmospherics - Incinerator";
-	name = "atmospherics camera"
-	},
-/obj/structure/extinguisher_cabinet/directional/north,
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/visible{
-	dir = 4
-	},
-/obj/effect/turf_decal/bot,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
-/area/maintenance/disposal/incinerator)
 "mwO" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -51221,6 +52441,23 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/hos)
+"mCn" = (
+/obj/machinery/door/airlock/research/glass{
+	name = "Ordnance Lab";
+	req_access_txt = "8"
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/atmospherics/pipe/smart/simple/purple/visible{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/airless,
+/area/science/mixing/chamber)
 "mCv" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/small/directional/west,
@@ -51342,6 +52579,7 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/storage)
+<<<<<<< HEAD
 "mFc" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -51355,6 +52593,8 @@
 	},
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "mFd" = (
 /obj/effect/spawner/random/structure/crate_empty,
 /turf/open/floor/plating,
@@ -51479,6 +52719,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/science/research)
+<<<<<<< HEAD
 "mIv" = (
 /obj/machinery/door/airlock/public/glass{
 	id_tag = "permabolt3";
@@ -51494,6 +52735,8 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "mIy" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -51845,6 +53088,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/service/chapel/funeral)
+"mNA" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/door/poddoor/shutters/window{
+	id = "gatewayshutters";
+	name = "Gateway Chamber Shutters"
+	},
+/turf/open/floor/iron,
+/area/command/gateway)
 "mNS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -52018,10 +53272,29 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/storage)
+<<<<<<< HEAD
 "mQL" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron,
 /area/science/research)
+=======
+"mQJ" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Courtroom"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/security/courtroom)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "mQN" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -52049,6 +53322,35 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/engineering/atmos/project)
+<<<<<<< HEAD
+=======
+"mRf" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/landmark/navigate_destination,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-right"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
+"mRh" = (
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
+/area/science/mixing/launch)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "mRi" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -52189,6 +53491,25 @@
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/maintenance/disposal/incinerator)
+"mTJ" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/highsecurity{
+	name = "MiniSat Upload";
+	req_access_txt = "16"
+	},
+/obj/machinery/flasher/directional/west{
+	id = "AI"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
 "mTP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -52528,6 +53849,22 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/ai_monitored/command/storage/eva)
+"mZC" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-left"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
 "mZD" = (
 /turf/closed/wall,
 /area/engineering/atmos)
@@ -53008,6 +54345,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/security/prison)
+<<<<<<< HEAD
 "njF" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Permabrig Visitation"
@@ -53016,6 +54354,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/security/prison)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "njG" = (
 /obj/structure/table,
 /obj/item/folder/white,
@@ -54063,6 +55403,7 @@
 /obj/effect/turf_decal/tile/red/half/contrasted,
 /turf/open/floor/iron/white,
 /area/security/medical)
+<<<<<<< HEAD
 "nCb" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Permabrig Cell 4"
@@ -54075,6 +55416,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "nCk" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -54556,6 +55899,7 @@
 /obj/item/analyzer,
 /turf/open/floor/iron,
 /area/engineering/atmos/hfr_room)
+<<<<<<< HEAD
 "nKs" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
@@ -54570,6 +55914,8 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/maintenance/department/science)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "nKu" = (
 /obj/machinery/duct,
 /obj/effect/turf_decal/trimline/yellow/warning,
@@ -54636,15 +55982,6 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/service/cafeteria)
-"nKV" = (
-/obj/structure/table/wood,
-/obj/item/flashlight/lamp,
-/obj/effect/turf_decal/tile/purple,
-/obj/item/radio/intercom/directional/east,
-/obj/machinery/newscaster/directional/south,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/white,
-/area/command/heads_quarters/rd)
 "nKX" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -55807,19 +57144,6 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central/fore)
-"ocl" = (
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/effect/turf_decal/delivery,
-/obj/machinery/atmospherics/components/binary/thermomachine/heater/on{
-	dir = 8
-	},
-/turf/open/floor/iron/dark/corner,
-/area/engineering/atmos/pumproom)
 "ocu" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/tile/neutral{
@@ -55942,6 +57266,7 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/drone_bay)
+<<<<<<< HEAD
 "odR" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -55951,6 +57276,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron/dark,
 /area/security/interrogation)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "odX" = (
 /obj/structure/cable,
 /obj/machinery/power/terminal,
@@ -56352,6 +57679,19 @@
 	},
 /turf/open/floor/plating,
 /area/command/heads_quarters/cmo)
+"ojC" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Interrogation"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/security/interrogation)
 "ojD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible,
 /obj/effect/turf_decal/stripes/line{
@@ -56473,6 +57813,27 @@
 	},
 /turf/open/floor/iron,
 /area/commons/storage/primary)
+"olr" = (
+/obj/structure/cable,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access_txt = "5;12"
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "medbay-passthrough"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/medical/medbay/central)
 "olt" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -57355,6 +58716,32 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/hallway/primary/central/fore)
+<<<<<<< HEAD
+=======
+"oxW" = (
+/turf/open/floor/iron/dark,
+/area/science/mixing)
+"oyb" = (
+/obj/machinery/door/airlock/public/glass{
+	id_tag = "permabolt3";
+	name = "Cell 4"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "permashut4"
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "oyi" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -58082,6 +59469,14 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/science/xenobiology)
+"oLH" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "cmoshutter";
+	name = "CMO Office Shutters"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/command/heads_quarters/cmo)
 "oLN" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/turf_decal/stripes/line{
@@ -58721,6 +60116,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/cafeteria,
 /area/security/prison)
+<<<<<<< HEAD
 "oWN" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -58735,6 +60131,8 @@
 	},
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "oWV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -59314,6 +60712,7 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central/fore)
+<<<<<<< HEAD
 "peX" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/purple,
@@ -59325,6 +60724,8 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/maintenance/department/science)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "pff" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -59671,6 +61072,20 @@
 /obj/effect/turf_decal/tile/red/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/security/checkpoint/engineering)
+"plh" = (
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab";
+	req_access_txt = "8"
+	},
+/obj/machinery/atmospherics/pipe/smart/simple/purple/visible,
+/obj/machinery/door/firedoor/heavy,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/science/mixing)
 "pli" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -59759,6 +61174,21 @@
 /obj/effect/turf_decal/trimline/yellow/filled/corner,
 /turf/open/floor/iron,
 /area/engineering/atmos)
+"pno" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Security Transferring Control"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/security/execution/transfer)
 "pnu" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/light/directional/south,
@@ -59977,6 +61407,17 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/medical/medbay/central)
+"pro" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/obj/item/wrench{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/turf/open/floor/iron/dark,
+/area/service/kitchen/coldroom)
 "prx" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/electrical,
@@ -60742,6 +62183,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
 /turf/open/floor/iron/dark/corner,
 /area/maintenance/department/electrical)
+<<<<<<< HEAD
 "pDl" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel Office";
@@ -60754,6 +62196,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/service/chapel)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "pDm" = (
 /obj/structure/table,
 /obj/item/folder,
@@ -60800,6 +62244,21 @@
 	},
 /turf/open/floor/iron,
 /area/service/kitchen)
+"pDN" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/machinery/door/airlock/command{
+	name = "Telecomms Server Room";
+	req_access_txt = "61"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/telecomms,
+/area/tcommsat/server)
 "pDO" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-21"
@@ -60840,6 +62299,20 @@
 	},
 /turf/open/floor/iron,
 /area/command/heads_quarters/rd)
+"pED" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Library Access"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/service/library)
 "pEJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -61316,14 +62789,6 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
 /area/maintenance/port/greater)
-"pKR" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
-/area/science/xenobiology)
 "pLc" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/door/firedoor,
@@ -61523,6 +62988,13 @@
 	},
 /turf/open/floor/iron,
 /area/security/brig)
+"pOD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/iron,
+/area/maintenance/port/aft)
 "pOF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/grimy,
@@ -61918,14 +63390,6 @@
 /obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/wood,
 /area/command/meeting_room/council)
-"pTs" = (
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "pTK" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -61951,11 +63415,37 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/medical/virology)
+<<<<<<< HEAD
 "pTS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/maintenance/port/aft)
+=======
+"pTW" = (
+/obj/machinery/door/airlock/command{
+	name = "Head of Security's Office"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/hos,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/heads_quarters/hos)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "pTX" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -62408,6 +63898,7 @@
 /obj/structure/sign/poster/official/random/directional/south,
 /turf/open/floor/iron,
 /area/cargo/miningoffice)
+<<<<<<< HEAD
 "qay" = (
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
@@ -62421,6 +63912,8 @@
 	},
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "qaI" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
@@ -62667,6 +64160,29 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
+"qfE" = (
+/obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/door/airlock/highsecurity{
+	name = "MiniSat Chamber";
+	req_access_txt = "16"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "aicoredoor";
+	name = "AI Core Access"
+	},
+/obj/machinery/flasher/directional/west{
+	id = "AI"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
 "qfG" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/closet/crate/hydroponics,
@@ -62822,6 +64338,7 @@
 /obj/effect/turf_decal/delivery/white,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
+<<<<<<< HEAD
 "qid" = (
 /obj/machinery/door/firedoor,
 /obj/effect/mapping_helpers/airlock/locked,
@@ -62841,6 +64358,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "qif" = (
 /obj/structure/cable,
 /obj/machinery/door/poddoor/shutters/radiation/preopen{
@@ -63646,6 +65165,27 @@
 /obj/item/taperecorder,
 /turf/open/floor/iron/grimy,
 /area/command/bridge)
+"qup" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible/layer2,
+/obj/machinery/atmospherics/pipe/smart/simple/dark/visible{
+	dir = 4
+	},
+/obj/machinery/door/airlock/public/glass/incinerator/atmos_interior,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/embedded_controller/radio/airlock_controller/incinerator_atmos{
+	pixel_y = -24
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/maintenance/disposal/incinerator)
 "qus" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/tile/blue{
@@ -63863,6 +65403,7 @@
 	},
 /turf/open/floor/engine,
 /area/maintenance/disposal/incinerator)
+<<<<<<< HEAD
 "qyj" = (
 /obj/structure/cable,
 /obj/machinery/power/smes/engineering{
@@ -63871,6 +65412,8 @@
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/circuit/green,
 /area/engineering/main)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "qyn" = (
 /obj/effect/landmark/event_spawn,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -64325,6 +65868,7 @@
 /obj/item/pen,
 /turf/open/floor/wood,
 /area/service/electronic_marketing_den)
+<<<<<<< HEAD
 "qFb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch{
@@ -64340,6 +65884,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/aisat_interior)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "qFl" = (
 /obj/structure/table/reinforced,
 /obj/item/stock_parts/cell/high,
@@ -64707,6 +66253,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+<<<<<<< HEAD
 "qKY" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -64715,6 +66262,8 @@
 	},
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "qKZ" = (
 /obj/structure/closet/secure_closet/engineering_chief,
 /obj/machinery/camera/directional/north{
@@ -65150,6 +66699,7 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
 "qRE" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Permabrig Cell 2"
@@ -65162,6 +66712,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "qRG" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -65393,6 +66945,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
+<<<<<<< HEAD
 "qVd" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -65408,6 +66961,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/detective,
 /turf/open/floor/iron,
 /area/security/detectives_office)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "qVi" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -65773,21 +67328,6 @@
 	icon_state = "wood-broken7"
 	},
 /area/service/abandoned_gambling_den)
-"qZP" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch";
-	req_access_txt = "12"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/maintenance/port/fore)
 "qZW" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -65881,6 +67421,19 @@
 	icon_state = "chapel"
 	},
 /area/service/chapel)
+"rbM" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Library Access"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/service/library)
 "rbQ" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
@@ -65930,6 +67483,25 @@
 	dir = 4
 	},
 /area/hallway/secondary/entry)
+"rcx" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-right"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
 "rcK" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
@@ -66172,6 +67744,24 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/security/prison)
+"rgY" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_one_access_txt = "12;47"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "genetics-passthrough"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/maintenance/department/science)
 "rha" = (
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/cafeteria,
@@ -68948,6 +70538,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/medical/break_room)
+"rWr" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/status_display/evac/directional/east,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
+/area/maintenance/disposal/incinerator)
 "rWs" = (
 /obj/structure/cable,
 /obj/structure/table,
@@ -69272,6 +70869,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/iron,
 /area/cargo/office)
+<<<<<<< HEAD
 "sbU" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -69289,6 +70887,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron,
 /area/security/office)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "scB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/yellow{
@@ -69508,17 +71108,6 @@
 /obj/effect/turf_decal/tile/green/fourcorners,
 /turf/open/floor/iron,
 /area/medical/virology)
-"sfY" = (
-/obj/machinery/light/directional/east,
-/obj/effect/turf_decal/trimline/yellow/filled/line{
-	dir = 4
-	},
-/obj/machinery/atmospherics/components/trinary/filter/atmos/co2{
-	dir = 1
-	},
-/obj/effect/turf_decal/bot,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "sga" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -69934,6 +71523,7 @@
 	},
 /turf/open/floor/wood,
 /area/service/theater)
+<<<<<<< HEAD
 "slF" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
@@ -69951,6 +71541,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/science/mixing)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "slP" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -70465,6 +72057,17 @@
 /obj/machinery/vending/wardrobe/curator_wardrobe,
 /turf/open/floor/iron/dark,
 /area/service/library)
+"ssO" = (
+/obj/machinery/light/directional/west,
+/obj/machinery/status_display/ai/directional/west,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/command/heads_quarters/rd)
 "stg" = (
 /obj/machinery/vending/wardrobe/chap_wardrobe,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -70703,6 +72306,7 @@
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron,
 /area/engineering/storage)
+<<<<<<< HEAD
 "sxo" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Infirmary"
@@ -70716,6 +72320,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron/white,
 /area/security/medical)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "sxu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -71347,6 +72953,13 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
+"sFO" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/science/xenobiology)
 "sFV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/event_spawn,
@@ -71447,6 +73060,7 @@
 	},
 /turf/open/floor/iron,
 /area/command/heads_quarters/rd)
+<<<<<<< HEAD
 "sGN" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Sanitarium"
@@ -71459,6 +73073,8 @@
 	dir = 1
 	},
 /area/security/prison)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "sGP" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating,
@@ -71505,6 +73121,22 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
 /area/service/library)
+"sHs" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Sanitarium"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/white/side{
+	dir = 1
+	},
+/area/security/prison)
 "sHI" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/turf_decal/siding/yellow,
@@ -72592,13 +74224,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/science/lobby)
-"sYy" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/turf/open/floor/plating{
-	icon_state = "platingdmg1"
-	},
-/area/maintenance/port/fore)
 "sYK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/maintenance,
@@ -72630,6 +74255,19 @@
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/iron,
 /area/hallway/primary/central/aft)
+"sZf" = (
+/obj/structure/table/glass,
+/obj/item/folder/white,
+/obj/item/flashlight/pen,
+/obj/item/clothing/neck/stethoscope,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/cmo)
 "sZk" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -72873,6 +74511,18 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/port/fore)
+"tcw" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/book/manual/wiki/tcomms,
+/obj/item/wrench,
+/obj/item/screwdriver{
+	pixel_y = 5
+	},
+/obj/effect/turf_decal/delivery,
+/obj/structure/extinguisher_cabinet/directional/east,
+/turf/open/floor/iron,
+/area/tcommsat/server)
 "tcF" = (
 /turf/open/floor/engine/plasma,
 /area/engineering/atmos)
@@ -73002,6 +74652,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/science/robotics/mechbay)
+"tet" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Library Access"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/service/library)
 "tex" = (
 /obj/structure/disposalpipe/sorting/mail{
 	dir = 4;
@@ -73134,13 +74795,6 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/hop)
-"tfT" = (
-/obj/effect/turf_decal/bot,
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/science/xenobiology)
 "tgb" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -73993,6 +75647,26 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/commons/storage/primary)
+"trq" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Warden's Office"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/armory,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/security/warden)
 "tru" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -74274,6 +75948,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+<<<<<<< HEAD
 "twP" = (
 /obj/machinery/door/airlock/command{
 	name = "Head of Security's Office"
@@ -74291,6 +75966,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/hos,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "twT" = (
 /obj/machinery/status_display/evac/directional/south,
 /obj/machinery/portable_atmospherics/canister/air,
@@ -74427,6 +76104,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/brig)
+<<<<<<< HEAD
 "tyN" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -74442,6 +76120,8 @@
 	},
 /turf/open/floor/iron,
 /area/medical/medbay/central)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "tyS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/holopad,
@@ -74508,6 +76188,7 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
+<<<<<<< HEAD
 "tzL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
@@ -74519,6 +76200,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron/dark,
 /area/security/interrogation)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "tzN" = (
 /obj/effect/landmark/start/hangover,
 /obj/effect/turf_decal/bot,
@@ -74670,6 +76353,17 @@
 "tCh" = (
 /turf/closed/wall,
 /area/science/misc_lab)
+"tCv" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/security/execution/transfer)
 "tCy" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -74871,19 +76565,32 @@
 	},
 /turf/open/floor/iron/dark,
 /area/engineering/transit_tube)
+"tGr" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch{
+	name = "MiniSat Access";
+	req_one_access_txt = "32;19"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
 "tGC" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/command/teleporter)
-"tGV" = (
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on,
-/obj/machinery/light_switch/directional/east{
-	pixel_x = 21
-	},
-/turf/open/floor/iron/dark,
-/area/science/server)
 "tHa" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -74908,6 +76615,7 @@
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron,
 /area/commons/vacant_room/commissary)
+<<<<<<< HEAD
 "tHp" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -74923,6 +76631,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/iron,
 /area/security/execution/transfer)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "tHD" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -75396,6 +77106,7 @@
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/service/hydroponics/garden)
+<<<<<<< HEAD
 "tOv" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -75411,6 +77122,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron,
 /area/security/office)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "tOD" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -75458,6 +77171,7 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/dark,
 /area/service/hydroponics/garden)
+<<<<<<< HEAD
 "tPc" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -75473,6 +77187,8 @@
 	},
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "tPe" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -75698,6 +77414,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai)
+<<<<<<< HEAD
 "tTf" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel Morgue";
@@ -75706,12 +77423,15 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/service/chapel)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "tTh" = (
 /obj/structure/table/wood,
 /obj/item/storage/briefcase,
 /obj/item/toy/figure/assistant,
 /turf/open/floor/iron/grimy,
 /area/commons/vacant_room/office)
+<<<<<<< HEAD
 "tTm" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Library Access"
@@ -75721,6 +77441,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/service/library)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "tTx" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -76456,6 +78178,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/cargo/sorting)
+"ugM" = (
+/obj/machinery/door/airlock/grunge{
+	name = "Crematorium";
+	req_access_txt = "27"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/service/chapel/funeral)
 "ugS" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/junction{
 	dir = 8
@@ -76665,12 +78402,27 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/supermatter/room)
+<<<<<<< HEAD
 "ukk" = (
 /obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden{
 	dir = 4
 	},
 /turf/closed/wall,
 /area/maintenance/port/fore)
+=======
+"ukr" = (
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/science/storage)
+"ukt" = (
+/obj/machinery/atmospherics/components/unary/outlet_injector/monitored{
+	chamber_id = "ordnancegas1";
+	dir = 4
+	},
+/turf/open/floor/engine/vacuum,
+/area/science/mixing/chamber)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "uky" = (
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom"
@@ -77249,6 +79001,7 @@
 /obj/structure/chair/comfy/brown,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
+<<<<<<< HEAD
 "usa" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Prisoner Workroom"
@@ -77258,6 +79011,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/security/prison)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "usi" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -77313,6 +79068,19 @@
 	},
 /turf/open/space,
 /area/space/nearstation)
+"usS" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Courtroom"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/security/courtroom)
 "utb" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/spawner/random/medical/memeorgans{
@@ -77687,11 +79455,6 @@
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
-"uxV" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/maintenance/port/fore)
 "uxW" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -77858,6 +79621,16 @@
 	},
 /turf/open/floor/plating,
 /area/service/abandoned_gambling_den)
+"uAM" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/turf/open/floor/iron/dark,
+/area/maintenance/disposal/incinerator)
 "uAQ" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -78086,6 +79859,7 @@
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /turf/open/floor/iron,
 /area/science/research)
+<<<<<<< HEAD
 "uFh" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/incinerator_ordmix,
 /turf/open/floor/engine,
@@ -78111,6 +79885,41 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron,
 /area/science/mixing)
+=======
+"uEY" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Courtroom"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/security/courtroom)
+"uFl" = (
+/turf/open/floor/iron/grimy,
+/area/service/library/abandoned)
+"uFo" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "brigprison";
+	name = "Prison Blast door"
+	},
+/obj/machinery/door/airlock/security/glass{
+	name = "Permabrig Visitation"
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/security/prison)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "uFp" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -78179,6 +79988,24 @@
 /obj/structure/sign/poster/contraband/random/directional/south,
 /turf/open/floor/iron,
 /area/service/theater)
+"uGl" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock{
+	name = "Law Office"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/bot,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/service/lawyer,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/service/lawoffice)
 "uGq" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -78354,6 +80181,23 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
+"uJm" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_one_access_txt = "12;47"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "genetics-passthrough"
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/maintenance/department/science)
 "uJp" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
@@ -78917,6 +80761,25 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/maintenance/port/aft)
+"uUl" = (
+/obj/machinery/door/airlock/medical/glass{
+	name = "Infirmary"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/tile/red/half/contrasted{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/security/medical)
 "uUB" = (
 /obj/structure/cable,
 /obj/effect/spawner/structure/window/reinforced,
@@ -79290,6 +81153,27 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/disposal)
+"uZD" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-left"
+	},
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
 "uZM" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -79359,10 +81243,6 @@
 	dir = 1
 	},
 /area/hallway/secondary/entry)
-"vaW" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
-/turf/closed/wall/r_wall,
-/area/command/heads_quarters/rd)
 "vbb" = (
 /turf/closed/wall,
 /area/commons/dorms)
@@ -79427,6 +81307,7 @@
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/iron/textured_large,
 /area/engineering/atmos/project)
+<<<<<<< HEAD
 "vck" = (
 /obj/structure/table,
 /obj/item/clipboard,
@@ -79436,6 +81317,15 @@
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/science/server)
+=======
+"vbY" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/rd)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "vcs" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -79626,6 +81516,11 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/sorting)
+"veY" = (
+/obj/structure/cable,
+/obj/machinery/power/smes/engineering,
+/turf/open/floor/circuit/green,
+/area/engineering/main)
 "vfb" = (
 /obj/machinery/vending/wardrobe/hydro_wardrobe,
 /obj/effect/turf_decal/bot,
@@ -79697,6 +81592,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
 /area/security/medical)
+<<<<<<< HEAD
 "vfT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -79710,6 +81606,18 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/main)
+=======
+"vfQ" = (
+/obj/structure/table/wood,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable,
+/obj/item/storage/fancy/donut_box,
+/turf/open/floor/iron,
+/area/medical/break_room)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "vfU" = (
 /obj/machinery/field/generator,
 /obj/effect/decal/cleanable/dirt,
@@ -80273,12 +82181,33 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/computer/pod/old/mass_driver_controller/ordnancedriver{
 	pixel_y = -24
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/science/mixing/launch)
+=======
+/turf/open/floor/iron,
+/area/maintenance/port/aft)
+"vor" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Courtroom"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/bot,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/court,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron,
+/area/security/courtroom)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "vos" = (
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
@@ -80633,6 +82562,15 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/captain/private)
+"vtv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/suit_storage_unit/rd,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/obj/machinery/computer/security/telescreen/entertainment/directional/west,
+/turf/open/floor/iron,
+/area/command/heads_quarters/rd)
 "vtG" = (
 /obj/structure/table/reinforced,
 /obj/machinery/firealarm/directional/south,
@@ -80761,6 +82699,7 @@
 /obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
 "vwd" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -80771,6 +82710,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
 /turf/open/floor/iron,
 /area/security/warden)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "vwn" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/yellow{
@@ -81598,6 +83539,24 @@
 /obj/structure/bookcase/random,
 /turf/open/floor/wood,
 /area/service/library/abandoned)
+"vLn" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/public/glass{
+	name = "Courtroom"
+	},
+/obj/effect/landmark/event_spawn,
+/obj/effect/turf_decal/bot,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/court,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/security/courtroom)
 "vLs" = (
 /turf/closed/wall,
 /area/maintenance/fore)
@@ -81638,20 +83597,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/maintenance/aft)
-"vME" = (
-/obj/structure/table/glass,
-/obj/item/folder/white,
-/obj/item/flashlight/pen,
-/obj/item/clothing/neck/stethoscope,
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/white,
-/area/command/heads_quarters/cmo)
 "vMG" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -82025,6 +83970,25 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/medical/break_room)
+"vSK" = (
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab";
+	req_access_txt = "8"
+	},
+/obj/machinery/door/firedoor/heavy,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/science/mixing/hallway)
 "vSQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -82528,6 +84492,28 @@
 	},
 /turf/open/floor/glass,
 /area/maintenance/space_hut/observatory)
+"wax" = (
+/obj/machinery/door/airlock/public/glass{
+	id_tag = "permabolt2";
+	name = "Cell 2"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "permashut2"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
 "way" = (
 /obj/structure/rack,
 /obj/item/analyzer{
@@ -82956,6 +84942,26 @@
 /obj/item/lighter,
 /turf/open/floor/carpet,
 /area/command/corporate_showroom)
+"wik" = (
+/obj/machinery/door/airlock/public/glass{
+	id_tag = "permabolt3";
+	name = "Cell 3"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "permashut3"
+	},
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/prison/safe)
 "wip" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -83245,6 +85251,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/iron,
 /area/cargo/drone_bay)
+<<<<<<< HEAD
 "wnW" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "gatewayshutters";
@@ -83257,6 +85264,8 @@
 	},
 /turf/open/floor/iron,
 /area/command/gateway)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "woa" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -83746,19 +85755,6 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/service/chapel/office)
-"wxi" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/book/manual/wiki/tcomms,
-/obj/item/wrench,
-/obj/item/screwdriver{
-	pixel_y = 5
-	},
-/obj/effect/turf_decal/delivery,
-/obj/structure/extinguisher_cabinet/directional/east,
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
-/turf/open/floor/iron,
-/area/tcommsat/server)
 "wxl" = (
 /obj/structure/table/wood,
 /obj/item/newspaper{
@@ -83896,6 +85892,7 @@
 	},
 /turf/open/space/basic,
 /area/space)
+<<<<<<< HEAD
 "wyO" = (
 /obj/machinery/door/airlock{
 	name = "Jury"
@@ -83905,6 +85902,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/court,
 /turf/open/floor/iron/dark,
 /area/security/courtroom)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "wzf" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -84229,6 +86228,21 @@
 /obj/item/storage/fancy/egg_box,
 /turf/open/floor/iron/cafeteria,
 /area/security/prison)
+"wDj" = (
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/maintenance/department/science)
 "wDo" = (
 /obj/machinery/computer/warrant{
 	dir = 1
@@ -84334,6 +86348,21 @@
 	},
 /turf/open/floor/iron,
 /area/service/abandoned_gambling_den/gaming)
+"wEO" = (
+/obj/machinery/door/airlock{
+	name = "Jury"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/all/security/court,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/security/courtroom)
 "wEP" = (
 /turf/open/floor/iron{
 	dir = 1;
@@ -84556,6 +86585,34 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/hallway/primary/central/fore)
+"wJb" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/machinery/door/airlock/vault{
+	name = "Vault Door";
+	req_access_txt = "53"
+	},
+/obj/structure/sign/warning/electricshock{
+	pixel_y = -32
+	},
+/obj/structure/sign/warning/securearea{
+	pixel_y = 32
+	},
+/obj/effect/landmark/navigate_destination,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/command/nuke_storage)
 "wJo" = (
 /obj/machinery/status_display/evac/directional/west,
 /obj/effect/turf_decal/tile/red{
@@ -84606,6 +86663,7 @@
 	},
 /turf/open/floor/iron,
 /area/security/prison/safe)
+<<<<<<< HEAD
 "wKh" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden{
@@ -84613,6 +86671,15 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
+=======
+"wKA" = (
+/obj/machinery/computer/atmos_control/noreconnect{
+	atmos_chambers = list("ordnancegas1" = "Burn Chamber", "ordnancegas2" = "Freezer Chamber")
+	},
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/dark,
+/area/science/mixing)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "wKI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
@@ -84750,14 +86817,6 @@
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/grimy,
 /area/command/heads_quarters/hop)
-"wNj" = (
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
-/obj/machinery/status_display/evac/directional/east,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
-/area/maintenance/disposal/incinerator)
 "wNz" = (
 /obj/machinery/camera/directional/south{
 	c_tag = "Atmospherics - Mix Cell";
@@ -85028,6 +87087,7 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/cargo/sorting)
+<<<<<<< HEAD
 "wQW" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -85042,6 +87102,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
 /turf/open/floor/iron,
 /area/security/warden)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "wQX" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/stripes/line{
@@ -85436,6 +87498,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/cafeteria,
 /area/service/cafeteria)
+<<<<<<< HEAD
 "wXE" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Library Access"
@@ -85444,6 +87507,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/service/library)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "wXH" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
@@ -85832,6 +87897,25 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/commons/storage/primary)
+"xcO" = (
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command/glass{
+	name = "Bridge Access";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "bridge-left"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/command/bridge)
 "xcV" = (
 /obj/structure/reflector/single,
 /obj/effect/decal/cleanable/dirt,
@@ -85843,6 +87927,26 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/cargo/sorting)
+<<<<<<< HEAD
+=======
+"xdt" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/camera/directional/north{
+	c_tag = "Science - Lab Access";
+	name = "science camera";
+	network = list("ss13","rd")
+	},
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/iron,
+/area/science/research)
+"xdw" = (
+/obj/structure/cable,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/directional/north,
+/obj/machinery/power/apc/sm_apc/directional/north,
+/turf/open/floor/plating,
+/area/engineering/supermatter/room)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "xdx" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -85902,6 +88006,7 @@
 	},
 /turf/open/floor/iron,
 /area/construction/mining/aux_base)
+<<<<<<< HEAD
 "xes" = (
 /obj/machinery/door/airlock/command{
 	name = "Research Division Server Room";
@@ -85913,6 +88018,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/science/server)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "xet" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -86340,11 +88447,6 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
-"xmc" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/airalarm/directional/west,
-/turf/open/floor/plating,
-/area/maintenance/port/fore)
 "xmE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -86440,6 +88542,17 @@
 	},
 /turf/open/floor/plating,
 /area/engineering/atmos)
+"xpe" = (
+/obj/structure/cable,
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/tile/red/anticorner/contrasted{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/security/execution/transfer)
 "xpi" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -87089,6 +89202,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+"xyZ" = (
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/airalarm/directional/south,
+/obj/effect/turf_decal/bot,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/structure/rack,
+/turf/open/floor/iron/dark,
+/area/command/heads_quarters/ce)
 "xze" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -87572,6 +89698,33 @@
 /obj/structure/chair/stool/bar/directional/east,
 /turf/open/floor/carpet/green,
 /area/commons/lounge)
+<<<<<<< HEAD
+=======
+"xHc" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security{
+	name = "Interrogation"
+	},
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/security/interrogation)
+"xHd" = (
+/obj/machinery/atmospherics/pipe/smart/simple/yellow/visible{
+	dir = 10
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/white,
+/area/science/storage)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "xHf" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/gloves/color/black,
@@ -87723,6 +89876,24 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/engineering/main)
+"xJn" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper_multi{
+	cycle_id = "medbay-passthrough"
+	},
+/obj/machinery/door/airlock/medical{
+	name = "Psychology";
+	req_access_txt = "70"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
+/area/medical/medbay/central)
 "xJt" = (
 /obj/effect/landmark/start/hangover,
 /obj/effect/turf_decal/tile/neutral{
@@ -88002,6 +90173,21 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
+"xOa" = (
+/obj/machinery/door/airlock/security{
+	name = "Interrogation Monitoring"
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/security/interrogation)
 "xOe" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/iron{
@@ -88084,6 +90270,27 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
 /area/service/chapel/funeral)
+"xOI" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch{
+	name = "MiniSat Antechamber";
+	req_one_access_txt = "32;19"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/structure/cable,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
 "xOW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -88379,6 +90586,7 @@
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
+<<<<<<< HEAD
 "xTT" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -88390,6 +90598,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/iron,
 /area/security/lockers)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "xTY" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-21"
@@ -88399,6 +90609,20 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
+"xUb" = (
+/obj/structure/table,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/machinery/camera/directional/east{
+	c_tag = "Science - Research Director's Office";
+	name = "science camera";
+	network = list("ss13","rd")
+	},
+/obj/effect/turf_decal/bot,
+/obj/machinery/firealarm/directional/east,
+/turf/open/floor/iron,
+/area/command/heads_quarters/rd)
 "xUd" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -88838,17 +91062,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/medical/storage)
-"yad" = (
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
-/obj/effect/turf_decal/bot,
-/obj/effect/turf_decal/tile/neutral/fourcorners,
-/turf/open/floor/iron/dark,
-/area/maintenance/disposal/incinerator)
 "yah" = (
 /obj/machinery/computer/bank_machine,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -89021,6 +91234,7 @@
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/iron,
 /area/engineering/atmos/project)
+<<<<<<< HEAD
 "ycs" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Permabrig Cell 3"
@@ -89033,6 +91247,8 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/iron,
 /area/security/prison/safe)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ycz" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
@@ -89358,6 +91574,7 @@
 /obj/item/pen,
 /turf/open/floor/plating,
 /area/service/library/abandoned)
+<<<<<<< HEAD
 "yiZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold/yellow/visible{
 	dir = 8
@@ -89365,6 +91582,8 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/engineering/atmos)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "yjc" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -89387,6 +91606,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/engineering/atmos)
+<<<<<<< HEAD
 "yjK" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -89398,6 +91618,8 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark/telecomms,
 /area/tcommsat/server)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "yjM" = (
 /obj/structure/bed/dogbed/runtime,
 /obj/machinery/light/directional/west,
@@ -95383,7 +97605,7 @@ jye
 bPC
 bPC
 bPC
-lln
+cle
 bXU
 bPC
 bPC
@@ -96925,7 +99147,7 @@ cQh
 bPC
 bRD
 bPC
-eig
+dGu
 bPC
 bPC
 bPC
@@ -97950,13 +100172,13 @@ btH
 mcW
 trT
 wgG
-qid
+qfE
 dYL
 bhn
 qYD
 pFl
 wLX
-fPj
+mTJ
 kjZ
 kjZ
 hVm
@@ -98981,7 +101203,7 @@ cQh
 bPC
 bRD
 bPC
-qFb
+xOI
 bPC
 bPC
 bPC
@@ -100523,7 +102745,7 @@ jye
 bPC
 bPC
 bPC
-ceJ
+tGr
 bPC
 bPC
 bPC
@@ -101290,7 +103512,7 @@ qYo
 qYo
 aaa
 boj
-isa
+lVf
 lNl
 bRx
 nJt
@@ -101547,7 +103769,7 @@ qYo
 xTK
 xTK
 bkF
-ciB
+gvL
 jOY
 bRO
 nJt
@@ -110493,7 +112715,7 @@ kvq
 qYo
 aFr
 aFr
-gFE
+qup
 aFr
 aFr
 ouG
@@ -111320,7 +113542,11 @@ aaa
 qYo
 aaa
 xPF
+<<<<<<< HEAD
 mDS
+=======
+xdw
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 oQT
 vyR
 fzQ
@@ -112033,7 +114259,7 @@ aaa
 qYo
 aaa
 aFr
-eGk
+iZz
 pjF
 djQ
 gUc
@@ -112058,7 +114284,7 @@ cLr
 lpq
 oPE
 cvQ
-yiZ
+klg
 xhR
 vdK
 tnT
@@ -112089,7 +114315,11 @@ eys
 eys
 eys
 wLP
+<<<<<<< HEAD
 diR
+=======
+xyZ
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 xPF
 uIZ
 xPF
@@ -112290,7 +114520,7 @@ aaa
 qYo
 aaa
 aFr
-mwC
+chV
 ceF
 hFD
 uKk
@@ -112314,8 +114544,8 @@ gIo
 duE
 kPH
 yeJ
-kiQ
-pTs
+jNc
+gIo
 iLx
 iLx
 gIo
@@ -112547,7 +114777,7 @@ aaa
 qYo
 aaa
 aFs
-yad
+uAM
 ceF
 oLN
 uFE
@@ -112571,8 +114801,8 @@ tzO
 emG
 kPH
 meF
-lvO
-lvO
+dJq
+dJq
 ftA
 ftA
 gIo
@@ -112805,7 +115035,7 @@ qYo
 aaa
 aFs
 ikJ
-wNj
+rWr
 utI
 pSI
 cMd
@@ -112819,7 +115049,7 @@ pTc
 xwf
 nRs
 uCG
-sfY
+agd
 iOQ
 rJB
 rcK
@@ -113076,7 +115306,7 @@ mRd
 pCc
 mRd
 qqN
-dPt
+qqN
 qqN
 mEF
 iLx
@@ -113122,8 +115352,8 @@ xPF
 vwo
 baG
 cLs
-kkJ
-kkJ
+igG
+igG
 oTR
 xPF
 dHC
@@ -113378,9 +115608,9 @@ vrt
 xPF
 uwo
 kRL
-bcd
-bcd
-bcd
+wTm
+wTm
+wTm
 xPF
 xPF
 xPF
@@ -113635,7 +115865,7 @@ uEO
 nwc
 hwV
 nKE
-vfT
+beQ
 jFN
 eKi
 smO
@@ -116430,8 +118660,8 @@ tnW
 iSU
 hsy
 pbe
-iPx
-slF
+iHb
+dwh
 vOG
 gfM
 uCw
@@ -116692,7 +118922,7 @@ rwZ
 dJs
 gkA
 mXV
-ocl
+cMX
 pjg
 bDH
 ule
@@ -116717,7 +118947,7 @@ gBE
 vhd
 cIt
 bQg
-gOY
+veY
 uXd
 fwe
 gLW
@@ -116949,7 +119179,7 @@ cGn
 cGn
 plv
 wsb
-tjF
+plv
 osJ
 osJ
 osJ
@@ -116974,7 +119204,7 @@ bTm
 fJa
 bYG
 jNR
-gOY
+veY
 nyl
 fbt
 ugU
@@ -117011,8 +119241,8 @@ dce
 bzr
 tts
 nNA
-lkx
-ewR
+uJm
+wDj
 itq
 wcs
 mTP
@@ -117206,7 +119436,7 @@ aaa
 aaa
 qYo
 cut
-wKh
+vVc
 xZB
 aaa
 osJ
@@ -117231,7 +119461,7 @@ aaE
 chM
 jHU
 bQg
-qyj
+iUO
 iVk
 lIU
 mnH
@@ -117463,7 +119693,7 @@ xiB
 xiB
 huU
 ybW
-sKu
+huU
 xiB
 xiB
 xiB
@@ -117788,8 +120018,8 @@ gGZ
 faI
 cXs
 lKN
-peX
-nKs
+liG
+rgY
 qIk
 hXZ
 oMt
@@ -120314,7 +122544,7 @@ sPw
 txb
 ybl
 bYO
-aGA
+tet
 mFG
 qtt
 taU
@@ -120369,9 +122599,15 @@ qYo
 qYo
 qYo
 qXd
+<<<<<<< HEAD
 nBv
 puj
 dKn
+=======
+pOD
+iiZ
+oLo
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 dOM
 dLS
 eoV
@@ -120571,7 +122807,7 @@ xiB
 wZP
 hzH
 unv
-tTm
+rbM
 iiE
 iiE
 iiE
@@ -120626,8 +122862,13 @@ svv
 svv
 svv
 xdD
+<<<<<<< HEAD
 bOC
 uFm
+=======
+dLY
+wWx
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 dLY
 dLY
 dLS
@@ -120858,7 +123099,7 @@ qtV
 qtV
 cNc
 cTQ
-mKy
+lZF
 orb
 vQm
 daB
@@ -120883,9 +123124,15 @@ wuD
 oYI
 wuD
 xdD
+<<<<<<< HEAD
 evN
 dCn
 aVB
+=======
+cgR
+mJe
+gbW
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 dLY
 tlt
 jYa
@@ -121065,7 +123312,7 @@ gdu
 alf
 alf
 alf
-uxV
+gyp
 alf
 alf
 alf
@@ -121114,9 +123361,9 @@ qtV
 svB
 gun
 llu
-tfT
-kgo
-pKR
+bGR
+fYD
+sFO
 uXn
 daC
 dcq
@@ -121318,11 +123565,11 @@ fBK
 vQd
 cmg
 vwF
-gQZ
+pro
 alf
-lsv
-iHI
-sYy
+ljh
+gPs
+eam
 alf
 nSL
 woa
@@ -121385,6 +123632,7 @@ geS
 jVa
 lLM
 anK
+<<<<<<< HEAD
 mQL
 srA
 jYg
@@ -121396,6 +123644,19 @@ rSC
 nly
 imZ
 tbm
+=======
+yeL
+oqF
+xcv
+czS
+xoA
+fNW
+fNW
+bcf
+wrq
+aOp
+nEk
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 xdD
 crE
 ijG
@@ -121575,9 +123836,9 @@ kEi
 lRA
 kEi
 alf
-ukk
 alf
-qZP
+alf
+afC
 alf
 alf
 alf
@@ -121619,7 +123880,7 @@ hdj
 rXe
 lxk
 rAf
-feg
+kCt
 qdZ
 bcq
 nbP
@@ -121832,9 +124093,9 @@ ylT
 mlx
 gtE
 alf
-dkP
-xmc
-fzf
+ced
+isb
+mfE
 alf
 nLr
 tTh
@@ -121900,6 +124161,7 @@ dfm
 dCI
 hAo
 daO
+<<<<<<< HEAD
 srA
 bbF
 dGM
@@ -121910,6 +124172,18 @@ rSC
 nly
 otV
 tbm
+=======
+oqF
+bfB
+joF
+xoA
+mnp
+ttA
+bcf
+wrq
+ikh
+nEk
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 xdD
 dHm
 nzi
@@ -122154,6 +124428,7 @@ fkw
 nvS
 nKL
 iTK
+<<<<<<< HEAD
 aXj
 gdC
 aXj
@@ -122175,6 +124450,29 @@ vFQ
 jGS
 xNj
 vpG
+=======
+axN
+vSK
+axN
+bcf
+noS
+cWk
+lAF
+cWk
+hpa
+bcf
+hdB
+oxW
+dqI
+oxW
+oxW
+yhj
+oxW
+npu
+ejK
+rtj
+sNR
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 dLY
 dPI
 wja
@@ -122411,6 +124709,7 @@ unX
 uEP
 kDB
 iTK
+<<<<<<< HEAD
 ckA
 xWP
 kGa
@@ -122432,6 +124731,29 @@ kuQ
 kuQ
 iob
 vpG
+=======
+uLd
+iqI
+mOU
+nVV
+eHQ
+qFC
+het
+klf
+gSk
+kMk
+uyq
+yhj
+yhj
+yhj
+yhj
+yhj
+oxW
+oxW
+oxW
+nmL
+sNR
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 dLY
 dPJ
 iMJ
@@ -122668,6 +124990,7 @@ eRZ
 nvS
 kzK
 iTK
+<<<<<<< HEAD
 idR
 eqa
 pYc
@@ -122689,6 +125012,29 @@ ggS
 uVM
 iob
 bbs
+=======
+iOi
+xlg
+nzy
+lhJ
+fDN
+eyC
+grw
+gIf
+nQN
+drP
+wKA
+imr
+oxW
+mVr
+eXi
+fUd
+eIz
+xDt
+lVn
+nmL
+jbO
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 dLY
 dPK
 paL
@@ -122925,6 +125271,7 @@ drS
 jKy
 cUe
 iTK
+<<<<<<< HEAD
 frZ
 upG
 tgv
@@ -122943,6 +125290,26 @@ xdD
 laY
 xdD
 laY
+=======
+uhd
+ntK
+jtF
+nVV
+wTs
+cwq
+xHd
+gkg
+sYc
+plh
+mdw
+mdw
+eUL
+vJL
+xdD
+bGm
+xdD
+mCn
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 xdD
 jiy
 iND
@@ -122958,7 +125325,7 @@ nAH
 xOG
 qwr
 pFC
-aDu
+ugM
 pFC
 bzp
 qSk
@@ -123210,8 +125577,8 @@ umt
 dOM
 dOM
 boZ
-tTf
-tTf
+jDU
+jDU
 boZ
 boZ
 boZ
@@ -123403,8 +125770,8 @@ nJo
 nJo
 nJo
 sVJ
-ibn
-wXE
+eNX
+pED
 sVJ
 nJo
 nJo
@@ -123447,6 +125814,7 @@ qwF
 pEy
 sGK
 nwa
+<<<<<<< HEAD
 bpt
 nlt
 rzo
@@ -123457,6 +125825,18 @@ efD
 uEw
 tYu
 wuY
+=======
+dDQ
+ssO
+vtv
+rsY
+dfW
+cjx
+aWH
+sMu
+sqA
+mPF
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 xdD
 wXI
 wZL
@@ -123705,7 +126085,11 @@ kHF
 hVo
 uGB
 sjF
+<<<<<<< HEAD
 iZK
+=======
+vbY
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 kms
 rsY
 dEA
@@ -123996,7 +126380,7 @@ boZ
 pKy
 nPB
 nPB
-hJC
+lqc
 nPB
 nPB
 qYo
@@ -124224,7 +126608,11 @@ lPq
 uBG
 sOJ
 luA
+<<<<<<< HEAD
 ePT
+=======
+eHH
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 ncV
 eJM
 qMf
@@ -124414,8 +126802,8 @@ pCn
 pCn
 fFy
 qYt
-mFc
-gUo
+mZC
+krw
 qYt
 lRN
 lRN
@@ -124470,16 +126858,20 @@ eui
 ugG
 tuR
 qnm
+<<<<<<< HEAD
 pyS
+=======
+xUb
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 gGK
 fyh
 fXW
 nwa
 ifj
 qPd
-nKV
-vaW
-tGV
+lDA
+rsY
+fKh
 jdN
 iFw
 xnO
@@ -124734,10 +127126,10 @@ rsY
 sdF
 rsY
 rsY
-ent
+rsY
 rsY
 dEE
-xes
+jop
 dEA
 dEA
 dEA
@@ -124991,7 +127383,7 @@ cUe
 cNt
 cUe
 cUe
-lSn
+bDa
 dDw
 cUe
 qzZ
@@ -125185,8 +127577,13 @@ aad
 aaa
 fFy
 qYt
+<<<<<<< HEAD
 mFc
 gUo
+=======
+xcO
+uZD
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 qYt
 lRN
 fAd
@@ -125248,7 +127645,7 @@ gyJ
 dya
 gyJ
 uMt
-iTE
+gyJ
 tsW
 ddM
 fLA
@@ -125277,7 +127674,7 @@ dRI
 sYe
 lLw
 bst
-pDl
+lEn
 uXN
 gDE
 aQK
@@ -128530,22 +130927,22 @@ oro
 nPu
 eFF
 gLt
-lsz
+aFa
 tSn
 orj
 bQJ
 bQJ
-kdg
+dGB
 juV
-yjK
+pDN
 igm
 pHV
 fZt
 cgm
 sZk
-jAv
+aVE
 hQN
-cBW
+hmr
 xGA
 jkS
 lhi
@@ -129060,9 +131457,9 @@ nBq
 nBq
 nBq
 had
-jMn
-wxi
-gEh
+bcF
+tcw
+cqY
 hRo
 cuh
 tuh
@@ -131867,8 +134264,8 @@ aad
 aaa
 fFy
 qYt
-qay
-tPc
+rcx
+geu
 qYt
 glH
 kjh
@@ -131900,7 +134297,7 @@ kHi
 myM
 qXb
 mLk
-wnW
+aMW
 vtP
 xNK
 fWv
@@ -132157,7 +134554,7 @@ xij
 vgB
 hrl
 fUc
-wnW
+aMW
 vtP
 xNK
 xCi
@@ -132414,7 +134811,7 @@ aiv
 skk
 mBh
 iYy
-lwc
+mNA
 gNi
 xNK
 xCi
@@ -132638,8 +135035,13 @@ bdy
 ukB
 fFy
 qYt
+<<<<<<< HEAD
 oWN
 tPc
+=======
+mRf
+bEc
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 qYt
 glH
 glH
@@ -133663,7 +136065,7 @@ vPh
 vPh
 hje
 hje
-bBO
+kme
 hje
 hje
 vPh
@@ -133684,7 +136086,7 @@ cbk
 cbk
 cbk
 cbn
-ilP
+mQJ
 cbn
 cbk
 cbk
@@ -134177,7 +136579,7 @@ aaa
 lhY
 lhY
 lhY
-gZY
+wJb
 lhY
 lhY
 lhY
@@ -134238,7 +136640,11 @@ rUH
 rUH
 tBh
 ojk
+<<<<<<< HEAD
 juh
+=======
+gWo
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 lxL
 qgk
 qnO
@@ -134445,11 +136851,15 @@ iiz
 vxa
 vzC
 buI
-cyk
+aPU
 rpC
 hGR
 hZz
+<<<<<<< HEAD
 ilP
+=======
+uEY
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 lsc
 eUs
 kkf
@@ -134461,7 +136871,7 @@ eDS
 nNe
 gQR
 pCO
-hBQ
+usS
 oWV
 kwT
 kFY
@@ -134493,16 +136903,16 @@ daD
 kMA
 wcV
 uzT
-bzJ
-euq
-vME
+esl
+oLH
+sZf
 lxL
 pZt
 nJh
 asj
 inR
 nLK
-kwA
+iyh
 cts
 xBY
 vyz
@@ -135225,13 +137635,13 @@ ccZ
 ccZ
 ccZ
 ccZ
-hUS
+vLn
 ccZ
 ccZ
 ccZ
 ccZ
 crk
-wyO
+wEO
 cbk
 eGd
 vBT
@@ -135702,7 +138112,11 @@ tVB
 vNS
 gkV
 nHI
+<<<<<<< HEAD
 pQy
+=======
+aov
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 iKB
 tVB
 otC
@@ -136505,7 +138919,7 @@ dhY
 bVc
 qBv
 hWm
-czq
+vor
 hDA
 boz
 pzM
@@ -136758,7 +139172,7 @@ mhL
 fJi
 fJi
 mhL
-qVd
+kSj
 qfA
 sDv
 jil
@@ -137021,7 +139435,7 @@ qBv
 uZb
 fof
 fof
-jOQ
+uGl
 fof
 fof
 fof
@@ -138856,7 +141270,7 @@ cHU
 cHU
 cHU
 cPy
-bpH
+lja
 cPy
 cHU
 cHU
@@ -139058,13 +141472,13 @@ waX
 brf
 bte
 buD
-bvY
-cHc
-byE
+gZZ
+pno
+tCv
 bAg
 buD
-qKY
-ayi
+xpe
+jBY
 uvR
 iYD
 uvR
@@ -139368,11 +141782,11 @@ xky
 kAz
 cbM
 oNC
-dHb
+olr
 eXO
 xfY
 pUQ
-tyN
+dfY
 oNm
 cjc
 jFs
@@ -139627,7 +142041,7 @@ cHU
 cHU
 cHU
 cPy
-fqe
+xJn
 cPy
 cHU
 cHU
@@ -139814,7 +142228,7 @@ aQX
 aSD
 pwB
 pwB
-sGN
+sHs
 oCh
 ras
 lge
@@ -140336,17 +142750,17 @@ aFm
 aFm
 xWi
 phz
-sxo
+uUl
 got
 bnG
 bnD
 bnD
-tHp
+efG
 bnD
 bnD
 bnG
 bnG
-ikW
+hlk
 bnG
 bnG
 bnG
@@ -140862,7 +143276,7 @@ iFY
 iFY
 jsE
 suN
-efK
+gxb
 xBh
 jsE
 iFY
@@ -141086,19 +143500,19 @@ uHd
 qYo
 xjZ
 xjZ
-gLz
+aOF
 xjZ
 xjZ
-nCb
+hAu
 xjZ
 xjZ
-ycs
+msu
 xjZ
 xjZ
-qRE
+ejG
 xjZ
 xjZ
-hTl
+iWC
 xjZ
 aZo
 rZH
@@ -141368,17 +143782,17 @@ eMy
 eMy
 tuZ
 eMy
-sbU
-tOv
+lqN
+afv
 eMy
 tuZ
 guL
 aML
-tzL
+xHc
 aML
 guL
 bFL
-gCp
+bVx
 bFL
 bFL
 bFP
@@ -141387,10 +143801,10 @@ bFP
 bFL
 bFL
 bFP
-wQW
+trq
 bFP
 bFL
-xTT
+gaM
 saz
 avE
 avE
@@ -141894,7 +144308,7 @@ guL
 uCJ
 uCT
 vGh
-vwd
+heb
 bNn
 cTK
 aip
@@ -142114,19 +144528,19 @@ qYo
 aaa
 xjZ
 vXz
-mIv
+ewM
 vXz
 vXz
-jAK
+oyb
 vXz
 vXz
-aMf
+wik
 vXz
 vXz
-gpS
+wax
 vXz
 vXz
-aWf
+hap
 xjZ
 aZo
 rZH
@@ -142143,7 +144557,7 @@ oog
 tMZ
 nOL
 ohQ
-odR
+ojC
 tuv
 sfk
 odm
@@ -143410,7 +145824,7 @@ rBk
 aPo
 aKV
 aKV
-njF
+efy
 aKV
 aFm
 aZo
@@ -143428,7 +145842,7 @@ ksL
 kTl
 hZg
 amg
-gjB
+xOa
 eei
 uVU
 xgx
@@ -143937,7 +146351,7 @@ frV
 frV
 uwE
 uwE
-twP
+pTW
 uwE
 uwE
 frV
@@ -144685,7 +147099,7 @@ aFm
 aFm
 aKV
 aKV
-usa
+msO
 aKV
 aKV
 aKV
@@ -144954,7 +147368,7 @@ aKV
 aSJ
 aUE
 aWm
-aXR
+uFo
 bcy
 rZH
 aFn
@@ -145725,7 +148139,7 @@ aKZ
 aSM
 xWx
 vHF
-mri
+ekC
 hRm
 bbp
 aFm
@@ -145736,7 +148150,7 @@ aaa
 frV
 rmG
 pel
-cFQ
+eft
 pel
 rmG
 frV

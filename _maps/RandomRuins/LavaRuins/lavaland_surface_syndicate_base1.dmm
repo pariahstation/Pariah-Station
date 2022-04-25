@@ -1953,10 +1953,13 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/syndicate_lava_base/engineering)
+<<<<<<< HEAD
 "la" = (
 /obj/machinery/portable_atmospherics/canister/tier_3,
 /turf/open/floor/iron,
 /area/ruin/syndicate_lava_base/engineering)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "lc" = (
 /obj/machinery/power/rtg/lavaland,
 /obj/structure/lattice/catwalk,
@@ -2519,6 +2522,18 @@
 /obj/structure/cable,
 /turf/open/floor/circuit/red,
 /area/ruin/syndicate_lava_base/main)
+<<<<<<< HEAD
+=======
+"ov" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/binary/pump/off/general/visible,
+/obj/machinery/portable_atmospherics/canister,
+/turf/open/floor/iron,
+/area/ruin/syndicate_lava_base/engineering)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ox" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/firedoor,
@@ -2974,6 +2989,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /turf/open/floor/wood,
 /area/ruin/syndicate_lava_base/bar)
+"vN" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron,
+/area/ruin/syndicate_lava_base/engineering)
 "vU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -3118,6 +3140,30 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
+/area/ruin/syndicate_lava_base/engineering)
+"yh" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
+/obj/machinery/embedded_controller/radio/airlock_controller/incinerator_syndicatelava{
+	pixel_x = -8;
+	pixel_y = -26
+	},
+/obj/machinery/button/ignition/incinerator/syndicatelava{
+	pixel_x = 6;
+	pixel_y = -24
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door/incinerator_vent_syndicatelava_aux{
+	pixel_x = -8;
+	pixel_y = -40
+	},
+/obj/machinery/button/door/incinerator_vent_syndicatelava_main{
+	pixel_x = 6;
+	pixel_y = -40
+	},
+/obj/machinery/portable_atmospherics/canister,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/iron,
 /area/ruin/syndicate_lava_base/engineering)
 "yk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
@@ -4317,13 +4363,6 @@
 	},
 /turf/open/floor/iron,
 /area/ruin/syndicate_lava_base/engineering)
-"SJ" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/iron,
-/area/ruin/syndicate_lava_base/engineering)
 "Tt" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -4353,6 +4392,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/ruin/syndicate_lava_base/virology)
+"TO" = (
+/obj/machinery/portable_atmospherics/canister,
+/turf/open/floor/iron,
+/area/ruin/syndicate_lava_base/engineering)
 "TV" = (
 /obj/machinery/power/turbine/core_rotor{
 	dir = 4;
@@ -6660,7 +6703,11 @@ wv
 Rh
 Vp
 Xr
+<<<<<<< HEAD
 cQ
+=======
+yh
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 nE
 PZ
 rO
@@ -6753,7 +6800,11 @@ ju
 ld
 JV
 XK
+<<<<<<< HEAD
 Dh
+=======
+ov
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 Za
 KU
 KU
@@ -6803,7 +6854,11 @@ ju
 ZN
 oO
 IH
+<<<<<<< HEAD
 la
+=======
+TO
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 PE
 RK
 RK
@@ -6853,7 +6908,11 @@ ju
 ju
 ju
 ju
+<<<<<<< HEAD
 la
+=======
+TO
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 JE
 va
 IP
@@ -6862,7 +6921,7 @@ Nh
 sl
 eK
 yy
-SJ
+vN
 ju
 ab
 ab

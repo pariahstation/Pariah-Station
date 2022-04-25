@@ -3662,6 +3662,46 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/starboard/central)
+"azx" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = 8;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = 4;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = -4;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "x";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = 4;
+	pixel_y = -32
+	},
+/obj/item/clothing/shoes/clown_shoes,
+/obj/item/clothing/mask/gas/clown_hat,
+/turf/open/floor/plating,
+/area/engineering/main)
 "azz" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/wood,
@@ -4289,6 +4329,16 @@
 	},
 /turf/open/floor/iron,
 /area/service/theater)
+"aDF" = (
+/obj/structure/chair/stool/directional/south,
+/obj/machinery/light/directional/west,
+/obj/machinery/camera{
+	c_tag = "Science - Mech Bay";
+	dir = 10;
+	network = list("ss13","rd")
+	},
+/turf/open/floor/circuit,
+/area/science/robotics/mechbay)
 "aDH" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 4
@@ -6254,6 +6304,12 @@
 "aVX" = (
 /turf/open/floor/iron/freezer,
 /area/commons/toilet)
+"aWa" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "aWe" = (
 /obj/structure/railing/corner{
 	dir = 4
@@ -6322,15 +6378,6 @@
 "aXw" = (
 /obj/effect/spawner/random/engineering/tracking_beacon,
 /turf/open/floor/engine,
-/area/science/xenobiology)
-"aXy" = (
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 9
-	},
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on{
-	name = "euthanization chamber freezer"
-	},
-/turf/open/floor/iron/dark,
 /area/science/xenobiology)
 "aXA" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
@@ -11128,6 +11175,15 @@
 /obj/effect/turf_decal/trimline/neutral/filled/line,
 /turf/open/floor/iron,
 /area/cargo/warehouse)
+"cMe" = (
+/obj/effect/turf_decal/trimline/yellow/filled/line,
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/effect/turf_decal/box,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/engineering/main)
 "cMn" = (
 /obj/structure/railing/corner{
 	dir = 4
@@ -12414,11 +12470,6 @@
 "dhe" = (
 /turf/closed/mineral/random/stationside/asteroid/porus,
 /area/mine/explored)
-"dhj" = (
-/obj/machinery/computer/scan_consolenew,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
-/area/science/genetics)
 "dhk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
@@ -15403,47 +15454,6 @@
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/iron,
 /area/commons/lounge)
-"ejN" = (
-/obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = 8;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = 4;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = -4;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "x";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = 4;
-	pixel_y = -32
-	},
-/obj/item/clothing/shoes/clown_shoes,
-/obj/item/clothing/mask/gas/clown_hat,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/plating,
-/area/engineering/main)
 "ejQ" = (
 /obj/structure/cable,
 /turf/open/floor/iron/showroomfloor,
@@ -15453,6 +15463,7 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating/airless,
 /area/mine/explored)
+<<<<<<< HEAD
 "ekc" = (
 /obj/structure/table,
 /obj/item/assembly/timer{
@@ -15470,6 +15481,24 @@
 /obj/item/assembly/timer,
 /turf/open/floor/iron/dark,
 /area/science/mixing/launch)
+=======
+"ekn" = (
+/obj/structure/table/wood/fancy/red,
+/obj/effect/spawner/random/aimodule/harmful,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/left/directional/south{
+	dir = 1;
+	name = "High-Risk Modules";
+	req_access_txt = "20"
+	},
+/turf/open/floor/circuit/red,
+/area/ai_monitored/turret_protected/ai_upload)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ekv" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_one_access_txt = "12"
@@ -18325,6 +18354,12 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/construction/mining/aux_base)
+"fjs" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/heater{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "fjA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
@@ -18942,18 +18977,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
-"fvs" = (
-/obj/effect/turf_decal/trimline/yellow/filled/line{
-	dir = 6
-	},
-/obj/structure/sign/warning/nosmoking{
-	pixel_y = -32
-	},
-/obj/machinery/power/apc/auto_name/directional/east,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/turf/open/floor/iron,
-/area/engineering/main)
 "fvD" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -19021,6 +19044,44 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/commons/dorms)
+"fwl" = (
+/obj/item/toy/crayon/orange,
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = 8;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = 4;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "i";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = -4;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "x";
+	name = "graffiti";
+	paint_colour = "#FF9300";
+	pixel_x = 4;
+	pixel_y = -32
+	},
+/turf/open/floor/plating,
+/area/engineering/main)
 "fwn" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 10
@@ -19248,6 +19309,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/visible,
 /turf/open/floor/iron,
 /area/engineering/atmos/pumproom)
+"fAs" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	piping_layer = 2
+	},
+/turf/open/floor/iron/white,
+/area/science/mixing)
 "fAB" = (
 /obj/machinery/vending/wardrobe/gene_wardrobe,
 /obj/machinery/firealarm/directional/west,
@@ -20040,6 +20107,7 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/science/robotics/lab)
+<<<<<<< HEAD
 "fNk" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 8
@@ -20048,6 +20116,15 @@
 /obj/machinery/atmospherics/pipe/bridge_pipe/orange/visible,
 /turf/open/floor/iron,
 /area/engineering/atmos)
+=======
+"fNh" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 8
+	},
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/iron/white,
+/area/science/mixing/hallway)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "fNu" = (
 /obj/effect/turf_decal/siding/thinplating/corner{
 	dir = 1
@@ -22830,13 +22907,6 @@
 /obj/structure/cable/layer3,
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
-"gMG" = (
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
-/area/science/xenobiology)
 "gML" = (
 /obj/structure/table,
 /obj/effect/turf_decal/trimline/purple/filled/line{
@@ -22899,6 +22969,27 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+"gOq" = (
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
+/obj/structure/table,
+/obj/item/radio/off{
+	pixel_y = 6
+	},
+/obj/item/radio/off{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/radio/off{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/radio/off,
+/turf/open/floor/iron,
+/area/command/gateway)
 "gOG" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -23434,10 +23525,20 @@
 /obj/machinery/recharge_station,
 /turf/open/floor/iron,
 /area/cargo/warehouse)
+<<<<<<< HEAD
 "gYA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/closed/wall/r_wall,
 /area/engineering/main)
+=======
+"gYE" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/iron/white,
+/area/science/mixing/hallway)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "gYO" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -26103,6 +26204,14 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/warehouse)
+"hXZ" = (
+/obj/structure/table/glass,
+/obj/item/computer_hardware/hard_drive/role/chemistry,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/effect/turf_decal/tile/blue/fourcorners,
+/turf/open/floor/iron/dark,
+/area/command/heads_quarters/cmo)
 "hYd" = (
 /obj/effect/turf_decal/trimline/brown/filled/corner{
 	dir = 1
@@ -26156,10 +26265,6 @@
 /obj/machinery/modular_computer/console/preset/id,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/hos)
-"hZc" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
-/turf/closed/wall/r_wall,
-/area/science/server)
 "hZg" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -26251,15 +26356,6 @@
 /obj/machinery/teleport/station,
 /turf/open/floor/plating,
 /area/command/teleporter)
-"iaP" = (
-/obj/vehicle/ridden/wheelchair,
-/obj/effect/turf_decal/bot,
-/obj/effect/turf_decal/trimline/blue/filled/line{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/white,
-/area/medical/medbay/central)
 "iaV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -27796,10 +27892,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /turf/open/floor/iron/white,
 /area/science/genetics)
-"iCI" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
-/turf/closed/wall/r_wall,
-/area/science/xenobiology)
 "iCK" = (
 /obj/machinery/computer/crew{
 	dir = 4
@@ -28631,6 +28723,13 @@
 /obj/structure/cable,
 /turf/open/floor/wood/large,
 /area/service/library)
+"iTo" = (
+/obj/effect/turf_decal/trimline/yellow/filled/corner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
+/turf/open/floor/iron,
+/area/engineering/atmos)
 "iTD" = (
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
@@ -29061,6 +29160,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/science/xenobiology)
+"jaR" = (
+/obj/machinery/portable_atmospherics/canister,
+/turf/open/floor/iron/dark,
+/area/science/storage)
 "jaS" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 1
@@ -31267,6 +31370,7 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos/pumproom)
+<<<<<<< HEAD
 "jSh" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 8
@@ -31276,6 +31380,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/command/gateway)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "jSl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
@@ -31829,6 +31935,13 @@
 "kaL" = (
 /turf/closed/wall,
 /area/maintenance/department/security)
+"kaQ" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+	dir = 1
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/science/server)
 "kbj" = (
 /obj/structure/cable,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -33350,6 +33463,23 @@
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /turf/open/floor/iron/dark,
 /area/medical/treatment_center)
+"kCx" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/door/poddoor/shutters/window{
+	id = "gatewayshutters";
+	name = "Gateway Chamber Shutters"
+	},
+/obj/machinery/button/door/directional/south{
+	id = "gatewayshutters";
+	name = "Gateway Shutters";
+	req_access_txt = "19"
+	},
+/obj/effect/turf_decal/trimline/neutral/filled/line,
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/command/gateway)
 "kCT" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -34842,25 +34972,9 @@
 	},
 /turf/open/floor/iron,
 /area/tcommsat/computer)
-"lcJ" = (
-/obj/effect/turf_decal/trimline/yellow/filled/line,
-/obj/machinery/shower{
-	dir = 1
-	},
-/obj/effect/turf_decal/box,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/cable,
-/turf/open/floor/iron,
-/area/engineering/main)
 "lcO" = (
 /turf/open/floor/plating,
 /area/hallway/secondary/exit)
-"lcW" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/heater{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "ldi" = (
 /obj/effect/landmark/navigate_destination/dockarrival,
 /turf/open/floor/iron,
@@ -36143,6 +36257,16 @@
 	},
 /turf/open/floor/plating/airless,
 /area/mine/explored)
+"lBi" = (
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+	dir = 9
+	},
+/obj/structure/table,
+/obj/item/storage/medkit/regular,
+/obj/item/paper/pamphlet/gateway,
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/iron,
+/area/command/gateway)
 "lBo" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
@@ -36246,6 +36370,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet,
 /area/commons/dorms)
+"lDb" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/iron/cafeteria{
+	dir = 5
+	},
+/area/command/heads_quarters/rd)
 "lDd" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/circuit/telecomms,
@@ -36646,12 +36781,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
-"lJd" = (
-/obj/machinery/dna_scannernew,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/light/directional/north,
-/turf/open/floor/iron/dark,
-/area/science/genetics)
 "lJi" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder{
@@ -36866,6 +36995,18 @@
 /obj/item/food/meat/rawcutlet/plain,
 /turf/open/floor/iron/cafeteria,
 /area/security/prison/mess)
+"lLN" = (
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 8
+	},
+/obj/machinery/light/directional/west,
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/iron/white,
+/area/science/xenobiology)
 "lMe" = (
 /turf/closed/wall/r_wall,
 /area/science/storage)
@@ -36954,6 +37095,17 @@
 /obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/iron/dark,
 /area/service/hydroponics)
+"lNU" = (
+/obj/structure/table/reinforced,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/command/heads_quarters/ce)
 "lNY" = (
 /obj/structure/chair/pew/left,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -37273,12 +37425,6 @@
 	dir = 5
 	},
 /area/science/breakroom)
-"lUM" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "lUN" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -38106,12 +38252,6 @@
 	},
 /turf/open/floor/iron/smooth,
 /area/maintenance/tram/right)
-"mkM" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden{
-	dir = 4
-	},
-/turf/closed/wall/r_wall,
-/area/science/xenobiology)
 "mkO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -38638,6 +38778,10 @@
 /obj/effect/turf_decal/trimline/red/filled/corner,
 /turf/open/floor/iron,
 /area/security/courtroom)
+"mwj" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
+/area/science/genetics)
 "mwq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/duct,
@@ -38984,6 +39128,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/security/office)
+"mDj" = (
+/obj/vehicle/ridden/wheelchair,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 9
+	},
+/turf/open/floor/iron/white,
+/area/medical/medbay/central)
 "mDq" = (
 /obj/machinery/hydroponics/soil,
 /obj/machinery/status_display/evac/directional/north,
@@ -39010,6 +39162,33 @@
 	},
 /turf/open/floor/iron/dark,
 /area/medical/virology)
+<<<<<<< HEAD
+=======
+"mDQ" = (
+/obj/structure/table,
+/obj/structure/sign/plaques/kiddie{
+	pixel_y = -32
+	},
+/obj/item/ai_module/core/full/asimov,
+/turf/open/floor/circuit/red,
+/area/ai_monitored/turret_protected/ai_upload)
+"mDX" = (
+/obj/structure/table,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/clothing/head/welding{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/multitool,
+/obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 10
+	},
+/turf/open/floor/iron,
+/area/engineering/atmos)
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "mEf" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -42027,12 +42206,6 @@
 	},
 /turf/open/floor/iron,
 /area/security/processing)
-"nLa" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/visible{
-	dir = 4
-	},
-/turf/closed/wall/r_wall,
-/area/engineering/atmos)
 "nLe" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 9
@@ -42533,13 +42706,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard)
-"nTO" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on{
-	dir = 1
-	},
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/science/server)
 "nTP" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -45038,13 +45204,6 @@
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron/white,
 /area/science/cytology)
-"oNc" = (
-/obj/item/bikehorn,
-/obj/item/grown/bananapeel,
-/obj/item/food/spaghetti/copypasta,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/plating,
-/area/engineering/main)
 "oNX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -45214,6 +45373,13 @@
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat/foyer)
+"oQM" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
+	dir = 8;
+	initialize_directions = 8
+	},
+/turf/open/floor/iron/dark,
+/area/medical/treatment_center)
 "oQW" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -46014,11 +46180,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/engine,
 /area/science/xenobiology)
-"pgk" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/iron/dark,
-/area/science/genetics)
 "pgs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -46407,13 +46568,6 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
-"pmk" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 1
-	},
-/turf/open/floor/iron/white,
-/area/science/genetics)
 "pml" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -46536,6 +46690,7 @@
 /obj/item/radio,
 /turf/open/floor/plating/airless,
 /area/mine/explored)
+<<<<<<< HEAD
 "pos" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 10
@@ -46548,6 +46703,8 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/command/gateway)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "pov" = (
 /obj/effect/turf_decal/trimline/neutral/filled/arrow_cw{
 	dir = 1
@@ -48281,6 +48438,13 @@
 	},
 /turf/open/floor/iron/freezer,
 /area/security/prison/shower)
+"pVi" = (
+/obj/effect/turf_decal/trimline/neutral/filled/corner,
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/command/gateway)
 "pVs" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -51561,6 +51725,16 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
+"rgi" = (
+/obj/structure/table,
+/obj/effect/turf_decal/trimline/brown/filled/line{
+	dir = 8
+	},
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/computer_hardware/hard_drive/role/quartermaster,
+/obj/item/clipboard,
+/turf/open/floor/iron,
+/area/cargo/qm)
 "rgk" = (
 /obj/machinery/door/airlock/external{
 	name = "External Access"
@@ -53840,6 +54014,14 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/service/chapel/office)
+"rYq" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/structure/cable,
+/obj/machinery/power/apc/sm_apc/directional/north,
+/turf/open/floor/engine,
+/area/engineering/supermatter/room)
 "rYv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash/food_packaging,
@@ -54902,12 +55084,15 @@
 	},
 /turf/open/floor/plating,
 /area/science/robotics/mechbay)
+<<<<<<< HEAD
 "ssT" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 9
 	},
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "ssV" = (
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/ai_upload_foyer)
@@ -56593,6 +56778,12 @@
 /obj/machinery/duct,
 /turf/open/floor/iron/white,
 /area/medical/surgery/aft)
+"sZd" = (
+/obj/item/bikehorn,
+/obj/item/grown/bananapeel,
+/obj/item/food/spaghetti/copypasta,
+/turf/open/floor/plating,
+/area/engineering/main)
 "sZg" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -56763,6 +56954,17 @@
 	},
 /turf/closed/wall,
 /area/science/test_area)
+"tcr" = (
+/obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 6
+	},
+/obj/structure/sign/warning/nosmoking{
+	pixel_y = -32
+	},
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/engineering/main)
 "tcF" = (
 /obj/machinery/door/airlock{
 	name = "Water Closet";
@@ -56980,23 +57182,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
-"thP" = (
-/obj/structure/table,
-/obj/item/clothing/head/welding{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/clothing/head/welding{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/multitool,
-/obj/effect/turf_decal/trimline/yellow/filled/line{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "thT" = (
 /obj/structure/chair/sofa/corp/left,
 /obj/effect/turf_decal/tile/neutral{
@@ -59187,21 +59372,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard)
-"tUl" = (
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 8
-	},
-/obj/machinery/light/directional/west,
-/obj/structure/extinguisher_cabinet/directional/west,
-/obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
-/area/science/xenobiology)
 "tUt" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -60469,10 +60639,6 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/storage)
-"uqW" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/closed/wall/r_wall,
-/area/science/xenobiology)
 "urj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -60789,6 +60955,7 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
+<<<<<<< HEAD
 "uwX" = (
 /obj/structure/window{
 	dir = 8
@@ -60800,6 +60967,8 @@
 	},
 /turf/open/floor/grass,
 /area/commons/dorms/cryo)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "uxg" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
@@ -60927,6 +61096,20 @@
 	},
 /turf/open/floor/iron/smooth,
 /area/maintenance/tram/left)
+"uzF" = (
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/obj/item/radio/intercom/directional/west,
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/command/gateway)
 "uzM" = (
 /obj/structure/sign/poster/official/do_not_question{
 	pixel_y = 32
@@ -61528,6 +61711,25 @@
 	},
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
+"uJQ" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 9
+	},
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+	name = "euthanization chamber freezer"
+	},
+/obj/structure/cable,
+/turf/open/floor/iron/white,
+/area/science/xenobiology)
+"uKn" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 9
+	},
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+	name = "euthanization chamber freezer"
+	},
+/turf/open/floor/iron/dark,
+/area/science/xenobiology)
 "uKH" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 1;
@@ -61828,6 +62030,11 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/service/chapel/office)
+"uSq" = (
+/obj/machinery/dna_scannernew,
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/dark,
+/area/science/genetics)
 "uSy" = (
 /obj/machinery/airalarm/directional/north,
 /obj/machinery/oven,
@@ -63185,6 +63392,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
+"vvj" = (
+/obj/machinery/computer/scan_consolenew,
+/turf/open/floor/iron/dark,
+/area/science/genetics)
 "vvp" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -63878,12 +64089,15 @@
 /obj/machinery/duct,
 /turf/open/floor/iron/white,
 /area/medical/surgery/fore)
+<<<<<<< HEAD
 "vJT" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/open/floor/iron/white,
 /area/science/mixing)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "vKe" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 1
@@ -65372,6 +65586,7 @@
 	},
 /turf/open/floor/carpet,
 /area/service/chapel)
+<<<<<<< HEAD
 "wnE" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 9
@@ -65396,6 +65611,8 @@
 	},
 /turf/open/floor/iron/white,
 /area/science/mixing)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "wnY" = (
 /obj/machinery/vending/coffee,
 /obj/effect/turf_decal/siding/wood{
@@ -65621,6 +65838,15 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron,
 /area/hallway/primary/tram/center)
+"wrW" = (
+/obj/effect/turf_decal/trimline/neutral/filled/corner{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/hallway/secondary/command)
 "wsh" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
@@ -66987,10 +67213,6 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/main)
-"wON" = (
-/obj/machinery/atmospherics/components/trinary/filter/atmos/co2,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "wPa" = (
 /obj/machinery/camera/directional/south{
 	c_tag = "Science - Upper Power Hatch";
@@ -68816,6 +69038,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
 /area/medical/virology)
+<<<<<<< HEAD
 "xwN" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	dir = 5
@@ -68836,6 +69059,8 @@
 /obj/item/radio/off,
 /turf/open/floor/iron,
 /area/command/gateway)
+=======
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 "xwT" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -68961,13 +69186,6 @@
 /obj/structure/lattice,
 /turf/open/openspace,
 /area/ai_monitored/turret_protected/aisat/hallway)
-"xyF" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 8;
-	initialize_directions = 8
-	},
-/turf/open/floor/iron/dark,
-/area/medical/treatment_center)
 "xyV" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible,
 /obj/effect/turf_decal/trimline/red/filled/line{
@@ -69768,45 +69986,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/hallway/primary/tram/right)
-"xMD" = (
-/obj/item/toy/crayon/orange,
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = 8;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = 4;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "i";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = -4;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "x";
-	name = "graffiti";
-	paint_colour = "#FF9300";
-	pixel_x = 4;
-	pixel_y = -32
-	},
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/open/floor/plating,
-/area/engineering/main)
 "xNa" = (
 /obj/effect/turf_decal/trimline/brown/filled/corner{
 	dir = 8
@@ -70298,16 +70477,6 @@
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/iron,
 /area/maintenance/tram/left)
-"xWA" = (
-/obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 9
-	},
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on{
-	name = "euthanization chamber freezer"
-	},
-/obj/structure/cable,
-/turf/open/floor/iron/white,
-/area/science/xenobiology)
 "xWF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -70888,6 +71057,11 @@
 	},
 /turf/open/floor/iron/smooth,
 /area/maintenance/department/medical)
+"yhv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/seeds/coffee,
+/turf/open/floor/iron/smooth,
+/area/maintenance/starboard/central)
 "yhy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment{
@@ -100692,7 +100866,11 @@ bQZ
 dTU
 ayG
 tBO
+<<<<<<< HEAD
 iPh
+=======
+rYq
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 dXs
 fXE
 xkR
@@ -101975,7 +102153,7 @@ jED
 jED
 uQZ
 jED
-lcJ
+cMe
 gnw
 cjg
 jDY
@@ -102232,7 +102410,7 @@ xLz
 hQY
 xjN
 xjN
-fvs
+tcr
 tBO
 jcs
 jDY
@@ -102489,7 +102667,7 @@ lOd
 lOd
 bOS
 dey
-gYA
+pAW
 tBO
 nrb
 jDY
@@ -102746,7 +102924,7 @@ fRN
 lOd
 lOd
 lOd
-gYA
+pAW
 tBO
 cjg
 jDY
@@ -103003,7 +103181,7 @@ cWe
 bJt
 kcC
 lOd
-oNc
+sZd
 tBO
 wNu
 jDY
@@ -103260,7 +103438,7 @@ eaf
 lbB
 pGL
 lOd
-ejN
+azx
 tBO
 rDl
 pBf
@@ -103517,7 +103695,7 @@ mfD
 pKF
 aoe
 lOd
-xMD
+fwl
 tBO
 tBO
 tBO
@@ -103770,11 +103948,15 @@ hIQ
 cVp
 klH
 rOg
+<<<<<<< HEAD
 ybB
+=======
+lNU
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 lOd
 lOd
 lOd
-nLa
+one
 one
 wAJ
 ldk
@@ -104031,7 +104213,7 @@ gjE
 gjE
 xsr
 fbm
-thP
+mDX
 one
 cFe
 ijR
@@ -104288,7 +104470,7 @@ sBn
 fce
 vEL
 dBJ
-fNk
+iTo
 kjy
 pbU
 rlq
@@ -104545,7 +104727,7 @@ kdy
 kdy
 kdy
 kdy
-wON
+kdy
 kdy
 kdy
 kdy
@@ -106600,8 +106782,8 @@ tnL
 oTZ
 oTZ
 oTZ
-lcW
-lUM
+fjs
+aWa
 cuV
 vsp
 oRq
@@ -114318,8 +114500,8 @@ nwz
 aPG
 lPd
 lPd
-iCI
-aXy
+lQG
+uKn
 azh
 pKo
 lQG
@@ -114575,7 +114757,7 @@ oRB
 lPd
 lPd
 ckj
-mkM
+lQG
 igT
 ccN
 fJM
@@ -114832,7 +115014,7 @@ lQG
 lQG
 lQG
 lQG
-uqW
+lQG
 agm
 daS
 oVk
@@ -115089,7 +115271,7 @@ chx
 veB
 agk
 veB
-gMG
+veB
 wJz
 xRY
 mim
@@ -118396,11 +118578,19 @@ adS
 adS
 oZh
 kNJ
+<<<<<<< HEAD
 uFV
 nxO
 mof
 pWW
 vJT
+=======
+pEJ
+aeu
+fAs
+jTh
+dkM
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 bOa
 buX
 jEi
@@ -118652,8 +118842,13 @@ oZh
 oZh
 oZh
 oZh
+<<<<<<< HEAD
 kpX
 hhX
+=======
+kNJ
+vIe
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 aeu
 fEf
 wTh
@@ -118661,6 +118856,7 @@ tuc
 nGD
 cYg
 lMe
+<<<<<<< HEAD
 vgm
 dUd
 pdN
@@ -118670,6 +118866,17 @@ lkB
 bak
 qEO
 qJB
+=======
+eOI
+bBG
+jaR
+uci
+sWx
+sWx
+xhD
+qDH
+iVX
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 qKu
 aLN
 fhZ
@@ -118909,15 +119116,24 @@ oZh
 nnL
 brq
 vQr
+<<<<<<< HEAD
 aNn
 gbn
 nxO
 mof
 wDg
+=======
+jmj
+yhv
+aeu
+fAs
+jyj
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 bOa
 bOa
 oTI
 lMe
+<<<<<<< HEAD
 vgm
 dUd
 pdN
@@ -118928,6 +119144,18 @@ bak
 qEO
 qJB
 whz
+=======
+eOI
+bBG
+jaR
+sbv
+sWx
+lnf
+xhD
+qDH
+iVX
+sXJ
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 hlq
 tLk
 tLk
@@ -152803,9 +153031,9 @@ yjC
 yjC
 yjC
 eQN
-wnE
-jSh
-pos
+lBi
+gOq
+uzF
 lUN
 pII
 ttz
@@ -153831,7 +154059,7 @@ hJp
 hJp
 hJp
 eVW
-xwN
+pVi
 iwX
 ieN
 hfE
@@ -154088,7 +154316,11 @@ trK
 cKn
 trK
 ieT
+<<<<<<< HEAD
 ieT
+=======
+kCx
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 ieT
 mVo
 ieT
@@ -154345,7 +154577,7 @@ ieT
 ieT
 ieT
 ieT
-ssT
+wrW
 sjf
 pxf
 qgI
@@ -165450,7 +165682,11 @@ eln
 cGT
 tCm
 vuG
+<<<<<<< HEAD
 uyn
+=======
+hXZ
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 oIf
 dhe
 dhe
@@ -169557,7 +169793,7 @@ dwE
 gBx
 vJH
 eNK
-xyF
+oQM
 kCv
 uht
 wvo
@@ -169814,7 +170050,7 @@ nNT
 hKq
 drZ
 uht
-iQI
+uht
 uht
 uht
 owA
@@ -170071,7 +170307,7 @@ uel
 uht
 uht
 uht
-iaP
+mDj
 hya
 nBH
 kYJ
@@ -176995,7 +177231,11 @@ qsb
 uWS
 uZJ
 bYY
+<<<<<<< HEAD
 srO
+=======
+aDF
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 wbP
 rFN
 dyg
@@ -178770,7 +179010,11 @@ xXj
 ari
 scx
 tEA
+<<<<<<< HEAD
 tch
+=======
+rgi
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 ajk
 yeO
 jqw
@@ -180111,8 +180355,8 @@ qRI
 dGu
 dGu
 dGu
-iCI
-xWA
+lQG
+uJQ
 lcs
 gYO
 oHv
@@ -180368,7 +180612,7 @@ vJu
 tLf
 tLf
 tLf
-tUl
+lLN
 tJs
 jZP
 lFs
@@ -181121,7 +181365,11 @@ jrL
 fBa
 hAH
 kLG
+<<<<<<< HEAD
 iWi
+=======
+lDb
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 eet
 dIv
 fBa
@@ -183431,9 +183679,9 @@ fBL
 tPF
 nYG
 xjn
-lJd
-pgk
-pmk
+uSq
+mwj
+say
 isP
 iCC
 fbB
@@ -183686,9 +183934,9 @@ kCh
 xjn
 wPq
 iez
-nTO
-hZc
-dhj
+kaQ
+xjn
+vvj
 iZA
 snJ
 ewj
@@ -186010,11 +186258,19 @@ nhJ
 nhJ
 czG
 byg
+<<<<<<< HEAD
 onG
 hmK
 uRC
 qzf
 oLB
+=======
+czu
+gNd
+vqE
+eeG
+ekn
+>>>>>>> c63a210eb6b ([MDB IGNORE] Removes ballast from thermomachines (#66411))
 nhJ
 nhJ
 aYr
