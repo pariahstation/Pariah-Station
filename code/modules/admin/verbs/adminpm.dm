@@ -261,9 +261,21 @@
 			if(holder) //sender is an admin but recipient is not. Do BIG RED TEXT
 				var/already_logged = FALSE
 				if(!recipient.current_ticket)
-					new /datum/admin_help(msg, recipient, TRUE)
+					//new /datum/admin_help(msg, recipient, TRUE) //ORIGINAL
+					new /datum/admin_help(msg, recipient, TRUE, src) //PARIAH EDIT CHANGE - ADMIN
 					already_logged = TRUE
 					SSblackbox.LogAhelp(recipient.current_ticket.id, "Ticket Opened", msg, recipient.ckey, src.ckey)
+
+				//PARIAH EDIT ADDITION BEGIN - ADMIN
+				if(recipient.current_ticket.handler)
+					if(recipient.current_ticket.handler != usr.ckey)
+						var/response = tgui_alert(usr, "This ticket is already being handled by [recipient.current_ticket.handler]. Do you want to continue?", "Ticket already assigned", list("Yes", "No"))
+
+						if(response == "No")
+							return
+				else
+					recipient.current_ticket.HandleIssue()
+				//PARIAH EDIT ADDITION END
 
 				to_chat(recipient,
 					type = MESSAGE_TYPE_ADMINPM,
