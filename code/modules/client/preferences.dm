@@ -511,12 +511,10 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 		preference.apply_to_human(character, read_preference(preference.type))
 
 	character.dna.real_name = character.real_name
-	character.dna.update_body_size() //PARIAH EDIT
 
 	if(icon_updates)
 		character.icon_render_keys = list()
 		character.update_body(is_creating = TRUE)
-
 
 /// Returns whether the parent mob should have the random hardcore settings enabled. Assumes it has a mind.
 /datum/preferences/proc/should_be_random_hardcore(datum/job/job, datum/mind/mind)
