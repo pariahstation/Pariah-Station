@@ -628,18 +628,20 @@
  * Produces a signal [COMSIG_PARENT_EXAMINE]
  */
 /atom/proc/examine(mob/user)
-	. = list("[get_examine_string(user, TRUE)].")
+	. = list("[get_examine_string(user, TRUE)].<hr>") //PARIAH EDIT CHANGE
 
 	. += get_name_chaser(user)
 	if(desc)
 		. += desc
 
 	if(custom_materials)
+		. += "<hr>" //PARIAH EDIT ADDITION
 		var/list/materials_list = list()
 		for(var/datum/material/current_material as anything in custom_materials)
 			materials_list += "[current_material.name]"
 		. += "<u>It is made out of [english_list(materials_list)]</u>."
 	if(reagents)
+		. += "<hr>" //PARIAH EDIT ADDITION
 		if(reagents.flags & TRANSPARENT)
 			. += "It contains:"
 			if(length(reagents.reagent_list))
@@ -1444,6 +1446,8 @@
 		choices += list("[initial(current_option_type.name)]" = option_image)
 
 	var/pick = show_radial_menu(user, src, choices, radius = 36, require_near = TRUE)
+	if(!pick)
+		return
 
 	StartProcessingAtom(user, processed_object, choices_to_options[pick])
 
@@ -2211,6 +2215,6 @@
  * * caller- The movable we're checking pass flags for, if we're making any such checks
  **/
 /atom/proc/CanAStarPass(obj/item/card/id/ID, to_dir, atom/movable/caller)
-	if(istype(caller) && (caller.pass_flags & pass_flags_self))
+	if(caller && (caller.pass_flags & pass_flags_self))
 		return TRUE
 	. = !density
