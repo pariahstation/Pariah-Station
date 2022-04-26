@@ -3,11 +3,11 @@
 
 	var/icon/tajaran = icon('modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi', "tajaran_head", EAST)
 	var/icon/eyes = icon('icons/mob/human_face.dmi', "eyes", EAST)
-	eyes.Blend(COLOR_GRAY, ICON_MULTIPLY)
+	eyes.Blend(COLOR_BLUE, ICON_MULTIPLY)
 	tajaran.Blend(eyes, ICON_OVERLAY)
 
 	if (include_snout)
-		tajaran.Blend(icon('icons/mob/mutant_bodyparts.dmi', "m_snout_tajaran_ADJ", EAST), ICON_OVERLAY)
+		tajaran.Blend(icon('modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi', "m_snout_tajaran_ADJ", EAST), ICON_OVERLAY)
 
 	for (var/name in sprite_accessories)
 		var/datum/sprite_accessory/sprite_accessory = sprite_accessories[name]
@@ -20,7 +20,7 @@
 
 		final_icon.Crop(11, 20, 23, 32)
 		final_icon.Scale(32, 32)
-		final_icon.Blend(COLOR_VIBRANT_LIME, ICON_MULTIPLY)
+		final_icon.Blend(COLOR_GRAY, ICON_MULTIPLY)
 
 		values[name] = final_icon
 
@@ -52,7 +52,7 @@
 
 			final_icon.Blend(body_markings_icon, ICON_OVERLAY)
 
-		final_icon.Blend(COLOR_VIBRANT_LIME, ICON_MULTIPLY)
+		final_icon.Blend(COLOR_GRAY, ICON_MULTIPLY)
 		final_icon.Crop(10, 8, 22, 23)
 		final_icon.Scale(26, 32)
 		final_icon.Crop(-2, 1, 29, 32)
@@ -63,18 +63,6 @@
 
 /datum/preference/choiced/tajaran_body_markings/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["body_markings_tajaran"] = value
-
-/datum/preference/choiced/tajaran_legs
-	savefile_key = "feature_tajaran_legs"
-	savefile_identifier = PREFERENCE_CHARACTER
-	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
-	relevant_mutant_bodypart = "legs"
-
-/datum/preference/choiced/tajaran_legs/init_possible_values()
-	return assoc_to_keys(GLOB.legs_list)
-
-/datum/preference/choiced/tajaran_legs/apply_to_human(mob/living/carbon/human/target, value)
-	target.dna.features["legs"] = value
 
 /datum/preference/choiced/tajaran_snout
 	savefile_key = "feature_tajaran_snout"

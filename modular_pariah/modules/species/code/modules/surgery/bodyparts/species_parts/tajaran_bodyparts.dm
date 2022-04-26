@@ -35,6 +35,7 @@
 
 /obj/item/bodypart/l_leg/digitigrade/tajaran
 	icon_greyscale = 'modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi'
+	limb_id = SPECIES_TAJARAN
 
 /obj/item/bodypart/l_leg/digitigrade/tajaran/update_limb(dropping_limb = FALSE, is_creating = FALSE)
 	. = ..()
@@ -55,6 +56,7 @@
 
 /obj/item/bodypart/r_leg/digitigrade/tajaran
 	icon_greyscale = 'modular_pariah/modules/species/icons/mob/species/tajaran/bodyparts.dmi'
+	limb_id = SPECIES_TAJARAN
 
 /obj/item/bodypart/r_leg/digitigrade/tajaran/update_limb(dropping_limb = FALSE, is_creating = FALSE)
 	. = ..()

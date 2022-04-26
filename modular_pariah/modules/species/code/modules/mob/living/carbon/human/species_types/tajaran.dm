@@ -18,7 +18,7 @@ GLOBAL_LIST_EMPTY(snouts_list_tajaran)
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	mutant_bodyparts = list("tail_tajaran" = "Standard", "body_markings_tajaran" = "None", "legs" = "Normal Legs")
-	external_organs = list(/obj/item/organ/external/snout/tajaran = "Standard")
+	external_organs = list(/obj/item/organ/external/snout/tajaran = "Tajaran")
 	mutant_organs = list(/obj/item/organ/tail/tajaran)
 	mutantears = /obj/item/organ/ears/tajaran
 	attack_verb = "slash"

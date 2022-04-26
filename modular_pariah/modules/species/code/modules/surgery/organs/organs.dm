@@ -1,6 +1,7 @@
 ///Guess what part of the cat this is?
 /obj/item/organ/external/snout/tajaran
 	preference = "feature_tajaran_snout"
+	feature_key = "snout_tajaran"
 	dna_block = DNA_TAJARAN_SNOUT_BLOCK
 
 /obj/item/organ/external/snout/tajaran/can_draw_on_bodypart(mob/living/carbon/human/human)
@@ -9,7 +10,7 @@
 	return FALSE
 
 /obj/item/organ/external/snout/tajaran/get_global_feature_list()
-	return GLOB.snouts_list
+	return GLOB.snouts_list_tajaran
 
 /obj/item/organ/ears/tajaran
 	name = "tajaran ears"
