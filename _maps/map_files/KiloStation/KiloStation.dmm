@@ -24093,8 +24093,6 @@
 "dxK" = (
 /turf/closed/wall,
 /area/command/heads_quarters/cmo)
-<<<<<<< HEAD
-=======
 "dxW" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -24110,7 +24108,6 @@
 /obj/structure/table/reinforced/rglass,
 /turf/open/floor/iron/showroomfloor,
 /area/command/heads_quarters/cmo)
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 "dye" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
@@ -30370,16 +30367,6 @@
 /obj/structure/flora/ausbushes/genericbush,
 /turf/open/floor/grass,
 /area/service/hydroponics)
-"fDi" = (
-/obj/structure/table,
-/obj/item/clipboard,
-/obj/item/folder/yellow,
-/obj/item/computer_hardware/hard_drive/role/quartermaster,
-/obj/item/computer_hardware/hard_drive/role/quartermaster,
-/obj/item/computer_hardware/hard_drive/role/quartermaster,
-/obj/item/pen/fountain,
-/turf/open/floor/carpet/orange,
-/area/cargo/qm)
 "fDn" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall,
@@ -31652,11 +31639,6 @@
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/carpet/green,
 /area/cargo/warehouse)
-"gdU" = (
-/obj/item/kirbyplants/random,
-/obj/machinery/status_display/ai/directional/west,
-/turf/open/floor/circuit,
-/area/ai_monitored/turret_protected/ai_upload)
 "gek" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -35765,15 +35747,6 @@
 	dir = 1
 	},
 /area/service/chapel/dock)
-"hyB" = (
-/obj/structure/table,
-/obj/machinery/computer/security/telescreen/cmo{
-	dir = 1;
-	name = "Chief Medical Officer's telescreen";
-	network = list("medical")
-	},
-/turf/open/floor/iron/showroomfloor,
-/area/command/heads_quarters/cmo)
 "hyK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -36444,11 +36417,6 @@
 	},
 /turf/open/floor/iron,
 /area/cargo/storage)
-"hJU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line,
-/turf/open/floor/engine,
-/area/ai_monitored/turret_protected/ai_upload)
 "hJW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/sorting/mail{
@@ -41309,13 +41277,6 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral,
-<<<<<<< HEAD
-/obj/machinery/camera/directional/south{
-	c_tag = "Fore Hallway Vault";
-	name = "fore camera"
-	},
-=======
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 /obj/structure/sign/poster/official/random/directional/south,
 /turf/open/floor/iron/dark/corner,
 /area/hallway/primary/central/fore)
@@ -41543,18 +41504,6 @@
 /obj/machinery/atmospherics/pipe/layer_manifold/scrubbers/hidden,
 /turf/open/floor/iron,
 /area/medical/medbay/central)
-<<<<<<< HEAD
-"jlP" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/obj/structure/sign/poster/contraband/random/directional/west,
-/turf/open/floor/plating{
-	icon_state = "panelscorched"
-	},
-/area/maintenance/port/lesser)
-=======
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 "jmf" = (
 /obj/structure/sign/departments/security{
 	pixel_y = 32
@@ -43272,32 +43221,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/green,
 /area/maintenance/port/greater)
-"jSV" = (
-/obj/structure/table,
-/obj/item/clipboard,
-/obj/item/computer_hardware/hard_drive/role/roboticist,
-/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
-/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
-/obj/item/computer_hardware/hard_drive/role/signal/ordnance,
-/obj/item/circuitboard/aicore{
-	pixel_y = 5
-	},
-/obj/item/hand_labeler,
-/obj/machinery/airalarm/directional/west,
-/obj/machinery/light/directional/west,
-/obj/item/paicard{
-	pixel_x = 6
-	},
-/obj/item/aicard,
-/obj/item/taperecorder{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/effect/turf_decal/tile/neutral/half/contrasted{
-	dir = 4
-	},
-/turf/open/floor/iron/dark,
-/area/command/heads_quarters/rd)
 "jSW" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/cobweb,
@@ -46711,21 +46634,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/cargo/warehouse)
-"kWc" = (
-/obj/structure/table/glass,
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/chemistry,
-/obj/item/clothing/neck/stethoscope{
-	pixel_y = 5
-	},
-/turf/open/floor/iron/showroomfloor,
-/area/command/heads_quarters/cmo)
 "kWh" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/carpet/red,
@@ -57880,12 +57788,6 @@
 	},
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
-"oFC" = (
-/obj/item/kirbyplants/random,
-/obj/machinery/status_display/ai/directional/west,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/iron/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "oFL" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12"
@@ -60549,21 +60451,6 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
-"pBg" = (
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/taperecorder{
-	pixel_x = 5
-	},
-/obj/structure/table,
-/obj/item/computer_hardware/hard_drive/role/lawyer,
-/obj/effect/turf_decal/bot,
-/obj/structure/mirror/directional/north,
-/turf/open/floor/iron/dark,
-/area/service/lawoffice)
 "pBk" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/atmospherics/components/tank/air,
@@ -63972,17 +63859,6 @@
 	},
 /turf/open/floor/iron,
 /area/security/prison)
-"qGS" = (
-/obj/machinery/flasher/directional/west{
-	id = "AI";
-	name = "Meatbag Pacifier"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
-	},
-/turf/open/floor/engine,
-/area/ai_monitored/turret_protected/ai_upload)
 "qGU" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/bin,
@@ -69054,33 +68930,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/engineering/atmos/pumproom)
-"sjL" = (
-/obj/structure/table/glass,
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue,
-/obj/item/paper_bin{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/pen,
-/obj/item/stamp/cmo{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/machinery/light_switch/directional/south{
-	pixel_x = -8
-	},
-/obj/machinery/keycard_auth/directional/south{
-	pixel_x = 8
-	},
-/turf/open/floor/iron/showroomfloor,
-/area/command/heads_quarters/cmo)
 "sjS" = (
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical{
 	dir = 4
@@ -69337,32 +69186,6 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
-"snF" = (
-/obj/machinery/modular_computer/console/preset/id{
-	dir = 8
-	},
-/obj/effect/turf_decal/bot,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/machinery/button/door{
-	id = "cmoprivacy";
-	name = "Privacy Shutters Toggle";
-	pixel_x = -24;
-	pixel_y = -24
-	},
-/obj/machinery/button/door{
-	id = "emmd";
-	name = "Medical Lockdown Toggle";
-	pixel_x = -40;
-	pixel_y = -24
-	},
-/obj/machinery/light/directional/east,
-/turf/open/floor/iron/dark,
-/area/command/heads_quarters/cmo)
 "snK" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -71021,19 +70844,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/maintenance/port/fore)
-"sRA" = (
-/obj/structure/table/reinforced,
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/item/computer_hardware/hard_drive/role/engineering,
-/obj/item/computer_hardware/hard_drive/role/engineering,
-/obj/item/computer_hardware/hard_drive/role/atmos,
-/obj/item/folder,
-/obj/item/stamp/ce,
-/turf/open/floor/iron/dark,
-/area/command/heads_quarters/ce)
 "sRB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -75231,18 +75041,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark,
 /area/commons/storage/primary)
-"uox" = (
-/obj/structure/table/glass,
-/obj/effect/turf_decal/tile/blue,
-/obj/item/clipboard,
-/obj/item/folder/white{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/folder/blue,
-/obj/item/clothing/glasses/hud/health,
-/turf/open/floor/iron/showroomfloor,
-/area/command/heads_quarters/cmo)
 "uoT" = (
 /obj/structure/disposaloutlet{
 	dir = 4
@@ -83895,24 +83693,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/security/interrogation)
-"xjs" = (
-/obj/structure/chair/office/light{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 1
-	},
-/obj/effect/landmark/start/chief_medical_officer,
-/turf/open/floor/iron/showroomfloor,
-/area/command/heads_quarters/cmo)
 "xko" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -96148,12 +95928,12 @@ aav
 aeU
 aeu
 aeu
-aeu
+ckn
 aeo
 acm
 acm
 aeo
-aeU
+ckn
 aeU
 aeU
 aeU
@@ -97185,7 +96965,7 @@ aaa
 aaa
 vQF
 aeU
-aeU
+cmU
 aaa
 aaa
 aaa
@@ -97441,7 +97221,7 @@ aaa
 aaa
 aaa
 acm
-aeU
+cmU
 acm
 aaa
 aaa
@@ -97880,9 +97660,9 @@ aaQ
 anr
 acm
 acm
+cmU
 coy
 aUz
-aeU
 aeU
 aeu
 aeu
@@ -99925,7 +99705,7 @@ aaa
 aeo
 aaa
 aaQ
-aeU
+cmU
 cmU
 fER
 fER
@@ -100517,7 +100297,7 @@ aeU
 aeU
 cmU
 vRa
-aeU
+cmU
 aeU
 aeU
 aeU
@@ -101294,9 +101074,9 @@ aeU
 aeU
 aeu
 aeu
-aeU
+cmU
 acm
-cry
+aaa
 acm
 aaa
 aaa
@@ -101553,8 +101333,8 @@ aeu
 aeu
 aeu
 ckn
-aeu
-aeo
+cmU
+acm
 aaa
 aaa
 aaa
@@ -101811,7 +101591,7 @@ aeu
 aeu
 aeu
 aeu
-aUz
+cmU
 aaa
 aaa
 aaa
@@ -102067,7 +101847,7 @@ aeu
 aeu
 aeu
 ckn
-aeU
+aUz
 aaa
 aaa
 aaa
@@ -102491,7 +102271,7 @@ acm
 aaa
 acm
 acm
-aeu
+alm
 aeu
 aeu
 aUz
@@ -102832,7 +102612,7 @@ ere
 lJQ
 cse
 coB
-aeU
+aUz
 aaa
 aaa
 aaa
@@ -103089,7 +102869,7 @@ haP
 cBo
 lnb
 cnP
-aUz
+cmU
 acm
 acm
 acm
@@ -104031,7 +103811,7 @@ aaa
 aaa
 aaa
 acm
-aeU
+cmU
 exA
 aeu
 aeu
@@ -105315,7 +105095,7 @@ aaa
 aaa
 aaa
 aaa
-aeU
+cmU
 aeU
 exA
 aeu
@@ -105597,15 +105377,9 @@ aOm
 eWO
 hPF
 rif
-<<<<<<< HEAD
-kWc
-uox
-sjL
-=======
 dxW
 uCL
 ecn
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 aOZ
 daE
 gHO
@@ -105834,7 +105608,7 @@ acK
 acm
 acm
 acm
-aeU
+cmU
 aeU
 aeU
 exA
@@ -105861,13 +105635,8 @@ eWO
 loB
 nwk
 vWP
-<<<<<<< HEAD
-xjs
-hyB
-=======
 vAb
 bGP
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 ahc
 aPx
 aPx
@@ -106123,11 +105892,7 @@ eqk
 lgr
 gCc
 pdA
-<<<<<<< HEAD
-snF
-=======
 qGh
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 eWO
 aSW
 axH
@@ -107130,7 +106895,7 @@ acm
 acm
 acm
 acm
-aeU
+cmU
 nxx
 lBP
 fvD
@@ -108932,7 +108697,7 @@ acm
 acm
 bRh
 aaa
-cko
+cmU
 vEC
 fYf
 fYf
@@ -109446,8 +109211,8 @@ aaa
 aaa
 acm
 acm
-cko
-aeU
+cmU
+cmU
 aeU
 aeU
 aeU
@@ -109702,9 +109467,9 @@ aaa
 aaa
 aaa
 aaa
-aaa
 acm
-aeU
+acm
+cmU
 aUz
 aeU
 aeu
@@ -109959,7 +109724,7 @@ aaa
 aaa
 aaa
 aaa
-aeU
+cmU
 alm
 aeu
 aeu
@@ -110018,7 +109783,7 @@ nHK
 nHK
 gcs
 afm
-jlP
+xnR
 bVt
 mSG
 vUn
@@ -112321,11 +112086,7 @@ jBA
 vWL
 jBA
 ihG
-<<<<<<< HEAD
-pBg
-=======
 lpM
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 mFV
 eVk
 lOa
@@ -114079,7 +113840,7 @@ aaa
 acm
 aaa
 aaa
-aeU
+cmU
 aUz
 aeu
 adH
@@ -118290,7 +118051,7 @@ acm
 aaa
 gGF
 aaa
-aeU
+cmU
 aeU
 aaa
 aaa
@@ -118545,8 +118306,8 @@ idD
 rko
 cke
 acm
+cmU
 aUz
-aeU
 cke
 aeu
 aeU
@@ -121061,22 +120822,13 @@ mVw
 sSI
 acm
 kbW
-<<<<<<< HEAD
-gdU
-=======
 kEm
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 cTh
 gjc
 jat
 kvo
-<<<<<<< HEAD
-qGS
-oFC
-=======
 wfD
 pmI
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 kbW
 kQg
 acf
@@ -121332,11 +121084,7 @@ lzv
 reT
 vRQ
 vRh
-<<<<<<< HEAD
-hJU
-=======
 bNM
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 ioK
 slo
 acm
@@ -123669,11 +123417,7 @@ aec
 gzJ
 qFx
 ocP
-<<<<<<< HEAD
-sRA
-=======
 ozC
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 dye
 mDL
 oLw
@@ -125677,11 +125421,7 @@ auQ
 rJa
 iOj
 kyg
-<<<<<<< HEAD
-jSV
-=======
 jEA
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 vlS
 vlS
 vlS
@@ -126473,11 +126213,7 @@ bkd
 ava
 eOv
 eGJ
-<<<<<<< HEAD
-fDi
-=======
 wRt
->>>>>>> 99b9d2be9bb (Removes canister tiers, now canisters have an option to turn on shielding for power consumption (#66210))
 fgG
 kbq
 lAK
@@ -130378,9 +130114,9 @@ aaa
 aaa
 aaa
 acm
+cmU
 aeU
-aeU
-aeU
+cmU
 aUz
 cmU
 qgQ
@@ -130635,7 +130371,7 @@ aaa
 aaa
 aaa
 qJs
-aeU
+cmU
 aaa
 acm
 aaa
@@ -143168,8 +142904,8 @@ aeu
 aeu
 aeu
 aeu
-aeU
 coy
+cmU
 ciQ
 acm
 aeo
@@ -143685,7 +143421,7 @@ aUz
 aeu
 aeu
 aeu
-aUz
+cmU
 aeu
 cci
 cbU
