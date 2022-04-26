@@ -4585,7 +4585,11 @@
 #include "modular_pariah\modules\skrell\code\modules\client\preferences\species\skrell.dm"
 #include "modular_pariah\modules\skrell\code\modules\language\language_holder.dm"
 #include "modular_pariah\modules\skrell\code\modules\language\skrell.dm"
+#include "modular_pariah\modules\skrell\code\modules\mob\living\carbon\human\human.dm"
 #include "modular_pariah\modules\skrell\code\modules\mob\living\carbon\human\skrell_headtails.dm"
 #include "modular_pariah\modules\skrell\code\modules\mob\living\carbon\human\species_types\skrell.dm"
+#include "modular_pariah\modules\skrell\code\modules\reagents\reagent_containers\skrell_blood_pack.dm"
 #include "modular_pariah\modules\skrell\code\modules\surgery\bodyparts\species_parts\skrell_bodyparts.dm"
+#include "modular_pariah\modules\skrell\code\modules\surgery\organs\skrell_organs.dm"
+#include "modular_pariah\modules\skrell\code\modules\surgery\organs\external\skrell_headtails.dm"
 // END_INCLUDE
