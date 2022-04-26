@@ -1,6 +1,3 @@
-GLOBAL_LIST_EMPTY(headtails_list)
-
-// The datum for Skrell.
 /datum/species/skrell
 	name = "Skrell"
 	id = SPECIES_SKRELL
