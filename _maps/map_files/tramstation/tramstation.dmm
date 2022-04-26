@@ -61326,6 +61326,11 @@
 /area/maintenance/starboard/central)
 "uFX" = (
 /obj/structure/closet/secure_closet/medical3,
+/obj/item/clothing/gloves/color/latex/nitrile,
+/obj/item/clothing/gloves/color/latex/nitrile,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/storage/belt/medical,
 /turf/open/floor/iron/dark,
 /area/medical/storage)
 "uGu" = (
