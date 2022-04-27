@@ -9,7 +9,6 @@
 		TRAIT_CAN_USE_FLIGHT_POTION,
 	)
 	mutant_bodyparts = list("wings" = "None")
-	default_features = list("body_size" = "Normal")
 	use_skintones = 1
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	disliked_food = GROSS | RAW | CLOTH

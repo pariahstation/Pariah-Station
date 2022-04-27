@@ -9,11 +9,8 @@
 	return list("Normal", "Short", "Tall")
 
 /datum/preference/choiced/body_size/apply_to_human(mob/living/carbon/human/target, value)
-    target.dna.features["body_size"] = value
-    target.dna.update_body_size()
+	target.dna.features["body_size"] = value
+	target.dna.update_body_size()
 
 /datum/preference/choiced/body_size/create_default_value()
 	return "Normal"
-
-/datum/preference/choiced/body_size/apply_to_human(mob/living/carbon/human/target, value)
-	return ..()
