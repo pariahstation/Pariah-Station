@@ -21,7 +21,7 @@
 		TRAIT_CAN_USE_FLIGHT_POTION,
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	mutantlungs = /obj/item/organ/lungs/nitrogen/vox
+	mutantlungs = /obj/item/organ/lungs/vox
 	mutantbrain = /obj/item/organ/brain/vox
 	mutantheart = /obj/item/organ/heart/vox
 	mutanteyes = /obj/item/organ/eyes/vox
@@ -70,13 +70,6 @@
 		randname += " [lastname]"
 
 	return randname
-
-/datum/species/vox/get_random_features()
-	var/list/returned = MANDATORY_FEATURE_LIST
-	returned["mcolor"] = pick("#77DD88", "#77DDAA", "#77CCDD", "#77DDCC")
-	returned["mcolor2"] = pick("#EEDD88", "#EECC88")
-	returned["mcolor3"] = pick("#222222", "#44EEFF", "#44FFBB", "#8844FF", "#332233")
-	return returned
 
 /datum/species/vox/get_species_description()
 	return ""
