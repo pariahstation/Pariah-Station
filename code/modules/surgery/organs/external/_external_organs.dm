@@ -208,6 +208,13 @@
 /obj/item/organ/external/snout/get_global_feature_list()
 	return GLOB.snouts_list
 
+///Guess what part of the vox is this?
+/obj/item/organ/external/snout/vox
+	preference = "feature_vox_snout"
+
+/obj/item/organ/external/snout/vox/get_global_feature_list()
+	return GLOB.vox_snouts_list
+
 ///A moth's antennae
 /obj/item/organ/external/antennae
 	zone = BODY_ZONE_HEAD

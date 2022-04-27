@@ -458,6 +458,11 @@
 	REMOVE_TRAIT(eye_owner, TRAIT_FLASH_SENSITIVE, ORGAN_TRAIT)
 	return ..()
 
+/obj/item/organ/eyes/vox
+	name = "vox eyeballs"
+	icon_state = "vox-eyeballs"
+	eye_icon_state = "vox-eyes"
+
 /obj/item/organ/eyes/night_vision/maintenance_adapted
 	name = "adapted eyes"
 	desc = "These red eyes look like two foggy marbles. They give off a particularly worrying glow in the dark."

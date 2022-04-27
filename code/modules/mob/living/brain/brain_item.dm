@@ -322,6 +322,10 @@
 	desc = "We barely understand the brains of terrestial animals. Who knows what we may find in the brain of such an advanced species?"
 	icon_state = "brain-x"
 
+/obj/item/organ/brain/vox
+	name = "cortical stack"
+	desc = "A peculiarly advanced bio-electronic device that seems to hold the memories and identity of a Vox."
+	icon_state = "cortical-stack"
 
 ////////////////////////////////////TRAUMAS////////////////////////////////////////
 

@@ -36,3 +36,10 @@
 	inhand_icon_state = "m_mask"
 	permeability_coefficient = 0.01
 	equip_delay_other = 10
+
+/obj/item/clothing/mask/breath/vox
+	desc = "A close-fitting mask that can be connected to an air supply. This one's got an easily accessible feeding port to be more suitable for the Vox crewmembers."
+	name = "vox breath mask"
+	actions_types = list()
+	flags_cover = NONE
+
