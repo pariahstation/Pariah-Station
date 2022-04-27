@@ -12,7 +12,7 @@
 	set category = "Admin.Events"
 	set name = "Change Command Name"
 
-	if(!check_rights(R_ADMIN))
+	if(!check_rights(R_ADMIN) || !check_rights(R_DEBUG))
 		return
 
 	var/input = input(usr, "Please input a new name for Central Command.", "What?", "") as text|null
