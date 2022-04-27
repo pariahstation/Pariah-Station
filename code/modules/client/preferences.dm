@@ -82,6 +82,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	/// If set to TRUE, will update character_profiles on the next ui_data tick.
 	var/tainted_character_profiles = FALSE
 
+	///Whether the user wants to see body size being shown in the preview
+	var/show_body_size = FALSE
+
 /datum/preferences/Destroy(force, ...)
 	QDEL_NULL(character_preview_view)
 	QDEL_LIST(middleware)
