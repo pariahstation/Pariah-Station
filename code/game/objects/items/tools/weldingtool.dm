@@ -42,12 +42,20 @@
 	var/burned_fuel_for = 0 //when fuel was last removed
 	var/acti_sound = 'sound/items/welderactivate.ogg'
 	var/deac_sound = 'sound/items/welderdeactivate.ogg'
+	/// An image effect for displaying the welding effect for items that support it
+	var/image/welding_sparks
 
 /obj/item/weldingtool/Initialize(mapload)
 	. = ..()
 	create_reagents(max_fuel)
 	reagents.add_reagent(/datum/reagent/fuel, max_fuel)
 	update_appearance()
+	welding_sparks = image('code/modules/welding_sparks/icons/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER)
+	welding_sparks.plane = ABOVE_LIGHTING_PLANE
+
+/obj/item/weldingtool/Destroy(force)
+	QDEL_NULL(welding_sparks)
+	return ..()
 
 /obj/item/weldingtool/ComponentInitialize()
 	. = ..()
@@ -113,6 +121,11 @@
 	var/plasmaAmount = reagents.get_reagent_amount(/datum/reagent/toxin/plasma)
 	dyn_explosion(src, plasmaAmount/5, explosion_cause = src)//20 plasma in a standard welder has a 4 power explosion. no breaches, but enough to kill/dismember holder
 	qdel(src)
+
+/obj/item/weldingtool/use_tool(atom/target, mob/living/user, delay, amount, volume, datum/callback/extra_checks)
+	target.add_overlay(welding_sparks)
+	. = ..()
+	target.cut_overlay(welding_sparks)
 
 /obj/item/weldingtool/attack(mob/living/carbon/human/attacked_humanoid, mob/living/user)
 	if(!istype(attacked_humanoid))
@@ -387,17 +400,3 @@
 		reagents.add_reagent(/datum/reagent/fuel, 1)
 
 #undef WELDER_FUEL_BURN_INTERVAL
-
-/obj/item
-	/// An image effect for displaying a welding effect for items that support it.
-	var/image/welding_sparks
-
-/obj/item/Initialize(mapload)
-	. = ..()
-	if(tool_behaviour == TOOL_WELDER) // If we act like a welder, set up some spark effects.
-		welding_sparks = image('code/modules/welding_sparks/icons/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER)
-		welding_sparks.plane = ABOVE_LIGHTING_PLANE
-
-/obj/item/Destroy(force)
-	QDEL_NULL(welding_sparks)
-	return ..()
