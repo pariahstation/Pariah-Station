@@ -46,6 +46,13 @@ GLOBAL_LIST_EMPTY(pod_hair_list)
 #define BODY_SIZE_SHORT 0.93
 #define BODY_SIZE_TALL 1.03
 
+	//Body Sizes
+GLOBAL_LIST_INIT(body_sizes, list(
+	"Normal" = BODY_SIZE_NORMAL,
+	"Short" = BODY_SIZE_SHORT,
+	"Tall" = BODY_SIZE_TALL,
+))
+
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Blue" = "#3399ff",
 	"Bright Yellow" = "#ffff99",
