@@ -973,6 +973,8 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 	delay *= toolspeed * skill_modifier
 
+	if(welding_sparks) // If we have sparks, assume we are a welding tool.
+		target.add_overlay(welding_sparks)
 
 	// Play tool sound at the beginning of tool usage.
 	play_tool_sound(target, volume)
@@ -983,24 +985,34 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 
 		if(ismob(target))
 			if(!do_mob(user, target, delay, extra_checks=tool_check))
+				if(welding_sparks)
+					target.cut_overlay(welding_sparks)
 				return
 
 		else
 			if(!do_after(user, delay, target=target, extra_checks=tool_check))
+				if(welding_sparks)
+					target.cut_overlay(welding_sparks)
 				return
 	else
 		// Invoke the extra checks once, just in case.
 		if(extra_checks && !extra_checks.Invoke())
+			if(welding_sparks)
+				target.cut_overlay(welding_sparks)
 			return
 
 	// Use tool's fuel, stack sheets or charges if amount is set.
 	if(amount && !use(amount))
+		if(welding_sparks)
+			target.cut_overlay(welding_sparks)
 		return
 
 	// Play tool sound at the end of tool usage,
 	// but only if the delay between the beginning and the end is not too small
 	if(delay >= MIN_TOOL_SOUND_DELAY)
 		play_tool_sound(target, volume)
+	if(welding_sparks)
+		target.cut_overlay(welding_sparks)
 
 	return TRUE
 
