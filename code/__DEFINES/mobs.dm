@@ -78,11 +78,8 @@
 #define BODYTYPE_MONKEY (1<<4)
 ///The limb is snouted
 #define BODYTYPE_SNOUTED (1<<5)
-
-//PARIAH EDIT ADDITION
 ///The limb has skrelly bits
 #define BODYTYPE_SKRELL (1<<6)
-//PARIAH EDIT END
 
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"
@@ -112,6 +109,7 @@
 #define SPECIES_ZOMBIE "zombie"
 #define SPECIES_ZOMBIE_INFECTIOUS "memezombie"
 #define SPECIES_ZOMBIE_KROKODIL "krokodil_zombie"
+#define SPECIES_SKRELL "skrell"
 
 //See: datum/species/var/digitigrade_customization
 ///The species does not have digitigrade legs in generation.

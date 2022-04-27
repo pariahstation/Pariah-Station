@@ -37,7 +37,7 @@
 
 /obj/item/reagent_containers/blood/random/Initialize(mapload)
 	icon_state = "bloodpack"
-	blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "S") //PARIAH EDIT ADDITION
+	blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "S")
 	return ..()
 
 /obj/item/reagent_containers/blood/a_plus

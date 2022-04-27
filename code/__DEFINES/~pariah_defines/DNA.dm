@@ -16,8 +16,3 @@
 #define REAGENT_SYNTHETIC 2
 
 #define MANDATORY_FEATURE_LIST list("flavor_text" = "")
-
-#define ORGAN_SLOT_EXTERNAL_HEADTAILS "headtails"
-
-#define SPECIES_SKRELL "skrell"
-
