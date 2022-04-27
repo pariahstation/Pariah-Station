@@ -31,7 +31,7 @@
 		/datum/language/shadowtongue,
 		/datum/language/terrum,
 		/datum/language/nekomimetic,
-		/datum/language/skrell, //PARIAH EDIT ADDITION
+		/datum/language/skrell,
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)
@@ -319,6 +319,12 @@
 
 /obj/item/organ/tongue/alien/modify_speech(datum/source, list/speech_args)
 	playsound(owner, SFX_HISS, 25, TRUE, TRUE)
+
+/obj/item/organ/tongue/skrell
+	name = "internal vocal sacs"
+	desc = "A strange looking sac."
+	icon_state = "tongue-skrell"
+	taste_sensitivity = 5
 
 /obj/item/organ/tongue/bone
 	name = "bone \"tongue\""

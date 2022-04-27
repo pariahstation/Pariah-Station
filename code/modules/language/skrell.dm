@@ -7,4 +7,4 @@
 	syllables = list("qr", "qrr", "xuq", "qil", "quum", "xuqm", "vol", "xrim", "zaoo", "qu-uu", "qix", "qoo", "zix")
 	default_priority = 90
 	icon_state = "skrell"
-	icon = 'modular_pariah/modules/skrell/icons/misc/language.dmi'
+	icon = 'icons/misc/language.dmi'

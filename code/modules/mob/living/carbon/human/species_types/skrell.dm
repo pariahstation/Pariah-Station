@@ -14,7 +14,7 @@
 	species_language_holder = /datum/language_holder/skrell
 	exotic_bloodtype = "S"
 
-	species_eye_path = 'modular_pariah/modules/skrell/icons/mob/skrell_eyes.dmi'
+	species_eye_path = 'icons/mob/species/skrell/eyes.dmi'
 
 	mutantbrain = /obj/item/organ/brain/skrell
 	mutanteyes = /obj/item/organ/eyes/skrell

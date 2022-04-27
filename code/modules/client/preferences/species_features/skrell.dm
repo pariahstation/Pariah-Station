@@ -1,8 +1,8 @@
 /proc/generate_skrell_side_shots(list/sprite_accessories, key, list/sides)
 	var/list/values = list()
 
-	var/icon/skrell = icon('modular_pariah/modules/skrell/icons/mob/species/skrell/bodyparts.dmi', "skrell_head", EAST)
-	var/icon/eyes = icon('modular_pariah/modules/skrell/icons/mob/skrell_eyes.dmi', "eyes", EAST)
+	var/icon/skrell = icon('icons/mob/species/skrell/bodyparts.dmi', "skrell_head", EAST)
+	var/icon/eyes = icon('icons/mob/species/skrell/eyes.dmi', "eyes", EAST)
 
 	eyes.Blend(COLOR_ALMOST_BLACK, ICON_MULTIPLY)
 	skrell.Blend(eyes, ICON_OVERLAY)
