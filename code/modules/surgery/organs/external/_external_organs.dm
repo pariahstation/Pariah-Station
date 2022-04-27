@@ -295,6 +295,7 @@
 	slot = ORGAN_SLOT_EXTERNAL_HEADTAILS
 	layers = EXTERNAL_FRONT | EXTERNAL_ADJACENT
 	dna_block = DNA_HEADTAILS_BLOCK
+
 	feature_key = "headtails"
 	preference = "feature_headtails"
 
