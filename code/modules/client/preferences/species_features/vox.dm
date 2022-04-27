@@ -37,7 +37,7 @@
 	return generate_vox_side_shots(GLOB.vox_snouts_list, "snout", include_snout = FALSE)
 
 /datum/preference/choiced/vox_snout/apply_to_human(mob/living/carbon/human/target, value)
-	target.dna.features["snout"] = value
+	target.dna.features["vox_snout"] = value
 
 /datum/preference/choiced/vox_spines
 	savefile_key = "feature_vox_spines"
@@ -49,7 +49,7 @@
 	return assoc_to_keys(GLOB.spines_list_vox)
 
 /datum/preference/choiced/vox_spines/apply_to_human(mob/living/carbon/human/target, value)
-	target.dna.features["spines"] = value
+	target.dna.features["vox_spines"] = value
 
 /datum/preference/choiced/vox_tail
 	savefile_key = "feature_vox_tail"
@@ -57,9 +57,9 @@
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
 	relevant_mutant_bodypart = "tail_vox"
 
-/datum/preference/choiced/lizard_tail/init_possible_values()
+/datum/preference/choiced/vox_tail/init_possible_values()
 	return assoc_to_keys(GLOB.tails_list_vox)
 
-/datum/preference/choiced/lizard_tail/apply_to_human(mob/living/carbon/human/target, value)
+/datum/preference/choiced/vox_tail/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["tail_vox"] = value
 
