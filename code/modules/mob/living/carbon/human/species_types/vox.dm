@@ -8,11 +8,8 @@
 	species_traits = list(
 		MUTCOLORS,
 		EYECOLOR,
-		LIPS,
 		HAS_FLESH,
 		HAS_BONE,
-		HAIR,
-		FACEHAIR
 	)
 	inherent_traits = list(
 		TRAIT_RESISTCOLD,
@@ -33,7 +30,9 @@
 		"spines_vox" = "None"
 	)
 	external_organs = list(
-		/obj/item/organ/external/snout/vox = "Regular")
+		/obj/item/organ/external/snout/vox = "Vox Snout",
+		/obj/item/organ/external/vox_hair = "Vox Afro",
+		/obj/item/organ/external/vox_facial_hair = "None")
 	attack_verb = "slash"
 	attack_effect = ATTACK_EFFECT_CLAW
 	attack_sound = 'sound/weapons/slash.ogg'

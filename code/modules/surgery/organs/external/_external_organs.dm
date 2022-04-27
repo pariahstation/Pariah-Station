@@ -210,6 +210,7 @@
 
 ///Guess what part of the vox is this?
 /obj/item/organ/external/snout/vox
+	feature_key = "vox_snout"
 	preference = "feature_vox_snout"
 
 /obj/item/organ/external/snout/vox/get_global_feature_list()
@@ -295,4 +296,36 @@
 /obj/item/organ/external/pod_hair/override_color(rgb_value)
 	var/list/rgb_list = rgb2num(rgb_value)
 	return rgb(255 - rgb_list[1], 255 - rgb_list[2], 255 - rgb_list[3])
+
+/obj/item/organ/external/vox_hair
+	zone = BODY_ZONE_HEAD
+	slot = ORGAN_SLOT_EXTERNAL_VOX_HAIR
+	layers = EXTERNAL_FRONT|EXTERNAL_ADJACENT
+
+	feature_key = "vox_hair"
+	preference = "feature_vox_hair"
+
+/obj/item/organ/external/pod_hair/can_draw_on_bodypart(mob/living/carbon/human/human)
+	if(!(human.head?.flags_inv & HIDEHAIR) || (human.wear_mask?.flags_inv & HIDEHAIR))
+		return TRUE
+	return FALSE
+
+/obj/item/organ/external/pod_hair/get_global_feature_list()
+	return GLOB.vox_hair_list
+
+/obj/item/organ/external/vox_facial_hair
+	zone = BODY_ZONE_HEAD
+	slot = ORGAN_SLOT_EXTERNAL_VOX_FACIAL_HAIR
+	layers = EXTERNAL_FRONT|EXTERNAL_ADJACENT
+
+	feature_key = "vox_facial_hair"
+	preference = "feature_vox_facial_hair"
+
+/obj/item/organ/external/pod_hair/can_draw_on_bodypart(mob/living/carbon/human/human)
+	if(!(human.head?.flags_inv & HIDEHAIR) || (human.wear_mask?.flags_inv & HIDEHAIR))
+		return TRUE
+	return FALSE
+
+/obj/item/organ/external/pod_hair/get_global_feature_list()
+	return GLOB.vox_facial_hair_list
 

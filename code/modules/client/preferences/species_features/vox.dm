@@ -63,3 +63,27 @@
 /datum/preference/choiced/vox_tail/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["tail_vox"] = value
 
+/datum/preference/choiced/vox_hair
+	savefile_key = "feature_vox_hair"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_FEATURES
+	relevant_mutant_bodypart = "hair_vox"
+
+/datum/preference/choiced/vox_hair/init_possible_values()
+	return assoc_to_keys(GLOB.vox_hair_list)
+
+/datum/preference/choiced/vox_hair/apply_to_human(mob/living/carbon/human/target, value)
+	target.dna.features["hair_vox"] = value
+
+/datum/preference/choiced/vox_facial_hair
+	savefile_key = "feature_vox_facial_hair"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_FEATURES
+	relevant_mutant_bodypart = "facial_hair_vox"
+
+/datum/preference/choiced/vox_hair/init_possible_values()
+	return assoc_to_keys(GLOB.vox_facial_hair_list)
+
+/datum/preference/choiced/vox_hair/apply_to_human(mob/living/carbon/human/target, value)
+	target.dna.features["facial_hair_vox"] = value
+
