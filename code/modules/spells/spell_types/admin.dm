@@ -1,7 +1,3 @@
-/obj/effect/proc_holder/spell
-	var/always_can_cast = FALSE
-	var/mob_spell = FALSE // If the spell is bound to the mob alone, and not the mind
-
 /obj/effect/proc_holder/spell/self/return_back // Admin only spell, teleports and deletes the body, ghosting the user.
 	name = "Return"
 	desc = "Activates your return beacon."
@@ -32,7 +28,6 @@
 	sparks.start()
 
 	qdel(user)
-
 
 	// Get them back to their regular name.
 	ghost.set_ghost_appearance()

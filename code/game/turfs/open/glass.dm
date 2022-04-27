@@ -14,6 +14,7 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	floor_tile = /obj/item/stack/tile/glass
+	turf_flags = CAN_BE_DIRTY_1 /// No breaking the glass (doesn't leave plating behind)
 
 /turf/open/floor/glass/setup_broken_states()
 	return list("glass-damaged1", "glass-damaged2", "glass-damaged3")
