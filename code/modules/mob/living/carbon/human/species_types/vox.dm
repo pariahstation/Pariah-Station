@@ -96,6 +96,4 @@
 		new_tail.Insert(C, TRUE, FALSE)
 
 /datum/species/vox/get_scream_sound(mob/living/carbon/human/vox)
-	return pick(
-		'sound/voice/vox/shriek1.ogg'
-	)
+	return 'sound/voice/vox/shriek1.ogg'
