@@ -252,9 +252,7 @@
 /datum/world_topic/getadmins/Run(list/input)
 	. = list()
 	var/list/adm = get_admin_counts()
-	var/list/presentmins = adm["present"]
-	var/list/afkmins = adm["afk"]
-	.["admins"] = presentmins
-	.["admins"] += afkmins
+	.["admins"] = adm["present"]
+	.["admins"] += adm["afk"]
 
 	return list2params(.)
