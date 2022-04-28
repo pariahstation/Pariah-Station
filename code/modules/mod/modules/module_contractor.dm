@@ -1,4 +1,3 @@
-
 /obj/item/mod/module/baton_holster
 	name = "MOD baton holster module"
 	desc = "A module installed into the chest of a MODSuit, this allows you \

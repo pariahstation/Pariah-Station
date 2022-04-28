@@ -670,3 +670,13 @@
 	update_speed()
 	qdel(speed_potion)
 	return SPEED_POTION_STOP
+
+/obj/item/mod/control/update_appearance(updates)
+	for(var/obj/item/mod/module/chameleon/module as anything in modules)
+		if(!istype(module))
+			continue
+		if(!module)
+			return ..()
+		if(module.on)
+			return
+	return ..()

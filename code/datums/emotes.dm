@@ -61,6 +61,7 @@
 	var/can_message_change = FALSE
 	/// How long is the cooldown on the audio of the emote, if it has one?
 	var/audio_cooldown = 2 SECONDS
+	cooldown = 5 SECONDS
 
 /datum/emote/New()
 	switch(mob_type_allowed_typecache)
@@ -137,16 +138,6 @@
  * Returns FALSE if the cooldown is not over, TRUE if the cooldown is over.
  */
 /datum/emote/proc/check_cooldown(mob/user, intentional)
-	if(!intentional)
-		return TRUE
-	if(user.emotes_used && user.emotes_used[src] + cooldown > world.time)
-		var/datum/emote/default_emote = /datum/emote
-		if(cooldown > initial(default_emote.cooldown)) // only worry about longer-than-normal emotes
-			to_chat(user, span_danger("You must wait another [DisplayTimeText(user.emotes_used[src] - world.time + cooldown)] before using that emote."))
-		return FALSE
-	if(!user.emotes_used)
-		user.emotes_used = list()
-	user.emotes_used[src] = world.time
 	return TRUE
 
 /**

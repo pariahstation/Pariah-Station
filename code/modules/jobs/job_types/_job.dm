@@ -121,6 +121,8 @@
 	///RPG job names, for the memes
 	var/rpg_title
 
+	var/list/alt_titles = null
+
 
 /datum/job/New()
 	. = ..()
