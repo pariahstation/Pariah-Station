@@ -86,7 +86,7 @@
 		C.dna.features["tail_vox"] = real_tail_type
 		C.dna.features["spines_vox"] = real_spines
 
-		var/obj/item/organ/tail/lizard/new_tail = new /obj/item/organ/tail/vox()
+		var/obj/item/organ/tail/vox/new_tail = new /obj/item/organ/tail/vox()
 
 		new_tail.tail_type = C.dna.features["tail_vox"]
 		new_tail.spines = C.dna.features["spines_vox"]
