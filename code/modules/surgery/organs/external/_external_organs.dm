@@ -305,12 +305,12 @@
 	feature_key = "vox_hair"
 	preference = "feature_vox_hair"
 
-/obj/item/organ/external/pod_hair/can_draw_on_bodypart(mob/living/carbon/human/human)
+/obj/item/organ/external/vox_hair/can_draw_on_bodypart(mob/living/carbon/human/human)
 	if(!(human.head?.flags_inv & HIDEHAIR) || (human.wear_mask?.flags_inv & HIDEHAIR))
 		return TRUE
 	return FALSE
 
-/obj/item/organ/external/pod_hair/get_global_feature_list()
+/obj/item/organ/external/vox_hair/get_global_feature_list()
 	return GLOB.vox_hair_list
 
 /obj/item/organ/external/vox_facial_hair
@@ -321,11 +321,11 @@
 	feature_key = "vox_facial_hair"
 	preference = "feature_vox_facial_hair"
 
-/obj/item/organ/external/pod_hair/can_draw_on_bodypart(mob/living/carbon/human/human)
+/obj/item/organ/external/vox_facial_hair/can_draw_on_bodypart(mob/living/carbon/human/human)
 	if(!(human.head?.flags_inv & HIDEHAIR) || (human.wear_mask?.flags_inv & HIDEHAIR))
 		return TRUE
 	return FALSE
 
-/obj/item/organ/external/pod_hair/get_global_feature_list()
+/obj/item/organ/external/vox_facial_hair/get_global_feature_list()
 	return GLOB.vox_facial_hair_list
 
