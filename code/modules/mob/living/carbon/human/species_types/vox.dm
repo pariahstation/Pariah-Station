@@ -76,3 +76,26 @@
 /datum/species/vox/get_species_lore()
 	return list("")
 
+/datum/species/vox/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
+	var/real_tail_type = C.dna.features["tail_vox"]
+	var/real_spines = C.dna.features["spines_vox"]
+
+	. = ..()
+
+	if(pref_load)
+		C.dna.features["tail_vox"] = real_tail_type
+		C.dna.features["spines_vox"] = real_spines
+
+		var/obj/item/organ/tail/lizard/new_tail = new /obj/item/organ/tail/vox()
+
+		new_tail.tail_type = C.dna.features["tail_vox"]
+		new_tail.spines = C.dna.features["spines_vox"]
+
+		// organ.Insert will qdel any existing organs in the same slot, so
+		// we don't need to manage that.
+		new_tail.Insert(C, TRUE, FALSE)
+
+/datum/species/vox/get_scream_sound(mob/living/carbon/human/vox)
+	return pick(
+		'sound/voice/vox/shriek1.ogg'
+	)
