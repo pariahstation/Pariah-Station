@@ -719,10 +719,11 @@
 /mob/living/carbon/human/check_self_for_injuries()
 	if(stat >= UNCONSCIOUS)
 		return
-	var/list/combined_msg = list()
+	var/list/combined_msg = list("<div class='examine_block'>") //PARIAH EDIT CHANGE
 
-	visible_message(span_notice("[src] examines [p_them()]self."), \
-		span_notice("You check yourself for injuries."))
+	visible_message(span_notice("[src] examines [p_them()]self.")) //PARIAH EDIT CHANGE
+
+	combined_msg += span_boldnotice("You check yourself for injuries.<hr>") //PARIAH EDIT ADDITION
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 
@@ -807,10 +808,9 @@
 
 	if(is_bleeding())
 		var/list/obj/item/bodypart/bleeding_limbs = list()
-		for(var/i in bodyparts)
-			var/obj/item/bodypart/BP = i
-			if(BP.get_part_bleed_rate())
-				bleeding_limbs += BP
+		for(var/obj/item/bodypart/part as anything in bodyparts)
+			if(part.get_modified_bleed_rate())
+				bleeding_limbs += part
 
 		var/num_bleeds = LAZYLEN(bleeding_limbs)
 		var/bleed_text = "<span class='danger'>You are bleeding from your"
