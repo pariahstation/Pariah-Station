@@ -34798,10 +34798,6 @@
 /obj/structure/flora/junglebush/large,
 /turf/open/misc/grass,
 /area/hallway/primary/fore)
-"hTD" = (
-/obj/structure/lattice,
-/turf/closed/wall,
-/area/commons/dorms/cryo)
 "hTO" = (
 /obj/structure/sign/warning/nosmoking,
 /turf/closed/wall/r_wall,
@@ -62801,11 +62797,6 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/science/xenobiology)
-"qeN" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/white,
-/area/commons/fitness/recreation)
 "qeR" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Engineering - Supermatter";
@@ -67038,11 +67029,10 @@
 	},
 /area/service/bar)
 "rsp" = (
-/obj/effect/turf_decal/bot_white/left,
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/turf/open/floor/iron/white,
+/turf/open/floor/plating,
 /area/commons/fitness/recreation)
 "rsA" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/hidden,
@@ -146028,7 +146018,7 @@ aad
 oNH
 rsp
 iag
-qeN
+lFd
 wZU
 qYo
 aaa
@@ -146543,7 +146533,7 @@ xlP
 gov
 vKb
 oCi
-hTD
+xlP
 qYo
 aaa
 xTK
