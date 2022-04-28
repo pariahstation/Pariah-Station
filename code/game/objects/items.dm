@@ -974,7 +974,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/e
 	delay *= toolspeed * skill_modifier
 
 
-// Play tool sound at the beginning of tool usage.
+	// Play tool sound at the beginning of tool usage.
 	play_tool_sound(target, volume)
 
 	if(delay)
