@@ -1,7 +1,7 @@
 /**
  * Given a ckey, look up the discord user id attached to the user, if any
  *
- * This gets the most recent entry from the discord link table that is associated with the given ckey
+ * This gets the most recent entry from the discord_link table that is associated with the given ckey
  *
  * Arguments:
  * * lookup_ckey A string representing the ckey to search on

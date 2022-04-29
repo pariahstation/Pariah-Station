@@ -336,8 +336,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 				qdel(src)
 				return
 
-
-	if(CONFIG_GET(flag/panic_bunker_discord_require))
+	if(CONFIG_GET(flag/panic_bunker) && CONFIG_GET(flag/panic_bunker_discord_require))
 		if(!SSdbcore.Connect())
 			var/msg = "Database connection failure. Key [key] not checked for Discord account requirement."
 

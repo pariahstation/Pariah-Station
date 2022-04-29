@@ -59,15 +59,13 @@
 /**
  * Find discord link entry by the passed in user token
  *
- * This will look into the discord link table and return the *first* entry that matches the given one time token
- *
- * Remember, multiple entries can exist, as they are only guaranteed to be unique for their validity period
+ * This will look into the discord link table and return the *last* (most recent) entry that matches the given one time token
  *
  * Arguments:
  * * one_time_token the string of words representing the one time token
  * * timebound A boolean flag, that specifies if it should only look for entries within the last 4 hours, off by default
  *
- * Returns a [/datum/discord/link_record]
+ * Returns a [/datum/discord_link_record]
  */
 /client/proc/find_discord_link_by_token(one_time_token, timebound = FALSE)
 	var/timeboundsql = ""
@@ -76,18 +74,16 @@
 
 	var/query = {"
 		SELECT
-			CAST(discord_id AS CHAR(25)),
 			ckey,
-			MAX(timestamp),
-			one_time_token
+			CAST(discord_id AS CHAR(25)),
+			timestamp,
+			one_time_token,
+			valid
 		FROM [format_table_name("discord_links")]
 		WHERE
 			one_time_token = :one_time_token
 			[timeboundsql]
-		GROUP BY
-			ckey,
-			discord_id,
-			one_time_token
+		ORDER BY timestamp DESC
 		LIMIT 1
 	"}
 
@@ -102,7 +98,7 @@
 
 	if(query_get_discord_link_record.NextRow())
 		var/result = query_get_discord_link_record.item
-		. = new /datum/discord_link_record(result[2], result[1], result[4], result[3])
+		. = new /datum/discord_link_record(result[1], result[2], result[3], result[4], result[5])
 
 	//Make sure we clean up the query
 	qdel(query_get_discord_link_record)
@@ -110,15 +106,13 @@
 /**
  * Find discord link entry by the passed in user ckey
  *
- * This will look into the discord link table and return the *first* entry that matches the given ckey
- *
- * Remember, multiple entries can exist
+ * This will look into the discord link table and return the last (most recent) entry that matches the given ckey
  *
  * Arguments:
  * * ckey the users ckey as a string
  * * timebound should we search only in the last 4 hours
  *
- * Returns a [/datum/discord/link_record]
+ * Returns a [/datum/discord_link_record]
  */
 /client/proc/find_discord_link_by_ckey(ckey, timebound = FALSE)
 	var/timeboundsql = ""
@@ -127,19 +121,16 @@
 
 	var/query = {"
 		SELECT
-			CAST(discord_id AS CHAR(25)),
 			ckey,
-			MAX(timestamp),
+			CAST(discord_id AS CHAR(25)),
+			timestamp,
 			one_time_token,
 			valid
 		FROM [format_table_name("discord_links")]
 		WHERE
 			ckey = :ckey
 			[timeboundsql]
-		GROUP BY
-			ckey,
-			discord_id,
-			one_time_token
+		ORDER BY timestamp DESC
 		LIMIT 1
 	"}
 
@@ -154,7 +145,7 @@
 
 	if(query_get_discord_link_record.NextRow())
 		var/result = query_get_discord_link_record.item
-		. = new /datum/discord_link_record(result[2], result[1], result[4], result[3], result[5])
+		. = new /datum/discord_link_record(result[1], result[2], result[3], result[4], result[5])
 
 	//Make sure we clean up the query
 	qdel(query_get_discord_link_record)
@@ -162,15 +153,13 @@
 /**
  * Find discord link entry by the passed in user ckey
  *
- * This will look into the discord link table and return the *first* entry that matches the given ckey
- *
- * Remember, multiple entries can exist
+ * This will look into the discord link table and return the last (most recent) entry that matches the given ckey
  *
  * Arguments:
  * * discord_id The users discord id (string)
  * * timebound should we search only in the last 4 hours
  *
- * Returns a [/datum/discord/link_record]
+ * Returns a [/datum/discord_link_record]
  */
 /client/proc/find_discord_link_by_discord_id(discord_id, timebound = FALSE)
 	var/timeboundsql = ""
@@ -179,18 +168,16 @@
 
 	var/query = {"
 		SELECT
-			CAST(discord_id AS CHAR(25)),
 			ckey,
-			MAX(timestamp),
-			one_time_token
+			CAST(discord_id AS CHAR(25)),
+			timestamp,
+			one_time_token,
+			valid
 		FROM [format_table_name("discord_links")]
 		WHERE
 			discord_id = :discord_id
 			[timeboundsql]
-		GROUP BY
-			ckey,
-			discord_id,
-			one_time_token
+		ORDER BY timestamp DESC
 		LIMIT 1
 	"}
 
@@ -205,7 +192,7 @@
 
 	if(query_get_discord_link_record.NextRow())
 		var/result = query_get_discord_link_record.item
-		. = new /datum/discord_link_record(result[2], result[1], result[4], result[3])
+		. = new /datum/discord_link_record(result[1], result[2], result[3], result[4], result[5])
 
 	//Make sure we clean up the query
 	qdel(query_get_discord_link_record)
