@@ -1,7 +1,7 @@
 /obj/structure/flippedtable
 	name = "flipped table"
 	desc = "A flipped table."
-	icon = 'modular_pariah/modules/tableflip/icons/flipped_tables.dmi'
+	icon = 'icons/obj/flipped_tables.dmi
 	icon_state = "metal-flipped"
 	anchored = TRUE
 	density = TRUE
