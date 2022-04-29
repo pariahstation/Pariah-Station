@@ -42,20 +42,12 @@
 	var/burned_fuel_for = 0 //when fuel was last removed
 	var/acti_sound = 'sound/items/welderactivate.ogg'
 	var/deac_sound = 'sound/items/welderdeactivate.ogg'
-	/// An image effect for displaying the welding effect for items that support it
-	var/image/welding_sparks
 
 /obj/item/weldingtool/Initialize(mapload)
 	. = ..()
 	create_reagents(max_fuel)
 	reagents.add_reagent(/datum/reagent/fuel, max_fuel)
 	update_appearance()
-	welding_sparks = image('code/modules/welding_sparks/icons/welding_effect.dmi', "welding_sparks", GASFIRE_LAYER)
-	welding_sparks.plane = ABOVE_LIGHTING_PLANE
-
-/obj/item/weldingtool/Destroy(force)
-	QDEL_NULL(welding_sparks)
-	return ..()
 
 /obj/item/weldingtool/ComponentInitialize()
 	. = ..()
@@ -123,9 +115,9 @@
 	qdel(src)
 
 /obj/item/weldingtool/use_tool(atom/target, mob/living/user, delay, amount, volume, datum/callback/extra_checks)
-	target.add_overlay(welding_sparks)
+	target.add_overlay(GLOB.welding_sparks)
 	. = ..()
-	target.cut_overlay(welding_sparks)
+	target.cut_overlay(GLOB.welding_sparks)
 
 /obj/item/weldingtool/attack(mob/living/carbon/human/attacked_humanoid, mob/living/user)
 	if(!istype(attacked_humanoid))
