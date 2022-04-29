@@ -308,3 +308,55 @@
 
 /obj/item/organ/external/headtails/get_global_feature_list()
 	return GLOB.headtails_list
+
+// Teshari head feathers
+/obj/item/organ/external/teshari_feathers
+	name = "Head feathers"
+	zone = BODY_ZONE_HEAD
+	slot = ORGAN_SLOT_EXTERNAL_TESHARI_FEATHERS
+	layers = EXTERNAL_ADJACENT
+
+	feature_key = "teshari_feathers"
+	preference = "teshari_feathers"
+
+	dna_block = DNA_TESHARI_FEATHERS_BLOCK
+	overrides_color = TRUE
+
+/obj/item/organ/external/teshari_feathers/can_draw_on_bodypart(mob/living/carbon/human/human)
+	if(human.head && (human.head.flags_inv & HIDEHAIR) || human.wear_mask && (human.wear_mask.flags_inv & HIDEHAIR))
+		return FALSE
+	return TRUE
+
+/obj/item/organ/external/teshari_feathers/get_global_feature_list()
+	return GLOB.teshari_feathers_list
+
+/obj/item/organ/external/teshari_feathers/override_color(rgb_value)
+	if(ishuman(ownerlimb?.owner))
+		var/mob/living/carbon/human/human_owner = ownerlimb.owner
+		return human_owner.hair_color
+
+// Teshari body feathers
+/obj/item/organ/external/teshari_body_feathers
+	name = "Body feathers"
+	zone = BODY_ZONE_CHEST
+	slot = ORGAN_SLOT_EXTERNAL_TESHARI_BODY_FEATHERS
+	layers = EXTERNAL_ADJACENT
+
+	feature_key = "teshari_body_feathers"
+	preference = "teshari_body_feathers"
+
+	dna_block = DNA_TESHARI_BODY_FEATHERS_BLOCK
+	overrides_color = TRUE
+
+/obj/item/organ/external/teshari_body_feathers/can_draw_on_bodypart(mob/living/carbon/human/human)
+	if(human.wear_suit && (human.wear_suit.flags_inv & HIDEJUMPSUIT))
+		return FALSE
+	return TRUE
+
+/obj/item/organ/external/teshari_body_feathers/get_global_feature_list()
+	return GLOB.teshari_body_feathers_list
+
+/obj/item/organ/external/teshari_body_feathers/override_color(rgb_value)
+	if(ishuman(ownerlimb?.owner))
+		var/mob/living/carbon/human/human_owner = ownerlimb.owner
+		return human_owner.facial_hair_color

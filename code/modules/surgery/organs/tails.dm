@@ -121,3 +121,28 @@
 	if(istype(tail_owner))
 		tail_owner.dna.species.mutant_bodyparts -= "tail_monkey"
 		tail_owner.update_body()
+
+/obj/item/organ/tail/teshari
+	name = "teshari tail"
+	desc = "A severed teshari tail. Makes a funny looking feather duster."
+	tail_type = "Teshari Default Tail"
+
+/obj/item/organ/tail/teshari/Insert(mob/living/carbon/human/tail_owner, special, drop_if_replaced)
+	..()
+	if(!istype(tail_owner))
+		return
+
+	if(!tail_owner.dna.species.mutant_bodyparts["tail_teshari"])
+		tail_owner.dna.features["tail_teshari"] = tail_owner.dna.species.mutant_bodyparts["tail_teshari"] = tail_type
+		tail_owner.dna.update_uf_block(DNA_TESHARI_TAIL_BLOCK)
+	tail_owner.update_body()
+
+/obj/item/organ/tail/teshari/Remove(mob/living/carbon/human/tail_owner, special)
+	..()
+	if(!istype(tail_owner))
+		return
+
+	tail_owner.dna.species.mutant_bodyparts -= "tail_teshari"
+	color = tail_owner.dna.features["mcolor"]
+	tail_type = tail_owner.dna.features["tail_teshari"]
+	tail_owner.update_body()

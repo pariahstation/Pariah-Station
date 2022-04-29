@@ -89,6 +89,12 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/pod_hair, GLOB.pod_hair_list)
 	if(!GLOB.headtails_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/headtails, GLOB.headtails_list)
+	if(!GLOB.teshari_feathers_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_feathers, GLOB.teshari_feathers_list)
+	if(!GLOB.teshari_body_feathers_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_body_feathers, GLOB.teshari_body_feathers_list)
+	if(!GLOB.teshari_tails_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/teshari, GLOB.teshari_tails_list)
 
 	//For now we will always return none for tail_human and ears.
 	return(list(
@@ -111,6 +117,9 @@
 		"tail_monkey" = "None",
 		"pod_hair" = pick(GLOB.pod_hair_list),
 		"headtails" = (pick(GLOB.headtails_list)),
+		"teshari_feathers" = pick(GLOB.teshari_feathers_list),
+		"teshari_body_feathers" = pick(GLOB.teshari_body_feathers_list),
+		"tail_teshari" = pick(GLOB.teshari_tails_list),
 	))
 
 /proc/random_hairstyle(gender)
