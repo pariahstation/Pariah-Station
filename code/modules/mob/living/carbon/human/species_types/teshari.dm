@@ -41,6 +41,11 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/teshari,
 	)
 
+/datum/species/teshari/random_name(gender, unique, lastname)
+	if(unique)
+		return random_unique_teshari_name()
+	return teshari_name()
+
 /datum/species/teshari/get_species_description()
 	return "Placeholder"
 
