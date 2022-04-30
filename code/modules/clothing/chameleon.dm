@@ -222,6 +222,7 @@
 		item_target.worn_icon = initial(picked_item.worn_icon)
 		item_target.lefthand_file = initial(picked_item.lefthand_file)
 		item_target.righthand_file = initial(picked_item.righthand_file)
+		item_target.supports_variations_flags = initial(picked_item.supports_variations_flags)
 		if(initial(picked_item.greyscale_colors))
 			if(initial(picked_item.greyscale_config_worn))
 				item_target.worn_icon = SSgreyscale.GetColoredIconByType(initial(picked_item.greyscale_config_worn), initial(picked_item.greyscale_colors))
