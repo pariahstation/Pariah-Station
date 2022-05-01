@@ -465,6 +465,18 @@
 	name = "Half-shaved 2 (clipped)"
 	icon_state = "hair_halfshave_snout"
 
+/datum/sprite_accessory/hair/halfshavedmessy
+	name = "Half-shaved Messy"
+	icon_state = "halfshave_messy"
+	
+/datum/sprite_accessory/hair/halfshavedmessylong
+	name = "Half-shaved Long Messy"
+	icon_state = "halfshave_messylong"
+	
+/datum/sprite_accessory/hair/halfshavedglamorous
+	name = "Half-shaved Glamorous"
+	icon_state = "halfshave_glamorous"
+
 /datum/sprite_accessory/hair/hedgehog
 	name = "Hedgehog Hair"
 	icon_state = "hair_hedgehog"
