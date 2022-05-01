@@ -564,7 +564,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			var/obscured = species_human.check_obscured_slots(TRUE) //eyes that shine in the dark shouldn't show when you have glasses
 			var/add_pixel_x = 0
 			var/add_pixel_y = 0
-			var/eye_icon = eyes_icon || 'icons/mob/human_face.dmi'
 			//cut any possible vis overlays
 			if(body_vis_overlays.len)
 				SSvis_overlays.remove_vis_overlay(species_human, body_vis_overlays)
