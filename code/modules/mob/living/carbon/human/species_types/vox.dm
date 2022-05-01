@@ -4,7 +4,7 @@
 	id = SPECIES_VOX
 	say_mod = "skrees"
 	default_color = "#00FF00"
-	eyes_icon = 'icons/mob/species/vox/eyes.dmi'
+	species_eye_path = 'icons/mob/species/vox/eyes.dmi'
 	species_traits = list(
 		MUTCOLORS,
 		EYECOLOR,

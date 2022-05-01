@@ -37,9 +37,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	///The alpha used by the hair. 255 is completely solid, 0 is invisible.
 	var/hair_alpha = 255
 
-	///Override of the eyes icon file, used for Vox and maybe more in the future - The future is now, with Teshari using it too
-	var/eyes_icon
-
 	///This is used for children, it will determine their default limb ID for use of examine. See [/mob/living/carbon/human/proc/examine].
 	var/examine_limb_id
 	///Never, Optional, or Forced digi legs?
