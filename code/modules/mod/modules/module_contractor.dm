@@ -5,7 +5,6 @@
 		by hitting the module, while it is removed from the suit, with the baton. \
 		Remove an inserted baton with a wrench."
 	icon_state = "holster"
-	icon = 'modular_pariah/modules/contractor/icons/modsuit_modules.dmi'
 	complexity = 3
 	incompatible_modules = list(/obj/item/mod/module/baton_holster)
 	module_type = MODULE_USABLE
@@ -80,7 +79,6 @@
 	name = "MOD chameleon module"
 	desc = "An illegal module that lets you disguise your MODsuit as any other kind with the help of chameleon technology. However, due to technological challenges, the module only functions when the MODsuit is undeployed."
 	icon_state = "chameleon"
-	icon = 'modular_pariah/modules/contractor/icons/modsuit_modules.dmi'
 	module_type = MODULE_USABLE
 	active_power_cost = DEFAULT_CHARGE_DRAIN * 0.25
 	removable = FALSE

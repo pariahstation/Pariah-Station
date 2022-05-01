@@ -434,7 +434,7 @@
 	desc = "A compact, specialised baton assigned to Syndicate contractors. Applies light electrical shocks to targets. This one seems to be fully upgraded with unremovable parts."
 
 /obj/item/baton_upgrade
-	icon = 'modular_pariah/modules/contractor/icons/baton_upgrades.dmi'
+	icon = 'icons/obj/device.dmi'
 	var/upgrade_flag
 
 /obj/item/baton_upgrade/proc/desc_update(obj/item/melee/baton/telescopic/contractor_baton/batong)
