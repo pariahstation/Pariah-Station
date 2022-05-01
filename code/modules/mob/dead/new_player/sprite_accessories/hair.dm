@@ -712,6 +712,10 @@
 /datum/sprite_accessory/hair/pigtails3
 	name = "Pigtails 4"
 	icon_state = "hair_pigtails3"
+	
+/datum/sprite_accessory/hair/pigtails4
+	name = "Pigtails 5"
+	icon_state = "hair_pigtails4"
 
 /datum/sprite_accessory/hair/pixie
 	name = "Pixie Cut"
@@ -1057,6 +1061,10 @@
 	name = "Very Long Hair"
 	icon_state = "hair_vlong"
 
+/datum/sprite_accessory/hair/longestalt
+	name = "Very Long with Fringe"
+	icon_state = "hair_vlongfringe"
+
 /datum/sprite_accessory/hair/longest
 	name = "Very Long Hair 2"
 	icon_state = "hair_longest"
@@ -1072,10 +1080,6 @@
 /datum/sprite_accessory/hair/veryshortovereye
 	name = "Very Short Over Eye ALT"
 	icon_state = "hair_veryshortovereyealternate"
-
-/datum/sprite_accessory/hair/longestalt
-	name = "Very Long with Fringe"
-	icon_state = "hair_vlongfringe"
 
 /datum/sprite_accessory/hair/victory
 	name = "Victory"
