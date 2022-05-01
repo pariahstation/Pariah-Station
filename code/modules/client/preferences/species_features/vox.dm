@@ -7,7 +7,7 @@
 	vox.Blend(eyes, ICON_OVERLAY)
 
 	if (include_snout)
-		vox.Blend(icon('icons/mob/vox_snouts.dmi', "m_snout_round_ADJ", EAST), ICON_OVERLAY)
+		vox.Blend(icon('icons/mob/vox_snouts.dmi', "m_snout_vox_ADJ", EAST), ICON_OVERLAY)
 
 	for (var/name in sprite_accessories)
 		var/datum/sprite_accessory/sprite_accessory = sprite_accessories[name]
