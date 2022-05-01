@@ -97,6 +97,18 @@
 	name = "Beard (Seven o Clock Moustache)"
 	icon_state = "facial_7oclockmoustache"
 
+/datum/sprite_accessory/facial_hair/powerful
+	name = "Beard (Powerful)"
+	icon_state = "facial_powerful"
+	
+/datum/sprite_accessory/facial_hair/thecolonel
+	name = "Beard (The Colonel)"
+	icon_state = "facial_thecolonel"
+
+/datum/sprite_accessory/facial_hair/eyebrows
+	name = "Eyebrows"
+	icon_state = "facial_eyebrows"
+
 /datum/sprite_accessory/facial_hair/moustache
 	name = "Moustache"
 	icon_state = "facial_moustache"
@@ -144,6 +156,14 @@
 /datum/sprite_accessory/facial_hair/handlebar2
 	name = "Moustache (Handlebar 2)"
 	icon_state = "facial_handlebar2"
+
+/datum/sprite_accessory/facial_hair/robotnik
+	name = "Moustache (Robotnik)"
+	icon_state = "facial_robotnik"
+	
+/datum/sprite_accessory/facial_hair/stachenchops
+	name = "Moustache ('Stache 'n Chops)"
+	icon_state = "facial_stachenchops"
 
 /datum/sprite_accessory/facial_hair/elvis
 	name = "Sideburns (Elvis)"
