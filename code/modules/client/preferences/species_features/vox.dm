@@ -3,6 +3,7 @@
 
 	var/icon/vox = icon('icons/mob/species/vox/bodyparts.dmi', "vox_head", EAST)
 	var/icon/eyes = icon('icons/mob/species/vox/eyes.dmi', "eyes", EAST)
+
 	eyes.Blend(COLOR_GRAY, ICON_MULTIPLY)
 	vox.Blend(eyes, ICON_OVERLAY)
 
