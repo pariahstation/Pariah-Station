@@ -597,10 +597,6 @@
 	name = "Mohawk Short"
 	icon_state = "hair_mohawkshort"
 
-/datum/sprite_accessory/hair/nitori
-	name = "Nitori"
-	icon_state = "hair_nitori"
-
 /datum/sprite_accessory/hair/reversemohawk
 	name = "Mohawk (Reverse)"
 	icon_state = "hair_reversemohawk"
@@ -624,6 +620,10 @@
 /datum/sprite_accessory/hair/nia
 	name = "Nia"
 	icon_state = "hair_nia"
+
+/datum/sprite_accessory/hair/nitori
+	name = "Nitori"
+	icon_state = "hair_nitori"
 
 /datum/sprite_accessory/hair/odango
 	name = "Odango"
