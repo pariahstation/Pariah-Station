@@ -81,9 +81,9 @@
 	category = PREFERENCE_CATEGORY_FEATURES
 	relevant_mutant_bodypart = "facial_hair_vox"
 
-/datum/preference/choiced/vox_hair/init_possible_values()
+/datum/preference/choiced/vox_facial_hair/init_possible_values()
 	return assoc_to_keys(GLOB.vox_facial_hair_list)
 
-/datum/preference/choiced/vox_hair/apply_to_human(mob/living/carbon/human/target, value)
+/datum/preference/choiced/vox_facial_hair/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["facial_hair_vox"] = value
 
