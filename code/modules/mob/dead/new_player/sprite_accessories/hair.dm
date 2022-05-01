@@ -198,7 +198,7 @@
 	icon_state = "hair_manbun"
 
 /datum/sprite_accessory/hair/manbun_alt
-	name = "Manbun ALT"
+	name = "Bun (Manbun) ALT"
 	icon_state = "hair_manbun_alt"
 
 /datum/sprite_accessory/hair/tightbun
@@ -857,7 +857,7 @@
 	name = "Short Hair 7"
 	icon_state = "hair_shorthairg"
 
-/datum/sprite_accessory/hair/shorthair4
+/datum/sprite_accessory/hair/shorthair8
 	name = "Short Hair 8"
 	icon_state = "hair_shorthair8"
 
