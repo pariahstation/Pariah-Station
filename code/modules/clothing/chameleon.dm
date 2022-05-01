@@ -647,6 +647,7 @@
 /obj/item/storage/belt/chameleon
 	name = "toolbelt"
 	desc = "Holds tools."
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 	var/datum/action/item_action/chameleon/change/chameleon_action
 
 /obj/item/storage/belt/chameleon/Initialize(mapload)

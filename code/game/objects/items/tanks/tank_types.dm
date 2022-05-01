@@ -147,6 +147,7 @@
 	worn_icon_state = "emergency"
 	tank_holder_icon_state = "holder_emergency"
 	worn_icon = null
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
@@ -179,6 +180,7 @@
 	icon_state = "emergency_double"
 	worn_icon_state = "emergency_engi"
 	tank_holder_icon_state = "holder_emergency_engi"
+	supports_variations_flags = NONE
 	volume = 12 //If it's double of the above, shouldn't it be double the volume??
 
 /obj/item/tank/internals/emergency_oxygen/double/empty/populate_gas()
