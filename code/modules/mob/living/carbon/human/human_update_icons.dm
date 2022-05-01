@@ -158,7 +158,6 @@ There are several things that need to be remembered:
 
 		var/mutable_appearance/uniform_overlay
 
-		//Change check_adjustable_clothing.dm if you change this
 		var/handled_by_bodytype = TRUE
 		var/icon_file
 		var/woman
