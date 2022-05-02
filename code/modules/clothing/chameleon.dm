@@ -466,6 +466,7 @@
 
 	resistance_flags = NONE
 	armor = list(MELEE = 10, BULLET = 10, LASER = 10, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 50)
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 	var/datum/action/item_action/chameleon/change/chameleon_action
 
