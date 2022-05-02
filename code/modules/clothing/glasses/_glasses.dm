@@ -110,6 +110,7 @@
 	vision_flags = SEE_TURFS
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/meson/suicide_act(mob/living/carbon/user)
 	user.visible_message(span_suicide("[user] is putting \the [src] to [user.p_their()] eyes and overloading the brightness! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -124,6 +125,7 @@
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	glass_colour_type = /datum/client_colour/glass_colour/green
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/meson/gar
 	name = "gar mesons"
@@ -138,6 +140,7 @@
 	attack_verb_simple = list("slice")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/science
 	name = "science goggles"
@@ -175,12 +178,14 @@
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	glass_colour_type = /datum/client_colour/glass_colour/green
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
 	desc = "Yarr."
 	icon_state = "eyepatch"
 	inhand_icon_state = "eyepatch"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/monocle
 	name = "monocle"
@@ -302,18 +307,21 @@
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/gray
 	dog_fashion = /datum/dog_fashion/head
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/sunglasses/reagent
 	name = "beer goggles"
 	icon_state = "sunhudbeer"
 	desc = "A pair of sunglasses outfitted with apparatus to scan reagents, as well as providing an innate understanding of liquid viscosity while in motion."
 	clothing_traits = list(TRAIT_BOOZE_SLIDER, TRAIT_REAGENT_SCANNER)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/sunglasses/chemical
 	name = "science glasses"
 	icon_state = "sunhudsci"
 	desc = "A pair of tacky purple sunglasses that allow the wearer to recognize various chemical compounds with only a glance."
 	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_RESEARCH_SCANNER)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/sunglasses/gar
 	name = "black gar glasses"
@@ -335,6 +343,7 @@
 	icon_state = "gar"
 	inhand_icon_state = "gar"
 	glass_colour_type = /datum/client_colour/glass_colour/orange
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/sunglasses/gar/giga
 	name = "black giga gar glasses"
@@ -349,6 +358,7 @@
 	icon_state = "gigagar_red"
 	inhand_icon_state = "gar"
 	glass_colour_type = /datum/client_colour/glass_colour/red
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
@@ -362,6 +372,7 @@
 	visor_vars_to_toggle = VISOR_FLASHPROTECT | VISOR_TINT
 	flags_cover = GLASSESCOVERSEYES
 	glass_colour_type = /datum/client_colour/glass_colour/gray
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/welding/attack_self(mob/user)
 	weldingvisortoggle(user)
@@ -376,6 +387,7 @@
 	tint = 3
 	darkness_view = 1
 	dog_fashion = /datum/dog_fashion/head
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/blindfold/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
@@ -391,6 +403,7 @@
 	desc = "A see-through blindfold perfect for cheating at games like pin the stun baton on the clown."
 	icon_state = "trickblindfold"
 	inhand_icon_state = "blindfold"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/blindfold/white
 	name = "blind personnel blindfold"
@@ -398,6 +411,7 @@
 	icon_state = "blindfoldwhite"
 	inhand_icon_state = "blindfoldwhite"
 	var/colored_before = FALSE
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/blindfold/white/visual_equipped(mob/living/carbon/human/user, slot)
 	if(ishuman(user) && slot == ITEM_SLOT_EYES)
@@ -426,6 +440,7 @@
 	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks flashes."
 	icon_state = "bigsunglasses"
 	inhand_icon_state = "bigsunglasses"
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/thermal
 	name = "optical thermal scanner"
@@ -487,6 +502,7 @@
 	desc = "An eyepatch with built-in thermal optics."
 	icon_state = "eyepatch"
 	inhand_icon_state = "eyepatch"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/cold
 	name = "cold goggles"
