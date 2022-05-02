@@ -330,16 +330,12 @@
 	icon_state = "hair_dreads"
 
 /datum/sprite_accessory/hair/drillhair
-	name = "Drillruru"
-	icon_state = "hair_drillruru"
-
-/datum/sprite_accessory/hair/drillhair
 	name = "Drill Hair"
 	icon_state = "hair_drillhair"
 
 /datum/sprite_accessory/hair/drillhairextended
 	name = "Drill Hair (Extended)"
-	icon_state = "hair_drillhairextended"
+	icon_state = "hair_drillhair_extended"
 
 /datum/sprite_accessory/hair/emo
 	name = "Emo"
