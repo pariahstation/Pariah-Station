@@ -70,6 +70,7 @@
 	inhand_icon_state = "overalls"
 	body_parts_covered = CHEST|GROIN|LEGS
 	species_exception = list(/datum/species/golem)
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/apron/purple_bartender
 	name = "purple bartender apron"
@@ -77,6 +78,7 @@
 	icon_state = "purplebartenderapron"
 	inhand_icon_state = "purplebartenderapron"
 	body_parts_covered = CHEST|GROIN|LEGS
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/suit/syndicatefake
 	name = "black and red space suit replica"
@@ -181,6 +183,7 @@
 	icon_state = "classicponcho"
 	inhand_icon_state = "classicponcho"
 	species_exception = list(/datum/species/golem)
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/poncho/green
 	name = "green poncho"
@@ -199,6 +202,7 @@
 	desc = "Forced to live on your shameful acting as a fake Mexican, you and your poncho have grown inseparable. Literally."
 	icon_state = "ponchoshame"
 	inhand_icon_state = "ponchoshame"
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/poncho/ponchoshame/Initialize(mapload)
 	. = ..()
@@ -487,7 +491,7 @@
 	icon_state = "driscoll_suit"
 	inhand_icon_state = "driscoll_suit"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/irs
 	name = "internal revenue service jacket"

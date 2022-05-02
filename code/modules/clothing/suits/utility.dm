@@ -149,6 +149,7 @@
 	equip_delay_other = 60
 	flags_inv = HIDEJUMPSUIT
 	resistance_flags = NONE
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/radiation/Initialize(mapload)
 	. = ..()

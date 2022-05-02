@@ -23,6 +23,7 @@
 	inhand_icon_state = "armoralt"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/vest/alt
 	desc = "A Type I armored vest that provides decent protection against most types of damage."
@@ -41,6 +42,7 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT_OFF
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/suit/armor/vest/marine/security
 	name = "large tactical armor vest"
@@ -67,12 +69,14 @@
 	icon_state = "blueshift"
 	inhand_icon_state = "blueshift"
 	custom_premium_price = PAYCHECK_HARD
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/vest/cuirass
 	name = "cuirass"
 	desc = "A lighter plate armor used to still keep out those pesky arrows, while retaining the ability to move."
 	icon_state = "cuirass"
 	inhand_icon_state = "armor"
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/hos
 	name = "armored greatcoat"
@@ -92,6 +96,7 @@
 	inhand_icon_state = "hostrench"
 	flags_inv = 0
 	strip_delay = 80
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/hos/hos_formal
 	name = "\improper Head of Security's parade jacket"
@@ -99,6 +104,7 @@
 	icon_state = "hosformal"
 	inhand_icon_state = "hostrench"
 	body_parts_covered = CHEST|GROIN|ARMS
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/hos/hos_formal/Initialize(mapload)
 	. = ..()
@@ -120,6 +126,7 @@
 	name = "warden's armored jacket"
 	desc = "A red jacket with silver rank pips and body armor strapped on top."
 	icon_state = "warden_jacket"
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/armor/vest/leather
 	name = "security overcoat"
@@ -130,6 +137,7 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	dog_fashion = null
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/vest/capcarapace
 	name = "captain's carapace"
@@ -140,11 +148,13 @@
 	armor = list(MELEE = 50, BULLET = 40, LASER = 50, ENERGY = 50, BOMB = 25, BIO = 0, FIRE = 100, ACID = 90, WOUND = 10)
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
 	name = "syndicate captain's vest"
 	desc = "A sinister looking vest of advanced armor worn over a black and red fireproof jacket. The gold collar and shoulders denote that this belongs to a high ranking syndicate officer."
 	icon_state = "syndievest"
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/vest/capcarapace/captains_formal
 	name = "captain's parade coat"
@@ -152,6 +162,7 @@
 	icon_state = "capformal"
 	inhand_icon_state = "capspacesuit"
 	body_parts_covered = CHEST|GROIN|ARMS
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/vest/capcarapace/captains_formal/Initialize(mapload)
 	. = ..()
@@ -169,6 +180,7 @@
 	clothing_flags = BLOCKS_SHOVE_KNOCKDOWN
 	strip_delay = 80
 	equip_delay_other = 60
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/bone
 	name = "bone armor"
@@ -214,6 +226,7 @@
 	icon_state = "detective-armor"
 	resistance_flags = FLAMMABLE
 	dog_fashion = null
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/vest/det_suit/Initialize(mapload)
 	. = ..()
@@ -227,6 +240,7 @@
 	armor = list(MELEE = 40, BULLET = 40, LASER = 30, ENERGY = 40, BOMB = 70, BIO = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	strip_delay = 80
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/swat
 	name = "MK.I SWAT Suit"
@@ -300,6 +314,7 @@
 	icon_state = "knight_green"
 	inhand_icon_state = "knight_green"
 	allowed = list(/obj/item/nullrod, /obj/item/claymore, /obj/item/banner, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman)
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/armor/riot/knight/yellow
 	icon_state = "knight_yellow"
@@ -331,6 +346,7 @@
 	max_integrity = 200
 	resistance_flags = FLAMMABLE
 	armor = list(MELEE = 20, BULLET = 10, LASER = 30, ENERGY = 40, BOMB = 15, BIO = 0, FIRE = 40, ACID = 50)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/vest/russian
 	name = "russian vest"
@@ -338,6 +354,7 @@
 	icon_state = "rus_armor"
 	inhand_icon_state = "rus_armor"
 	armor = list(MELEE = 25, BULLET = 30, LASER = 0, ENERGY = 10, BOMB = 10, BIO = 0, FIRE = 20, ACID = 50, WOUND = 10)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/vest/russian_coat
 	name = "russian battle coat"
@@ -348,6 +365,7 @@
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
 	armor = list(MELEE = 25, BULLET = 20, LASER = 20, ENERGY = 30, BOMB = 20, BIO = 50, FIRE = -10, ACID = 50, WOUND = 10)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/armor/elder_atmosian
 	name = "\improper Elder Atmosian Armor"
@@ -367,6 +385,7 @@
 	inhand_icon_state = "centcom"
 	body_parts_covered = CHEST|GROIN|ARMS
 	armor = list(MELEE = 35, BULLET = 40, LASER = 40, ENERGY = 50, BOMB = 35, BIO = 10, FIRE = 10, ACID = 60)
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/armor/centcom_formal/Initialize(mapload)
 	. = ..()

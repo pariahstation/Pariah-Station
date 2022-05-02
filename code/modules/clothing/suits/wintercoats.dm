@@ -11,6 +11,7 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	allowed = list()
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 0, ACID = 0)
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/hooded/wintercoat/Initialize(mapload)
 	. = ..()
@@ -46,6 +47,7 @@
 	inhand_icon_state = "coatcentcom"
 	armor = list(MELEE = 35, BULLET = 40, LASER = 40, ENERGY = 50, BOMB = 35, BIO = 10, FIRE = 10, ACID = 60)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/centcom
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/hooded/wintercoat/centcom/Initialize(mapload)
 	. = ..()
@@ -65,6 +67,7 @@
 	inhand_icon_state = "coatcaptain"
 	armor = list(MELEE = 25, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 0, ACID = 50)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/captain
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/hooded/wintercoat/captain/Initialize(mapload)
 	. = ..()
@@ -85,6 +88,7 @@
 		/obj/item/melee/baton/telescopic,
 	)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/hop
+	supports_variations_flags = NONE
 
 /obj/item/clothing/head/hooded/winterhood/hop
 	icon_state = "hood_hop"
@@ -106,6 +110,7 @@
 		/obj/item/storage/bag/plants,
 	)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/hydro
+	supports_variations_flags = NONE
 
 /obj/item/clothing/head/hooded/winterhood/hydro
 	desc = "A green winter coat hood."
@@ -125,6 +130,7 @@
 		/obj/item/reagent_containers/spray,
 	)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/janitor
+	supports_variations_flags = NONE
 
 /obj/item/clothing/head/hooded/winterhood/janitor
 	desc = "A purple hood that smells of space cleaner."
@@ -156,6 +162,7 @@
 	inhand_icon_state = "coathos"
 	armor = list(MELEE = 35, BULLET = 25, LASER = 40, ENERGY = 50, BOMB = 35, BIO = 0, FIRE = 0, ACID = 55)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/security/hos
+	supports_variations_flags = NONE
 
 /obj/item/clothing/head/hooded/winterhood/security/hos
 	desc = "A red, armour-padded winter hood, lovingly woven with a Kevlar interleave. Definitely not bulletproof, especially not the part where your face goes."
@@ -183,6 +190,7 @@
 	)
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 40, FIRE = 10, ACID = 20)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/medical
+	supports_variations_flags = NONE
 
 /obj/item/clothing/head/hooded/winterhood/medical
 	desc = "A white winter coat hood."
@@ -248,6 +256,7 @@
 	icon_state = "coatparamed"
 	inhand_icon_state = "coatparamed"
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/medical/paramedic
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/head/hooded/winterhood/medical/paramedic
 	desc = "A white winter coat hood with blue markings."
@@ -275,6 +284,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 0, FIRE = 20, ACID = 0)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/science
 	species_exception = list(/datum/species/golem)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/head/hooded/winterhood/science
 	desc = "A white winter coat hood. This one will keep your brain warm. About as much as the others, really."
@@ -341,6 +351,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 20, ACID = 0)
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/engineering
 	species_exception = list(/datum/species/golem/uranium)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/suit/hooded/wintercoat/engineering/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
@@ -397,6 +408,7 @@
 	inhand_icon_state = "coatcargo"
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/cargo
 	allowed = list(/obj/item/storage/bag/mail)
+	supports_variations_flags = NONE
 
 /obj/item/clothing/head/hooded/winterhood/cargo
 	desc = "A grey hood for a winter coat."

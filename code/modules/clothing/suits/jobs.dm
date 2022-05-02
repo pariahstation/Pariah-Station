@@ -12,6 +12,7 @@
 	body_parts_covered = CHEST|GROIN
 	allowed = list(/obj/item/reagent_containers/spray/plantbgone, /obj/item/plant_analyzer, /obj/item/seeds, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/glass/beaker, /obj/item/cultivator, /obj/item/reagent_containers/spray/pestspray, /obj/item/hatchet, /obj/item/storage/bag/plants, /obj/item/graft, /obj/item/secateurs, /obj/item/geneshears)
 	species_exception = list(/datum/species/golem)
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/apron/waders
 	name = "horticultural waders"
@@ -20,6 +21,7 @@
 	inhand_icon_state = "hort_waders"
 	body_parts_covered = CHEST|GROIN|LEGS
 	permeability_coefficient = 0.5
+	supports_variations_flags = NONE
 
 //Captain
 /obj/item/clothing/suit/capjacket
