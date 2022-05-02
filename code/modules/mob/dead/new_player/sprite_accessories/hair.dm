@@ -1073,13 +1073,13 @@
 	name = "Very Long Over Eye"
 	icon_state = "hair_longest2"
 
-/datum/sprite_accessory/hair/veryshortovereye
-	name = "Very Short Over Eye"
-	icon_state = "hair_veryshortovereye"
-
 /datum/sprite_accessory/hair/veryshortovereye_alt
 	name = "Very Short Over Eye ALT"
 	icon_state = "hair_veryshortovereyealternate"
+
+/datum/sprite_accessory/hair/veryshortovereye
+	name = "Very Short Over Eye"
+	icon_state = "hair_veryshortovereye"
 
 /datum/sprite_accessory/hair/victory
 	name = "Victory"
