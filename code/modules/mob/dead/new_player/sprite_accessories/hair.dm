@@ -1030,7 +1030,7 @@
 	icon_state = "hair_twintail"
 
 /datum/sprite_accessory/hair/twintail_floor
-	name = "Floorlength Twintails"
+	name = "Longer Twintails"
 	icon_state = "hair_twintail_floor"
 
 /datum/sprite_accessory/hair/undercut
