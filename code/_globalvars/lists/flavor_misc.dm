@@ -41,6 +41,9 @@ GLOBAL_LIST_EMPTY(moth_markings_list)
 GLOBAL_LIST_EMPTY(caps_list)
 GLOBAL_LIST_EMPTY(tails_list_monkey)
 GLOBAL_LIST_EMPTY(pod_hair_list)
+GLOBAL_LIST_EMPTY(headtails_list)
+
+
 	//Body sizes//
 #define BODY_SIZE_NORMAL 1
 #define BODY_SIZE_SHORT 0.93
@@ -52,6 +55,7 @@ GLOBAL_LIST_INIT(body_sizes, list(
 	"Short" = BODY_SIZE_SHORT,
 	"Tall" = BODY_SIZE_TALL,
 ))
+
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Blue" = "#3399ff",

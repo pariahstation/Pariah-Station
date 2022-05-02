@@ -75,34 +75,40 @@
 
 /obj/item/organ/liver/on_life(delta_time, times_fired)
 	var/mob/living/carbon/liver_owner = owner
-	..() //perform general on_life()
-	if(istype(liver_owner))
-		if(!(organ_flags & ORGAN_FAILING) && !HAS_TRAIT(liver_owner, TRAIT_NOMETABOLISM))//can't process reagents with a failing liver
+	. = ..() //perform general on_life()
 
-			var/provide_pain_message = HAS_NO_TOXIN
-			var/obj/belly = liver_owner.getorganslot(ORGAN_SLOT_STOMACH)
-			if(filterToxins && !HAS_TRAIT(owner, TRAIT_TOXINLOVER))
-				//handle liver toxin filtration
-				for(var/datum/reagent/toxin/toxin in liver_owner.reagents.reagent_list)
-					var/thisamount = liver_owner.reagents.get_reagent_amount(toxin.type)
-					if(belly)
-						thisamount += belly.reagents.get_reagent_amount(toxin.type)
-					if (thisamount && thisamount <= toxTolerance * (maxHealth - damage) / maxHealth ) //toxTolerance is effectively multiplied by the % that your liver's health is at
-						liver_owner.reagents.remove_reagent(toxin.type, 0.5 * delta_time)
-					else
-						damage += (thisamount * toxLethality * delta_time)
-						if(provide_pain_message != HAS_PAINFUL_TOXIN)
-							provide_pain_message = toxin.silent_toxin ? HAS_SILENT_TOXIN : HAS_PAINFUL_TOXIN
+	if(!istype(liver_owner))
+		return
+	if(organ_flags & ORGAN_FAILING || HAS_TRAIT(liver_owner, TRAIT_NOMETABOLISM))//can't process reagents with a failing liver
+		return
 
-			//metabolize reagents
-			liver_owner.reagents.metabolize(liver_owner, delta_time, times_fired, can_overdose=TRUE)
+	// How much damage to inflict on our liver
+	var/damange_to_deal = 0
 
-			if(provide_pain_message && damage > 10 && DT_PROB(damage/6, delta_time)) //the higher the damage the higher the probability
-				to_chat(liver_owner, span_warning("You feel a dull pain in your abdomen."))
+	var/provide_pain_message = HAS_NO_TOXIN
+	var/obj/belly = liver_owner.getorganslot(ORGAN_SLOT_STOMACH)
+	if(filterToxins && !HAS_TRAIT(owner, TRAIT_TOXINLOVER))
+		//handle liver toxin filtration
+		for(var/datum/reagent/toxin/toxin in liver_owner.reagents.reagent_list)
+			var/thisamount = liver_owner.reagents.get_reagent_amount(toxin.type)
+			if(belly)
+				thisamount += belly.reagents.get_reagent_amount(toxin.type)
+			if (thisamount && thisamount <= toxTolerance * (maxHealth - damage) / maxHealth ) //toxTolerance is effectively multiplied by the % that your liver's health is at
+				liver_owner.reagents.remove_reagent(toxin.type, 0.5 * delta_time)
+			else
+				damange_to_deal += (thisamount * toxLethality * delta_time)
+				if(provide_pain_message != HAS_PAINFUL_TOXIN)
+					provide_pain_message = toxin.silent_toxin ? HAS_SILENT_TOXIN : HAS_PAINFUL_TOXIN
 
+	//metabolize reagents
+	liver_owner.reagents.metabolize(liver_owner, delta_time, times_fired, can_overdose=TRUE)
 
-	if(damage > maxHealth)//cap liver damage
-		damage = maxHealth
+	if(damange_to_deal)
+		applyOrganDamage(damange_to_deal)
+
+	if(provide_pain_message && damage > 10 && DT_PROB(damage/6, delta_time)) //the higher the damage the higher the probability
+		to_chat(liver_owner, span_warning("You feel a dull pain in your abdomen."))
+
 
 /obj/item/organ/liver/handle_failing_organs(delta_time)
 	if(HAS_TRAIT(src, TRAIT_STABLELIVER) || HAS_TRAIT(src, TRAIT_NOMETABOLISM))
@@ -208,6 +214,13 @@
 	desc = "A liver that used to belong to a killer alien, who knows what it used to eat."
 	toxLethality = 2.5 * LIVER_DEFAULT_TOX_LETHALITY // rejects its owner early after too much punishment
 	toxTolerance = 15 // complete toxin immunity like xenos have would be too powerful
+
+/obj/item/organ/liver/skrell
+	name = "skrell liver"
+	icon_state = "liver-skrell"
+	alcohol_tolerance = 5
+	toxTolerance = 10 //can shrug off up to 10u of toxins.
+	toxLethality = 0.8 * LIVER_DEFAULT_TOX_LETHALITY //20% less damage than a normal liver
 
 /obj/item/organ/liver/cybernetic
 	name = "basic cybernetic liver"
