@@ -191,6 +191,9 @@ There are several things that need to be remembered:
 		if(!handled_by_bodytype && (OFFSET_UNIFORM in dna.species.offset_features))
 			uniform_overlay?.pixel_x += dna.species.offset_features[OFFSET_UNIFORM][1]
 			uniform_overlay?.pixel_y += dna.species.offset_features[OFFSET_UNIFORM][2]
+		if(U.accessory_overlay && (OFFSET_ACCESSORY in dna.species.offset_features))
+			U.accessory_overlay.pixel_x += dna.species.offset_features[OFFSET_ACCESSORY][1]
+			U.accessory_overlay.pixel_y += dna.species.offset_features[OFFSET_ACCESSORY][2]
 		overlays_standing[UNIFORM_LAYER] = uniform_overlay
 		apply_overlay(UNIFORM_LAYER)
 
