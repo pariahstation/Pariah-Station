@@ -96,7 +96,7 @@
 /datum/sprite_accessory/hair/beehive2
 	name = "Beehive 2"
 	icon_state = "hair_beehivev2"
-	
+
 /datum/sprite_accessory/hair/beehive3
 	name = "Beehive 3"
 	icon_state = "hair_beehivev3"
@@ -456,7 +456,7 @@
 /datum/sprite_accessory/hair/halfbang2
 	name = "Half-banged Hair 2"
 	icon_state = "hair_halfbang2"
-	
+
 /datum/sprite_accessory/hair/halfshaved
 	name = "Half-shaved"
 	icon_state = "hair_halfshaved"
@@ -476,11 +476,11 @@
 /datum/sprite_accessory/hair/halfshavedmessy
 	name = "Half-shaved Messy"
 	icon_state = "halfshave_messy"
-	
+
 /datum/sprite_accessory/hair/halfshavedmessylong
 	name = "Half-shaved Long Messy"
 	icon_state = "halfshave_messylong"
-	
+
 /datum/sprite_accessory/hair/halfshavedglamorous
 	name = "Half-shaved Glamorous"
 	icon_state = "halfshave_glamorous"
@@ -620,7 +620,7 @@
 /datum/sprite_accessory/hair/reversemohawk
 	name = "Mohawk (Reverse)"
 	icon_state = "hair_reversemohawk"
-	
+
 /datum/sprite_accessory/hair/reversemohawk_alt
 	name = "Mohawk (Reverse) ALT"
 	icon_state = "hair_reversemohawk_alt"
@@ -708,7 +708,7 @@
 /datum/sprite_accessory/hair/pigtails3
 	name = "Pigtails 4"
 	icon_state = "hair_pigtails3"
-	
+
 /datum/sprite_accessory/hair/pigtails4
 	name = "Pigtails 5"
 	icon_state = "hair_pigtails4"
@@ -760,7 +760,7 @@
 /datum/sprite_accessory/hair/ponytailalchemist
 	name = "Ponytail (Alchemist)"
 	icon_state = "hair_alchemist"
-	
+
 /datum/sprite_accessory/hair/tightponytail
 	name = "Ponytail (Tight)"
 	icon_state = "hair_tightponytail"
@@ -872,7 +872,7 @@
 /datum/sprite_accessory/hair/scully
 	name = "Scully"
 	icon_state = "hair_scully"
-	
+
 /datum/sprite_accessory/hair/sergeant
 	name = "Sergeant"
 	icon_state = "hair_sergeant"

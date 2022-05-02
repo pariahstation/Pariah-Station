@@ -160,7 +160,7 @@
 /datum/sprite_accessory/facial_hair/robotnik
 	name = "Moustache (Robotnik)"
 	icon_state = "facial_robotnik"
-	
+
 /datum/sprite_accessory/facial_hair/stachenchops
 	name = "Moustache ('Stache 'n Chops)"
 	icon_state = "facial_stachenchops"
