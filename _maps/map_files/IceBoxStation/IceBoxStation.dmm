@@ -3011,6 +3011,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
+"bfe" = (
+/turf/closed/wall,
+/area/commons/dorms/cryo)
 "bfo" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -38211,6 +38214,7 @@
 /obj/machinery/cryopod{
 	dir = 4
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark,
 /area/commons/dorms/cryo)
 "rLC" = (
@@ -81630,7 +81634,7 @@ puW
 rLo
 vWD
 iVU
-uXB
+bfe
 jnk
 aJn
 aJq
@@ -81887,7 +81891,7 @@ xfc
 vjL
 hLm
 nAU
-uXB
+bfe
 jnk
 aJn
 aLY
@@ -82144,7 +82148,7 @@ osB
 aFU
 gBz
 tJI
-aJw
+bfe
 aJw
 aJw
 beX
@@ -82401,7 +82405,7 @@ bRe
 fzJ
 wUb
 vXm
-hTM
+bfe
 lRr
 hhm
 aMg

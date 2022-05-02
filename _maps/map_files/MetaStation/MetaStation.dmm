@@ -39105,6 +39105,7 @@
 /obj/machinery/computer/cryopod{
 	pixel_y = 26
 	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/iron/white,
 /area/commons/dorms/cryo)
 "mXf" = (

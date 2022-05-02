@@ -24843,6 +24843,15 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/tram/right)
+"hxV" = (
+/obj/machinery/cryopod,
+/obj/effect/turf_decal/delivery/white{
+	color = "#00ff00";
+	name = "green"
+	},
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/dark/textured_large,
+/area/commons/dorms/cryo)
 "hya" = (
 /obj/vehicle/ridden/wheelchair,
 /obj/effect/turf_decal/bot,
@@ -42778,6 +42787,17 @@
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor,
 /area/maintenance/starboard/central)
+"nXr" = (
+/obj/machinery/cryopod{
+	dir = 1
+	},
+/obj/effect/turf_decal/delivery/white{
+	color = "#00ff00";
+	name = "green"
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/dark/textured_large,
+/area/commons/dorms/cryo)
 "nXu" = (
 /obj/structure/closet/toolcloset,
 /obj/effect/turf_decal/bot{
@@ -160734,12 +160754,12 @@ aII
 aII
 ago
 keN
-aOb
+hxV
 asd
 oYT
 dwn
 dto
-myz
+nXr
 wqA
 tdR
 sLt
