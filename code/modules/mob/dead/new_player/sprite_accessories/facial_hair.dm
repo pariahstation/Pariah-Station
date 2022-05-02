@@ -100,7 +100,7 @@
 /datum/sprite_accessory/facial_hair/powerful
 	name = "Beard (Powerful)"
 	icon_state = "facial_powerful"
-	
+
 /datum/sprite_accessory/facial_hair/thecolonel
 	name = "Beard (The Colonel)"
 	icon_state = "facial_thecolonel"
