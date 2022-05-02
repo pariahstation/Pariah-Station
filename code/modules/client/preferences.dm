@@ -519,6 +519,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 		character.icon_render_keys = list()
 		character.update_body(is_creating = TRUE)
 
+
 /// Returns whether the parent mob should have the random hardcore settings enabled. Assumes it has a mind.
 /datum/preferences/proc/should_be_random_hardcore(datum/job/job, datum/mind/mind)
 	if(!read_preference(/datum/preference/toggle/random_hardcore))
