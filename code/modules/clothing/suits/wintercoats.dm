@@ -38,6 +38,7 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	flags_inv = HIDEHAIR|HIDEEARS
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 10, FIRE = 0, ACID = 0)
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 // CentCom
 /obj/item/clothing/suit/hooded/wintercoat/centcom
@@ -56,6 +57,7 @@
 /obj/item/clothing/head/hooded/winterhood/centcom
 	icon_state = "hood_centcom"
 	armor = list(MELEE = 35, BULLET = 40, LASER = 40, ENERGY = 50, BOMB = 35, BIO = 10, FIRE = 10, ACID = 60)
+	supports_variations_flags = NONE
 
 // Captain
 /obj/item/clothing/suit/hooded/wintercoat/captain
@@ -76,6 +78,7 @@
 /obj/item/clothing/head/hooded/winterhood/captain
 	icon_state = "hood_captain"
 	armor = list(MELEE = 25, BULLET = 30, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 0, ACID = 50)
+	supports_variations_flags = NONE
 
 // Head of Personnel
 /obj/item/clothing/suit/hooded/wintercoat/hop
@@ -153,6 +156,7 @@
 	desc = "A red, armour-padded winter hood. Definitely not bulletproof, especially not the part where your face goes."
 	icon_state = "hood_security"
 	armor = list(MELEE = 25, BULLET = 15, LASER = 30, ENERGY = 40, BOMB = 25, BIO = 0, FIRE = 0, ACID = 45)
+	supports_variations_flags = NONE
 
 // Head of Security
 /obj/item/clothing/suit/hooded/wintercoat/security/hos
@@ -196,6 +200,7 @@
 	desc = "A white winter coat hood."
 	icon_state = "hood_medical"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 40, FIRE = 10, ACID = 20)
+	supports_variations_flags = NONE
 
 // Chief Medical Officer
 /obj/item/clothing/suit/hooded/wintercoat/medical/cmo
@@ -261,6 +266,7 @@
 /obj/item/clothing/head/hooded/winterhood/medical/paramedic
 	desc = "A white winter coat hood with blue markings."
 	icon_state = "hood_paramed"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 // Scientist
 /obj/item/clothing/suit/hooded/wintercoat/science

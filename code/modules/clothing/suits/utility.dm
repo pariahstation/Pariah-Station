@@ -128,6 +128,7 @@
 	equip_delay_other = 60
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	resistance_flags = NONE
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/head/radiation/Initialize(mapload)
 	. = ..()
