@@ -36,6 +36,7 @@
 		OFFSET_HEAD = list(0, -4),
 		OFFSET_BELT = list(0, -4),
 		OFFSET_BACK = list(0, -4),
+		OFFSET_NECK = list(0, -5),
 		OFFSET_ACCESSORY = list(0, -4))
 	external_organs = list(/obj/item/organ/external/teshari_feathers = "Plain", /obj/item/organ/external/teshari_body_feathers = "Plain")
 	mutant_bodyparts = list("tail_teshari" = "Teshari Default Tail")

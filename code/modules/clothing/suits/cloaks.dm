@@ -27,6 +27,7 @@
 	name = "chief medical officer's cloak"
 	desc = "Worn by Meditopia, the valiant men and women keeping pestilence at bay."
 	icon_state = "cmocloak"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/cloak/ce
 	name = "chief engineer's cloak"
@@ -38,16 +39,19 @@
 	name = "research director's cloak"
 	desc = "Worn by Sciencia, thaumaturges and researchers of the universe."
 	icon_state = "rdcloak"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/cloak/cap
 	name = "captain's cloak"
 	desc = "Worn by the commander of Space Station 13."
 	icon_state = "capcloak"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/cloak/hop
 	name = "head of personnel's cloak"
 	desc = "Worn by the Head of Personnel. It smells faintly of bureaucracy."
 	icon_state = "hopcloak"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/suit/hooded/cloak/goliath
 	name = "goliath cloak"

@@ -166,6 +166,7 @@
 	name = "striped red scarf"
 	icon_state = "stripedredscarf"
 	custom_price = PAYCHECK_ASSISTANT * 0.2
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/stripedgreenscarf
 	name = "striped green scarf"
