@@ -1077,7 +1077,7 @@
 	name = "Very Short Over Eye"
 	icon_state = "hair_veryshortovereye"
 
-/datum/sprite_accessory/hair/veryshortovereye
+/datum/sprite_accessory/hair/veryshortovereye_alt
 	name = "Very Short Over Eye ALT"
 	icon_state = "hair_veryshortovereyealternate"
 
