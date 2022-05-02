@@ -2346,9 +2346,6 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/obj/machinery/camera/directional/west{
-	c_tag = "Dormitory South"
-	},
 /turf/open/floor/iron,
 /area/commons/dorms)
 "aQT" = (
@@ -9407,6 +9404,18 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/wood,
 /area/service/library)
+"dtw" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/camera/directional/east{
+	c_tag = "Dormitory South"
+	},
+/turf/open/floor/iron,
+/area/commons/dorms)
 "dus" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/trimline/blue/filled/corner{
@@ -82918,7 +82927,7 @@ vaC
 vaC
 vaC
 vaC
-vaC
+dtw
 nFv
 sSV
 aKo
