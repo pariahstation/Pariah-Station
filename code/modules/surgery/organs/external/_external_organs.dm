@@ -302,6 +302,8 @@
 	slot = ORGAN_SLOT_EXTERNAL_VOX_HAIR
 	layers = EXTERNAL_FRONT|EXTERNAL_ADJACENT
 
+	dna_block = DNA_VOX_HAIR_BLOCK
+
 	feature_key = "vox_hair"
 	preference = "feature_vox_hair"
 
@@ -317,6 +319,8 @@
 	zone = BODY_ZONE_HEAD
 	slot = ORGAN_SLOT_EXTERNAL_VOX_FACIAL_HAIR
 	layers = EXTERNAL_FRONT|EXTERNAL_ADJACENT
+
+	dna_block = DNA_VOX_FACIAL_HAIR_BLOCK
 
 	feature_key = "vox_facial_hair"
 	preference = "feature_vox_facial_hair"
