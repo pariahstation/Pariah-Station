@@ -2333,7 +2333,7 @@
 
 //Vox accessories
 //The snouts
-/datum/sprite_accessory/vox_snouts
+/datum/sprite_accessory/vox_snouts/vox
 	icon = 'icons/mob/vox_snouts.dmi'
 	name = "Vox Snout"
 	icon_state = "vox"
