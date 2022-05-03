@@ -459,14 +459,11 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 
 /////////////////////////// DNA MOB-PROCS //////////////////////
 /datum/dna/proc/update_body_size()
-	if(!holder)
+	if(!holder || !features["body_size"])
 		return
 	var/desired_size = GLOB.body_sizes[features["body_size"]]
 
 	if(desired_size == current_body_size)
-		return
-
-	if(!features["body_size"])
 		return
 
 	var/change_multiplier = desired_size / current_body_size
