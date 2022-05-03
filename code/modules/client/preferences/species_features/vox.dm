@@ -61,7 +61,7 @@
 	should_generate_icons = TRUE
 
 /datum/preference/choiced/vox_snout/init_possible_values()
-	return generate_vox_side_shots(GLOB.vox_snouts_list, "snout", include_snout = FALSE)
+	return generate_vox_side_shots(GLOB.vox_snouts_list, "snout")
 
 /datum/preference/choiced/vox_snout/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["vox_snout"] = value
