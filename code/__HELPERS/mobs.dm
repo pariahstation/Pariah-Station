@@ -90,6 +90,17 @@
 	if(!GLOB.headtails_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/headtails, GLOB.headtails_list)
 
+	if(!GLOB.vox_hair_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/vox_hair, GLOB.vox_hair_list)
+	if(!GLOB.spines_list_vox.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/vox_spines, GLOB.spines_list_vox)
+	if(!GLOB.vox_facial_hair_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/facial_vox_hair, GLOB.vox_facial_hair_list)
+	if(!GLOB.tails_list_vox.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/vox_tails, GLOB.tails_list_vox)
+	if(!GLOB.vox_snouts_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/vox_snouts, GLOB.vox_snouts_list)
+
 	//For now we will always return none for tail_human and ears.
 	return(list(
 		"mcolor" = "#[pick("7F","FF")][pick("7F","FF")][pick("7F","FF")]",
@@ -111,6 +122,11 @@
 		"tail_monkey" = "None",
 		"pod_hair" = pick(GLOB.pod_hair_list),
 		"headtails" = (pick(GLOB.headtails_list)),
+		"vox_snout" = pick(GLOB.vox_snouts_list),
+		"vox_spines" = pick(GLOB.spines_list_vox),
+		"tail_vox" = pick(GLOB.tails_list_vox),
+		"hair_vox" = pick(GLOB.vox_hair_list),
+		"facial_hair_vox" = pick(GLOB.vox_facial_hair_list),
 	))
 
 /proc/random_hairstyle(gender)
