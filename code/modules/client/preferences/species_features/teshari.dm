@@ -1,4 +1,4 @@
-#define TESH_BODY_COLOR "#DEB887"
+#define TESH_BODY_COLOR "#DEB887" // Also in code\modules\mob\living\carbon\human\species_types\teshari.dm
 #define TESH_FEATHER_COLOR "#996633"
 #define TESH_BODY_FEATHER_COLOR "#FAEBD7"
 

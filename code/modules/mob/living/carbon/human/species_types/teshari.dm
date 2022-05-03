@@ -51,6 +51,20 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/teshari,
 	)
 
+#define TESH_BODY_COLOR "#DEB887" // Also in code\modules\client\preferences\species_features\teshari.dm
+#define TESH_FEATHER_COLOR "#996633"
+
+/datum/species/teshari/prepare_human_for_preview(mob/living/carbon/human/human)
+	human.dna.features["mcolor"] = TESH_BODY_COLOR
+	human.hair_color = TESH_FEATHER_COLOR
+
+	var/obj/item/organ/external/teshari_feathers/head_feathers = human.internal_organs_slot[ORGAN_SLOT_EXTERNAL_TESHARI_FEATHERS]
+	head_feathers.set_sprite("Plain")
+	human.update_body(TRUE)
+
+#undef TESH_BODY_COLOR
+#undef TESH_FEATHER_COLOR
+
 /datum/species/teshari/random_name(gender, unique, lastname)
 	if(unique)
 		return random_unique_teshari_name()
