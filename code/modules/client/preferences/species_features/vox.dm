@@ -32,8 +32,8 @@
 	var/icon/eyes = icon('icons/mob/species/vox/eyes.dmi', "eyes", EAST)
 
 	eyes.Blend(COLOR_GRAY, ICON_MULTIPLY)
-	vox.Blend(eyes, ICON_OVERLAY)
-	vox.Blend(icon('icons/mob/vox_snouts.dmi', "m_snout_vox_ADJ", EAST), ICON_OVERLAY)
+	vox_head.Blend(eyes, ICON_OVERLAY)
+	vox_head.Blend(icon('icons/mob/vox_snouts.dmi', "m_snout_vox_ADJ", EAST), ICON_OVERLAY)
 
 	for (var/name in values)
 		var/datum/sprite_accessory/accessory = accessories[name]
