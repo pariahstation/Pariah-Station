@@ -67,24 +67,32 @@
 		cat_ears.color = human.hair_color
 		human.update_body()
 
-/datum/species/human/modder/get_species_description()
-	return "Modded humans are humans who have undergone genetic modifcation \
-		for various reasons. Perhaps this was for animal ears, changing \
-		height, or maybe even to increase penis size! Who knows!"
+/datum/species/human/get_species_description()
+	return "Humans are the dominant species in the known galaxy. \
+		Their kind extend from old Earth to the edges of known space. \
+		Modded humans are humans that have undergone advanced \
+		genemodding for various reasons."
 
-//i dont really feel like writing a fucking essay about genemodder rn
-/*
-/datum/species/human/modder/get_species_lore()
+/datum/species/human/get_species_lore()
 	return list(
-		"Bio-engineering at its felinest, Felinids are the peak example of humanity's mastery of genetic code. \
-			One of many \"Animalid\" variants, Felinids are the most popular and common, as well as one of the \
-			biggest points of contention in genetic-modification.",
+		"These primate-descended creatures, originating from the mostly harmless Earth, \
+		have long-since outgrown their home and semi-benign designation. \
+		The space age has taken humans out of their solar system and into the galaxy-at-large.",
 
-		"Body modders were eager to splice human and feline DNA in search of the holy trifecta: ears, eyes, and tail. \
-			These traits were in high demand, with the corresponding side effects of vocal and neurochemical changes being seen as a minor inconvenience.",
+		"In traditional human fashion, this near-record pace from terra firma to the final frontier spat \
+		in the face of other races they now shared a stage with. \
+		This included the lizards - if anyone was offended by these upstarts, it was certainly lizardkind.",
 
-		"Sadly for the Felinids, they were not minor inconveniences. Shunned as subhuman and monstrous by many, Felinids (and other Animalids) \
-			sought their greener pastures out in the colonies, cloistering in communities of their own kind. \
-			As a result, outer Human space has a high Animalid population.",
+		"Humanity never managed to find the kind of peace to fully unite under one banner like other species. \
+		The pencil and paper pushing of the UN bureaucrat lives on in the mosaic that is TerraGov; \
+		a composite of the nation-states that still live on in human society.",
+
+		"The human spirit of opportunity and enterprise continues on in its peak form: \
+		the hypercorporation. Acting outside of TerraGov's influence, literally and figuratively, \
+		hypercorporations buy the senate votes they need and establish territory far past the Earth Government's reach. \
+		In hypercorporation territory company policy is law, giving new meaning to \"employee termination\".",
+
+		"With the advent of advanced bio-engineering, many humans have undergone \"genemods\". \
+		People undergo genemods for various reasons, although they are usually only cosmetic, \
+		with animal ears and tails being a very popular choice."
 	)
-*/
