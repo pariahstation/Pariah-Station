@@ -276,7 +276,6 @@
 #include "code\__DEFINES\~pariah_defines\jobs.dm"
 #include "code\__DEFINES\~pariah_defines\keybindings.dm"
 #include "code\__DEFINES\~pariah_defines\loadouts.dm"
-#include "code\__DEFINES\~pariah_defines\logging.dm"
 #include "code\__DEFINES\~pariah_defines\preferences.dm"
 #include "code\__DEFINES\~pariah_defines\say.dm"
 #include "code\__DEFINES\~pariah_defines\signals.dm"
