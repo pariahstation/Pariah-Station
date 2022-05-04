@@ -80,3 +80,28 @@ export const feature_headtails: FeatureChoiced = {
   name: "Headtails",
   component: FeatureDropdownInput,
 };
+
+export const feature_tail_vox: FeatureChoiced = {
+  name: "Tail",
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_hair: FeatureChoiced = {
+  name: "Hairstyle",
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_facial_hair: FeatureChoiced = {
+  name: "Facial hair",
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_spines: FeatureChoiced = {
+  name: "Spines",
+  component: FeatureDropdownInput,
+};
+
+export const feature_vox_snout: FeatureChoiced = {
+  name: "Snout",
+  component: FeatureDropdownInput,
+};

@@ -224,10 +224,10 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 
 	if(features["tail_vox"])
 		L[DNA_VOX_TAIL_BLOCK] = construct_block(GLOB.tails_list_vox.Find(features["tail_vox"]), GLOB.tails_list_vox.len)
-	if(features["hair_vox"])
-		L[DNA_VOX_HAIR_BLOCK] = construct_block(GLOB.vox_hair_list.Find(features["hair_vox"]), GLOB.vox_hair_list.len)
-	if(features["facial_hair_vox"])
-		L[DNA_VOX_FACIAL_HAIR_BLOCK] = construct_block(GLOB.vox_facial_hair_list.Find(features["facial_hair_vox"]), GLOB.vox_facial_hair_list.len)
+	if(features["vox_hair"])
+		L[DNA_VOX_HAIR_BLOCK] = construct_block(GLOB.vox_hair_list.Find(features["vox_hair"]), GLOB.vox_hair_list.len)
+	if(features["vox_facial_hair"])
+		L[DNA_VOX_FACIAL_HAIR_BLOCK] = construct_block(GLOB.vox_facial_hair_list.Find(features["vox_facial_hair"]), GLOB.vox_facial_hair_list.len)
 	if(features["vox_spines"])
 		L[DNA_VOX_SPINES_BLOCK] = construct_block(GLOB.spines_list_vox.Find(features["vox_spines"]), GLOB.spines_list_vox.len)
 	if(features["vox_snout"])
@@ -372,9 +372,9 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		if(DNA_VOX_TAIL_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.tails_list_vox.Find(features["tail_vox"]), GLOB.tails_list_vox.len))
 		if(DNA_VOX_HAIR_BLOCK)
-			set_uni_feature_block(blocknumber, construct_block(GLOB.vox_hair_list.Find(features["hair_vox"]), GLOB.vox_hair_list.len))
+			set_uni_feature_block(blocknumber, construct_block(GLOB.vox_hair_list.Find(features["vox_hair"]), GLOB.vox_hair_list.len))
 		if(DNA_VOX_FACIAL_HAIR_BLOCK)
-			set_uni_feature_block(blocknumber, construct_block(GLOB.vox_facial_hair_list.Find(features["facial_hair_vox"]), GLOB.vox_facial_hair_list.len))
+			set_uni_feature_block(blocknumber, construct_block(GLOB.vox_facial_hair_list.Find(features["vox_facial_hair"]), GLOB.vox_facial_hair_list.len))
 		if(DNA_VOX_SPINES_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.spines_list_vox.Find(features["vox_spines"]), GLOB.spines_list_vox.len))
 		if(DNA_VOX_SNOUT_BLOCK)
@@ -636,10 +636,10 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 
 	if(dna.features["tail_vox"])
 		dna.features["tail_vox"] = GLOB.tails_list_vox[deconstruct_block(get_uni_feature_block(features, DNA_VOX_TAIL_BLOCK), GLOB.tails_list_vox.len)]
-	if(dna.features["hair_vox"])
-		dna.features["hair_vox"] = GLOB.vox_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_VOX_HAIR_BLOCK), GLOB.vox_hair_list.len)]
-	if(dna.features["facial_hair_vox"])
-		dna.features["facial_hair_vox"] = GLOB.vox_facial_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_VOX_FACIAL_HAIR_BLOCK), GLOB.vox_facial_hair_list.len)]
+	if(dna.features["vox_hair"])
+		dna.features["vox_hair"] = GLOB.vox_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_VOX_HAIR_BLOCK), GLOB.vox_hair_list.len)]
+	if(dna.features["vox_facial_hair"])
+		dna.features["vox_facial_hair"] = GLOB.vox_facial_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_VOX_FACIAL_HAIR_BLOCK), GLOB.vox_facial_hair_list.len)]
 	if(dna.features["vox_spines"])
 		dna.features["vox_spines"] = GLOB.spines_list_vox[deconstruct_block(get_uni_feature_block(features, DNA_VOX_SPINES_BLOCK), GLOB.spines_list_vox.len)]
 	if(dna.features["vox_snout"])

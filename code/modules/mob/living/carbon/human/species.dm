@@ -755,6 +755,16 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.tails_list_monkey[source.dna.features["tail_monkey"]]
 				if("headtails")
 					accessory = GLOB.headtails_list[source.dna.features["headtails"]]
+				if("tail_vox")
+					accessory = GLOB.tails_list_vox[source.dna.features["tail_vox"]]
+				if("vox_hair")
+					accessory = GLOB.vox_hair_list[source.dna.features["vox_hair"]]
+				if("vox_facial_hair")
+					accessory = GLOB.vox_facial_hair_list[source.dna.features["vox_facial_hair"]]
+				if("vox_spines")
+					accessory = GLOB.spines_list_vox[source.dna.features["vox_spines"]]
+				if("vox_snout")
+					accessory = GLOB.vox_snouts_list[source.dna.features["vox_snout"]]
 
 			if(!accessory || accessory.icon_state == "none")
 				continue

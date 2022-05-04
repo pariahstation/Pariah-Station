@@ -125,8 +125,8 @@
 		"vox_snout" = pick(GLOB.vox_snouts_list),
 		"vox_spines" = pick(GLOB.spines_list_vox),
 		"tail_vox" = pick(GLOB.tails_list_vox),
-		"hair_vox" = pick(GLOB.vox_hair_list),
-		"facial_hair_vox" = pick(GLOB.vox_facial_hair_list),
+		"vox_hair" = pick(GLOB.vox_hair_list),
+		"vox_facial_hair" = pick(GLOB.vox_facial_hair_list),
 	))
 
 /proc/random_hairstyle(gender)

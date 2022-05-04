@@ -2447,7 +2447,7 @@
 	icon_state = "mane"
 
 //The tail
-/datum/sprite_accessory/vox_tails
+/datum/sprite_accessory/vox_tails/vox
 	icon = 'icons/mob/vox_tails.dmi'
 	name = "Vox Tail"
 	icon_state = "vox"

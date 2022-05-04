@@ -94,23 +94,23 @@
 	savefile_key = "feature_vox_hair"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_FEATURES
-	relevant_mutant_bodypart = "hair_vox"
+	relevant_mutant_bodypart = "vox_hair"
 
 /datum/preference/choiced/vox_hair/init_possible_values()
 	return generate_possible_values_for_sprite_accessories_on_vox_head(GLOB.vox_hair_list)
 
 /datum/preference/choiced/vox_hair/apply_to_human(mob/living/carbon/human/target, value)
-	target.dna.features["hair_vox"] = value
+	target.dna.features["vox_hair"] = value
 
 /datum/preference/choiced/vox_facial_hair
 	savefile_key = "feature_vox_facial_hair"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_FEATURES
-	relevant_mutant_bodypart = "facial_hair_vox"
+	relevant_mutant_bodypart = "vox_facial_hair"
 
 /datum/preference/choiced/vox_facial_hair/init_possible_values()
 	return generate_possible_values_for_sprite_accessories_on_vox_head(GLOB.vox_facial_hair_list)
 
 /datum/preference/choiced/vox_facial_hair/apply_to_human(mob/living/carbon/human/target, value)
-	target.dna.features["facial_hair_vox"] = value
+	target.dna.features["vox_facial_hair"] = value
 
