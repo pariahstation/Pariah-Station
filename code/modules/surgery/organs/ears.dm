@@ -82,11 +82,6 @@
 		ear_owner.dna.species.mutant_bodyparts -= "ears"
 		ear_owner.update_body()
 
-/obj/item/organ/ears/cat/modder
-	name = "gene modder's ears"
-	icon = 'icons/obj/surgery.dmi'
-	icon_state = "ears"
-
 /obj/item/organ/ears/penguin
 	name = "penguin ears"
 	desc = "The source of a penguin's happy feet."

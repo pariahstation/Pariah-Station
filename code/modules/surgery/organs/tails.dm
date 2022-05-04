@@ -42,11 +42,6 @@
 		color = tail_owner.hair_color
 		tail_owner.update_body()
 
-/obj/item/organ/tail/cat/modder
-	name = "gene modder's tail"
-	desc = "A severed genemodder's tail."
-	tail_type = "Cat"
-
 /obj/item/organ/tail/lizard
 	name = "lizard tail"
 	desc = "A severed lizard tail. Somewhere, no doubt, a lizard hater is very pleased with themselves."

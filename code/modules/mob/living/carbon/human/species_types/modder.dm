@@ -6,8 +6,8 @@
 
 	mutant_bodyparts = list("tail_human" = "Cat", "ears" = "Cat", "wings" = "None")
 
-	mutantears = /obj/item/organ/ears/cat/modder
-	mutant_organs = list(/obj/item/organ/tail/cat/modder)
+	mutantears = /obj/item/organ/ears/cat
+	mutant_organs = list(/obj/item/organ/tail/cat)
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	//species_language_holder = /datum/language_holder/felinid
 	payday_modifier = 0.75
@@ -46,12 +46,12 @@
 	if(ishuman(C))
 		var/mob/living/carbon/human/H = C
 		if(H.dna.features["ears"] != "None")
-			var/obj/item/organ/ears/cat/modder/ears = new
+			var/obj/item/organ/ears/cat/ears = new
 			ears.Insert(H, drop_if_replaced = FALSE)
 		else
 			mutantears = /obj/item/organ/ears
 		if(H.dna.features["tail_human"] != "None")
-			var/obj/item/organ/tail/cat/modder/tail = new
+			var/obj/item/organ/tail/cat/tail = new
 			tail.Insert(H, special = TRUE, drop_if_replaced = FALSE)
 		else
 			mutant_organs = list()
