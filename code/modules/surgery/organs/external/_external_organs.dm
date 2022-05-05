@@ -213,6 +213,8 @@
 	feature_key = "vox_snout"
 	preference = "feature_vox_snout"
 
+	dna_block = DNA_VOX_SNOUT_BLOCK
+
 /obj/item/organ/external/snout/vox/get_global_feature_list()
 	return GLOB.vox_snouts_list
 

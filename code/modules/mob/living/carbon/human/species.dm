@@ -761,8 +761,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.vox_hair_list[source.dna.features["vox_hair"]]
 				if("vox_facial_hair")
 					accessory = GLOB.vox_facial_hair_list[source.dna.features["vox_facial_hair"]]
-				if("vox_spines")
-					accessory = GLOB.spines_list_vox[source.dna.features["vox_spines"]]
+				if("spines_vox")
+					accessory = GLOB.spines_list_vox[source.dna.features["spines_vox"]]
 				if("vox_snout")
 					accessory = GLOB.vox_snouts_list[source.dna.features["vox_snout"]]
 
@@ -772,7 +772,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			var/mutable_appearance/accessory_overlay = mutable_appearance(accessory.icon, layer = -layer)
 
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
-			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey" || bodypart == "tail_vox")
 				bodypart = "tail"
 			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
 				bodypart = "waggingtail"

@@ -2337,6 +2337,7 @@
 	icon = 'icons/mob/vox_snouts.dmi'
 	name = "Vox Snout"
 	icon_state = "vox"
+	em_block = TRUE
 
 //The hairstyles
 /datum/sprite_accessory/vox_hair
@@ -2422,6 +2423,10 @@
 	name = "Vox Ruffhawk"
 	icon_state = "ruffhawk"
 
+/datum/sprite_accessory/vox_hair/none
+	name = "None"
+	icon_state = "none"
+
 //The facial hairstyles
 /datum/sprite_accessory/facial_vox_hair
 	icon = 'icons/mob/vox_facial_hair.dmi'
@@ -2446,11 +2451,16 @@
 	name = "Vox Mane"
 	icon_state = "mane"
 
+/datum/sprite_accessory/facial_vox_hair/none
+	name = "None"
+	icon_state = "none"
+
 //The tail
 /datum/sprite_accessory/vox_tails/vox
 	icon = 'icons/mob/vox_tails.dmi'
 	name = "Vox Tail"
 	icon_state = "vox"
+	em_block = TRUE
 
 //The tail markings
 /datum/sprite_accessory/vox_spines
@@ -2458,15 +2468,19 @@
 
 /datum/sprite_accessory/vox_spines/vox_bands
 	name = "Vox Bands"
-	icon_state = "vox_bands"
+	icon_state = "bands"
 
 /datum/sprite_accessory/vox_spines/vox_tip
 	name = "Vox Tip"
-	icon_state = "vox_tip"
+	icon_state = "tip"
 
 /datum/sprite_accessory/vox_spines/vox_stripe
-	name = "Vox Stripe"
-	icon_state = "vox_stripe"
+	name = "vox stripe"
+	icon_state = "stripe"
+
+/datum/sprite_accessory/vox_spines/none
+	name = "None"
+	icon_state = "none"
 
 /datum/sprite_accessory/headtails
 	icon = 'icons/mob/skrell_headtails.dmi'

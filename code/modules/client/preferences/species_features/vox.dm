@@ -1,7 +1,7 @@
 /proc/generate_vox_side_shots(list/sprite_accessories, key)
 	var/list/values = list()
 
-	var/icon/vox = icon('icons/mob/species/vox/bodyparts.dmi', "vox_head", EAST)
+	var/icon/vox = icon('icons/mob/species/vox/bodyparts.dmi', "vox_head_m", EAST)
 	var/icon/eyes = icon('icons/mob/species/vox/eyes.dmi', "eyes", EAST)
 
 	eyes.Blend(COLOR_GRAY, ICON_MULTIPLY)
@@ -28,7 +28,7 @@
 /proc/generate_possible_values_for_sprite_accessories_on_vox_head(accessories)
 	var/list/values = possible_values_for_sprite_accessory_list(accessories)
 
-	var/icon/vox_head = icon('icons/mob/species/vox/bodyparts.dmi', "vox_head", EAST)
+	var/icon/vox_head = icon('icons/mob/species/vox/bodyparts.dmi', "vox_head_m", EAST)
 	var/icon/eyes = icon('icons/mob/species/vox/eyes.dmi', "eyes", EAST)
 
 	eyes.Blend(COLOR_GRAY, ICON_MULTIPLY)
@@ -76,12 +76,13 @@
 	return assoc_to_keys(GLOB.spines_list_vox)
 
 /datum/preference/choiced/vox_spines/apply_to_human(mob/living/carbon/human/target, value)
-	target.dna.features["vox_spines"] = value
+	target.dna.features["spines_vox"] = value
 
 /datum/preference/choiced/vox_tail
 	savefile_key = "feature_vox_tail"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	should_generate_icons = TRUE
 	can_randomize = FALSE
 	relevant_mutant_bodypart = "tail_vox"
 

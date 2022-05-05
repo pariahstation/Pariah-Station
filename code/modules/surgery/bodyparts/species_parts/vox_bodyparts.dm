@@ -3,11 +3,13 @@
 	icon_greyscale = 'icons/mob/species/vox/bodyparts.dmi'
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC | BODYTYPE_SNOUTED
 	limb_id = SPECIES_VOX
+	is_dimorphic = TRUE
 
 /obj/item/bodypart/chest/vox
 	icon_greyscale = 'icons/mob/species/vox/bodyparts.dmi'
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC
 	limb_id = SPECIES_VOX
+	is_dimorphic = TRUE
 
 /obj/item/bodypart/l_arm/vox
 	icon_greyscale = 'icons/mob/species/vox/bodyparts.dmi'

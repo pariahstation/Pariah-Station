@@ -123,7 +123,7 @@
 		"pod_hair" = pick(GLOB.pod_hair_list),
 		"headtails" = (pick(GLOB.headtails_list)),
 		"vox_snout" = pick(GLOB.vox_snouts_list),
-		"vox_spines" = pick(GLOB.spines_list_vox),
+		"spines_vox" = pick(GLOB.spines_list_vox),
 		"tail_vox" = pick(GLOB.tails_list_vox),
 		"vox_hair" = pick(GLOB.vox_hair_list),
 		"vox_facial_hair" = pick(GLOB.vox_facial_hair_list),

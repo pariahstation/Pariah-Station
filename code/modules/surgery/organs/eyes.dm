@@ -474,7 +474,6 @@
 /obj/item/organ/eyes/vox
 	name = "vox eyeballs"
 	icon_state = "vox-eyeballs"
-	eye_icon_state = "vox-eyes"
 
 /obj/item/organ/eyes/night_vision/maintenance_adapted
 	name = "adapted eyes"

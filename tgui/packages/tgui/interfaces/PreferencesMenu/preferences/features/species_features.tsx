@@ -81,7 +81,7 @@ export const feature_headtails: FeatureChoiced = {
   component: FeatureDropdownInput,
 };
 
-export const feature_tail_vox: FeatureChoiced = {
+export const feature_vox_tail: FeatureChoiced = {
   name: "Tail",
   component: FeatureDropdownInput,
 };
