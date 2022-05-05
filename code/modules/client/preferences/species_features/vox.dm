@@ -82,7 +82,6 @@
 	savefile_key = "feature_vox_tail"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
-	should_generate_icons = TRUE
 	can_randomize = FALSE
 	relevant_mutant_bodypart = "tail_vox"
 
