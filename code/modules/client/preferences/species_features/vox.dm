@@ -74,7 +74,7 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_FEATURES
 	should_generate_icons = TRUE
-	main_feature_name = "Vox Afro"
+	main_feature_name = "Hairstyle"
 	relevant_mutant_bodypart = "vox_hair"
 
 /datum/preference/choiced/vox_hair/init_possible_values()
@@ -87,7 +87,7 @@
 	savefile_key = "feature_vox_facial_hair"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_FEATURES
-	main_feature_name = "Vox Mane"
+	main_feature_name = "Facial Hairstyle"
 	should_generate_icons = TRUE
 	relevant_mutant_bodypart = "vox_facial_hair"
 
