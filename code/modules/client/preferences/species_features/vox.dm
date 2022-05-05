@@ -82,6 +82,7 @@
 	savefile_key = "feature_vox_tail"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	can_randomize = FALSE
 	relevant_mutant_bodypart = "tail_vox"
 
 /datum/preference/choiced/vox_tail/init_possible_values()
@@ -89,6 +90,10 @@
 
 /datum/preference/choiced/vox_tail/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["tail_vox"] = value
+
+/datum/preference/choiced/vox_tail/create_default_value()
+	var/datum/sprite_accessory/vox_tails/vox/tail = /datum/sprite_accessory/vox_tails/vox
+	return initial(tail.name)
 
 /datum/preference/choiced/vox_hair
 	savefile_key = "feature_vox_hair"
