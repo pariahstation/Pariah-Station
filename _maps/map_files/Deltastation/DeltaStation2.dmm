@@ -22803,9 +22803,7 @@
 "ewa" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/suit_storage_unit/captain,
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron,
 /area/command/heads_quarters/captain/private)
 "ewg" = (
@@ -28695,6 +28693,9 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/computer_hardware/hard_drive/role/chemistry,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
 "gjd" = (
@@ -35131,16 +35132,13 @@
 /area/maintenance/port/lesser)
 "hYe" = (
 /obj/structure/table/glass,
-/obj/item/folder/blue,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/chemistry,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
 "hYu" = (
@@ -39396,6 +39394,7 @@
 	department = "Law Office";
 	name = "Law Office Requests Console"
 	},
+/obj/item/flashlight/lamp,
 /turf/open/floor/wood,
 /area/service/lawoffice)
 "jkM" = (
@@ -42903,6 +42902,8 @@
 	name = "Privacy Control";
 	req_access_txt = "30"
 	},
+/obj/machinery/fax_machine,
+/obj/structure/table/reinforced,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/rd)
 "kmL" = (
@@ -48465,8 +48466,6 @@
 /area/engineering/atmos/storage/gas)
 "lSj" = (
 /obj/structure/table/wood,
-/obj/item/folder/red,
-/obj/item/pen,
 /obj/machinery/light_switch/directional/east{
 	pixel_x = 38
 	},
@@ -48487,6 +48486,7 @@
 	pixel_y = -6;
 	req_access_txt = "58"
 	},
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
 "lSk" = (
@@ -51362,8 +51362,8 @@
 /area/hallway/secondary/exit/departure_lounge)
 "mKq" = (
 /obj/structure/table/wood,
-/obj/item/flashlight/lamp,
 /obj/item/radio/intercom/directional/west,
+/obj/machinery/fax_machine,
 /turf/open/floor/wood,
 /area/service/lawoffice)
 "mKr" = (
@@ -52404,13 +52404,12 @@
 /turf/open/floor/plating,
 /area/maintenance/port/greater)
 "ncd" = (
-/obj/structure/rack,
-/obj/item/storage/secure/briefcase,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/status_display/ai/directional/south,
 /obj/effect/turf_decal/bot,
-/obj/item/reagent_containers/pill/patch/aiuri,
 /obj/machinery/light/directional/south,
+/obj/machinery/fax_machine,
+/obj/structure/table/reinforced,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
 "nci" = (
@@ -67990,6 +67989,8 @@
 /obj/item/computer_hardware/hard_drive/role/engineering,
 /obj/item/computer_hardware/hard_drive/role/engineering,
 /obj/structure/rack,
+/obj/item/reagent_containers/pill/patch/aiuri,
+/obj/item/storage/secure/briefcase,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
 "rFH" = (
@@ -68895,6 +68896,8 @@
 /obj/item/storage/secure/briefcase,
 /obj/item/book/manual/wiki/security_space_law,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/item/folder/red,
+/obj/item/pen,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
 "rSw" = (
@@ -78017,11 +78020,15 @@
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "uBn" = (
-/obj/effect/landmark/event_spawn,
 /obj/machinery/light_switch/directional/north{
 	pixel_x = -8
 	},
-/turf/open/floor/wood,
+/obj/machinery/fax_machine,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/structure/table/reinforced,
+/turf/open/floor/iron,
 /area/command/heads_quarters/captain/private)
 "uBt" = (
 /obj/machinery/atmospherics/pipe/smart/simple/dark/visible,
@@ -85014,6 +85021,7 @@
 "wMD" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/airalarm/directional/south,
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain/private)
 "wMJ" = (
@@ -87340,8 +87348,8 @@
 /area/construction/mining/aux_base)
 "xwZ" = (
 /obj/structure/table/wood,
-/obj/machinery/recharger,
 /obj/machinery/newscaster/directional/east,
+/obj/machinery/fax_machine,
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
 "xxb" = (

@@ -50,7 +50,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	base_icon_state = "fax"
 	icon_state = "fax"
 	speech_span = SPAN_ROBOT
-	density = TRUE
+	density = FALSE
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 10
 	active_power_usage = 100

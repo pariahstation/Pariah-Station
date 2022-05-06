@@ -4574,16 +4574,13 @@
 /turf/open/floor/iron/dark,
 /area/engineering/atmos)
 "bgu" = (
-/obj/machinery/recharger{
-	pixel_x = 2;
-	pixel_y = 3
-	},
 /obj/item/storage/secure/safe/directional/east,
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green{
 	pixel_x = -12;
 	pixel_y = 5
 	},
+/obj/machinery/fax_machine,
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
 "bgF" = (
@@ -10329,14 +10326,11 @@
 /turf/closed/wall/r_wall,
 /area/maintenance/solars/starboard/aft)
 "cLe" = (
-/obj/item/computer_hardware/hard_drive/role/engineering,
-/obj/item/computer_hardware/hard_drive/role/engineering,
-/obj/item/computer_hardware/hard_drive/role/engineering,
 /obj/structure/table/reinforced,
-/obj/item/computer_hardware/hard_drive/role/atmos,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/machinery/fax_machine,
 /turf/open/floor/iron,
 /area/command/heads_quarters/ce)
 "cLm" = (
@@ -10797,6 +10791,10 @@
 	id = "ceprivacy";
 	name = "Privacy Shutters Control"
 	},
+/obj/item/computer_hardware/hard_drive/role/atmos,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
+/obj/item/computer_hardware/hard_drive/role/engineering,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
 "cPO" = (
@@ -17475,6 +17473,12 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/science/robotics/lab)
+"fak" = (
+/obj/effect/turf_decal/trimline/purple/filled/line,
+/obj/machinery/fax_machine,
+/obj/structure/table,
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/rd)
 "far" = (
 /turf/open/floor/plating,
 /area/maintenance/aft/greater)
@@ -23279,6 +23283,18 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
 /area/science/xenobiology)
+"hmj" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 6
+	},
+/obj/structure/table,
+/obj/item/stamp/rd,
+/obj/item/folder/white,
+/obj/item/toy/figure/rd{
+	pixel_y = 10
+	},
+/turf/open/floor/iron/white,
+/area/command/heads_quarters/rd)
 "hmk" = (
 /obj/machinery/door/airlock/maintenance{
 	req_one_access_txt = "12;22;25;26;28;35;37;46;38;70"
@@ -27757,6 +27773,8 @@
 /area/service/hydroponics)
 "iZl" = (
 /obj/machinery/firealarm/directional/east,
+/obj/machinery/fax_machine,
+/obj/structure/table/wood,
 /turf/open/floor/wood,
 /area/service/lawoffice)
 "iZq" = (
@@ -32208,10 +32226,6 @@
 /obj/effect/landmark/start/hangover/closet,
 /turf/open/floor/iron/dark,
 /area/commons/locker)
-"kGF" = (
-/obj/structure/displaycase/labcage,
-/turf/open/floor/engine,
-/area/command/heads_quarters/rd)
 "kGI" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/cable,
@@ -32530,6 +32544,7 @@
 /obj/item/computer_hardware/hard_drive/role/detective,
 /obj/item/computer_hardware/hard_drive/role/detective,
 /obj/structure/cable,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hos)
 "kMy" = (
@@ -35672,6 +35687,7 @@
 "lTS" = (
 /obj/structure/table/wood,
 /obj/machinery/newscaster/directional/west,
+/obj/machinery/fax_machine,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain/private)
 "lUq" = (
@@ -36132,6 +36148,10 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
+/obj/item/computer_hardware/hard_drive/role/chemistry,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
 "mce" = (
@@ -41075,6 +41095,9 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
+/area/command/heads_quarters/rd)
+"nGX" = (
+/turf/open/floor/iron/white,
 /area/command/heads_quarters/rd)
 "nHm" = (
 /obj/machinery/smartfridge/organ,
@@ -47176,6 +47199,7 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/holopad,
 /turf/open/floor/wood,
 /area/service/lawoffice)
 "pYu" = (
@@ -48749,14 +48773,14 @@
 	dir = 8
 	},
 /obj/machinery/disposal/bin,
-/obj/structure/window/reinforced/tinted{
-	dir = 4
-	},
 /obj/effect/turf_decal/siding{
 	dir = 4
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/structure/window{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/rd)
@@ -51963,9 +51987,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "rQu" = (
-/obj/item/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/disposalpipe/segment{
@@ -53829,15 +53850,13 @@
 /turf/open/floor/iron/dark,
 /area/service/chapel/funeral)
 "sEP" = (
-/obj/structure/table/glass,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/chemistry,
 /obj/machinery/light_switch/directional/north,
 /obj/machinery/vending/wallmed/directional/west,
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
 	},
+/obj/machinery/fax_machine,
+/obj/structure/table,
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
 "sEQ" = (
@@ -61521,7 +61540,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
-	dir = 6
+	dir = 4
 	},
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/rd)
@@ -64504,9 +64523,11 @@
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
 "wLy" = (
-/obj/machinery/holopad,
 /obj/structure/disposalpipe/segment{
 	dir = 9
+	},
+/obj/item/kirbyplants{
+	icon_state = "plant-21"
 	},
 /turf/open/floor/wood,
 /area/service/lawoffice)
@@ -66020,6 +66041,7 @@
 /area/service/library)
 "xnS" = (
 /obj/machinery/light/small/directional/south,
+/obj/structure/displaycase/labcage,
 /turf/open/floor/engine,
 /area/command/heads_quarters/rd)
 "xom" = (
@@ -68363,11 +68385,6 @@
 /area/medical/treatment_center)
 "yiE" = (
 /obj/structure/table,
-/obj/item/folder/white,
-/obj/item/stamp/rd,
-/obj/item/toy/figure/rd{
-	pixel_y = 10
-	},
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/rd)
 "yiT" = (
@@ -102720,9 +102737,9 @@ fen
 uDv
 gTZ
 yiE
-usc
+nGX
+fak
 rjs
-oGi
 kYf
 uDv
 mqF
@@ -102977,9 +102994,9 @@ dGP
 uDv
 lWY
 mtS
+nGX
 usc
 fwC
-kGF
 xnS
 uDv
 qcO
@@ -103235,8 +103252,8 @@ uDv
 wLY
 qZG
 vFs
+hmj
 rjs
-oGi
 oGi
 uDv
 aXb

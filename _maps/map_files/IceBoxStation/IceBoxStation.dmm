@@ -6571,17 +6571,10 @@
 /area/maintenance/starboard/upper)
 "cqX" = (
 /obj/structure/table/wood,
-/obj/item/phone{
-	pixel_x = 10;
-	pixel_y = 7
-	},
-/obj/item/radio/off{
-	pixel_x = -3;
-	pixel_y = 7
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/fax_machine,
 /turf/open/floor/wood/large,
 /area/command/heads_quarters/hos)
 "crf" = (
@@ -21509,11 +21502,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/command/heads_quarters/cmo)
-"joF" = (
-/obj/structure/table/wood,
-/obj/item/hand_tele,
-/turf/open/floor/wood,
-/area/command/heads_quarters/captain)
 "joR" = (
 /obj/effect/spawner/random/structure/crate,
 /turf/open/floor/plating,
@@ -25710,6 +25698,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/machinery/fax_machine,
+/obj/structure/table,
 /turf/open/floor/iron,
 /area/command/heads_quarters/hop)
 "lwk" = (
@@ -27422,6 +27412,7 @@
 "mrv" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
+/obj/item/hand_tele,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "msa" = (
@@ -33473,11 +33464,9 @@
 /area/icemoon/surface/outdoors/nospawn)
 "pts" = (
 /obj/structure/table/glass,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/medical,
-/obj/item/computer_hardware/hard_drive/role/chemistry,
 /obj/machinery/status_display/evac/directional/north,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/cmo)
 "ptw" = (
@@ -38645,6 +38634,11 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/central)
+"rUF" = (
+/obj/structure/table/wood,
+/obj/machinery/fax_machine,
+/turf/open/floor/wood,
+/area/command/heads_quarters/captain)
 "rUM" = (
 /obj/machinery/computer/scan_consolenew,
 /obj/machinery/light/directional/north,
@@ -40259,14 +40253,13 @@
 	},
 /area/hallway/secondary/exit/departure_lounge)
 "sGu" = (
-/obj/machinery/computer/station_alert{
-	dir = 4
-	},
 /obj/machinery/computer/security/telescreen/ce{
 	dir = 4;
 	pixel_x = -24
 	},
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/fax_machine,
+/obj/structure/table/reinforced,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
 "sGx" = (
@@ -44503,7 +44496,7 @@
 	},
 /obj/structure/table,
 /obj/item/storage/secure/safe/directional/south,
-/obj/item/storage/secure/briefcase,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron,
 /area/command/heads_quarters/rd)
 "uHn" = (
@@ -48367,6 +48360,10 @@
 /obj/structure/table/glass,
 /obj/item/flashlight/lamp,
 /obj/effect/turf_decal/tile/blue/full,
+/obj/item/computer_hardware/hard_drive/role/chemistry,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
+/obj/item/computer_hardware/hard_drive/role/medical,
 /turf/open/floor/iron/dark/smooth_large,
 /area/command/heads_quarters/cmo)
 "wHJ" = (
@@ -81918,7 +81915,7 @@ fEH
 oRm
 juK
 lJc
-esy
+rUF
 piu
 nQT
 olj
@@ -82432,7 +82429,7 @@ qYC
 jdv
 jdv
 kYB
-joF
+esy
 cBu
 xpu
 kYB

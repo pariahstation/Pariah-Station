@@ -480,6 +480,8 @@
 	},
 /obj/item/restraints/handcuffs/cable/zipties,
 /obj/item/flashlight/seclite,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/iron/dark,
 /area/security/detectives_office)
 "ack" = (
@@ -3527,8 +3529,7 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/item/paper_bin,
-/obj/item/pen,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/security/detectives_office)
 "arv" = (
@@ -13460,6 +13461,10 @@
 	dir = 1
 	},
 /obj/machinery/power/apc/auto_name/directional/east,
+/obj/item/toy/figure/ce{
+	pixel_x = 8;
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
 "bPP" = (
@@ -31931,6 +31936,10 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/airalarm/directional/north,
 /obj/effect/turf_decal/bot,
+/obj/item/taperecorder{
+	pixel_x = 5
+	},
+/obj/item/computer_hardware/hard_drive/role/lawyer,
 /turf/open/floor/iron/dark,
 /area/service/lawoffice)
 "gqQ" = (
@@ -33364,15 +33373,6 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/item/storage/box/pdas{
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/obj/item/storage/box/silver_ids{
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/obj/item/storage/box/ids,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -33381,6 +33381,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hop)
 "gRM" = (
@@ -35084,7 +35085,7 @@
 	},
 /obj/effect/turf_decal/tile/purple,
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/drinks/mug/coco,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/showroomfloor,
 /area/command/heads_quarters/rd)
 "hwO" = (
@@ -44541,12 +44542,9 @@
 	dir = 8
 	},
 /obj/structure/table/wood,
-/obj/item/storage/fancy/cigarettes/cigars/havana{
-	pixel_y = 5
-	},
 /obj/machinery/light/directional/east,
-/obj/item/lighter,
 /obj/item/storage/secure/safe/directional/east,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/captain)
 "kxq" = (
@@ -46515,16 +46513,13 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/storage/medkit/regular{
-	pixel_x = 2
-	},
-/obj/item/healthanalyzer,
 /obj/machinery/requests_console/directional/north{
 	announcementConsole = 1;
 	department = "Chief Medical Officer's Desk";
 	departmentType = 5;
 	name = "Chief Medical Officer's Requests Console"
 	},
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/cmo)
 "lgH" = (
@@ -46963,6 +46958,10 @@
 /obj/item/folder/white,
 /obj/item/wrench/medical,
 /obj/item/toy/figure/cmo,
+/obj/item/healthanalyzer,
+/obj/item/storage/medkit/regular{
+	pixel_x = 2
+	},
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/cmo)
 "loD" = (
@@ -47043,14 +47042,10 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/book/manual/wiki/security_space_law,
-/obj/item/taperecorder{
-	pixel_x = 5
-	},
 /obj/structure/table,
-/obj/item/computer_hardware/hard_drive/role/lawyer,
 /obj/effect/turf_decal/bot,
 /obj/structure/mirror/directional/north,
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/service/lawoffice)
 "lpO" = (
@@ -48448,15 +48443,6 @@
 /area/service/chapel/storage)
 "lOL" = (
 /obj/structure/table/reinforced,
-/obj/item/paper_bin{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/pen,
-/obj/item/toy/figure/ce{
-	pixel_x = 8;
-	pixel_y = 6
-	},
 /obj/machinery/button/door/directional/west{
 	id = "atmos";
 	name = "Atmospherics Lockdown";
@@ -48469,6 +48455,7 @@
 	pixel_y = -6;
 	req_access_txt = "10"
 	},
+/obj/machinery/fax_machine,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
 "lOY" = (
@@ -53221,6 +53208,10 @@
 	pixel_y = 4
 	},
 /obj/machinery/airalarm/directional/south,
+/obj/item/lighter,
+/obj/item/storage/fancy/cigarettes/cigars/havana{
+	pixel_y = 5
+	},
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/captain)
 "npH" = (
@@ -56688,6 +56679,11 @@
 /obj/item/computer_hardware/hard_drive/role/atmos,
 /obj/item/folder,
 /obj/item/stamp/ce,
+/obj/item/pen,
+/obj/item/paper_bin{
+	pixel_x = -4;
+	pixel_y = 4
+	},
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/ce)
 "ozQ" = (
@@ -65188,6 +65184,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/engineering/main)
+"rja" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/fax_machine,
+/obj/structure/table,
+/turf/open/floor/iron/dark,
+/area/command/heads_quarters/hos)
 "rjJ" = (
 /obj/machinery/atmospherics/pipe/smart/simple/purple/visible,
 /obj/machinery/meter,
@@ -76932,6 +76938,15 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/bot,
 /obj/item/storage/lockbox/loyalty,
+/obj/item/storage/box/ids,
+/obj/item/storage/box/silver_ids{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/storage/box/pdas{
+	pixel_x = 4;
+	pixel_y = 6
+	},
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/hop)
 "vlQ" = (
@@ -77563,6 +77578,7 @@
 	pixel_y = 1
 	},
 /obj/item/toy/figure/lawyer,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/carpet/green,
 /area/service/lawoffice)
 "vvU" = (
@@ -105990,7 +106006,7 @@ cac
 cai
 bAd
 lKu
-bre
+rja
 dyT
 kyD
 pXV
