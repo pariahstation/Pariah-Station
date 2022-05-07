@@ -218,7 +218,7 @@ export const _FaxMachine = (props, context) => {
             <Stack.Item height={3} mb={1}>
               {!!selectedPaper && (
                 <Stack vertical align="center" >
-                  <Stack.Item grow>
+                  <Stack.Item>
                     <b>
                       To fulfill this paperwork, stamp accurately
                       and answer the following:
