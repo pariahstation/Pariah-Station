@@ -486,7 +486,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	if(!unread_message)
 		return FALSE
 
-	say(span_robot("Fax received from [source]!"))
+	say("Fax received from [source]!")
 	playsound(src, 'sound/machines/terminal_processing.ogg', 50, FALSE)
 	addtimer(CALLBACK(src, .proc/alert_received_paper, source), FAX_UNREAD_ALERT_TIME)
 
