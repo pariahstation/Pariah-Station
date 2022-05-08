@@ -97,6 +97,10 @@
 				appearance.color = human_owner.eye_color
 			if(MUTCOLORS)
 				appearance.color = image_color
+			if(MUTCOLORS2)
+				appearance.color = human_owner?.dna?.features["mcolor2"] ? human_owner.dna.features["mcolor2"] : image_color
+			if(MUTCOLORS3)
+				appearance.color = human_owner?.dna?.features["mcolor3"] ? human_owner.dna.features["mcolor3"] : image_color
 	else if(sprite_datum.color_src)
 		appearance.color = image_color
 

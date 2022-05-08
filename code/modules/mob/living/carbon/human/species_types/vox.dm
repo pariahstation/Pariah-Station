@@ -7,6 +7,7 @@
 	species_eye_path = 'icons/mob/species/vox/eyes.dmi'
 	species_traits = list(
 		MUTCOLORS,
+		MUTCOLORS2,
 		EYECOLOR,
 		HAS_FLESH,
 		HAS_BONE,
@@ -28,7 +29,6 @@
 	breathid = "n2"
 	mutant_bodyparts = list(
 		"tail_vox" = "Vox Tail",
-		"legs" = "Digitigrade Legs",
 		"spines_vox" = "None"
 	)
 	external_organs = list(

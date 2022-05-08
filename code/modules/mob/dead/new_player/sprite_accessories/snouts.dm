@@ -23,3 +23,4 @@
 	name = "Vox Snout"
 	icon_state = "vox"
 	em_block = TRUE
+	color_src = MUTCOLORS2

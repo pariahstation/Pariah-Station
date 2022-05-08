@@ -56,6 +56,7 @@
 
 /datum/sprite_accessory/vox_spines
 	icon = 'icons/mob/vox_spines.dmi'
+	em_block = TRUE
 
 /datum/sprite_accessory/vox_spines/vox_bands
 	name = "Vox Bands"

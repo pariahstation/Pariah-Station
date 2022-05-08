@@ -136,7 +136,6 @@
 /obj/item/organ/tail/vox/Insert(mob/living/carbon/human/tail_owner, special = FALSE, drop_if_replaced = TRUE)
 	..()
 	if(istype(tail_owner))
-		// Checks here are necessary so it wouldn't overwrite the tail of a lizard it spawned in
 		var/default_part = tail_owner.dna.species.mutant_bodyparts["tail_vox"]
 		if(!default_part || default_part == "None")
 			if(tail_type)
