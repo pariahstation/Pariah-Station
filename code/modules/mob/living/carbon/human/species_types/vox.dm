@@ -10,6 +10,8 @@
 		EYECOLOR,
 		HAS_FLESH,
 		HAS_BONE,
+		HAIRCOLOR,
+		FACEHAIRCOLOR,
 	)
 	inherent_traits = list(
 		TRAIT_RESISTCOLD,

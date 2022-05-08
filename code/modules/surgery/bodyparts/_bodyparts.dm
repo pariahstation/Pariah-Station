@@ -791,7 +791,8 @@
 					image_dir,
 					external_organ.bitflag_to_layer(external_layer),
 					limb_gender,
-					external_organ.overrides_color ? external_organ.override_color(draw_color) : draw_color
+					external_organ.overrides_color ? external_organ.override_color(draw_color) : draw_color,
+					owner,
 				)
 
 /obj/item/bodypart/deconstruct(disassembled = TRUE)

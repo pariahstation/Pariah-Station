@@ -2342,6 +2342,7 @@
 //The hairstyles
 /datum/sprite_accessory/vox_hair
 	icon = 'icons/mob/vox_hair.dmi'
+	color_src = HAIR
 
 /datum/sprite_accessory/vox_hair/vox_afro
 	name = "Vox Afro"
@@ -2430,6 +2431,7 @@
 //The facial hairstyles
 /datum/sprite_accessory/facial_vox_hair
 	icon = 'icons/mob/vox_facial_hair.dmi'
+	color_src = FACEHAIR
 
 /datum/sprite_accessory/facial_vox_hair/vox_beard
 	name = "Vox Beard"

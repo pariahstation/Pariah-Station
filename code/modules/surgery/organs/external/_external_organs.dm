@@ -77,7 +77,7 @@
 	bodypart.contents.Add(src)
 
 ///Add the overlays we need to draw on a person. Called from _bodyparts.dm
-/obj/item/organ/external/proc/get_overlays(list/overlay_list, image_dir, image_layer, physique, image_color)
+/obj/item/organ/external/proc/get_overlays(list/overlay_list, image_dir, image_layer, physique, image_color, mob/living/carbon/owner)
 	if(!sprite_datum)
 		return
 
@@ -86,7 +86,18 @@
 	var/mutable_appearance/appearance = mutable_appearance(sprite_datum.icon, finished_icon_state, layer = -image_layer)
 	appearance.dir = image_dir
 
-	if(sprite_datum.color_src) //There are multiple flags, but only one is ever used so meh :/
+	if(ishuman(owner))
+		var/mob/living/carbon/human/human_owner = owner
+		switch(sprite_datum.color_src)
+			if(FACEHAIR)
+				appearance.color = human_owner.facial_hair_color
+			if(HAIR)
+				appearance.color = human_owner.hair_color
+			if(EYECOLOR)
+				appearance.color = human_owner.eye_color
+			if(MUTCOLORS)
+				appearance.color = image_color
+	else if(sprite_datum.color_src)
 		appearance.color = image_color
 
 	if(sprite_datum.center)
