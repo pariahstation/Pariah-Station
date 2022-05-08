@@ -36,7 +36,7 @@
 #define DNA_UNI_IDENTITY_BLOCKS 7
 
 /// This number needs to equal the total number of DNA blocks
-#define DNA_FEATURE_BLOCKS 22
+#define DNA_FEATURE_BLOCKS 24
 
 #define DNA_MUTANT_COLOR_BLOCK 1
 #define DNA_ETHEREAL_COLOR_BLOCK 2
@@ -55,11 +55,14 @@
 #define DNA_MONKEY_TAIL_BLOCK 15
 #define DNA_POD_HAIR_BLOCK 16
 #define DNA_HEADTAILS_BLOCK 17
-#define DNA_VOX_HAIR_BLOCK 18
-#define DNA_VOX_FACIAL_HAIR_BLOCK 19
-#define DNA_VOX_SPINES_BLOCK 20
-#define DNA_VOX_TAIL_BLOCK 21
-#define DNA_VOX_SNOUT_BLOCK 22
+#define DNA_MUTANT_COLOR_BLOCK_2 18
+#define DNA_MUTANT_COLOR_BLOCK_3 19
+
+#define DNA_VOX_HAIR_BLOCK 20
+#define DNA_VOX_FACIAL_HAIR_BLOCK 21
+#define DNA_VOX_SPINES_BLOCK 22
+#define DNA_VOX_TAIL_BLOCK 23
+#define DNA_VOX_SNOUT_BLOCK 24
 
 #define DNA_SEQUENCE_LENGTH 4
 #define DNA_MUTATION_BLOCKS 8
@@ -97,8 +100,11 @@
 ///will be assigned a universal vampire themed last name shared by their department. this is preferenced!
 #define BLOOD_CLANS 21
 
-#define HAIRCOLOR 22
-#define FACEHAIRCOLOR 23
+#define MUTCOLORS2 22
+#define MUTCOLORS3 23
+
+#define HAIRCOLOR 24
+#define FACEHAIRCOLOR 25
 
 //organ slots
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"
