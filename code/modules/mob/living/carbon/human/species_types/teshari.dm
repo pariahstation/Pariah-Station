@@ -27,19 +27,20 @@
 	disliked_food = GRAIN | GROSS
 
 	payday_modifier = 0.75
-	punchdamagelow = 0 // TODO: Make sure these are all correct with the lore people
 	punchdamagehigh = 6
 	heatmod = 1.5
 	coldmod = 0.67
 	brutemod = 1.5
 	burnmod = 1.5
-	bodytemp_normal = BODYTEMP_NORMAL + 30
-	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT + 30
-	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT + 30
+	bodytemp_normal = BODYTEMP_NORMAL - 15 // 22°C
+	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT - 37 // 30°C max
+	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT - 30 // -33°C min
 
 	external_organs = list(/obj/item/organ/external/teshari_feathers = "Plain", /obj/item/organ/external/teshari_body_feathers = "Plain")
 	mutant_bodyparts = list("tail_teshari" = "Teshari Default Tail")
 	mutant_organs = list(/obj/item/organ/tail/teshari)
+	mutantlungs = /obj/item/organ/lungs/teshari
+
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/teshari,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/teshari,
