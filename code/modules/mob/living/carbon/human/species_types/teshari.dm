@@ -69,9 +69,12 @@
 	return teshari_name()
 
 /datum/species/teshari/get_species_description()
-	return "Placeholder"
+	return "The Teshari are a species of social, pack-based raptor-like nomadic aliens, hailing from the planet of Esmerini, or Penelope's Star VII (7), \
+	a cold jungle planet full of precursor and archotechnology just outside the Goldilocks zone of their system. While still a relatively young species, \
+	the Teshari have become a recent part of spacefaring species, thanks in part to efforts by the Orion Commonwealth to uplift them, \
+	trading the snow-filled trees and frozen tundra for warmer ships and orbital installations."
 
 /datum/species/teshari/get_species_lore()
 	return list(
-		"Placeholder"
+		"WIP"
 	)
