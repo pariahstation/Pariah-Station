@@ -1,6 +1,8 @@
 /obj/item/clothing/neck
 	name = "necklace"
 	icon = 'icons/obj/clothing/neck.dmi'
+	fallback_colors = list(list(15, 19))
+	fallback_icon_state = "scarf"
 	body_parts_covered = NECK
 	slot_flags = ITEM_SLOT_NECK
 	strip_delay = 40
@@ -23,6 +25,8 @@
 	icon = 'icons/obj/clothing/neck.dmi'
 	icon_state = "bluetie"
 	inhand_icon_state = "" //no inhands
+	fallback_colors = list(list(16, 20))
+	fallback_icon_state = "tie"
 	w_class = WEIGHT_CLASS_SMALL
 	custom_price = PAYCHECK_EASY
 
@@ -182,6 +186,8 @@
 	name = "pet collar"
 	desc = "It's for pets."
 	icon_state = "petcollar"
+	fallback_colors = list(list(16, 21), list(16, 19))
+	fallback_icon_state = "collar" //Blame (or thank) Kapu
 	var/tagname = null
 
 /obj/item/clothing/neck/petcollar/mob_can_equip(mob/M, mob/living/equipper, slot, disable_warning = FALSE, bypass_equip_delay_self = FALSE)

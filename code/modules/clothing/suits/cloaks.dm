@@ -6,6 +6,8 @@
 	icon = 'icons/obj/clothing/cloaks.dmi'
 	icon_state = "qmcloak"
 	inhand_icon_state = "qmcloak"
+	fallback_colors = list(list(11, 15), list(12, 22))
+	fallback_icon_state = "cloak"
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDESUITSTORAGE

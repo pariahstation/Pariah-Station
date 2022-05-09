@@ -1,4 +1,6 @@
 /obj/item/clothing/suit/armor
+	fallback_colors = list(list(14, 18))
+	fallback_icon_state = "armor"
 	allowed = null
 	body_parts_covered = CHEST
 	cold_protection = CHEST|GROIN

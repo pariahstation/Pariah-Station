@@ -185,7 +185,8 @@ There are several things that need to be remembered:
 				isinhands = FALSE,
 				femaleuniform = woman ? U.adjusted : null,
 				override_state = target_overlay,
-				override_file = handled_by_bodytype ? icon_file : null
+				override_file = handled_by_bodytype ? icon_file : null,
+				fallback = handled_by_bodytype ? null : dna.species.fallback_clothing_path
 			)
 
 		if(!handled_by_bodytype && (OFFSET_UNIFORM in dna.species.offset_features))
@@ -267,7 +268,12 @@ There are several things that need to be remembered:
 			icon_file = 'icons/mob/clothing/hands.dmi'
 			handled_by_bodytype = FALSE
 
-		gloves_overlay = gloves.build_worn_icon(default_layer = GLOVES_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+		gloves_overlay = gloves.build_worn_icon(
+			default_layer = GLOVES_LAYER,
+			default_icon_file = icon_file,
+			override_file = handled_by_bodytype ? icon_file : null,
+			fallback = handled_by_bodytype ? null : dna.species.fallback_clothing_path
+		)
 
 		if(!gloves_overlay)
 			return
@@ -306,7 +312,12 @@ There are several things that need to be remembered:
 				icon_file = 'icons/mob/clothing/eyes.dmi'
 				handled_by_bodytype = FALSE
 
-			glasses_overlay = glasses.build_worn_icon(default_layer = GLASSES_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+			glasses_overlay = glasses.build_worn_icon(
+				default_layer = GLASSES_LAYER,
+				default_icon_file = icon_file,
+				override_file = handled_by_bodytype ? icon_file : null,
+				fallback = handled_by_bodytype ? null : dna.species.fallback_clothing_path
+			)
 
 		if(!glasses_overlay)
 			return
@@ -378,7 +389,12 @@ There are several things that need to be remembered:
 				handled_by_bodytype = FALSE
 				icon_file = 'icons/mob/clothing/neck.dmi'
 
-			neck_overlay = worn_item.build_worn_icon(default_layer = NECK_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+			neck_overlay = worn_item.build_worn_icon(
+				default_layer = NECK_LAYER,
+				default_icon_file = icon_file,
+				override_file = handled_by_bodytype ? icon_file : null,
+				fallback = handled_by_bodytype ? null : dna.species.fallback_clothing_path
+			)
 
 			if(!neck_overlay)
 				return
@@ -424,7 +440,12 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 			icon_file = DEFAULT_SHOES_FILE
 
-		shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+		shoes_overlay = shoes.build_worn_icon(
+			default_layer = SHOES_LAYER,
+			default_icon_file = icon_file,
+			override_file = handled_by_bodytype ? icon_file : null,
+			fallback = handled_by_bodytype ? null : dna.species.fallback_clothing_path
+		)
 
 		if(!shoes_overlay)
 			return
@@ -486,7 +507,11 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 			icon_file = 'icons/mob/clothing/head.dmi'
 
-		head_overlay = head.build_worn_icon(default_layer = HEAD_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+		head_overlay = head.build_worn_icon(
+			default_layer = HEAD_LAYER,
+			default_icon_file = icon_file,
+			override_file = handled_by_bodytype ? icon_file : null
+		)
 
 		if(!head_overlay)
 			return
@@ -521,7 +546,11 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 			icon_file = 'icons/mob/clothing/belt.dmi'
 
-		belt_overlay = belt.build_worn_icon(default_layer = BELT_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+		belt_overlay = belt.build_worn_icon(
+			default_layer = BELT_LAYER,
+			default_icon_file = icon_file,
+			override_file = handled_by_bodytype ? icon_file : null
+		)
 
 		if(!belt_overlay)
 			return
@@ -563,7 +592,12 @@ There are several things that need to be remembered:
 			handled_by_bodytype = FALSE
 			icon_file = DEFAULT_SUIT_FILE
 
-		suit_overlay = wear_suit.build_worn_icon(default_layer = SUIT_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+		suit_overlay = wear_suit.build_worn_icon(
+			default_layer = SUIT_LAYER,
+			default_icon_file = icon_file,
+			override_file = handled_by_bodytype ? icon_file : null,
+			fallback = handled_by_bodytype ? null : dna.species.fallback_clothing_path
+		)
 
 		if(!suit_overlay)
 			return
@@ -632,7 +666,11 @@ There are several things that need to be remembered:
 				icon_file = 'icons/mob/clothing/mask.dmi'
 				handled_by_bodytype = FALSE
 
-			mask_overlay = wear_mask.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+			mask_overlay = wear_mask.build_worn_icon(
+				default_layer = FACEMASK_LAYER,
+				default_icon_file = icon_file,
+				override_file = handled_by_bodytype ? icon_file : null
+			)
 
 		if(!mask_overlay)
 			return
@@ -668,7 +706,11 @@ There are several things that need to be remembered:
 			icon_file = 'icons/mob/clothing/back.dmi'
 			handled_by_bodytype = FALSE
 
-		back_overlay = back.build_worn_icon(default_layer = BACK_LAYER, default_icon_file = icon_file, override_file = handled_by_bodytype ? icon_file : null) //PARIAH EDIT
+		back_overlay = back.build_worn_icon(
+			default_layer = BACK_LAYER,
+			default_icon_file = icon_file,
+			override_file = handled_by_bodytype ? icon_file : null
+		)
 
 		if(!back_overlay)
 			return
@@ -730,6 +772,40 @@ There are several things that need to be remembered:
 	if(!female_clothing_icon) 	//Create standing/laying icons if they don't exist
 		generate_female_clothing(index, t_color, icon, type)
 	return mutable_appearance(GLOB.female_clothing_icons[index], layer = -layer)
+
+/**
+ * Override with a fallback sprite for this item.
+ *
+ * Arguments:
+ * * file2use - The normal `icon` for this item.
+ * * state2use - The normal `icon_state` for this item.
+ * * layer - The layer that the final sprite should be rendered on.
+ * * species_file - The [/datum/species/var/fallback_clothing_path] of the species trying to wear this item.
+ */
+/obj/item/proc/wear_fallback_version(file2use, state2use, layer, species_file)
+	return
+
+/**
+ * Returns a mutable_appearance of this clothing's fallback sprite.
+ *
+ * If a sprite for this item hasn't already been generated, a new one is made in [generate_fallback_clothing], and added to `GLOB.fallback_clothing_icons`.
+ *
+ * Arguments:
+ * * file2use - The normal `icon` for this item.
+ * * state2use - The normal `icon_state` for this item.
+ * * layer - The layer that the final sprite should be rendered on.
+ * * species_file - The [/datum/species/var/fallback_clothing_path] of the species trying to wear this item.
+ */
+/obj/item/clothing/wear_fallback_version(file2use, state2use, layer, species_file)
+	LAZYINITLIST(GLOB.fallback_clothing_icons[species_file])
+
+	// Either ["path/to/file.dmi-jumpsuit"] or ["#ffe14d-jumpsuit"]
+	var/list_key = "[(greyscale_colors && greyscale_config_worn) ? greyscale_colors : file2use]-[state2use]"
+
+	var/icon/species_clothing_icon = GLOB.fallback_clothing_icons[species_file][list_key]
+	if(!species_clothing_icon) // Create standing/laying icons if they don't exist
+		generate_fallback_clothing(file2use, state2use, species_file, list_key)
+	return mutable_appearance(GLOB.fallback_clothing_icons[species_file][list_key], layer = -layer)
 
 /mob/living/carbon/human/proc/get_overlays_copy(list/unwantedLayers)
 	var/list/out = new
@@ -849,7 +925,7 @@ generate/load female uniform sprites matching all previously decided variables
 
 
 */
-/obj/item/proc/build_worn_icon(default_layer = 0, default_icon_file = null, isinhands = FALSE, femaleuniform = NO_FEMALE_UNIFORM, override_state = null, override_file = null)
+/obj/item/proc/build_worn_icon(default_layer = 0, default_icon_file = null, isinhands = FALSE, femaleuniform = NO_FEMALE_UNIFORM, override_state = null, override_file = null, fallback = null)
 
 	//Find a valid icon_state from variables+arguments
 	var/t_state
@@ -868,7 +944,9 @@ generate/load female uniform sprites matching all previously decided variables
 	var/layer2use = alternate_worn_layer ? alternate_worn_layer : default_layer
 
 	var/mutable_appearance/standing
-	if(femaleuniform)
+	if(fallback)
+		standing = wear_fallback_version(file2use, t_state, layer2use, fallback)
+	else if(femaleuniform)
 		standing = wear_female_version(t_state, file2use, layer2use, femaleuniform, greyscale_colors) //should layer2use be in sync with the adjusted value below? needs testing - shiz
 	if(!standing)
 		standing = mutable_appearance(file2use, t_state, -layer2use)

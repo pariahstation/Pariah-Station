@@ -7,6 +7,15 @@
 	species_language_holder = /datum/language_holder/teshari
 	species_eye_path = 'icons/mob/species/teshari/eyes.dmi'
 
+	fallback_clothing_path = 'icons/mob/clothing/species/teshari/fallback.dmi'
+	offset_features = list(
+		OFFSET_EARS = list(0, -4),
+		OFFSET_FACEMASK = list(0, -5),
+		OFFSET_HEAD = list(0, -4),
+		OFFSET_BELT = list(0, -4),
+		OFFSET_BACK = list(0, -4),
+		OFFSET_ACCESSORY = list(0, -3))
+
 	say_mod = "chirps"
 	attack_verb = "slash"
 	attack_effect = ATTACK_EFFECT_CLAW
@@ -28,17 +37,6 @@
 	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT + 30
 	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT + 30
 
-	offset_features = list(
-		OFFSET_GLOVES = list(0, -4),
-		OFFSET_GLASSES = list(0, -5),
-		OFFSET_EARS = list(0, -4),
-		OFFSET_FACEMASK = list(0, -5),
-		OFFSET_HEAD = list(0, -4),
-		OFFSET_BELT = list(0, -4),
-		OFFSET_BACK = list(0, -4),
-		OFFSET_SUIT = list(0, -4),
-		OFFSET_NECK = list(0, -5),
-		OFFSET_ACCESSORY = list(0, -3))
 	external_organs = list(/obj/item/organ/external/teshari_feathers = "Plain", /obj/item/organ/external/teshari_body_feathers = "Plain")
 	mutant_bodyparts = list("tail_teshari" = "Teshari Default Tail")
 	mutant_organs = list(/obj/item/organ/tail/teshari)
