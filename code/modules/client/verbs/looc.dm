@@ -7,13 +7,6 @@
 
 	looc_message(msg)
 
-/client/verb/looc_wallpierce(msg as text)
-	set name = "LOOC (Wallpierce)"
-	set desc = "Local OOC, seen by anyone within 7 tiles of you."
-	set category = "OOC"
-
-	looc_message(msg, TRUE)
-
 /mob/proc/get_top_level_mob()
 	if(istype(src.loc,/mob)&&src.loc!=src)
 		var/mob/M=src.loc
@@ -26,7 +19,7 @@
 		return M.get_top_level_mob()
 	return S
 
-/client/proc/looc_message(msg, wall_pierce)
+/client/proc/looc_message(msg)
 	if(GLOB.say_disabled)
 		to_chat(usr, span_danger("Speech is currently admin-disabled."))
 		return
@@ -61,19 +54,14 @@
 	msg = emoji_parse(msg)
 
 	mob.log_talk(msg,LOG_OOC, tag="LOOC")
-	var/list/heard
-	if(wall_pierce)
-		heard = get_hearers_in_range(LOOC_RANGE, get_top_level_mob(src.mob))
-	else
-		heard = get_hearers_in_view(LOOC_RANGE, get_top_level_mob(src.mob))
+
+	var/list/heard = get_hearers_in_view(7, get_top_level_mob(src.mob))
 
 	//so the ai can post looc text
-	if(istype(mob, /mob/living/silicon/ai))
+	if(istype(mob,/mob/living/silicon/ai))
 		var/mob/living/silicon/ai/ai = mob
-		if(wall_pierce)
-			heard = get_hearers_in_range(LOOC_RANGE, ai.eyeobj)
-		else
-			heard = get_hearers_in_view(LOOC_RANGE, ai.eyeobj)
+		heard = get_hearers_in_view(7, ai.eyeobj)
+
 	//so the ai can see looc text
 	for(var/mob/living/silicon/ai/ai as anything in GLOB.ai_list)
 		if(ai.client && !(ai in heard) && (ai.eyeobj in heard))
