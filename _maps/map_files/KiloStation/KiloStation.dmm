@@ -10941,28 +10941,13 @@
 /turf/open/floor/iron/dark,
 /area/hallway/primary/port)
 "bpz" = (
-/obj/structure/table,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm/directional/west,
 /obj/item/radio/intercom/directional/north,
-/obj/item/storage/wallet,
-/obj/effect/spawner/random/entertainment/coin,
-/obj/item/gps{
-	gpstag = "QM0";
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/effect/spawner/random/entertainment/coin,
-/obj/item/pen/blue{
-	pixel_x = -5;
-	pixel_y = -10
-	},
-/obj/item/pen/red{
-	pixel_x = 1;
-	pixel_y = -10
-	},
+/obj/machinery/fax_machine,
+/obj/structure/table,
 /turf/open/floor/iron/dark,
 /area/cargo/qm)
 "bpC" = (

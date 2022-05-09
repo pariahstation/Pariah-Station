@@ -60265,6 +60265,8 @@
 /turf/open/floor/iron,
 /area/commons/locker)
 "vgB" = (
+/obj/machinery/fax_machine,
+/obj/structure/table/wood,
 /turf/open/floor/wood,
 /area/cargo/qm)
 "vgE" = (

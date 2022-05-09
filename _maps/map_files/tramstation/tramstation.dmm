@@ -47194,6 +47194,7 @@
 /area/engineering/supermatter/room)
 "pBg" = (
 /obj/structure/table,
+/obj/machinery/fax_machine,
 /turf/open/floor/carpet,
 /area/cargo/qm)
 "pBi" = (

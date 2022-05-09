@@ -17209,6 +17209,7 @@
 /area/security/checkpoint/customs/auxiliary)
 "hkc" = (
 /obj/structure/table,
+/obj/machinery/fax_machine,
 /turf/open/floor/carpet,
 /area/cargo/qm)
 "hkK" = (

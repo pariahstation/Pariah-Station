@@ -46,7 +46,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 /obj/machinery/fax_machine
 	name = "fax machine"
 	desc = "A machine made to send faxes and process paperwork. You unbelievably boring person."
-	icon = 'code/modules/JollyFax/fax.dmi'
+	icon = 'icons/machinery/fax.dmi'
 	base_icon_state = "fax"
 	icon_state = "fax"
 	speech_span = SPAN_ROBOT
