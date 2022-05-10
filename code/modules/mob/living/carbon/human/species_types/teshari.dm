@@ -33,7 +33,7 @@
 	brutemod = 1.5
 	burnmod = 1.5
 	bodytemp_normal = BODYTEMP_NORMAL - 15 // 22°C
-	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT - 37 // 30°C max
+	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT - 32 // 35°C max
 	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT - 30 // -33°C min
 
 	external_organs = list(/obj/item/organ/external/teshari_feathers = "Plain", /obj/item/organ/external/teshari_body_feathers = "Plain")
@@ -63,6 +63,9 @@
 
 #undef TESH_BODY_COLOR
 #undef TESH_FEATHER_COLOR
+
+/datum/species/teshari/get_scream_sound(mob/living/carbon/human/human)
+	return 'modular_pariah/modules/emotes/sound/emotes/raptorscream.ogg'
 
 /datum/species/teshari/random_name(gender, unique, lastname)
 	if(unique)
