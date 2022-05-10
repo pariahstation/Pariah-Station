@@ -38,17 +38,8 @@
 
 /datum/preference/choiced/teshari_feathers/compile_constant_data()
 	var/list/data = ..()
-	data[SUPPLEMENTAL_FEATURE_KEY] = "teshari_feathers_color"
+	data[SUPPLEMENTAL_FEATURE_KEY] = "hair_color"
 	return data
-
-/datum/preference/color/teshari_feathers
-	savefile_key = "teshari_feathers_color"
-	savefile_identifier = PREFERENCE_CHARACTER
-	category = PREFERENCE_CATEGORY_SUPPLEMENTAL_FEATURES
-
-/datum/preference/color/teshari_feathers/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	target.hair_color = value
-
 
 /datum/preference/choiced/teshari_body_feathers
 	savefile_key = "teshari_body_feathers"
@@ -87,17 +78,8 @@
 
 /datum/preference/choiced/teshari_body_feathers/compile_constant_data()
 	var/list/data = ..()
-	data[SUPPLEMENTAL_FEATURE_KEY] = "teshari_body_feathers_color"
+	data[SUPPLEMENTAL_FEATURE_KEY] = "facial_hair_color"
 	return data
-
-/datum/preference/color/teshari_body_feathers
-	savefile_key = "teshari_body_feathers_color"
-	savefile_identifier = PREFERENCE_CHARACTER
-	category = PREFERENCE_CATEGORY_SUPPLEMENTAL_FEATURES
-
-/datum/preference/color/teshari_body_feathers/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
-	target.facial_hair_color = value
-
 
 /datum/preference/choiced/tail_teshari
 	savefile_key = "teshari_tail"

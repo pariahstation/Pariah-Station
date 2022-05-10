@@ -96,19 +96,9 @@ export const teshari_feathers: Feature<string> = {
   component: FeatureDropdownInput,
 };
 
-export const teshari_feathers_color: Feature<string> = {
-  name: "Head feathers color",
-  component: FeatureColorInput,
-};
-
 export const teshari_body_feathers: Feature<string> = {
   name: "Body feathers",
   component: FeatureDropdownInput,
-};
-
-export const teshari_body_feathers_color: Feature<string> = {
-  name: "Body feathers color",
-  component: FeatureColorInput,
 };
 
 export const teshari_tail: Feature<string> = {
