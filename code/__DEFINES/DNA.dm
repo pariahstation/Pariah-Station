@@ -96,6 +96,8 @@
 #define NOAUGMENTS 20
 ///will be assigned a universal vampire themed last name shared by their department. this is preferenced!
 #define BLOOD_CLANS 21
+/// Can this species use the 'Body size' preference
+#define BODY_RESIZABLE 22
 
 #define MUTCOLORS2			22
 #define MUTCOLORS3			23
