@@ -1,7 +1,7 @@
 /datum/language/schechi
 	name = "Schechi"
 	desc = "The common language of the Kepori, consisting of miscellaneous chirps."
-	key = "f"
+	key = "c"
 	space_chance = 40
 	syllables = list(
 		"fa", "fe", "fi", "ma", "me", "mi", "na", "ne", "ni", "sa", "se", "si", "ta", "te", "ti",
