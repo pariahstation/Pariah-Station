@@ -101,7 +101,7 @@ export const teshari_body_feathers: Feature<string> = {
   component: FeatureDropdownInput,
 };
 
-export const teshari_tail: Feature<string> = {
+export const tail_teshari: Feature<string> = {
   name: "Tail",
   component: FeatureDropdownInput,
 };

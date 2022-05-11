@@ -78,13 +78,13 @@
 	em_block = TRUE
 
 /datum/sprite_accessory/tails/teshari/default
-	name = "Teshari Default Tail"
-	icon_state = "teshari_default"
+	name = "Default"
+	icon_state = "default"
 
 /datum/sprite_accessory/tails/teshari/fluffy
-	name = "Teshari Fluffy Tail"
-	icon_state = "teshari_fluffy"
+	name = "Fluffy"
+	icon_state = "fluffy"
 
 /datum/sprite_accessory/tails/teshari/thin
-	name = "Teshari Thin Tail"
-	icon_state = "teshari_thin"
+	name = "Thin"
+	icon_state = "thin"

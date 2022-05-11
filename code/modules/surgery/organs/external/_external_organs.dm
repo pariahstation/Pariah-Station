@@ -360,3 +360,23 @@
 	if(ishuman(ownerlimb?.owner))
 		var/mob/living/carbon/human/human_owner = ownerlimb.owner
 		return human_owner.facial_hair_color
+
+// Teshari tail
+/obj/item/organ/external/tail/teshari
+	name = "Teshari tail"
+	zone = BODY_ZONE_CHEST // Don't think about this too much
+	slot = ORGAN_SLOT_TAIL
+	layers = EXTERNAL_FRONT | EXTERNAL_BEHIND
+
+	feature_key = "tail_teshari"
+	preference = "tail_teshari"
+
+	dna_block = DNA_TESHARI_TAIL_BLOCK
+
+/obj/item/organ/external/tail/teshari/can_draw_on_bodypart(mob/living/carbon/human/human)
+	if(human.wear_suit && (human.wear_suit.flags_inv & HIDEJUMPSUIT))
+		return FALSE
+	return TRUE
+
+/obj/item/organ/external/tail/teshari/get_global_feature_list()
+	return GLOB.teshari_tails_list

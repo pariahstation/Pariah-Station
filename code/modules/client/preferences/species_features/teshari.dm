@@ -82,7 +82,7 @@
 	return data
 
 /datum/preference/choiced/tail_teshari
-	savefile_key = "teshari_tail"
+	savefile_key = "tail_teshari"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_FEATURES
 	main_feature_name = "Tails"
@@ -95,7 +95,7 @@
 	for(var/name in GLOB.teshari_tails_list)
 		var/datum/sprite_accessory/teshari_tail = GLOB.teshari_tails_list[name]
 
-		var/icon/tail_icon = icon(teshari_tail.icon, "m_tail_[teshari_tail.icon_state]_BEHIND", EAST)
+		var/icon/tail_icon = icon(teshari_tail.icon, "m_tail_teshari_[teshari_tail.icon_state]_BEHIND", EAST)
 		tail_icon.Blend(TESH_BODY_COLOR, ICON_MULTIPLY)
 		tail_icon.Scale(64, 64)
 		tail_icon.Crop(1, 5, 1 + 31, 5 + 31)

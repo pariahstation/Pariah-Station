@@ -36,9 +36,11 @@
 	bodytemp_heat_damage_limit = BODYTEMP_HEAT_DAMAGE_LIMIT - 32 // 35°C max
 	bodytemp_cold_damage_limit = BODYTEMP_COLD_DAMAGE_LIMIT - 30 // -33°C min
 
-	external_organs = list(/obj/item/organ/external/teshari_feathers = "Plain", /obj/item/organ/external/teshari_body_feathers = "Plain")
-	mutant_bodyparts = list("tail_teshari" = "Teshari Default Tail")
-	mutant_organs = list(/obj/item/organ/tail/teshari)
+	external_organs = list(
+		/obj/item/organ/external/teshari_feathers = "Plain",
+		/obj/item/organ/external/teshari_body_feathers = "Plain",
+		/obj/item/organ/external/tail/teshari = "Default"
+	)
 	mutantlungs = /obj/item/organ/lungs/teshari
 
 	bodypart_overrides = list(
