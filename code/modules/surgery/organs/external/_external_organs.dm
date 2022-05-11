@@ -93,6 +93,7 @@
 		center_image(appearance, sprite_datum.dimension_x, sprite_datum.dimension_y)
 
 	overlay_list += appearance
+	return appearance
 
 /obj/item/organ/external/proc/set_sprite(sprite_name)
 	sprite_datum = get_sprite_datum(sprite_name)
@@ -380,3 +381,14 @@
 
 /obj/item/organ/external/tail/teshari/get_global_feature_list()
 	return GLOB.teshari_tails_list
+
+/obj/item/organ/external/tail/teshari/get_overlays(list/overlay_list, image_dir, image_layer, physique, image_color)
+	var/mutable_appearance/tail_primary = ..()
+	var/mutable_appearance/tail_secondary = mutable_appearance(tail_primary.icon, "[tail_primary.icon_state]_secondary", layer = -image_layer)
+	var/mutable_appearance/tail_tertiary = mutable_appearance(tail_primary.icon, "[tail_primary.icon_state]_tertiary", layer = -image_layer)
+
+	tail_secondary.color = owner.dna.features["mcolor2"]
+	tail_tertiary.color = owner.dna.features["mcolor3"]
+
+	overlay_list += tail_secondary
+	overlay_list += tail_tertiary
