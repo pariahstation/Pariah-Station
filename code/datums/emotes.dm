@@ -48,7 +48,7 @@
 	/// Types that can use this emote regardless of their state.
 	var/list/mob_type_ignore_stat_typecache
 	/// Species types which the emote will be exclusively available to.
-	var/species_type_whitelist_typecache
+	var/list/species_type_whitelist_typecache
 	/// In which state can you use this emote? (Check stat.dm for a full list of them)
 	var/stat_allowed = CONSCIOUS
 	/// Sound to play when emote is called.
@@ -243,7 +243,7 @@
 		return FALSE
 	if(istype(user, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
-		if(species_type_whitelist_typecache && H.dna && !is_type_in_typecache(H.dna.species, species_type_whitelist_typecache))
+		if(species_type_whitelist_typecache && H.dna && !species_type_whitelist_typecache[H.dna.species])
 			return FALSE
 
 	if(status_check && !is_type_in_typecache(user, mob_type_ignore_stat_typecache))
