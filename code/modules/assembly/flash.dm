@@ -323,7 +323,6 @@
 /obj/item/assembly/flash/cyborg/screwdriver_act(mob/living/user, obj/item/I)
 	return
 
-
 ///Camera flash
 
 /obj/item/assembly/flash/camera
@@ -332,30 +331,37 @@
 	desc = "A polaroid camera."
 	icon_state = "camera"
 	inhand_icon_state = "camera"
-	worn_icon_state = "camera"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
-	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_NECK
-	pickup_sound = null
+	pickup_sound = null //override pickup and drop sounds so it behaves more like a real camera.
+	drop_sound = null
 	flash_sound = 'sound/items/polaroid1.ogg'
 	var/max_charges = 5
 	var/current_charges = 5
 	var/list/charge_timers = list()
-	var/charge_time = 300 //30 seconds
+	var/charge_time = 30 SECONDS
 
 /obj/item/assembly/flash/camera/burn_out()
 	return //use self charging system instead
 
-/obj/item/assembly/flash/camera/attack(mob/living/M, mob/user)
+/obj/item/assembly/flash/camera/attack_self(mob/living/carbon/user, flag = 0)
 	if(current_charges)
-		current_charges --
-		to_chat(user, span_notice("You use [src]. It now has [current_charges] charge[current_charges == 1 ? "" : "s"] remaining."))
+		current_charges--
+		to_chat(user, span_notice("You use [src]. It now has [current_charge\s] charges remaining."))
 		charge_timers.Add(addtimer(CALLBACK(src, .proc/recharge), charge_time, TIMER_STOPPABLE))
 		..()
 	else
 		to_chat(user, span_warning("[src] is recharging."))
-	return
+
+/obj/item/assembly/flash/camera/attack(mob/living/M, mob/user)
+	if(current_charges)
+		current_charges--
+		to_chat(user, span_notice("You use [src]. It now has [current_charges] charge\s remaining."))
+		charge_timers.Add(addtimer(CALLBACK(src, .proc/recharge), charge_time, TIMER_STOPPABLE))
+		..()
+	else
+		to_chat(user, span_warning("[src] is recharging."))
 
 /obj/item/assembly/flash/camera/proc/recharge(mob/user)
 	current_charges = min(current_charges+1, max_charges)
@@ -363,13 +369,13 @@
 
 /obj/item/assembly/flash/camera/examine(mob/user)
 	. = ..()
-	. += span_notice("It has [current_charges] charges remaining.")
+	. += span_notice("It has [current_charges] charge\s remaining.")
 	if (length(charge_timers))
-		. += "[span_notice("<b>A small display on the screen reads:")]</b>"
+		. += "[span_boldnotice("<b>A small display on the screen reads:")]</b>"
 	for (var/i in 1 to length(charge_timers))
 		var/timeleft = timeleft(charge_timers[i])
 		var/loadingbar = num2loadingbar(timeleft/charge_time)
-		. += span_notice("<b>CHARGE #[i]: [loadingbar] ([timeleft*0.1]s)</b>")
+		. += span_boldnotice("<b>CHARGE #[i]: [loadingbar] ([timeleft*0.1]s)</b>")
 
 //Memorizer
 
