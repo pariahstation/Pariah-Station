@@ -289,30 +289,3 @@
 	vary = TRUE
 	sound = 'sound/voice/wurble.ogg'
 	species_type_whitelist_typecache = list(/datum/species/skrell)
-
-
-/* remove
-/datum/emote/beep
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
-	sound = 'sound/emotes/twobeep.ogg'
-	mob_type_allowed_typecache = list(/mob/living) //Beep already exists on brains and silicons
-
-/datum/emote/living/growl
-	key = "growl"
-	key_third_person = "growls"
-	message = "lets out a growl."
-	emote_type = EMOTE_AUDIBLE
-	muzzle_ignore = TRUE
-	vary = TRUE
-	sound = 'sound/voice/growl.ogg'
-
-/datum/emote/living/cackle
-	key = "cackle"
-	key_third_person = "cackles"
-	message = "cackles hysterically!"
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
-	sound = 'sound/voice/cackle_yeen.ogg'
-
-*/
