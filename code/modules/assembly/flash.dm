@@ -346,20 +346,19 @@
 	return //use self charging system instead
 
 /obj/item/assembly/flash/camera/attack_self(mob/living/carbon/user, flag = 0)
-	if(current_charges)
-		current_charges--
-		to_chat(user, span_notice("You use [src]. It now has [current_charge\s] charges remaining."))
-		charge_timers.Add(addtimer(CALLBACK(src, .proc/recharge), charge_time, TIMER_STOPPABLE))
-		..()
-	else
-		to_chat(user, span_warning("[src] is recharging."))
+	if(use_charge(user))
+		. = ..()
 
 /obj/item/assembly/flash/camera/attack(mob/living/M, mob/user)
+	if(use_charge(user))
+		. = ..()
+
+/obj/item/assembly/flash/camera/proc/use_charge(mob/user)
 	if(current_charges)
 		current_charges--
 		to_chat(user, span_notice("You use [src]. It now has [current_charges] charge\s remaining."))
 		charge_timers.Add(addtimer(CALLBACK(src, .proc/recharge), charge_time, TIMER_STOPPABLE))
-		..()
+		return TRUE
 	else
 		to_chat(user, span_warning("[src] is recharging."))
 
@@ -371,11 +370,11 @@
 	. = ..()
 	. += span_notice("It has [current_charges] charge\s remaining.")
 	if (length(charge_timers))
-		. += "[span_boldnotice("<b>A small display on the screen reads:")]</b>"
+		. += "[span_boldnotice("A small display on the screen reads:")]"
 	for (var/i in 1 to length(charge_timers))
 		var/timeleft = timeleft(charge_timers[i])
 		var/loadingbar = num2loadingbar(timeleft/charge_time)
-		. += span_boldnotice("<b>CHARGE #[i]: [loadingbar] ([timeleft*0.1]s)</b>")
+		. += span_boldnotice("CHARGE #[i]: [loadingbar] ([timeleft*0.1]s)")
 
 //Memorizer
 
