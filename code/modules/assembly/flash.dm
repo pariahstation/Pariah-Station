@@ -348,7 +348,7 @@
 /obj/item/assembly/flash/camera/attack_self(mob/living/carbon/user, flag = 0)
 	if(current_charges)
 		current_charges--
-		to_chat(user, span_notice("You use [src]. It now has [current_charge\s] charges remaining."))
+		to_chat(user, span_notice("You use [src]. It now has [current_charges] charge\s remaining."))
 		charge_timers.Add(addtimer(CALLBACK(src, .proc/recharge), charge_time, TIMER_STOPPABLE))
 		..()
 	else
