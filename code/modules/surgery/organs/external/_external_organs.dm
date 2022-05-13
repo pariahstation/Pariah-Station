@@ -357,10 +357,26 @@
 /obj/item/organ/external/teshari_body_feathers/get_global_feature_list()
 	return GLOB.teshari_body_feathers_list
 
+// TODO: Get this to figure out which limbs are missing, and skip drawing the overlay on those.
+/obj/item/organ/external/teshari_body_feathers/get_overlays(list/overlay_list, image_dir, image_layer, physique, image_color)
+	var/mutable_appearance/chest_feathers = ..()
+	if(sprite_datum.icon_state == "none")
+		return
+
+	var/list/limb_overlays = list()
+	limb_overlays += mutable_appearance(chest_feathers.icon, "[chest_feathers.icon_state]_head", layer = -image_layer)
+	limb_overlays += mutable_appearance(chest_feathers.icon, "[chest_feathers.icon_state]_l_arm", layer = -image_layer)
+	limb_overlays += mutable_appearance(chest_feathers.icon, "[chest_feathers.icon_state]_r_arm", layer = -image_layer)
+	limb_overlays += mutable_appearance(chest_feathers.icon, "[chest_feathers.icon_state]_l_leg", layer = -image_layer)
+	limb_overlays += mutable_appearance(chest_feathers.icon, "[chest_feathers.icon_state]_r_leg", layer = -image_layer)
+
+	for(var/mutable_appearance/overlay as anything in limb_overlays)
+		overlay.color = image_color
+		overlay_list += overlay
+
 /obj/item/organ/external/teshari_body_feathers/override_color(rgb_value)
-	if(ishuman(ownerlimb?.owner))
-		var/mob/living/carbon/human/human_owner = ownerlimb.owner
-		return human_owner.facial_hair_color
+	var/mob/living/carbon/human/human_owner = owner
+	return human_owner.facial_hair_color
 
 // Teshari tail
 /obj/item/organ/external/tail/teshari

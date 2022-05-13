@@ -1,6 +1,5 @@
 #define TESH_BODY_COLOR "#DEB887" // Also in code\modules\mob\living\carbon\human\species_types\teshari.dm
 #define TESH_FEATHER_COLOR "#996633"
-#define TESH_BODY_FEATHER_COLOR "#FAEBD7"
 
 /datum/preference/choiced/teshari_feathers
 	savefile_key = "teshari_feathers"
@@ -51,7 +50,10 @@
 /datum/preference/choiced/teshari_body_feathers/init_possible_values()
 	var/list/values = list()
 
-	var/icon/teshari_body = icon('icons/mob/species/teshari/bodyparts.dmi', "teshari_chest")
+	// Build-a-bird
+	var/icon/teshari_body = icon('icons/blanks/32x32.dmi', "nothing")
+	for(var/body_part in list("chest", "l_arm", "r_arm", "l_hand", "r_hand", "l_leg", "r_leg"))
+		teshari_body.Blend(icon('icons/mob/species/teshari/bodyparts.dmi', "teshari_[body_part]"), ICON_OVERLAY)
 	teshari_body.Blend(TESH_BODY_COLOR, ICON_MULTIPLY)
 
 	for(var/name in GLOB.teshari_body_feathers_list)
@@ -60,14 +62,15 @@
 		var/icon/icon_with_feathers = icon(teshari_body)
 
 		if(feather_style.icon_state != "none")
-			var/icon/body_feathers_icon = icon(
-				'icons/mob/species/teshari/teshari_feathers.dmi',
-				"m_teshari_body_feathers_[feather_style.icon_state]_ADJ")
-			body_feathers_icon.Blend(TESH_BODY_FEATHER_COLOR, ICON_MULTIPLY)
+			var/icon/body_feathers_icon = icon('icons/mob/species/teshari/body_feathers.dmi', "m_teshari_body_feathers_[feather_style.icon_state]_ADJ")
+			// Limb markings
+			for(var/limb in list("l_arm", "r_arm", "l_leg", "r_leg"))
+				icon_with_feathers.Blend(icon('icons/mob/species/teshari/body_feathers.dmi', "m_teshari_body_feathers_[feather_style.icon_state]_ADJ_[limb]"), ICON_OVERLAY)
+
 			icon_with_feathers.Blend(body_feathers_icon, ICON_OVERLAY)
 
 		icon_with_feathers.Scale(64, 64)
-		icon_with_feathers.Crop(17, 8, 17 + 31, 8 + 31)
+		icon_with_feathers.Crop(17, 7, 17 + 31, 7 + 31)
 
 		values[feather_style.name] = icon_with_feathers
 
@@ -110,4 +113,3 @@
 
 #undef TESH_BODY_COLOR
 #undef TESH_FEATHER_COLOR
-#undef TESH_BODY_FEATHER_COLOR

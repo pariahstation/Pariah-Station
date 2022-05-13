@@ -1,7 +1,7 @@
 // Teshari feathers
 /datum/sprite_accessory/teshari_feathers
 	color_src = HAIR
-	icon = 'icons/mob/species/teshari/teshari_feathers.dmi'
+	icon = 'icons/mob/species/teshari/head_feathers.dmi'
 
 /datum/sprite_accessory/teshari_feathers/plain
 	name = "Plain"
@@ -62,7 +62,7 @@
 // Teshari body feathers
 /datum/sprite_accessory/teshari_body_feathers
 	color_src = FACEHAIR
-	icon = 'icons/mob/species/teshari/teshari_feathers.dmi'
+	icon = 'icons/mob/species/teshari/body_feathers.dmi'
 
 /datum/sprite_accessory/teshari_body_feathers/none
 	name = "None"
@@ -71,6 +71,26 @@
 /datum/sprite_accessory/teshari_body_feathers/plain
 	name = "Plain"
 	icon_state = "plain"
+
+/datum/sprite_accessory/teshari_body_feathers/coat
+	name = "Coat"
+	icon_state = "coat"
+
+/datum/sprite_accessory/teshari_body_feathers/underfluff
+	name = "Underfluff"
+	icon_state = "underfluff"
+
+/datum/sprite_accessory/teshari_body_feathers/short
+	name = "Short"
+	icon_state = "short"
+
+/datum/sprite_accessory/teshari_body_feathers/male
+	name = "Male"
+	icon_state = "male"
+
+/datum/sprite_accessory/teshari_body_feathers/female
+	name = "Female"
+	icon_state = "female"
 
 // Teshari tails
 /datum/sprite_accessory/tails/teshari
