@@ -75,6 +75,25 @@ GLOBAL_LIST_INIT(loadout_glasses, generate_loadout_items(/datum/loadout_item/gla
 /datum/loadout_item/glasses/eyepatch
 	name = "Eyepatch"
 	item_path = /obj/item/clothing/glasses/eyepatch
+	
+/datum/loadout_item/glasses/medicpatch
+	name = "Medical Eyepatch"
+	item_path = /obj/item/clothing/glasses/hud/eyepatch/med
+	
+/datum/loadout_item/glasses/secpatch
+	name = "Security Eyepatch Hud"
+	item_path = /obj/item/clothing/glasses/hud/eyepatch/sec
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY
+	
+/datum/loadout_item/glasses/robopatch
+	name = "Diagnostic Eyepatch"
+	item_path = /obj/item/clothing/glasses/hud/eyepatch/diagnostic
+	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
+
+/datum/loadout_item/glasses/scipatch
+	name = "Science Eyepatch"
+	item_path = /obj/item/clothing/glasses/hud/eyepatch/sci
+	restricted_roles = list(JOB_SCIENTIST, JOB_ROBOTICIST, JOB_GENETICIST, JOB_RESEARCH_DIRECTOR, JOB_CHEMIST)
 
 /datum/loadout_item/glasses/fakeblindfold
 	name = "Fake Blindfold"
