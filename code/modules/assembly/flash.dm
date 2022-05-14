@@ -370,7 +370,7 @@
 	. = ..()
 	. += span_notice("It has [current_charges] charge\s remaining.")
 	if (length(charge_timers))
-		. += "[span_boldnotice("A small display on the screen reads:")]"
+		. += span_boldnotice("A small display on the screen reads:")
 	for (var/i in 1 to length(charge_timers))
 		var/timeleft = timeleft(charge_timers[i])
 		var/loadingbar = num2loadingbar(timeleft/charge_time)
