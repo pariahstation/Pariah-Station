@@ -1148,9 +1148,9 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 	var/static/regex/regex = new(@"[^a-zA-Z0-9]","g")
 	return replacetext(name, regex, "")
 
-/// -- Text helpers. --
+// -- Text helpers. --
 /// Provides a preview of [string] up to [len - 3], after which it appends "..." if it pasts the length.
-/proc/TextPreview(string, len = 40)
+/proc/text_preview(string, len = 40)
 	var/char_len = length_char(string)
 	if(char_len <= len)
 		if(!char_len)

@@ -160,11 +160,6 @@ SUBSYSTEM_DEF(economy)
 		"vendor" = vendor,
 	))
 
-/// -- Economy ss additions --
-/datum/controller/subsystem/economy/fire(resumed = 0)
-	. = ..()
-	send_fax_paperwork()
-
 /*
  * Send paperwork to process to fax machines in the world.
  *
@@ -196,10 +191,10 @@ SUBSYSTEM_DEF(economy)
 			LAZYADD(found_machine.received_paperwork, generate_paperwork(found_machine))
 		if(num_papers_added)
 			found_machine.audible_message(span_notice("[found_machine] beeps as new paperwork becomes available to process."))
-			playsound(found_machine,  'sound/machines/twobeep.ogg', 50)
+			playsound(found_machine, 'sound/machines/twobeep.ogg', 50)
 
 /*
- * Randomly generates a processed paperwotk to place in [destination_machine].
+ * Randomly generates a processed paperwork to place in [destination_machine].
  * Spawns an [/obj/item/paper/processed] in [destination_machine]'s contents.
  *
  * return an instance of [/obj/item/paper/processed].
