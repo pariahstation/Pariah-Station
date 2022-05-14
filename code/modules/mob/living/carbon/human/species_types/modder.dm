@@ -67,13 +67,13 @@
 		cat_ears.color = human.hair_color
 		human.update_body()
 
-/datum/species/human/get_species_description()
+/datum/species/human/modder/get_species_description()
 	return "Humans are the dominant species in the known galaxy. \
 		Their kind extend from old Earth to the edges of known space. \
 		Modded humans are humans that have undergone advanced \
 		genemodding for various reasons."
 
-/datum/species/human/get_species_lore()
+/datum/species/human/modder/get_species_lore()
 	return list(
 		"These primate-descended creatures, originating from the mostly harmless Earth, \
 		have long-since outgrown their home and semi-benign designation. \
