@@ -5,7 +5,7 @@
 /obj/item/tank/internals/nitrogen
 	name = "nitrogen tank"
 	desc = "A tank of nitrogen. Designed specifically for Vox"
-	icon_state = "oxygen_fr"
+	icon_state = "nitrogen_big"
 	force = 10
 	distribute_pressure = TANK_DEFAULT_RELEASE_PRESSURE
 
