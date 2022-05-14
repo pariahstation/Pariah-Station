@@ -58,8 +58,7 @@
 		var/mob/living/carbon/human/H = C
 		if(!pref_load) //Hah! They got forcefully purrbation'd. Force default felinid parts on them if they have no mutant parts in those areas!
 			H.dna.features["tail_human"] = "Cat"
-			if(H.dna.features["ears"] != "Cat")
-				H.dna.features["ears"] = "Cat"
+			H.dna.features["ears"] = "Cat"
 		if(H.dna.features["ears"] == "Cat")
 			var/obj/item/organ/ears/cat/ears = new
 			ears.Insert(H, drop_if_replaced = FALSE)
