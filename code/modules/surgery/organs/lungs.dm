@@ -677,3 +677,11 @@
 	safe_oxygen_max = 0.05 //This is toxic to us
 	safe_nitro_min = 16 //We breathe THIS!
 	oxy_damage_type = TOX //And it poisons us
+	oxy_breath_dam_min = 6
+	oxy_breath_dam_max = 20
+
+	cold_level_1_threshold = 0 // Vox should be able to breathe in cold gas without issues?
+	cold_level_2_threshold = 0
+	cold_level_3_threshold = 0
+	status = ORGAN_ROBOTIC
+	organ_flags = ORGAN_SYNTHETIC
