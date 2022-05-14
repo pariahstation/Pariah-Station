@@ -336,6 +336,35 @@
 		var/mob/living/carbon/human/human_owner = ownerlimb.owner
 		return human_owner.hair_color
 
+// Teshari ears
+/obj/item/organ/external/teshari_ears
+	zone = BODY_ZONE_HEAD
+	slot = ORGAN_SLOT_EXTERNAL_TESHARI_EARS
+	layers = EXTERNAL_ADJACENT
+
+	feature_key = "teshari_ears"
+	preference = "teshari_ears"
+
+	dna_block = DNA_TESHARI_EARS_BLOCK
+
+/obj/item/organ/external/teshari_ears/can_draw_on_bodypart(mob/living/carbon/human/human)
+	if(human.head && (human.head.flags_inv & HIDEHAIR) || human.wear_mask && (human.wear_mask.flags_inv & HIDEHAIR))
+		return FALSE
+	return TRUE
+
+/obj/item/organ/external/teshari_ears/get_global_feature_list()
+	return GLOB.teshari_ears_list
+
+/obj/item/organ/external/teshari_ears/get_overlays(list/overlay_list, image_dir, image_layer, physique, image_color)
+	..()
+	if(sprite_datum.icon_state == "none")
+		return
+
+	var/mutable_appearance/inner_ears = mutable_appearance(sprite_datum.icon, "m_teshari_earsinner_[sprite_datum.icon_state]_ADJ", layer = -image_layer)
+	var/mob/living/carbon/human/human_owner = owner
+	inner_ears.color = human_owner.facial_hair_color
+	overlay_list += inner_ears
+
 // Teshari body feathers
 /obj/item/organ/external/teshari_body_feathers
 	name = "Body feathers"

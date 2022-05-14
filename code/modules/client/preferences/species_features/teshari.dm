@@ -40,6 +40,43 @@
 	data[SUPPLEMENTAL_FEATURE_KEY] = "hair_color"
 	return data
 
+/datum/preference/choiced/teshari_ears
+	savefile_key = "teshari_ears"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_FEATURES
+	main_feature_name = "Ears"
+	should_generate_icons = TRUE
+
+/datum/preference/choiced/teshari_ears/init_possible_values()
+	var/list/values = list()
+
+	var/icon/teshari_head = icon('icons/mob/species/teshari/bodyparts.dmi', "teshari_head")
+	var/icon/eyes = icon('icons/mob/species/teshari/eyes.dmi', "eyes")
+	teshari_head.Blend(TESH_BODY_COLOR, ICON_MULTIPLY)
+	eyes.Blend(COLOR_BLACK, ICON_MULTIPLY)
+	teshari_head.Blend(eyes, ICON_OVERLAY)
+
+	for(var/name in GLOB.teshari_ears_list)
+		var/datum/sprite_accessory/ear_type = GLOB.teshari_ears_list[name]
+
+		var/icon/icon_with_ears = icon(teshari_head)
+		if(ear_type.icon_state != "none")
+			var/icon/ears = icon(ear_type.icon, "m_teshari_ears_[ear_type.icon_state]_ADJ")
+			var/icon/inner_ears = icon(ear_type.icon, "m_teshari_earsinner_[ear_type.icon_state]_ADJ")
+			ears.Blend(TESH_BODY_COLOR, ICON_MULTIPLY)
+			ears.Blend(inner_ears, ICON_OVERLAY)
+			icon_with_ears.Blend(ears, ICON_OVERLAY)
+
+		icon_with_ears.Scale(64, 64)
+		icon_with_ears.Crop(17, 58, 17 + 31, 58 - 31)
+
+		values[ear_type.name] = icon_with_ears
+
+	return values
+
+/datum/preference/choiced/teshari_ears/apply_to_human(mob/living/carbon/human/target, value, datum/preferences/preferences)
+	target.dna.features["teshari_ears"] = value
+
 /datum/preference/choiced/teshari_body_feathers
 	savefile_key = "teshari_body_feathers"
 	savefile_identifier = PREFERENCE_CHARACTER

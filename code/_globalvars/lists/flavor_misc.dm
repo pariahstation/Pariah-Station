@@ -43,6 +43,7 @@ GLOBAL_LIST_EMPTY(tails_list_monkey)
 GLOBAL_LIST_EMPTY(pod_hair_list)
 GLOBAL_LIST_EMPTY(headtails_list)
 GLOBAL_LIST_EMPTY(teshari_feathers_list)
+GLOBAL_LIST_EMPTY(teshari_ears_list)
 GLOBAL_LIST_EMPTY(teshari_body_feathers_list)
 GLOBAL_LIST_EMPTY(teshari_tails_list)
 

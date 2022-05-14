@@ -91,6 +91,8 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/headtails, GLOB.headtails_list)
 	if(!GLOB.teshari_feathers_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_feathers, GLOB.teshari_feathers_list)
+	if(!GLOB.teshari_ears_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_ears, GLOB.teshari_ears_list)
 	if(!GLOB.teshari_body_feathers_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/teshari_body_feathers, GLOB.teshari_body_feathers_list)
 	if(!GLOB.teshari_tails_list.len)
@@ -120,6 +122,7 @@
 		"pod_hair" = pick(GLOB.pod_hair_list),
 		"headtails" = (pick(GLOB.headtails_list)),
 		"teshari_feathers" = pick(GLOB.teshari_feathers_list),
+		"teshari_ears" = pick(GLOB.teshari_ears_list),
 		"teshari_body_feathers" = pick(GLOB.teshari_body_feathers_list),
 		"tail_teshari" = pick(GLOB.teshari_tails_list),
 	))

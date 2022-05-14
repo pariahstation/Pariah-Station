@@ -59,6 +59,28 @@
 	name = "Twies"
 	icon_state = "twies"
 
+// Teshari ears
+/datum/sprite_accessory/teshari_ears
+	icon = 'icons/mob/species/teshari/ears.dmi'
+	em_block = TRUE
+	hasinner = TRUE
+
+/datum/sprite_accessory/teshari_ears/none
+	name = "None"
+	icon_state = "none"
+
+/datum/sprite_accessory/teshari_ears/teshari
+	name = "Teshari"
+	icon_state = "teshari"
+
+/datum/sprite_accessory/teshari_ears/high
+	name = "High"
+	icon_state = "high"
+
+/datum/sprite_accessory/teshari_ears/low
+	name = "Low"
+	icon_state = "low"
+
 // Teshari body feathers
 /datum/sprite_accessory/teshari_body_feathers
 	color_src = FACEHAIR
