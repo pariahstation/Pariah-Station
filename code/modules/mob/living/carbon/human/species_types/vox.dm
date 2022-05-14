@@ -44,7 +44,6 @@
 	outfit_important_for_life = /datum/outfit/vox
 	species_language_holder = /datum/language_holder/vox
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
-	digitigrade_customization = DIGITIGRADE_NEVER
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/vox,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/vox,
