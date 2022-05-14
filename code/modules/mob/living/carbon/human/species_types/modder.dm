@@ -62,10 +62,10 @@
 	human.hair_color = "#ffcccc" // pink
 	human.update_hair()
 
-	var/obj/item/organ/ears/cat/cat_ears = human.getorgan(/obj/item/organ/ears/cat)
-	if (cat_ears)
-		cat_ears.color = human.hair_color
-		human.update_body()
+	var/obj/item/organ/ears/cat/cat_ears = new
+	cat_ears.Insert(human, drop_if_replaced = FALSE)
+	cat_ears.color = human.hair_color
+	human.update_body()
 
 /datum/species/human/modder/get_species_description()
 	return "Humans are the dominant species in the known galaxy. \
