@@ -57,9 +57,6 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	icon = 'icons/obj/fax.dmi'
 	base_icon_state = "fax"
 	icon_state = "fax"
-	speech_span = SPAN_ROBOT
-	density = FALSE
-	use_power = IDLE_POWER_USE
 	idle_power_usage = 10
 	active_power_usage = 100
 	req_one_access = list(ACCESS_HEADS, ACCESS_LAWYER)
@@ -96,7 +93,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 /obj/machinery/fax_machine/Destroy()
 	QDEL_NULL(stored_paper)
 	QDEL_NULL(received_paper)
-	QDEL_LIST(received_paperwork)
+	QDEL_LAZYLIST(received_paperwork)
 
 	GLOB.fax_machines -= src
 	return ..()
@@ -135,14 +132,14 @@ GLOBAL_LIST_EMPTY(fax_machines)
 
 	var/emagged = obj_flags & EMAGGED
 	var/list/all_received_paperwork = list()
-	var/iterator = 1
-	for(var/obj/item/paper/processed/paper as anything in received_paperwork)
+	for(var/I in 1 to length(received_paperwork))
+		var/obj/item/paper/processed/paper = received_paperwork[I]
 		var/list/found_paper_data = list()
 		found_paper_data["title"] = paper.name
-		found_paper_data["contents"] = TextPreview(remove_all_tags(paper.info), MAX_DISPLAYED_PAPER_CHARS)
+		found_paper_data["contents"] = text_preview(remove_all_tags(paper.info), MAX_DISPLAYED_PAPER_CHARS)
 		found_paper_data["required_answer"] = paper.required_question
 		found_paper_data["ref"] = REF(paper)
-		found_paper_data["num"] = iterator++
+		found_paper_data["num"] = I
 		all_received_paperwork += list(found_paper_data)
 	if(all_received_paperwork.len)
 		data["received_paperwork"] = all_received_paperwork
@@ -150,14 +147,14 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	if(stored_paper)
 		var/list/stored_paper_data = list()
 		stored_paper_data["title"] = stored_paper.name
-		stored_paper_data["contents"] = TextPreview(remove_all_tags(stored_paper.info), MAX_DISPLAYED_PAPER_CHARS)
+		stored_paper_data["contents"] = test_preview(remove_all_tags(stored_paper.info), MAX_DISPLAYED_PAPER_CHARS)
 		stored_paper_data["ref"] = REF(stored_paper_data)
 		data["stored_paper"] = stored_paper_data
 
 	if(received_paper)
 		var/list/received_paper_data = list()
 		received_paper_data["title"] = received_paper.name
-		received_paper_data["contents"] = TextPreview(remove_all_tags(received_paper.info), MAX_DISPLAYED_PAPER_CHARS)
+		received_paper_data["contents"] = test_preview(remove_all_tags(received_paper.info), MAX_DISPLAYED_PAPER_CHARS)
 		received_paper_data["source"] = received_paper.was_faxed_from
 		received_paper_data["ref"] = REF(received_paper)
 		data["received_paper"] = received_paper_data
@@ -289,13 +286,12 @@ GLOBAL_LIST_EMPTY(fax_machines)
 		else
 			insert_paper(inserted_paper, user)
 			return TRUE
-
-	if(weapon.GetID())
-		if(check_access(weapon.GetID()) && !panel_open)
-			locked = !locked
-			playsound(src, 'sound/machines/terminal_eject.ogg', 30, FALSE)
-			balloon_alert(user, "panel [locked ? "locked" : "unlocked"]")
-			return TRUE
+	var/obj/item/ID = weapon.GetID()
+	if(check_access(ID) && !panel_open)
+		locked = !locked
+		playsound(src, 'sound/machines/terminal_eject.ogg', 30, TRUE)
+		balloon_alert(user, "panel [locked ? "locked" : "unlocked"]")
+		return TRUE
 
 	return ..()
 
@@ -338,12 +334,12 @@ GLOBAL_LIST_EMPTY(fax_machines)
 
 	if(!sending_enabled)
 		balloon_alert_to_viewers("[src] cannot send faxes")
-		playsound(src, 'sound/machines/terminal_error.ogg', 50, FALSE)
+		playsound(src, 'sound/machines/terminal_error.ogg', 50)
 		return FALSE
 
 	if(!stored_paper || !length(stored_paper.info) || !COOLDOWN_FINISHED(src, fax_cooldown))
 		balloon_alert_to_viewers("fax failed to send")
-		playsound(src, 'sound/machines/terminal_error.ogg', 50, FALSE)
+		playsound(src, 'sound/machines/terminal_error.ogg', 50)
 		return FALSE
 
 	var/message = "INCOMING FAX: FROM \[[station_name()]\], AUTHOR \[[user]\]: "
@@ -365,13 +361,12 @@ GLOBAL_LIST_EMPTY(fax_machines)
 				break
 		if(!found_a_machine)
 			balloon_alert_to_viewers("destination not found")
-			playsound(src, 'sound/machines/terminal_error.ogg', 50, FALSE)
+			playsound(src, 'sound/machines/terminal_error.ogg', 50)
 			return FALSE
 
 	to_chat(user, span_notice("Fax sent. Dispensing paper for personal record keeping. Thank you for using the Nanotrasen Approved Faxing Device!"))
 	eject_stored_paper()
-	flick("fax_send", src)
-	playsound(src, 'sound/machines/terminal_processing.ogg', 35, FALSE)
+	playsound(src, 'sound/machines/terminal_processing.ogg', 35)
 	COOLDOWN_START(src, fax_cooldown, FAX_COOLDOWN_TIME)
 	use_power(active_power_usage)
 
@@ -386,12 +381,6 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	var/message = copytext_char(sanitize(fax_contents), 1, MAX_MESSAGE_LEN)
 	deadchat_broadcast(" has sent a fax to: [destination_string], with the message: \"[message]\" at [span_name("[get_area_name(sender, TRUE)]")].", span_name("[sender.real_name]"), sender, message_type = DEADCHAT_ANNOUNCEMENT)
 	to_chat(GLOB.admins, span_adminnotice("<b><font color=[destination_color]>FAX TO [destination_string]: </font>[ADMIN_FULLMONTY(sender)] [ADMIN_FAX_REPLY(src)]:</b> [message]"), confidential = TRUE)
-
-/datum/admins/Topic(href, href_list)
-	. = ..()
-	if(href_list["FaxReply"])
-		var/obj/machinery/fax_machine/source = locate(href_list["FaxReply"]) in GLOB.fax_machines
-		source.admin_create_fax(usr)
 
 /obj/machinery/fax_machine/vv_get_dropdown()
 	. = ..()
@@ -410,7 +399,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 		if(!istype(marked_paper))
 			to_chat(usr, span_warning("You don't have a paper marked."))
 			return
-		if(tgui_alert(usr, "Do you want to send [marked_paper] to [src]?", "Send Fax", list("Yes", "Cancel")) == "Cancel")
+		if(tgui_alert(usr, "Do you want to send '[marked_paper]' to [src]?", "Send Fax", list("Yes", "Cancel")) == "Cancel")
 			return
 		var/source = input(usr, "Who's sending this fax? Leave blank for default name", "Send Fax") as null | text
 		if(receive_paper(marked_paper, source, TRUE))
@@ -495,7 +484,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 		return FALSE
 
 	say("Fax received from [source]!")
-	playsound(src, 'sound/machines/terminal_processing.ogg', 50, FALSE)
+	playsound(src, 'sound/machines/terminal_processing.ogg', 50)
 	addtimer(CALLBACK(src, .proc/alert_received_paper, source), FAX_UNREAD_ALERT_TIME)
 
 /*
@@ -524,7 +513,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 
 	say(message)
 	if(paper_check)
-		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, FALSE)
+		playsound(src, 'sound/machines/buzz-sigh.ogg', 50)
 		. = FALSE
 	else
 		new /obj/item/holochip(drop_location(), rand(15, 25))
@@ -547,6 +536,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 
 	inserted_paper.forceMove(src)
 	LAZYADD(received_paperwork, inserted_paper)
+	flick("fax_send", src)
 	to_chat(user, span_notice("You insert [inserted_paper] into [src], readying it for processing."))
 
 /*
@@ -574,7 +564,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 /obj/machinery/fax_machine/proc/eject_all_paperwork(mob/living/user)
 	for(var/obj/item/paper/processed/paper as anything in received_paperwork)
 		eject_select_paperwork(user, paper)
-	received_paperwork = null
+	LAZYNULL(received_paperwork)
 
 /*
  * Recursively call [proc/eject_select_paperwork] on the first index
@@ -610,7 +600,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	LAZYREMOVE(received_paperwork, paper)
 	if(!silent)
 		flick("fax_receive", src)
-		playsound(src, 'sound/machines/ding.ogg', 50, FALSE)
+		playsound(src, 'sound/machines/ding.ogg', 50)
 		use_power(active_power_usage)
 
 /*
@@ -668,14 +658,10 @@ GLOBAL_LIST_EMPTY(fax_machines)
 		return
 
 	balloon_alert(user, "routing address overridden")
-	playsound(src, 'sound/machines/terminal_alert.ogg', 25, FALSE)
+	playsound(src, 'sound/machines/terminal_alert.ogg', 25)
 	obj_flags |= EMAGGED
 
 // ----- Paper definitions and subtypes for interactions with the fax machine. -----
-/obj/item/paper
-	/// If this paper was sent via fax, where it came from.
-	var/was_faxed_from
-
 /*
  * Make a new instance of [/obj/item/paper] with most of the same vars as [src].
  * Works better / copies more things than the pre-existing [proc/copy] for paper.
@@ -725,7 +711,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	if(!required_question)
 		return
 
-	last_answer = tgui_input_text(user, required_question, "Paperwork")
+	last_answer = tgui_input_text(user, required_question, "Paperwork", last_answer)
 
 /*
  * Generate a random question based on our paper's data.
