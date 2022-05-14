@@ -99,3 +99,29 @@
 
 /datum/species/vox/get_scream_sound(mob/living/carbon/human/vox)
 	return 'sound/voice/vox/shriek1.ogg'
+
+/datum/species/vox/create_pref_unique_perks()
+	var/list/to_add = list()
+
+	to_add += list(
+		list(
+			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+			SPECIES_PERK_ICON = "temperature-low",
+			SPECIES_PERK_NAME = "Cold Resistance",
+			SPECIES_PERK_DESC = "Voxes have their organs heavily modified to resist the coldness of space",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "bolt",
+			SPECIES_PERK_NAME = "EMP Sensitivity",
+			SPECIES_PERK_DESC = "Due to their organs being synthetic, they are susceptible to emps.",
+		),
+		list(
+			SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+			SPECIES_PERK_ICON = "wind",
+			SPECIES_PERK_NAME = "Nitrogen Breathing",
+			SPECIES_PERK_DESC = "Voxes must breathe nitrogen to survive. You receive a tank when you arrive.",
+		),
+	)
+
+	return to_add
