@@ -500,7 +500,7 @@
 
 /obj/item/toy/plush/lizard_plushie
 	name = "lizard plushie"
-	desc = "An adorable stuffed toy that resembles a Unathi."
+	desc = "An adorable stuffed toy that resembles a unathi."
 	icon_state = "map_plushie_lizard"
 	greyscale_config = /datum/greyscale_config/plush_lizard
 	attack_verb_continuous = list("claws", "hisses", "tail slaps")
