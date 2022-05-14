@@ -100,8 +100,8 @@
 /// Can this species use the 'Body size' preference
 #define BODY_RESIZABLE 22
 
-#define MUTCOLORS2			22
-#define MUTCOLORS3			23
+#define MUTCOLORS2			23
+#define MUTCOLORS3			24
 
 //organ slots
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"
