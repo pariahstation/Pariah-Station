@@ -7,21 +7,14 @@
 
 	looc_message(msg)
 
-/mob/proc/get_top_level_mob()
-	if(istype(src.loc,/mob)&&src.loc!=src)
-		var/mob/M=src.loc
-		return M.get_top_level_mob()
-	return src
-
 /proc/get_top_level_mob(mob/S)
-	if(istype(S.loc,/mob)&&S.loc!=S)
-		var/mob/M=S.loc
-		return M.get_top_level_mob()
+	if(ismob(S.loc) && (S.loc != S))
+		return get_top_level_mob(S.loc)
 	return S
 
 /client/proc/looc_message(msg)
 	if(GLOB.say_disabled)
-		to_chat(usr, span_danger("Speech is currently admin-disabled."))
+		to_chat(src, span_danger("Speech is currently admin-disabled."))
 		return
 
 	if(!mob)
@@ -47,20 +40,22 @@
 		if(mob.stat)
 			to_chat(src, span_danger("You cannot use LOOC while unconscious or dead."))
 			return
-		if(istype(mob, /mob/dead))
+		if(isdead(mob))
 			to_chat(src, span_danger("You cannot use LOOC while ghosting."))
 			return
 
 	msg = emoji_parse(msg)
 
-	mob.log_talk(msg,LOG_OOC, tag="LOOC")
+	mob.log_talk(msg, LOG_OOC, tag = "LOOC")
 
-	var/list/heard = get_hearers_in_view(7, get_top_level_mob(src.mob))
+	var/list/heard
 
 	//so the ai can post looc text
-	if(istype(mob,/mob/living/silicon/ai))
+	if(isAI(mob))
 		var/mob/living/silicon/ai/ai = mob
 		heard = get_hearers_in_view(7, ai.eyeobj)
+	else
+		heard = get_hearers_in_view(7, get_top_level_mob(mob))
 
 	//so the ai can see looc text
 	for(var/mob/living/silicon/ai/ai as anything in GLOB.ai_list)
@@ -75,9 +70,6 @@
 		if (hearing_client.holder)
 			admin_seen[hearing_client] = TRUE
 			continue //they are handled after that
-
-		if (isobserver(hearing))
-			continue //Also handled later.
 
 		to_chat(hearing_client, span_looc(span_prefix("LOOC:</span> <EM>[src.mob.name]:</EM> <span class='message'>[msg]")))
 
