@@ -28,7 +28,7 @@
 		if(!GLOB.looc_allowed)
 			to_chat(src, span_danger("LOOC is globally muted."))
 			return
-		if(handle_spam_prevention(msg, MUTE_OOC))
+		if(handle_spam_prevention(msg, MUTE_LOOC))
 			return
 		if(findtext(msg, "byond://"))
 			to_chat(src, span_boldannounce("<B>Advertising other servers is not allowed.</B>"))
