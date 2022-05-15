@@ -132,5 +132,5 @@
 	return to_add
 
 /datum/species/moth/prepare_human_for_preview(mob/living/carbon/human/human)
-    human.dna.features["mcolor"] = "#f4d697"
-    human.update_body(TRUE)
+	human.dna.features["mcolor"] = "#f4d697"
+	human.update_body(TRUE)
