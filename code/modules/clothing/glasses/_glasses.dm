@@ -153,6 +153,7 @@
 	resistance_flags = ACID_PROOF
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 80, ACID = 100)
 	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_RESEARCH_SCANNER)
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/science/item_action_slot_check(slot)
 	if(slot == ITEM_SLOT_EYES)
@@ -170,6 +171,7 @@
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	glass_colour_type = /datum/client_colour/glass_colour/green
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/night
 	name = "night vision goggles"
@@ -194,6 +196,7 @@
 	desc = "Such a dapper eyepiece!"
 	icon_state = "monocle"
 	inhand_icon_state = "headset" // lol
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/material
 	name = "optical material scanner"
@@ -202,6 +205,7 @@
 	inhand_icon_state = "glasses"
 	vision_flags = SEE_OBJS
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/material/mining
 	name = "optical material scanner"
@@ -224,6 +228,7 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 	glass_colour_type = /datum/client_colour/glass_colour/lightgreen
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/regular
 	name = "prescription glasses"
@@ -231,6 +236,7 @@
 	icon_state = "glasses"
 	inhand_icon_state = "glasses"
 	vision_correction = TRUE //corrects nearsightedness
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/regular/Initialize(mapload)
 	. = ..()
@@ -284,6 +290,7 @@
 	desc = "Also known as Virginity Protectors."
 	icon_state = "jamjar_glasses"
 	inhand_icon_state = "jamjar_glasses"
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/regular/hipster
 	name = "prescription glasses"
@@ -296,6 +303,7 @@
 	desc = "Why would you wear something so controversial yet so brave?"
 	icon_state = "circle_glasses"
 	inhand_icon_state = "circle_glasses"
+	supports_variations_flags = NONE
 
 //Here lies green glasses, so ugly they died. RIP
 
@@ -413,7 +421,6 @@
 	icon_state = "blindfoldwhite"
 	inhand_icon_state = "blindfoldwhite"
 	var/colored_before = FALSE
-	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/blindfold/white/visual_equipped(mob/living/carbon/human/user, slot)
 	if(ishuman(user) && slot == ITEM_SLOT_EYES)
@@ -442,7 +449,6 @@
 	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks flashes."
 	icon_state = "bigsunglasses"
 	inhand_icon_state = "bigsunglasses"
-	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/thermal
 	name = "optical thermal scanner"
@@ -453,6 +459,7 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	glass_colour_type = /datum/client_colour/glass_colour/red
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/glasses/thermal/emp_act(severity)
 	. = ..()
@@ -607,6 +614,7 @@
 	desc = "Shows you know how to sew a lapel and center a back vent."
 	icon_state = "binoclard_lenses"
 	inhand_icon_state = "binoclard_lenses"
+	supports_variations_flags = NONE
 
 /obj/item/clothing/glasses/salesman
 	name = "colored glasses"

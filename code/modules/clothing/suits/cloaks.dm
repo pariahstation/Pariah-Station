@@ -20,10 +20,12 @@
 	name = "head of security's cloak"
 	desc = "Worn by Securistan, ruling the station with an iron fist."
 	icon_state = "hoscloak"
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/cloak/qm
 	name = "quartermaster's cloak"
 	desc = "Worn by Cargonia, supplying the station with the necessary tools for survival."
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/cloak/cmo
 	name = "chief medical officer's cloak"
@@ -36,6 +38,7 @@
 	desc = "Worn by Engitopia, wielders of an unlimited power."
 	icon_state = "cecloak"
 	resistance_flags = FIRE_PROOF
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 /obj/item/clothing/neck/cloak/rd
 	name = "research director's cloak"

@@ -253,6 +253,7 @@
 	flash_protect = FLASH_PROTECTION_FLASH
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/gray
+	supports_variations_flags = CLOTHING_TESHARI_VARIATION
 
 
 /obj/item/clothing/glasses/hud/spacecop/hidden // for the undercover cop

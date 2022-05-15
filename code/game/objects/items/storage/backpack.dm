@@ -144,7 +144,6 @@
 	desc = "It's a backpack especially designed for use in a sterile environment."
 	icon_state = "medicalpack"
 	inhand_icon_state = "medicalpack"
-	supports_variations_flags = NONE
 
 /obj/item/storage/backpack/security
 	name = "security backpack"
@@ -177,7 +176,6 @@
 	desc = "A backpack specially designed to repel stains and hazardous liquids."
 	icon_state = "chempack"
 	inhand_icon_state = "chempack"
-	supports_variations_flags = NONE
 
 /obj/item/storage/backpack/genetics
 	name = "genetics backpack"
