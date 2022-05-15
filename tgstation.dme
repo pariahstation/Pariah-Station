@@ -304,7 +304,6 @@
 #include "code\__HELPERS\files.dm"
 #include "code\__HELPERS\filters.dm"
 #include "code\__HELPERS\game.dm"
-#include "code\__HELPERS\get_hearers_in_range.dm"
 #include "code\__HELPERS\global_lists.dm"
 #include "code\__HELPERS\guid.dm"
 #include "code\__HELPERS\heap.dm"
