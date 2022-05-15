@@ -238,5 +238,5 @@ Lizard subspecies: SILVER SCALED
 	..()
 
 /datum/species/lizard/prepare_human_for_preview(mob/living/carbon/human/human)
-	human.dna.features["mcolor"] = "#6A4521"
+	human.dna.features["mcolor"] = "#f8f2a4"
 	human.update_body(TRUE)
