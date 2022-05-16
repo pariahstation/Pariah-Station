@@ -3679,9 +3679,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/obj/machinery/door/airlock/security{
-	name = "Prison Shuttle"
-	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/iron,
 /area/security/prison)
 "amm" = (
@@ -15609,16 +15607,7 @@
 /area/maintenance/department/cargo)
 "bcN" = (
 /obj/structure/table,
-/obj/item/cartridge/quartermaster{
-	pixel_x = -4;
-	pixel_y = 7
-	},
 /obj/item/clipboard,
-/obj/item/cartridge/quartermaster{
-	pixel_x = 6;
-	pixel_y = 5
-	},
-/obj/item/cartridge/quartermaster,
 /obj/item/coin/silver,
 /obj/item/stamp/qm,
 /obj/machinery/requests_console/directional/west{
@@ -18467,12 +18456,6 @@
 	name = "Holodeck Projector Floor"
 	},
 /area/science/explab)
-"boh" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/science/explab)
 "bol" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2{
@@ -18980,9 +18963,6 @@
 /turf/open/floor/iron/dark,
 /area/science/robotics)
 "bql" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on{
-	dir = 1
-	},
 /obj/machinery/power/apc/auto_name/directional/west{
 	dir = 1
 	},
@@ -23029,18 +23009,6 @@
 /turf/open/floor/iron/white,
 /area/command/heads_quarters/cmo)
 "bEF" = (
-/obj/item/cartridge/medical{
-	pixel_x = -2;
-	pixel_y = 6
-	},
-/obj/item/cartridge/medical{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/item/cartridge/medical,
-/obj/item/cartridge/chemistry{
-	pixel_y = 2
-	},
 /obj/structure/table,
 /obj/machinery/light,
 /obj/item/wrench/medical,
@@ -23132,9 +23100,6 @@
 	pixel_x = -8;
 	pixel_y = 14
 	},
-/obj/item/cartridge/signal/ordnance,
-/obj/item/cartridge/signal/ordnance,
-/obj/item/cartridge/signal/ordnance,
 /obj/item/paper_bin{
 	pixel_x = 7;
 	pixel_y = 3
@@ -26937,12 +26902,6 @@
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/iron,
 /area/engineering/atmos)
-"bTT" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/heater{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "bTV" = (
 /obj/machinery/air_sensor/plasma_tank,
 /turf/open/floor/engine/plasma,
@@ -27107,12 +27066,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/engineering/atmos)
-"bUv" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "bUx" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -27155,19 +27108,7 @@
 /turf/closed/wall/r_wall,
 /area/command/heads_quarters/ce)
 "bUI" = (
-/obj/item/cartridge/engineering{
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/obj/item/cartridge/engineering{
-	pixel_x = -3;
-	pixel_y = 2
-	},
-/obj/item/cartridge/engineering{
-	pixel_x = 3
-	},
 /obj/structure/table/reinforced,
-/obj/item/cartridge/atmos,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
@@ -34448,12 +34389,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/service/chapel/dock)
-"dPr" = (
-/obj/docking_port/stationary/prison{
-	dir = 1
-	},
-/turf/open/space/basic,
-/area/space)
 "dPO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -34963,10 +34898,6 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red,
-/obj/item/holosign_creator/robot_seat/restaurant/prison{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/item/reagent_containers/glass/beaker/cryoxadone{
 	pixel_x = 6;
 	pixel_y = 10
@@ -37530,19 +37461,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/science/xenobiology)
-"gzf" = (
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 4
-	},
-/obj/machinery/door/airlock/security{
-	name = "Prison Shuttle"
-	},
-/obj/machinery/prisongate/permabrig,
-/turf/open/floor/iron,
-/area/security/prison)
 "gzy" = (
 /obj/structure/sign/poster/official/random{
 	pixel_y = -32
@@ -37698,7 +37616,6 @@
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
 "gEZ" = (
-/obj/machinery/computer/cargo/request/prison,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
 	},
@@ -38019,18 +37936,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
-"gUA" = (
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/red/filled/corner{
-	dir = 1
-	},
-/obj/effect/turf_decal/trimline/red/filled/corner{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/security/prison)
 "gUJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -42607,10 +42512,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
 /turf/open/floor/iron,
 /area/security)
-"lyB" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/heater,
-/turf/open/floor/iron,
-/area/engineering/atmos)
 "lzJ" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/carpet,
@@ -44101,7 +44002,6 @@
 /area/cargo/storage)
 "mXq" = (
 /obj/item/taperecorder,
-/obj/item/cartridge/lawyer,
 /obj/structure/table/wood,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/wood,
@@ -45546,14 +45446,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/tcommsat/computer)
-"opQ" = (
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 1
-	},
-/obj/effect/turf_decal/trimline/red/filled/line,
-/obj/item/radio/intercom/prison/directional/north,
-/turf/open/floor/iron,
-/area/security/prison)
 "oqh" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel"
@@ -46163,12 +46055,6 @@
 	dir = 1
 	},
 /area/hallway/secondary/entry)
-"oPr" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/heater{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/science/explab)
 "oPy" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
@@ -46650,16 +46536,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/psychology)
-"pje" = (
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 8
-	},
-/obj/effect/turf_decal/trimline/red/filled/corner{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/red/filled/corner,
-/turf/open/floor/iron,
-/area/security/prison)
 "pjX" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -51167,10 +51043,6 @@
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
 "taT" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on{
-	dir = 4;
-	name = "euthanization chamber freezer"
-	},
 /turf/open/floor/iron,
 /area/science/xenobiology)
 "tbC" = (
@@ -51530,9 +51402,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/machinery/door/airlock/security{
-	name = "Prison Shuttle"
-	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/iron,
 /area/security/prison)
 "tnY" = (
@@ -52306,7 +52176,6 @@
 /obj/structure/table,
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/light/no_nightlight/directional/north,
-/obj/item/card/id/advanced/prisoner/chef,
 /turf/open/floor/iron/white,
 /area/security/prison)
 "tVb" = (
@@ -53245,13 +53114,6 @@
 /obj/item/clothing/glasses/sunglasses,
 /turf/open/floor/carpet,
 /area/service/lawoffice)
-"uBs" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/engine,
-/area/engineering/supermatter/room)
 "uCe" = (
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/iron/white,
@@ -54269,12 +54131,6 @@
 "vtT" = (
 /turf/open/floor/plating,
 /area/maintenance/solars/port)
-"vtX" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/medical/cryo)
 "vuq" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -54672,19 +54528,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/service/library)
-"vNY" = (
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 4
-	},
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 8
-	},
-/obj/machinery/door/airlock/security{
-	name = "Prison Shuttle"
-	},
-/obj/machinery/prisongate/permabrig,
-/turf/open/floor/iron,
-/area/security/prison)
 "vOB" = (
 /obj/effect/landmark/start/paramedic,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -78049,7 +77892,7 @@ aaa
 aaa
 aaa
 aaa
-aht
+aaa
 aht
 aht
 adE
@@ -78306,8 +78149,8 @@ aaa
 aaa
 aaa
 aaa
-acM
-acM
+aaa
+aht
 acM
 adE
 adE
@@ -78562,9 +78405,9 @@ aaa
 aaa
 aaa
 aaa
-dPr
-gzf
-pje
+aaa
+aaa
+aht
 tmh
 mKH
 clK
@@ -78820,8 +78663,8 @@ aaa
 aaa
 aaa
 aaa
-agy
-opQ
+aaa
+aht
 acM
 gEZ
 dGV
@@ -79077,8 +78920,8 @@ aaa
 aaa
 aaa
 aaa
-vNY
-gUA
+aaa
+aht
 aml
 dWZ
 thy
@@ -79334,8 +79177,8 @@ aaa
 aaa
 aaa
 aaa
-acM
-acM
+aaa
+aht
 acM
 aem
 ahC
@@ -83276,7 +83119,7 @@ nmF
 bjL
 blb
 bml
-vtX
+bmi
 bjL
 ryC
 bqX
@@ -87433,8 +87276,8 @@ xSs
 rYY
 eHY
 mUJ
-uBs
-uBs
+mUJ
+mUJ
 wza
 ezm
 nZX
@@ -94091,7 +93934,7 @@ bJK
 fBp
 bMa
 wSR
-lyB
+bWO
 bOV
 bWO
 bNk
@@ -95897,8 +95740,8 @@ bWO
 bQM
 bQM
 bQM
-bTT
-bUv
+bWO
+bWO
 iBq
 vtD
 bWO
@@ -100752,8 +100595,8 @@ lru
 aEj
 iSi
 bky
-boh
-oPr
+bky
+bky
 bqx
 bqs
 vfp
