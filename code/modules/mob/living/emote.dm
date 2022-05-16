@@ -588,7 +588,7 @@
 	message = "chirps!"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/voice/birds/chirp.ogg'
+	sound = 'sound/voice/bird/chirp.ogg'
 
 /datum/emote/living/chirp2
 	key = "chirp2"
@@ -596,4 +596,4 @@
 	message = "chirps!"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/voice/birds/chirp2.ogg'
+	sound = 'sound/voice/bird/chirp2.ogg'
