@@ -292,7 +292,7 @@
 	if(islizard(M))
 		quality = RACE_DRINK
 	else
-		M.adjust_disgust(25)
+		quality = DRINK_GOOD
 	return ..()
 
 /datum/reagent/consumable/ethanol/oil_drum
@@ -310,7 +310,43 @@
 	if(MOB_ROBOTIC)
 		quality = RACE_DRINK
 	else
-		M.adjust_disgust(25)
+		quality = DRINK_GOOD
+	return ..()
+
+/datum/reagent/consumable/ethanol/nord_king
+	name = "Nord King"
+	color = "#EB1010" //(235, 16, 16)
+	description = "Strong mead mixed with more honey and ethanol. Beloved by its human patrons."
+	boozepwr = 50 //strong!
+	taste_description = "honey and red wine"
+	glass_icon = 'modular_pariah/master_files/icons/obj/drinks.dmi'
+	glass_icon_state = "nord_king"
+	glass_name = "keg of nord king"
+	glass_desc = "A dripping keg of red mead."
+
+/datum/reagent/consumable/ethanol/nord_king/on_mob_life(mob/living/carbon/M)
+	if(ishumanbasic(M))
+		quality = RACE_DRINK
+	else
+		quality = DRINK_GOOD
+	return ..()
+
+/datum/reagent/consumable/ethanol/velvet_kiss
+	name = "Velvet Kiss"
+	color = "#EB1010" //(235, 16, 16)
+	description = "A bloody drink mixed with wine."
+	boozepwr = 10 //weak
+	taste_description = "iron with grapejuice"
+	glass_icon = 'modular_pariah/master_files/icons/obj/drinks.dmi'
+	glass_icon_state = "velvet_kiss"
+	glass_name = "glass of velvet kiss"
+	glass_desc = "Red and white drink for the upper classes or undead."
+
+/datum/reagent/consumable/ethanol/velvet_kiss/on_mob_life(mob/living/carbon/M)
+	if(iszombie(M) || isvampire(M) || isdullahan(M)) //Rare races!
+		quality = RACE_DRINK
+	else
+		quality = DRINK_GOOD
 	return ..()
 
 /datum/reagent/consumable/ethanol/abduction_fruit
@@ -325,10 +361,28 @@
 	glass_desc = "Mixed fruits that were never meant to be mixed..."
 
 /datum/reagent/consumable/ethanol/abduction_fruit/on_mob_life(mob/living/carbon/M)
-	if(isabductor(M)) //add xenohyrids to this at some point
+	if(isabductor(M))
 		quality = RACE_DRINK
 	else
-		M.adjust_disgust(25)
+		quality = DRINK_GOOD
+	return ..()
+
+/datum/reagent/consumable/ethanol/bug_zapper
+	name = "Bug Zapper"
+	color = "#F5882A" //(222, 250, 205)
+	description = "Copper and lemon juice. Hardly even a drink."
+	boozepwr = 5 //No booze really
+	taste_description = "copper and AC power"
+	glass_icon = 'modular_pariah/master_files/icons/obj/drinks.dmi'
+	glass_icon_state = "bug_zapper"
+	glass_name = "glass of bug zapper"
+	glass_desc = "An odd mix of copper, lemon juice and power meant for non-human consumption."
+
+/datum/reagent/consumable/ethanol/bug_zapper/on_mob_life(mob/living/carbon/M)
+	if(isflyperson(M) || ismoth(M))
+		quality = RACE_DRINK
+	else
+		quality = DRINK_GOOD
 	return ..()
 
 /datum/reagent/consumable/ethanol/mush_crush
@@ -346,7 +400,7 @@
 	if(ispodperson(M))
 		quality = RACE_DRINK
 	else
-		M.adjust_disgust(25)
+		quality = DRINK_GOOD
 	return ..()
 
 /datum/reagent/consumable/ethanol/hollow_bone
@@ -364,7 +418,7 @@
 	if(isplasmaman(M) || isskeleton(M))
 		quality = RACE_DRINK
 	else
-		M.adjust_disgust(25)
+		quality = DRINK_GOOD
 	return ..()
 
 /datum/reagent/consumable/ethanol/jell_wyrm
@@ -381,9 +435,12 @@
 /datum/reagent/consumable/ethanol/jell_wyrm/on_mob_life(mob/living/carbon/M)
 	if(isjellyperson(M) || isslimeperson(M) || isluminescent(M))
 		quality = RACE_DRINK
+		if(prob(20))
+			M.adjustToxLoss(-1, 0)
 	else
-		M.adjust_disgust(25)
-		M.adjustToxLoss(1, 0) //Low tox due to being carp + jell toxins.
+		quality = DRINK_GOOD
+		if(prob(20))
+			M.adjustToxLoss(1, 0)
 	return ..()
 
 /datum/reagent/consumable/ethanol/laval_spit //Yes Laval
@@ -401,7 +458,25 @@
 	if(isgolem(M))
 		quality = RACE_DRINK
 	else
-		M.adjust_disgust(25)
+		quality = DRINK_GOOD
+	return ..()
+
+/datum/reagent/consumable/ethanol/frisky_kitty
+	name = "Frisky Kitty"
+	color = "#FCF7D4" //(252, 247, 212)
+	description = "Warm milk mixed with catnip."
+	boozepwr = 0
+	taste_description = "Warm milk and catnip"
+	glass_icon = 'modular_pariah/master_files/icons/obj/drinks.dmi'
+	glass_icon_state = "frisky_kitty"
+	glass_name = "cup of frisky kitty"
+	glass_desc = "Warm milk and some catnip."
+
+/datum/reagent/consumable/ethanol/frisky_kitty/on_mob_life(mob/living/carbon/M)
+	if(isfelinid(M))
+		quality = RACE_DRINK
+	else
+		quality = DRINK_GOOD
 	return ..()
 
 /datum/reagent/consumable/ethanol/appletini
@@ -414,6 +489,7 @@
 	glass_icon_state = "appletini"
 	glass_name = "glass of appletini"
 	glass_desc = "An appley beverage in a martini glass"
+	quality = DRINK_GOOD
 
 /datum/reagent/consumable/ethanol/quadruple_sec/cityofsin //making this a subtype was some REAL JANK, but it saves me a headache, and it looks good!
 	name = "City of Sin"
@@ -425,4 +501,5 @@
 	glass_icon_state = "cityofsin"
 	glass_name = "glass of city of sin"
 	glass_desc = "Looking at it makes you recall every mistake you’ve made."
+	quality = DRINK_VERYGOOD //takes extra effort
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED

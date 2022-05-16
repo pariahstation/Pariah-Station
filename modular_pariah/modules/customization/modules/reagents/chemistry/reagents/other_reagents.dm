@@ -6,8 +6,11 @@
 	metabolization_rate = 1.75 * REAGENTS_METABOLISM
 
 /datum/reagent/pax/catnip/on_mob_life(mob/living/carbon/M)
-	if(prob(20))
-		M.emote("nya")
-	if(prob(20))
-		to_chat(M, span_notice("[pick("Headpats feel nice.", "The feeling of a hairball...", "Backrubs would be nice.", "Mew")]"))
+	if(isfelinid(M))
+		if(prob(20))
+			M.emote("nya")
+		if(prob(20))
+			to_chat(M, span_notice("[pick("Headpats feel nice.", "Backrubs would be nice.", "Mew")]"))
+	else
+		to_chat(M, span_notice("[pick("I feel oddly calm.", "I feel relaxed.", "Mew?")]"))
 	..()

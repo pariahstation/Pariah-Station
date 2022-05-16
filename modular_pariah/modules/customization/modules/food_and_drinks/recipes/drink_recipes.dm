@@ -119,9 +119,21 @@
 	results = list(/datum/reagent/consumable/ethanol/oil_drum = 3)
 	required_reagents = list(/datum/reagent/consumable/ethanol = 1,  /datum/reagent/fuel/oil = 1, /datum/reagent/consumable/ethanol/champagne = 12)
 
+/datum/chemical_reaction/drink/nord_king
+	results = list(/datum/reagent/consumable/ethanol/nord_king = 10)
+	required_reagents = list(/datum/reagent/consumable/ethanol = 5,  /datum/reagent/consumable/honey = 1, /datum/reagent/consumable/ethanol/red_mead = 10)
+
+/datum/chemical_reaction/drink/velvet_kiss
+	results = list(/datum/reagent/consumable/ethanol/velvet_kiss = 15) //Limited races use this
+	required_reagents = list(/datum/reagent/blood = 5,  /datum/reagent/consumable/tea = 1, /datum/reagent/consumable/ethanol/wine = 10)
+
 /datum/chemical_reaction/drink/abduction_fruit
 	results = list(/datum/reagent/consumable/ethanol/abduction_fruit = 3)
 	required_reagents = list(/datum/reagent/consumable/limejuice = 10,  /datum/reagent/consumable/berryjuice = 5, /datum/reagent/consumable/watermelonjuice = 10)
+
+/datum/chemical_reaction/drink/bug_zapper
+	results = list(/datum/reagent/consumable/ethanol/bug_zapper = 20) //Harder to make
+	required_reagents = list(/datum/reagent/consumable/lemonjuice = 10,  /datum/reagent/teslium = 1, /datum/reagent/copper = 10)
 
 /datum/chemical_reaction/drink/mush_crush
 	results = list(/datum/reagent/consumable/ethanol/mush_crush = 10)
@@ -141,6 +153,11 @@
 	required_reagents = list(/datum/reagent/iron = 5,  /datum/reagent/consumable/ethanol/mauna_loa = 10, /datum/reagent/sulfur = 5)
 	required_temp = 900 // (626.85'C)
 
+/datum/chemical_reaction/drink/frisky_kitty
+	results = list(/datum/reagent/consumable/ethanol/frisky_kitty = 2)
+	required_reagents = list(/datum/reagent/consumable/catnip_tea = 1,  /datum/reagent/consumable/milk = 1)
+	required_temp = 296 //Just above room temp (22.85'C)
+
 // Non-Booze, see modular_skyrat\modules\customization\modules\reagents\chemistry\reagents\drink_reagents.dm
 
 /datum/chemical_reaction/drink/pinkmilk
@@ -154,18 +171,6 @@
 /datum/chemical_reaction/drink/catnip_tea
 	results = list(/datum/reagent/consumable/catnip_tea = 10)
 	required_reagents = list(/datum/reagent/consumable/tea = 5, /datum/reagent/pax/catnip = 2)
-
-/datum/chemical_reaction/drink/milkshake
-	results = list(/datum.reagent/consumable/milkshake = 5)
-	required_reagents = list(/datum/reagent/consumable/milk = 1, /datum/reagent/consumable/ice = 2, /datum/reagent/consumable/cream = 2)
-
-/datum/chemical_reaction/drink/milkshake_chocolate
-	results = list(/datum.reagent/consumable/milkshake_chocolate = 5)
-	required_reagents = list(/datum/reagent/consumable/coco = 1, /datum.reagent/consumable/milkshake = 2, /datum/reagent/consumable/cream = 2)
-
-/datum/chemical_reaction/drink/milkshake_strawberry
-	results = list(/datum.reagent/consumable/milkshake_strawberry = 5)
-	required_reagents = list(/datum/reagent/consumable/berryjuice = 1, /datum/reagent/consumable/ice = 2, /datum/reagent/consumable/cream = 2)
 
 /datum/chemical_reaction/drink/beerbatter
 	results = list(/datum/reagent/consumable/beerbatter = 4)
