@@ -43487,6 +43487,10 @@
 /obj/item/gun/ballistic/shotgun/toy,
 /turf/open/floor/plating,
 /area/maintenance/department/security/brig)
+"mwL" = (
+/obj/machinery/cryopod,
+/turf/open/floor/iron,
+/area/commons/fitness/recreation)
 "mxg" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4{
 	dir = 4
@@ -52253,6 +52257,9 @@
 /obj/item/training_toolbox,
 /obj/item/training_toolbox{
 	pixel_y = 5
+	},
+/obj/machinery/computer/cryopod{
+	pixel_y = 26
 	},
 /turf/open/floor/iron,
 /area/commons/fitness/recreation)
@@ -98492,7 +98499,7 @@ aiT
 aiS
 aiS
 aiS
-ayu
+mwL
 icK
 pfF
 emV
@@ -98749,7 +98756,7 @@ sFK
 sFK
 sFK
 aiS
-ayu
+mwL
 fVJ
 lFK
 lJM
@@ -99006,7 +99013,7 @@ aiT
 aiS
 sFK
 aiS
-ayu
+mwL
 eHq
 wKP
 wRG
