@@ -24,6 +24,7 @@
 		JOB_CHIEF_MEDICAL_OFFICER = /area/command/heads_quarters/cmo,
 		JOB_CHIEF_ENGINEER = /area/command/heads_quarters/ce,
 		JOB_HEAD_OF_PERSONNEL = /area/command/heads_quarters/hop,
+		JOB_QUARTERMASTER = /area/cargo/qm,
 		JOB_CAPTAIN = /area/command/heads_quarters/captain, // For head roles so that they can still get this objective.
 	)
 	var/datum/job/target_office

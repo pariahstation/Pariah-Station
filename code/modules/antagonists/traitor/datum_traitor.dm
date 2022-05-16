@@ -157,8 +157,7 @@
 	employer = pick(possible_employers)
 	traitor_flavor = strings(TRAITOR_FLAVOR_FILE, employer)
 
-//PARIAH EDIT REMOVAL
-/*
+
 /datum/objective/traitor_progression
 	name = "traitor progression"
 	explanation_text = "Become a living legend by getting a total of %REPUTATION% reputation points"
@@ -213,7 +212,7 @@
 	return TRUE
 
 /// Generates a complete set of traitor objectives up to the traitor objective limit, including non-generic objectives such as martyr and hijack.
-/datum/antagonist/traitor/proc/forge_traitor_objectives()
+/datum/antagonist/traitor/proc/forge_progression_objectives()
 	objectives.Cut()
 
 	var/datum/objective/traitor_progression/final_objective = new /datum/objective/traitor_progression()
@@ -223,9 +222,6 @@
 	var/datum/objective/traitor_objectives/objective_completion = new /datum/objective/traitor_objectives()
 	objective_completion.owner = owner
 	objectives += objective_completion
-
-	*/
-	//PARIAH EDIT END
 
 /datum/antagonist/traitor/apply_innate_effects(mob/living/mob_override)
 	. = ..()
@@ -305,16 +301,12 @@
 
 	result += objectives_text
 
-	//PARIAH EDIT REMOVAL
-	/*
-	if(uplink_handler)
+	if(uplink_handler && uplink_handler.has_progression)
 		var/completed_objectives_text = "Completed Uplink Objectives: "
 		for(var/datum/traitor_objective/objective as anything in uplink_handler.completed_objectives)
 			if(objective.objective_state == OBJECTIVE_STATE_COMPLETED)
 				completed_objectives_text += "<br><B>[objective.name]</B> - ([objective.telecrystal_reward] TC, [round(objective.progression_reward/600, 0.1)] Reputation)"
 		result += completed_objectives_text
-	*/
-	//PARIAH EDIT REMOVAL
 
 	var/special_role_text = lowertext(name)
 

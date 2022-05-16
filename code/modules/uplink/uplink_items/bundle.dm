@@ -52,8 +52,37 @@
 	item = /obj/item/stack/telecrystal/twenty
 	cost = 20
 
-/datum/uplink_item/bundles_tc
+/datum/uplink_item/bundles_tc/contractor
 	name = "Contractor Bundle"
 	desc = "A box containing everything you need to take contracts from the Syndicate. Kidnap people and drop them off at specified locations for rewards in the form of Telecrystals (Usable in the provided uplink) and Contractor Points."
 	item = /obj/item/storage/box/syndicate/contract_kit
+	progression_minimum = 90 MINUTES
 	cost = 20
+	
+/datum/uplink_item/bundles_tc/progression
+	name = "Challenge Mode"
+	desc = "An alternative challenge for traitors who are interested in serving their employers. When purchased, \
+	        your uplink will gain access to a large variety of objectives that reward telecrystals on completion, \
+			and become more difficult to complete as the shift progreses. However, your telecrystals will be reset \
+			to zero and several uplink items will be locked behind their reputation level. Your current objectives will also be replaced."
+	item = /obj/effect/gibspawner/generic
+	limited_stock = 1
+	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	surplus = 0
+	restricted = TRUE
+	cost = 20
+	
+/datum/uplink_item/bundles_tc/progression/purchase(mob/user, datum/uplink_handler/handler, atom/movable/source)
+	var/datum/antagonist/traitor/traitor = user.mind.has_antag_datum(/datum/antagonist/traitor)
+	var/datum/component/uplink/hidden_uplink = user.mind.find_syndicate_uplink()
+	if(!hidden_uplink)
+		return FALSE
+	handler.has_progression = TRUE
+	handler.can_take_objectives = TRUE
+	handler.has_objectives = TRUE
+	handler.generate_objectives()
+	SStgui.close_uis(hidden_uplink)
+	if(traitor)
+		traitor.forge_progression_objectives()
+		traitor.owner.announce_objectives()
+	return TRUE
