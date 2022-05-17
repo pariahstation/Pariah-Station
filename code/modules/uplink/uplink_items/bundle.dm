@@ -1,3 +1,5 @@
+#define CHALLENGE_MODE_TC 5
+
 //All bundles and telecrystals
 /datum/uplink_category/bundle
 	name = "Bundles"
@@ -58,19 +60,20 @@
 	item = /obj/item/storage/box/syndicate/contract_kit
 	progression_minimum = 90 MINUTES
 	cost = 20
-	
+
 /datum/uplink_item/bundles_tc/progression
 	name = "Challenge Mode"
 	desc = "An alternative challenge for traitors who are interested in serving their employers. When purchased, \
 	        your uplink will gain access to a large variety of objectives that reward telecrystals on completion, \
-			and become more difficult to complete as the shift progreses. However, your telecrystals will be reset \
-			to zero and several uplink items will be locked behind their reputation level. Your current objectives will also be replaced."
+			and become more difficult to complete as the shift progreses. However, your telecrystals will be reduced \
+			to 5 and several uplink items will be locked behind their reputation level. \
+			Your current objectives will also be replaced."
 	item = /obj/effect/gibspawner/generic
 	limited_stock = 1
 	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 	surplus = 0
 	restricted = TRUE
-	cost = 20
+	cost = 20 //Cost 20 to prevent traitors from purchasing reputation locked items before they start the challenge
 	
 /datum/uplink_item/bundles_tc/progression/purchase(mob/user, datum/uplink_handler/handler, atom/movable/source)
 	var/datum/antagonist/traitor/traitor = user.mind.has_antag_datum(/datum/antagonist/traitor)
@@ -81,8 +84,11 @@
 	handler.can_take_objectives = TRUE
 	handler.has_objectives = TRUE
 	handler.generate_objectives()
+	hidden_uplink.set_telecrystals(CHALLENGE_MODE_TC)
 	SStgui.close_uis(hidden_uplink)
 	if(traitor)
 		traitor.forge_progression_objectives()
 		traitor.owner.announce_objectives()
 	return TRUE
+
+#undef CHALLENGE_MODE_TC
