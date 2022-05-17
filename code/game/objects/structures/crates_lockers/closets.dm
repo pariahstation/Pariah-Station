@@ -721,12 +721,3 @@
 	return COMSIG_CARBON_SHOVE_HANDLED
 
 #undef LOCKER_FULL
-
-/obj/structure/closet/failure // :(
-	storage_capacity = 2
-
-/obj/structure/closet/failure/PopulateContents()
-	new /obj/item/food/cookie(src)
-	new /obj/item/food/cookie(src)
-	new /obj/item/food/cookie(src)
-	new /obj/item/food/cookie(src)
