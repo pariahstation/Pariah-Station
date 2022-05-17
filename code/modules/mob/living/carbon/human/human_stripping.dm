@@ -24,7 +24,14 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 )))
 
 /mob/living/carbon/human/proc/should_strip(mob/user)
-	if (user.pulling != src || user.grab_state != GRAB_AGGRESSIVE)
+	if (user.pulling != src)
+		return TRUE
+
+	// If src can be picked up and the user can't (prevents recursion)
+	if (HAS_TRAIT(src, TRAIT_HOLDABLE) && !HAS_TRAIT(user, TRAIT_HOLDABLE))
+		return !mob_pickup_checks(user, FALSE)
+
+	if (user.grab_state != GRAB_AGGRESSIVE)
 		return TRUE
 
 	if (ishuman(user))

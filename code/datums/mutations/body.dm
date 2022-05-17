@@ -96,6 +96,7 @@
 	if(..())
 		return
 	ADD_TRAIT(owner, TRAIT_DWARF, GENETIC_MUTATION)
+	ADD_TRAIT(owner, TRAIT_HOLDABLE, GENETIC_MUTATION)
 	var/matrix/new_transform = matrix()
 	new_transform.Scale(1, 0.8)
 	owner.transform = new_transform.Multiply(owner.transform)
@@ -106,6 +107,7 @@
 	if(..())
 		return
 	REMOVE_TRAIT(owner, TRAIT_DWARF, GENETIC_MUTATION)
+	REMOVE_TRAIT(owner, TRAIT_HOLDABLE, GENETIC_MUTATION)
 	var/matrix/new_transform = matrix()
 	new_transform.Scale(1, 1.25)
 	owner.transform = new_transform.Multiply(owner.transform)

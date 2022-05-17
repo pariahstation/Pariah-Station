@@ -6,8 +6,8 @@
 	icon = null
 	icon_state = ""
 	slot_flags = NONE
+	moth_edible = FALSE
 	var/mob/living/held_mob
-	var/destroying = FALSE
 
 /obj/item/clothing/head/mob_holder/Initialize(mapload, mob/living/M, worn_state, head_icon, lh_icon, rh_icon, worn_slot_flags = NONE)
 	if(head_icon)
@@ -25,10 +25,18 @@
 	. = ..()
 
 /obj/item/clothing/head/mob_holder/Destroy()
-	destroying = TRUE
 	if(held_mob)
 		release(FALSE)
 	return ..()
+
+/obj/item/clothing/head/mob_holder/on_thrown(mob/living/carbon/user, atom/target)
+	. = held_mob
+	release(display_messages = FALSE)
+	if(!..())
+		return null
+
+/obj/item/clothing/head/mob_holder/examine(mob/user)
+	return held_mob.examine(user)
 
 /obj/item/clothing/head/mob_holder/proc/deposit(mob/living/L)
 	if(!istype(L))
@@ -43,6 +51,7 @@
 
 /obj/item/clothing/head/mob_holder/proc/update_visuals(mob/living/L)
 	appearance = L.appearance
+	icon_state = "none"
 
 /obj/item/clothing/head/mob_holder/dropped()
 	..()
@@ -51,7 +60,7 @@
 
 /obj/item/clothing/head/mob_holder/proc/release(del_on_release = TRUE, display_messages = TRUE)
 	if(!held_mob)
-		if(del_on_release && !destroying)
+		if(del_on_release)
 			qdel(src)
 		return FALSE
 	var/mob/living/released_mob = held_mob
@@ -66,7 +75,7 @@
 	released_mob.setDir(SOUTH)
 	if(display_messages)
 		released_mob.visible_message(span_warning("[released_mob] uncurls!"))
-	if(del_on_release && !destroying)
+	if(del_on_release)
 		qdel(src)
 	return TRUE
 
@@ -78,7 +87,7 @@
 
 /obj/item/clothing/head/mob_holder/on_found(mob/finder)
 	if(held_mob?.will_escape_storage())
-		to_chat(finder, span_warning("\A [held_mob.name] pops out! "))
+		to_chat(finder, span_warning("\A [held_mob.name] pops out!"))
 		finder.visible_message(span_warning("\A [held_mob.name] pops out of the container [finder] is opening!"), ignored_mobs = finder)
 		release(TRUE, FALSE)
 		return

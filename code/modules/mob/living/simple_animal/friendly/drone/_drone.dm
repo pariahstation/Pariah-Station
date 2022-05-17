@@ -48,7 +48,7 @@
 	dextrous_hud_type = /datum/hud/dextrous/drone
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	see_in_dark = 7
-	can_be_held = TRUE
+	held_type = /obj/item/clothing/head/mob_holder/drone
 	worn_slot_flags = ITEM_SLOT_HEAD
 	held_items = list(null, null)
 	/// `TRUE` if we have picked our visual appearance, `FALSE` otherwise (default)
@@ -186,6 +186,7 @@
 
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_NEGATES_GRAVITY, INNATE_TRAIT)
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 
 	listener = new(list(ALARM_ATMOS, ALARM_FIRE, ALARM_POWER), list(z))
 	RegisterSignal(listener, COMSIG_ALARM_TRIGGERED, .proc/alarm_triggered)

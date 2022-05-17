@@ -46,6 +46,8 @@
 	var/limb_integrity = 0
 	/// How many zones (body parts, not precise) we have disabled so far, for naming purposes
 	var/zones_disabled
+	/// If this can be eaten by a moth
+	var/moth_edible = TRUE
 
 	/// A lazily initiated "food" version of the clothing for moths
 	var/obj/item/food/clothing/moth_snack
@@ -111,7 +113,7 @@
 		qdel(src)
 
 /obj/item/clothing/attack(mob/living/M, mob/living/user, params)
-	if(user.combat_mode || !ismoth(M) || ispickedupmob(src))
+	if(user.combat_mode || !moth_edible || !ismoth(M))
 		return ..()
 	if(isnull(moth_snack))
 		moth_snack = new

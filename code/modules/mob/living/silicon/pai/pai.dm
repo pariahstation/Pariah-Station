@@ -14,7 +14,6 @@
 	health = 500
 	maxHealth = 500
 	layer = LOW_MOB_LAYER
-	can_be_held = TRUE
 	move_force = 0
 	pull_force = 0
 	move_resist = 0
@@ -180,6 +179,7 @@
 	emittersemicd = TRUE
 	addtimer(CALLBACK(src, .proc/emittercool), 600)
 
+	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	if(!holoform)
 		ADD_TRAIT(src, TRAIT_IMMOBILIZED, PAI_FOLDED)
 		ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, PAI_FOLDED)
