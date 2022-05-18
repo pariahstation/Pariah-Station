@@ -44,5 +44,4 @@
 /mob/living/simple_animal/hostile/ant/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
-	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	AddElement(/datum/element/pet_bonus, "clacks happily!")

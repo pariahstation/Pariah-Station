@@ -51,7 +51,8 @@
 
 /obj/item/clothing/head/mob_holder/proc/update_visuals(mob/living/L)
 	appearance = L.appearance
-	icon_state = "none"
+	if(!icon_state) // So that it doesn't get the `ABSTRACT` flag
+		icon_state = "none"
 
 /obj/item/clothing/head/mob_holder/dropped()
 	..()

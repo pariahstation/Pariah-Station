@@ -33,7 +33,6 @@
 /mob/living/simple_animal/pet/fox/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/pet_bonus, "pants and yaps happily!")
-	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 
 //Captain fox
 /mob/living/simple_animal/pet/fox/renault

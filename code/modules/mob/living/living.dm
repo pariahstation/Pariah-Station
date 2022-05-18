@@ -1566,8 +1566,7 @@
 	var/mob/living/U = user
 	if(isliving(dropping))
 		var/mob/living/M = dropping
-		//If they can be picked up, and we can't (prevents recursion), try to pick the target mob up as an item.
-		if(U.pulling == M && (HAS_TRAIT(M, TRAIT_HOLDABLE) && !HAS_TRAIT(src, TRAIT_HOLDABLE)))
+		if(U.pulling == M && mob_size > M.mob_size)
 			M.mob_try_pickup(U)//blame kevinz
 			return//dont open the mobs inventory if you are picking them up
 	. = ..()

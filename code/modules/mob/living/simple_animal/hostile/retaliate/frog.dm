@@ -36,7 +36,6 @@
 	. = ..()
 
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
-	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 
 	if(prob(1))
 		name = "rare frog"

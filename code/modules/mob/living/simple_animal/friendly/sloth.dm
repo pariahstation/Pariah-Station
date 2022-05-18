@@ -18,6 +18,7 @@
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
+	mob_size = MOB_SIZE_SMALL
 	gold_core_spawnable = FRIENDLY_SPAWN
 	melee_damage_lower = 18
 	melee_damage_upper = 18
@@ -36,7 +37,6 @@
 /mob/living/simple_animal/sloth/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/pet_bonus, "slowly smiles!")
-	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 
 //Cargo Sloth
 /mob/living/simple_animal/sloth/paperwork

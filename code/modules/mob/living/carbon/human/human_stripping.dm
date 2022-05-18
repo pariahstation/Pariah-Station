@@ -27,9 +27,10 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	if (user.pulling != src)
 		return TRUE
 
-	// If src can be picked up and the user can't (prevents recursion)
-	if (HAS_TRAIT(src, TRAIT_HOLDABLE) && !HAS_TRAIT(user, TRAIT_HOLDABLE))
-		return !mob_pickup_checks(user, FALSE)
+	if (isliving(user))
+		var/mob/living/living_user = user
+		if (mob_size < living_user.mob_size)
+			return !mob_pickup_checks(user, FALSE)
 
 	if (user.grab_state != GRAB_AGGRESSIVE)
 		return TRUE

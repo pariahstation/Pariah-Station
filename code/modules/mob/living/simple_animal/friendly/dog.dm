@@ -29,7 +29,6 @@
 /mob/living/simple_animal/pet/dog/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/pet_bonus, "woofs happily!")
-	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 	add_cell_sample()
 
 //Corgis and pugs are now under one dog subtype

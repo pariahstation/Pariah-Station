@@ -47,7 +47,6 @@
 	add_verb(src, /mob/living/proc/toggle_resting)
 	add_cell_sample()
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
-	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 
 /mob/living/simple_animal/pet/cat/add_cell_sample()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CAT, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)

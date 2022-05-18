@@ -42,7 +42,6 @@
 	. = ..()
 	AddElement(/datum/element/pet_bonus, "hops around happily!")
 	AddElement(/datum/element/animal_variety, icon_prefix, pick("brown","black","white"), TRUE)
-	ADD_TRAIT(src, TRAIT_HOLDABLE, INNATE_TRAIT)
 
 /mob/living/simple_animal/rabbit/easter
 	icon_state = "e_rabbit_white"
