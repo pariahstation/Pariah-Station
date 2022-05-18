@@ -623,15 +623,40 @@
 
 /obj/item/mod/control/proc/set_mod_skin(new_skin)
 	skin = new_skin
-	var/list/skin_updating = mod_parts.Copy() + src
-	var/list/selected_skin = theme.skins[new_skin]
-	for(var/obj/item/piece as anything in skin_updating)
-		if(selected_skin[MOD_ICON_OVERRIDE])
-			piece.icon = selected_skin[MOD_ICON_OVERRIDE]
-		if(selected_skin[MOD_WORN_ICON_OVERRIDE])
-			piece.worn_icon = selected_skin[MOD_WORN_ICON_OVERRIDE]
-		piece.icon_state = "[skin]-[initial(piece.icon_state)]"
-	update_flags()
+	var/list/used_skin = theme.skins[new_skin]
+	if(used_skin[CONTROL_LAYER])
+		alternate_worn_layer = used_skin[CONTROL_LAYER]
+	var/list/skin_updating = mod_parts + src
+	for(var/obj/item/part as anything in skin_updating)
+		part.icon = used_skin[MOD_ICON_OVERRIDE] || 'icons/obj/clothing/modsuit/mod_clothing.dmi'
+		part.worn_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi'
+		part.icon_state = "[skin]-[initial(part.icon_state)]"
+	for(var/obj/item/clothing/part as anything in mod_parts)
+		var/used_category
+		if(part == helmet)
+			used_category = HELMET_FLAGS
+		if(part == chestplate)
+			used_category = CHESTPLATE_FLAGS
+		if(part == gauntlets)
+			used_category = GAUNTLETS_FLAGS
+		if(part == boots)
+			used_category = BOOTS_FLAGS
+		var/list/category = used_skin[used_category]
+		part.clothing_flags = category[UNSEALED_CLOTHING] || NONE
+		part.visor_flags = category[SEALED_CLOTHING] || NONE
+		part.flags_inv = category[UNSEALED_INVISIBILITY] || NONE
+		part.visor_flags_inv = category[SEALED_INVISIBILITY] || NONE
+		part.flags_cover = category[UNSEALED_COVER] || NONE
+		part.visor_flags_cover = category[SEALED_COVER] || NONE
+		part.alternate_worn_layer = category[UNSEALED_LAYER]
+		mod_parts[part] = part.alternate_worn_layer
+		if(!category[CAN_OVERSLOT])
+			if(overslotting_parts[part])
+				var/obj/item/overslot = overslotting_parts[part]
+				overslot.forceMove(drop_location())
+			overslotting_parts -= part
+			continue
+		overslotting_parts |= part
 	wearer?.regenerate_icons()
 
 /obj/item/mod/control/proc/on_exit(datum/source, atom/movable/part, direction)

@@ -10,18 +10,6 @@
 	cold_protection = HEAD
 
 	obj_flags = IMMUTABLE_SLOW
-	var/alternate_layer = NECK_LAYER
-	var/obj/item/mod/control/mod
-
-/obj/item/clothing/head/mod/Destroy()
-	if(!QDELETED(mod))
-		mod.helmet = null
-		mod.mod_parts -= src
-		QDEL_NULL(mod)
-	return ..()
-
-/obj/item/clothing/head/mod/atom_destruction(damage_flag)
-	return mod.atom_destruction(damage_flag)
 
 /obj/item/clothing/suit/mod
 	name = "MOD chestplate"
