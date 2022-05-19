@@ -90,12 +90,6 @@
 	message_param = "salutes to %t."
 	hands_use_check = TRUE
 
-/datum/emote/living/headtilt
-	key = "tilt"
-	key_third_person = "tilts"
-	message = "tilts their head."
-	message_AI = "tilts the image on their display."
-
 /datum/emote/living/carbon/human/shrug
 	key = "shrug"
 	key_third_person = "shrugs"
@@ -221,6 +215,7 @@
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 	sound = 'sound/emotes/mothchitter.ogg'
+	species_type_whitelist_typecache = list(/datum/species/moth)
 
 //Felinid emotes
 /datum/emote/living/meow

@@ -48,21 +48,18 @@
 	var/list/base_keys = list()
 	var/list/all_keys = list()
 	var/list/species_emotes = list()
-	var/list/message = list("Available emotes, you can use them with say \"*emote\": ")
+	var/list/message = list("<b>Available emotes, you can use them with say \"*emote\":</b> \n")
 
 	var/mob/living/carbon/human/H = user
 	for(var/key in GLOB.emote_list)
 		for(var/datum/emote/P in GLOB.emote_list[key])
-			var/full_key = P.key
 			if(P.key in all_keys)
 				continue
 			if(P.can_run_emote(user, status_check = FALSE, intentional = TRUE))
-				if(P.message_param)
-					full_key = P.key
-				if(istype(H) && P.species_type_whitelist_typecache && H.dna && is_type_in_typecache(H.dna.species, P.species_type_whitelist_typecache))
-					species_emotes += full_key
+				if(istype(H) && P.species_type_whitelist_typecache && H.dna && P.species_type_whitelist_typecache[H.dna.species.type])
+					species_emotes += P.key
 				else
-					base_keys += full_key
+					base_keys += P.key
 				all_keys += P.key
 
 	base_keys = sort_list(base_keys)
@@ -70,9 +67,9 @@
 	message += base_keys.Join(", ")
 	message += "."
 	message = message.Join("")
-	if(length(species_emotes) > 0)
+	if(length(species_emotes))
 		species_emotes = sort_list(species_emotes)
-		message += "\n<u>Species specific emotes</u> : "
+		message += "\n<b><u>Species specific emotes</u></b>: \n"
 		message += species_emotes.Join(", ")
 		message += "."
 	to_chat(user, message)

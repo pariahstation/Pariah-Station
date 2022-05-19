@@ -241,9 +241,9 @@
 		return FALSE
 	if(is_type_in_typecache(user, mob_type_blacklist_typecache))
 		return FALSE
-	if(istype(user, /mob/living/carbon/human))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if(species_type_whitelist_typecache && H.dna && !species_type_whitelist_typecache[H.dna.species])
+		if(species_type_whitelist_typecache && H.dna && !species_type_whitelist_typecache[H.dna.species.type])
 			return FALSE
 
 	if(status_check && !is_type_in_typecache(user, mob_type_ignore_stat_typecache))

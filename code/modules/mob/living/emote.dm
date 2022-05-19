@@ -46,6 +46,14 @@
 	key_third_person = "burps"
 	message = "burps."
 	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+
+/datum/emote/living/burp/get_sound(mob/living/user)
+	if(iscarbon(user))
+		if(user.gender == MALE)
+			return 'sound/emotes/male/burp_m.ogg'
+		return 'sound/emotes/female/burp_f.ogg'
+	return
 
 /datum/emote/living/choke
 	key = "choke"
@@ -361,31 +369,6 @@
 		return 'sound/emotes/female/female_sigh.ogg'
 	return
 
-/datum/emote/living/sniff
-	vary = TRUE
-
-/datum/emote/living/sniff/get_sound(mob/living/user)
-	if(iscarbon(user))
-		if(user.gender == MALE)
-			return 'sound/emotes/male/male_sniff.ogg'
-		return 'sound/emotes/female/female_sniff.ogg'
-	return
-
-
-/datum/emote/living/snore
-	vary = TRUE
-	sound = 'sound/emotes/snore.ogg'
-
-/datum/emote/living/burp
-	vary = TRUE
-
-/datum/emote/living/burp/get_sound(mob/living/user)
-	if(iscarbon(user))
-		if(user.gender == MALE)
-			return 'sound/emotes/male/burp_m.ogg'
-		return 'sound/emotes/female/burp_f.ogg'
-	return
-
 /datum/emote/living/clap1
 	key = "clap1"
 	key_third_person = "claps once"
@@ -419,6 +402,7 @@
 	key_third_person = "sneezes"
 	message = "sneezes."
 	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
 
 /datum/emote/living/smug
 	key = "smug"
@@ -430,6 +414,14 @@
 	key_third_person = "sniffs"
 	message = "sniffs."
 	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+
+/datum/emote/living/sniff/get_sound(mob/living/user)
+	if(iscarbon(user))
+		if(user.gender == MALE)
+			return 'sound/emotes/male/male_sniff.ogg'
+		return 'sound/emotes/female/female_sniff.ogg'
+	return
 
 /datum/emote/living/snore
 	key = "snore"
@@ -438,6 +430,8 @@
 	message_mime = "sleeps soundly."
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
+	vary = TRUE
+	sound = 'sound/emotes/snore.ogg'
 
 /datum/emote/living/stare
 	key = "stare"
@@ -481,6 +475,7 @@
 	key = "tilt"
 	key_third_person = "tilts"
 	message = "tilts their head to the side."
+	message_AI = "tilts the image on their display."
 
 /datum/emote/living/tremble
 	key = "tremble"
@@ -661,9 +656,6 @@
 	muzzle_ignore = TRUE
 	vary = TRUE
 	sound = 'sound/emotes/voxrustle.ogg'
-
-/datum/emote/living/sneeze
-	vary = TRUE
 
 /datum/emote/living/snap
 	key = "snap"
