@@ -284,3 +284,22 @@
 	vary = TRUE
 	sound = 'sound/voice/wurble.ogg'
 	species_type_whitelist_typecache = list(/datum/species/skrell)
+
+//Teshari emotes
+/datum/emote/living/carbon/human/chirp
+	key = "chirp"
+	key_third_person = "chirps"
+	message = "chirps!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'sound/voice/bird/chirp.ogg'
+	// species_type_whitelist_typecache = list(/datum/species/teshari)
+
+/datum/emote/living/carbon/humang/chirp2
+	key = "chirp2"
+	key_third_person = "chirps"
+	message = "chirps!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'sound/voice/bird/chirp2.ogg'
+	// species_type_whitelist_typecache = list(/datum/species/teshari)
