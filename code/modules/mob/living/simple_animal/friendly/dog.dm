@@ -176,7 +176,7 @@
 /mob/living/simple_animal/pet/dog/corgi/Initialize(mapload)
 	. = ..()
 	regenerate_icons()
-	AddElement(/datum/element/strippable, GLOB.strippable_corgi_items)
+	AddElement(/datum/element/strippable, GLOB.strippable_corgi_items, /mob/living/.proc/should_strip)
 
 /mob/living/simple_animal/pet/dog/corgi/exoticcorgi/Initialize(mapload)
 		. = ..()
