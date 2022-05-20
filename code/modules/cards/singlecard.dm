@@ -198,7 +198,7 @@
 
 	if(can_item_write && !blank) // You cheated not only the game, but yourself
 		marked_color = marked_cheating_color
-		to_chat(user, span_notice("You put a [marked_color] mark in the corner of [src] with the [item]. Cheat to win!"))
+		to_chat(user, span_notice("You put a [marked_color] mark in the corner of [src] with [item]. Cheat to win!"))
 		return
 
 	if(can_item_write)
