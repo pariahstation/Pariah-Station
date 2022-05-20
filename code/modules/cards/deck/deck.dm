@@ -168,7 +168,7 @@
 		if(wielded)
 			shuffle_cards(user)
 		else
-			to_chat(user, span_notice("You must hold the [src] with both hands to shuffle."))
+			to_chat(user, span_warning("You must hold [src] with both hands to shuffle!"))
 	return ..()
 
 /obj/item/toy/cards/deck/update_icon_state()
