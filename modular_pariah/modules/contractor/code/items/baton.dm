@@ -43,7 +43,7 @@
 /obj/item/melee/baton/telescopic/contractor_baton/attackby(obj/item/attacking_item, mob/user, params)
 	. = ..()
 	if(istype(attacking_item, /obj/item/baton_upgrade))
-		if(add_upgrade(attacking_item))
+		if(add_upgrade(attacking_item, user))
 			balloon_alert(user, "[attacking_item] attached")
 	if(!(upgrade_flags & BATON_CUFF_UPGRADE))
 		return
@@ -90,6 +90,7 @@
 	if(!(upgrade_flags & upgrade.upgrade_flag))
 		upgrade_flags |= upgrade.upgrade_flag
 		upgrade.forceMove(src)
+		if(user)
 			user.visible_message(span_notice("\The [user] inserts the [upgrade] into \the [src]."), span_notice("You insert \the [upgrade] into \the [src]."), span_hear("You hear a faint click."))
 		return TRUE
 	return FALSE

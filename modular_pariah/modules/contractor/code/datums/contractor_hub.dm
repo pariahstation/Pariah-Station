@@ -8,7 +8,7 @@
 	/// List of what the contractor's purchased
 	var/list/purchased_items = list()
 	/// Static of contractor_item subtypes
-	var/static/list/contractor_items = subtypesof(/datum/contractor_item)
+	var/static/list/contractor_items = typecacheof(/datum/contractor_item, ignore_root_path = TRUE)
 	/// Reference to the current contract datum
 	var/datum/syndicate_contract/current_contract
 	/// List of all contract datums the contractor has available

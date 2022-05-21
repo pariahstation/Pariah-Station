@@ -14,7 +14,7 @@
 
 /// Subtract cost, and spawn if it's an item.
 /datum/contractor_item/proc/handle_purchase(datum/contractor_hub/hub, mob/living/user)
-	if(!item) 
+	if(!item)
 		return
 	if(!ispath(item))
 		CRASH("Contractor item [src] is not assigned a typepath")
@@ -39,7 +39,6 @@
 		to_chat(user, span_notice("Your purchase materializes onto the floor."))
 
 	return item_to_create
-	return TRUE
 
 /datum/contractor_item/contract_reroll
 	name = "Contract Reroll"
@@ -158,6 +157,8 @@
 		return
 	power_fail(35, 50)
 	priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
+	var/datum/round_event_control/event = locate(/datum/round_event_control/grid_check) in SSevents.control
+	event.runEvent()
 
 /datum/contractor_item/comms_blackout
 	name = "Comms Outage"
