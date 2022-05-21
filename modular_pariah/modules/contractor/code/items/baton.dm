@@ -43,8 +43,8 @@
 /obj/item/melee/baton/telescopic/contractor_baton/attackby(obj/item/attacking_item, mob/user, params)
 	. = ..()
 	if(istype(attacking_item, /obj/item/baton_upgrade))
-		add_upgrade(attacking_item)
-		balloon_alert(user, "[attacking_item] attached")
+		if(add_upgrade(attacking_item))
+			balloon_alert(user, "[attacking_item] attached")
 	if(!(upgrade_flags & BATON_CUFF_UPGRADE))
 		return
 	if(!istype(attacking_item, /obj/item/restraints/handcuffs/cable))
@@ -90,6 +90,8 @@
 	if(!(upgrade_flags & upgrade.upgrade_flag))
 		upgrade_flags |= upgrade.upgrade_flag
 		upgrade.forceMove(src)
+		return TRUE
+	return FALSE
 
 /obj/item/melee/baton/telescopic/contractor_baton/upgraded
 	desc = "A compact, specialised baton assigned to Syndicate contractors. Applies light electrical shocks to targets. This one seems to have unremovable parts."
