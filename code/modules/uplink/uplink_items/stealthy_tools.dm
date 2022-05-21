@@ -22,7 +22,7 @@
 	name = "Advanced Agent Identification Card"
 	desc = "Created by Cybersun Industries to be the ultimate for field operations, this upgraded Agent ID \
 	comes with all the fluff of the original, but with an upgraded microchip - allowing for the storage of all \
-	standard Nanotrasen access codes in one conveinent package. Now in glossy olive by default!"
+	standard Nanotrasen access codes in one conveinent package. Now in glossy black by default!"
 	item = /obj/item/card/id/advanced/chameleon/black
 	cost = 5
 
