@@ -60,6 +60,8 @@ GLOBAL_LIST_EMPTY(antagonists)
 
 	/// A weakref to the HUD shown to teammates, created by `add_team_hud`
 	var/datum/weakref/team_hud_ref
+	/// A hub for contractor datums and such
+	var/datum/contractor_hub/contractor_hub
 
 /datum/antagonist/New()
 	GLOB.antagonists += src
@@ -425,6 +427,41 @@ GLOBAL_LIST_EMPTY(antagonists)
 	for (var/datum/atom_hud/alternate_appearance/basic/has_antagonist/antag_hud as anything in GLOB.has_antagonist_huds)
 		if (antag_hud.mobShouldSee(owner.current))
 			antag_hud.add_hud_to(owner.current)
+
+
+/// End-round generation proc for contractors
+/datum/antagonist/proc/contractor_round_end()
+	var/result = ""
+	var/total_spent_rep = 0
+
+	var/completed_contracts = contractor_hub.contracts_completed
+	var/tc_total = contractor_hub.contract_paid_out + contractor_hub.contract_TC_to_redeem
+
+	var/contractor_item_icons = "" // Icons of purchases
+	var/contractor_support_unit = "" // Set if they had a support unit - and shows appended to their contracts completed
+
+	// Get all the icons/total cost for all our items bought
+	for (var/datum/contractor_item/contractor_purchase in contractor_hub.purchased_items)
+		contractor_item_icons += "<span class='tooltip_container'>\[ <i class=\"fas [contractor_purchase.item_icon]\"></i><span class='tooltip_hover'><b>[contractor_purchase.name] - [contractor_purchase.cost] Rep</b><br><br>[contractor_purchase.desc]</span> \]</span>"
+
+		total_spent_rep += contractor_purchase.cost
+
+		// Special case for reinforcements, we want to show their ckey and name on round end.
+		if (istype(contractor_purchase, /datum/contractor_item/contractor_partner))
+			var/datum/contractor_item/contractor_partner/partner = contractor_purchase
+			contractor_support_unit += "<br><b>[partner.partner_mind.key]</b> played <b>[partner.partner_mind.current.name]</b>, their contractor support unit."
+
+	if (length(contractor_hub.purchased_items))
+		result += "<br>(used [total_spent_rep] Rep) "
+		result += contractor_item_icons
+	result += "<br>"
+	if (completed_contracts > 0)
+		var/plural_check = "contract[completed_contracts > 1 ? "s" : ""]"
+
+		result += "Completed [span_greentext("[completed_contracts]")] [plural_check] for a total of \
+					[span_greentext("[tc_total] TC")]![contractor_support_unit]<br>"
+
+	return result
 
 //This one is created by admin tools for custom objectives
 /datum/antagonist/custom

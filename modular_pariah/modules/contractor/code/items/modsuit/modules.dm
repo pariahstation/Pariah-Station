@@ -1,4 +1,3 @@
-
 /obj/item/mod/module/baton_holster
 	name = "MOD baton holster module"
 	desc = "A module installed into the chest of a MODSuit, this allows you \
@@ -75,8 +74,6 @@
 	stored_batong = new/obj/item/melee/baton/telescopic/contractor_baton/upgraded(src)
 	stored_batong.holster = src
 
-
-
 /obj/item/mod/module/chameleon
 	name = "MOD chameleon module"
 	desc = "An illegal module that lets you disguise your MODsuit as any other kind with the help of chameleon technology. However, due to technological challenges, the module only functions when the MODsuit is undeployed."
@@ -140,6 +137,9 @@
 /obj/item/mod/module/chameleon/proc/reset_chameleon()
 	if(on)
 		balloon_alert(mod.wearer, "chameleon module disabled!")
+	for(var/obj/item/mod/module/storage/syndicate/synd_store in mod.modules)
+		synd_store.name = initial(synd_store.name)
+		synd_store.chameleon_disguised = FALSE
 	on = FALSE
 	mod.name = chameleon_name
 	mod.desc = chameleon_desc
@@ -156,12 +156,15 @@
 		return
 
 	update_item(picked_item)
+	for(var/obj/item/mod/module/storage/syndicate/synd_store in mod.modules)
+		synd_store.name = "MOD expanded storage module"
+		synd_store.chameleon_disguised = TRUE
 	var/obj/item/thing = mod
 	thing.update_slot_icon()
 	on = TRUE
 
 /obj/item/mod/module/chameleon/proc/update_item(obj/item/picked_item)
-	var/obj/item/mod/control/modsuit = new picked_item()
+	var/obj/item/mod/control/modsuit = new picked_item() //initial() doesn't work for a ton of these.
 	mod.name = modsuit.name
 	mod.desc = modsuit.desc
 	mod.icon_state = modsuit.icon_state
@@ -195,11 +198,72 @@
 	. = ..()
 	init_chameleon_list()
 
-
-
 /obj/item/mod/module/armor_booster/contractor // Much flatter distribution because contractor suit gets a shitton of armor already
 	armor_values = list(MELEE = 20, BULLET = 20, LASER = 20, ENERGY = 20)
 	added_slowdown = 0.5 //Bulky as shit
 	desc = "An embedded set of armor plates, allowing the suit's already extremely high protection \
 		to be increased further. However, the plating, while deployed, will slow down the user \
 		and make the suit unable to vacuum seal so this extra armor provides zero ability for extravehicular activity while deployed."
+
+/obj/item/mod/module/springlock/contractor
+	name = "MOD magnetic deployment module"
+	desc = "A much more modern version of a springlock system. \
+	This is a module that uses magnets to speed up the deployment and retraction time of your MODsuit."
+	icon_state = "magnet"
+	icon = 'modular_pariah/modules/contractor/icons/modsuit_modules.dmi'
+
+/obj/item/mod/module/springlock/contractor/on_suit_activation() // This module is actually *not* a death trap
+	return
+
+/obj/item/mod/module/springlock/contractor/on_suit_deactivation(deleting = FALSE)
+	return
+
+/obj/item/mod/module/scorpion_hook
+	name = "MOD SCORPION hook module"
+	desc = "A module installed in the wrist of a MODSuit, this highly \
+			illegal module uses a hardlight hook to forcefully pull \
+			a target towards you at high speed, knocking them down and \
+			partially exhausting them."
+	icon_state = "hook"
+	icon = 'modular_pariah/modules/contractor/icons/modsuit_modules.dmi'
+	complexity = 3
+	incompatible_modules = list(/obj/item/mod/module/scorpion_hook)
+	module_type = MODULE_USABLE
+	/// Ref to the hook
+	var/obj/item/gun/magic/hook/contractor/stored_hook
+	/// If the hook is out or not
+	var/deployed = FALSE
+
+/obj/item/mod/module/scorpion_hook/Initialize(mapload)
+	. = ..()
+	if(!stored_hook)
+		stored_hook = new /obj/item/gun/magic/hook/contractor(src)
+		stored_hook.hook_module = src
+
+/obj/item/mod/module/scorpion_hook/Destroy()
+	if(stored_hook)
+		stored_hook.hook_module = null
+		QDEL_NULL(stored_hook)
+	. = ..()
+
+/obj/item/mod/module/scorpion_hook/on_use()
+	if(!deployed)
+		deploy(mod.wearer)
+	else
+		undeploy(mod.wearer)
+
+/obj/item/mod/module/scorpion_hook/proc/deploy(mob/living/user)
+	if(!(stored_hook in src))
+		return
+	if(!user.put_in_hands(stored_hook))
+		to_chat(user, span_warning("You need a free hand to hold [stored_hook]!"))
+		return
+	deployed = TRUE
+	balloon_alert(user, "[stored_hook] deployed")
+
+/obj/item/mod/module/scorpion_hook/proc/undeploy(mob/living/user)
+	if(QDELETED(stored_hook))
+		return
+	stored_hook.forceMove(src)
+	deployed = FALSE
+	balloon_alert(user, "[stored_hook] retracted")

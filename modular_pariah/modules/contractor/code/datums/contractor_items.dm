@@ -1,40 +1,76 @@
 /datum/contractor_item
-	var/name // Name of item
-	var/desc // description of item
-	var/item // item path, no item path means the purchase needs it's own handle_purchase()
-	var/item_icon = "broadcast-tower" // fontawesome icon to use inside the hub - https://fontawesome.com/icons/
-	var/limited = -1 // Any number above 0 for how many times it can be bought in a round for a single traitor. -1 is unlimited.
-	var/cost // Cost of the item in contract rep.
+	/// Name of the item datum
+	var/name
+	/// Description of the item datum
+	var/desc
+	/// Item path to spawn, no item path means you need to override `handle_purchase()`
+	var/item
+	/// fontawesome icon to use inside the hub - https://fontawesome.com/icons/
+	var/item_icon = "broadcast-tower"
+	/// Any number above 0 for how many times it can be bought in a round for a single traitor. -1 is unlimited.
+	var/limited = -1
+	/// Cost of the item in contract rep.
+	var/cost
+
+/// Subtract cost, and spawn if it's an item.
+/datum/contractor_item/proc/handle_purchase(datum/contractor_hub/hub, mob/living/user)
+	if(hub.contract_rep >= cost)
+		hub.contract_rep -= cost
+	else
+		return FALSE
+
+	if(limited >= 1)
+		limited -= 1
+	else
+		return FALSE
+
+	hub.purchased_items.Add(src)
+
+	user.playsound_local(user, 'sound/machines/uplinkpurchase.ogg', 100)
+
+	if(item && ispath(item))
+		var/atom/item_to_create = new item(get_turf(user))
+
+		if(user.put_in_hands(item_to_create))
+			to_chat(user, span_notice("Your purchase materializes into your hands!"))
+		else
+			to_chat(user, span_notice("Your purchase materializes onto the floor."))
+
+		return item_to_create
+	else if(item && !ispath(item))
+		stack_trace("Contractor item [src] has an item that isn't a path.")
+	return TRUE
 
 /datum/contractor_item/contract_reroll
 	name = "Contract Reroll"
 	desc = "Request a reroll of your current contract list. Will generate a new target, payment, and dropoff for the contracts you currently have available."
 	item_icon = "dice"
-	limited = 2
+	limited = 3
 	cost = 0
 
 /datum/contractor_item/contract_reroll/handle_purchase(datum/contractor_hub/hub)
 	. = ..()
 
-	if (.)
-		/// We're not regenerating already completed/aborted/extracting contracts, but we don't want to repeat their targets.
-		var/list/new_target_list = list()
-		for(var/datum/syndicate_contract/contract_check in hub.assigned_contracts)
-			if (contract_check.status != CONTRACT_STATUS_ACTIVE && contract_check.status != CONTRACT_STATUS_INACTIVE)
-				if (contract_check.contract.target)
-					new_target_list.Add(contract_check.contract.target)
-				continue
+	if(!(.))
+		return
+	// We're not regenerating already completed/aborted/extracting contracts, but we don't want to repeat their targets.
+	var/list/new_target_list = list()
+	for(var/datum/syndicate_contract/contract_check in hub.assigned_contracts)
+		if (contract_check.status != CONTRACT_STATUS_ACTIVE && contract_check.status != CONTRACT_STATUS_INACTIVE)
+			if (contract_check.contract.target)
+				new_target_list.Add(contract_check.contract.target)
+			continue
 
-		/// Reroll contracts without duplicates
-		for(var/datum/syndicate_contract/rerolling_contract in hub.assigned_contracts)
-			if (rerolling_contract.status != CONTRACT_STATUS_ACTIVE && rerolling_contract.status != CONTRACT_STATUS_INACTIVE)
-				continue
+	// Reroll contracts without duplicates
+	for(var/datum/syndicate_contract/rerolling_contract in hub.assigned_contracts)
+		if (rerolling_contract.status != CONTRACT_STATUS_ACTIVE && rerolling_contract.status != CONTRACT_STATUS_INACTIVE)
+			continue
 
-			rerolling_contract.generate(new_target_list)
-			new_target_list.Add(rerolling_contract.contract.target)
+		rerolling_contract.generate(new_target_list)
+		new_target_list.Add(rerolling_contract.contract.target)
 
-		/// Set our target list with the new set we've generated.
-		hub.assigned_targets = new_target_list
+	// Set our target list with the new set we've generated.
+	hub.assigned_targets = new_target_list
 
 /datum/contractor_item/contractor_pinpointer
 	name = "Contractor Pinpointer"
@@ -63,45 +99,22 @@
 /datum/contractor_item/contractor_partner/handle_purchase(datum/contractor_hub/hub, mob/living/user)
 	. = ..()
 
-	if (.)
-		to_chat(user, span_notice("The uplink vibrates quietly, connecting to nearby agents..."))
+	if(!(.))
+		return
+	to_chat(user, span_notice("The uplink vibrates quietly, connecting to nearby agents..."))
 
-		var/list/mob/dead/observer/candidates = poll_ghost_candidates("Do you want to play as the Contractor Support Unit for [user.real_name]?", ROLE_PAI, FALSE, 100, POLL_IGNORE_CONTRACTOR_SUPPORT)
+	var/list/mob/dead/observer/candidates = poll_ghost_candidates("Do you want to play as the Contractor Support Unit for [user.real_name]?", ROLE_PAI, FALSE, 100, POLL_IGNORE_CONTRACTOR_SUPPORT)
 
-		if(LAZYLEN(candidates))
-			var/mob/dead/observer/C = pick(candidates)
-			spawn_contractor_partner(user, C.key)
-		else
-			to_chat(user, span_notice("No available agents at this time, please try again later."))
+	if(LAZYLEN(candidates))
+		var/mob/dead/observer/picked_obs = pick(candidates)
+		spawn_contractor_partner(user, picked_obs.key)
+	else
+		to_chat(user, span_notice("No available agents at this time, please try again later."))
 
-			// refund and add the limit back.
-			limited += 1
-			hub.contract_rep += cost
-			hub.purchased_items -= src
-
-/datum/outfit/contractor_partner
-	name = "Contractor Support Unit"
-
-	uniform = /obj/item/clothing/under/chameleon
-	suit = /obj/item/clothing/suit/chameleon
-	back = /obj/item/storage/backpack
-	belt = /obj/item/modular_computer/tablet/pda/chameleon
-	mask = /obj/item/clothing/mask/cigarette/syndicate
-	shoes = /obj/item/clothing/shoes/chameleon/noslip
-	ears = /obj/item/radio/headset/chameleon
-	id = /obj/item/card/id/advanced/chameleon
-	r_hand = /obj/item/storage/toolbox/syndicate
-	id_trim = /datum/id_trim/chameleon/operative
-
-	backpack_contents = list(/obj/item/storage/box/survival, /obj/item/implanter/uplink, /obj/item/clothing/mask/chameleon,
-							/obj/item/storage/fancy/cigarettes/cigpack_syndicate, /obj/item/lighter)
-
-/datum/outfit/contractor_partner/post_equip(mob/living/carbon/human/H, visualsOnly)
-	. = ..()
-	var/obj/item/clothing/mask/cigarette/syndicate/cig = H.get_item_by_slot(ITEM_SLOT_MASK)
-
-	// pre-light their cig
-	cig.light()
+		// refund and add the limit back.
+		limited += 1
+		hub.contract_rep += cost
+		hub.purchased_items -= src
 
 /datum/contractor_item/contractor_partner/proc/spawn_contractor_partner(mob/living/user, key)
 	var/mob/living/carbon/human/partner = new()
@@ -136,66 +149,36 @@
 	desc = "Request Syndicate Command to distrupt the station's powernet. Disables power across the station for a short duration."
 	item_icon = "bolt"
 	limited = 2
-	cost = 3
+	cost = 2
 
 /datum/contractor_item/blackout/handle_purchase(datum/contractor_hub/hub)
 	. = ..()
 
-	if (.)
-		power_fail(35, 50)
-		priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
+	if(!(.))
+		return
+	power_fail(35, 50)
+	priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
 
-// Subtract cost, and spawn if it's an item.
-/datum/contractor_item/proc/handle_purchase(datum/contractor_hub/hub, mob/living/user)
+/datum/contractor_item/comms_blackout
+	name = "Comms Outage"
+	desc = "Request Syndicate Command to disable station Telecommunications. Disables telecommunications across the station for a medium duration."
+	item_icon = "phone-slash"
+	limited = 2
+	cost = 2
 
-	if (hub.contract_rep >= cost)
-		hub.contract_rep -= cost
-	else
-		return FALSE
+/datum/contractor_item/comms_blackout/handle_purchase(datum/contractor_hub/hub)
+	. = ..()
 
-	if (limited >= 1)
-		limited -= 1
-	else if (limited == 0)
-		return FALSE
+	if(!(.))
+		return
+	var/datum/round_event_control/event = locate(/datum/round_event_control/communications_blackout) in SSevents.control
+	event.runEvent()
 
-	hub.purchased_items.Add(src)
-
-	user.playsound_local(user, 'sound/machines/uplinkpurchase.ogg', 100)
-
-	if (item && ispath(item))
-		var/atom/item_to_create = new item(get_turf(user))
-
-		if(user.put_in_hands(item_to_create))
-			to_chat(user, span_notice("Your purchase materializes into your hands!"))
-		else
-			to_chat(user, span_notice("Your purchase materializes onto the floor."))
-
-		return item_to_create
-	return TRUE
-
-/obj/item/pinpointer/crew/contractor
-	name = "contractor pinpointer"
-	desc = "A handheld tracking device that locks onto certain signals. Ignores suit sensors, but is much less accurate."
-	icon_state = "pinpointer_syndicate"
-	worn_icon_state = "pinpointer_black"
-	minimum_range = 25
-	has_owner = TRUE
-	ignore_suit_sensor_level = TRUE
-
-/obj/item/storage/box/contractor/fulton_extraction
-	name = "Fulton Extraction Kit"
-	icon_state = "syndiebox"
-	illustration = "writing_syndie"
-
-/obj/item/storage/box/contractor/fulton_extraction/PopulateContents()
-	new /obj/item/extraction_pack(src)
-	new /obj/item/fulton_core(src)
-
-/datum/contractor_item/baton_holster
+/datum/contractor_item/mod_baton_holster
 	name = "Baton Holster Module"
 	desc = "Never worry about dropping your baton again with this holster module! Simply insert your baton into the module, put it in your MODsuit, and the baton will retract whenever dropped."
 	item = /obj/item/mod/module/baton_holster
-	item_icon = "arrow-up-from-arc" //I cannot find anything better, replace if you find something more fitting
+	item_icon = "wrench" //I cannot find anything better, replace if you find something more fitting
 	limited = 1
 	cost = 1
 
@@ -203,7 +186,7 @@
 	name = "Baton Cuff Upgrade"
 	desc = "Using technology reverse-engineered from some alien batons we had lying around, you can now cuff people using your baton with the secondary attack. Due to technical limitations, only cable cuffs and zipties work, and they need to be loaded into the baton manually."
 	item = /obj/item/baton_upgrade/cuff
-	item_icon = "handcuff"
+	item_icon = "bacon" //ditto
 	limited = 1
 	cost = 1
 
@@ -214,3 +197,27 @@
 	item_icon = "comment-slash"
 	limited = 1
 	cost = 2
+
+/datum/contractor_item/baton_upgrade_focus
+	name = "Baton Focus Upgrade"
+	desc = "When applied to a baton, it will exhaust the target even more, should they be the target of your current contract."
+	item = /obj/item/baton_upgrade/focus
+	item_icon = "eye"
+	limited = 1
+	cost = 2
+
+/datum/contractor_item/mod_magnetic_suit
+	name = "Magnetic Deployment Module"
+	desc = "A module that utilizes magnets to largely reduce the time needed to deploy and retract your MODsuit."
+	item = /obj/item/mod/module/springlock/contractor
+	item_icon = "magnet"
+	limited = 1
+	cost = 2
+
+/datum/contractor_item/mod_scorpion_hook
+	name = "SCORPION Hook Module"
+	desc = "A module that allows you to launch a hardlight hook from your MODsuit, pulling a target into range of your baton."
+	item = /obj/item/mod/module/scorpion_hook
+	item_icon = "arrow-left" //replace if fontawesome gets an actual hook icon
+	limited = 1
+	cost = 3

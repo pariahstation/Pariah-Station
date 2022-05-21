@@ -38,10 +38,11 @@
 	hitsound = 'sound/effects/splat.ogg'
 	var/chain
 	var/knockdown_time = (0.5 SECONDS)
+	var/chain_iconstate = "chain"
 
 /obj/projectile/hook/fire(setAngle)
 	if(firer)
-		chain = firer.Beam(src, icon_state = "chain")
+		chain = firer.Beam(src, icon_state = chain_iconstate)
 	..()
 	//TODO: root the firer until the chain returns
 

@@ -1,19 +1,28 @@
 #define LOWEST_TC 30
 
 /datum/contractor_hub
+	/// How much reputation the contractor has
 	var/contract_rep = 0
+	/// What contractor items can be purchased
 	var/list/hub_items = list()
+	/// List of what the contractor's purchased
 	var/list/purchased_items = list()
-	var/static/list/contractor_items = typecacheof(/datum/contractor_item/, ignore_root_path = TRUE)
-
+	/// Static of contractor_item subtypes
+	var/static/list/contractor_items = subtypesof(/datum/contractor_item)
+	/// Reference to the current contract datum
 	var/datum/syndicate_contract/current_contract
+	/// List of all contract datums the contractor has available
 	var/list/datum/syndicate_contract/assigned_contracts = list()
-
-	var/list/assigned_targets = list() // used as a blacklist to make sure we're not assigning targets already assigned
-
+	/// used as a blacklist to make sure we're not assigning targets already assigned
+	var/list/assigned_targets = list()
+	/// NUmber of how many contracts you've done
 	var/contracts_completed = 0
-	var/contract_TC_payed_out = 0 // Keeping track for roundend reporting
-	var/contract_TC_to_redeem = 0 // Used internally and roundend reporting - what TC we have available to cashout.
+	/// How many TC you've paid out in contracts
+	var/contract_paid_out = 0
+	/// Amount of TC that has yet to be redeemed
+	var/contract_TC_to_redeem = 0
+	/// Current index number for contract IDs
+	var/start_index = 1
 
 /// Generates a list of all valid hub items to set for purchase
 /datum/contractor_hub/proc/create_hub_items()
@@ -47,7 +56,6 @@
 	to_generate = shuffle(to_generate)
 
 	// Support contract generation happening multiple times
-	var/start_index = 1
 	if (length(assigned_contracts))
 		start_index = length(assigned_contracts) + 1
 
@@ -73,3 +81,12 @@
 		lowest_paying_contract.contract.payout_bonus += (LOWEST_TC - total)
 
 #undef LOWEST_TC
+
+/datum/contractor_hub/proc/create_single_contract(datum/mind/owner, contract_payout_tier)
+	var/datum/syndicate_contract/contract_to_add = new(owner, assigned_targets, contract_payout_tier)
+
+	assigned_targets.Add(contract_to_add.contract.target)
+
+	contract_to_add.id = start_index
+	assigned_contracts.Add(contract_to_add)
+	start_index++
