@@ -642,16 +642,6 @@
 	message = "says a swear word!"
 	emote_type = EMOTE_AUDIBLE
 
-//Species specific emotes
-/datum/emote/living/quill
-	key = "quill"
-	key_third_person = "quills"
-	message = "rustles their quills."
-	emote_type = EMOTE_AUDIBLE
-	muzzle_ignore = TRUE
-	vary = TRUE
-	sound = 'sound/emotes/voxrustle.ogg'
-
 /datum/emote/living/snap
 	key = "snap"
 	key_third_person = "snaps"

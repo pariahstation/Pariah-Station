@@ -285,6 +285,18 @@
 	sound = 'sound/voice/wurble.ogg'
 	species_type_whitelist_typecache = list(/datum/species/skrell)
 
+//Vox emotes
+/*
+/datum/emote/living/carbon/human/quill
+	key = "quill"
+	key_third_person = "quills"
+	message = "rustles their quills."
+	emote_type = EMOTE_AUDIBLE
+	muzzle_ignore = TRUE
+	vary = TRUE
+	sound = 'sound/emotes/voxrustle.ogg'
+*/
+
 //Teshari emotes
 /datum/emote/living/carbon/human/chirp
 	key = "chirp"
