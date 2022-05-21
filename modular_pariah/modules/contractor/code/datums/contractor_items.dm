@@ -14,6 +14,10 @@
 
 /// Subtract cost, and spawn if it's an item.
 /datum/contractor_item/proc/handle_purchase(datum/contractor_hub/hub, mob/living/user)
+	if(!item) 
+		return
+	if(!ispath(item))
+		CRASH("Contractor item [src] is not assigned a typepath")
 	if(hub.contract_rep >= cost)
 		hub.contract_rep -= cost
 	else
@@ -28,17 +32,13 @@
 
 	user.playsound_local(user, 'sound/machines/uplinkpurchase.ogg', 100)
 
-	if(item && ispath(item))
-		var/atom/item_to_create = new item(get_turf(user))
+	var/atom/item_to_create = new item(get_turf(user))
+	if(user.put_in_hands(item_to_create))
+		to_chat(user, span_notice("Your purchase materializes into your hands!"))
+	else
+		to_chat(user, span_notice("Your purchase materializes onto the floor."))
 
-		if(user.put_in_hands(item_to_create))
-			to_chat(user, span_notice("Your purchase materializes into your hands!"))
-		else
-			to_chat(user, span_notice("Your purchase materializes onto the floor."))
-
-		return item_to_create
-	else if(item && !ispath(item))
-		stack_trace("Contractor item [src] has an item that isn't a path.")
+	return item_to_create
 	return TRUE
 
 /datum/contractor_item/contract_reroll
@@ -51,11 +51,11 @@
 /datum/contractor_item/contract_reroll/handle_purchase(datum/contractor_hub/hub)
 	. = ..()
 
-	if(!(.))
+	if(!.)
 		return
 	// We're not regenerating already completed/aborted/extracting contracts, but we don't want to repeat their targets.
 	var/list/new_target_list = list()
-	for(var/datum/syndicate_contract/contract_check in hub.assigned_contracts)
+	for(var/datum/syndicate_contract/contract_check as anything in hub.assigned_contracts)
 		if (contract_check.status != CONTRACT_STATUS_ACTIVE && contract_check.status != CONTRACT_STATUS_INACTIVE)
 			if (contract_check.contract.target)
 				new_target_list.Add(contract_check.contract.target)
@@ -99,7 +99,7 @@
 /datum/contractor_item/contractor_partner/handle_purchase(datum/contractor_hub/hub, mob/living/user)
 	. = ..()
 
-	if(!(.))
+	if(!.)
 		return
 	to_chat(user, span_notice("The uplink vibrates quietly, connecting to nearby agents..."))
 
@@ -154,7 +154,7 @@
 /datum/contractor_item/blackout/handle_purchase(datum/contractor_hub/hub)
 	. = ..()
 
-	if(!(.))
+	if(!.)
 		return
 	power_fail(35, 50)
 	priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
@@ -169,7 +169,7 @@
 /datum/contractor_item/comms_blackout/handle_purchase(datum/contractor_hub/hub)
 	. = ..()
 
-	if(!(.))
+	if(!.)
 		return
 	var/datum/round_event_control/event = locate(/datum/round_event_control/communications_blackout) in SSevents.control
 	event.runEvent()

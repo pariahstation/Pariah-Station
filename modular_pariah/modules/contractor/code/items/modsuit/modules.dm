@@ -236,9 +236,8 @@
 
 /obj/item/mod/module/scorpion_hook/Initialize(mapload)
 	. = ..()
-	if(!stored_hook)
-		stored_hook = new /obj/item/gun/magic/hook/contractor(src)
-		stored_hook.hook_module = src
+	stored_hook = new /obj/item/gun/magic/hook/contractor(src)
+	stored_hook.hook_module = src
 
 /obj/item/mod/module/scorpion_hook/Destroy()
 	if(stored_hook)

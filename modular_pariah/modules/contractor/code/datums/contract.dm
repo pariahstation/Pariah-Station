@@ -157,11 +157,10 @@
 	priority_announce("One of your crew was captured by a rival organisation - we've needed to pay their ransom to bring them back. \
 					As is policy we've taken a portion of the station's funds to offset the overall cost.", null, null, null, "Nanotrasen Asset Protection")
 
-	INVOKE_ASYNC(src, .proc/finish_enter)
+	addtimer(CALLBACK(src, .proc/finish_enter), 3 SECONDS))
 
 /// Called when person is finished shoving in, awards ransome money
 /datum/syndicate_contract/proc/finish_enter()
-	sleep(3 SECONDS)
 
 	// Pay contractor their portion of ransom
 	if(!(status == CONTRACT_STATUS_COMPLETE))
@@ -213,7 +212,7 @@
 /datum/syndicate_contract/proc/victim_stage_five(mob/living/target)
 	target.flash_act()
 	target.Unconscious(200)
-	to_chat(target, span_hypnophrase(span_reallybig(">A million voices echo in your head... <i>\"Your mind held many valuable secrets - \
+	to_chat(target, span_hypnophrase(span_reallybig("A million voices echo in your head... <i>\"Your mind held many valuable secrets - \
 				we thank you for providing them. Your value is expended, and you will be ransomed back to your station. We always get paid, \
 				so it's only a matter of time before we ship you back...\"</i>")))
 	target.blur_eyes(10)
@@ -225,10 +224,8 @@
 	var/list/possible_drop_loc = list()
 
 	for(var/turf/possible_drop in contract.dropoff.contents)
-		if(!(!isspaceturf(possible_drop) && !isclosedturf(possible_drop)))
-			continue
-		if(!possible_drop.is_blocked_turf())
-			possible_drop_loc.Add(possible_drop)
+		if(is_safe_turf(possible_drop))
+			possible_drop_loc += possible_drop
 
 	if (length(possible_drop_loc) > 0)
 		var/pod_rand_loc = rand(1, length(possible_drop_loc))
@@ -241,7 +238,7 @@
 		do_sparks(8, FALSE, target)
 		target.visible_message(span_notice("[target] vanishes..."))
 
-		for(var/obj/item/target_item in target)
+		for(var/obj/item/target_item as anything in target.get_all_worn_items()
 			if(ishuman(target))
 				var/mob/living/carbon/human/human_target = target
 				if(target_item == human_target.w_uniform)
@@ -250,14 +247,14 @@
 					continue
 			target.dropItemToGround(target_item)
 
-		for(var/obj/item/target_item in victim_belongings)
+		for(var/obj/item/target_item as anything in victim_belongings)
 			target_item.forceMove(return_pod)
 
 		target.forceMove(return_pod)
 
 		target.flash_act()
 		target.blur_eyes(30)
-		target.dizziness += 70
+		target.Dizzy(70)
 		target.add_confusion(20)
 
 		new /obj/effect/pod_landingzone(possible_drop_loc[pod_rand_loc], return_pod)

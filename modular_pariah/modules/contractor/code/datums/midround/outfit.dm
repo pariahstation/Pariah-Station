@@ -36,7 +36,7 @@
 	glasses = /obj/item/clothing/glasses/night
 
 /datum/outfit/contractor_preview/post_equip(mob/living/carbon/human/guy, visualsOnly)
-    var/obj/item/mod/module/armor_booster/booster = locate() in guy.back
+    var/obj/item/mod/module/armor_booster/booster = guy.back
     booster.active = TRUE
     guy.update_inv_back()
 

@@ -26,7 +26,7 @@
 	if(!holster)
 		return
 	if(!user)
-		user = holster?.mod?.wearer
+		user = holster.mod?.wearer
 	var/obj/item/storage = src.loc
 	var/datum/component/storage/storagecomp = storage.GetComponent(/datum/component/storage)
 	storagecomp.remove_from_storage(src, get_turf(src))
@@ -86,10 +86,11 @@
 	for(var/obj/item/baton_upgrade/upgrade in contents)
 		. += "<br>[span_notice("[upgrade].")]"
 
-/obj/item/melee/baton/telescopic/contractor_baton/proc/add_upgrade(obj/item/baton_upgrade/upgrade)
+/obj/item/melee/baton/telescopic/contractor_baton/proc/add_upgrade(obj/item/baton_upgrade/upgrade, mob/user)
 	if(!(upgrade_flags & upgrade.upgrade_flag))
 		upgrade_flags |= upgrade.upgrade_flag
 		upgrade.forceMove(src)
+			user.visible_message(span_notice("\The [user] inserts the [upgrade] into \the [src]."), span_notice("You insert \the [upgrade] into \the [src]."), span_hear("You hear a faint click."))
 		return TRUE
 	return FALSE
 
