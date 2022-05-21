@@ -242,9 +242,9 @@
 	key_third_person = "hisses"
 	message = "hisses!"
 	emote_type = EMOTE_AUDIBLE
-	mob_type_allowed_typecache = list(/mob/living/carbon, /mob/living/silicon/pai)
 	vary = TRUE
 	sound = 'sound/emotes/hiss.ogg'
+	mob_type_allowed_typecache = list(/mob/living/carbon, /mob/living/silicon/pai)
 	species_type_whitelist_typecache = list(/datum/species/lizard, /datum/species/human/felinid)
 
 //Lizard emotes
@@ -295,7 +295,7 @@
 	sound = 'sound/voice/bird/chirp.ogg'
 	// species_type_whitelist_typecache = list(/datum/species/teshari)
 
-/datum/emote/living/carbon/humang/chirp2
+/datum/emote/living/carbon/human/chirp2
 	key = "chirp2"
 	key_third_person = "chirps"
 	message = "chirps!"

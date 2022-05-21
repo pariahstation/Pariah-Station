@@ -53,7 +53,6 @@
 		if(user.gender == MALE)
 			return 'sound/emotes/male/burp_m.ogg'
 		return 'sound/emotes/female/burp_f.ogg'
-	return
 
 /datum/emote/living/choke
 	key = "choke"
@@ -199,14 +198,12 @@
 						'sound/emotes/male/gasp_m4.ogg',
 						'sound/emotes/male/gasp_m5.ogg',
 						'sound/emotes/male/gasp_m6.ogg')
-
 		return pick('sound/emotes/female/gasp_f1.ogg',
 					'sound/emotes/female/gasp_f2.ogg',
 					'sound/emotes/female/gasp_f3.ogg',
 					'sound/emotes/female/gasp_f4.ogg',
 					'sound/emotes/female/gasp_f5.ogg',
 					'sound/emotes/female/gasp_f6.ogg')
-	return
 
 /datum/emote/living/giggle
 	key = "giggle"
@@ -367,7 +364,6 @@
 		if(user.gender == MALE)
 			return 'sound/emotes/male/male_sigh.ogg'
 		return 'sound/emotes/female/female_sigh.ogg'
-	return
 
 /datum/emote/living/clap1
 	key = "clap1"
@@ -382,7 +378,7 @@
 /datum/emote/living/clap1/get_sound(mob/living/user)
 	return pick('sound/emotes/claponce2.ogg')
 
-/datum/emote/living/clap1/can_run_emote(mob/living/carbon/user, status_check = TRUE , intentional)
+/datum/emote/living/clap1/can_run_emote(mob/living/carbon/user, status_check = TRUE, intentional)
 	if(user.usable_hands < 2)
 		return FALSE
 	return ..()
@@ -421,7 +417,6 @@
 		if(user.gender == MALE)
 			return 'sound/emotes/male/male_sniff.ogg'
 		return 'sound/emotes/female/female_sniff.ogg'
-	return
 
 /datum/emote/living/snore
 	key = "snore"
