@@ -220,7 +220,7 @@
 	target.add_confusion(20)
 
 /// We're returning the victim
-/datum/syndicate_contract/proc/return_victim(mob/living/target)
+/datum/syndicate_contract/proc/return_victim(mob/living/carbon/target)
 	var/list/possible_drop_loc = list()
 
 	for(var/turf/possible_drop in contract.dropoff.contents)
@@ -237,15 +237,15 @@
 
 		do_sparks(8, FALSE, target)
 		target.visible_message(span_notice("[target] vanishes..."))
-
-		for(var/obj/item/target_item as anything in target)
-			if(ishuman(target))
-				var/mob/living/carbon/human/human_target = target
-				if(target_item == human_target.w_uniform)
-					continue //So all they're left with are shoes and uniform.
-				if(target_item == human_target.shoes)
-					continue
-			target.dropItemToGround(target_item)
+		if(istype(target))
+			for(var/obj/item/target_item as anything in target.get_all_worn_items())
+				if(ishuman(target))
+					var/mob/living/carbon/human/human_target = target
+					if(target_item == human_target.w_uniform)
+						continue //So all they're left with are shoes and uniform.
+					if(target_item == human_target.shoes)
+						continue
+				target.dropItemToGround(target_item)
 
 		for(var/obj/item/target_item as anything in victim_belongings)
 			target_item.forceMove(return_pod)
