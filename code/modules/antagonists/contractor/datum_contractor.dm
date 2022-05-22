@@ -1,4 +1,4 @@
-// USED FOR THE MIDROUND
+// USED FOR THE MIDROUND ANTAGONIST
 /datum/antagonist/contractor
 	name = "Drifting Contractor"
 	antagpanel_category = "DriftingContractor"

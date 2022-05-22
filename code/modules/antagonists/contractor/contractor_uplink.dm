@@ -44,7 +44,8 @@
 		if("PRG_login")
 			var/datum/antagonist/antag_data = user.mind.has_antag_datum(/datum/antagonist)
 
-			if (!antag_data) // Just in case
+			if (!antag_data)
+				to_chat(usr, span_warning("You need to be an antagonist to become a Contractor!"))
 				return FALSE
 			// Only play greet sound, and handle contractor hub when assigning for the first time.
 			if (!antag_data.contractor_hub)

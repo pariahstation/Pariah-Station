@@ -35,6 +35,10 @@
 	uniform = /obj/item/clothing/under/syndicate
 	glasses = /obj/item/clothing/glasses/night
 
+/datum/outfit/contractor/fully_upgraded
+	name = "Syndicate Contractor - Fully Upgraded"
+	back = /obj/item/mod/control/pre_equipped/contractor/upgraded/adminbus
+
 /datum/outfit/contractor_preview/post_equip(mob/living/carbon/human/guy, visualsOnly)
     var/obj/item/mod/module/armor_booster/booster = guy.back
     booster.active = TRUE
