@@ -349,18 +349,21 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			if(!discord_is_link_valid(ckey))
 				var/discord_otp = discord_get_or_generate_one_time_token_for_ckey(ckey)
 
-				to_chat(src, span_danger(CONFIG_GET(string/panic_bunker_discord_register_message)))
-				to_chat(src, span_boldnotice("Your One-Time-Password is: [discord_otp]"))
-				to_chat(src, span_userdanger("DO NOT SHARE THIS OTP WITH ANYONE"))
+				to_chat_immediate(src, span_danger(CONFIG_GET(string/panic_bunker_discord_register_message)))
+				to_chat_immediate(src, span_boldnotice("Your One-Time-Password is: [discord_otp]"))
+				to_chat_immediate(src, span_userdanger("DO NOT SHARE THIS OTP WITH ANYONE"))
 				var/discord_prefix = CONFIG_GET(string/discordbotcommandprefix)
-				to_chat(src, span_notice("To link your Discord account, head to the Discord Guild and paste the following message:<hr/><code>[discord_prefix]verify [discord_otp]</code><hr/>\n"))
+				to_chat_immediate(src, span_notice("To link your Discord account, head to the Discord Guild and paste the following message:<hr/><code>[discord_prefix]verify [discord_otp]</code><hr/>\n"))
 
 				if(connecting_admin)
 					log_admin("The admin [key] has been allowed to bypass the Discord account link requirement")
 					message_admins(span_adminnotice("The admin [key] has been allowed to bypass the Discord account link requirement"))
 					to_chat(src, "As an admin, you have been allowed to bypass the Discord account link requirement")
+
 				else
 					log_access("Failed Login: [key] - No valid Discord account link registered.")
+					//restricted_mode = TRUE //Don't let them do anything.
+					//QDEL_IN(src, 10 SECONDS)
 					qdel(src)
 					return
 
@@ -508,7 +511,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(!tooltips)
 		tooltips = new /datum/tooltip(src)
 
-	if (!interviewee)
+	if (!restricted_mode)
 		initialize_menus()
 
 	view_size = new(src, getScreenSize(prefs.read_preference(/datum/preference/toggle/widescreen)))
@@ -963,7 +966,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	..()
 
 /client/proc/add_verbs_from_config()
-	if (interviewee)
+	if (restricted_mode)
 		return
 	if(CONFIG_GET(flag/see_own_notes))
 		add_verb(src, /client/proc/self_notes)
