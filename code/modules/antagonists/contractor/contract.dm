@@ -237,14 +237,13 @@
 
 		do_sparks(8, FALSE, target)
 		target.visible_message(span_notice("[target] vanishes..."))
-		if(istype(target))
+		if(ishuman(target))
+			var/mob/living/carbon/human/human_target = target
 			for(var/obj/item/target_item as anything in target.get_all_worn_items())
-				if(ishuman(target))
-					var/mob/living/carbon/human/human_target = target
-					if(target_item == human_target.w_uniform)
-						continue //So all they're left with are shoes and uniform.
-					if(target_item == human_target.shoes)
-						continue
+				if(target_item == human_target.w_uniform)
+					continue //So all they're left with are shoes and uniform.
+				if(target_item == human_target.shoes)
+					continue
 				target.dropItemToGround(target_item)
 
 		for(var/obj/item/target_item as anything in victim_belongings)
