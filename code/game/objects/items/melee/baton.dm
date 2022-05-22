@@ -407,6 +407,7 @@
 	. = ..()
 	if(istype(attacking_item, /obj/item/baton_upgrade))
 		if(add_upgrade(attacking_item, user))
+			to_chat(user, span_notice("You attach \the [attacking_item]."))
 			balloon_alert(user, "[attacking_item] attached")
 	if(!(upgrade_flags & BATON_CUFF_UPGRADE))
 		return
@@ -416,10 +417,10 @@
 	for(var/obj/item/restraints/handcuffs/cuff in src.contents)
 		cuffcount++
 	if(cuffcount >= CUFF_MAXIMUM)
-		balloon_alert(user, "baton at maximum cuffs")
+		to_chat(user, span_warning("\The [src] is at maximum capacity for handcuffs!"))
 		return
 	attacking_item.forceMove(src)
-	balloon_alert(user, "[attacking_item] inserted")
+	to_chat(user, span_notice("You insert \the [attacking_item] into [src]."))
 
 /obj/item/melee/baton/telescopic/contractor_baton/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()

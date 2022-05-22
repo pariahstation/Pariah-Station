@@ -347,14 +347,14 @@
 		to_chat(user, span_warning("You need a free hand to hold [stored_batong]!"))
 		return
 	deployed = TRUE
-	balloon_alert(user, "[stored_batong] deployed")
+	to_chat(user, span_notice("You deploy [stored_batong]."))
 
 /obj/item/mod/module/baton_holster/proc/undeploy(mob/living/user)
 	if(QDELETED(stored_batong))
 		return
 	stored_batong.forceMove(src)
 	deployed = FALSE
-	balloon_alert(user, "[stored_batong] retracted")
+	to_chat(user, span_notice("You retract [stored_batong]."))
 
 /obj/item/mod/module/baton_holster/preloaded
 
@@ -548,12 +548,12 @@
 		to_chat(user, span_warning("You need a free hand to hold [stored_hook]!"))
 		return
 	deployed = TRUE
-	balloon_alert(user, "[stored_hook] deployed")
+	to_chat(user, span_notice("You deploy [stored_hook]."))
 
 /obj/item/mod/module/scorpion_hook/proc/undeploy(mob/living/user)
 	if(QDELETED(stored_hook))
 		return
 	stored_hook.forceMove(src)
 	deployed = FALSE
-	balloon_alert(user, "[stored_hook] retracted")
+	to_chat(user, span_notice("You retract [stored_hook]."))
 
