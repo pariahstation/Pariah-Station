@@ -349,6 +349,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			if(!discord_is_link_valid(ckey))
 				var/discord_otp = discord_get_or_generate_one_time_token_for_ckey(ckey)
 
+				//These need to be immediate because we're disposing of the client the second we're done with this.
 				to_chat_immediate(src, span_danger(CONFIG_GET(string/panic_bunker_discord_register_message)))
 				to_chat_immediate(src, span_boldnotice("Your One-Time-Password is: [discord_otp]"))
 				to_chat_immediate(src, span_userdanger("DO NOT SHARE THIS OTP WITH ANYONE"))
@@ -362,8 +363,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 				else
 					log_access("Failed Login: [key] - No valid Discord account link registered.")
-					//restricted_mode = TRUE //Don't let them do anything.
-					//QDEL_IN(src, 10 SECONDS)
 					qdel(src)
 					return
 
