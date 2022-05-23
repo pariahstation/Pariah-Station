@@ -520,44 +520,9 @@
 			a target towards you at high speed, knocking them down and \
 			partially exhausting them."
 	icon_state = "hook"
-	complexity = 3
 	incompatible_modules = list(/obj/item/mod/module/scorpion_hook)
-	module_type = MODULE_USABLE
-	/// Ref to the hook
-	var/obj/item/gun/magic/hook/contractor/stored_hook
-	/// If the hook is out or not
-	var/deployed = FALSE
-
-/obj/item/mod/module/scorpion_hook/Initialize(mapload)
-	. = ..()
-	stored_hook = new /obj/item/gun/magic/hook/contractor(src)
-	stored_hook.hook_module = src
-
-/obj/item/mod/module/scorpion_hook/Destroy()
-	if(stored_hook)
-		stored_hook.hook_module = null
-		QDEL_NULL(stored_hook)
-	. = ..()
-
-/obj/item/mod/module/scorpion_hook/on_use()
-	if(!deployed)
-		deploy(mod.wearer)
-	else
-		undeploy(mod.wearer)
-
-/obj/item/mod/module/scorpion_hook/proc/deploy(mob/living/user)
-	if(!(stored_hook in src))
-		return
-	if(!user.put_in_hands(stored_hook))
-		to_chat(user, span_warning("You need a free hand to hold [stored_hook]!"))
-		return
-	deployed = TRUE
-	to_chat(user, span_notice("You deploy [stored_hook]."))
-
-/obj/item/mod/module/scorpion_hook/proc/undeploy(mob/living/user)
-	if(QDELETED(stored_hook))
-		return
-	stored_hook.forceMove(src)
-	deployed = FALSE
-	to_chat(user, span_notice("You retract [stored_hook]."))
-
+	module_type = MODULE_ACTIVE
+	complexity = 3
+	active_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
+	device = /obj/item/gun/magic/hook/contractor
+	cooldown_time = 0.5 SECONDS
