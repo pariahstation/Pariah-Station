@@ -508,6 +508,10 @@
 /obj/item/mod/module/springlock/contractor/on_suit_deactivation(deleting = FALSE)
 	return
 
+/// This exists for the adminbus contractor modsuit. Do not use otherwise
+/obj/item/mod/module/springlock/contractor/no_complexity
+	complexity = 0
+
 /// SCORPION - hook a target into baton range quickly and non-lethally
 /obj/item/mod/module/scorpion_hook
 	name = "MOD SCORPION hook module"
