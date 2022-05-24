@@ -60,7 +60,9 @@
 		//Default to MAP_DIRECTORY_MAPS if no directory is passed
 		if(directory)
 			if(!(directory in MAP_DIRECTORY_WHITELIST))
+				#ifndef UNIT_TEST // Handled by /datum/unit_test/load_map_security
 				log_world("map directory not in whitelist: [directory] for map [filename]")
+				#endif
 				return config
 		else
 			directory = MAP_DIRECTORY_MAPS
@@ -176,7 +178,7 @@
 			log_world("map_config \"job_changes\" field is missing or invalid!")
 			return
 		job_changes = json["job_changes"]
-	
+
 	if("library_areas" in json)
 		if(!islist(json["library_areas"]))
 			log_world("map_config \"library_areas\" field is missing or invalid!")
