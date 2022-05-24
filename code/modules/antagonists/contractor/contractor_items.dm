@@ -157,8 +157,6 @@
 		return
 	power_fail(35, 50)
 	priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
-	var/datum/round_event_control/event = locate(/datum/round_event_control/grid_check) in SSevents.control
-	event.runEvent()
 
 /datum/contractor_item/comms_blackout
 	name = "Comms Outage"
