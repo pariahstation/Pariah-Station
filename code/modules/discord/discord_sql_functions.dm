@@ -50,7 +50,7 @@
 
 	if(!query_insert_link_record.Execute())
 		qdel(query_insert_link_record)
-		message_admins("WARNING! FAILED TO ASSIGN A OTP FOR USER [ckey_for], CALL A CODER!")]
+		message_admins("WARNING! FAILED TO ASSIGN A OTP FOR USER [ckey_for], CALL A CODER!")
 		stack_trace("WARNING! FAILED TO ASSIGN A OTP FOR USER [ckey_for], CALL A CODER!")
 		return "INVALID_PASSWORD_CALL_A_CODER"
 
