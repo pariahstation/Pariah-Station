@@ -19,4 +19,9 @@
 #define SNOUTED_MASK_FILE 'modular_pariah/master_files/icons/mob/clothing/mask_muzzled.dmi'
 
 #define SNOUTED_HEAD_FILE 'modular_pariah/master_files/icons/mob/clothing/head_muzzled.dmi'
+
+///The dmi containing vox variation masks
+#define VOX_MASK_FILE 'icons/mob/clothing/mask/vox.dmi'
+
+#define VOX_HEAD_FILE 'icons/mob/clothing/head/vox.dmi'
 //PARIAH EDIT END

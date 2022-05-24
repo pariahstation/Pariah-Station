@@ -4,6 +4,8 @@
 	var/icon/worn_icon_digitigrade
 	//Same as above, but for if the user is snouted.
 	var/icon/worn_icon_snouted
+	//Same as above, but for if the user is snouted.
+	var/icon/worn_icon_vox
 
 	var/greyscale_config_worn_digitigrade
 
@@ -17,7 +19,7 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
 
 /obj/item/clothing/mask
-	supports_variations_flags = CLOTHING_SNOUTED_VARIATION
+	supports_variations_flags = CLOTHING_SNOUTED_VARIATION | CLOTHING_VOX_VARIATION
 
 /obj/item/clothing/under/color/jumpskirt
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON

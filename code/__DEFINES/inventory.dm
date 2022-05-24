@@ -132,9 +132,11 @@
 #define CLOTHING_DIGITIGRADE_VARIATION (1<<1)
 ///The sprite works fine for digitigrade legs as-is.
 #define CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON (1<<2)
+///Has a sprite for voxes specifically.
+#define CLOTHING_VOX_VARIATION (1<<3)
 //PARIAH EDIT
 ///Has a sprite for snouted heads specifically.
-#define CLOTHING_SNOUTED_VARIATION (1<<3)
+#define CLOTHING_SNOUTED_VARIATION (1<<4)
 //PARIAH EDIT END
 
 //flags for covering body parts

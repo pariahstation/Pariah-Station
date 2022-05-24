@@ -80,6 +80,8 @@
 #define BODYTYPE_SNOUTED (1<<5)
 ///The limb has skrelly bits
 #define BODYTYPE_SKRELL (1<<6)
+///THe limb is voxed
+#define BODYTYPE_VOX (1<<7)
 
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"

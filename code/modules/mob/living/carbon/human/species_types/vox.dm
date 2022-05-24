@@ -8,6 +8,7 @@
 	species_traits = list(
 		MUTCOLORS,
 		MUTCOLORS2,
+		MUTCOLORS3,
 		EYECOLOR,
 		HAS_FLESH,
 		HAS_BONE,

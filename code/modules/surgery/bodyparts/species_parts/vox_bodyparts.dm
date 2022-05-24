@@ -1,7 +1,7 @@
 // voxs!
 /obj/item/bodypart/head/vox
 	icon_greyscale = 'icons/mob/species/vox/bodyparts.dmi'
-	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC | BODYTYPE_SNOUTED
+	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC | BODYTYPE_VOX
 	limb_id = SPECIES_VOX
 	is_dimorphic = TRUE
 
