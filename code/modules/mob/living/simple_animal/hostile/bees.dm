@@ -42,7 +42,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BUG
 	gold_core_spawnable = FRIENDLY_SPAWN
 	search_objects = 1 //have to find those plant trays!
-	held_type = /obj/item/clothing/head/mob_holder/destructible
+	held_type = /obj/item/mob_holder/destructible
 	held_w_class = WEIGHT_CLASS_TINY
 
 	//Spaceborn beings don't get hurt by space
@@ -74,7 +74,7 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/bee/mob_pickup(mob/living/L)
-	var/obj/item/clothing/head/mob_holder/holder = ..()
+	var/obj/item/mob_holder/holder = ..()
 	var/list/reee = list(/datum/reagent/consumable/nutriment/vitamin = 5)
 	if(beegent)
 		reee[beegent.type] = 5

@@ -145,8 +145,8 @@
 	/// List of changes to body temperature, used by desease symtoms like fever
 	var/list/body_temp_changes = list()
 
-	/// The type of /obj/item/clothing/head/mob_holder to create if the mob is picked up.
-	var/held_type = /obj/item/clothing/head/mob_holder
+	/// The type of /obj/item/mob_holder to create if the mob is picked up.
+	var/held_type = /obj/item/mob_holder
 	/// The w_class of the holder when held.
 	var/held_w_class = WEIGHT_CLASS_NORMAL
 	///if it can be held, can it be equipped to any slots? (think pAI's on head)

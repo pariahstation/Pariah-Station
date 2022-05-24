@@ -1609,7 +1609,7 @@
 	return TRUE
 
 /**
- * Spawn a [/obj/item/clothing/head/mob_holder], move `src` into it, and put it into the hands of `user`.
+ * Spawn a [/obj/item/mob_holder], move `src` into it, and put it into the hands of `user`.
  *
  * [/mob/living/proc/mob_try_pickup] should be called instead of this under most circumstances.
  *
@@ -1617,7 +1617,7 @@
  * * mob/living/user - The user picking up this mob.
  */
 /mob/living/proc/mob_pickup(mob/living/user)
-	var/obj/item/clothing/head/mob_holder/holder = new held_type(get_turf(src), src, held_state, head_icon, held_lh, held_rh, worn_slot_flags)
+	var/obj/item/mob_holder/holder = new held_type(get_turf(src), src, held_state, head_icon, held_lh, held_rh, worn_slot_flags)
 	user.visible_message(span_warning("[user] picks up [src]!"))
 	user.put_in_hands(holder)
 	return holder

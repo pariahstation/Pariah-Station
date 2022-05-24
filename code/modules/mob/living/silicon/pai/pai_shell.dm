@@ -57,8 +57,8 @@
 	visible_message(span_notice("[src] deactivates its holochassis emitter and folds back into a compact card!"))
 	stop_pulling()
 	if(ismobholder(loc))
-		var/obj/item/clothing/head/mob_holder/MH = loc
-		MH.release(display_messages = FALSE)
+		var/obj/item/mob_holder/MH = loc
+		MH.release_mob(display_messages = FALSE)
 	if(client)
 		client.perspective = EYE_PERSPECTIVE
 		client.eye = card
