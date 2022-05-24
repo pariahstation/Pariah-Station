@@ -389,7 +389,7 @@
 
 /datum/config_entry/number/panic_bunker_living // living time in minutes that a player needs to pass the panic bunker
 	min_val = -1
-	config_entry_value = -1
+	default = -1
 
 /// Flag for requiring players who would otherwise be denied access by the panic bunker to complete a written interview
 /datum/config_entry/flag/panic_bunker_interview
@@ -399,7 +399,7 @@
 
 /// String to show the user if they were denied access due to the WAS
 /datum/config_entry/string/panic_bunker_discord_register_message
-	config_entry_value = "Sorry but this server requires players to link their Discord account before playing! Please enter the following command, including the token, into this Server's Discord Guild."
+	default = "Sorry but this server requires players to link their Discord account before playing! Please enter the following command, including the token, into this Server's Discord Guild."
 
 /datum/config_entry/string/panic_bunker_message
 	default = "Sorry but the server is currently not accepting connections from never before seen players."

@@ -50,7 +50,9 @@
 
 	if(!query_insert_link_record.Execute())
 		qdel(query_insert_link_record)
-		return ""
+		message_admins("WARNING! FAILED TO ASSIGN A OTP FOR USER [ckey_for], CALL A CODER!")]
+		stack_trace("WARNING! FAILED TO ASSIGN A OTP FOR USER [ckey_for], CALL A CODER!")
+		return "INVALID_PASSWORD_CALL_A_CODER"
 
 	//Cleanup
 	qdel(query_insert_link_record)
@@ -63,7 +65,7 @@
  *
  * Arguments:
  * * one_time_token the string of words representing the one time token
- * * timebound A boolean flag, that specifies if it should only look for entries within the last 4 hours, off by default
+ * * timebound A boolean flag, that specifies if it should only look for entries within the last 4 hours, false by default
  *
  * Returns a [/datum/discord_link_record]
  */
@@ -110,7 +112,7 @@
  *
  * Arguments:
  * * ckey the users ckey as a string
- * * timebound should we search only in the last 4 hours
+ * * timebound A boolean flag, that specifies if it should only look for entries within the last 4 hours, false by default
  *
  * Returns a [/datum/discord_link_record]
  */

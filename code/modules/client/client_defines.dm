@@ -244,7 +244,7 @@
 	/// On next move, subtract this dir from the move that would otherwise be done
 	var/next_move_dir_sub
 
-	/// If the client is currently under the restrictions of the interview system, or does not have a verified discord key.
+	/// If the client is currently under the restrictions of the interview system, or any other reason.
 	var/restricted_mode = FALSE
 
 	/// Whether or not this client has standard hotkeys enabled
