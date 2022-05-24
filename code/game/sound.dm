@@ -207,7 +207,6 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 
 /proc/get_sfx(soundin)
 	if(istext(soundin))
-		soundin = get_sfx_pariah(soundin) //PARIAH EDIT ADDITION - This overrides the default sound effects too, so use it to modularly change a sound effect output.
 		switch(soundin)
 			if (SFX_SHATTER)
 				soundin = pick('sound/effects/glassbr1.ogg','sound/effects/glassbr2.ogg','sound/effects/glassbr3.ogg')
@@ -273,4 +272,6 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 				soundin = pick('sound/effects/treechop1.ogg', 'sound/effects/treechop2.ogg', 'sound/effects/treechop3.ogg')
 			if(SFX_ROCK_TAP)
 				soundin = pick('sound/effects/rocktap1.ogg', 'sound/effects/rocktap2.ogg', 'sound/effects/rocktap3.ogg')
+			if(SFX_KEYBOARD)
+				soundin = pick('sound/effects/keypress1.ogg','sound/effects/keypress2.ogg','sound/effects/keypress3.ogg','sound/effects/keypress4.ogg','sound/effects/keystroke4.ogg')
 	return soundin

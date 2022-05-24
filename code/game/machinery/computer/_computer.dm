@@ -11,6 +11,9 @@
 	var/icon_screen = "generic"
 	var/time_to_screwdrive = 20
 	var/authenticated = 0
+	var/clicksound = "keyboard"
+	var/clickvol = 40
+	var/next_clicksound
 
 /obj/machinery/computer/Initialize(mapload, obj/item/circuitboard/C)
 	. = ..()
@@ -133,3 +136,15 @@
 	SHOULD_CALL_PARENT(TRUE)
 	. = ..()
 	update_use_power(IDLE_POWER_USE)
+
+/obj/machinery/computer/interact(mob/user, special_state)
+	. = ..()
+	if(clicksound && world.time > next_clicksound && isliving(user))
+		next_clicksound = world.time + 5
+		playsound(src, get_sfx(clicksound), clickvol)
+
+/obj/machinery/computer/ui_interact(mob/user, datum/tgui/ui)
+	if(clicksound && world.time > next_clicksound && isliving(user))
+		next_clicksound = world.time + 5
+		playsound(src, get_sfx(clicksound), clickvol)
+	. = ..()
