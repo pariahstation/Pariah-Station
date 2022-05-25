@@ -4,8 +4,6 @@
 	var/icon/worn_icon_digitigrade
 	//Same as above, but for if the user is snouted.
 	var/icon/worn_icon_snouted
-	//Same as above, but for if the user is snouted.
-	var/icon/worn_icon_vox
 
 	var/greyscale_config_worn_digitigrade
 

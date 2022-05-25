@@ -445,7 +445,7 @@ There are several things that need to be remembered:
 
 		if(dna.species.bodytype & BODYTYPE_VOX)
 			if(worn_item.supports_variations_flags & CLOTHING_VOX_VARIATION)
-				icon_file = head.worn_icon_vox || VOX_HEAD_FILE
+				icon_file = VOX_HEAD_FILE
 		//PARIAH EDIT END
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(worn_item))))
@@ -578,7 +578,7 @@ There are several things that need to be remembered:
 
 		if(dna.species.bodytype & BODYTYPE_VOX)
 			if(worn_item.supports_variations_flags & CLOTHING_VOX_VARIATION)
-				icon_file = wear_mask.worn_icon_vox || VOX_MASK_FILE
+				icon_file = VOX_MASK_FILE
 		//PARIAH EDIT END
 
 		if(!(ITEM_SLOT_MASK in check_obscured_slots()))
