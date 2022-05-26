@@ -36,7 +36,7 @@
 #define DNA_UNI_IDENTITY_BLOCKS 7
 
 /// This number needs to equal the total number of DNA blocks
-#define DNA_FEATURE_BLOCKS 16
+#define DNA_FEATURE_BLOCKS 19
 
 #define DNA_MUTANT_COLOR_BLOCK 1
 #define DNA_ETHEREAL_COLOR_BLOCK 2
@@ -54,6 +54,9 @@
 #define DNA_MUSHROOM_CAPS_BLOCK 14
 #define DNA_MONKEY_TAIL_BLOCK 15
 #define DNA_POD_HAIR_BLOCK 16
+#define DNA_HEADTAILS_BLOCK 17
+#define DNA_MUTANT_COLOR_BLOCK_2 18
+#define DNA_MUTANT_COLOR_BLOCK_3 19
 
 #define DNA_SEQUENCE_LENGTH 4
 #define DNA_MUTATION_BLOCKS 8
@@ -91,6 +94,9 @@
 ///will be assigned a universal vampire themed last name shared by their department. this is preferenced!
 #define BLOOD_CLANS 21
 
+#define MUTCOLORS2			22
+#define MUTCOLORS3			23
+
 //organ slots
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"
 #define ORGAN_SLOT_APPENDIX "appendix"
@@ -127,6 +133,7 @@
 #define ORGAN_SLOT_EXTERNAL_ANTENNAE "antennae"
 #define ORGAN_SLOT_EXTERNAL_BODYMARKINGS "bodymarkings"
 #define ORGAN_SLOT_EXTERNAL_POD_HAIR "pod_hair"
+#define ORGAN_SLOT_EXTERNAL_HEADTAILS "headtails"
 
 /// Xenomorph organ slots
 #define ORGAN_SLOT_XENO_ACIDGLAND "acid_gland"

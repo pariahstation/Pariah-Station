@@ -87,10 +87,14 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 	if(!GLOB.pod_hair_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/pod_hair, GLOB.pod_hair_list)
+	if(!GLOB.headtails_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/headtails, GLOB.headtails_list)
 
 	//For now we will always return none for tail_human and ears.
 	return(list(
 		"mcolor" = "#[pick("7F","FF")][pick("7F","FF")][pick("7F","FF")]",
+		"mcolor2" = "#[pick("7F","FF")][pick("7F","FF")][pick("7F","FF")]",
+		"mcolor3" = "#[pick("7F","FF")][pick("7F","FF")][pick("7F","FF")]",
 		"ethcolor" = GLOB.color_list_ethereal[pick(GLOB.color_list_ethereal)],
 		"tail_lizard" = pick(GLOB.tails_list_lizard),
 		"tail_human" = "None",
@@ -108,6 +112,7 @@
 		"moth_markings" = pick(GLOB.moth_markings_list),
 		"tail_monkey" = "None",
 		"pod_hair" = pick(GLOB.pod_hair_list),
+		"headtails" = (pick(GLOB.headtails_list)),
 	))
 
 /proc/random_hairstyle(gender)

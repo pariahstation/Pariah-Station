@@ -27,6 +27,8 @@
 
 	// Mutant randomizing, doesn't affect the mob appearance unless it's the specific mutant.
 	H.dna.features["mcolor"] = "#[random_color()]"
+	H.dna.features["mcolor2"] = "#[random_color()]"
+	H.dna.features["mcolor3"] = "#[random_color()]"
 	H.dna.features["ethcolor"] = GLOB.color_list_ethereal[pick(GLOB.color_list_ethereal)]
 	H.dna.features["tail_lizard"] = pick(GLOB.tails_list_lizard)
 	H.dna.features["snout"] = pick(GLOB.snouts_list)
@@ -37,6 +39,7 @@
 	H.dna.features["moth_wings"] = pick(GLOB.moth_wings_list)
 	H.dna.features["moth_antennae"] = pick(GLOB.moth_antennae_list)
 	H.dna.features["pod_hair"] = pick(GLOB.pod_hair_list)
+	H.dna.features["headtails"] = pick(GLOB.headtails_list)
 
 	H.update_body(is_creating = TRUE)
 	H.update_hair(is_creating = TRUE)
