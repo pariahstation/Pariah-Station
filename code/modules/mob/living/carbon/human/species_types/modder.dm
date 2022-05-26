@@ -2,14 +2,12 @@
 /datum/species/human/modder
 	name = "Modded Human"
 	id = SPECIES_MODDER
-	//say_mod = "meows"
 
 	mutant_bodyparts = list("tail_human" = "Cat", "ears" = "Cat", "wings" = "None")
-
 	mutantears = /obj/item/organ/ears/cat
 	mutant_organs = list(/obj/item/organ/tail/cat)
+
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
-	//species_language_holder = /datum/language_holder/felinid
 	payday_modifier = 0.75
 	ass_image = 'icons/ass/asscat.png'
 	examine_limb_id = SPECIES_HUMAN
