@@ -26433,7 +26433,6 @@
 /turf/open/floor/plating,
 /area/medical/psychology)
 "bSt" = (
-/obj/machinery/meter/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan,
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
@@ -33298,12 +33297,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/department/science)
-"cEJ" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/smart/simple/green/visible/layer2,
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/maintenance/disposal/incinerator)
 "cFB" = (
 /obj/effect/landmark/carpspawn,
 /turf/open/space/basic,
@@ -98335,7 +98328,7 @@ ayY
 rdU
 lLo
 aJB
-cEJ
+ccs
 ccs
 axO
 uhR
