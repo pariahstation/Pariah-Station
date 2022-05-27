@@ -257,34 +257,6 @@
 	sound = 'sound/voice/raptor_purr.ogg'
 	species_type_whitelist_typecache = list(/datum/species/lizard)
 
-//Skrell emotes
-/datum/emote/living/carbon/human/warble
-	key = "warble"
-	key_third_person = "warbles!"
-	message = "warbles!"
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
-	sound = 'sound/voice/warbles.ogg'
-	species_type_whitelist_typecache = list(/datum/species/skrell)
-
-/datum/emote/living/carbon/human/trills
-	key = "trills"
-	key_third_person = "trills!"
-	message = "trills!"
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
-	sound = 'sound/voice/trills.ogg'
-	species_type_whitelist_typecache = list(/datum/species/skrell)
-
-/datum/emote/living/carbon/human/wurble
-	key = "wurble"
-	key_third_person = "wurbles"
-	message = "wurbles!"
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
-	sound = 'sound/voice/wurble.ogg'
-	species_type_whitelist_typecache = list(/datum/species/skrell)
-
 //Vox emotes
 /*
 /datum/emote/living/carbon/human/quill
@@ -297,6 +269,35 @@
 	sound = 'sound/emotes/voxrustle.ogg'
 */
 
+//Skrell emotes
+/datum/emote/living/carbon/human/warble
+	key = "warble"
+	key_third_person = "warbles!"
+	message = "warbles!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'sound/voice/warbles.ogg'
+	species_type_whitelist_typecache = list(/datum/species/skrell)
+
+//Shared custody between skrell and teshari
+/datum/emote/living/carbon/human/trills
+	key = "trills"
+	key_third_person = "trills!"
+	message = "trills!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'sound/voice/trills.ogg'
+	species_type_whitelist_typecache = list(/datum/species/skrell, /datum/species/teshari)
+
+/datum/emote/living/carbon/human/wurble
+	key = "wurble"
+	key_third_person = "wurbles"
+	message = "wurbles!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'sound/voice/wurble.ogg'
+	species_type_whitelist_typecache = list(/datum/species/skrell, /datum/species/teshari)
+
 //Teshari emotes
 /datum/emote/living/carbon/human/chirp
 	key = "chirp"
@@ -305,7 +306,7 @@
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 	sound = 'sound/voice/bird/chirp.ogg'
-	// species_type_whitelist_typecache = list(/datum/species/teshari)
+	species_type_whitelist_typecache = list(/datum/species/teshari)
 
 /datum/emote/living/carbon/human/chirp2
 	key = "chirp2"
@@ -314,4 +315,4 @@
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 	sound = 'sound/voice/bird/chirp2.ogg'
-	// species_type_whitelist_typecache = list(/datum/species/teshari)
+	species_type_whitelist_typecache = list(/datum/species/teshari)
