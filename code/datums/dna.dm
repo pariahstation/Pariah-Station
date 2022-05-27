@@ -227,6 +227,14 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		L[DNA_POD_HAIR_BLOCK] = construct_block(GLOB.pod_hair_list.Find(features["pod_hair"]), GLOB.pod_hair_list.len)
 	if(features["headtails"])
 		L[DNA_HEADTAILS_BLOCK] = construct_block(GLOB.headtails_list.Find(features["headtails"]), GLOB.headtails_list.len)
+	if(features["teshari_feathers"])
+		L[DNA_TESHARI_FEATHERS_BLOCK] = construct_block(GLOB.teshari_feathers_list.Find(features["teshari_feathers"]), GLOB.teshari_feathers_list.len)
+	if(features["teshari_ears"])
+		L[DNA_TESHARI_EARS_BLOCK] = construct_block(GLOB.teshari_ears_list.Find(features["teshari_ears"]), GLOB.teshari_ears_list.len)
+	if(features["teshari_body_feathers"])
+		L[DNA_TESHARI_BODY_FEATHERS_BLOCK] = construct_block(GLOB.teshari_body_feathers_list.Find(features["teshari_body_feathers"]), GLOB.teshari_body_feathers_list.len)
+	if(features["tail_teshari"])
+		L[DNA_TESHARI_TAIL_BLOCK] = construct_block(GLOB.teshari_tails_list.Find(features["tail_teshari"]), GLOB.teshari_tails_list.len)
 
 	if(features["tail_vox"])
 		L[DNA_VOX_TAIL_BLOCK] = construct_block(GLOB.tails_list_vox.Find(features["tail_vox"]), GLOB.tails_list_vox.len)
@@ -378,6 +386,14 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 			set_uni_feature_block(blocknumber, construct_block(GLOB.pod_hair_list.Find(features["pod_hair"]), GLOB.pod_hair_list.len))
 		if(DNA_HEADTAILS_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.headtails_list.Find(features["headtails"]), GLOB.headtails_list.len))
+		if(DNA_TESHARI_FEATHERS_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_feathers_list.Find(features["teshari_feathers"]), GLOB.teshari_feathers_list.len))
+		if(DNA_TESHARI_EARS_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_ears_list.Find(features["teshari_ears"]), GLOB.teshari_ears_list.len))
+		if(DNA_TESHARI_BODY_FEATHERS_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_body_feathers_list.Find(features["teshari_body_feathers"]), GLOB.teshari_body_feathers_list.len))
+		if(DNA_TESHARI_TAIL_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_tails_list.Find(features["tail_teshari"]), GLOB.teshari_tails_list.len))
 
 		if(DNA_VOX_TAIL_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.tails_list_vox.Find(features["tail_vox"]), GLOB.tails_list_vox.len))
@@ -660,6 +676,14 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		dna.features["pod_hair"] = GLOB.pod_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_POD_HAIR_BLOCK), GLOB.pod_hair_list.len)]
 	if(dna.features["headtails"])
 		dna.features["headtails"] = GLOB.headtails_list[deconstruct_block(get_uni_feature_block(features, DNA_HEADTAILS_BLOCK), GLOB.headtails_list.len)]
+	if(dna.features["teshari_feathers"])
+		dna.features["teshari_feathers"] = GLOB.teshari_feathers_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_FEATHERS_BLOCK), GLOB.teshari_feathers_list.len)]
+	if(dna.features["teshari_ears"])
+		dna.features["teshari_ears"] = GLOB.teshari_ears_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_EARS_BLOCK), GLOB.teshari_ears_list.len)]
+	if(dna.features["teshari_body_feathers"])
+		dna.features["teshari_body_feathers"] = GLOB.teshari_body_feathers_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_BODY_FEATHERS_BLOCK), GLOB.teshari_body_feathers_list.len)]
+	if(dna.features["tail_teshari"])
+		dna.features["tail_teshari"] = GLOB.teshari_tails_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_TAIL_BLOCK), GLOB.teshari_tails_list.len)]
 
 	if(dna.features["tail_vox"])
 		dna.features["tail_vox"] = GLOB.tails_list_vox[deconstruct_block(get_uni_feature_block(features, DNA_VOX_TAIL_BLOCK), GLOB.tails_list_vox.len)]
