@@ -17,3 +17,4 @@
 		playsound(src, get_sfx_pariah(clicksound), clickvol)
 	. = ..()
 
+#undef CLICKSOUND_TIME
