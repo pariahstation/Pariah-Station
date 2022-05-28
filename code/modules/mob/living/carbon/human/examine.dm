@@ -14,7 +14,7 @@
 		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA) || HAS_TRAIT(L, TRAIT_INVISIBLE_MAN))
 			obscure_name = TRUE
 
-	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
+	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"]</EM><hr>") //PARIAH EDIT CHANGE
 
 	var/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
@@ -255,9 +255,8 @@
 		var/list/obj/item/bodypart/bleeding_limbs = list()
 		var/list/obj/item/bodypart/grasped_limbs = list()
 
-		for(var/i in bodyparts)
-			var/obj/item/bodypart/body_part = i
-			if(body_part.get_part_bleed_rate())
+		for(var/obj/item/bodypart/body_part as anything in bodyparts)
+			if(body_part.get_modified_bleed_rate())
 				bleeding_limbs += body_part
 			if(body_part.grasped_by)
 				grasped_limbs += body_part
@@ -427,7 +426,7 @@
 					"<a href='?src=[REF(src)];hud=s;add_comment=1'>\[Add comment\]</a>"), "")
 	else if(isobserver(user))
 		. += span_info("<b>Traits:</b> [get_quirk_string(FALSE, CAT_QUIRK_ALL)]")
-	. += "*---------*</span>"
+	//. += "*---------*</span>" PARIAH EDIT REMOVAL
 
 	//PARIAH EDIT ADDITION
 	var/flavor_text_link
@@ -442,12 +441,6 @@
 		flavor_text_link = span_notice("<a href='?src=[REF(src)];lookup_info=open_examine_panel'>Examine closely...</a>")
 	if (flavor_text_link)
 		. += flavor_text_link
-
-	if(client)
-		var/erp_status_pref = client.prefs.read_preference(/datum/preference/choiced/erp_status)
-		if(erp_status_pref && erp_status_pref != "disabled")
-			. += span_notice("ERP STATUS: [erp_status_pref]")
-	//PARIAH EDIT END
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .)
 

@@ -6,6 +6,7 @@ GLOBAL_PROTECT(admin_verbs_default)
 	return list(
 	/client/proc/deadmin, /*destroys our own admin datum so we can play as a regular player*/
 	/client/proc/cmd_admin_say, /*admin-only ooc chat*/
+	/client/proc/cmd_loud_admin_say, /*ditto except its annoying - PARIAH EDIT ADDITION - ADMIN*/
 	/client/proc/hide_verbs, /*hides all our adminverbs*/
 	/client/proc/debug_variables, /*allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify*/
 	/client/proc/dsay, /*talk in deadchat using our ckey/fakekey*/
@@ -35,6 +36,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/check_ai_laws, /*shows AI and borg laws*/
 	/client/proc/ghost_pool_protection, /*opens a menu for toggling ghost roles*/
 	/datum/admins/proc/toggleooc, /*toggles ooc on/off for everyone*/
+	/datum/admins/proc/togglelooc, /*toggles looc on/off for everyone*/
 	/datum/admins/proc/toggleoocdead, /*toggles ooc on/off for everyone who is dead*/
 	/datum/admins/proc/toggleenter, /*toggles whether people can join the current game*/
 	/datum/admins/proc/toggleguests, /*toggles whether guests can join the current game*/
@@ -79,6 +81,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/datum/admins/proc/known_alts_panel,
 	/datum/admins/proc/paintings_manager,
 	/datum/admins/proc/display_tags,
+	/client/proc/cmd_ic_spawn, //PARIAH EDIT - IC Spawning
 	)
 GLOBAL_LIST_INIT(admin_verbs_ban, list(/client/proc/unban_panel, /client/proc/ban_panel, /client/proc/stickybanpanel))
 GLOBAL_PROTECT(admin_verbs_ban)
@@ -196,7 +199,13 @@ GLOBAL_PROTECT(admin_verbs_debug)
 	/client/proc/cmd_admin_toggle_fov,
 	/client/proc/cmd_admin_debug_traitor_objectives,
 	/client/proc/spawn_debug_full_crew,
+	/client/proc/jumptocoord,
+	/client/proc/jumptokey,
+	/client/proc/jumptoarea,
+	/client/proc/admin_ghost,
+	/client/proc/cmd_admin_create_centcom_report,
 	)
+
 GLOBAL_LIST_INIT(admin_verbs_possess, list(/proc/possess, /proc/release))
 GLOBAL_PROTECT(admin_verbs_possess)
 GLOBAL_LIST_INIT(admin_verbs_permissions, list(/client/proc/edit_admin_permissions))

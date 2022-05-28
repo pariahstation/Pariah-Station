@@ -301,7 +301,12 @@ em {
 }
 
 .ooc {
-  color: #002eb8;
+  color: #cca300;
+  font-weight: bold;
+}
+
+.looc {
+  color: #6699cc;
   font-weight: bold;
 }
 
@@ -936,4 +941,21 @@ h1.alert, h2.alert {
 .tooltip {
   font-style: italic;
   border-bottom: 1px dashed #000;
+}
+
+/* PARIAH LIGHT MODE CLASSES */
+
+.examine_block {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #111a27;
+  margin: 2px 8px;
+  padding: 8px 12px;
+  max-width: 550px;
+}
+
+.examine_block hr {
+  border: none;
+  background: #333;
+  height: 1px;
+  margin: 8px 16px 8px 16px;
 }

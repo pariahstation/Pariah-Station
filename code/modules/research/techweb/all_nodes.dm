@@ -54,6 +54,8 @@
 		"sec_38",
 		"sec_Islug",
 		"sec_beanbag_slug",
+		"sec_bshot",
+		"sec_slug",
 		"sec_dart",
 		"sec_rshot",
 		"space_heater",
@@ -181,6 +183,7 @@
 		"spade",
 		"spraycan",
 		"swab",
+		"tile_sprayer",
 		"tscanner",
 		"welding_helmet",
 		"welding_tool",
@@ -209,6 +212,7 @@
 		"dropper",
 		"hemostat",
 		"large_beaker",
+		"pillbottle",
 		"plumbing_rcd",
 		"portable_chem_mixer",
 		"retractor",
@@ -360,12 +364,12 @@
 /datum/techweb_node/xenoorgan_biotech
 	id = "xenoorgan_bio"
 	display_name = "Xeno-organ Biology"
-	description = "Plasmaman, Ethereals, Lizardpeople... What makes our non-human crewmembers tick?"
+	description = "Plasmaman, Ethereals, Unathi... What makes our non-human crewmembers tick?"
 	prereq_ids = list("adv_biotech")
 	design_ids = list(
 		"limbdesign_ethereal",
 		"limbdesign_felinid",
-		"limbdesign_lizard",
+		"limbdesign_unathi",
 		"limbdesign_plasmaman",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 6500)
@@ -1054,6 +1058,7 @@
 	description = "Organized record databases and how they're used."
 	prereq_ids = list("comptech")
 	design_ids = list(
+		"account_console",
 		"automated_announcement",
 		"med_data",
 		"prisonmanage",

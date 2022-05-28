@@ -66,6 +66,16 @@ export const feature_mcolor: Feature<string> = {
   component: FeatureColorInput,
 };
 
+export const feature_mcolor2: Feature<string> = {
+  name: "Secondary Mutant color",
+  component: FeatureColorInput,
+};
+
+export const feature_mcolor3: Feature<string> = {
+  name: "Tertiary Mutant color",
+  component: FeatureColorInput,
+};
+
 export const underwear_color: Feature<string> = {
   name: "Underwear color",
   component: FeatureColorInput,
@@ -73,5 +83,30 @@ export const underwear_color: Feature<string> = {
 
 export const feature_vampire_status: Feature<string> = {
   name: "Vampire status",
+  component: FeatureDropdownInput,
+};
+
+export const feature_headtails: FeatureChoiced = {
+  name: "Headtails",
+  component: FeatureDropdownInput,
+};
+
+export const teshari_feathers: Feature<string> = {
+  name: "Head feathers",
+  component: FeatureDropdownInput,
+};
+
+export const teshari_ears: Feature<string> = {
+  name: "Ears",
+  component: FeatureDropdownInput,
+};
+
+export const teshari_body_feathers: Feature<string> = {
+  name: "Body feathers",
+  component: FeatureDropdownInput,
+};
+
+export const tail_teshari: Feature<string> = {
+  name: "Tail",
   component: FeatureDropdownInput,
 };

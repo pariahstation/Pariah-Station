@@ -75,7 +75,8 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	var/stability = 100
 	///Did we take something like mutagen? In that case we cant get our genes scanned to instantly cheese all the powers.
 	var/scrambled = FALSE
-
+	///Current body size, used for proper re-sizing and keeping track of that
+	var/current_body_size = BODY_SIZE_NORMAL
 
 /datum/dna/New(mob/living/new_holder)
 	if(istype(new_holder))
@@ -122,6 +123,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	new_dna.species = new species.type
 	new_dna.species.species_traits = species.species_traits
 	new_dna.real_name = real_name
+	new_dna.update_body_size() //Must come after features.Copy()
 	// Mutations aren't gc managed, but they still aren't templates
 	// Let's do a proper copy
 	for(var/datum/mutation/human/mutation in mutations)
@@ -189,6 +191,10 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 
 	if(features["mcolor"])
 		L[DNA_MUTANT_COLOR_BLOCK] = sanitize_hexcolor(features["mcolor"], include_crunch = FALSE)
+	if(features["mcolor2"])
+		L[DNA_MUTANT_COLOR_BLOCK_2] = sanitize_hexcolor(features["mcolor2"], include_crunch = FALSE)
+	if(features["mcolor3"])
+		L[DNA_MUTANT_COLOR_BLOCK_3] = sanitize_hexcolor(features["mcolor3"], include_crunch = FALSE)
 	if(features["ethcolor"])
 		L[DNA_ETHEREAL_COLOR_BLOCK] = sanitize_hexcolor(features["ethcolor"], include_crunch = FALSE)
 	if(features["body_markings"])
@@ -219,6 +225,16 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		L[DNA_MONKEY_TAIL_BLOCK] = construct_block(GLOB.tails_list_monkey.Find(features["tail_monkey"]), GLOB.tails_list_monkey.len)
 	if(features["pod_hair"])
 		L[DNA_POD_HAIR_BLOCK] = construct_block(GLOB.pod_hair_list.Find(features["pod_hair"]), GLOB.pod_hair_list.len)
+	if(features["headtails"])
+		L[DNA_HEADTAILS_BLOCK] = construct_block(GLOB.headtails_list.Find(features["headtails"]), GLOB.headtails_list.len)
+	if(features["teshari_feathers"])
+		L[DNA_TESHARI_FEATHERS_BLOCK] = construct_block(GLOB.teshari_feathers_list.Find(features["teshari_feathers"]), GLOB.teshari_feathers_list.len)
+	if(features["teshari_ears"])
+		L[DNA_TESHARI_EARS_BLOCK] = construct_block(GLOB.teshari_ears_list.Find(features["teshari_ears"]), GLOB.teshari_ears_list.len)
+	if(features["teshari_body_feathers"])
+		L[DNA_TESHARI_BODY_FEATHERS_BLOCK] = construct_block(GLOB.teshari_body_feathers_list.Find(features["teshari_body_feathers"]), GLOB.teshari_body_feathers_list.len)
+	if(features["tail_teshari"])
+		L[DNA_TESHARI_TAIL_BLOCK] = construct_block(GLOB.teshari_tails_list.Find(features["tail_teshari"]), GLOB.teshari_tails_list.len)
 
 	for(var/blocknum in 1 to DNA_FEATURE_BLOCKS)
 		. += L[blocknum] || random_string(GET_UI_BLOCK_LEN(blocknum), GLOB.hex_characters)
@@ -323,6 +339,10 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	switch(blocknumber)
 		if(DNA_MUTANT_COLOR_BLOCK)
 			set_uni_feature_block(blocknumber, sanitize_hexcolor(features["mcolor"], include_crunch = FALSE))
+		if(DNA_MUTANT_COLOR_BLOCK_2)
+			set_uni_feature_block(blocknumber, sanitize_hexcolor(features["mcolor2"], include_crunch = FALSE))
+		if(DNA_MUTANT_COLOR_BLOCK_3)
+			set_uni_feature_block(blocknumber, sanitize_hexcolor(features["mcolor3"], include_crunch = FALSE))
 		if(DNA_ETHEREAL_COLOR_BLOCK)
 			set_uni_feature_block(blocknumber, sanitize_hexcolor(features["ethcolor"], include_crunch = FALSE))
 		if(DNA_LIZARD_MARKINGS_BLOCK)
@@ -353,6 +373,16 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 			set_uni_feature_block(blocknumber, construct_block(GLOB.tails_list_monkey.Find(features["tail_monkey"]), GLOB.tails_list_monkey.len))
 		if(DNA_POD_HAIR_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(GLOB.pod_hair_list.Find(features["pod_hair"]), GLOB.pod_hair_list.len))
+		if(DNA_HEADTAILS_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.headtails_list.Find(features["headtails"]), GLOB.headtails_list.len))
+		if(DNA_TESHARI_FEATHERS_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_feathers_list.Find(features["teshari_feathers"]), GLOB.teshari_feathers_list.len))
+		if(DNA_TESHARI_EARS_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_ears_list.Find(features["teshari_ears"]), GLOB.teshari_ears_list.len))
+		if(DNA_TESHARI_BODY_FEATHERS_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_body_feathers_list.Find(features["teshari_body_feathers"]), GLOB.teshari_body_feathers_list.len))
+		if(DNA_TESHARI_TAIL_BLOCK)
+			set_uni_feature_block(blocknumber, construct_block(GLOB.teshari_tails_list.Find(features["tail_teshari"]), GLOB.teshari_tails_list.len))
 
 //Please use add_mutation or activate_mutation instead
 /datum/dna/proc/force_give(datum/mutation/human/HM)
@@ -452,6 +482,19 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	return
 
 /////////////////////////// DNA MOB-PROCS //////////////////////
+/datum/dna/proc/update_body_size()
+	if(!holder || !features["body_size"])
+		return
+	var/desired_size = GLOB.body_sizes[features["body_size"]]
+
+	if(desired_size == current_body_size)
+		return
+
+	var/change_multiplier = desired_size / current_body_size
+	var/translate = ((change_multiplier-1) * 32) * 0.5
+	holder.transform = holder.transform.Scale(change_multiplier)
+	holder.transform = holder.transform.Translate(0, translate)
+	current_body_size = desired_size
 
 /mob/proc/set_species(datum/species/mrace, icon_update = 1)
 	return
@@ -571,6 +614,10 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	var/features = dna.unique_features
 	if(dna.features["mcolor"])
 		dna.features["mcolor"] = sanitize_hexcolor(get_uni_feature_block(features, DNA_MUTANT_COLOR_BLOCK))
+	if(dna.features["mcolor2"])
+		dna.features["mcolor2"] = sanitize_hexcolor(get_uni_feature_block(features, DNA_MUTANT_COLOR_BLOCK_2))
+	if(dna.features["mcolor3"])
+		dna.features["mcolor3"] = sanitize_hexcolor(get_uni_feature_block(features, DNA_MUTANT_COLOR_BLOCK_3))
 	if(dna.features["ethcolor"])
 		dna.features["ethcolor"] = sanitize_hexcolor(get_uni_feature_block(features, DNA_ETHEREAL_COLOR_BLOCK))
 	if(dna.features["body_markings"])
@@ -605,6 +652,16 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 		dna.features["tail_monkey"] = GLOB.tails_list_monkey[deconstruct_block(get_uni_feature_block(features, DNA_MONKEY_TAIL_BLOCK), GLOB.tails_list_monkey.len)]
 	if(dna.features["pod_hair"])
 		dna.features["pod_hair"] = GLOB.pod_hair_list[deconstruct_block(get_uni_feature_block(features, DNA_POD_HAIR_BLOCK), GLOB.pod_hair_list.len)]
+	if(dna.features["headtails"])
+		dna.features["headtails"] = GLOB.headtails_list[deconstruct_block(get_uni_feature_block(features, DNA_HEADTAILS_BLOCK), GLOB.headtails_list.len)]
+	if(dna.features["teshari_feathers"])
+		dna.features["teshari_feathers"] = GLOB.teshari_feathers_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_FEATHERS_BLOCK), GLOB.teshari_feathers_list.len)]
+	if(dna.features["teshari_ears"])
+		dna.features["teshari_ears"] = GLOB.teshari_ears_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_EARS_BLOCK), GLOB.teshari_ears_list.len)]
+	if(dna.features["teshari_body_feathers"])
+		dna.features["teshari_body_feathers"] = GLOB.teshari_body_feathers_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_BODY_FEATHERS_BLOCK), GLOB.teshari_body_feathers_list.len)]
+	if(dna.features["tail_teshari"])
+		dna.features["tail_teshari"] = GLOB.teshari_tails_list[deconstruct_block(get_uni_feature_block(features, DNA_TESHARI_TAIL_BLOCK), GLOB.teshari_tails_list.len)]
 
 	for(var/obj/item/organ/external/external_organ in internal_organs)
 		external_organ.mutate_feature(features, src)

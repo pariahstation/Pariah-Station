@@ -287,6 +287,10 @@ em {
   font-weight: bold;
 }
 
+.looc {
+  color: #6699cc;
+}
+
 .adminobserverooc {
   color: #0099cc;
   font-weight: bold;
@@ -931,4 +935,21 @@ em {
 .tooltip {
   font-style: italic;
   border-bottom: 1px dashed #fff;
+}
+
+/* PARIAH DARK MODE CLASSES */
+
+.examine_block {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(55, 55, 55, 0.33);
+  margin: 7px 4px;
+  padding: 8px 12px;
+  max-width: 550px;
+}
+
+.examine_block hr {
+  border: none;
+  background: #222;
+  height: 1px;
+  margin: 8px 16px 8px 16px;
 }

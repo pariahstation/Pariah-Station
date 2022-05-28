@@ -41,6 +41,25 @@ GLOBAL_LIST_EMPTY(moth_markings_list)
 GLOBAL_LIST_EMPTY(caps_list)
 GLOBAL_LIST_EMPTY(tails_list_monkey)
 GLOBAL_LIST_EMPTY(pod_hair_list)
+GLOBAL_LIST_EMPTY(headtails_list)
+GLOBAL_LIST_EMPTY(teshari_feathers_list)
+GLOBAL_LIST_EMPTY(teshari_ears_list)
+GLOBAL_LIST_EMPTY(teshari_body_feathers_list)
+GLOBAL_LIST_EMPTY(teshari_tails_list)
+
+
+	//Body sizes//
+#define BODY_SIZE_SHORT 0.93
+#define BODY_SIZE_NORMAL 1
+#define BODY_SIZE_TALL 1.03
+
+	//Body Sizes
+GLOBAL_LIST_INIT(body_sizes, list(
+	"Short" = BODY_SIZE_SHORT,
+	"Normal" = BODY_SIZE_NORMAL,
+	"Tall" = BODY_SIZE_TALL,
+))
+
 
 GLOBAL_LIST_INIT(color_list_ethereal, list(
 	"Blue" = "#3399ff",
@@ -224,6 +243,8 @@ GLOBAL_LIST_INIT(backpacklist, list(
 
 	//Female Uniforms
 GLOBAL_LIST_EMPTY(female_clothing_icons)
+	//Auto-generated 'fallback' clothing icons
+GLOBAL_LIST_EMPTY(fallback_clothing_icons)
 
 GLOBAL_LIST_INIT(scarySounds, list(
 	'sound/effects/clownstep1.ogg',
