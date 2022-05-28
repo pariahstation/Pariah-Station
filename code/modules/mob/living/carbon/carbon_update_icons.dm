@@ -384,8 +384,7 @@
 /obj/item/bodypart/proc/generate_husk_key()
 	RETURN_TYPE(/list)
 	. = list()
-	. += "[husk_type]"
-	. += "-husk"
+	. += "husk"
 	. += "-[body_zone]"
 	return .
 

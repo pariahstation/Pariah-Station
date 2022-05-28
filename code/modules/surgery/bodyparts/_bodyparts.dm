@@ -9,11 +9,9 @@
 	/// The icon for Organic limbs using greyscale
 	VAR_PROTECTED/icon_greyscale = DEFAULT_BODYPART_ICON_ORGANIC
 	///The icon for non-greyscale limbs
-	VAR_PROTECTED/icon_static = 'icons/mob/human_parts.dmi'
+	VAR_PROTECTED/icon_static = 'icons/mob/human_parts.dmi' // TODO: Split this into multiple species files
 	///The icon for husked limbs
 	VAR_PROTECTED/icon_husk = 'icons/mob/human_parts.dmi'
-	///The type of husk for building an iconstate
-	var/husk_type = "humanoid"
 	layer = BELOW_MOB_LAYER //so it isn't hidden behind objects when on the floor
 	grind_results = list(/datum/reagent/bone_dust = 10, /datum/reagent/liquidgibs = 5) // robotic bodyparts and chests/heads cannot be ground
 	/// The mob that "owns" this limb
@@ -734,11 +732,11 @@
 	//HUSK SHIIIIT
 	if(is_husked)
 		limb.icon = icon_husk
-		limb.icon_state = "[husk_type]_husk_[body_zone]"
+		limb.icon_state = "husk_[body_zone]"
 		icon_exists(limb.icon, limb.icon_state, scream = TRUE) //Prints a stack trace on the first failure of a given iconstate.
 		. += limb
 		if(aux_zone) //Hand shit
-			aux = image(limb.icon, "[husk_type]_husk_[aux_zone]", -aux_layer, image_dir)
+			aux = image(limb.icon, "husk_[aux_zone]", -aux_layer, image_dir)
 			. += aux
 		return .
 	//END HUSK SHIIIIT
