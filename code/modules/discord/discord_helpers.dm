@@ -52,7 +52,7 @@
  * Returns: TRUE if valid, FALSE if invalid or missing
  */
 /client/proc/discord_is_link_valid(ckey)
-	var/datum/discord_link_record/link = find_discord_link_by_ckey(ckey, timebound = TRUE)
+	var/datum/discord_link_record/link = find_discord_link_by_ckey(ckey, timebound = FALSE) //We need their persistent link.
 	if(link)
 		return link.valid
 	return FALSE
