@@ -19,10 +19,7 @@
 
 	var/species_text
 	if(dna.species && !skipface)
-		if(dna.species.id == SPECIES_LIZARD) // Snowflake because English. "an Unathi" doesn't work and \a can't differentiate
-			species_text = ", a Unathi"
-		else
-			species_text = ", \a [dna.species.name]"
+		species_text = ", \a [dna.species.name]"
 
 	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"][species_text]!</EM><hr>")
 
