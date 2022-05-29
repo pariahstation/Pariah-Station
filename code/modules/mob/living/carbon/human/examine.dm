@@ -17,11 +17,14 @@
 	var/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
-	var/apparent_species
+	var/species_text
 	if(dna.species && !skipface)
-		apparent_species = ", \an [dna.species.name]"
+		if(dna.species.id == SPECIES_LIZARD) // Snowflake because English. "an Unathi" doesn't work and \a can't differentiate
+			species_text = ", a Unathi"
+		else
+			species_text = ", \a [dna.species.name]"
 
-	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"][apparent_species]!</EM><hr>")
+	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"][species_text]!</EM><hr>")
 
 	//uniform
 	if(w_uniform && !(obscured & ITEM_SLOT_ICLOTHING) && !(w_uniform.item_flags & EXAMINE_SKIP))
