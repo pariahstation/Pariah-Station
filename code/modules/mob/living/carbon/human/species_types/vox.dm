@@ -3,7 +3,7 @@
 	name = "Vox"
 	id = SPECIES_VOX
 	say_mod = "skrees"
-	default_color = "#00FF00"
+	default_color = "#1e5404"
 	species_eye_path = 'icons/mob/species/vox/eyes.dmi'
 	species_traits = list(
 		MUTCOLORS,
@@ -53,6 +53,14 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/l_leg/digitigrade/vox,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/digitigrade/vox,
 	)
+
+/datum/species/vox/prepare_human_for_preview(mob/living/carbon/human/human)
+	human.dna.features["mcolor"] = "#99FF99"
+	human.dna.features["mcolor2"] = "#F0F064"
+	human.hair_color = "#FF9966"
+	human.facial_hair_color = "#FF9966"
+	human.eye_color = COLOR_TEAL
+	human.update_body(TRUE)
 
 /datum/species/vox/pre_equip_species_outfit(datum/job/job, mob/living/carbon/human/equipping, visuals_only)
 	. = ..()

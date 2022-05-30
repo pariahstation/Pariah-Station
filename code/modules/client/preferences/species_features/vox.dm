@@ -1,14 +1,22 @@
+#define VOX_BODY_COLOR "#99FF99"
+#define VOX_SNOUT_COLOR "#F0F064"
+#define VOX_HAIR_COLOR "#FF9966"
+
 /proc/generate_vox_side_shots(list/sprite_accessories, key, include_snout = TRUE)
 	var/list/values = list()
 
-	var/icon/vox = icon('icons/mob/species/vox/bodyparts.dmi', "vox_head_m", EAST)
-	var/icon/eyes = icon('icons/mob/species/vox/eyes.dmi', "eyes", EAST)
+	var/icon/vox = icon('icons/mob/species/vox/bodyparts.dmi', "vox_head_m")
+	var/icon/eyes = icon('icons/mob/species/vox/eyes.dmi', "eyes")
 
-	eyes.Blend(COLOR_GRAY, ICON_MULTIPLY)
+
+	vox.Blend(VOX_BODY_COLOR, ICON_MULTIPLY)
+	eyes.Blend(COLOR_TEAL, ICON_MULTIPLY)
 	vox.Blend(eyes, ICON_OVERLAY)
 
 	if(include_snout)
-		vox.Blend(icon('icons/mob/vox_snouts.dmi', "m_snout_vox_ADJ", EAST), ICON_OVERLAY)
+		var/icon/snout = icon('icons/mob/vox_snouts.dmi', "m_snout_vox_ADJ")
+		snout.Blend(VOX_SNOUT_COLOR, ICON_MULTIPLY)
+		vox.Blend(snout, ICON_OVERLAY)
 
 	for (var/name in sprite_accessories)
 		var/datum/sprite_accessory/sprite_accessory = sprite_accessories[name]
@@ -16,12 +24,12 @@
 		var/icon/final_icon = icon(vox)
 
 		if (sprite_accessory.icon_state != "none")
-			var/icon/accessory_icon = icon(sprite_accessory.icon, "m_[key]_[sprite_accessory.icon_state]_ADJ", EAST)
+			var/icon/accessory_icon = icon(sprite_accessory.icon, "m_[key]_[sprite_accessory.icon_state]_ADJ")
+			accessory_icon.Blend(VOX_HAIR_COLOR, ICON_MULTIPLY)
 			final_icon.Blend(accessory_icon, ICON_OVERLAY)
 
 		final_icon.Crop(11, 20, 23, 32)
 		final_icon.Scale(32, 32)
-		final_icon.Blend(COLOR_VIBRANT_LIME, ICON_MULTIPLY)
 
 		values[name] = final_icon
 
