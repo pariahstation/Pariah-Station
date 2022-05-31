@@ -31,7 +31,7 @@
 /datum/preference/color/eye_color/apply_to_human(mob/living/carbon/human/target, value)
 	target.eye_color = value
 
-	var/obj/item/organ/eyes/eyes_organ = target.getorgan(/obj/item/organ/eyes)
+	var/obj/item/organ/eyes/eyes_organ = target.getorgan(/obj/item/organ/internal/eyes)
 	if (istype(eyes_organ))
 		if (!initial(eyes_organ.eye_color))
 			eyes_organ.eye_color = value
