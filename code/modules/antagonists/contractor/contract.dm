@@ -159,7 +159,7 @@
 
 	addtimer(CALLBACK(src, .proc/finish_enter), 3 SECONDS)
 
-/// Called when person is finished shoving in, awards ransome money
+/// Called when person is finished shoving in, awards ransom money
 /datum/syndicate_contract/proc/finish_enter()
 
 	// Pay contractor their portion of ransom

@@ -295,73 +295,37 @@
 		by hitting the module, while it is removed from the suit, with the baton. \
 		Remove an inserted baton with a wrench."
 	icon_state = "holster"
+	module_type = MODULE_ACTIVE
 	complexity = 3
+	active_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
+	device = /obj/item/melee/baton/telescopic/contractor_baton
 	incompatible_modules = list(/obj/item/mod/module/baton_holster)
-	module_type = MODULE_USABLE
-	/// Ref to the baton
-	var/obj/item/melee/baton/telescopic/contractor_baton/stored_batong
-	/// If the baton is out or not
-	var/deployed = FALSE
-
-// doesn't give a shit if it's deployed or not
-/obj/item/mod/module/baton_holster/on_select()
-	on_use()
-	SEND_SIGNAL(mod, COMSIG_MOD_MODULE_SELECTED, src)
+	cooldown_time = 0.5 SECONDS
+	allowed_inactive = TRUE
+	/// Have they sacrificed a baton to actually be able to use this?
+	var/eaten_baton = FALSE
 
 /obj/item/mod/module/baton_holster/attackby(obj/item/attacking_item, mob/user, params)
 	. = ..()
-	if(!istype(attacking_item, /obj/item/melee/baton/telescopic/contractor_baton) || stored_batong)
+	if(!istype(attacking_item, /obj/item/melee/baton/telescopic/contractor_baton) || eaten_baton)
 		return
 	balloon_alert(user, "[attacking_item] inserted")
-	attacking_item.forceMove(src)
-	stored_batong = attacking_item
-	stored_batong.holster = src
+	eaten_baton = TRUE
+	for(var/obj/item/melee/baton/telescopic/contractor_baton/device_baton as anything in src)
+		for(var/obj/item/baton_upgrade/original_upgrade as anything in attacking_item)
+			var/obj/item/baton_upgrade/new_upgrade = new original_upgrade(device_baton)
+			device_baton.add_upgrade(new_upgrade)
+	qdel(attacking_item)
 
-/obj/item/mod/module/baton_holster/wrench_act(mob/living/user, obj/item/tool)
-	. = ..()
-	if(!stored_batong)
+/obj/item/mod/module/baton_holster/on_activation()
+	if(!eaten_baton)
+		balloon_alert(mod.wearer, "no baton inserted")
 		return
-	balloon_alert(user, "[stored_batong] removed")
-	stored_batong.forceMove(get_turf(src))
-	stored_batong.holster = null
-	stored_batong = null
-	tool.play_tool_sound(src)
-
-/obj/item/mod/module/baton_holster/Destroy()
-	if(stored_batong)
-		stored_batong.forceMove(get_turf(src))
-		stored_batong.holster = null
-		stored_batong = null
-	. = ..()
-
-/obj/item/mod/module/baton_holster/on_use()
-	if(!deployed)
-		deploy(mod.wearer)
-	else
-		undeploy(mod.wearer)
-
-/obj/item/mod/module/baton_holster/proc/deploy(mob/living/user)
-	if(!(stored_batong in src))
-		return
-	if(!user.put_in_hands(stored_batong))
-		to_chat(user, span_warning("You need a free hand to hold [stored_batong]!"))
-		return
-	deployed = TRUE
-	to_chat(user, span_notice("You deploy [stored_batong]."))
-
-/obj/item/mod/module/baton_holster/proc/undeploy(mob/living/user)
-	if(QDELETED(stored_batong))
-		return
-	stored_batong.forceMove(src)
-	deployed = FALSE
-	to_chat(user, span_notice("You retract [stored_batong]."))
+	return ..()
 
 /obj/item/mod/module/baton_holster/preloaded
-
-/obj/item/mod/module/baton_holster/preloaded/Initialize(mapload)
-	. = ..()
-	stored_batong = new/obj/item/melee/baton/telescopic/contractor_baton/upgraded(src)
-	stored_batong.holster = src
+	eaten_baton = TRUE
+	device = /obj/item/melee/baton/telescopic/contractor_baton/upgraded
 
 /// Chameleon - Allows you to disguise your modsuit as another type
 /obj/item/mod/module/chameleon
@@ -388,6 +352,10 @@
 	var/list/chameleon_list = list()
 	/// If the module's in use or not
 	var/on = FALSE
+
+/obj/item/mod/module/chameleon/Initialize(mapload)
+	. = ..()
+	init_chameleon_list()
 
 /obj/item/mod/module/chameleon/on_select()
 	if(!length(chameleon_list))
@@ -483,10 +451,6 @@
 		var/chameleon_item_name = "[modsuit]"
 		chameleon_list[chameleon_item_name] = modsuit
 
-/obj/item/mod/module/chameleon/Initialize(mapload)
-	. = ..()
-	init_chameleon_list()
-
 /// Contractor armor booster - Slows you down, gives you armor, makes you lose spaceworthiness
 /obj/item/mod/module/armor_booster/contractor // Much flatter distribution because contractor suit gets a shitton of armor already
 	armor_values = list(MELEE = 20, BULLET = 20, LASER = 20, ENERGY = 20)
@@ -526,3 +490,4 @@
 	active_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
 	device = /obj/item/gun/magic/hook/contractor
 	cooldown_time = 0.5 SECONDS
+	allowed_inactive = TRUE

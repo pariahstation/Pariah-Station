@@ -45,6 +45,8 @@
 	var/allowed_in_phaseout = FALSE
 	/// Timer for the cooldown
 	COOLDOWN_DECLARE(cooldown_timer)
+	/// If this module can be used while the suit is inactive
+	var/allowed_inactive = FALSE
 
 /obj/item/mod/module/Initialize(mapload)
 	. = ..()
@@ -112,7 +114,7 @@
 	if(!COOLDOWN_FINISHED(src, cooldown_timer))
 		balloon_alert(mod.wearer, "on cooldown!")
 		return FALSE
-	if(!mod.active || mod.activating || !mod.get_charge())
+	if(!allowed_inactive && (!mod.active || mod.activating || !mod.get_charge()))
 		balloon_alert(mod.wearer, "unpowered!")
 		return FALSE
 	if(!allowed_in_phaseout && istype(mod.wearer.loc, /obj/effect/dummy/phased_mob))

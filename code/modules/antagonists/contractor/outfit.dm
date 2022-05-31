@@ -39,11 +39,6 @@
 	name = "Syndicate Contractor - Fully Upgraded"
 	back = /obj/item/mod/control/pre_equipped/contractor/upgraded/adminbus
 
-/datum/outfit/contractor_preview/post_equip(mob/living/carbon/human/guy, visualsOnly)
-	var/obj/item/mod/module/armor_booster/booster = guy.back
-	booster.active = TRUE
-	guy.update_inv_back()
-
 /datum/id_trim/chameleon/contractor
 	assignment = "Syndicate Contractor"
 	trim_state = "trim_contractor"

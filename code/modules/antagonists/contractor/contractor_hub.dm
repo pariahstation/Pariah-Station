@@ -77,7 +77,7 @@
 		start_index++
 
 	// If the threshold for TC payouts isn't reached, boost the lowest paying contract
-	if (total < LOWEST_TC)
+	if (total < LOWEST_TC && lowest_paying_contract)
 		lowest_paying_contract.contract.payout_bonus += (LOWEST_TC - total)
 
 #undef LOWEST_TC

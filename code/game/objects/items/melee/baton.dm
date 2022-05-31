@@ -371,16 +371,10 @@
 	on_inhand_icon_state = "contractor_baton_on"
 	on_sound = 'sound/weapons/contractorbatonextend.ogg'
 	active_force = 16
-	/// Ref to the baton holster, should the baton have one.
-	var/obj/item/mod/module/baton_holster/holster
 	/// Bitflags for what upgrades the baton has
 	var/upgrade_flags
 	/// If the baton lists its upgrades
 	var/lists_upgrades = TRUE
-
-/obj/item/melee/baton/telescopic/contractor_baton/Initialize(mapload)
-	. = ..()
-	RegisterSignal(src, COMSIG_STORAGE_ENTERED, .proc/storage_undeploy)
 
 /obj/item/melee/baton/telescopic/contractor_baton/get_wait_description()
 	return span_danger("The baton is still charging!")
@@ -388,12 +382,6 @@
 /obj/item/melee/baton/telescopic/contractor_baton/additional_effects_non_cyborg(mob/living/target, mob/living/user)
 	target.Jitter(20)
 	target.adjust_timed_status_effect(40 SECONDS, /datum/status_effect/speech/stutter)
-
-/obj/item/melee/baton/telescopic/contractor_baton/dropped(mob/user, silent)
-	. = ..()
-	if(!holster)
-		return
-	holster.undeploy(user)
 
 /obj/item/melee/baton/telescopic/contractor_baton/attack_secondary(mob/living/victim, mob/living/user, params)
 	if(!(upgrade_flags & BATON_CUFF_UPGRADE) || !active)
@@ -458,16 +446,6 @@
 			user.visible_message(span_notice("\The [user] inserts the [upgrade] into \the [src]."), span_notice("You insert \the [upgrade] into \the [src]."), span_hear("You hear a faint click."))
 		return TRUE
 	return FALSE
-
-/obj/item/melee/baton/telescopic/contractor_baton/proc/storage_undeploy(obj/item/baton, mob/user)
-	if(!holster)
-		return
-	if(!user)
-		user = holster.mod?.wearer
-	var/obj/item/storage = src.loc
-	var/datum/component/storage/storagecomp = storage.GetComponent(/datum/component/storage)
-	storagecomp.remove_from_storage(src, get_turf(src))
-	holster.undeploy(user)
 
 /obj/item/melee/baton/telescopic/contractor_baton/upgraded
 	desc = "A compact, specialised baton assigned to Syndicate contractors. Applies light electrical shocks to targets. This one seems to have unremovable parts."
