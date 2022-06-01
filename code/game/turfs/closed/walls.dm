@@ -17,11 +17,14 @@
 
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_WALLS)
-	canSmoothWith = list(SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_WINDOW_FULLTILE)
+	canSmoothWith = list(SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_LOW_WALL)
 
 	rcd_memory = RCD_MEMORY_WALL
 
 	color = "#57575c" //To display in mapping softwares
+
+	greyscale_config = /datum/greyscale_config/solid_wall
+	greyscale_colors = "#57575c"
 
 	///lower numbers are harder. Used to determine the probability of a hulk smashing through.
 	var/hardness = 40
@@ -46,6 +49,30 @@
 	/// Typecache of all objects that we seek out to apply a neighbor stripe overlay
 	var/static/list/neighbor_typecache
 
+/turf/closed/wall/update_greyscale()
+	greyscale_colors = get_wall_color()
+	return ..()
+
+/turf/closed/wall/proc/get_wall_color()
+	var/wall_color = wall_paint
+	if(!wall_color)
+		var/datum/material/plating_mat_ref = GET_MATERIAL_REF(plating_material)
+		wall_color = plating_mat_ref.wall_color
+	return wall_color
+
+/turf/closed/wall/proc/get_stripe_color()
+	var/stripe_color = stripe_paint
+	if(!stripe_color)
+		stripe_color = get_wall_color()
+	return stripe_color
+
+/turf/closed/wall/has_material_type(datum/material/mat_type, exact=FALSE, mat_amount=0)
+	if(plating_material == mat_type)
+		return TRUE
+	if(reinf_material == mat_type)
+		return TRUE
+	return FALSE
+
 /turf/closed/wall/update_name()
 	. = ..()
 	name = ""
@@ -58,10 +85,9 @@
 
 /turf/closed/wall/Initialize(mapload)
 	. = ..()
-	paint_wall(wall_paint) //To ensure varedit wall paint works properly
-	if(mapload)
-		set_materials(plating_material, reinf_material)
-	if(is_station_level(z))
+	color = null // Remove the color that was set for mapping clarity
+	set_materials(plating_material, reinf_material)
+	if(is_station_level(src))
 		GLOB.station_turfs += src
 
 /turf/closed/wall/Destroy()
@@ -69,21 +95,24 @@
 		GLOB.station_turfs -= src
 	return ..()
 
-/turf/closed/wall/copyTurf(turf/closed/wall/pasted_turf)
-	if(istype(pasted_turf, /turf/closed/wall))
-		pasted_turf.set_wall_information(plating_material, reinf_material, wall_paint, stripe_paint)
+/turf/closed/wall/copyTurf(turf/T)
+	. = ..()
+	if(istype(., /turf/closed/wall))
+		var/turf/closed/wall/pasted_turf = .
 		pasted_turf.d_state = d_state
-	return ..()
+		pasted_turf.set_wall_information(plating_material, reinf_material, wall_paint, stripe_paint)
 
 /// Most of this code is pasted within /obj/structure/falsewall. Be mindful of this
 /turf/closed/wall/update_overlays()
 	//Updating the unmanaged wall overlays (unmanaged for optimisations)
 	overlays.Cut()
+
 	if(stripe_paint)
 		var/datum/material/plating_mat_ref = GET_MATERIAL_REF(plating_material)
-		var/mutable_appearance/smoothed_stripe = mutable_appearance(plating_mat_ref.wall_stripe_icon, icon_state, appearance_flags = RESET_COLOR)
-		smoothed_stripe.color = stripe_paint
+		var/icon/stripe_icon = SSgreyscale.GetColoredIconByType(plating_mat_ref.wall_stripe_greyscale_config, get_stripe_color())
+		var/mutable_appearance/smoothed_stripe = mutable_appearance(stripe_icon, icon_state)
 		overlays += smoothed_stripe
+
 	var/neighbor_stripe = NONE
 	if(!neighbor_typecache)
 		neighbor_typecache = typecacheof(list(
@@ -103,11 +132,8 @@
 				neighbor_stripe ^= cardinal
 				break
 	if(neighbor_stripe)
-		var/mutable_appearance/neighb_stripe_appearace = mutable_appearance('icons/turf/walls/neighbor_stripe.dmi', "[neighbor_stripe]", appearance_flags = RESET_COLOR)
-		if(stripe_paint)
-			neighb_stripe_appearace.color = stripe_paint
-		else
-			neighb_stripe_appearace.color = color
+		var/icon/neighbor_icon = SSgreyscale.GetColoredIconByType(/datum/greyscale_config/wall_neighbor_stripe, get_stripe_color())
+		var/mutable_appearance/neighb_stripe_appearace = mutable_appearance(neighbor_icon, "stripe-[neighbor_stripe]")
 		overlays += neighb_stripe_appearace
 
 	if(rusted)
@@ -157,12 +183,7 @@
 /// Most of this code is pasted within /obj/structure/falsewall. Be mindful of this
 /turf/closed/wall/proc/paint_wall(new_paint)
 	wall_paint = new_paint
-	if(wall_paint)
-		color = wall_paint
-	else
-		/// Reset color to material color
-		var/datum/material/plating_mat_ref = GET_MATERIAL_REF(plating_material)
-		color = plating_mat_ref.wall_color
+	update_greyscale()
 	update_appearance()
 
 /// Most of this code is pasted within /obj/structure/falsewall. Be mindful of this
@@ -173,8 +194,6 @@
 /// Most of this code is pasted within /obj/structure/falsewall. Be mindful of this
 /turf/closed/wall/proc/set_wall_information(plating_mat, reinf_mat, new_paint, new_stripe_paint)
 	wall_paint = new_paint
-	if(wall_paint)
-		color = wall_paint
 	stripe_paint = new_stripe_paint
 	set_materials(plating_mat, reinf_mat)
 
@@ -193,16 +212,14 @@
 		hard_decon = null
 
 	if(reinf_mat_ref)
-		icon = plating_mat_ref.reinforced_wall_icon
+		greyscale_config = plating_mat_ref.reinforced_wall_greyscale_config
 	else
-		icon = plating_mat_ref.wall_icon
-
-	if(!wall_paint)
-		color = plating_mat_ref.wall_color
+		greyscale_config = plating_mat_ref.wall_greyscale_config
 
 	plating_material = plating_mat
 	reinf_material = reinf_mat
 
+	update_greyscale()
 	update_appearance()
 
 /turf/closed/wall/proc/dismantle_wall(devastated = FALSE, explode = FALSE)

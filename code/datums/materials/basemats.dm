@@ -221,9 +221,8 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/titanium
 	value_per_unit = 0.0625
-	beauty_modifier = 0.05
 	armor_modifiers = list(MELEE = 1.35, BULLET = 1.3, LASER = 1.3, ENERGY = 1.25, BOMB = 1.25, BIO = 1, FIRE = 0.7, ACID = 1)
-	wall_icon = 'icons/turf/walls/metal_wall.dmi'
+	wall_greyscale_config = /datum/greyscale_config/metal_wall
 	wall_type = /turf/closed/wall/mineral/titanium
 	false_wall_type = /obj/structure/falsewall/titanium
 
@@ -283,11 +282,10 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	sheet_type = /obj/item/stack/sheet/mineral/wood
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
 	value_per_unit = 0.01
-	beauty_modifier = 0.1
 	armor_modifiers = list(MELEE = 1.1, BULLET = 1.1, LASER = 0.4, ENERGY = 0.4, BOMB = 1, BIO = 0.2, FIRE = 0, ACID = 0.3)
 	texture_layer_icon_state = "woodgrain"
-	wall_icon = 'icons/turf/walls/wood_wall.dmi'
-	wall_stripe_icon = 'icons/turf/walls/wood_wall_stripe.dmi'
+	wall_greyscale_config = /datum/greyscale_config/wood_wall
+	wall_stripe_greyscale_config = /datum/greyscale_config/wood_wall_stripe
 	wall_color = "#93662C"
 	wall_type = /turf/closed/wall/mineral/wood
 	false_wall_type = /obj/structure/falsewall/wood
@@ -427,10 +425,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	sheet_type = /obj/item/stack/sheet/mineral/sandstone
 	value_per_unit = 0.0025
 	armor_modifiers = list(MELEE = 0.5, BULLET = 0.5, LASER = 1.25, ENERGY = 0.5, BOMB = 0.5, BIO = 0.25, FIRE = 1.5, ACID = 1.5)
-	beauty_modifier = 0.3
 	turf_sound_override = FOOTSTEP_WOOD
 	texture_layer_icon_state = "brick"
-	wall_icon = 'icons/turf/walls/stone_wall.dmi'
+	wall_greyscale_config = /datum/greyscale_config/stone_wall
 
 /datum/material/snow
 	name = "snow"
@@ -441,10 +438,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	sheet_type = /obj/item/stack/sheet/mineral/snow
 	value_per_unit = 0.0025
 	armor_modifiers = list(MELEE = 0.25, BULLET = 0.25, LASER = 0.25, ENERGY = 0.25, BOMB = 0.25, BIO = 0.25, FIRE = 0.25, ACID = 1.5)
-	beauty_modifier = 0.3
 	turf_sound_override = FOOTSTEP_SAND
 	texture_layer_icon_state = "sand"
-	wall_icon = 'icons/turf/walls/stone_wall.dmi'
+	wall_greyscale_config = /datum/greyscale_config/stone_wall
 
 /datum/material/snow/on_accidental_mat_consumption(mob/living/carbon/victim, obj/item/source_item)
 	victim.reagents.add_reagent(/datum/reagent/water, rand(5, 10))
@@ -459,9 +455,8 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	sheet_type = /obj/item/stack/sheet/runed_metal
 	value_per_unit = 0.75
 	armor_modifiers = list(MELEE = 1.2, BULLET = 1.2, LASER = 1, ENERGY = 1, BOMB = 1.2, BIO = 1.2, FIRE = 1.5, ACID = 1.5)
-	beauty_modifier = -0.15
 	texture_layer_icon_state = "runed"
-	wall_icon = 'icons/turf/walls/cult_wall.dmi'
+	wall_greyscale_config = /datum/greyscale_config/cult_wall
 
 /datum/material/runedmetal/on_accidental_mat_consumption(mob/living/carbon/victim, obj/item/source_item)
 	victim.reagents.add_reagent(/datum/reagent/fuel/unholywater, rand(8, 12))

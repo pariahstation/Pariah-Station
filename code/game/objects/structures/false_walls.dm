@@ -38,6 +38,23 @@
 	air_update_turf(TRUE, TRUE)
 	set_wall_information(plating_material, reinf_material, wall_paint, stripe_paint)
 
+/obj/structure/falsewall/update_greyscale()
+	greyscale_colors = get_wall_color()
+	return ..()
+
+/obj/structure/falsewall/proc/get_wall_color()
+	var/wall_color = wall_paint
+	if(!wall_color)
+		var/datum/material/plating_mat_ref = GET_MATERIAL_REF(plating_material)
+		wall_color = plating_mat_ref.wall_color
+	return wall_color
+
+/obj/structure/falsewall/proc/get_stripe_color()
+	var/stripe_color = stripe_paint
+	if(!stripe_color)
+		stripe_color = get_wall_color()
+	return stripe_color
+
 /obj/structure/falsewall/update_name()
 	. = ..()
 	if(reinf_material)
@@ -92,11 +109,11 @@
 /obj/structure/falsewall/update_overlays()
 	//Updating the unmanaged wall overlays (unmanaged for optimisations)
 	overlays.Cut()
-	if(density)
+	if(density && !opening)
 		if(stripe_paint)
 			var/datum/material/plating_mat_ref = GET_MATERIAL_REF(plating_material)
-			var/mutable_appearance/smoothed_stripe = mutable_appearance(plating_mat_ref.wall_stripe_icon, icon_state, appearance_flags = RESET_COLOR)
-			smoothed_stripe.color = stripe_paint
+			var/icon/stripe_icon = SSgreyscale.GetColoredIconByType(plating_mat_ref.wall_stripe_greyscale_config, get_stripe_color())
+			var/mutable_appearance/smoothed_stripe = mutable_appearance(stripe_icon, icon_state)
 			overlays += smoothed_stripe
 		var/neighbor_stripe = NONE
 		if(!neighbor_typecache)
@@ -108,11 +125,8 @@
 					neighbor_stripe ^= cardinal
 					break
 		if(neighbor_stripe)
-			var/mutable_appearance/neighb_stripe_appearace = mutable_appearance('icons/turf/walls/neighbor_stripe.dmi', "[neighbor_stripe]", appearance_flags = RESET_COLOR)
-			if(stripe_paint)
-				neighb_stripe_appearace.color = stripe_paint
-			else
-				neighb_stripe_appearace.color = color
+			var/icon/neighbor_icon = SSgreyscale.GetColoredIconByType(/datum/greyscale_config/wall_neighbor_stripe, get_stripe_color())
+			var/mutable_appearance/neighb_stripe_appearace = mutable_appearance(neighbor_icon, "stripe-[neighbor_stripe]")
 			overlays += neighb_stripe_appearace
 		//And letting anything else that may want to render on the wall to work (ie components)
 	return ..()
@@ -189,16 +203,14 @@
 		reinf_mat_ref = GET_MATERIAL_REF(reinf_mat)
 
 	if(reinf_mat_ref)
-		icon = plating_mat_ref.reinforced_wall_icon
+		greyscale_config = plating_mat_ref.reinforced_wall_greyscale_config
 	else
-		icon = plating_mat_ref.wall_icon
-
-	if(!wall_paint)
-		color = plating_mat_ref.wall_color
+		greyscale_config = plating_mat_ref.wall_greyscale_config
 
 	plating_material = plating_mat
 	reinf_material = reinf_mat
 
+	update_greyscale()
 	update_appearance()
 
 /obj/structure/falsewall/attackby(obj/item/W, mob/user, params)

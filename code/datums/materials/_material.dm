@@ -47,11 +47,11 @@ Simple datum which is instanced once per type and is used for every object of sa
 	///What type of shard the material will shatter to
 	var/obj/item/shard_type
 	///Icon for walls which are plated with this material
-	var/wall_icon = 'icons/turf/walls/solid_wall.dmi'
+	var/wall_greyscale_config = /datum/greyscale_config/solid_wall
 	///Icon for reinforced walls which are plated with this material
-	var/reinforced_wall_icon = 'icons/turf/walls/solid_wall_reinforced.dmi'
+	var/reinforced_wall_greyscale_config = /datum/greyscale_config/reinforced_solid_wall
 	/// Icon for painted stripes on the walls
-	var/wall_stripe_icon = 'icons/turf/walls/wall_stripe.dmi'
+	var/wall_stripe_greyscale_config = /datum/greyscale_config/wall_stripe
 	/// Color of walls constructed with this material as their plating
 	var/wall_color
 	/// Type of the wall this material makes when its used as a plating, null means can't make a wall out of it.
