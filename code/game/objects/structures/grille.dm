@@ -4,9 +4,10 @@
 /obj/structure/grille
 	desc = "A flimsy framework of iron rods."
 	name = "grille"
-	icon = 'icons/obj/structures.dmi'
-	icon_state = "grille"
+	icon = 'icons/obj/smooth_structures/grille.dmi'
+	icon_state = "grille-0"
 	base_icon_state = "grille"
+	color = "#545454"
 	density = TRUE
 	anchored = TRUE
 	pass_flags_self = PASSGRILLE
@@ -15,6 +16,9 @@
 	armor = list(MELEE = 50, BULLET = 70, LASER = 70, ENERGY = 100, BOMB = 10, BIO = 100, FIRE = 0, ACID = 0)
 	max_integrity = 50
 	integrity_failure = 0.4
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_GRILLE)
+	canSmoothWith = list(SMOOTH_GROUP_GRILLE)
 	var/rods_type = /obj/item/stack/rods
 	var/rods_amount = 2
 	var/rods_broken = TRUE
@@ -27,20 +31,19 @@
 	update_cable_icons_on_turf(get_turf(src))
 	return ..()
 
-/obj/structure/grille/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
-	. = ..()
-	update_appearance()
-
 /obj/structure/grille/update_appearance(updates)
-	if(QDELETED(src) || broken)
+	if(QDELETED(src))
 		return
-
 	. = ..()
-	if((updates & UPDATE_SMOOTHING) && (smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK)))
-		QUEUE_SMOOTH(src)
 
 /obj/structure/grille/update_icon_state()
-	icon_state = "[base_icon_state][((atom_integrity / max_integrity) <= 0.5) ? "50_[rand(0, 3)]" : null]"
+	. = ..()
+	if(broken)
+		icon_state = "brokengrille"
+
+/obj/structure/grille/set_smoothed_icon_state(new_junction)
+	if(broken)
+		return
 	return ..()
 
 /obj/structure/grille/examine(mob/user)
@@ -277,7 +280,6 @@
 /obj/structure/grille/atom_break()
 	. = ..()
 	if(!broken && !(flags_1 & NODECONSTRUCT_1))
-		icon_state = "brokengrille"
 		set_density(FALSE)
 		atom_integrity = 20
 		broken = TRUE
@@ -285,15 +287,18 @@
 		rods_broken = FALSE
 		var/obj/R = new rods_type(drop_location(), rods_broken)
 		transfer_fingerprints_to(R)
+		smoothing_flags = NONE
+		update_appearance()
 
 /obj/structure/grille/proc/repair_grille()
 	if(broken)
-		icon_state = "grille"
 		set_density(TRUE)
 		atom_integrity = max_integrity
 		broken = FALSE
 		rods_amount = 2
 		rods_broken = TRUE
+		smoothing_flags = SMOOTH_BITMASK
+		update_appearance()
 		return TRUE
 	return FALSE
 
@@ -342,7 +347,6 @@
 	return null
 
 /obj/structure/grille/broken // Pre-broken grilles for map placement
-	icon_state = "brokengrille"
 	density = FALSE
 	broken = TRUE
 	rods_amount = 1

@@ -1818,7 +1818,6 @@
 /turf/open/floor/carpet/black,
 /area/centcom/holding)
 "fg" = (
-/turf/closed/indestructible/weeb,
 /area/centcom/holding)
 "fh" = (
 /obj/structure/lattice/catwalk,
