@@ -109,6 +109,7 @@
 #define CAT_DRINK "Drinks"
 #define CAT_CHEMISTRY "Chemistry"
 #define CAT_ATMOSPHERIC "Atmospheric"
+#define CAT_STRUCTURE "Structures"
 
 //rcd modes
 #define RCD_FLOORWALL 0
