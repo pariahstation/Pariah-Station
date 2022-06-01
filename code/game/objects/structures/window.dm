@@ -587,13 +587,15 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#AFD3E6"
+	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_colors = "#AFD3E6"
 	alpha = 180
 	max_integrity = 50
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	glass_amount = 2
 
 /obj/structure/window/fulltile/unanchored
@@ -604,13 +606,15 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#c162ec"
+	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_colors = "#c162ec"
 	alpha = 180
 	max_integrity = 300
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	glass_amount = 2
 
 /obj/structure/window/plasma/fulltile/unanchored
@@ -621,14 +625,16 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#c162ec"
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
+	greyscale_colors = "#c162ec"
 	alpha = 180
 	state = RWINDOW_SECURE
-	max_integrity = 1000
+	max_integrity = 500
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	glass_amount = 2
 
 /obj/structure/window/reinforced/plasma/fulltile/unanchored
@@ -640,6 +646,8 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#AFD3E6"
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
+	greyscale_colors = "#AFD3E6"
 	alpha = 180
 	max_integrity = 150
 	fulltile = TRUE
@@ -647,7 +655,7 @@
 	state = RWINDOW_SECURE
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	glass_amount = 2
 
 /obj/structure/window/reinforced/fulltile/unanchored
@@ -659,12 +667,14 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#3b5461"
+	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_colors = "#3b5461"
 	alpha = 180
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	glass_amount = 2
 
 /obj/structure/window/reinforced/fulltile/ice
@@ -679,22 +689,24 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#D0CBD4"
+	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_colors = "#D0CBD4"
 	alpha = 180
 	max_integrity = 150
 	wtype = "shuttle"
-	reinf = TRUE
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	reinf = TRUE
 	heat_resistance = 1600
-	armor = list(MELEE = 90, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 100, FIRE = 80, ACID = 100)
+	armor = list(MELEE = 75, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 100, FIRE = 80, ACID = 100)
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	explosion_block = 3
 	glass_type = /obj/item/stack/sheet/titaniumglass
 	glass_amount = 2
 	receive_ricochet_chance_mod = 1.2
+	damage_deflection = 11
 
 /obj/structure/window/reinforced/shuttle/narsie_act()
 	add_atom_colour("#3C3434", FIXED_COLOUR_PRIORITY)
@@ -704,7 +716,6 @@
 
 /obj/structure/window/reinforced/shuttle/unanchored
 	anchored = FALSE
-	state = WINDOW_OUT_OF_FRAME
 
 /obj/structure/window/reinforced/plasma/plastitanium
 	name = "plastitanium window"
@@ -713,6 +724,8 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#D0CBD4"
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
+	greyscale_colors = "#D0CBD4"
 	alpha = 180
 	max_integrity = 1200
 	wtype = "shuttle"
@@ -722,7 +735,7 @@
 	armor = list(MELEE = 95, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 50, BIO = 100, FIRE = 80, ACID = 100)
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	explosion_block = 3
 	damage_deflection = 21 //The same as reinforced plasma windows.3
 	glass_type = /obj/item/stack/sheet/plastitaniumglass
@@ -829,10 +842,12 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#92661A"
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
+	greyscale_colors = "#92661A"
 	alpha = 180
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_WINDOW_FULLTILE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS)
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	max_integrity = 50
