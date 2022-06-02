@@ -621,11 +621,11 @@
 	anchored = FALSE
 
 /obj/structure/window/reinforced/plasma/fulltile
-	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
+	icon = 'icons/obj/smooth_structures/window.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#c162ec"
-	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
+	greyscale_config = /datum/greyscale_config/fulltile_window
 	greyscale_colors = "#c162ec"
 	alpha = 180
 	state = RWINDOW_SECURE
@@ -642,12 +642,12 @@
 	state = WINDOW_OUT_OF_FRAME
 
 /obj/structure/window/reinforced/fulltile
-	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
+	icon = 'icons/obj/smooth_structures/window.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
-	color = "#AFD3E6"
-	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
-	greyscale_colors = "#AFD3E6"
+	color = "#829eb5"
+	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_colors = "#829eb5"
 	alpha = 180
 	max_integrity = 150
 	fulltile = TRUE
@@ -685,7 +685,7 @@
 /obj/structure/window/reinforced/shuttle//this is called reinforced because it is reinforced w/titanium
 	name = "shuttle window"
 	desc = "A reinforced, air-locked pod window."
-	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
+	icon = 'icons/obj/smooth_structures/window.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#D0CBD4"
@@ -720,11 +720,11 @@
 /obj/structure/window/reinforced/plasma/plastitanium
 	name = "plastitanium window"
 	desc = "A durable looking window made of an alloy of of plasma and titanium."
-	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
+	icon = 'icons/obj/smooth_structures/window.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#D0CBD4"
-	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
+	greyscale_config = /datum/greyscale_config/fulltile_window
 	greyscale_colors = "#D0CBD4"
 	alpha = 180
 	max_integrity = 1200
@@ -838,11 +838,11 @@
 	anchored = FALSE
 
 /obj/structure/window/bronze/fulltile
-	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
+	icon = 'icons/obj/smooth_structures/window.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#92661A"
-	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
+	greyscale_config = /datum/greyscale_config/fulltile_window
 	greyscale_colors = "#92661A"
 	alpha = 180
 	smoothing_flags = SMOOTH_BITMASK

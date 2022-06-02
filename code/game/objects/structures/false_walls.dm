@@ -8,6 +8,7 @@
 	icon = 'icons/turf/walls/solid_wall.dmi'
 	icon_state = "wall-0"
 	base_icon_state = "wall"
+	color = "#57575c" //To display in mapping softwares
 	layer = LOW_OBJ_LAYER
 	density = TRUE
 	opacity = TRUE
@@ -19,6 +20,7 @@
 	can_atmos_pass = ATMOS_PASS_DENSITY
 	rad_insulation = RAD_MEDIUM_INSULATION
 	material_flags = MATERIAL_EFFECTS
+	greyscale_config = /datum/greyscale_config/low_wall
 	/// Material type of the plating
 	var/plating_material = /datum/material/iron
 	/// Material type of the reinforcement
@@ -172,12 +174,7 @@
 /// Painfully copypasted from /turf/closed/wall
 /obj/structure/falsewall/proc/paint_wall(new_paint)
 	wall_paint = new_paint
-	if(wall_paint)
-		color = wall_paint
-	else
-		/// Reset color to material color
-		var/datum/material/plating_mat_ref = GET_MATERIAL_REF(plating_material)
-		color = plating_mat_ref.wall_color
+	update_greyscale()
 	update_appearance()
 
 /// Painfully copypasted from /turf/closed/wall
@@ -188,8 +185,6 @@
 /// Painfully copypasted from /turf/closed/wall
 /obj/structure/falsewall/proc/set_wall_information(plating_mat, reinf_mat, new_paint, new_stripe_paint)
 	wall_paint = new_paint
-	if(wall_paint)
-		color = wall_paint
 	stripe_paint = new_stripe_paint
 	set_materials(plating_mat, reinf_mat)
 
@@ -337,6 +332,7 @@
 /obj/structure/falsewall/wood
 	name = "wooden wall"
 	desc = "A wall with wooden plating. Stiff."
+	icon = 'icons/turf/walls/wood_wall.dmi'
 	plating_material = /datum/material/wood
 
 /obj/structure/falsewall/iron
@@ -355,7 +351,7 @@
 	icon = 'icons/turf/walls/metal_wall.dmi'
 	plating_material = /datum/material/titanium
 	smoothing_groups = list(SMOOTH_GROUP_WALLS)
-	canSmoothWith = list(SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_LOW_WALL)
+	canSmoothWith = list(SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_SHUTTLE_PARTS)
 
 /obj/structure/falsewall/plastitanium
 	name = "wall"
@@ -363,4 +359,4 @@
 	icon = 'icons/turf/walls/metal_wall.dmi'
 	plating_material = /datum/material/alloy/plastitanium
 	smoothing_groups = list(SMOOTH_GROUP_WALLS)
-	canSmoothWith = list(SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_LOW_WALL)
+	canSmoothWith = list(SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_SHUTTLE_PARTS)

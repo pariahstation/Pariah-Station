@@ -127,6 +127,16 @@
 	if(paintleft <= 0)
 		icon_state = "paint_empty"
 		return
+	if(istype(target, /obj/structure/low_wall))
+		var/obj/structure/low_wall/target_low_wall = target
+		if(LAZYACCESS(modifiers, RIGHT_CLICK))
+			target_low_wall.set_stripe_paint(paint_color)
+		else
+			target_low_wall.set_wall_paint(paint_color)
+		user.changeNext_move(CLICK_CD_MELEE)
+		user.visible_message(span_notice("[user] paints \the [target_low_wall]."), \
+			span_notice("You paint \the [target_low_wall]."))
+		return TRUE
 	if(iswall(target))
 		var/turf/closed/wall/target_wall = target
 		if(LAZYACCESS(modifiers, RIGHT_CLICK))

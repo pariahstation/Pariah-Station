@@ -244,6 +244,13 @@
 
 	var/icon/icon_bundle = GenerateBundle(color_string, last_external_icon=last_external_icon)
 	icon_bundle = fcopy_rsc(icon_bundle)
+
+	// This block is done like this because generated icons are unable to be scaled before getting added to the rsc
+	icon_bundle = fcopy_rsc(icon_bundle)
+	icon_bundle = icon(icon_bundle)
+	icon_bundle.Scale(width, height)
+	icon_bundle = fcopy_rsc(icon_bundle)
+
 	icon_cache[key] = icon_bundle
 	var/icon/output = icon(icon_bundle)
 	return output
@@ -296,17 +303,14 @@
 				generated_icon.GetPixel(1, 1)
 				generated_icons["[icon_state]-[bit_step]"] = generated_icon
 
-	var/icon/icon_bundle = generated_icons[""] || icon('icons/testing/greyscale_error.dmi')
-	icon_bundle.Scale(width, height)
-	generated_icons -= ""
-
+	var/icon/icon_bundle = icon('icons/testing/greyscale_error.dmi')
 	for(var/icon_state in generated_icons)
 		icon_bundle.Insert(generated_icons[icon_state], icon_state)
 
 	return icon_bundle
 
 /// Internal recursive proc to handle nested layer groups
-/datum/greyscale_config/proc/GenerateLayerGroup(list/colors, list/group, list/render_steps, icon/last_external_icon, do_bitmasking = FALSE, bitmask_step)
+/datum/greyscale_config/proc/GenerateLayerGroup(list/colors, list/group, list/render_steps, do_bitmasking = FALSE, bitmask_step, icon/last_external_icon)
 	var/icon/new_icon
 	for(var/datum/greyscale_layer/layer as anything in group)
 		var/icon/layer_icon
@@ -324,7 +328,7 @@
 		// These are so we can see the result of every step of the process in the preview ui
 		if(render_steps)
 			var/list/icon_data = list()
-			render_steps += list(icon_data)
+			render_steps[icon(layer_icon)] = icon_data
 			icon_data["config_name"] = name
 			icon_data["step"] = icon(layer_icon)
 			icon_data["result"] = icon(new_icon)

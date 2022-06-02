@@ -22,7 +22,7 @@ again.
 	icon = 'icons/obj/structures_spawners.dmi'
 	icon_state = "window_spawner"
 	name = "window spawner"
-	spawn_list = list(/obj/structure/grille, /obj/structure/window/fulltile)
+	spawn_list = list(/obj/structure/low_wall, /obj/structure/window/fulltile)
 	dir = SOUTH
 
 /obj/effect/spawner/structure/window/Initialize(mapload)
@@ -271,7 +271,7 @@ again.
 /obj/effect/spawner/structure/window/plasma
 	name = "plasma window spawner"
 	icon_state = "pwindow_spawner"
-	spawn_list = list(/obj/structure/grille, /obj/structure/window/plasma/fulltile)
+	spawn_list = list(/obj/structure/low_wall, /obj/structure/window/plasma/fulltile)
 
 /obj/effect/spawner/structure/window/hollow/plasma
 	name = "hollow plasma window spawner"

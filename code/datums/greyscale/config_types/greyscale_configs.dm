@@ -567,8 +567,3 @@
 	name = "Fulltile Window"
 	icon_file = 'icons/obj/smooth_structures/window.dmi'
 	json_config = 'code/datums/greyscale/json_configs/structures/fulltile_window.json'
-
-/datum/greyscale_config/fulltile_reinforced_window
-	name = "Fulltile Window Reinforced"
-	icon_file = 'icons/obj/smooth_structures/window_reinforced.dmi'
-	json_config = 'code/datums/greyscale/json_configs/structures/fulltile_window.json'
