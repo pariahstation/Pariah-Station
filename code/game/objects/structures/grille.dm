@@ -85,9 +85,6 @@
 			if(repair_grille())
 				to_chat(user, span_notice("You rebuild the broken grille."))
 
-			if(!clear_tile(user))
-				return FALSE
-
 			if(!ispath(the_rcd.window_type, /obj/structure/window))
 				CRASH("Invalid window path type in RCD: [the_rcd.window_type]")
 			var/obj/structure/window/window_path = the_rcd.window_type
@@ -98,29 +95,6 @@
 			WD.set_anchored(TRUE)
 			return TRUE
 	return FALSE
-
-/obj/structure/grille/proc/clear_tile(mob/user)
-	var/at_users_feet = get_turf(user)
-
-	var/unanchored_items_on_tile
-	var/obj/item/last_item_moved
-	for(var/obj/item/item_to_move in loc.contents)
-		if(!item_to_move.anchored)
-			if(unanchored_items_on_tile <= CLEAR_TILE_MOVE_LIMIT)
-				item_to_move.forceMove(at_users_feet)
-				last_item_moved = item_to_move
-			unanchored_items_on_tile++
-
-	if(!unanchored_items_on_tile)
-		return TRUE
-
-	to_chat(user, span_notice("You move [unanchored_items_on_tile == 1 ? "[last_item_moved]" : "some things"] out of the way."))
-
-	if(unanchored_items_on_tile - CLEAR_TILE_MOVE_LIMIT > 0)
-		to_chat(user, span_warning("There's still too much stuff in the way!"))
-		return FALSE
-
-	return TRUE
 
 /obj/structure/grille/Bumped(atom/movable/AM)
 	if(!ismob(AM))
@@ -207,52 +181,11 @@
 		R.use(1)
 		return TRUE
 
-//window placing begin
-	else if(is_glass_sheet(W) || istype(W, /obj/item/stack/sheet/bronze))
-		if (!broken)
-			var/obj/item/stack/ST = W
-			if (ST.get_amount() < 2)
-				to_chat(user, span_warning("You need at least two sheets of glass for that!"))
-				return
-			var/dir_to_set = SOUTHWEST
-			if(!anchored)
-				to_chat(user, span_warning("[src] needs to be fastened to the floor first!"))
-				return
-			for(var/obj/structure/window/WINDOW in loc)
-				to_chat(user, span_warning("There is already a window there!"))
-				return
-			if(!clear_tile(user))
-				return
-			to_chat(user, span_notice("You start placing the window..."))
-			if(do_after(user,20, target = src))
-				if(!src.loc || !anchored) //Grille broken or unanchored while waiting
-					return
-				for(var/obj/structure/window/WINDOW in loc) //Another window already installed on grille
-					return
-				if(!clear_tile(user))
-					return
-				var/obj/structure/window/WD
-				if(istype(W, /obj/item/stack/sheet/plasmarglass))
-					WD = new/obj/structure/window/reinforced/plasma/fulltile(drop_location()) //reinforced plasma window
-				else if(istype(W, /obj/item/stack/sheet/plasmaglass))
-					WD = new/obj/structure/window/plasma/fulltile(drop_location()) //plasma window
-				else if(istype(W, /obj/item/stack/sheet/rglass))
-					WD = new/obj/structure/window/reinforced/fulltile(drop_location()) //reinforced window
-				else if(istype(W, /obj/item/stack/sheet/titaniumglass))
-					WD = new/obj/structure/window/reinforced/shuttle(drop_location())
-				else if(istype(W, /obj/item/stack/sheet/plastitaniumglass))
-					WD = new/obj/structure/window/reinforced/plasma/plastitanium(drop_location())
-				else if(istype(W, /obj/item/stack/sheet/bronze))
-					WD = new/obj/structure/window/bronze/fulltile(drop_location())
-				else
-					WD = new/obj/structure/window/fulltile(drop_location()) //normal window
-				WD.setDir(dir_to_set)
-				WD.set_anchored(FALSE)
-				WD.state = 0
-				ST.use(2)
-				to_chat(user, span_notice("You place [WD] on [src]."))
-			return
-//window placing end
+	//Try place window on the grille if the sheet supports it
+	else if(istype(W, /obj/item/stack/sheet))
+		var/obj/item/stack/sheet/my_sheet = W
+		if(my_sheet.try_install_window(user, src.loc, src))
+			return TRUE
 
 	else if(istype(W, /obj/item/shard) || !shock(user, 70))
 		return ..()

@@ -663,6 +663,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	material_type = /datum/material/bronze
 	walltype = /turf/closed/wall/mineral/bronze
 	has_unique_girder = TRUE
+	window_type = /obj/structure/window/bronze/fulltile
 
 /obj/item/stack/sheet/bronze/get_main_recipes()
 	. = ..()

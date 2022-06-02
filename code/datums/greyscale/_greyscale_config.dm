@@ -138,8 +138,8 @@
 /// Called after every config has refreshed, this proc handles data verification that depends on multiple entwined configurations.
 /datum/greyscale_config/proc/CrossVerify()
 	for(var/icon_state in icon_states)
-		var/list/verification_targets = icon_states[icon_state]
-		verification_targets = verification_targets.Copy()
+		var/datum/greyscale_state/gags_state = icon_states[icon_state]
+		var/list/verification_targets = gags_state.layers.Copy()
 		while(length(verification_targets))
 			var/datum/greyscale_layer/layer = verification_targets[length(verification_targets)]
 			verification_targets.len--
@@ -315,10 +315,10 @@
 	for(var/datum/greyscale_layer/layer as anything in group)
 		var/icon/layer_icon
 		if(islist(layer))
-			layer_icon = GenerateLayerGroup(colors, layer, render_steps, do_bitmasking, bitmask_step || last_external_icon)
+			layer_icon = GenerateLayerGroup(colors, layer, render_steps, do_bitmasking, bitmask_step, last_external_icon)
 			layer = layer[1] // When there are multiple layers in a group like this we use the first one's blend mode
 		else
-			layer_icon = layer.Generate(colors, render_steps, do_bitmasking, bitmask_step || last_external_icon)
+			layer_icon = layer.Generate(colors, render_steps, do_bitmasking, bitmask_step, last_external_icon)
 
 		if(!new_icon)
 			new_icon = layer_icon
