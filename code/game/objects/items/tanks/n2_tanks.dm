@@ -23,6 +23,7 @@
 	force = 5
 	volume = 24
 	w_class = WEIGHT_CLASS_SMALL
+	supports_variations_flags = CLOTHING_VOX_VARIATION
 
 /obj/item/tank/internals/nitrogen/belt/full/populate_gas()
 	air_contents.assert_gas(/datum/gas/nitrogen)
