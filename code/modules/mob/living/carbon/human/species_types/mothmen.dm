@@ -83,6 +83,8 @@
 
 /datum/species/moth/get_species_lore()
 	return list(
+		"The native language of Gamuoida is referred to as 'Gamuid' by their population. However, 'Moffic' is used as an exonym among other species.",
+
 		"Written transcripts of Gamuoida history remain largely untranslated to modern Gamuid, that most of the populace knows. \
 		However, more recent transcripts detail the progress of Gamuoida working to accelerate the process of first contact - to get in touch with extra-terrestrials. \
 		There is a long history of research and scientific development done by Gamuoida, with lower-class Gamuoida focusing on providing materials and other needed produce for upper-class researchers to utilize in advancements. ",
@@ -92,10 +94,7 @@
 		With some careful consideration, Gamuoida working on Nanotrasen facilities are paid 20% less than most, and are given a weekly lamp to supplement the unpaid money. \
 		This has pleased 98% of surveyed moths, including the upper class.",
 
-		"Language & NomenclatureThe native language of Gamuoida is referred to as 'Gamuid' by their population. \
-		However, 'Moffic' is used as an exonym among other species.",
-
-		"he working, lower, and upper classes of Gamuoida are scattered across their homeworld of Paraco, including other under-studied planets, with the wealthy more focused on settling down in rain forests, primarily to take shelter in tall trees. \
+		"The working, lower, and upper classes of Gamuoida are scattered across their homeworld of Paraco, including other under-studied planets, with the wealthy more focused on settling down in rain forests, primarily to take shelter in tall trees. \
 		The variety in weather and temperature endemic to Paraco has given rise to a vast amount of clothing styles, with a key focus on embroidered designs on cloth, \
 		though most often those working on stations and other facilities wear heavy-duty equipment or their assigned uniforms.",
 	)
