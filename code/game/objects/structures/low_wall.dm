@@ -5,6 +5,7 @@
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 	color = "#57575c" //To display in mapping softwares
+	greyscale_colors = "#57575c"
 	density = TRUE
 	anchored = TRUE
 	pass_flags_self = PASSTABLE | LETPASSTHROW
