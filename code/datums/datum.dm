@@ -95,7 +95,7 @@
 	tag = null
 	datum_flags &= ~DF_USE_TAG //In case something tries to REF us
 	weak_reference = null //ensure prompt GCing of weakref.
-	QDEL_NULL(oui)
+	QDEL_NULL(oui) //Cleans up any OracleUI interfaces
 	var/list/timers = active_timers
 	active_timers = null
 	for(var/datum/timedevent/timer as anything in timers)

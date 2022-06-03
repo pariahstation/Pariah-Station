@@ -1,6 +1,7 @@
 /datum
 	///Oracle UI doesn't really support non-themed UIs anyway, so, fuck it.
 	var/datum/oracle_ui/themed/oui
+
 /datum/oracle_ui
 	var/width = 512
 	var/height = 512
@@ -146,3 +147,9 @@
 		return
 
 	datasource.oui_act(current_user, action, parameters)
+
+/client/verb/oracle_ui_debug(atom/thing as obj)
+	set name = "Oracle UI Debug"
+	set category = "IC"
+
+	to_chat(mob, html_decode(thing.oui_data_debug(mob)))
