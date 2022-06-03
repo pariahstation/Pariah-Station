@@ -156,7 +156,6 @@
 
 /// Called when person is finished shoving in, awards ransom money
 /datum/syndicate_contract/proc/finish_enter()
-
 	// Pay contractor their portion of ransom
 	if(!(status == CONTRACT_STATUS_COMPLETE))
 		return
@@ -255,10 +254,7 @@
 	else
 		to_chat(target, span_hypnophrase(span_reallybig("A million voices echo in your head... <i>\"Seems where you got sent here from won't \
 					be able to handle our pod... You will die here instead.\"</i>")))
-		if(!isliving(target))
-			return
-		var/mob/living/unlucky_fellow = target
-		unlucky_fellow.death()
+		target.death()
 
 #undef RANSOM_LOWER
 #undef RANSOM_UPPER

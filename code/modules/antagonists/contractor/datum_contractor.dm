@@ -1,7 +1,7 @@
 // USED FOR THE MIDROUND ANTAGONIST
 /datum/antagonist/contractor
 	name = "Drifting Contractor"
-	antagpanel_category = "DriftingContractor"
+	antagpanel_category = "Drifting Contractor"
 	preview_outfit = /datum/outfit/contractor_preview
 	job_rank = ROLE_DRIFTING_CONTRACTOR
 	antag_hud_name = "contractor"

@@ -1350,7 +1350,7 @@
 		to provide ample protection to the user where the plating doesn't, with an illegal onboard electric powered \
 		ablative shield module to provide resistance against conventional energy firearms. \
 		In addition, it has an in-built chameleon system, allowing you to disguise the suit while undeployed. \
-		A small tag hangs off of it reading; 'Property of the Gorlex Marauders, with assistance from Cybersun Industries. \
+		A small tag hangs off of it reading: 'Property of the Gorlex Marauders, with assistance from Cybersun Industries. \
 		All rights reserved, tampering with suit will void warranty."
 	default_skin = "contractor"
 	armor = list(MELEE = 30, BULLET = 40, LASER = 20, ENERGY = 30, BOMB = 30, BIO = 30, FIRE = 80, ACID = 85)

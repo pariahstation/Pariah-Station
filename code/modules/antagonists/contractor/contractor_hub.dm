@@ -13,9 +13,9 @@
 	var/datum/syndicate_contract/current_contract
 	/// List of all contract datums the contractor has available
 	var/list/datum/syndicate_contract/assigned_contracts = list()
-	/// used as a blacklist to make sure we're not assigning targets already assigned
+	/// Used as a blacklist to make sure we're not assigning targets already assigned
 	var/list/assigned_targets = list()
-	/// NUmber of how many contracts you've done
+	/// Number of how many contracts you've done
 	var/contracts_completed = 0
 	/// How many TC you've paid out in contracts
 	var/contract_paid_out = 0

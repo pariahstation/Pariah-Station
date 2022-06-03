@@ -14,7 +14,7 @@
 	if(!length(candidates))
 		return NOT_ENOUGH_PLAYERS
 
-	var/mob/dead/selected = pick_n_take(candidates)
+	var/mob/dead/selected = pick(candidates)
 
 	var/list/spawn_locs = list()
 	for(var/obj/effect/landmark/carpspawn/carp in GLOB.landmarks_list)
