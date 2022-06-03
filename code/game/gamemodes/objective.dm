@@ -13,13 +13,15 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 	var/target_amount = 0 //If they are focused on a particular number. Steal objectives have their own counter.
 	var/completed = FALSE //currently only used for custom objectives.
 	var/martyr_compatible = FALSE //If the objective is compatible with martyr objective, i.e. if you can still do it while dead.
-	/// Should space areas count when finding a target?
-	var/count_space_areas = TRUE
+	/// Typecache of areas to ignore when looking for a potential target.
+	var/list/blacklisted_target_areas
 
 /datum/objective/New(text)
 	GLOB.objectives += src //PARIAH EDIT
 	if(text)
 		explanation_text = text
+	if(blacklisted_target_areas)
+		blacklisted_target_areas = typecacheof(blacklisted_target_areas)
 
 //Apparently objectives can be qdel'd. Learn a new thing every day
 /datum/objective/Destroy()
@@ -130,9 +132,8 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 			continue
 		if(possible_target in blacklist)
 			continue
-		if(!count_space_areas)
-			if(istype(target_area, /area/space) || istype(target_area, /area/ruin) || istype(target_area, /area/icemoon) || istype(target_area, /area/lavaland))
-				continue
+		if(is_type_in_typecache(target_area, blacklisted_target_areas))
+			continue
 		possible_targets += possible_target
 	if(try_target_late_joiners)
 		var/list/all_possible_targets = possible_targets.Copy()
@@ -963,7 +964,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 	var/payout = 0
 	var/payout_bonus = 0
 	var/area/dropoff = null
-	count_space_areas = FALSE
+	blacklisted_target_areas = list(/area/space, /area/ruin, /area/icemoon, /area/lavaland)
 
 // Generate a random valid area on the station that the dropoff will happen.
 /datum/objective/contract/proc/generate_dropoff()

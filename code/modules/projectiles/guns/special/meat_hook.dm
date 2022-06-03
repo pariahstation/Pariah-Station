@@ -100,4 +100,3 @@
 	if(prob(1))
 		user.say("+GET OVER HERE!+", forced = "scorpion hook")
 	return ..()
-

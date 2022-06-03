@@ -285,7 +285,7 @@
 	)
 
 /obj/item/storage/box/syndicate/contract_kit/PopulateContents()
-	new /obj/item/modular_computer/tablet/syndicate_contract_uplink/preset/uplink(src)
+	new /obj/item/modular_computer/tablet/syndicate_contract_uplink(src)
 	new /obj/item/storage/box/syndicate/contractor_loadout(src)
 	new /obj/item/melee/baton/telescopic/contractor_baton(src)
 

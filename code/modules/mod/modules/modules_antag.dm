@@ -292,8 +292,7 @@
 	name = "MOD baton holster module"
 	desc = "A module installed into the chest of a MODSuit, this allows you \
 		to retrieve an inserted baton from the suit at will. Insert a baton \
-		by hitting the module, while it is removed from the suit, with the baton. \
-		Remove an inserted baton with a wrench."
+		by hitting the module, while it is removed from the suit, with the baton."
 	icon_state = "holster"
 	module_type = MODULE_ACTIVE
 	complexity = 3

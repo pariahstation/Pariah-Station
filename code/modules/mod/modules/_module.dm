@@ -96,7 +96,7 @@
 
 /// Called when the module is selected from the TGUI, radial or the action button
 /obj/item/mod/module/proc/on_select()
-	if(!mod.active || mod.activating || module_type == MODULE_PASSIVE)
+	if(!allowed_inactive && (!mod.active || mod.activating || module_type == MODULE_PASSIVE))
 		if(mod.wearer)
 			balloon_alert(mod.wearer, "not active!")
 		return

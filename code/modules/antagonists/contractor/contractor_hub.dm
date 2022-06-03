@@ -82,11 +82,3 @@
 
 #undef LOWEST_TC
 
-/datum/contractor_hub/proc/create_single_contract(datum/mind/owner, contract_payout_tier)
-	var/datum/syndicate_contract/contract_to_add = new(owner, assigned_targets, contract_payout_tier)
-
-	assigned_targets.Add(contract_to_add.contract.target)
-
-	contract_to_add.id = start_index
-	assigned_contracts.Add(contract_to_add)
-	start_index++

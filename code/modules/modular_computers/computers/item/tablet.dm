@@ -137,7 +137,7 @@
 	comp_light_luminosity = 6.3
 	has_variants = FALSE
 
-/obj/item/modular_computer/tablet/syndicate_contract_uplink/preset/uplink/Initialize(mapload)
+/obj/item/modular_computer/tablet/syndicate_contract_uplink/Initialize(mapload)
 	. = ..()
 	var/obj/item/computer_hardware/hard_drive/small/syndicate/hard_drive = new
 	var/datum/computer_file/program/contract_uplink/uplink = new

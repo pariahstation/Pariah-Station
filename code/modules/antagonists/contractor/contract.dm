@@ -120,6 +120,8 @@
 					continue //So all they're left with are shoes and uniform.
 				if(sent_mob_item == sent_mob_human.shoes)
 					continue
+				// After we remove items, at least give them what they need to live.
+				sent_mob_human.dna.species.give_important_for_life(sent_mob_human)
 
 
 			sent_mob.transferItemToLoc(sent_mob_item)
@@ -133,9 +135,6 @@
 
 	if (ishuman(sent_mob))
 		var/mob/living/carbon/human/sent_mob_human = sent_mob
-
-		// After we remove items, at least give them what they need to live.
-		sent_mob_human.dna.species.give_important_for_life(sent_mob_human)
 
 	// After pod is sent we start the victim narrative/heal.
 	INVOKE_ASYNC(src, .proc/handle_victim_experience, sent_mob)
