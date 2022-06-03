@@ -395,7 +395,7 @@
 	. = ..()
 	if(istype(attacking_item, /obj/item/baton_upgrade))
 		if(add_upgrade(attacking_item, user))
-			to_chat(user, span_notice("You attach \the [attacking_item]."))
+			to_chat(user, span_notice("You attach [attacking_item]."))
 			balloon_alert(user, "[attacking_item] attached")
 	if(!(upgrade_flags & BATON_CUFF_UPGRADE))
 		return
