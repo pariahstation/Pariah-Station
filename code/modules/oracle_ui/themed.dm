@@ -64,7 +64,7 @@ GLOBAL_LIST_EMPTY(oui_file_cache)
 	for(var/viewer in viewers)
 		call_js(viewer, "replaceContent", list(get_inner_content(viewer)))
 
-/datum/oracle_ui/themed/proc/change_page(var/newpage)
+/datum/oracle_ui/themed/proc/change_page(newpage)
 	if(newpage == current_page)
 		return
 	current_page = newpage

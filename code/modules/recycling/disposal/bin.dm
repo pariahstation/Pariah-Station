@@ -10,6 +10,7 @@
 	resistance_flags = FIRE_PROOF
 	interaction_flags_machine = INTERACT_MACHINE_OPEN | INTERACT_MACHINE_WIRES_IF_OPEN | INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_OPEN_SILICON
 	obj_flags = CAN_BE_HIT
+	oui = /datum/oracle_ui/themed/nano
 
 	var/datum/gas_mixture/air_contents // internal reservoir
 	var/full_pressure = FALSE
@@ -23,8 +24,6 @@
 	var/obj/structure/disposalconstruct/stored
 	// create a new disposal
 	// find the attached trunk (if present) and init gas resvr.
-
-	var/datum/oracle_ui/themed/nano/ui
 
 /obj/machinery/disposal/Initialize(mapload, obj/structure/disposalconstruct/make_from)
 	. = ..()
@@ -48,9 +47,9 @@
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
-	ui = new /datum/oracle_ui/themed/nano(src, 330, 190, "disposal_bin")
-	ui.auto_refresh = TRUE
-	ui.can_resize = FALSE
+	oui = new /datum/oracle_ui/themed/nano(src, 330, 190, "disposal_bin")
+	oui.auto_refresh = TRUE
+	oui.can_resize = FALSE
 	return INITIALIZE_HINT_LATELOAD //we need turfs to have air
 
 /obj/machinery/disposal/proc/trunk_check()
@@ -112,10 +111,10 @@
 			return
 		place_item_in_disposal(I, user)
 		update_appearance()
-		ui.soft_update_fields()
+		oui.soft_update_fields()
 		return 1 //no afterattack
 	else
-		ui.soft_update_fields()
+		oui.soft_update_fields()
 		return ..()
 
 /obj/machinery/disposal/proc/rat_rummage(mob/living/simple_animal/hostile/regalrat/king)
@@ -312,10 +311,10 @@
 /obj/machinery/disposal/bin/ui_interact(mob/user, datum/tgui/ui)
 	if(machine_stat & BROKEN)
 		return
-	ui = SStgui.try_update_ui(user, src, ui)
+	ui = SStgoui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "DisposalUnit", name)
-		ui.open()
+		oui.open()
 
 /obj/machinery/disposal/bin/ui_data(mob/user)
 	var/list/data = list()
@@ -459,7 +458,7 @@
 		full_pressure = TRUE
 		pressure_charging = FALSE
 		update_appearance()
-	ui.soft_update_fields()
+	oui.soft_update_fields()
 	return
 
 /obj/machinery/disposal/bin/get_remote_view_fullscreens(mob/user)
@@ -556,7 +555,7 @@
 	if(user.loc == src)
 		to_chat(user, "<span class='warning'>You cannot reach the controls from inside!</span>")
 		return
-	ui.render(user)
+	oui.render(user)
 
 /obj/machinery/disposal/bin/oui_canview(mob/user)
 	if(user.loc == src)
@@ -567,12 +566,12 @@
 
 /obj/machinery/disposal/bin/oui_data(mob/user)
 	var/list/data = list()
-	data["flush"] = flush ? ui.act("Disengage", user, "handle-0", class="active") : ui.act("Engage", user, "handle-1")
+	data["flush"] = flush ? oui.act("Disengage", user, "handle-0", class="active") : oui.act("Engage", user, "handle-1")
 	data["full_pressure"] = full_pressure ? "Ready" : (pressure_charging ? "Pressurizing" : "Off")
-	data["pressure_charging"] = pressure_charging ? ui.act("Turn Off", user, "pump-0", class="active", disabled=full_pressure) : ui.act("Turn On", user, "pump-1", disabled=full_pressure)
+	data["pressure_charging"] = pressure_charging ? oui.act("Turn Off", user, "pump-0", class="active", disabled=full_pressure) : oui.act("Turn On", user, "pump-1", disabled=full_pressure)
 	var/per = full_pressure ? 100 : clamp(100* air_contents.return_pressure() / (SEND_PRESSURE), 0, 99)
 	data["per"] = "[round(per, 1)]%"
-	data["contents"] = ui.act("Eject Contents", user, "eject", disabled=contents.len < 1)
+	data["contents"] = oui.act("Eject Contents", user, "eject", disabled=contents.len < 1)
 	data["isai"] = isAI(user)
 	return data
 
@@ -602,4 +601,4 @@
 		if("eject")
 			eject()
 			. = TRUE
-	ui.soft_update_fields()
+	oui.soft_update_fields()

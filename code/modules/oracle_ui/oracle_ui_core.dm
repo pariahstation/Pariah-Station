@@ -1,3 +1,6 @@
+/datum
+	///Oracle UI doesn't really support non-themed UIs anyway, so, fuck it.
+	var/datum/oracle_ui/themed/oui
 /datum/oracle_ui
 	var/width = 512
 	var/height = 512
@@ -21,6 +24,7 @@
 
 /datum/oracle_ui/Destroy()
 	close_all()
+	datasource.oui = null
 	if((src.datum_flags & DF_ISPROCESSING))
 		STOP_PROCESSING(SSobj, src)
 	return ..()
@@ -134,14 +138,8 @@
 	if(!ismob(current_user))
 		return
 	if(current_user.client != usr.client)
-		message_admins("[current_user.client] may have attempted to use an href exploit.")
+		message_admins("[current_user.client?.ckey] may have attempted to use an href exploit.")
 		return
-	/*
-	if(!call(datasource, "oui_canuse")(current_user))
-		return
-	if(datasource)
-		call(datasource, "oui_act")(current_user, action, parameters);
-	*/
 	if(QDELETED(datasource))
 		CRASH("[src] has no datasource.")
 	if(!datasource.oui_canuse(current_user))
