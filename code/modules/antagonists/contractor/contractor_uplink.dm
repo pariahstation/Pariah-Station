@@ -45,7 +45,8 @@
 			var/datum/antagonist/antag_data = user.mind.has_antag_datum(/datum/antagonist)
 
 			if (!antag_data)
-				to_chat(usr, span_warning("You need to be an antagonist to become a Contractor!"))
+				user.playsound_local(user, 'sound/machines/uplinkerror.ogg', 50)
+				to_chat(user, span_warning("ERROR: Unauthorized user!"))
 				return FALSE
 			// Only play greet sound, and handle contractor hub when assigning for the first time.
 			if (!antag_data.contractor_hub)

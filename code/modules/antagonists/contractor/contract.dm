@@ -112,20 +112,18 @@
 	if(antag_data.contractor_hub.current_contract == src)
 		antag_data.contractor_hub.current_contract = null
 
-	if(iscarbon(sent_mob))
-		for(var/obj/item/sent_mob_item in sent_mob)
-			if (ishuman(sent_mob))
-				var/mob/living/carbon/human/sent_mob_human = sent_mob
-				if(sent_mob_item == sent_mob_human.w_uniform)
-					continue //So all they're left with are shoes and uniform.
-				if(sent_mob_item == sent_mob_human.shoes)
-					continue
-				// After we remove items, at least give them what they need to live.
-				sent_mob_human.dna.species.give_important_for_life(sent_mob_human)
+	if(ishuman(sent_mob))
+		var/mob/living/carbon/human/sent_mob_human = sent_mob
+		for(var/obj/item/sent_mob_item in sent_mob_human)
+			if(sent_mob_item == sent_mob_human.w_uniform)
+				continue //So all they're left with are shoes and uniform.
+			if(sent_mob_item == sent_mob_human.shoes)
+				continue
 
-
-			sent_mob.transferItemToLoc(sent_mob_item)
+			sent_mob_human.transferItemToLoc(sent_mob_item)
 			victim_belongings.Add(sent_mob_item)
+		// After we remove items, at least give them what they need to live.
+		sent_mob_human.dna.species.give_important_for_life(sent_mob_human)
 
 	var/obj/structure/closet/supplypod/extractionpod/pod = source
 	pod.recieving = FALSE
@@ -157,7 +155,6 @@
 
 /// Called when person is finished shoving in, awards ransom money
 /datum/syndicate_contract/proc/finish_enter()
-
 	// Pay contractor their portion of ransom
 	if(!(status == CONTRACT_STATUS_COMPLETE))
 		return
@@ -256,10 +253,7 @@
 	else
 		to_chat(target, span_hypnophrase(span_reallybig("A million voices echo in your head... <i>\"Seems where you got sent here from won't \
 					be able to handle our pod... You will die here instead.\"</i>")))
-		if(!isliving(target))
-			return
-		var/mob/living/unlucky_fellow = target
-		unlucky_fellow.death()
+		target.death()
 
 #undef RANSOM_LOWER
 #undef RANSOM_UPPER

@@ -14,7 +14,7 @@
 	if(!length(candidates))
 		return NOT_ENOUGH_PLAYERS
 
-	var/mob/dead/selected = pick_n_take(candidates)
+	var/mob/dead/selected = pick(candidates)
 
 	var/list/spawn_locs = list()
 	for(var/obj/effect/landmark/carpspawn/carp in GLOB.landmarks_list)
@@ -32,7 +32,7 @@
 	mind.transfer_to(operative)
 	mind.add_antag_datum(/datum/antagonist/contractor)
 
-	message_admins("[ADMIN_LOOKUPFLW(operative)] has been made into [src] by an event.")
+	message_admins("[ADMIN_LOOKUPFLW(operative)] has been made into a [src] by an event.")
 	log_game("[key_name(operative)] was spawned as a [src] by an event.")
 	spawned_mobs += operative
 	return SUCCESSFUL_SPAWN

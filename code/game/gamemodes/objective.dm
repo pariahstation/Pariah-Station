@@ -995,8 +995,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 	explanation_text = "Complete at least [contracts_needed] contract\s."
 
 /datum/objective/contractor_total/check_completion()
-	var/datum/mind/usr_mind = usr.mind
-	var/datum/antagonist/antag_datum = usr_mind.has_antag_datum(/datum/antagonist)
-	if(antag_datum.contractor_hub.contracts_completed >= contracts_needed)
-		return TRUE
-	return FALSE
+	var/datum/antagonist/antag_datum = owner?.has_antag_datum(/datum/antagonist)
+	if(!antag_datum?.contractor_hub)
+		return FALSE
+	return antag_datum.contractor_hub.contracts_completed >= contracts_needed
