@@ -83,7 +83,7 @@
 			},
 			{
 				"type": "icon_state",
-				"icon_state": "badge",
+				"icon_state": "badge_police",
 				"blend_mode": "overlay",
 				"color_ids": [ 2 ]
 			}
