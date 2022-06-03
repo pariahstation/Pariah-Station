@@ -9,11 +9,17 @@
 	var/can_minimize = FALSE
 	var/can_resize = TRUE
 	var/titlebar = TRUE
+	///The byond window ID, it's REF().
 	var/window_id = null
-	var/viewers[0]
+	///The mobs currently viewing this window.
+	var/viewers[0] //NOTE: Could probably be turned into clients.
+	///Does this UI automatically check if all of it's viewers are valid every tick?
 	var/auto_check_view = TRUE
+	///Does this UI automatically refresh it's contents?
 	var/auto_refresh = FALSE
-	var/atom/datasource = null
+	///The atom this UI originates from.
+	var/atom/datasource = null //NOTE: This could probably be made into /datum for admin UIs.
+	///The CSS/JS assets the page needs to send to the client. Passed in New().
 	var/datum/asset/assets = null
 
 /datum/oracle_ui/New(atom/n_datasource, n_width = 512, n_height = 512, n_assets = null)
@@ -27,7 +33,7 @@
 	close_all()
 	datasource.oui = null
 	if((src.datum_flags & DF_ISPROCESSING))
-		STOP_PROCESSING(SSobj, src)
+		STOP_PROCESSING(SSoracleui, src)
 	return ..()
 
 /datum/oracle_ui/process()
@@ -47,14 +53,14 @@
 	if(!target || !target.client || !can_view(target))
 		viewers -= target
 		if(viewers.len < 1 && (src.datum_flags & DF_ISPROCESSING))
-			STOP_PROCESSING(SSobj, src)  //No more viewers, stop polling
+			STOP_PROCESSING(SSoracleui, src)  //No more viewers, stop polling
 		close(target)
 		return FALSE
 	//If this is an update, and they have closed the window, remove from viewers and return
 	if(updating && winget(target, window_id, "is-visible") != "true")
 		viewers -= target
 		if(viewers.len < 1 && (src.datum_flags & DF_ISPROCESSING))
-			STOP_PROCESSING(SSobj, src) //No more viewers, stop polling
+			STOP_PROCESSING(SSoracleui, src) //No more viewers, stop polling
 		return FALSE
 	return TRUE
 
@@ -71,7 +77,7 @@
 	//Add them to the viewers if they aren't there already
 	viewers |= target
 	if(!(src.datum_flags & DF_ISPROCESSING) && (auto_refresh | auto_check_view))
-		START_PROCESSING(SSobj, src) //Start processing to poll for viewability
+		START_PROCESSING(SSoracleui, src) //Start processing to poll for viewability
 	//Send the content
 	if(updating)
 		target << output(get_content(target), "[window_id].browser")
