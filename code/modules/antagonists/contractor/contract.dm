@@ -112,17 +112,15 @@
 	if(antag_data.contractor_hub.current_contract == src)
 		antag_data.contractor_hub.current_contract = null
 
-	if(iscarbon(sent_mob))
-		for(var/obj/item/sent_mob_item in sent_mob)
-			if (ishuman(sent_mob))
-				var/mob/living/carbon/human/sent_mob_human = sent_mob
-				if(sent_mob_item == sent_mob_human.w_uniform)
-					continue //So all they're left with are shoes and uniform.
-				if(sent_mob_item == sent_mob_human.shoes)
-					continue
+	if(ishuman(sent_mob))
+		var/mob/living/carbon/human/sent_mob_human = sent_mob
+		for(var/obj/item/sent_mob_item in sent_mob_human)
+			if(sent_mob_item == sent_mob_human.w_uniform)
+				continue //So all they're left with are shoes and uniform.
+			if(sent_mob_item == sent_mob_human.shoes)
+				continue
 
-
-			sent_mob.transferItemToLoc(sent_mob_item)
+			sent_mob_human.transferItemToLoc(sent_mob_item)
 			victim_belongings.Add(sent_mob_item)
 
 	var/obj/structure/closet/supplypod/extractionpod/pod = source
