@@ -105,15 +105,12 @@
 
 		status = CONTRACT_STATUS_COMPLETE
 
-		if (antag_data.contractor_hub.current_contract == src)
-			antag_data.contractor_hub.current_contract = null
-
 		antag_data.contractor_hub.contract_rep += 2
 	else
 		status = CONTRACT_STATUS_ABORTED // Sending a sent_mob that wasn't even yours is as good as just aborting it
 
-		if (antag_data.contractor_hub.current_contract == src)
-			antag_data.contractor_hub.current_contract = null
+	if(antag_data.contractor_hub.current_contract == src)
+		antag_data.contractor_hub.current_contract = null
 
 	if(iscarbon(sent_mob))
 		for(var/obj/item/sent_mob_item in sent_mob)
