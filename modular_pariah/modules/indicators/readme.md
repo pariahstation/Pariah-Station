@@ -6,7 +6,7 @@ MODULE ID: INDICATORS
 
 ### Description:
 
-The compilation of all player indicators (CI, SSD, Typing)
+The compilation of all player indicators (SSD, Typing)
 SSD Indicator - Automatically shows when a player has disconnected
 Typing Indicator - Shows when a player is typing
 
