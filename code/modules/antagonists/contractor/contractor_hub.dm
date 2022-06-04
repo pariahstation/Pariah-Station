@@ -1,5 +1,6 @@
 #define LOWEST_TC 30
 
+GLOBAL_LIST_EMPTY(contractors)
 /datum/contractor_hub
 	/// How much reputation the contractor has
 	var/contract_rep = 0
@@ -79,6 +80,37 @@
 	// If the threshold for TC payouts isn't reached, boost the lowest paying contract
 	if (total < LOWEST_TC && lowest_paying_contract)
 		lowest_paying_contract.contract.payout_bonus += (LOWEST_TC - total)
+
+/// End-round generation proc for contractors
+/datum/contractor_hub/proc/contractor_round_end()
+	var/result = ""
+	var/total_spent_rep = 0
+
+	var/contractor_item_icons = "" // Icons of purchases
+	var/contractor_support_unit = "" // Set if they had a support unit - and shows appended to their contracts completed
+
+	// Get all the icons/total cost for all our items bought
+	for (var/datum/contractor_item/contractor_purchase in purchased_items)
+		contractor_item_icons += "<span class='tooltip_container'>\[ <i class=\"fas [contractor_purchase.item_icon]\"></i><span class='tooltip_hover'><b>[contractor_purchase.name] - [contractor_purchase.cost] Rep</b><br><br>[contractor_purchase.desc]</span> \]</span>"
+
+		total_spent_rep += contractor_purchase.cost
+
+		// Special case for reinforcements, we want to show their ckey and name on round end.
+		if (istype(contractor_purchase, /datum/contractor_item/contractor_partner))
+			var/datum/contractor_item/contractor_partner/partner = contractor_purchase
+			contractor_support_unit += "<br><b>[partner.partner_mind.key]</b> played <b>[partner.partner_mind.current.name]</b>, their contractor support unit."
+
+	if (length(purchased_items))
+		result += "<br>(used [total_spent_rep] Rep) "
+		result += contractor_item_icons
+	result += "<br>"
+	if (contracts_completed > 0)
+		var/plural_check = "contract[contracts_completed > 1 ? "s" : ""]"
+
+		result += "Completed [span_greentext("[contracts_completed]")] [plural_check] for a total of \
+					[span_greentext("[contract_paid_out + contract_TC_to_redeem] TC")]![contractor_support_unit]<br>"
+
+	return result
 
 #undef LOWEST_TC
 

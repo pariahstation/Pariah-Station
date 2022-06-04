@@ -74,8 +74,7 @@
 /// Launch the pod to collect our victim.
 /datum/syndicate_contract/proc/launch_extraction_pod(turf/empty_pod_turf)
 	var/obj/structure/closet/supplypod/extractionpod/empty_pod = new()
-	var/datum/antagonist/antag_datum = contract.owner?.has_antag_datum(/datum/antagonist)
-	empty_pod.contract_hub = antag_datum?.contractor_hub
+	empty_pod.contract_hub = GLOB.contractors[contract?.owner]
 	empty_pod.tied_contract = src
 	empty_pod.recieving = TRUE
 
@@ -94,23 +93,24 @@
 		return
 	if(!istype(sent_mob))
 		return
-	var/datum/antagonist/antag_data = contract.owner.has_antag_datum(/datum/antagonist)
-
+	var/datum/contractor_hub/the_hub = GLOB.contractors[contract?.owner]
+	if(!the_hub)
+		return
 	if (sent_mob == contract.target.current)
-		antag_data.contractor_hub.contract_TC_to_redeem += contract.payout
-		antag_data.contractor_hub.contracts_completed += 1
+		the_hub.contract_TC_to_redeem += contract.payout
+		the_hub.contracts_completed += 1
 
 		if (sent_mob.stat != DEAD)
-			antag_data.contractor_hub.contract_TC_to_redeem += contract.payout_bonus
+			the_hub.contract_TC_to_redeem += contract.payout_bonus
 
 		status = CONTRACT_STATUS_COMPLETE
 
-		antag_data.contractor_hub.contract_rep += 2
+		the_hub.contract_rep += 2
 	else
 		status = CONTRACT_STATUS_ABORTED // Sending a sent_mob that wasn't even yours is as good as just aborting it
 
-	if(antag_data.contractor_hub.current_contract == src)
-		antag_data.contractor_hub.current_contract = null
+	if(the_hub.current_contract == src)
+		the_hub.current_contract = null
 
 	if(ishuman(sent_mob))
 		var/mob/living/carbon/human/sent_mob_human = sent_mob
@@ -130,9 +130,6 @@
 
 	// Handle the pod returning
 	pod.startExitSequence(pod)
-
-	if (ishuman(sent_mob))
-		var/mob/living/carbon/human/sent_mob_human = sent_mob
 
 	// After pod is sent we start the victim narrative/heal.
 	INVOKE_ASYNC(src, .proc/handle_victim_experience, sent_mob)

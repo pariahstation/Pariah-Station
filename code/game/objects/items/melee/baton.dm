@@ -390,8 +390,8 @@
 		if(carbon_target.silent < (MUTE_CYCLES * MUTE_MAX_MOD))
 			carbon_target.silent = min((carbon_target.silent + MUTE_CYCLES), (MUTE_CYCLES * MUTE_MAX_MOD))
 	if((upgrade_flags & BATON_FOCUS_UPGRADE))
-		var/datum/antagonist/traitor/antag_datum = user.mind.has_antag_datum(/datum/antagonist/traitor)
-		if(carbon_target == antag_datum?.contractor_hub?.current_contract?.contract.target?.current) // Pain
+		var/datum/contractor_hub/the_hub = GLOB.contractors[user?.mind]
+		if(carbon_target == the_hub?.current_contract?.contract.target?.current) // Pain
 			carbon_target.apply_damage(BONUS_STAMINA_DAM, STAMINA, BODY_ZONE_CHEST)
 			carbon_target.adjust_timed_status_effect(BONUS_STUTTER, /datum/status_effect/speech/stutter)
 

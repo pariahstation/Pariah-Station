@@ -268,7 +268,6 @@
 #include "code\__DEFINES\dcs\signals\signals_mob\signals_mob_silicon.dm"
 #include "code\__DEFINES\dcs\signals\signals_mob\signals_mob_simple.dm"
 #include "code\__DEFINES\research\anomalies.dm"
-#include "code\__DEFINES\~pariah_defines\baton_upgrades.dm"
 #include "code\__DEFINES\~pariah_defines\chat.dm"
 #include "code\__DEFINES\~pariah_defines\combat.dm"
 #include "code\__DEFINES\~pariah_defines\DNA.dm"

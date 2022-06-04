@@ -44,8 +44,8 @@
 				objectives_complete = FALSE
 				break
 
-	var/datum/antagonist/antag_datum = owner.has_antag_datum(/datum/antagonist)
-	report += antag_datum.contractor_round_end()
+	var/datum/contractor_hub/the_hub = GLOB.contractors[owner]
+	report += the_hub?.contractor_round_end()
 
 	if(!length(objectives) || objectives_complete)
 		report += "<span class='greentext big'>The [name] was successful!</span>"

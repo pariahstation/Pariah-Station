@@ -195,7 +195,7 @@
 	desc = "An efficient SSD for portable devices developed by a rival organisation."
 	power_usage = 8
 	max_capacity = 70
-	var/datum/antagonist/antag_data // Syndicate hard drive has the user's data baked directly into it on creation
+	var/datum/mind/user_mind // Syndicate hard drive has the user's data baked directly into it on creation
 
 /// For tablets given to nuke ops
 /obj/item/computer_hardware/hard_drive/small/nukeops
