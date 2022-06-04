@@ -287,7 +287,8 @@ Works together with spawning an observer, noted above.
 				return
 			stop_sound_channel(CHANNEL_HEARTBEAT) //Stop heartbeat sounds because You Are A Ghost Now
 			var/mob/dead/observer/ghost = new(src) // Transfer safety to observer spawning proc.
-			SStgui.on_transfer(src, ghost) // Transfer NanoUIs.
+			SStgui.on_transfer(src, ghost) // Transfer NanoUIs. //Hahahah soul
+			SSoracleui.transfer_uis(src, ghost)
 			ghost.can_reenter_corpse = can_reenter_corpse
 			ghost.key = key
 			ghost.client?.init_verbs()
@@ -376,6 +377,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return
 	client.view_size.setDefault(getScreenSize(client.prefs.read_preference(/datum/preference/toggle/widescreen)))//Let's reset so people can't become allseeing gods
 	SStgui.on_transfer(src, mind.current) // Transfer NanoUIs.
+	SSoracleui.transfer_uis(src, mind.current)
 	if(mind.current.stat == DEAD && SSlag_switch.measures[DISABLE_DEAD_KEYLOOP])
 		to_chat(src, span_warning("To leave your body again use the Ghost verb."))
 	mind.current.key = key

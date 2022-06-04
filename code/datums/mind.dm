@@ -145,6 +145,7 @@
 		current.mind = null
 		UnregisterSignal(current, COMSIG_LIVING_DEATH)
 		SStgui.on_transfer(current, new_character)
+		SSoracleui.transfer_uis(current, new_character)
 
 	if(key)
 		if(new_character.key != key) //if we're transferring into a body with a key associated which is not ours

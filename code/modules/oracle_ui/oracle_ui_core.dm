@@ -2,6 +2,9 @@
 	///Oracle UI doesn't really support non-themed UIs anyway, so, fuck it.
 	var/datum/oracle_ui/themed/oui
 
+/mob
+	var/list/open_oracle_uis = list()
+
 /datum/oracle_ui
 	var/width = 512
 	var/height = 512
@@ -67,15 +70,20 @@
 /datum/oracle_ui/proc/render(mob/target, updating = FALSE)
 	set waitfor = FALSE //Makes this an async call
 	if(!can_view(target))
+		target.open_oracle_uis -= src
 		return
 	//Check to see if they have the window open still if updating
 	if(updating && !test_viewer(target, updating))
+		target.open_oracle_uis -= src
 		return
 	//Send assets
 	if(!updating && assets)
 		assets.send(target.client)
 	//Add them to the viewers if they aren't there already
-	viewers |= target
+	if(!(target in viewers))
+		viewers += target
+		target.open_oracle_uis.Add(src)
+
 	if(!(src.datum_flags & DF_ISPROCESSING) && (auto_refresh | auto_check_view))
 		START_PROCESSING(SSoracleui, src) //Start processing to poll for viewability
 	//Send the content
@@ -90,6 +98,7 @@
 		render(viewer, TRUE)
 
 /datum/oracle_ui/proc/close(mob/target)
+	target?.open_oracle_uis -= src
 	if(target && target.client)
 		target << browse(null, "window=[window_id]")
 
