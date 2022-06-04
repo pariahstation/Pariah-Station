@@ -2,7 +2,7 @@
 /**
  * Generate a timebound token for discord verification
  *
- * This uses the common word list to generate a six word random token, this token can then be fed to a discord bot that has access
+ * This uses the common word list to generate a three word random token, this token can then be fed to a discord bot that has access
  * to the same database, and it can use it to link a ckey to a discord id, with minimal user effort
  *
  * It returns the token to the calling proc, after inserting an entry into the discord_link table of the following form
