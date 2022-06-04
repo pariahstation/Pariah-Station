@@ -153,9 +153,9 @@
 	qdel(query_get_discord_link_record)
 
 /**
- * Find discord link entry by the passed in user ckey
+ * Find discord link entry by the passed in user discord id
  *
- * This will look into the discord link table and return the last (most recent) entry that matches the given ckey
+ * This will look into the discord link table and return the last (most recent) entry that matches the given id number
  *
  * Arguments:
  * * discord_id The users discord id (string)
