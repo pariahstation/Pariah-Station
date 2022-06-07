@@ -625,7 +625,7 @@
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#c162ec"
-	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
 	greyscale_colors = "#c162ec"
 	alpha = 180
 	state = RWINDOW_SECURE
@@ -642,11 +642,11 @@
 	state = WINDOW_OUT_OF_FRAME
 
 /obj/structure/window/reinforced/fulltile
-	icon = 'icons/obj/smooth_structures/window.dmi'
+	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#829eb5"
-	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
 	greyscale_colors = "#829eb5"
 	alpha = 180
 	max_integrity = 150
@@ -663,11 +663,11 @@
 	state = WINDOW_OUT_OF_FRAME
 
 /obj/structure/window/reinforced/tinted/fulltile
-	icon = 'icons/obj/smooth_structures/window.dmi'
+	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#3b5461"
-	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
 	greyscale_colors = "#3b5461"
 	alpha = 180
 	fulltile = TRUE
@@ -685,11 +685,11 @@
 /obj/structure/window/reinforced/shuttle//this is called reinforced because it is reinforced w/titanium
 	name = "shuttle window"
 	desc = "A reinforced, air-locked pod window."
-	icon = 'icons/obj/smooth_structures/window.dmi'
+	icon = 'icons/obj/smooth_structures/window_reinforced.dmi'
 	icon_state = "window-0"
 	base_icon_state = "window"
 	color = "#D0CBD4"
-	greyscale_config = /datum/greyscale_config/fulltile_window
+	greyscale_config = /datum/greyscale_config/fulltile_reinforced_window
 	greyscale_colors = "#D0CBD4"
 	alpha = 180
 	max_integrity = 150
