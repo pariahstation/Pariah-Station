@@ -269,17 +269,22 @@
 	sound = 'sound/emotes/voxrustle.ogg'
 */
 
-//Skrell emotes
+//Shared custody between skrell and teshari
 /datum/emote/living/carbon/human/warble
 	key = "warble"
 	key_third_person = "warbles!"
 	message = "warbles!"
+	sound = 'sound/voice/warbles.ogg'
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'sound/voice/warbles.ogg'
-	species_type_whitelist_typecache = list(/datum/species/skrell)
+	species_type_whitelist_typecache = list(/datum/species/skrell, /datum/species/teshari)
 
-//Shared custody between skrell and teshari
+/datum/emote/living/carbon/human/warble/get_frequency(mob/living/user) //no regular warbling sound but oh well
+	if(isteshari(user))
+		return 2
+	return -1
+
+
 /datum/emote/living/carbon/human/trills
 	key = "trills"
 	key_third_person = "trills!"

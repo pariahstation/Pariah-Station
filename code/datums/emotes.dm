@@ -110,7 +110,7 @@
 	var/tmp_sound = get_sound(user)
 	if(tmp_sound && should_play_sound(user, intentional) && !TIMER_COOLDOWN_CHECK(user, type))
 		TIMER_COOLDOWN_START(user, type, audio_cooldown)
-		playsound(user, tmp_sound, 50, vary)
+		playsound(user, tmp_sound, 50, vary, frequency = get_frequency(user))
 
 	var/user_turf = get_turf(user)
 	if (user.client)
@@ -162,6 +162,9 @@
  */
 /datum/emote/proc/get_sound(mob/living/user)
 	return sound //by default just return this var.
+
+/datum/emote/proc/get_frequency(mob/living/user)
+	return 0
 
 /**
  * To replace pronouns in the inputed string with the user's proper pronouns.
