@@ -258,7 +258,6 @@
 	species_type_whitelist_typecache = list(/datum/species/lizard)
 
 //Vox emotes
-/*
 /datum/emote/living/carbon/human/quill
 	key = "quill"
 	key_third_person = "quills"
@@ -267,7 +266,7 @@
 	muzzle_ignore = TRUE
 	vary = TRUE
 	sound = 'sound/emotes/voxrustle.ogg'
-*/
+	species_type_whitelist_typecache = list(/datum/species/vox)
 
 //Shared custody between skrell and teshari
 /datum/emote/living/carbon/human/warble
