@@ -280,8 +280,8 @@
 
 /datum/emote/living/carbon/human/warble/get_frequency(mob/living/user) //no regular warbling sound but oh well
 	if(isteshari(user))
-		return 2
-	return -1
+		return -1
+	return 2
 
 
 /datum/emote/living/carbon/human/trills
