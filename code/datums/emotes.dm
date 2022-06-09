@@ -163,6 +163,15 @@
 /datum/emote/proc/get_sound(mob/living/user)
 	return sound //by default just return this var.
 
+/**
+ * Returns a number to be used as the `frequency` variable for the emote sound.
+ * `[/datum/emote/var/vary]` must also be set to `TRUE` for this to work, due a check in `playsound_local()`.
+ *
+ * Arguments:
+ * * user - Person that is trying to send the emote.
+ *
+ * Returns the frequency that will modify the the sound used by the emote.
+ */
 /datum/emote/proc/get_frequency(mob/living/user)
 	return 0
 

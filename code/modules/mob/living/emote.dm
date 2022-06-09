@@ -278,15 +278,17 @@
 		return !C.silent
 
 /datum/emote/living/laugh/get_sound(mob/living/user)
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.dna.species.id == SPECIES_HUMAN && (!H.mind || !H.mind.miming))
-			if(user.gender == FEMALE)
-				return 'sound/voice/human/womanlaugh.ogg'
-			else
-				return pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
-		if(H.dna.species.id == SPECIES_MOTH && (!H.mind || !H.mind.miming))
-			return 'sound/emotes/mothlaugh.ogg'
+	if(!ishuman(user) || user.mind?.miming)
+		return null
+
+	var/mob/living/carbon/human/H = user
+	if(H.dna.species.id == SPECIES_HUMAN)
+		if(user.gender == FEMALE)
+			return 'sound/voice/human/womanlaugh.ogg'
+		else
+			return pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
+	if(H.dna.species.id == SPECIES_MOTH)
+		return 'sound/emotes/mothlaugh.ogg'
 
 /datum/emote/living/look
 	key = "look"

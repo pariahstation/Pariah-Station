@@ -284,9 +284,9 @@
 	return 2
 
 
-/datum/emote/living/carbon/human/trills
-	key = "trills"
-	key_third_person = "trills!"
+/datum/emote/living/carbon/human/trill
+	key = "trill"
+	key_third_person = "trills"
 	message = "trills!"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
