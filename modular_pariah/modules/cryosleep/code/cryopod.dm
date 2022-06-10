@@ -220,7 +220,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 				mind.announce_objectives()
 		else if(istype(objective.target) && objective.target == mob_occupant.mind)
 			if(istype(objective, /datum/objective/contract))
-				var/datum/contractor_hub/the_hub = GLOB.contractors[objective?.owner]
+				var/datum/contractor_hub/the_hub = GLOB.contractors[objective.owner]
 				if(!the_hub)
 					return
 				for(var/datum/syndicate_contract/affected_contract as anything in the_hub.assigned_contracts)
