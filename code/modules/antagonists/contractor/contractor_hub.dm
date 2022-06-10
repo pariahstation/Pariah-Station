@@ -113,4 +113,3 @@ GLOBAL_LIST_EMPTY(contractors)
 	return result
 
 #undef LOWEST_TC
-
