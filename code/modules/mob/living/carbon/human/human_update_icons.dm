@@ -662,7 +662,7 @@ There are several things that need to be remembered:
 			var/obj/item/worn_item = wear_mask
 			update_hud_wear_mask(worn_item)
 			var/mutable_appearance/mask_overlay
-			var/icon_file = 'icons/mob/clothing/mask.dmi'
+			var/icon_file
 			var/handled_by_bodytype = TRUE
 
 			if(dna.species.bodytype & BODYTYPE_SNOUTED)
@@ -709,7 +709,7 @@ There are several things that need to be remembered:
 		var/obj/item/worn_item = back
 		var/mutable_appearance/back_overlay
 		update_hud_back(worn_item)
-		var/icon_file = 'icons/mob/clothing/back.dmi'
+		var/icon_file
 		var/handled_by_bodytype = TRUE
 		if(dna.species.bodytype & BODYTYPE_TESHARI)
 			if(worn_item.supports_variations_flags & CLOTHING_TESHARI_VARIATION)
