@@ -426,7 +426,6 @@ GLOBAL_LIST_EMPTY(antagonists)
 		if (antag_hud.mobShouldSee(owner.current))
 			antag_hud.add_hud_to(owner.current)
 
-
 //This one is created by admin tools for custom objectives
 /datum/antagonist/custom
 	antagpanel_category = "Custom"
