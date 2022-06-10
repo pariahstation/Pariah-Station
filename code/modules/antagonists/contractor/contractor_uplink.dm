@@ -29,7 +29,7 @@
 		return
 
 	var/mob/living/user = usr
-	var/datum/mind/user_mind = user?.mind
+	var/datum/mind/user_mind = user.mind
 	var/obj/item/computer_hardware/hard_drive/small/syndicate/hard_drive = computer.all_components[MC_HDD]
 
 	switch(action)
@@ -56,8 +56,6 @@
 			// Stops any topic exploits such as logging in multiple times on a single system.
 			if(!assigned)
 				var/datum/contractor_hub/the_hub = GLOB.contractors[user_mind]
-				if(!the_hub)
-					return
 				the_hub.create_contracts(user_mind)
 
 				hard_drive.user_mind = user_mind

@@ -386,10 +386,10 @@
 	if(!iscarbon(target))
 		return
 	var/mob/living/carbon/carbon_target = target
-	if((upgrade_flags & BATON_MUTE_UPGRADE))
+	if(upgrade_flags & BATON_MUTE_UPGRADE)
 		if(carbon_target.silent < (MUTE_CYCLES * MUTE_MAX_MOD))
 			carbon_target.silent = min((carbon_target.silent + MUTE_CYCLES), (MUTE_CYCLES * MUTE_MAX_MOD))
-	if((upgrade_flags & BATON_FOCUS_UPGRADE))
+	if(upgrade_flags & BATON_FOCUS_UPGRADE)
 		var/datum/contractor_hub/the_hub = GLOB.contractors[user?.mind]
 		if(carbon_target == the_hub?.current_contract?.contract.target?.current) // Pain
 			carbon_target.apply_damage(BONUS_STAMINA_DAM, STAMINA, BODY_ZONE_CHEST)
@@ -406,8 +406,7 @@
 /obj/item/melee/baton/telescopic/contractor_baton/attackby(obj/item/attacking_item, mob/user, params)
 	. = ..()
 	if(istype(attacking_item, /obj/item/baton_upgrade))
-		if(add_upgrade(attacking_item, user))
-			to_chat(user, span_notice("You attach [attacking_item]."))
+		add_upgrade(attacking_item, user)
 	if(!(upgrade_flags & BATON_CUFF_UPGRADE))
 		return
 	if(!istype(attacking_item, /obj/item/restraints/handcuffs/cable))

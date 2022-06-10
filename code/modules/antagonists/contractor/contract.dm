@@ -74,7 +74,7 @@
 /// Launch the pod to collect our victim.
 /datum/syndicate_contract/proc/launch_extraction_pod(turf/empty_pod_turf)
 	var/obj/structure/closet/supplypod/extractionpod/empty_pod = new()
-	empty_pod.contract_hub = GLOB.contractors[contract?.owner]
+	empty_pod.contract_hub = GLOB.contractors[contract.owner]
 	empty_pod.tied_contract = src
 	empty_pod.recieving = TRUE
 
@@ -93,7 +93,7 @@
 		return
 	if(!istype(sent_mob))
 		return
-	var/datum/contractor_hub/the_hub = GLOB.contractors[contract?.owner]
+	var/datum/contractor_hub/the_hub = GLOB.contractors[contract.owner]
 	if(!the_hub)
 		return
 	if (sent_mob == contract.target.current)
