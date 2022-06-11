@@ -88,19 +88,18 @@
 
 /datum/species/vox/get_species_lore()
 	return list(
-		"The Vox hail from massive, planetoid-like ships known simply as Arks. They drift silently through the universe, and have seemingly existed before the rise of most space-faring species of the modern era. \
-		Each Primalis is created with a pre-determined destiny in mind, a function that they will fulfill until the end of their body’s lifetime, \
-		whereupon they have their cortical stack extracted and implanted into a new larval form.",
+		"The Vox hail from massive, planetoid-like ships known simply as Arks. They drift silently through the universe, and have seemingly existed since before the rise of most space-faring species of the modern era. \
+		Each Primalis is created with a pre-determined destiny in mind, a function that they will fulfill until the end of their body's lifetime, whereupon they have their cortical stack extracted and implanted into a new larval form. \
+		This new body will grow into the Vox according to the encoded genetic data, preserving the skills and recreating a body best fitting for their function.",
 
-		"This new body will grow into the Vox according to the encoded genetic data, preserving the skills and recreating a body best fitting for their function. \
-		The Arks have been mostly silent to the vast majority of species, beyond the occasional garbled warning about approaching, or the smallest of trades and exchanges. \
-		This has changed in recent years for some unknown reason. Several Arkships have opened communications with Nanotrasen, and with discussions behind closed doors, \
-		one of the first long-term deals with the Vox have been reached. A charity named Val-Biotechnica was created sponsored by Nanotrasen, and using advanced Vox bio-technology provides healthcare and genetic therapy at low to no cost.",
+		"Historically, the Arks have been mostly silent to the majority of species, beyond the occasional garbled warning about approaching, or the smallest of trades and exchanges. \
+		This has changed in recent years, with several Arkships opening communications with Nanotrasen, with discussions behind closed doors. \
+		One of the first long-term deals with the Vox came in the form of a charity named Val-Biotechnica, created and sponsored by Nanotrasen. Using advanced Vox bio-technology to provide healthcare and genetic therapy at low to no cost.",
 
-		"Conspiracy theorists have suggested that this Vox charity is a guise for kidnappings and harvestings. Nanotrasen denies all claims, as do Val-Biotechnica, \
-		though Nanotrasens bio-research laboratories have made several strides in recent years since the sponsorship.A labor deal was also reached, allowing Ark-Vox to work for Nanotrasen, which can be difficult for those vox now having to adjust to the inorganic nature of non-Vox technology. \
-		Their presence brings some conflict between Ark-Vox and the Free-Vox who have fled from their creators and their homes, living in places such as the Shoal, \
-		or any station that will accept them. Nanotrasen Public Relations takes great strides in assuring that everything is fine and theyre working in perfect harmony.",
+		"Conspiracy theorists have suggested that this Vox charity is a guise for kidnappings and harvestings, though Nanotrasen denies all claims, as does Val-Biotechnica. \
+		A labor deal was also reached, allowing Ark-Vox to work for Nanotrasen, which can be difficult for those Vox now having to adjust to the inorganic nature of non-Vox technology. \
+		Their presence brings some conflict between Ark-Vox and the Free-Vox who have fled from their creators and their homes, living in places such as The Shoal, or any station that will accept them. \
+		Nanotrasen Public Relations takes great care in assuring the public that everything is fine, and that they're working in perfect harmony.",
 	)
 
 /datum/species/vox/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
