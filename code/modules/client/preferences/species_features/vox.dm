@@ -1,6 +1,6 @@
-#define VOX_BODY_COLOR "#99FF99" // Also in code\modules\mob\living\carbon\human\species_types\vox.dm
-#define VOX_SNOUT_COLOR "#F0F064"
-#define VOX_HAIR_COLOR "#FF9966"
+#define VOX_BODY_COLOR "#C4DB1A" // Also in code\modules\mob\living\carbon\human\species_types\vox.dm
+#define VOX_SNOUT_COLOR "#E5C04B"
+#define VOX_HAIR_COLOR "#997C28"
 
 /proc/generate_vox_side_shots(list/sprite_accessories, key, include_snout = TRUE, accessory_color = VOX_HAIR_COLOR)
 	var/list/values = list()

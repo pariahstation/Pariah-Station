@@ -54,9 +54,9 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/r_leg/vox,
 	)
 
-#define VOX_BODY_COLOR "#99FF99" // Also in code\modules\client\preferences\species_features\vox.dm
-#define VOX_SNOUT_COLOR "#F0F064"
-#define VOX_HAIR_COLOR "#FF9966"
+#define VOX_BODY_COLOR "#C4DB1A" // Also in code\modules\client\preferences\species_features\vox.dm
+#define VOX_SNOUT_COLOR "#E5C04B"
+#define VOX_HAIR_COLOR "#997C28"
 
 /datum/species/vox/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.dna.features["mcolor"] = VOX_BODY_COLOR
