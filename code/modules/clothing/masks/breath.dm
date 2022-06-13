@@ -44,4 +44,3 @@
 	icon_state = "voxmask"
 	actions_types = list()
 	flags_cover = NONE
-	species_whitelist = list(/datum/species/vox)

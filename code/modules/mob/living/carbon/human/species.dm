@@ -896,11 +896,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(!excused)
 			return FALSE
 
-	if(I.species_whitelist && !(src.type in I.species_whitelist))
-		if(!disable_warning)
-			to_chat(H, span_warning("Your species cannot wear [I]."))
-		return FALSE
-
 	switch(slot)
 		if(ITEM_SLOT_HANDS)
 			if(H.get_empty_held_indexes())
