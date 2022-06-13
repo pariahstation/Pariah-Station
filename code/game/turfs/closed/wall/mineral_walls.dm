@@ -169,6 +169,12 @@
 
 /turf/closed/wall/mineral/titanium/interior
 
+/// Only smooths with other shuttle tiles. Used to prevent shuttles merging with the station when docked.
+/turf/closed/wall/mineral/titanium/shuttle
+	smoothing_groups = list(SMOOTH_GROUP_SHUTTLE_WALLS)
+	canSmoothWith = list(SMOOTH_GROUP_SHUTTLE_WALLS, SMOOTH_GROUP_WINDOW_FULLTILE_SHUTTLE, SMOOTH_GROUP_LOW_WALL_SHUTTLE,
+						SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_SHUTTLE_PARTS)
+
 /turf/closed/wall/mineral/titanium/survival
 	name = "pod wall"
 	desc = "An easily-compressable wall used for temporary shelter."
