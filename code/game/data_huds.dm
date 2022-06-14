@@ -228,12 +228,19 @@ FAN HUDs! For identifying other fans on-sight.
 	var/icon/I = icon(icon, icon_state, dir)
 	holder.pixel_y = I.Height() - world.icon_size
 	holder.icon_state = "hudfan_no"
-	var/obj/item/clothing/under/U = get_item_by_slot(ITEM_SLOT_ICLOTHING)
-	if(U)
-		if(istype(U.attached_accessory, /obj/item/clothing/accessory/mime_fan_pin))
-			holder.icon_state = "mime_fan_pin"
-		else if(istype(U.attached_accessory, /obj/item/clothing/accessory/clown_enjoyer_pin))
-			holder.icon_state = "clown_enjoyer_pin"
+	var/obj/item/clothing/under/uniform = get_item_by_slot(ITEM_SLOT_ICLOTHING)
+	if(uniform)
+		for(var/obj/item/clothing/accessory/accessory as anything in uniform.attached_accessories)
+			if(!istype(accessory))
+				stack_trace("[__FILE__] [__LINE__] - attached_accessories contained an invalid entry")
+				continue
+
+			if(istype(accessory, /obj/item/clothing/accessory/mime_fan_pin))
+				holder.icon_state = "mime_fan_pin"
+				break //only one, no centrists allowed
+			if(istype(accessory, /obj/item/clothing/accessory/clown_enjoyer_pin))
+				holder.icon_state = "clown_enjoyer_pin"
+				break
 
 /***********************************************
 Security HUDs! Basic mode shows only the job.

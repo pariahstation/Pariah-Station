@@ -877,7 +877,7 @@
 
 /datum/crafting_recipe/skilt
 	name = "Sinew Kilt"
-	result = /obj/item/clothing/accessory/skilt
+	result = /obj/item/clothing/accessory/sinew_kilt
 	time = 20
 	reqs = list(/obj/item/stack/sheet/bone = 1,
 				/obj/item/stack/sheet/sinew = 2)

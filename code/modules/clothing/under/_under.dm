@@ -20,8 +20,8 @@
 	var/can_adjust = TRUE
 	var/adjusted = NORMAL_STYLE
 	var/alt_covers_chest = FALSE // for adjusted/rolled-down jumpsuits, FALSE = exposes chest and arms, TRUE = exposes arms only
-	var/obj/item/clothing/accessory/attached_accessory
-	var/mutable_appearance/accessory_overlay
+	var/list/obj/item/clothing/accessory/attached_accessories = list()
+	var/list/mutable_appearance/accessory_overlays = list()
 	var/freshly_laundered = FALSE
 
 /obj/item/clothing/under/Initialize(mapload)
@@ -41,8 +41,11 @@
 		. += mutable_appearance('icons/effects/item_damage.dmi', "damageduniform")
 	if(HAS_BLOOD_DNA(src))
 		. += mutable_appearance('icons/effects/blood.dmi', "uniformblood")
-	if(accessory_overlay)
-		. += accessory_overlay
+	for(var/obj/item/clothing/accessory/accessory as anything in attached_accessories)
+		if(!istype(accessory_overlays[accessory], /mutable_appearance))
+			stack_trace("[__FILE__] [__LINE__] - attached_accessories contained an invalid entry") //may be a bit overkill tbh
+			continue
+		. += accessory_overlays[accessory]
 
 /obj/item/clothing/under/attackby(obj/item/I, mob/user, params)
 	if((has_sensor == BROKEN_SENSORS) && istype(I, /obj/item/stack/cable_coil))
@@ -50,7 +53,8 @@
 		C.use(1)
 		has_sensor = HAS_SENSORS
 		to_chat(user,span_notice("You repair the suit sensors on [src] with [C]."))
-		return 1
+		return TRUE
+
 	if(!attach_accessory(I, user))
 		return ..()
 
@@ -107,12 +111,17 @@
 			adjusted = DIGITIGRADE_STYLE
 		H.update_inv_w_uniform()
 
-	if(attached_accessory && slot != ITEM_SLOT_HANDS && ishuman(user))
-		var/mob/living/carbon/human/H = user
-		attached_accessory.on_uniform_equip(src, user)
-		H.fan_hud_set_fandom()
-		if(attached_accessory.above_suit)
-			H.update_inv_wear_suit()
+	if(slot != ITEM_SLOT_HANDS && ishuman(user))
+		var/mob/living/carbon/human/wearer = user
+		for(var/obj/item/clothing/accessory/accessory as anything in attached_accessories)
+			if(!istype(accessory))
+				stack_trace("[__FILE__] [__LINE__] - attached_accessories contained an invalid entry")
+				continue
+
+			accessory.on_uniform_equip(src, user)
+			wearer.fan_hud_set_fandom()
+			if(accessory.above_suit)
+				wearer.update_inv_wear_suit()
 
 /obj/item/clothing/under/equipped(mob/user, slot)
 	..()
@@ -121,13 +130,20 @@
 		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "fresh_laundry", /datum/mood_event/fresh_laundry)
 
 /obj/item/clothing/under/dropped(mob/user)
-	if(attached_accessory)
-		attached_accessory.on_uniform_dropped(src, user)
+	if(length(attached_accessories))
+		var/update_suit = FALSE
+		for(var/obj/item/clothing/accessory/accessory as anything in attached_accessories)
+			if(!istype(accessory))
+				stack_trace("[__FILE__] [__LINE__] - attached_accessories contained an invalid entry")
+				continue
+			accessory.on_uniform_dropped(src, user)
+			if(accessory.above_suit)
+				update_suit = TRUE
 		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			H.fan_hud_set_fandom()
-			if(attached_accessory.above_suit)
-				H.update_inv_wear_suit()
+			var/mob/living/carbon/human/wearer = user
+			wearer.fan_hud_set_fandom()
+			if(update_suit)
+				wearer.update_inv_wear_suit()
 	..()
 
 /mob/living/carbon/human/update_suit_sensors()
@@ -144,14 +160,12 @@
 /mob/living/carbon/human/dummy/update_sensor_list()
 	return
 
-/obj/item/clothing/under/proc/attach_accessory(obj/item/tool, mob/user, notifyAttach = 1)
+/obj/item/clothing/under/proc/attach_accessory(obj/item/clothing/accessory/accessory, mob/user, notify_attach = 1)
 	. = FALSE
-	if(!istype(tool, /obj/item/clothing/accessory))
+	if(!istype(accessory))
 		return
-	var/obj/item/clothing/accessory/accessory = tool
-	if(attached_accessory)
-		if(user)
-			to_chat(user, span_warning("[src] already has an accessory."))
+	if(length(attached_accessories) >= CLOTHING_ACCESSORY_CAP)
+		to_chat(user, span_warning("[src] can't fit any more accessories."))
 		return
 
 	if(!accessory.can_attach_accessory(src, user)) //Make sure the suit has a place to put the accessory.
@@ -162,13 +176,13 @@
 		return
 
 	. = TRUE
-	if(user && notifyAttach)
+	if(user && notify_attach)
 		to_chat(user, span_notice("You attach [accessory] to [src]."))
 
-	var/accessory_color = attached_accessory.icon_state
-	accessory_overlay = mutable_appearance(attached_accessory.worn_icon, "[accessory_color]")
-	accessory_overlay.alpha = attached_accessory.alpha
-	accessory_overlay.color = attached_accessory.color
+	var/accessory_color = accessory.icon_state //who
+	accessory_overlays[accessory] = mutable_appearance(accessory.worn_icon, "[accessory_color]")
+	accessory_overlays[accessory].alpha = accessory.alpha
+	accessory_overlays[accessory].color = accessory.color
 
 	update_appearance()
 	if(!ishuman(loc))
@@ -179,23 +193,22 @@
 	holder.update_inv_wear_suit()
 	holder.fan_hud_set_fandom()
 
-/obj/item/clothing/under/proc/remove_accessory(mob/user)
+/obj/item/clothing/under/proc/remove_accessory(mob/living/user, obj/item/clothing/accessory/accessory)
 	. = FALSE
-	if(!isliving(user))
+	if(!istype(user))
 		return
 	if(!can_use(user))
 		return
 
-	if(!attached_accessory)
+	if(!istype(accessory) || !(accessory in attached_accessories))
 		return
 
 	. = TRUE
-	var/obj/item/clothing/accessory/accessory = attached_accessory
-	attached_accessory.detach(src, user)
+	accessory.detach(src, user)
 	if(user.put_in_hands(accessory))
 		to_chat(user, span_notice("You detach [accessory] from [src]."))
 	else
-		to_chat(user, span_notice("You detach [accessory] from [src] and it falls on the floor."))
+		to_chat(user, span_notice("You detach [accessory] from [src]. It falls onto the floor below."))
 
 	update_appearance()
 	if(!ishuman(loc))
@@ -228,8 +241,8 @@
 				. += "Its vital tracker appears to be enabled."
 			if(SENSOR_COORDS)
 				. += "Its vital tracker and tracking beacon appear to be enabled."
-	if(attached_accessory)
-		. += "\A [attached_accessory] is attached to it."
+	if(length(attached_accessories))
+		. += "\A [english_list(attached_accessories)] [length(attached_accessories) > 1 ? "are" : "is"] attached to it."
 
 /obj/item/clothing/under/verb/toggle()
 	set name = "Adjust Suit Sensors"
@@ -281,8 +294,8 @@
 
 	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, !iscyborg(user)))
 		return
-	if(attached_accessory)
-		remove_accessory(user)
+	if(length(attached_accessories))
+		remove_accessory(user, attached_accessories[length(attached_accessories)])
 	else
 		rolldown()
 
@@ -333,20 +346,24 @@
 /obj/item/clothing/under/rank
 	dying_key = DYE_REGISTRY_UNDER
 
-/obj/item/clothing/under/proc/dump_attachment()
-	if(!attached_accessory)
+/obj/item/clothing/under/proc/dump_attachments()
+	if(!length(attached_accessories))
 		return
 	var/atom/drop_location = drop_location()
-	attached_accessory.transform *= 2
-	attached_accessory.pixel_x -= 8
-	attached_accessory.pixel_y += 8
-	if(drop_location)
-		attached_accessory.forceMove(drop_location)
+	for(var/obj/item/clothing/accessory/accessory as anything in attached_accessories)
+		if(!istype(accessory))
+			stack_trace("[__FILE__] [__LINE__] - attached_accessories contained an invalid entry") //may be a bit overkill tbh
+			continue
+		accessory.transform *= 2
+		accessory.pixel_x -= 8
+		accessory.pixel_y += 8
+		if(drop_location)
+			accessory.forceMove(drop_location)
+	attached_accessories = list()
+	accessory_overlays = list()
 	cut_overlays()
-	attached_accessory = null
-	accessory_overlay = null
 	update_appearance()
 
 /obj/item/clothing/under/rank/atom_destruction(damage_flag)
-	dump_attachment()
+	dump_attachments()
 	return ..()

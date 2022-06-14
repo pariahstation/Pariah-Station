@@ -197,7 +197,7 @@
 /datum/outfit/consumed_shadowperson
 	name = "Legion-Consumed Shadowperson"
 	r_pocket = /obj/item/reagent_containers/pill/shadowtoxin
-	accessory = /obj/item/clothing/accessory/medal/plasma/nobel_science
+	accessories = list(/obj/item/clothing/accessory/medal/plasma/nobel_science)
 	uniform = /obj/item/clothing/under/color/black
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	suit = /obj/item/clothing/suit/toggle/labcoat

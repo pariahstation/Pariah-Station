@@ -83,7 +83,7 @@
 	var/r_hand = null
 
 	/// Any clothing accessory item
-	var/accessory = null
+	var/list/accessories = list()
 
 	/// Internals box. Will be inserted at the start of backpack_contents
 	var/box
@@ -207,12 +207,18 @@
 	if(undershirt)
 		H.undershirt = initial(undershirt.name)
 
-	if(accessory)
+	if(length(accessories))
 		var/obj/item/clothing/under/U = H.w_uniform
 		if(U)
-			U.attach_accessory(SSwardrobe.provide_type(accessory, H))
+			var/count = 0
+			for(var/accessory as anything in accessories)
+				if(count >= CLOTHING_ACCESSORY_CAP)
+					WARNING("Outfit [name] has more accessories than the defined cap ([CLOTHING_ACCESSORY_CAP])!")
+					break
+				U.attach_accessory(SSwardrobe.provide_type(accessory, H))
+				count++
 		else
-			WARNING("Unable to equip accessory [accessory] in outfit [name]. No uniform present!")
+			WARNING("Unable to equip accessories [english_list(accessories)] in outfit [name]. No uniform present!")
 
 	if(l_hand)
 		H.put_in_l_hand(SSwardrobe.provide_type(l_hand, H))
@@ -352,7 +358,8 @@
 	preload += r_pocket
 	preload += l_hand
 	preload += r_hand
-	preload += accessory
+	for(var/datum/type_to_load in accessories)
+		preload += type_to_load
 	preload += box
 	for(var/implant_type in implants)
 		preload += implant_type
@@ -388,7 +395,7 @@
 	.["backpack_contents"] = backpack_contents
 	.["box"] = box
 	.["implants"] = implants
-	.["accessory"] = accessory
+	.["accessories"] = accessories
 
 /// Copy most vars from another outfit to this one
 /datum/outfit/proc/copy_from(datum/outfit/target)
@@ -415,7 +422,7 @@
 	backpack_contents = target.backpack_contents
 	box = target.box
 	implants = target.implants
-	accessory = target.accessory
+	accessories = target.accessories
 
 /// Prompt the passed in mob client to download this outfit as a json blob
 /datum/outfit/proc/save_to_file(mob/admin)
@@ -463,7 +470,12 @@
 		var/imptype = text2path(I)
 		if(imptype)
 			implants += imptype
-	accessory = text2path(outfit_data["accessory"])
+	var/list/accessory_list = outfit_data["accessories"]
+	accessories = list()
+	for(var/item in accessory_list)
+		var/itype = text2path(item)
+		if(itype)
+			accessories += itype
 	return TRUE
 
 /datum/outfit/vv_get_dropdown()

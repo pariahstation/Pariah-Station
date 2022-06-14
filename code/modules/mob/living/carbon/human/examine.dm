@@ -29,10 +29,12 @@
 		var/accessory_msg
 		if(istype(w_uniform, /obj/item/clothing/under))
 			var/obj/item/clothing/under/U = w_uniform
-			if(U.attached_accessory)
-				accessory_msg += " with [icon2html(U.attached_accessory, user)] \a [U.attached_accessory]"
+			if(length(U.attached_accessories))
+				accessory_msg += " with:"
+				for(var/obj/item/clothing/accessory/accessory in U.attached_accessories)
+					accessory_msg += "\n[icon2html(accessory, user)] \a [accessory]"
 
-		. += "[t_He] [t_is] wearing [w_uniform.get_examine_string(user)][accessory_msg]."
+		. += "[t_He] [t_is] wearing [w_uniform.get_examine_string(user)][accessory_msg]"
 	//head
 	if(head && !(obscured & ITEM_SLOT_HEAD) && !(head.item_flags & EXAMINE_SKIP))
 		. += "[t_He] [t_is] wearing [head.get_examine_string(user)] on [t_his] head."

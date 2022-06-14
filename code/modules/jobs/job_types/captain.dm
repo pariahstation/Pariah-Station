@@ -74,7 +74,7 @@
 	satchel = /obj/item/storage/backpack/satchel/cap
 	duffelbag = /obj/item/storage/backpack/duffelbag/captain
 
-	accessory = /obj/item/clothing/accessory/medal/gold/captain
+	accessories = list(/obj/item/clothing/accessory/medal/gold/captain)
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,
 		/obj/item/stamp/captain,

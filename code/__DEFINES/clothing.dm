@@ -25,3 +25,6 @@
 #define HAS_SENSORS 1
 /// Suit sensor is present and is forced to display information (used on prisoner jumpsuits)
 #define LOCKED_SENSORS 2
+
+/// How many accessories can we fit on a piece of clothing
+#define CLOTHING_ACCESSORY_CAP 3

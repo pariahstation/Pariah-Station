@@ -27,14 +27,17 @@
 	if(HAS_BLOOD_DNA(src))
 		. += mutable_appearance('icons/effects/blood.dmi', "[blood_overlay_type]blood")
 
-	var/mob/living/carbon/human/M = loc
-	if(!ishuman(M) || !M.w_uniform)
+	var/mob/living/carbon/human/wearer = loc
+	if(!ishuman(wearer) || !wearer.w_uniform)
 		return
-	var/obj/item/clothing/under/U = M.w_uniform
-	if(istype(U) && U.attached_accessory)
-		var/obj/item/clothing/accessory/A = U.attached_accessory
-		if(A.above_suit)
-			. += U.accessory_overlay
+	var/obj/item/clothing/under/uniform = wearer.w_uniform
+	if(istype(uniform) && length(uniform.attached_accessories))
+		for(var/obj/item/clothing/accessory/accessory as anything in uniform.attached_accessories)
+			if(!istype(accessory))
+				stack_trace("[__FILE__] [__LINE__] - attached_accessories contained an invalid entry") //may be a bit overkill tbh
+				continue
+			if(accessory.above_suit)
+				. += uniform.accessory_overlays[accessory]
 
 /obj/item/clothing/suit/update_clothes_damaged_state(damaged_state = CLOTHING_DAMAGED)
 	..()

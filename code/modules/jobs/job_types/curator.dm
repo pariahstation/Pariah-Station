@@ -45,7 +45,7 @@
 	r_pocket = /obj/item/key/displaycase
 	l_hand = /obj/item/storage/bag/books
 
-	accessory = /obj/item/clothing/accessory/pocketprotector/full
+	accessories = list(/obj/item/clothing/accessory/pocketprotector/full)
 
 /datum/outfit/job/curator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

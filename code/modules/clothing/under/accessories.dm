@@ -32,14 +32,14 @@
 			return FALSE
 		uniform.TakeComponent(storage)
 		set_detached_pockets(storage)
-	uniform.attached_accessory = src
+	uniform.attached_accessories |= src
 	forceMove(uniform)
 	layer = FLOAT_LAYER
 	plane = FLOAT_PLANE
 	if(minimize_when_attached)
 		transform *= 0.5 //halve the size so it doesn't overpower the under
 		pixel_x += 8
-		pixel_y -= 8
+		pixel_y += -16 + (8*length(uniform.attached_accessories)) //boy i love magical equations
 	uniform.add_overlay(src)
 
 	if (islist(uniform.armor) || isnull(uniform.armor)) // This proc can run before /obj/Initialize has run for uniform and src,
@@ -67,12 +67,18 @@
 	if(minimize_when_attached)
 		transform *= 2
 		pixel_x -= 8
-		pixel_y += 8
+		pixel_y -= -16 + (8*length(uniform.attached_accessories))
 	layer = initial(layer)
 	plane = initial(plane)
+	uniform.attached_accessories -= src
+	uniform.accessory_overlays -= src
 	uniform.cut_overlays()
-	uniform.attached_accessory = null
-	uniform.accessory_overlay = null
+	for(var/obj/item/clothing/accessory/accessory as anything in uniform.attached_accessories)
+		if(!istype(accessory))
+			stack_trace("[__FILE__] [__LINE__] - attached_accessories contained an invalid entry")
+			continue
+		uniform.add_overlay(accessory)
+	uniform.update_overlays()
 
 /obj/item/clothing/accessory/proc/set_detached_pockets(new_pocket)
 	if(detached_pockets)
@@ -153,10 +159,10 @@
 
 	var/obj/item/clothing/under/uniform = target.w_uniform
 	if(user == target || commended)
-		user.visible_message(span_notice("[user] pins \the [src] on [user == target ? user.p_their() : "[target]'s"] chest."),
-			span_notice("You pin \the [src] on [user == target ? user.p_their() : "[target]'s"] chest.")
-		)
-		uniform.attach_accessory(src, user, 0)
+		if(uniform.attach_accessory(src, user, 0))
+			user.visible_message(span_notice("[user] pins \the [src] on [user == target ? user.p_their() : "[target]'s"] chest."),
+				span_notice("You pin \the [src] on [user == target ? user.p_their() : "[target]'s"] chest.")
+			)
 		return
 
 	user.visible_message(span_notice("[user] is trying to pin [src] on [target]'s chest."), span_notice("You try to pin [src] on [target]'s chest."))
@@ -406,7 +412,7 @@
 	name = "bone talisman"
 	desc = "A hunter's talisman, some say the old gods smile on those who wear it."
 	icon_state = "talisman"
-	armor = list(MELEE = 5, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 20, BIO = 20, FIRE = 0, ACID = 25)
+	armor = list(MELEE = 2, BULLET = 2, LASER = 2, ENERGY = 2, BOMB = 10, BIO = 10, FIRE = 0, ACID = 12)
 	attachment_slot = null
 
 /obj/item/clothing/accessory/skullcodpiece
@@ -414,21 +420,21 @@
 	desc = "A skull shaped ornament, intended to protect the important things in life."
 	icon_state = "skull"
 	above_suit = TRUE
-	armor = list(MELEE = 5, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 20, BIO = 20, FIRE = 0, ACID = 25)
+	armor = list(MELEE = 2, BULLET = 2, LASER = 2, ENERGY = 2, BOMB = 10, BIO = 10, FIRE = 0, ACID = 12)
 	attachment_slot = GROIN
 
-/obj/item/clothing/accessory/skilt
+/obj/item/clothing/accessory/sinew_kilt
 	name = "Sinew Skirt"
 	desc = "For the last time. IT'S A KILT not a skirt."
 	icon_state = "skilt"
 	above_suit = TRUE
 	minimize_when_attached = FALSE
-	armor = list(MELEE = 5, BULLET = 5, LASER = 5, ENERGY = 5, BOMB = 20, BIO = 20, FIRE = 0, ACID = 25)
+	armor = list(MELEE = 2, BULLET = 2, LASER = 2, ENERGY = 2, BOMB = 10, BIO = 10, FIRE = 0, ACID = 12)
 	attachment_slot = GROIN
 
 /obj/item/clothing/accessory/allergy_dogtag
 	name = "Allergy dogtag"
-	desc = "Dogtag with a list of your allergies"
+	desc = "Dogtag with a list of your allergies."
 	icon_state = "allergy"
 	above_suit = FALSE
 	minimize_when_attached = TRUE
