@@ -199,11 +199,6 @@
 /obj/structure/low_wall/titanium
 	plating_material = /datum/material/titanium
 
-/// Only smooths with other shuttle tiles. Used to prevent shuttles merging with the station when docked.
-/obj/structure/low_wall/titanium/shuttle
-	smoothing_groups = list(SMOOTH_GROUP_LOW_WALL_SHUTTLE)
-	canSmoothWith = list(SMOOTH_GROUP_SHUTTLE_WALLS, SMOOTH_GROUP_LOW_WALL_SHUTTLE, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTERS_BLASTDOORS, SMOOTH_GROUP_SHUTTLE_PARTS)
-
 /obj/structure/low_wall/plastitanium
 	plating_material = /datum/material/alloy/plastitanium
 

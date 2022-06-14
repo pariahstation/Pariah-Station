@@ -24,8 +24,11 @@
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/escape)
+"ae" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/escape)
 "af" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ag" = (
 /obj/structure/window/reinforced/shuttle,
@@ -410,7 +413,7 @@
 /area/shuttle/escape)
 "aP" = (
 /obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "aQ" = (
 /obj/effect/turf_decal/tile/blue{
@@ -433,7 +436,7 @@
 /area/shuttle/escape)
 "aT" = (
 /obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "aU" = (
 /obj/effect/turf_decal/bot,
@@ -1212,7 +1215,7 @@
 (1,1,1) = {"
 aa
 ac
-af
+ae
 af
 af
 hB
@@ -1340,15 +1343,15 @@ af
 ai
 nD
 ax
-af
+ae
 aI
-af
+ae
 ax
 nD
 aX
-af
+ae
 be
-af
+ae
 aX
 nD
 bo
@@ -1464,15 +1467,15 @@ hB
 ai
 nD
 ax
-af
+ae
 aI
-af
+ae
 ax
 nD
 aX
-af
+ae
 be
-af
+ae
 aX
 nD
 bo
@@ -1634,7 +1637,7 @@ bq
 af
 bC
 cF
-af
+ae
 af
 af
 af
@@ -1739,7 +1742,7 @@ aa
 (18,1,1) = {"
 aa
 ac
-af
+ae
 af
 hB
 hB

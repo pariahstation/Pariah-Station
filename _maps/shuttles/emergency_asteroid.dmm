@@ -2,6 +2,9 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
+"ac" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
 "ae" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Airlock"
@@ -80,7 +83,10 @@
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "az" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/escape)
+"aB" = (
+/turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/escape)
 "aE" = (
 /obj/structure/chair/comfy/shuttle{
@@ -234,7 +240,7 @@
 /area/shuttle/escape)
 "bi" = (
 /obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "bj" = (
 /obj/machinery/computer/communications{
@@ -410,79 +416,79 @@
 	name = "Emergency NanoMed";
 	use_power = 0
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 
 (1,1,1) = {"
 aa
 aa
-az
+ac
 am
-az
+ac
 ah
 ah
 ah
-az
+ac
 am
-az
+ac
 aa
 aa
 "}
 (2,1,1) = {"
-az
+ac
 am
-az
+ac
 an
-az
+ac
 aR
 aS
 bj
-az
+ac
 an
-az
+ac
 am
-az
+ac
 "}
 (3,1,1) = {"
-az
+ac
 an
-az
-az
-az
+ac
+ac
+ac
 at
 at
 at
-az
-az
-az
+ac
+ac
+ac
 an
-az
+ac
 "}
 (4,1,1) = {"
-az
-az
+ac
+ac
 az
 aF
-az
+ac
 aT
 bc
 bk
-az
+ac
 bt
 az
-az
-az
+ac
+ac
 "}
 (5,1,1) = {"
 ah
 ap
 aq
 bJ
-az
+ac
 aU
 bd
 bl
-az
+ac
 bN
 bu
 bE
@@ -493,50 +499,50 @@ ae
 aq
 aq
 aq
-az
+ac
 aV
 be
 bm
-az
+ac
 Jx
-az
-az
-az
+ac
+ac
+ac
 "}
 (7,1,1) = {"
 ah
 ar
 aq
 aq
-az
+ac
 aW
 bf
 bn
-az
+ac
 Jx
 bu
 bE
 ah
 "}
 (8,1,1) = {"
-az
-az
-az
+ac
+ac
+ac
 aG
-az
-az
+ac
+ac
 bg
-az
+ac
 az
 bu
 az
-az
-az
+ac
+ac
 "}
 (9,1,1) = {"
 aa
-az
-az
+ac
+ac
 aH
 at
 hJ
@@ -544,14 +550,14 @@ at
 Id
 at
 at
-az
-az
+ac
+ac
 aa
 "}
 (10,1,1) = {"
 aa
 aa
-az
+ac
 aI
 at
 aY
@@ -559,14 +565,14 @@ aY
 aY
 at
 bv
-az
+ac
 aa
 aa
 "}
 (11,1,1) = {"
 ah
 ah
-az
+aB
 aJ
 at
 aZ
@@ -574,7 +580,7 @@ ah
 aK
 at
 aL
-az
+ac
 aa
 aa
 "}
@@ -589,14 +595,14 @@ ah
 aK
 at
 bP
-az
+ac
 aa
 aa
 "}
 (13,1,1) = {"
 ah
 ah
-az
+aB
 bK
 at
 aZ
@@ -604,7 +610,7 @@ ah
 aK
 at
 bw
-az
+ac
 aa
 aa
 "}
@@ -656,7 +662,7 @@ aa
 (17,1,1) = {"
 ah
 ah
-az
+aB
 bK
 at
 aZ
@@ -664,7 +670,7 @@ ah
 aK
 at
 bx
-az
+ac
 aa
 aa
 "}
@@ -679,14 +685,14 @@ ah
 aK
 at
 bP
-az
+ac
 aa
 aa
 "}
 (19,1,1) = {"
 ah
 ah
-az
+aB
 aL
 at
 aZ
@@ -694,14 +700,14 @@ ah
 aK
 at
 by
-az
+ac
 aa
 aa
 "}
 (20,1,1) = {"
 aa
 aa
-az
+ac
 aM
 at
 ba
@@ -709,14 +715,14 @@ ba
 ba
 at
 aI
-az
+ac
 aa
 aa
 "}
 (21,1,1) = {"
 aa
-az
-az
+ac
+ac
 aN
 at
 at
@@ -724,14 +730,14 @@ at
 at
 at
 aN
-az
-az
+ac
+ac
 aa
 "}
 (22,1,1) = {"
-az
-az
-az
+ac
+ac
+ac
 ah
 aP
 ah
@@ -739,24 +745,24 @@ bi
 ah
 br
 ah
-az
-az
-az
+ac
+ac
+ac
 "}
 (23,1,1) = {"
-az
+ac
 av
 aE
 av
 aw
 bb
-az
+ac
 bp
 Jx
 Jx
 bC
 bF
-az
+ac
 "}
 (24,1,1) = {"
 al
@@ -774,47 +780,47 @@ bG
 ah
 "}
 (25,1,1) = {"
-az
+ac
 ax
 ax
 ax
 aw
 bM
-az
+ac
 bN
 Jx
 bz
 bD
 bH
-az
+ac
 "}
 (26,1,1) = {"
-az
-az
-az
-az
+ac
+ac
+ac
+ac
 ah
 aP
-az
+ac
 bq
 ah
 JM
-az
-az
-az
+ac
+ac
+ac
 "}
 (27,1,1) = {"
 aa
 aa
-az
-az
+ac
+ac
 aQ
 aw
 ah
 Jx
 bs
-az
-az
+ac
+ac
 aa
 aa
 "}
@@ -822,13 +828,13 @@ aa
 aa
 aa
 aa
-az
-az
+ac
+ac
 ah
-az
+ac
 ah
-az
-az
+ac
+ac
 aa
 aa
 aa

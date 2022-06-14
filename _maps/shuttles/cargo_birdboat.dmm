@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "b" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/supply)
 "e" = (
 /obj/machinery/conveyor{

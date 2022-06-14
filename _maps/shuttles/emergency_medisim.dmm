@@ -467,6 +467,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/misc/sandy_dirt,
 /area/shuttle/escape/simulation)
+"sS" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/escape)
 "tP" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -599,7 +602,7 @@
 /area/shuttle/escape/simulation)
 "Be" = (
 /obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "BO" = (
 /obj/structure/closet/crate{
@@ -1066,7 +1069,7 @@
 /area/shuttle/escape)
 "RB" = (
 /obj/structure/sign/departments/security,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "RJ" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -1223,7 +1226,7 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "Xv" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "XR" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -1647,7 +1650,7 @@ cc
 aB
 "}
 (10,1,1) = {"
-Xv
+sS
 Xv
 Xv
 Xv
@@ -1673,7 +1676,7 @@ EN
 Xv
 Xv
 Xv
-Xv
+sS
 "}
 (11,1,1) = {"
 EN
@@ -1707,7 +1710,7 @@ EN
 (12,1,1) = {"
 EN
 Xv
-Xv
+sS
 hr
 ll
 qM
@@ -1715,13 +1718,13 @@ so
 un
 HE
 Xv
-Xv
+sS
 Zx
 Rl
 Rl
 Rl
 Zx
-Xv
+sS
 Xv
 Vn
 XX
@@ -1729,7 +1732,7 @@ XX
 XX
 Cy
 in
-Xv
+sS
 Xv
 EN
 "}

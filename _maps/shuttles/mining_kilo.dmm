@@ -65,6 +65,9 @@
 /obj/item/radio,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/mining/large)
+"k" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/mining/large)
 "l" = (
 /obj/item/folder/yellow,
 /obj/item/pen,
@@ -109,11 +112,11 @@
 /area/shuttle/mining/large)
 "q" = (
 /obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/mining/large)
 "r" = (
 /obj/structure/sign/departments/cargo,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/mining/large)
 "s" = (
 /obj/effect/turf_decal/tile/neutral,
@@ -239,7 +242,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/mining/large)
 "C" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/mining/large)
 "D" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -268,7 +271,7 @@
 /area/shuttle/mining/large)
 "H" = (
 /obj/structure/sign/warning/fire,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/mining/large)
 "I" = (
 /obj/machinery/door/airlock/external/ruin{
@@ -338,11 +341,11 @@
 a
 b
 b
-C
-C
-C
+k
+k
+k
 b
-C
+k
 C
 a
 "}
@@ -367,8 +370,8 @@ q
 u
 z
 H
-C
-C
+k
+k
 "}
 (4,1,1) = {"
 b
@@ -387,19 +390,19 @@ b
 e
 i
 o
-C
+k
 w
 B
 H
-C
-C
+k
+k
 "}
 (6,1,1) = {"
 b
 b
 j
 p
-C
+k
 y
 E
 J
@@ -410,11 +413,11 @@ F
 a
 b
 b
-C
-C
-C
+k
+k
+k
 b
-C
+k
 C
 a
 "}

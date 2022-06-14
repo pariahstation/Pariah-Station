@@ -4,11 +4,14 @@
 /area/template_noop)
 "ac" = (
 /obj/structure/sign/warning/radiation,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ad" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
+/area/shuttle/escape)
+"ae" = (
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ag" = (
 /obj/structure/closet/radiation{
@@ -92,7 +95,7 @@
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
 "aw" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "aA" = (
 /obj/machinery/door/airlock/titanium{
@@ -126,6 +129,10 @@
 	name = "Hyperfractal Gigashuttle"
 	},
 /turf/open/floor/plating,
+/area/shuttle/escape)
+"aI" = (
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "aL" = (
 /obj/machinery/door/airlock/external/ruin{
@@ -343,16 +350,16 @@ aa
 "}
 (2,1,1) = {"
 aw
-aw
+ae
 ad
 ac
-aw
+ae
 ad
 aw
 ai
 aD
 UA
-aw
+ae
 aa
 aa
 aN
@@ -400,7 +407,7 @@ ar
 ar
 ar
 ar
-ac
+aI
 aw
 aa
 aM
@@ -496,7 +503,7 @@ av
 av
 av
 av
-ac
+aI
 aw
 aa
 aM
@@ -535,16 +542,16 @@ be
 "}
 (10,1,1) = {"
 aw
-aw
+ae
 ad
 ac
-aw
+ae
 ad
 aw
 ai
 aE
 UA
-aw
+ae
 aa
 aa
 aQ

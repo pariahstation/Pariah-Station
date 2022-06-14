@@ -7,7 +7,10 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "ad" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
+"ae" = (
+/turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/escape)
 "af" = (
 /obj/structure/table,
@@ -267,6 +270,9 @@
 /obj/structure/shuttle/engine/heater,
 /turf/open/floor/plating/airless,
 /area/shuttle/escape)
+"bj" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/escape)
 "bk" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/open/floor/plating/airless,
@@ -373,7 +379,7 @@ ad
 "}
 (3,1,1) = {"
 ad
-ad
+ae
 al
 aq
 ad
@@ -428,7 +434,7 @@ ad
 ac
 aH
 ac
-ad
+bj
 Dk
 aT
 aT
@@ -517,7 +523,7 @@ bk
 "}
 (9,1,1) = {"
 ad
-ad
+ae
 ap
 au
 ad

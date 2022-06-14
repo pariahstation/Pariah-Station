@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ab" = (
 /obj/structure/window/reinforced/shuttle,
@@ -9,7 +9,7 @@
 /area/shuttle/escape)
 "ac" = (
 /obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ae" = (
 /obj/structure/chair/comfy/shuttle,
@@ -40,7 +40,7 @@
 /area/shuttle/escape/brig)
 "aw" = (
 /obj/machinery/status_display/ai,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "ay" = (
 /obj/machinery/door/airlock/shuttle{
@@ -307,6 +307,9 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
+/area/shuttle/escape)
+"aZ" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "ba" = (
 /obj/effect/turf_decal/tile/blue{
@@ -739,7 +742,7 @@ ac
 aP
 aa
 aa
-aa
+aZ
 br
 bu
 "}
@@ -814,9 +817,9 @@ ar
 sY
 aA
 aG
-aa
+aZ
 aI
-aa
+aZ
 aG
 aQ
 sY
@@ -840,11 +843,11 @@ aO
 aI
 aH
 aR
-aa
-aa
+aZ
+aZ
 sY
-aa
-aa
+aZ
+aZ
 br
 br
 "}
@@ -856,9 +859,9 @@ ih
 sY
 aA
 aI
-aa
+aZ
 aG
-aa
+aZ
 aI
 aQ
 sY
@@ -949,7 +952,7 @@ ac
 aa
 aa
 aa
-aa
+aZ
 br
 bu
 "}

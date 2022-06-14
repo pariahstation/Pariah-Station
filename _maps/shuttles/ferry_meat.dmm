@@ -6,10 +6,13 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/transport)
 "c" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/transport)
+"e" = (
+/turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/transport)
 "f" = (
 /obj/structure/chair/comfy/shuttle{
@@ -140,9 +143,9 @@ a
 "}
 (2,1,1) = {"
 b
-c
+e
 i
-c
+e
 b
 "}
 (3,1,1) = {"

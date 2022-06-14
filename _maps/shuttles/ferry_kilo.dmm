@@ -6,7 +6,10 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/shuttle/transport)
 "c" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/transport)
+"d" = (
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/transport)
 "e" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -25,7 +28,7 @@
 /area/shuttle/transport)
 "g" = (
 /obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/transport)
 "h" = (
 /obj/structure/shuttle/engine/propulsion/left{
@@ -45,7 +48,7 @@
 /area/shuttle/transport)
 "j" = (
 /obj/structure/sign/warning/fire,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/transport)
 "k" = (
 /obj/structure/table/reinforced,
@@ -226,11 +229,11 @@ j
 c
 "}
 (4,1,1) = {"
-c
+d
 k
 r
 v
-c
+d
 "}
 (5,1,1) = {"
 e
@@ -240,11 +243,11 @@ w
 e
 "}
 (6,1,1) = {"
-c
+d
 l
 r
 w
-c
+d
 "}
 (7,1,1) = {"
 f
@@ -268,16 +271,16 @@ w
 e
 "}
 (10,1,1) = {"
-c
+d
 o
 r
 x
-c
+d
 "}
 (11,1,1) = {"
-c
+d
 e
 t
 e
-c
+d
 "}

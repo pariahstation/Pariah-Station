@@ -35,7 +35,10 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/arrival)
 "f" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/arrival)
+"g" = (
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/arrival)
 "h" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -227,7 +230,7 @@
 	department = "Arrival shuttle";
 	name = "Arrivals Shuttle console"
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/arrival)
 "x" = (
 /obj/structure/flora/ausbushes/grassybush,
@@ -247,7 +250,7 @@
 /area/shuttle/arrival)
 "z" = (
 /obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/arrival)
 "A" = (
 /obj/item/kirbyplants{
@@ -354,7 +357,7 @@
 /area/shuttle/arrival)
 "N" = (
 /obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/arrival)
 "O" = (
 /obj/effect/turf_decal/stripes/line,
@@ -368,7 +371,7 @@
 /area/shuttle/arrival)
 "P" = (
 /obj/machinery/status_display/ai,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/arrival)
 "Q" = (
 /obj/machinery/light/small/directional/north,
@@ -427,17 +430,17 @@
 a
 d
 f
-f
+g
 n
-f
+g
 h
 h
 h
 h
 z
 n
-f
-f
+g
+g
 a
 a
 a
@@ -445,7 +448,7 @@ a
 (2,1,1) = {"
 b
 d
-f
+g
 i
 o
 r
@@ -456,7 +459,7 @@ u
 A
 o
 G
-f
+g
 a
 a
 a
@@ -475,10 +478,10 @@ p
 p
 p
 H
-f
-f
+g
+g
 h
-f
+g
 "}
 (4,1,1) = {"
 b
@@ -551,15 +554,15 @@ p
 p
 p
 L
-f
-f
+g
+g
 h
-f
+g
 "}
 (8,1,1) = {"
 b
 d
-f
+g
 i
 q
 t
@@ -570,7 +573,7 @@ v
 E
 q
 M
-f
+g
 a
 a
 a
@@ -579,17 +582,17 @@ a
 a
 d
 f
-f
+g
 n
-f
+g
 h
 h
 h
 h
 z
 n
-f
-f
+g
+g
 a
 a
 a

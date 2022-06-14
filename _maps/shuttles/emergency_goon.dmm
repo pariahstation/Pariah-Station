@@ -17,9 +17,12 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
+"d" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
 "f" = (
 /obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "g" = (
 /obj/machinery/door/airlock/titanium{
@@ -91,7 +94,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/escape)
 "t" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/escape)
 "u" = (
 /obj/structure/chair/comfy/brown{
@@ -251,72 +254,72 @@
 
 (1,1,1) = {"
 a
-t
+d
 b
 b
 b
-t
+d
 b
 b
 b
-t
+d
 a
 "}
 (2,1,1) = {"
 W
-t
+d
 p
 p
 p
-t
+d
 p
 p
 p
-t
+d
 X
 "}
 (3,1,1) = {"
 c
-t
+d
 q
 v
 q
-t
+d
 H
 H
 H
-t
+d
 Y
 "}
 (4,1,1) = {"
-t
-t
+d
+d
 Z
 n
 R
-t
+d
 T
 J
 j
-t
-t
+d
+d
 "}
 (5,1,1) = {"
-t
-t
-t
+d
+d
+d
 w
 f
-t
+d
 f
 K
-t
-t
-t
+d
+d
+d
 "}
 (6,1,1) = {"
 a
-t
+d
 s
 r
 s
@@ -324,7 +327,7 @@ i
 s
 r
 s
-t
+d
 a
 "}
 (7,1,1) = {"
@@ -341,17 +344,17 @@ m
 a
 "}
 (8,1,1) = {"
-t
-t
+d
+d
 s
 Q
-t
+d
 m
-t
+d
 V
 s
-t
-t
+d
+d
 "}
 (9,1,1) = {"
 g
@@ -380,8 +383,8 @@ r
 g
 "}
 (11,1,1) = {"
-t
-t
+d
+d
 s
 s
 o
@@ -389,8 +392,8 @@ r
 o
 s
 s
-t
-t
+d
+d
 "}
 (12,1,1) = {"
 a
@@ -420,7 +423,7 @@ a
 "}
 (14,1,1) = {"
 a
-t
+d
 t
 s
 S
@@ -428,20 +431,20 @@ r
 S
 s
 t
-t
+d
 a
 "}
 (15,1,1) = {"
 a
-t
-t
+d
+d
 m
-t
+d
 E
 f
 m
-t
-t
+d
+d
 a
 "}
 (16,1,1) = {"
@@ -460,13 +463,13 @@ a
 (17,1,1) = {"
 a
 a
-t
-t
+d
+d
 u
 A
 D
-t
-t
+d
+d
 a
 a
 "}
@@ -487,11 +490,11 @@ a
 a
 a
 a
-t
+d
 m
 m
 m
-t
+d
 a
 a
 a

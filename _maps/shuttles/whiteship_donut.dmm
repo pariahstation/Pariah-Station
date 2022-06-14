@@ -2,8 +2,11 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
+"ab" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned)
 "ac" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned)
 "ad" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -534,13 +537,13 @@ aa
 aa
 aa
 aa
-ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa
@@ -552,16 +555,16 @@ aa
 aa
 aa
 ac
-ac
-ac
+ab
+ab
 ac
 aY
 aC
 ac
 aK
 aQ
-ac
-ac
+ab
+ab
 ac
 aa
 aa
@@ -573,14 +576,14 @@ aa
 aa
 am
 ar
-ac
+ab
 av
 ay
 bd
 aF
 aL
 aR
-ac
+ab
 aX
 be
 aa
@@ -600,7 +603,7 @@ ag
 ac
 aM
 aS
-ac
+ab
 aX
 bf
 aa
@@ -618,19 +621,19 @@ al
 al
 al
 ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 "}
 (6,1,1) = {"
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
 ac
 as
 au
@@ -640,14 +643,14 @@ al
 ai
 pe
 ao
-ac
+ab
 bg
 bl
-ac
-ac
+ab
+ab
 "}
 (7,1,1) = {"
-ac
+ab
 ae
 Ib
 ac
@@ -727,7 +730,7 @@ bt
 bq
 "}
 (11,1,1) = {"
-ac
+ab
 ah
 vR
 ak
@@ -740,16 +743,16 @@ aq
 aq
 ag
 ag
-ac
+ab
 bc
 bn
 bo
 bq
 "}
 (12,1,1) = {"
-ac
-ac
-ac
+ab
+ab
+ab
 ac
 ak
 aq
@@ -760,11 +763,11 @@ aq
 ag
 ag
 tT
-ac
+ab
 bh
 bo
-ac
-ac
+ab
+ab
 "}
 (13,1,1) = {"
 aa
@@ -779,11 +782,11 @@ al
 al
 aG
 ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
 aa
 "}
 (14,1,1) = {"
@@ -800,7 +803,7 @@ ag
 aH
 aN
 aT
-ac
+ab
 aX
 be
 aa
@@ -820,7 +823,7 @@ aD
 aI
 aO
 aU
-ac
+ab
 aX
 bf
 aa
@@ -840,8 +843,8 @@ aE
 aJ
 aP
 aV
-ac
-ac
+ab
+ab
 ac
 aa
 aa
@@ -855,12 +858,12 @@ aa
 aa
 aa
 ac
-ac
-ac
-ac
-ac
-ac
-ac
+ab
+ab
+ab
+ab
+ab
+ab
 aa
 aa
 aa

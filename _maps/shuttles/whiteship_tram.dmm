@@ -502,13 +502,13 @@
 /obj/machinery/porta_turret/centcom_shuttle/weak{
 	dir = 9
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bridge)
 "bD" = (
 /obj/machinery/porta_turret/centcom_shuttle/weak{
 	dir = 5
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bridge)
 "bE" = (
 /obj/machinery/stasis/survival_pod,
@@ -680,7 +680,7 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/abandoned/engine)
 "ci" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/engine)
 "cj" = (
 /obj/effect/turf_decal/stripes/white/box,
@@ -856,7 +856,7 @@
 /turf/template_noop,
 /area/shuttle/abandoned/cargo)
 "da" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bridge)
 "dc" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -954,7 +954,7 @@
 /area/shuttle/abandoned/bridge)
 "dl" = (
 /obj/structure/sign/warning/nosmoking/circle,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bridge)
 "dm" = (
 /obj/structure/cable,
@@ -1005,7 +1005,7 @@
 /area/shuttle/abandoned/bridge)
 "ds" = (
 /obj/structure/sign/poster/official/do_not_question,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bridge)
 "dt" = (
 /obj/machinery/suit_storage_unit/open,
@@ -1022,7 +1022,7 @@
 /area/shuttle/abandoned/bridge)
 "dv" = (
 /obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bridge)
 "dw" = (
 /obj/structure/bed/pod{
@@ -1037,6 +1037,9 @@
 "dx" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
+/area/shuttle/abandoned/bridge)
+"dy" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bridge)
 "dz" = (
 /obj/effect/decal/cleanable/blood,
@@ -1099,7 +1102,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/weak{
 	dir = 10
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bridge)
 "nM" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -1461,7 +1464,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/weak{
 	dir = 6
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bridge)
 "ZA" = (
 /obj/structure/cable,
@@ -1492,10 +1495,10 @@ WV
 bw
 cS
 bC
-da
-da
-da
-da
+dy
+dy
+dy
+dy
 pm
 pm
 mj
@@ -1520,7 +1523,7 @@ Qy
 PU
 Tj
 cO
-da
+dy
 bE
 bJ
 nV
@@ -1549,7 +1552,7 @@ aN
 cC
 FQ
 cN
-da
+dy
 dc
 dh
 Ic
@@ -1578,7 +1581,7 @@ iH
 aJ
 cJ
 cO
-da
+dy
 bF
 di
 dn
@@ -1608,12 +1611,12 @@ bu
 by
 cP
 da
-da
+dy
 dv
 do
 ds
-da
-da
+dy
+dy
 da
 "}
 (6,1,1) = {"
@@ -1724,12 +1727,12 @@ aG
 bz
 cS
 da
-da
+dy
 dl
 dq
 dv
-da
-da
+dy
+dy
 da
 "}
 (10,1,1) = {"
@@ -1752,14 +1755,14 @@ cA
 bv
 cL
 cV
-da
+dy
 df
 bO
 Rg
 dw
 zN
 bE
-da
+dy
 "}
 (11,1,1) = {"
 cM
@@ -1781,14 +1784,14 @@ aS
 cG
 bA
 cU
-da
+dy
 dg
 dm
 IC
 hr
 Hp
 nM
-da
+dy
 "}
 (12,1,1) = {"
 cM
@@ -1810,14 +1813,14 @@ cA
 cH
 bB
 cV
-da
+dy
 bI
 dz
 CS
 yA
 Qm
 wp
-da
+dy
 "}
 (13,1,1) = {"
 cM
@@ -1840,11 +1843,11 @@ aG
 bz
 cP
 bD
-da
-da
-da
-da
-da
-da
+dy
+dy
+dy
+dy
+dy
+dy
 YI
 "}

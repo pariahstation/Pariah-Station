@@ -15,7 +15,7 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/transport)
 "ad" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/transport)
 "af" = (
 /turf/closed/wall/r_wall,
@@ -136,6 +136,9 @@
 /area/shuttle/transport)
 "aL" = (
 /turf/closed/wall/rust,
+/area/shuttle/transport)
+"aM" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/transport)
 "aN" = (
 /obj/machinery/power/energy_accumulator/grounding_rod{
@@ -338,7 +341,7 @@ bj
 "}
 (5,1,1) = {"
 ad
-ad
+aM
 ai
 ak
 ao
@@ -357,7 +360,7 @@ bj
 (6,1,1) = {"
 aa
 ad
-ad
+aM
 al
 ap
 ap
@@ -369,7 +372,7 @@ ap
 aL
 be
 bh
-ad
+aM
 ad
 "}
 (7,1,1) = {"
@@ -377,7 +380,7 @@ aa
 aa
 ad
 ad
-ad
+aM
 ar
 au
 au
@@ -386,7 +389,7 @@ au
 au
 aL
 bf
-ad
+aM
 ad
 aa
 "}
@@ -421,7 +424,7 @@ aC
 aS
 aC
 bc
-ad
+aM
 ad
 aa
 aa
@@ -456,7 +459,7 @@ aD
 aD
 aD
 aD
-ad
+aM
 ad
 aa
 aa
@@ -491,7 +494,7 @@ ap
 aE
 aN
 aE
-ad
+aM
 ad
 aa
 aa

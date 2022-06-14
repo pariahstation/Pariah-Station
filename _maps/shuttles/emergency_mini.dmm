@@ -2,6 +2,9 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
+"b" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
 "c" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -84,7 +87,7 @@
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "q" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "r" = (
 /turf/open/floor/mineral/titanium/blue,
@@ -244,30 +247,30 @@
 
 (1,1,1) = {"
 a
-q
-q
-q
-q
-q
-q
-q
+b
+b
+b
+b
+b
+b
+b
 n
 n
 n
-q
-q
-q
-q
-q
-q
-q
-q
-q
+b
+b
+b
+b
+b
+b
+b
+b
+b
 a
 "}
 (2,1,1) = {"
-q
-q
+b
+b
 e
 k
 X
@@ -282,11 +285,11 @@ f
 M
 M
 D
-q
+b
 J
 O
 q
-q
+b
 "}
 (3,1,1) = {"
 c
@@ -305,7 +308,7 @@ f
 f
 f
 r
-q
+b
 K
 K
 Q
@@ -328,7 +331,7 @@ K
 K
 f
 w
-q
+b
 t
 f
 R
@@ -337,15 +340,15 @@ n
 (5,1,1) = {"
 c
 d
-q
-q
-q
+b
+b
+b
 q
 t
 x
 n
 n
-q
+b
 n
 n
 R
@@ -374,7 +377,7 @@ M
 M
 f
 E
-q
+b
 L
 f
 R
@@ -397,15 +400,15 @@ f
 f
 f
 r
-q
+b
 M
 M
 T
 n
 "}
 (8,1,1) = {"
-q
-q
+b
+b
 j
 m
 n
@@ -420,32 +423,32 @@ f
 K
 K
 D
-q
+b
 N
 P
 q
-q
+b
 "}
 (9,1,1) = {"
 a
-q
-q
-q
-q
-q
+b
+b
+b
+b
+b
 u
-q
-q
+b
+b
 n
-q
-q
+b
+b
 B
-q
-q
-q
-q
-q
-q
-q
+b
+b
+b
+b
+b
+b
+b
 a
 "}

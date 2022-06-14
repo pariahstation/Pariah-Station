@@ -2,6 +2,9 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
+"ab" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
 "ac" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
@@ -39,7 +42,7 @@
 /area/shuttle/escape)
 "ai" = (
 /obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "aj" = (
 /obj/structure/table/reinforced,
@@ -138,7 +141,7 @@
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
 "as" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "at" = (
 /obj/effect/turf_decal/stripes/line{
@@ -263,7 +266,7 @@
 /area/shuttle/escape/brig)
 "aD" = (
 /obj/machinery/status_display,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "aE" = (
 /obj/effect/turf_decal/stripes/line{
@@ -606,11 +609,11 @@
 /area/shuttle/escape/brig)
 "bg" = (
 /obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "bh" = (
 /obj/structure/sign/warning/securearea,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "bi" = (
 /obj/effect/turf_decal/bot,
@@ -1193,7 +1196,7 @@
 /area/shuttle/escape)
 "cm" = (
 /obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "cn" = (
 /obj/effect/turf_decal/delivery,
@@ -1456,7 +1459,7 @@
 /area/shuttle/escape)
 "cL" = (
 /obj/structure/sign/warning/fire,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "cM" = (
 /obj/machinery/vending/medical,
@@ -1556,7 +1559,7 @@
 /area/shuttle/escape)
 "cY" = (
 /obj/machinery/status_display/ai,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "cZ" = (
 /obj/machinery/computer/operating{
@@ -1625,24 +1628,24 @@
 (1,1,1) = {"
 aa
 aa
-as
+ab
 ac
-as
+ab
 ac
 ai
 bb
-as
+ab
 bq
-as
+ab
 ac
 ac
 ac
-as
+ab
 bX
-as
+ab
 bX
 ai
-as
+ab
 as
 cS
 aa
@@ -1679,7 +1682,7 @@ aa
 (3,1,1) = {"
 aa
 aa
-as
+ab
 aq
 aA
 aA
@@ -1724,14 +1727,14 @@ ac
 cl
 ct
 as
-as
-as
+ab
+ab
 as
 cS
 cS
 "}
 (5,1,1) = {"
-as
+ab
 ac
 ai
 as
@@ -1739,7 +1742,7 @@ aC
 aI
 aT
 bf
-as
+ab
 bu
 bD
 bK
@@ -1748,7 +1751,7 @@ bu
 bD
 bZ
 as
-as
+ab
 bg
 as
 cM
@@ -1834,7 +1837,7 @@ cw
 cG
 cP
 cY
-as
+ab
 cS
 cS
 "}
@@ -1872,7 +1875,7 @@ an
 as
 as
 aN
-as
+ab
 as
 as
 by
@@ -1893,7 +1896,7 @@ dc
 cT
 "}
 (11,1,1) = {"
-as
+ab
 ac
 ai
 as
@@ -1901,7 +1904,7 @@ as
 aO
 aX
 bi
-as
+ab
 bu
 bD
 bK
@@ -1910,7 +1913,7 @@ bu
 bD
 bZ
 as
-as
+ab
 bg
 as
 cR
@@ -1922,7 +1925,7 @@ de
 (12,1,1) = {"
 aa
 aa
-as
+ab
 aw
 ac
 aP
@@ -1940,8 +1943,8 @@ ac
 co
 cz
 as
-as
-as
+ab
+ab
 as
 cS
 cS
@@ -1976,7 +1979,7 @@ aa
 (14,1,1) = {"
 aa
 aa
-as
+ab
 ay
 ac
 aR
@@ -2003,24 +2006,24 @@ aa
 (15,1,1) = {"
 aa
 aa
-as
-as
-as
+ab
+ab
+ab
 ac
 ai
 ac
-as
+ab
 ac
-as
+ab
 ac
 ac
 ac
-as
+ab
 ac
-as
-as
+ab
+ab
 ai
-as
+ab
 as
 cS
 aa

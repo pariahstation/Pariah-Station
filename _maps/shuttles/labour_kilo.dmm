@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/labor)
 "b" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -234,6 +234,9 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/labor)
+"v" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/labor)
 "w" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/structure/shuttle/engine/heater,
@@ -255,7 +258,7 @@ a
 b
 a
 b
-a
+v
 x
 "}
 (2,1,1) = {"
@@ -299,6 +302,6 @@ a
 a
 a
 u
-a
+v
 x
 "}

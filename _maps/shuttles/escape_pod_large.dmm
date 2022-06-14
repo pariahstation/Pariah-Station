@@ -23,7 +23,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/pod_1)
 "B" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_1)
 "C" = (
 /obj/machinery/computer/shuttle/monastery_shuttle,
@@ -73,7 +73,7 @@
 /area/template_noop)
 "Z" = (
 /obj/structure/shuttle/engine/propulsion/burst,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/pod_1)
 
 (1,1,1) = {"

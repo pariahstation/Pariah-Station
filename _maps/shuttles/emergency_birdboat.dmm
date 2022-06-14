@@ -2,6 +2,9 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
+"ab" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/escape)
 "ac" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
@@ -34,7 +37,7 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/escape)
 "ah" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "ai" = (
 /obj/machinery/computer/emergency_shuttle,
@@ -293,22 +296,22 @@
 (1,1,1) = {"
 aa
 aa
-ah
-ah
+ab
+ab
 ac
-ah
-ac
-ac
+ab
 ac
 ac
 ac
-ah
+ac
+ac
+ab
 aa
 aa
 "}
 (2,1,1) = {"
 aa
-ah
+ab
 ah
 aq
 ak
@@ -319,12 +322,12 @@ aH
 aH
 aB
 ah
-ah
+ab
 aa
 "}
 (3,1,1) = {"
 aa
-ah
+ab
 ai
 ar
 aC
@@ -335,7 +338,7 @@ aC
 aC
 aC
 aS
-ah
+ab
 aa
 "}
 (4,1,1) = {"
@@ -344,14 +347,14 @@ ac
 aj
 aC
 av
-ah
+ab
 aD
 aD
 aL
 aC
 aC
 aS
-ah
+ab
 aa
 "}
 (5,1,1) = {"
@@ -360,23 +363,23 @@ ac
 aj
 aC
 aV
-ah
+ab
 aE
 aE
 aM
 aC
 aC
 aS
-ah
+ab
 aa
 "}
 (6,1,1) = {"
 aa
-ah
+ab
 ak
 aC
 ak
-ah
+ab
 aF
 aI
 aL
@@ -384,15 +387,15 @@ aC
 aC
 aT
 ah
-ah
+ab
 "}
 (7,1,1) = {"
 aa
-ah
-ah
+ab
+ab
 aZ
 ac
-ah
+ab
 aC
 aC
 aC
@@ -400,11 +403,11 @@ aC
 aC
 aC
 aB
-ah
+ab
 "}
 (8,1,1) = {"
 aa
-ah
+ab
 al
 at
 at
@@ -416,11 +419,11 @@ aC
 aC
 aC
 aV
-ah
+ab
 "}
 (9,1,1) = {"
 aa
-ah
+ab
 al
 at
 at
@@ -436,7 +439,7 @@ ac
 "}
 (10,1,1) = {"
 aa
-ah
+ab
 am
 at
 at
@@ -452,11 +455,11 @@ ac
 "}
 (11,1,1) = {"
 aa
-ah
+ab
 al
 at
 ax
-ah
+ab
 aC
 aC
 aN
@@ -468,11 +471,11 @@ ac
 "}
 (12,1,1) = {"
 aa
-ah
+ab
 al
 at
 ay
-ah
+ab
 aC
 aC
 aO
@@ -480,26 +483,26 @@ aP
 aC
 aC
 aB
-ah
+ab
 "}
 (13,1,1) = {"
-ah
-ah
-ah
-ah
-ah
+ab
+ab
+ab
+ab
+ab
 ah
 aC
 iP
 ah
-ah
+ab
 aA
 ac
-ah
-ah
+ab
+ab
 "}
 (14,1,1) = {"
-ah
+ab
 ad
 an
 af
@@ -512,10 +515,10 @@ aQ
 af
 af
 aX
-ah
+ab
 "}
 (15,1,1) = {"
-ah
+ab
 ae
 af
 af
@@ -528,53 +531,53 @@ af
 af
 af
 af
-ah
+ab
 "}
 (16,1,1) = {"
-ah
+ab
 af
 ao
 af
-ah
-ah
+ab
+ab
 aG
 aG
-ah
-ah
+ab
+ab
 aR
 aU
 aY
-ah
+ab
 "}
 (17,1,1) = {"
-ah
-ah
-ah
-ah
-ah
-ah
+ab
+ab
+ab
+ab
+ab
+ab
 aC
 aJ
-ah
-ah
-ah
-ah
-ah
-ah
+ab
+ab
+ab
+ab
+ab
+ab
 "}
 (18,1,1) = {"
-ah
+ab
 ag
 ap
 au
-ah
-ah
+ab
+ab
 aG
 aK
-ah
-ah
+ab
+ab
 ag
 ap
 au
-ah
+ab
 "}

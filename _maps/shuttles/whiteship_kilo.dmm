@@ -2,8 +2,11 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
+"ab" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/abandoned/cargo)
 "ac" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/cargo)
 "ad" = (
 /obj/effect/turf_decal/bot,
@@ -33,7 +36,7 @@
 	height = 23;
 	id = "whiteship";
 	launch_status = 0;
-	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
+	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0);
 	name = "Salvage Ship";
 	port_direction = 8;
 	preferred_direction = 4;
@@ -105,7 +108,7 @@
 	dir = 4;
 	name = "Old Mining Turret"
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/cargo)
 "al" = (
 /obj/effect/turf_decal/delivery,
@@ -216,7 +219,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/abandoned/cargo)
 "at" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/engine)
 "au" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -391,7 +394,7 @@
 /area/shuttle/abandoned/cargo)
 "aK" = (
 /obj/structure/sign/warning/enginesafety,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/engine)
 "aL" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -701,7 +704,7 @@
 /area/shuttle/abandoned/cargo)
 "bn" = (
 /obj/structure/sign/warning/vacuum/external,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/cargo)
 "bo" = (
 /obj/effect/turf_decal/stripes/line{
@@ -901,7 +904,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/abandoned/bridge)
 "bF" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bridge)
 "bH" = (
 /obj/effect/turf_decal/stripes/corner,
@@ -932,11 +935,11 @@
 /turf/open/floor/plating,
 /area/shuttle/abandoned/cargo)
 "bK" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/crew)
 "bM" = (
 /obj/structure/sign/warning/fire,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/crew)
 "bN" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -994,11 +997,11 @@
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/abandoned/bridge)
 "bU" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bar)
 "bV" = (
 /obj/machinery/vending/boozeomat/all_access,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/bar)
 "bW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
@@ -1028,7 +1031,7 @@
 /area/shuttle/abandoned/crew)
 "bY" = (
 /obj/machinery/computer/security/telescreen/entertainment,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/abandoned/crew)
 "bZ" = (
 /obj/structure/bed,
@@ -1682,7 +1685,7 @@
 	dir = 4;
 	name = "Old Mining Turret"
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/crew)
 "df" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -1697,7 +1700,7 @@
 	dir = 4;
 	name = "Old Mining Turret"
 	},
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned/bar)
 "dh" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1761,7 +1764,7 @@ aa
 "}
 (2,1,1) = {"
 aa
-ac
+ab
 ac
 ah
 ac
@@ -1778,7 +1781,7 @@ aa
 aa
 "}
 (3,1,1) = {"
-ac
+ab
 ac
 af
 ai

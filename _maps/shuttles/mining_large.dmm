@@ -126,7 +126,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/mining/large)
 "k" = (
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/mining/large)
 "l" = (
 /obj/structure/table/reinforced,
@@ -210,7 +210,7 @@
 /area/shuttle/mining/large)
 "q" = (
 /obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium/shuttle,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/mining/large)
 "r" = (
 /obj/effect/turf_decal/tile/neutral,
@@ -415,6 +415,9 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/mining/large)
+"F" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/mining/large)
 "G" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -462,7 +465,7 @@ k
 k
 b
 k
-k
+F
 a
 "}
 (2,1,1) = {"
@@ -534,6 +537,6 @@ k
 k
 b
 k
-k
+F
 a
 "}
