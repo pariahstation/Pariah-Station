@@ -163,8 +163,6 @@
 
 /turf/closed/wall/mineral/titanium/nodiagonal
 
-/turf/closed/wall/mineral/titanium/nosmooth
-
 /turf/closed/wall/mineral/titanium/overspace
 
 /turf/closed/wall/mineral/titanium/interior
