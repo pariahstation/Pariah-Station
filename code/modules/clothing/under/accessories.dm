@@ -20,50 +20,49 @@
 	set_detached_pockets(null)
 	return ..()
 
-/obj/item/clothing/accessory/proc/can_attach_accessory(obj/item/clothing/U, mob/user)
-	if(!attachment_slot || (U && U.body_parts_covered & attachment_slot))
+/obj/item/clothing/accessory/proc/can_attach_accessory(obj/item/clothing/clothing, mob/user)
+	if(!attachment_slot || (clothing && clothing.body_parts_covered & attachment_slot))
 		return TRUE
-	if(user)
-		to_chat(user, span_warning("There doesn't seem to be anywhere to put [src]..."))
+	to_chat(user, span_warning("There doesn't seem to be anywhere to put [src]..."))
 
-/obj/item/clothing/accessory/proc/attach(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/attach(obj/item/clothing/under/uniform, user)
 	var/datum/component/storage/storage = GetComponent(/datum/component/storage)
 	if(storage)
-		if(SEND_SIGNAL(U, COMSIG_CONTAINS_STORAGE))
+		if(SEND_SIGNAL(uniform, COMSIG_CONTAINS_STORAGE))
 			return FALSE
-		U.TakeComponent(storage)
+		uniform.TakeComponent(storage)
 		set_detached_pockets(storage)
-	U.attached_accessory = src
-	forceMove(U)
+	uniform.attached_accessory = src
+	forceMove(uniform)
 	layer = FLOAT_LAYER
 	plane = FLOAT_PLANE
 	if(minimize_when_attached)
 		transform *= 0.5 //halve the size so it doesn't overpower the under
 		pixel_x += 8
 		pixel_y -= 8
-	U.add_overlay(src)
+	uniform.add_overlay(src)
 
-	if (islist(U.armor) || isnull(U.armor)) // This proc can run before /obj/Initialize has run for U and src,
-		U.armor = getArmor(arglist(U.armor)) // we have to check that the armor list has been transformed into a datum before we try to call a proc on it
+	if (islist(uniform.armor) || isnull(uniform.armor)) // This proc can run before /obj/Initialize has run for uniform and src,
+		uniform.armor = getArmor(arglist(uniform.armor)) // we have to check that the armor list has been transformed into a datum before we try to call a proc on it
 																					// This is safe to do as /obj/Initialize only handles setting up the datum if actually needed.
 	if (islist(armor) || isnull(armor))
 		armor = getArmor(arglist(armor))
 
-	U.armor = U.armor.attachArmor(armor)
+	uniform.armor = uniform.armor.attachArmor(armor)
 
 	if(isliving(user))
-		on_uniform_equip(U, user)
+		on_uniform_equip(uniform, user)
 
 	return TRUE
 
-/obj/item/clothing/accessory/proc/detach(obj/item/clothing/under/U, user)
-	if(detached_pockets && detached_pockets.parent == U)
+/obj/item/clothing/accessory/proc/detach(obj/item/clothing/under/uniform, user)
+	if(detached_pockets && detached_pockets.parent == uniform)
 		TakeComponent(detached_pockets)
 
-	U.armor = U.armor.detachArmor(armor)
+	uniform.armor = uniform.armor.detachArmor(armor)
 
 	if(isliving(user))
-		on_uniform_dropped(U, user)
+		on_uniform_dropped(uniform, user)
 
 	if(minimize_when_attached)
 		transform *= 2
@@ -71,9 +70,9 @@
 		pixel_y += 8
 	layer = initial(layer)
 	plane = initial(plane)
-	U.cut_overlays()
-	U.attached_accessory = null
-	U.accessory_overlay = null
+	uniform.cut_overlays()
+	uniform.attached_accessory = null
+	uniform.accessory_overlay = null
 
 /obj/item/clothing/accessory/proc/set_detached_pockets(new_pocket)
 	if(detached_pockets)
@@ -86,10 +85,10 @@
 	SIGNAL_HANDLER
 	set_detached_pockets(null)
 
-/obj/item/clothing/accessory/proc/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/on_uniform_equip(obj/item/clothing/under/uniform, user)
 	return
 
-/obj/item/clothing/accessory/proc/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/proc/on_uniform_dropped(obj/item/clothing/under/uniform, user)
 	return
 
 /obj/item/clothing/accessory/attack_self_secondary(mob/user)
@@ -144,45 +143,37 @@
 	var/commended = FALSE
 
 //Pinning medals on people
-/obj/item/clothing/accessory/medal/attack(mob/living/carbon/human/M, mob/living/user)
-	if(ishuman(M) && !user.combat_mode)
+/obj/item/clothing/accessory/medal/attack(mob/living/carbon/human/target, mob/living/user)
+	if(!ishuman(target) || user.combat_mode)
+		return ..()
 
-		if(M.wear_suit)
-			if((M.wear_suit.flags_inv & HIDEJUMPSUIT)) //Check if the jumpsuit is covered
-				to_chat(user, span_warning("Medals can only be pinned on jumpsuits."))
-				return
+	if(!target.w_uniform || target.wear_suit?.flags_inv & HIDEJUMPSUIT) //Check if the jumpsuit is covered
+		to_chat(user, span_warning("Medals can only be pinned on jumpsuits."))
+		return
 
-		if(M.w_uniform)
-			var/obj/item/clothing/under/U = M.w_uniform
-			var/delay = 20
-			if(user == M)
-				delay = 0
-			else
-				user.visible_message(span_notice("[user] is trying to pin [src] on [M]'s chest."), \
-					span_notice("You try to pin [src] on [M]'s chest."))
-			var/input
-			if(!commended && user != M)
-				input = tgui_input_text(user, "Reason for this commendation? It will be recorded by Nanotrasen.", "Commendation", max_length = 140)
-			if(do_after(user, delay, target = M))
-				if(U.attach_accessory(src, user, 0)) //Attach it, do not notify the user of the attachment
-					if(user == M)
-						to_chat(user, span_notice("You attach [src] to [U]."))
-					else
-						user.visible_message(span_notice("[user] pins \the [src] on [M]'s chest."), \
-							span_notice("You pin \the [src] on [M]'s chest."))
-						if(input)
-							SSblackbox.record_feedback("associative", "commendation", 1, list("commender" = "[user.real_name]", "commendee" = "[M.real_name]", "medal" = "[src]", "reason" = input))
-							GLOB.commendations += "[user.real_name] awarded <b>[M.real_name]</b> the <span class='medaltext'>[name]</span>! \n- [input]"
-							commended = TRUE
-							desc += "<br>The inscription reads: [input] - [user.real_name]"
-							log_game("<b>[key_name(M)]</b> was given the following commendation by <b>[key_name(user)]</b>: [input]")
-							message_admins("<b>[key_name_admin(M)]</b> was given the following commendation by <b>[key_name_admin(user)]</b>: [input]")
-							add_memory_in_range(M, 7, MEMORY_RECEIVED_MEDAL, list(DETAIL_PROTAGONIST = M, DETAIL_MEDAL_TYPE = src, DETAIL_DEUTERAGONIST = user, DETAIL_MEDAL_REASON = input), STORY_VALUE_AMAZING)
+	var/obj/item/clothing/under/uniform = target.w_uniform
+	if(user == target || commended)
+		user.visible_message(span_notice("[user] pins \the [src] on [user == target ? user.p_their() : "[target]'s"] chest."),
+			span_notice("You pin \the [src] on [user == target ? user.p_their() : "[target]'s"] chest.")
+		)
+		uniform.attach_accessory(src, user, 0)
+		return
 
-		else
-			to_chat(user, span_warning("Medals can only be pinned on jumpsuits!"))
-	else
-		..()
+	user.visible_message(span_notice("[user] is trying to pin [src] on [target]'s chest."), span_notice("You try to pin [src] on [target]'s chest."))
+	var/input = tgui_input_text(user, "Reason for this commendation? It will be recorded by Nanotrasen.", "Commendation", max_length = 140)
+	if(!(do_after(user, 4 SECONDS, target = target) && uniform.attach_accessory(src, user, 0))) //ugly, but we don't want to attach if we don't finish the do_after
+		return
+
+	user.visible_message(span_notice("[user] pins \the [src] on [target]'s chest."), \
+		span_notice("You pin \the [src] on [target]'s chest."))
+	if(input)
+		SSblackbox.record_feedback("associative", "commendation", 1, list("commender" = "[user.real_name]", "commendee" = "[target.real_name]", "medal" = "[src]", "reason" = input))
+		GLOB.commendations += "[user.real_name] awarded <b>[target.real_name]</b> the <span class='medaltext'>[name]</span>! \n- [input]"
+		commended = TRUE
+		desc += "<br>The inscription reads: [input] - [user.real_name]"
+		log_game("<b>[key_name(target)]</b> was given the following commendation by <b>[key_name(user)]</b>: [input]")
+		message_admins("<b>[key_name_admin(target)]</b> was given the following commendation by <b>[key_name_admin(user)]</b>: [input]")
+		add_memory_in_range(target, 7, MEMORY_RECEIVED_MEDAL, list(DETAIL_PROTAGONIST = target, DETAIL_MEDAL_TYPE = src, DETAIL_DEUTERAGONIST = user, DETAIL_MEDAL_REASON = input), STORY_VALUE_AMAZING)
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
@@ -197,6 +188,7 @@
 	name = "ribbon"
 	desc = "A ribbon"
 	icon_state = "cargo"
+	commended = TRUE //it's just a ribbon
 
 /obj/item/clothing/accessory/medal/ribbon/cargo
 	name = "\"cargo tech of the shift\" award"
@@ -337,11 +329,11 @@
 		user.say("The testimony contradicts the evidence!", forced = "attorney's badge")
 	user.visible_message(span_notice("[user] shows [user.p_their()] attorney's badge."), span_notice("You show your attorney's badge."))
 
-/obj/item/clothing/accessory/lawyers_badge/on_uniform_equip(obj/item/clothing/under/U, mob/living/user)
+/obj/item/clothing/accessory/lawyers_badge/on_uniform_equip(obj/item/clothing/under/uniform, mob/living/user)
 	RegisterSignal(user, COMSIG_LIVING_SLAM_TABLE, .proc/table_slam)
 	user.bubble_icon = "lawyer"
 
-/obj/item/clothing/accessory/lawyers_badge/on_uniform_dropped(obj/item/clothing/under/U, mob/living/user)
+/obj/item/clothing/accessory/lawyers_badge/on_uniform_dropped(obj/item/clothing/under/uniform, mob/living/user)
 	UnregisterSignal(user, COMSIG_LIVING_SLAM_TABLE)
 	user.bubble_icon = initial(user.bubble_icon)
 
@@ -377,31 +369,31 @@
 ////////////////
 
 /obj/item/clothing/accessory/clown_enjoyer_pin
-	name = "\improper Clown Pin"
+	name = "\improper clown pin"
 	desc = "A pin to show off your appreciation for clowns and clowning!"
 	icon_state = "clown_enjoyer_pin"
 
-/obj/item/clothing/accessory/clown_enjoyer_pin/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/clown_enjoyer_pin/on_uniform_equip(obj/item/clothing/under/uniform, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_CLOWN_ENJOYER))
 		SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "clown_enjoyer_pin", /datum/mood_event/clown_enjoyer_pin)
 
-/obj/item/clothing/accessory/clown_enjoyer_pin/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/clown_enjoyer_pin/on_uniform_dropped(obj/item/clothing/under/uniform, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_CLOWN_ENJOYER))
 		SEND_SIGNAL(L, COMSIG_CLEAR_MOOD_EVENT, "clown_enjoyer_pin")
 
 /obj/item/clothing/accessory/mime_fan_pin
-	name = "\improper Mime Pin"
+	name = "\improper mime pin"
 	desc = "A pin to show off your appreciation for mimes and miming!"
 	icon_state = "mime_fan_pin"
 
-/obj/item/clothing/accessory/mime_fan_pin/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/mime_fan_pin/on_uniform_equip(obj/item/clothing/under/uniform, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_MIME_FAN))
 		SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "mime_fan_pin", /datum/mood_event/mime_fan_pin)
 
-/obj/item/clothing/accessory/mime_fan_pin/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/mime_fan_pin/on_uniform_dropped(obj/item/clothing/under/uniform, user)
 	var/mob/living/L = user
 	if(HAS_TRAIT(L, TRAIT_MIME_FAN))
 		SEND_SIGNAL(L, COMSIG_CLEAR_MOOD_EVENT, "mime_fan_pin")
@@ -448,18 +440,18 @@
 	. = ..()
 	. += "The dogtag has a listing of allergies : [display]"
 
-/obj/item/clothing/accessory/allergy_dogtag/on_uniform_equip(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/allergy_dogtag/on_uniform_equip(obj/item/clothing/under/uniform, user)
 	. = ..()
-	RegisterSignal(U,COMSIG_PARENT_EXAMINE,.proc/on_examine)
+	RegisterSignal(uniform, COMSIG_PARENT_EXAMINE, .proc/on_examine)
 
-/obj/item/clothing/accessory/allergy_dogtag/on_uniform_dropped(obj/item/clothing/under/U, user)
+/obj/item/clothing/accessory/allergy_dogtag/on_uniform_dropped(obj/item/clothing/under/uniform, user)
 	. = ..()
-	UnregisterSignal(U,COMSIG_PARENT_EXAMINE)
+	UnregisterSignal(uniform, COMSIG_PARENT_EXAMINE)
 
 ///What happens when we examine the uniform
 /obj/item/clothing/accessory/allergy_dogtag/proc/on_examine(datum/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER
-	examine_list += "The dogtag has a listing of allergies : [display]"
+	examine_list += "The dogtag has a listing of allergies: [display]"
 
 /obj/item/clothing/accessory/pride
 	name = "pride pin"
