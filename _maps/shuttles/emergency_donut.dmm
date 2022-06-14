@@ -3,14 +3,11 @@
 /turf/template_noop,
 /area/template_noop)
 "ab" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "ac" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/shuttle/escape)
-"ad" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "ae" = (
 /obj/structure/table,
@@ -108,10 +105,6 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape)
-"av" = (
-/obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/escape)
 "aw" = (
 /obj/machinery/flasher/directional/north{
 	id = "cockpit_flasher"
@@ -176,7 +169,7 @@
 /area/shuttle/escape/brig)
 "aH" = (
 /obj/machinery/status_display/evac,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "aI" = (
 /obj/structure/table,
@@ -525,7 +518,7 @@ ab
 ab
 ab
 ab
-ad
+ab
 aK
 aC
 ab
@@ -534,17 +527,17 @@ ab
 ac
 ac
 ac
-ad
-ak
-ak
-ak
-ad
 ab
-ad
+ak
+ak
+ak
+ab
+ab
+ab
 ba
 be
 bi
-ad
+ab
 ab
 ab
 ab
@@ -587,7 +580,7 @@ bt
 "}
 (4,1,1) = {"
 ab
-ad
+ab
 ak
 ak
 an
@@ -628,11 +621,11 @@ ak
 am
 am
 aq
-av
+aH
 ac
 aD
 ac
-ad
+ab
 aI
 aC
 aQ
@@ -771,7 +764,7 @@ ai
 al
 am
 am
-ad
+ab
 ab
 ab
 ab
@@ -807,7 +800,7 @@ aj
 ak
 am
 ao
-ad
+ab
 aw
 ak
 ak
@@ -839,7 +832,7 @@ bt
 "}
 (11,1,1) = {"
 ab
-ad
+ab
 ak
 ak
 ak
@@ -879,7 +872,7 @@ ab
 ac
 ac
 ab
-ad
+ab
 ax
 ax
 aq
@@ -921,26 +914,26 @@ ab
 ab
 ab
 ab
-ad
-ak
-ak
-ak
-ak
-ad
-ac
-ac
-ac
-ad
-ak
-ak
-ak
-ad
 ab
-ad
+ak
+ak
+ak
+ak
+ab
+ac
+ac
+ac
+ab
+ak
+ak
+ak
+ab
+ab
+ab
 bd
 bh
 bl
-ad
+ab
 ab
 ab
 ab

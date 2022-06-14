@@ -804,7 +804,7 @@
 /area/shuttle/escape)
 "Db" = (
 /obj/structure/sign/poster/official/help_others,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "DD" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
@@ -1233,7 +1233,7 @@
 /turf/open/floor/grass,
 /area/shuttle/escape)
 "VU" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "Wa" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -1294,9 +1294,6 @@
 	},
 /obj/docking_port/mobile/emergency,
 /turf/open/floor/iron/white,
-/area/shuttle/escape)
-"Yu" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "YH" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -1393,22 +1390,22 @@ WE
 WE
 VU
 SS
-Yu
+VU
 Yp
-Yu
-Yu
-Yu
-Yu
-Yu
+VU
+VU
+VU
+VU
+VU
 SS
-Yu
+VU
 SS
-Yu
-Yu
-Yu
-Yu
-Yu
-Yu
+VU
+VU
+VU
+VU
+VU
+VU
 VU
 WE
 WE
@@ -1424,7 +1421,7 @@ WE
 WE
 WE
 VU
-Yu
+VU
 nA
 UO
 yt
@@ -1436,13 +1433,13 @@ ZT
 yt
 UO
 zr
-Yu
-Yu
+VU
+VU
 lH
 eB
 lN
 bS
-Yu
+VU
 VU
 WE
 WE
@@ -1456,7 +1453,7 @@ WE
 WE
 WE
 VU
-Yu
+VU
 me
 Io
 Wa
@@ -1470,8 +1467,8 @@ Wa
 Wa
 Bv
 zr
-Yu
-Yu
+VU
+VU
 rg
 iV
 jO
@@ -1488,7 +1485,7 @@ VI
 VI
 VI
 VU
-Yu
+VU
 nA
 Io
 MS
@@ -1504,8 +1501,8 @@ VI
 KT
 Bv
 zr
-Yu
-Yu
+VU
+VU
 eq
 bg
 Jw
@@ -1516,11 +1513,11 @@ gx
 (5,1,1) = {"
 WE
 VU
-Yu
+VU
 jX
 tL
 vt
-Yu
+VU
 CA
 Io
 MS
@@ -1538,7 +1535,7 @@ VI
 KT
 Bv
 BG
-Yu
+VU
 Kv
 DQ
 Jw
@@ -1548,7 +1545,7 @@ gx
 "}
 (6,1,1) = {"
 VU
-Yu
+VU
 ht
 jZ
 yc
@@ -1571,7 +1568,7 @@ VI
 VI
 HV
 Zd
-Yu
+VU
 IB
 iO
 Jw
@@ -1586,7 +1583,7 @@ hC
 lS
 lS
 vW
-Yu
+VU
 Co
 Zt
 VI
@@ -1604,7 +1601,7 @@ uc
 VI
 HV
 Kx
-Yu
+VU
 dP
 dT
 Jw
@@ -1613,12 +1610,12 @@ WE
 WE
 "}
 (8,1,1) = {"
-Yu
-Yu
+VU
+VU
 VI
 VI
-Yu
-Yu
+VU
+VU
 Db
 Co
 Zt
@@ -1637,7 +1634,7 @@ Ka
 VI
 HV
 YW
-Yu
+VU
 LY
 sm
 Jw
@@ -1652,7 +1649,7 @@ hJ
 lT
 ur
 xZ
-Yu
+VU
 CQ
 Zt
 VI
@@ -1670,7 +1667,7 @@ TT
 VI
 HV
 Zd
-Yu
+VU
 Um
 DQ
 Jw
@@ -1736,7 +1733,7 @@ Nu
 VI
 HV
 Zd
-Yu
+VU
 Um
 Hi
 Jw
@@ -1769,7 +1766,7 @@ gR
 VI
 HV
 OS
-Yu
+VU
 Um
 Wz
 Jw
@@ -1784,7 +1781,7 @@ ku
 WL
 WL
 wX
-Yu
+VU
 gg
 Zt
 VI
@@ -1802,7 +1799,7 @@ ex
 VI
 HV
 dj
-Yu
+VU
 QM
 DQ
 Jw
@@ -1812,12 +1809,12 @@ WE
 "}
 (14,1,1) = {"
 VU
-Yu
+VU
 iD
 og
 WL
 Zg
-Yu
+VU
 kT
 Zt
 VI
@@ -1835,7 +1832,7 @@ VI
 VI
 HV
 Zd
-Yu
+VU
 zD
 vx
 Jw
@@ -1846,11 +1843,11 @@ WE
 (15,1,1) = {"
 WE
 VU
-Yu
+VU
 oE
 JR
 yR
-Yu
+VU
 TH
 sN
 zr
@@ -1868,7 +1865,7 @@ VI
 nA
 sV
 aA
-Yu
+VU
 DD
 fT
 Jw
@@ -1880,11 +1877,11 @@ GV
 WE
 WE
 VU
-Yu
-Yu
-Yu
 VU
-Yu
+VU
+VU
+VU
+VU
 KT
 sN
 zr
@@ -1900,8 +1897,8 @@ VI
 nA
 sV
 MS
-Yu
-Yu
+VU
+VU
 XY
 sF
 Jw
@@ -1918,7 +1915,7 @@ WE
 WE
 WE
 VU
-Yu
+VU
 cR
 sN
 yt
@@ -1932,8 +1929,8 @@ yt
 yt
 sV
 yZ
-Yu
-Yu
+VU
+VU
 BA
 He
 Sl
@@ -1952,7 +1949,7 @@ WE
 WE
 WE
 VU
-Yu
+VU
 lV
 rI
 ZD
@@ -1964,13 +1961,13 @@ rI
 ZD
 rI
 Sr
-Yu
-Yu
+VU
+VU
 JD
 QZ
 Iz
 su
-Yu
+VU
 VU
 WE
 WE
@@ -1986,23 +1983,23 @@ WE
 WE
 WE
 VU
-Yu
+VU
 VI
 VI
 VI
 VI
-Yu
+VU
 VI
 VI
 VI
 VI
-Yu
-Yu
-Yu
-Yu
-Yu
-Yu
-Yu
+VU
+VU
+VU
+VU
+VU
+VU
+VU
 VU
 WE
 WE

@@ -2,9 +2,6 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
-"ab" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/escape)
 "ac" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
@@ -21,7 +18,7 @@
 /turf/open/floor/iron,
 /area/shuttle/escape)
 "ae" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "af" = (
 /obj/structure/table/wood,
@@ -297,7 +294,7 @@
 "aY" = (
 /obj/machinery/vending/boozeomat,
 /obj/machinery/light/directional/east,
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "aZ" = (
 /obj/structure/chair/wood{
@@ -367,7 +364,7 @@
 /area/shuttle/escape)
 "bn" = (
 /obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "bo" = (
 /obj/machinery/door/airlock/titanium{
@@ -639,35 +636,35 @@ aa
 aa
 aa
 aa
-ab
-ab
-ab
+ae
+ae
+ae
 aK
-ab
+ae
 aT
-ab
+ae
 ac
 ac
 ac
-ab
+ae
 bg
-ab
+ae
 bo
-ab
-ab
-ab
+ae
+ae
+ae
 aa
 "}
 (2,1,1) = {"
 aa
-ab
-ab
-ab
-ab
+ae
+ae
+ae
+ae
 aC
 aH
 aL
-ab
+ae
 bY
 bH
 aZ
@@ -675,23 +672,23 @@ bc
 aZ
 bH
 bZ
-ab
+ae
 bp
 bs
 bx
-ab
-ab
+ae
+ae
 "}
 (3,1,1) = {"
-ab
+ae
 ae
 al
 aq
-ab
+ae
 aC
 aI
 aM
-ab
+ae
 aE
 aW
 ba
@@ -699,10 +696,10 @@ bL
 bO
 bQ
 bR
-ab
+ae
 bp
-ab
-ab
+ae
+ae
 bC
 bE
 "}
@@ -711,11 +708,11 @@ ac
 af
 am
 ar
-ab
+ae
 aC
 aI
 aM
-ab
+ae
 aE
 aW
 bJ
@@ -723,7 +720,7 @@ bM
 bP
 bQ
 aE
-ab
+ae
 ak
 bu
 bx
@@ -735,7 +732,7 @@ ac
 ag
 an
 as
-ab
+ae
 ac
 aJ
 ac
@@ -747,10 +744,10 @@ bH
 bK
 bH
 EL
-ab
+ae
 bp
-ab
-ab
+ae
+ae
 bC
 bE
 "}
@@ -759,7 +756,7 @@ ac
 ah
 an
 at
-ab
+ae
 aD
 aE
 aE
@@ -796,9 +793,9 @@ en
 aE
 ca
 ae
-ab
-ab
-ab
+ae
+ae
+ae
 bC
 bE
 "}
@@ -807,7 +804,7 @@ ac
 ai
 ao
 ao
-ab
+ae
 bG
 aE
 aO
@@ -827,11 +824,11 @@ bC
 bE
 "}
 (9,1,1) = {"
-ab
+ae
 ae
 ap
 au
-ab
+ae
 aF
 bH
 aP
@@ -852,10 +849,10 @@ bE
 "}
 (10,1,1) = {"
 aa
-ab
-ab
-ab
-ab
+ae
+ae
+ae
+ae
 aG
 bW
 bI
@@ -871,30 +868,30 @@ ac
 br
 cb
 bU
-ab
-ab
+ae
+ae
 "}
 (11,1,1) = {"
 aa
 aa
 aa
 aa
-ab
+ae
 ac
-ab
+ae
 ac
-ab
-ab
-ab
+ae
+ae
+ae
 ac
 ac
 ac
-ab
-ab
-ab
+ae
+ae
+ae
 ac
-ab
+ae
 ac
-ab
+ae
 aa
 "}

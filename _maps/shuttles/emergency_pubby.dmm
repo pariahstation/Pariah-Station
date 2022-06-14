@@ -3,7 +3,7 @@
 /turf/template_noop,
 /area/template_noop)
 "ab" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "ac" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,

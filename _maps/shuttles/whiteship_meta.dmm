@@ -3,13 +3,10 @@
 /turf/template_noop,
 /area/template_noop)
 "ab" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/abandoned/engine)
-"ac" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/engine)
 "ad" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/cargo)
 "ae" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -26,9 +23,6 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/cargo)
-"ag" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/abandoned/crew)
 "ah" = (
 /obj/machinery/door/airlock/external/ruin,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -40,7 +34,7 @@
 	height = 17;
 	id = "whiteship";
 	launch_status = 0;
-	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0);
+	movement_force = list("KNOCKDOWN"=0,"THROW"=0);
 	name = "Salvage Ship";
 	port_direction = 8;
 	preferred_direction = 4;
@@ -49,7 +43,7 @@
 /turf/open/floor/plating,
 /area/shuttle/abandoned/crew)
 "ai" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/crew)
 "aj" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -81,9 +75,6 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
-"an" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/shuttle/abandoned/cargo)
 "ao" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 1
@@ -473,7 +464,7 @@
 /area/shuttle/abandoned/crew)
 "bu" = (
 /obj/structure/sign/departments/restroom,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/crew)
 "bv" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -507,7 +498,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/weak{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/crew)
 "by" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -550,7 +541,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/abandoned/cargo)
 "bD" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/bar)
 "bF" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -674,7 +665,7 @@
 /turf/open/floor/iron,
 /area/shuttle/abandoned/bar)
 "bQ" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/bridge)
 "bR" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -1155,9 +1146,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/shuttle/abandoned/bar)
-"cW" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/abandoned/bar)
 "cX" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/power/smes/engineering{
@@ -1267,7 +1255,7 @@
 /area/shuttle/abandoned/bar)
 "dl" = (
 /obj/structure/sign/departments/botany,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/bar)
 "dm" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1284,7 +1272,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/weak{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/bar)
 "dp" = (
 /obj/effect/turf_decal/stripes/line{
@@ -1465,7 +1453,7 @@
 /area/shuttle/abandoned/bar)
 "dS" = (
 /obj/machinery/smartfridge,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/abandoned/bar)
 "dT" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2291,10 +2279,10 @@ aa
 "}
 (2,1,1) = {"
 ab
-ac
+ab
 ay
 ay
-ac
+ab
 ab
 aa
 aa
@@ -2302,67 +2290,67 @@ aa
 aa
 aa
 ab
-ac
+ab
 ay
 ay
-ac
+ab
 ab
 "}
 (3,1,1) = {"
-ac
+ab
 ak
 az
 aM
 bg
-ac
+ab
 aa
 ab
 ch
 ab
 aa
-ac
+ab
 cX
 dp
 dH
 dW
-ac
+ab
 "}
 (4,1,1) = {"
-ac
+ab
 al
 aA
 aN
 bh
-ac
+ab
 am
-ac
+ab
 ci
-ac
+ab
 am
-ac
+ab
 cY
 el
 dI
 dX
-ac
+ab
 "}
 (5,1,1) = {"
 ab
-ac
+ab
 aB
 aO
 bi
-ac
+ab
 bH
-ac
+ab
 cj
-ac
+ab
 cH
-ac
+ab
 cZ
 dr
 dJ
-ac
+ab
 ab
 "}
 (6,1,1) = {"
@@ -2386,40 +2374,40 @@ aa
 "}
 (7,1,1) = {"
 aa
-ac
-ac
+ab
+ab
 aQ
-ac
-ac
+ab
+ab
 bJ
 bT
 cl
 cx
 cI
-ac
-ac
+ab
+ab
 dt
-ac
-ac
+ab
+ab
 aa
 "}
 (8,1,1) = {"
 ad
-an
+ad
 FM
 ni
 AK
-ac
-ac
+ab
+ab
 bU
 bU
 bU
-ac
-ac
+ab
+ab
 cy
 ni
 Gh
-an
+ad
 ad
 "}
 (9,1,1) = {"
@@ -2519,7 +2507,7 @@ ei
 "}
 (14,1,1) = {"
 ad
-an
+ad
 Dw
 ni
 Lq
@@ -2533,7 +2521,7 @@ bD
 JE
 SI
 SD
-an
+ad
 ad
 "}
 (15,1,1) = {"
@@ -2575,7 +2563,7 @@ eb
 aa
 "}
 (17,1,1) = {"
-ag
+ai
 ai
 ai
 jv
@@ -2591,7 +2579,7 @@ Fu
 fm
 bD
 bD
-cW
+bD
 "}
 (18,1,1) = {"
 ah
@@ -2727,27 +2715,27 @@ tq
 bD
 "}
 (25,1,1) = {"
-ag
+ai
 ai
 ai
 bf
 ai
-ag
+ai
 aa
 aa
 aa
 aa
 aa
-cW
+bD
 bD
 dG
 dV
 bD
-cW
+bD
 "}
 (26,1,1) = {"
 aa
-ag
+ai
 ai
 ai
 bx
@@ -2761,6 +2749,6 @@ aa
 do
 bD
 bD
-cW
+bD
 aa
 "}

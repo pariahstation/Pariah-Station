@@ -3,14 +3,11 @@
 /turf/template_noop,
 /area/template_noop)
 "ab" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "ac" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/shuttle/escape)
-"ad" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/escape)
 "ae" = (
 /obj/structure/table/wood,
@@ -153,9 +150,6 @@
 "aA" = (
 /obj/structure/grille/broken,
 /turf/open/floor/iron,
-/area/shuttle/escape)
-"aB" = (
-/turf/closed/wall/mineral/titanium/interior,
 /area/shuttle/escape)
 "aC" = (
 /obj/machinery/door/airlock/titanium{
@@ -448,7 +442,7 @@ ab
 "}
 (3,1,1) = {"
 ab
-ad
+ab
 ai
 am
 aq
@@ -503,7 +497,7 @@ ab
 ac
 az
 ac
-ad
+ab
 aL
 ac
 aG
@@ -559,7 +553,7 @@ aw
 aL
 ac
 bb
-ad
+ab
 ab
 ab
 ab
@@ -573,7 +567,7 @@ al
 aa
 ac
 ac
-aB
+ab
 bo
 aw
 aL
@@ -621,7 +615,7 @@ aa
 aa
 ac
 ac
-aB
+ab
 aH
 aw
 aL

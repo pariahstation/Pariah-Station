@@ -45,11 +45,8 @@
 	},
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/escape)
-"aj" = (
-/turf/closed/wall/mineral/titanium/overspace,
-/area/shuttle/escape)
 "ak" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "al" = (
 /obj/machinery/light/directional/west,
@@ -216,9 +213,6 @@
 	},
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape/brig)
-"aO" = (
-/turf/closed/wall/mineral/titanium/interior,
-/area/shuttle/escape)
 "aP" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/mineral/titanium,
@@ -420,30 +414,30 @@
 aa
 aa
 aa
-aj
 ak
 ak
-aj
+ak
+ak
 aa
-aj
+ak
 ak
 ak
 aM
 ak
 aQ
 ak
-aj
+ak
 aU
-aj
+ak
 ak
 aW
 ab
 aW
 ak
 ak
-aj
+ak
 aU
-aj
+ak
 ak
 ak
 ak
@@ -463,7 +457,7 @@ ak
 aB
 aH
 aI
-aO
+ak
 aE
 aS
 ak
@@ -497,7 +491,7 @@ ak
 aC
 aI
 aN
-aO
+ak
 aR
 uu
 ak
@@ -692,30 +686,30 @@ bi
 aa
 aa
 aa
-aj
 ak
 ak
-aj
+ak
+ak
 aa
-aj
+ak
 ak
 ab
 ab
 ab
 ab
 ak
-aj
+ak
 aU
-aj
+ak
 ak
 ab
 ab
 ab
 ab
 ak
-aj
+ak
 aU
-aj
+ak
 ak
 ak
 ak

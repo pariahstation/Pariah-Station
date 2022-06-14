@@ -94,10 +94,10 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/hunter)
 "ku" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/hunter)
 "lp" = (
 /obj/machinery/fugitive_capture,

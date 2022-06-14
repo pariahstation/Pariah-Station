@@ -3,10 +3,10 @@
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "b" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "c" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,

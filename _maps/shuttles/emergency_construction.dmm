@@ -24,9 +24,6 @@
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/escape)
-"e" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/shuttle/escape)
 "f" = (
 /turf/open/floor/plating,
 /area/shuttle/escape)
@@ -172,7 +169,7 @@
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "p" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "S" = (
 /obj/machinery/computer/emergency_shuttle{
@@ -184,23 +181,23 @@
 (1,1,1) = {"
 a
 c
-e
-e
+p
+p
 h
-e
-e
+p
+p
 g
-e
+p
 i
-e
-e
+p
+p
 h
-e
-e
+p
+p
 g
-e
+p
 g
-e
+p
 p
 a
 a
@@ -229,7 +226,7 @@ f
 f
 f
 f
-e
+p
 p
 a
 a
@@ -258,7 +255,7 @@ f
 f
 f
 f
-e
+p
 a
 a
 a
@@ -286,8 +283,8 @@ f
 f
 f
 f
-e
-e
+p
+p
 h
 h
 h
@@ -510,8 +507,8 @@ f
 f
 f
 f
-e
-e
+p
+p
 h
 h
 h
@@ -538,7 +535,7 @@ f
 f
 f
 f
-e
+p
 a
 a
 a
@@ -565,7 +562,7 @@ f
 f
 f
 f
-e
+p
 p
 a
 a
@@ -576,23 +573,23 @@ a
 (15,1,1) = {"
 a
 c
-e
-e
+p
+p
 h
-e
-e
-e
+p
+p
+p
 h
-e
-e
-e
+p
+p
+p
 h
-e
-e
-e
+p
+p
+p
 h
-e
-e
+p
+p
 p
 a
 a

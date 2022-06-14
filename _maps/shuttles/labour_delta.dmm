@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/labor)
 "b" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -71,9 +71,6 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/white,
-/area/shuttle/labor)
-"l" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/labor)
 "m" = (
 /obj/machinery/mineral/stacking_machine/laborstacker{
@@ -286,7 +283,7 @@ y
 b
 d
 h
-l
+a
 o
 r
 u

@@ -6,9 +6,6 @@
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/shuttle/escape)
-"ad" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/escape)
 "af" = (
 /obj/machinery/door/airlock/titanium{
 	name = "Emergency Shuttle Airlock"
@@ -17,7 +14,7 @@
 /area/shuttle/escape)
 "ag" = (
 /obj/structure/sign/warning/nosmoking,
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "ah" = (
 /obj/machinery/door/airlock/titanium{
@@ -314,7 +311,7 @@
 /area/shuttle/escape)
 "ba" = (
 /obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "bb" = (
 /obj/machinery/door/airlock/titanium{
@@ -640,7 +637,7 @@
 /turf/open/floor/iron,
 /area/shuttle/escape)
 "bT" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "bU" = (
 /turf/open/floor/mineral/plastitanium/red/brig,
@@ -822,10 +819,10 @@ aa
 au
 au
 au
-ad
+bT
 au
 au
-ad
+bT
 au
 au
 au
@@ -834,35 +831,35 @@ aa
 "}
 (2,1,1) = {"
 aa
-ad
+bT
 av
 av
 av
-ad
+bT
 av
 av
-ad
+bT
 av
 av
 av
-ad
+bT
 aa
 "}
 (3,1,1) = {"
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
 "}
 (4,1,1) = {"
 ac
@@ -873,7 +870,7 @@ aF
 aL
 aO
 aP
-ad
+bT
 TZ
 bd
 bd
@@ -889,7 +886,7 @@ aG
 ax
 aq
 aQ
-ad
+bT
 be
 cc
 be
@@ -905,7 +902,7 @@ LY
 LY
 aC
 aR
-ad
+bT
 bf
 bT
 be
@@ -923,29 +920,29 @@ bY
 aq
 aW
 cb
-ad
+bT
 by
 by
 ac
 "}
 (8,1,1) = {"
-ad
-ad
-ad
-ad
+bT
+bT
+bT
+bT
 aH
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
+bT
 "}
 (9,1,1) = {"
-ad
+bT
 ap
 bX
 aq
@@ -953,12 +950,12 @@ LY
 aq
 bX
 ap
-ad
+bT
 bh
 bh
 tZ
 bD
-ad
+bT
 "}
 (10,1,1) = {"
 ac
@@ -977,7 +974,7 @@ bE
 ac
 "}
 (11,1,1) = {"
-ad
+bT
 ar
 LY
 aE
@@ -997,19 +994,19 @@ af
 LY
 LY
 aE
-ad
+bT
 qi
 LY
 aE
-ad
+bT
 bi
 cd
 bs
 bG
-ad
+bT
 "}
 (13,1,1) = {"
-ad
+bT
 bV
 LY
 aE
@@ -1017,28 +1014,28 @@ ac
 ar
 LY
 aS
-ad
-ad
-ad
-ad
-ad
-ad
+bT
+bT
+bT
+bT
+bT
+bT
 "}
 (14,1,1) = {"
 af
 LY
 LY
 Lk
-ad
+bT
 ar
 LY
 aE
-ad
+bT
 bj
 bu
 bz
 bH
-ad
+bT
 "}
 (15,1,1) = {"
 ag
@@ -1086,26 +1083,26 @@ bl
 bl
 Vs
 bK
-ad
+bT
 "}
 (18,1,1) = {"
 ac
 ar
 LY
 aE
-ad
+bT
 sd
 LY
 aE
 ba
-ad
+bT
 ac
 aZ
 ba
-ad
+bT
 "}
 (19,1,1) = {"
-ad
+bT
 as
 LY
 aE
@@ -1113,19 +1110,19 @@ ac
 ar
 LY
 ca
-ad
+bT
 bm
 bv
 bA
 bM
-ad
+bT
 "}
 (20,1,1) = {"
 ah
 LY
 LY
 Sb
-ad
+bT
 ar
 LY
 aE
@@ -1134,10 +1131,10 @@ bn
 bw
 be
 bN
-ad
+bT
 "}
 (21,1,1) = {"
-ad
+bT
 ar
 LY
 aE
@@ -1145,7 +1142,7 @@ ac
 ar
 LY
 Lk
-ad
+bT
 bo
 be
 be
@@ -1169,7 +1166,7 @@ bP
 ac
 "}
 (23,1,1) = {"
-ad
+bT
 LY
 LY
 LY
@@ -1182,10 +1179,10 @@ bp
 be
 be
 bQ
-ad
+bT
 "}
 (24,1,1) = {"
-ad
+bT
 bW
 aA
 at
@@ -1198,21 +1195,21 @@ bq
 bp
 bp
 bR
-ad
+bT
 "}
 (25,1,1) = {"
-ad
-ad
+bT
+bT
 ac
-ad
+bT
 ac
-ad
+bT
 ac
-ad
-ad
-ad
+bT
+bT
+bT
 ac
 ac
-ad
-ad
+bT
+bT
 "}

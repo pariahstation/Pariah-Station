@@ -1299,7 +1299,7 @@
 /turf/open/floor/carpet/green,
 /area/shuttle/escape)
 "Oa" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/shuttle,
 /area/shuttle/escape)
 "OI" = (
 /obj/machinery/status_display/evac/directional/west,
@@ -1453,9 +1453,6 @@
 "TE" = (
 /obj/effect/turf_decal/siding,
 /turf/open/floor/carpet/royalblue,
-/area/shuttle/escape)
-"Uu" = (
-/turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "UA" = (
 /obj/effect/turf_decal/siding/wood{
@@ -1643,53 +1640,53 @@ Bj
 (2,1,1) = {"
 Bj
 Bj
-Uu
+Oa
 Dv
 Dv
 Dv
-Uu
+Oa
 Dv
 Dv
 Dv
 Dv
 Dv
-Uu
+Oa
 Dv
 Dv
 Dv
-Uu
+Oa
 Bj
 Bj
 "}
 (3,1,1) = {"
 Bj
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
 Bj
 "}
 (4,1,1) = {"
 Bj
-Uu
+Oa
 gE
 EF
 XR
 wv
-Uu
+Oa
 kM
 LR
 Pj
@@ -1700,17 +1697,17 @@ tk
 Pj
 MS
 kk
-Uu
+Oa
 Bj
 "}
 (5,1,1) = {"
 Bj
-Uu
+Oa
 lx
 Yp
 Yp
 it
-Uu
+Oa
 Ac
 Fv
 LR
@@ -1721,32 +1718,32 @@ LR
 aI
 Fv
 Vl
-Uu
+Oa
 Bj
 "}
 (6,1,1) = {"
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
 dh
-Uu
-Uu
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
+Oa
+Oa
 Gs
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
 "}
 (7,1,1) = {"
-Uu
+Oa
 sj
 yl
 Wp
@@ -1759,12 +1756,12 @@ Wp
 bl
 PS
 dL
-Uu
+Oa
 bG
 vL
 vI
 pg
-Uu
+Oa
 "}
 (8,1,1) = {"
 mz
@@ -1806,7 +1803,7 @@ Fi
 mc
 ni
 xI
-Uu
+Oa
 "}
 (10,1,1) = {"
 mz
@@ -1830,7 +1827,7 @@ PP
 mz
 "}
 (11,1,1) = {"
-Uu
+Oa
 Fl
 iV
 Wp
@@ -1843,12 +1840,12 @@ Nw
 Wp
 Wp
 XW
-Uu
+Oa
 Eh
 el
 Fi
 lo
-Uu
+Oa
 "}
 (12,1,1) = {"
 ga
@@ -1864,12 +1861,12 @@ Lz
 Lz
 Lz
 ab
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
 vK
-Uu
-Uu
+Oa
+Oa
 "}
 (13,1,1) = {"
 mz
@@ -1890,7 +1887,7 @@ zp
 Pg
 dy
 oc
-Uu
+Oa
 "}
 (14,1,1) = {"
 ga
@@ -1911,10 +1908,10 @@ dy
 dy
 dy
 SQ
-Uu
+Oa
 "}
 (15,1,1) = {"
-Uu
+Oa
 kc
 aS
 aS
@@ -1935,7 +1932,7 @@ Lv
 mz
 "}
 (16,1,1) = {"
-Uu
+Oa
 KN
 Xr
 Xr
@@ -1948,7 +1945,7 @@ RZ
 Yc
 nx
 Tb
-Uu
+Oa
 EL
 dy
 dy
@@ -1956,7 +1953,7 @@ Lv
 mz
 "}
 (17,1,1) = {"
-Uu
+Oa
 Pv
 fu
 jH
@@ -1969,15 +1966,15 @@ RZ
 Yc
 mr
 QY
-Uu
+Oa
 ep
 dy
 dy
 YE
-Uu
+Oa
 "}
 (18,1,1) = {"
-Uu
+Oa
 Aw
 Xr
 Xr
@@ -1990,7 +1987,7 @@ RZ
 Yc
 YN
 Tb
-Uu
+Oa
 kn
 dy
 dp
@@ -1998,7 +1995,7 @@ Lv
 mz
 "}
 (19,1,1) = {"
-Uu
+Oa
 fI
 aS
 aS
@@ -2037,7 +2034,7 @@ dy
 dy
 oz
 SQ
-Uu
+Oa
 "}
 (21,1,1) = {"
 mz
@@ -2058,7 +2055,7 @@ MX
 PW
 dy
 vi
-Uu
+Oa
 "}
 (22,1,1) = {"
 ga
@@ -2074,15 +2071,15 @@ gI
 gI
 gI
 sx
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
 vK
-Uu
-Uu
+Oa
+Oa
 "}
 (23,1,1) = {"
-Uu
+Oa
 Ch
 PM
 Wp
@@ -2095,12 +2092,12 @@ Wp
 Wp
 Wp
 pp
-Uu
+Oa
 gO
 DA
 DA
 Ny
-Uu
+Oa
 "}
 (24,1,1) = {"
 mz
@@ -2166,7 +2163,7 @@ DA
 mz
 "}
 (27,1,1) = {"
-Uu
+Oa
 Vj
 xc
 WW
@@ -2179,41 +2176,41 @@ Wp
 Wp
 xc
 dL
-Uu
+Oa
 LL
 iz
 Ev
 iz
-Uu
+Oa
 "}
 (28,1,1) = {"
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
 Ec
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
+Oa
 "}
 (29,1,1) = {"
 Bj
-Uu
+Oa
 iy
 fm
 cu
-Uu
+Oa
 rx
 Wq
 mn
@@ -2221,7 +2218,7 @@ mn
 mn
 qp
 vn
-Uu
+Oa
 wu
 wZ
 yJ
@@ -2255,7 +2252,7 @@ mz
 hg
 so
 hg
-Uu
+Oa
 Pf
 NU
 lA
@@ -2263,7 +2260,7 @@ Pu
 MT
 wI
 kO
-Uu
+Oa
 fS
 Ty
 yJ
@@ -2272,10 +2269,10 @@ Bj
 "}
 (32,1,1) = {"
 Bj
-Uu
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
+Oa
 Oa
 iA
 KG
@@ -2285,10 +2282,10 @@ Mb
 jE
 JB
 Oa
-Uu
-Uu
-Uu
-Uu
+Oa
+Oa
+Oa
+Oa
 Bj
 "}
 (33,1,1) = {"
