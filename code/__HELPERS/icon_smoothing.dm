@@ -32,29 +32,33 @@
 			}; \
 		}; \
 		else { \
-			if(!isnull(neighbor.smoothing_groups)) { \
-				for(var/target in source.canSmoothWith) { \
-					if(!(source.canSmoothWith[target] & neighbor.smoothing_groups[target])) { \
-						continue; \
-					}; \
-					junction |= direction_flag; \
-					break; \
-				}; \
-			}; \
-			if(!(junction & direction_flag) && source.smoothing_flags & SMOOTH_OBJ) { \
-				for(var/obj/thing in neighbor) { \
-					if(!thing.anchored || isnull(thing.smoothing_groups)) { \
-						continue; \
-					}; \
+			var/area/target_area = get_area(neighbor); \
+			var/area/source_area = get_area(source); \
+			if((!source_area.area_limited_icon_smoothing || istype(target_area, source_area.area_limited_icon_smoothing)) && (!target_area.area_limited_icon_smoothing || istype(source_area, target_area.area_limited_icon_smoothing))) { \
+				if(!isnull(neighbor.smoothing_groups)) { \
 					for(var/target in source.canSmoothWith) { \
-						if(!(source.canSmoothWith[target] & thing.smoothing_groups[target])) { \
+						if(!(source.canSmoothWith[target] & neighbor.smoothing_groups[target])) { \
 							continue; \
 						}; \
 						junction |= direction_flag; \
 						break; \
 					}; \
-					if(junction & direction_flag) { \
-						break; \
+				}; \
+				if(!(junction & direction_flag) && source.smoothing_flags & SMOOTH_OBJ) { \
+					for(var/obj/thing in neighbor) { \
+						if(!thing.anchored || isnull(thing.smoothing_groups)) { \
+							continue; \
+						}; \
+						for(var/target in source.canSmoothWith) { \
+							if(!(source.canSmoothWith[target] & thing.smoothing_groups[target])) { \
+								continue; \
+							}; \
+							junction |= direction_flag; \
+							break; \
+						}; \
+						if(junction & direction_flag) { \
+							break; \
+						}; \
 					}; \
 				}; \
 			}; \
