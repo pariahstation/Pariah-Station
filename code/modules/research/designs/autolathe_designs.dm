@@ -1122,15 +1122,6 @@
 	build_path = /obj/item/vending_refill/custom
 	category = list("initial", "Misc")
 
-/datum/design/ducts
-	name = "Fluid Ducts"
-	id = "fluid_ducts"
-	build_type = AUTOLATHE
-	materials = list(/datum/material/iron = 500)
-	build_path = /obj/item/stack/ducts
-	category = list("initial", "Construction")
-	maxstack = 50
-
 /datum/design/toygun
 	name = "Cap Gun"
 	id = "toygun"
@@ -1212,24 +1203,6 @@
 	build_path = /obj/item/stack/sticky_tape/surgical
 	category = list("initial", "Medical")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
-
-/datum/design/petridish
-	name = "Petri Dish"
-	id = "petri_dish"
-	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
-	materials = list(/datum/material/glass = 500)
-	build_path = /obj/item/petri_dish
-	category = list("initial","Misc","Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
-
-/datum/design/swab
-	name = "Sterile Swab"
-	id = "swab"
-	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
-	materials = list(/datum/material/plastic = 200)
-	build_path = /obj/item/swab
-	category = list("initial","Misc","Equipment")
-	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/chisel
 	name = "Chisel"

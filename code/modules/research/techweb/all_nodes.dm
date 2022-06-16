@@ -667,7 +667,6 @@
 		"minerbag_holding",
 		"ore_silo",
 		"phasic_scanning",
-		"plumbing_receiver",
 		"roastingstick",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
