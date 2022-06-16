@@ -17834,7 +17834,6 @@
 	pixel_x = -9;
 	pixel_y = 15
 	},
-/obj/item/construction/plumbing,
 /obj/item/reagent_containers/dropper{
 	pixel_x = 5;
 	pixel_y = 14

@@ -21329,8 +21329,6 @@
 	dir = 1
 	},
 /obj/structure/table/glass,
-/obj/item/construction/plumbing,
-/obj/item/construction/plumbing,
 /turf/open/floor/iron/white,
 /area/medical/chemistry)
 "byz" = (
@@ -22493,13 +22491,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
-"bCp" = (
-/obj/machinery/door/poddoor/shutters{
-	id = "plumbing_shutters";
-	name = "Plumbing Shutter"
-	},
-/turf/open/floor/iron/white,
-/area/medical/chemistry)
 "bCr" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -42298,12 +42289,6 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/button/door{
-	id = "plumbing_shutters";
-	name = "Plumbing Shutter Control";
-	pixel_x = -25;
-	req_access_txt = "33"
-	},
 /turf/open/floor/iron/white,
 /area/medical/chemistry)
 "lny" = (
@@ -86206,7 +86191,7 @@ oXU
 gKB
 tli
 peY
-bCp
+mhF
 jfg
 egX
 bsK
@@ -86463,7 +86448,7 @@ byt
 bzX
 bIi
 wLW
-bCp
+mhF
 jfg
 tbQ
 qwJ

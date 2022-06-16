@@ -2129,10 +2129,6 @@
 /turf/open/floor/iron/dark,
 /area/service/chapel)
 "gf" = (
-/obj/item/book/manual/wiki/plumbing{
-	pixel_x = 4;
-	pixel_y = -4
-	},
 /obj/item/book/manual/wiki/grenades,
 /obj/item/book/manual/wiki/chemistry{
 	pixel_x = -4;
@@ -3637,17 +3633,6 @@
 	},
 /turf/open/floor/iron/dark/textured,
 /area/ai_monitored/security/armory)
-"jT" = (
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
-/obj/item/book/manual/wiki/cytology{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/structure/table,
-/turf/open/floor/iron/grimy,
-/area/security/prison/work)
 "jV" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -16045,10 +16030,6 @@
 /obj/structure/table/reinforced,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
-/obj/item/construction/plumbing,
-/obj/item/construction/plumbing{
-	pixel_y = -5
-	},
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark/textured_half{
@@ -42056,7 +42037,7 @@ xh
 jk
 fY
 IE
-jT
+IE
 vV
 VT
 Np

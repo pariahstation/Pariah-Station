@@ -26239,9 +26239,6 @@
 	},
 /obj/structure/table,
 /obj/item/book/manual/wiki/grenades,
-/obj/item/book/manual/wiki/plumbing{
-	pixel_x = 5
-	},
 /obj/item/book/manual/wiki/chemistry{
 	pixel_x = 8
 	},

@@ -33727,10 +33727,6 @@
 	pixel_y = 4
 	},
 /obj/item/book/manual/wiki/grenades,
-/obj/item/book/manual/wiki/plumbing{
-	pixel_x = 4;
-	pixel_y = -4
-	},
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /obj/item/clothing/glasses/science,
@@ -77098,8 +77094,6 @@
 /obj/structure/table,
 /obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
-/obj/item/construction/plumbing,
-/obj/item/construction/plumbing,
 /obj/machinery/light_switch/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/showroomfloor,

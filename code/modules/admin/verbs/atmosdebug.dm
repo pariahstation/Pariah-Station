@@ -1,6 +1,6 @@
 /client/proc/atmosscan()
 	set category = "Mapping"
-	set name = "Check Plumbing"
+	set name = "Check Piping"
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.", confidential = TRUE)
 		return

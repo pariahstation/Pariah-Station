@@ -26,9 +26,6 @@
 /obj/item/screwdriver/power
 	icon = 'modular_pariah/modules/aesthetics/tools/tools.dmi'
 
-/obj/item/construction/plumbing //This icon override NEEDS to be here for the subtypes
-	icon = 'modular_pariah/modules/aesthetics/tools/tools.dmi'
-
 /obj/item/construction/rcd/arcd
 	icon = 'modular_pariah/modules/aesthetics/tools/tools.dmi'
 

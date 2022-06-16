@@ -258,7 +258,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 	anchored = TRUE
 	///Something's being washed at the moment
 	var/busy = FALSE
-	///What kind of reagent is produced by this sink by default? (We now have actual plumbing, Arcane, August 2020)
+	///What kind of reagent is produced by this sink by default?
 	var/dispensedreagent = /datum/reagent/water
 	///Material to drop when broken or deconstructed.
 	var/buildstacktype = /obj/item/stack/sheet/iron
@@ -494,7 +494,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/urinal, 32)
 	desc = "A sink used for washing one's hands and face. This one seems to be infinite!"
 	anchored = TRUE
 	var/busy = FALSE //Something's being washed at the moment
-	var/dispensedreagent = /datum/reagent/water // for whenever plumbing happens
+	var/dispensedreagent = /datum/reagent/water
 
 /obj/structure/water_source/attack_hand(mob/living/user, list/modifiers)
 	. = ..()

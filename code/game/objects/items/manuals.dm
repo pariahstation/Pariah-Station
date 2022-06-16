@@ -435,17 +435,3 @@
 		H.spill_organs()
 		H.spread_bodyparts()
 	return (BRUTELOSS)
-
-/obj/item/book/manual/wiki/plumbing
-	name = "Chemical Factories Without Narcotics"
-	icon_state ="plumbingbook"
-	starting_author = "Nanotrasen"
-	starting_title = "Chemical Factories Without Narcotics"
-	page_link = "Guide_to_plumbing"
-
-/obj/item/book/manual/wiki/cytology
-	name = "Unethically Grown Organics"
-	icon_state ="cytologybook"
-	starting_author = "Kryson"
-	starting_title = "Unethically Grown Organics"
-	page_link = "Guide_to_cytology"

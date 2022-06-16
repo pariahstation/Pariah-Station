@@ -213,7 +213,6 @@
 		"hemostat",
 		"large_beaker",
 		"pillbottle",
-		"plumbing_rcd",
 		"portable_chem_mixer",
 		"retractor",
 		"scalpel",
@@ -332,7 +331,6 @@
 		"medipen_refiller",
 		"operating",
 		"pandemic",
-		"plumbing_rcd_sci",
 		"soda_dispenser",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)

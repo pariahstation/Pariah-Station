@@ -11,8 +11,6 @@
 	var/tank_volume = 1000
 	///The ID of the reagent that the dispenser uses
 	var/reagent_id = /datum/reagent/water
-	///Can you turn this into a plumbing tank?
-	var/can_be_tanked = TRUE
 	///Is this source self-replenishing?
 	var/refilling = FALSE
 
@@ -21,11 +19,6 @@
 
 	if(icon_state == "water" && SSevents.holidays?[APRIL_FOOLS])
 		icon_state = "water_fools"
-
-/obj/structure/reagent_dispensers/examine(mob/user)
-	. = ..()
-	if(can_be_tanked)
-		. += span_notice("Use a sheet of iron to convert this into a plumbing-compatible tank.")
 
 /obj/structure/reagent_dispensers/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
@@ -36,13 +29,6 @@
 /obj/structure/reagent_dispensers/attackby(obj/item/W, mob/user, params)
 	if(W.is_refillable())
 		return FALSE //so we can refill them via their afterattack.
-	if(istype(W, /obj/item/stack/sheet/iron) && can_be_tanked)
-		var/obj/item/stack/sheet/iron/metal_stack = W
-		metal_stack.use(1)
-		qdel(src)
-		return FALSE
-	else
-		return ..()
 
 /obj/structure/reagent_dispensers/Initialize(mapload)
 	create_reagents(tank_volume, DRAINABLE | AMOUNT_VISIBLE)
@@ -152,7 +138,6 @@
 /obj/structure/reagent_dispensers/wall
 	anchored = TRUE
 	density = FALSE
-	can_be_tanked = FALSE
 
 /obj/structure/reagent_dispensers/wall/peppertank
 	name = "pepper spray refiller"

@@ -1,7 +1,7 @@
 //If you look at the "geyser_soup" overlay icon_state, you'll see that the first frame has 25 ticks.
 //That's because the first 18~ ticks are completely skipped for some ungodly weird fucking byond reason
 
-///A lavaland geyser that spawns chems and can be mining scanned for points. Made to work with the plumbing pump to extract that sweet rare nectar
+///A lavaland geyser that spawns chems and can be mining scanned for points.
 /obj/structure/geyser
 	name = "geyser"
 	icon = 'icons/obj/lavaland/terrain.dmi'
@@ -56,8 +56,6 @@
 		return
 
 	to_chat(user, span_notice("You start vigorously plunging [src]!"))
-	if(do_after(user, 50 * P.plunge_mod, target = src) && !activated)
-		start_chemming()
 
 /obj/structure/geyser/attackby(obj/item/item, mob/user, params)
 	if(!istype(item, /obj/item/mining_scanner) && !istype(item, /obj/item/t_scanner/adv_mining_scanner))
@@ -112,7 +110,7 @@
 	. = ..()
 	reagent_id = get_random_reagent_id()
 
-///A wearable tool that lets you empty plumbing machinery and some other stuff
+///A funny
 /obj/item/plunger
 	name = "plunger"
 	desc = "It's a plunger for plunging."
@@ -123,28 +121,6 @@
 	slot_flags = ITEM_SLOT_MASK
 	flags_inv = HIDESNOUT
 
-	///time*plunge_mod = total time we take to plunge an object
-	var/plunge_mod = 1
-	///whether we do heavy duty stuff like geysers
-	var/reinforced = TRUE
-	///alt sprite for the toggleable layer change mode
-	var/layer_mode_sprite = "plunger_layer"
-	///Wheter we're in layer mode
-	var/layer_mode = FALSE
-	///What layer we set it to
-	var/target_layer = DUCT_LAYER_DEFAULT
-
-	///Assoc list for possible layers
-	var/list/layers = list("Second Layer" = SECOND_DUCT_LAYER, "Default Layer" = DUCT_LAYER_DEFAULT, "Fourth Layer" = FOURTH_DUCT_LAYER)
-
-/obj/item/plunger/attack_atom(obj/O, mob/living/user, params)
-	if(layer_mode)
-		SEND_SIGNAL(O, COMSIG_MOVABLE_CHANGE_DUCT_LAYER, O, target_layer)
-		return ..()
-	else
-		if(!O.plunger_act(src, user, reinforced))
-			return ..()
-
 /obj/item/plunger/throw_impact(atom/hit_atom, datum/thrownthing/tt)
 	. = ..()
 	if(tt.target_zone != BODY_ZONE_HEAD)
@@ -154,38 +130,3 @@
 		if(!H.wear_mask)
 			H.equip_to_slot_if_possible(src, ITEM_SLOT_MASK)
 			H.visible_message(span_warning("The plunger slams into [H]'s face!"), span_warning("The plunger suctions to your face!"))
-
-/obj/item/plunger/attack_self(mob/user)
-	. = ..()
-
-	layer_mode = !layer_mode
-
-	if(!layer_mode)
-		icon_state = initial(icon_state)
-		to_chat(user, span_notice("You set the plunger to 'Plunger Mode'."))
-	else
-		icon_state = layer_mode_sprite
-		to_chat(user, span_notice("You set the plunger to 'Layer Mode'."))
-
-	playsound(src, 'sound/machines/click.ogg', 10, TRUE)
-
-/obj/item/plunger/AltClick(mob/user)
-	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE))
-		return
-
-	var/new_layer = tgui_input_list(user, "Select a layer", "Layer", layers)
-	if(isnull(new_layer))
-		return
-	target_layer = layers[new_layer]
-
-///A faster reinforced plunger
-/obj/item/plunger/reinforced
-	name = "reinforced plunger"
-	desc = "It's an M. 7 Reinforced Plunger© for heavy duty plunging."
-	icon_state = "reinforced_plunger"
-	worn_icon_state = "reinforced_plunger"
-	reinforced = TRUE
-	plunge_mod = 0.5
-	layer_mode_sprite = "reinforced_plunger_layer"
-
-	custom_premium_price = PAYCHECK_MEDIUM * 8
