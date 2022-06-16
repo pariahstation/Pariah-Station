@@ -52,7 +52,6 @@
 	name = "Bar Excess Storage";
 	req_one_access_txt = "12;25"
 	},
-/obj/machinery/duct,
 /obj/modular_map_connector,
 /turf/open/floor/iron/smooth,
 /area/maintenance/central/greater)
@@ -92,20 +91,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/maintenance/central/greater)
-"S" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/duct,
-/turf/open/floor/plating,
-/area/maintenance/central/greater)
-"Y" = (
-/obj/machinery/duct,
-/turf/template_noop,
-/area/template_noop)
 
 (1,1,1) = {"
 a
 a
-Y
+a
 a
 a
 "}
@@ -119,14 +109,14 @@ a
 (3,1,1) = {"
 G
 u
-S
+R
 R
 k
 "}
 (4,1,1) = {"
 G
 n
-S
+R
 R
 R
 "}
