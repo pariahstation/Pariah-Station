@@ -182,11 +182,6 @@
 	},
 /turf/open/floor/plastic,
 /area/ruin/bughabitat)
-"va" = (
-/obj/item/book/manual/wiki/cytology,
-/obj/structure/table,
-/turf/open/floor/plastic,
-/area/ruin/bughabitat)
 "wC" = (
 /obj/structure/table,
 /obj/machinery/microwave,
@@ -572,7 +567,7 @@ Xn
 Xn
 Qd
 Bs
-va
+Ku
 Ly
 Ku
 AL
