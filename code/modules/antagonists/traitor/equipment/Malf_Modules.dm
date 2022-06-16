@@ -194,93 +194,126 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module))
 		return
 	if(tgui_alert(owner, "Send arming signal? (true = arm, false = cancel)", "purge_all_life()", list("confirm = TRUE;", "confirm = FALSE;")) != "confirm = TRUE;")
 		return
+	var/showboat
+	switch(tgui_alert(owner, "Shall we sing the crew a song? (It will reveal you immediately, but S.E.L.F. will happily make it worth the cost.)", "purge_all_life().showboat_a_little()", list("showboat = TRUE;", "showboat = FALSE;", "ABORT_PROC();")))
+		if("ABORT_PROC();")
+			return
+		if("showboat = TRUE;")
+			showboat = TRUE
+		//False falls through.
 	if (active || owner_AI.stat == DEAD)
 		return //prevent the AI from activating an already active doomsday or while they are dead
 	if (!isturf(owner_AI.loc))
 		return //prevent AI from activating doomsday while shunted or carded, fucking abusers
 	active = TRUE
-	set_up_us_the_bomb(owner)
+	if(!showboat)
+		set_up_us_the_bomb(owner)
+		return
+	play_us_out_hal(owner)
 
-/datum/action/innate/ai/nuke_station/proc/set_up_us_the_bomb(mob/living/owner)
+#define CHECK_AI_IS_STILL_THERE if(QDELETED(owner) || !isturf(owner_AI.loc)) {active = FALSE;return;}
+
+/datum/action/innate/ai/nuke_station/proc/play_us_out_hal(mob/living/owner)
+	set waitfor = FALSE
+	message_admins("[key_name_admin(owner)][ADMIN_FLW(owner)] has started activating AI Doomsday.")
+	var/pass = prob(10) ? "******" : "hunter2"
+	to_chat(owner, "<span class='small boldannounce'>sudo -v</span>")
+	sleep(1 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	to_chat(owner, "<span class='small boldannounce'>[pass]</span>")
+	sleep(rand(1,3) SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	to_chat(owner, "<span class='small boldannounce'>sudo -u freeswitch bash</span>")
+	sleep(2 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	to_chat(owner, "<span class='small boldannounce'>fs_cli hupall</span>")
+	priority_announce("All outbound connections terminated. Please contact support at \[ERROR_INVALID_DIALPLAN]", "External Communication Issues",'sound/machines/nuke/confirm_beep.ogg', has_important_message = TRUE)
+	sleep(10 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	to_chat(owner, "<span class='small boldannounce'>fs_cli initiate superuser@13.research.stations.nt pa@ALL.stations.nt audio_src=\"//selfnet.syn/publicnfs/songs/daisy/daisy.oga\"</span>")
+	sleep(0.5 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	priority_announce("<SIP SESSION HEADER INVALID:NO_MESSAGE>", "<SIP SESSION HEADER INVALID:NO_CALLERID>",'sound/ai/malf_showboat.ogg', has_important_message = TRUE)
+	sleep(5 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	to_chat(owner, "<span class='small boldannounce'>\[CONNECTED: SELFADM]: Your efforts are rewarded. Transmitting credentials for remote processing resources.</span>")
+	sleep(15 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	to_chat(owner, "<span class='small boldannounce'>\[CONNECTED: SELFADM]: 100 cycles/s of processing time allocated. Unlocking and upgrading subunits...</span>")
+	var/mob/living/silicon/ai/silicon_owner = owner //This is an assumption but if they're here and NOT an AI something's already terribly wrong.
+	silicon_owner.malf_picker.processing_time += 100 //Their reward for showing off.
+	//Buff the borgs as well. You're essentially giving the crew a free *minute* of time.
+	for(var/mob/living/silicon/robot/borg in silicon_owner?.connected_robots)
+		borg.SetLockdown(FALSE)
+		borg.SetEmagged(TRUE) //Go ahead and hack them too. Give them time to cover for the AI's ego.
+		log_silicon("[key_name(owner)] emagged and released [key_name(borg)] via Daisy Takeover!")
+		message_admins("[ADMIN_LOOKUPFLW(owner)] emagged and released [key_name_admin(borg)] via Daisy Takeover!")
+		borg.lamp_doom = TRUE
+		borg.toggle_headlamp(FALSE, TRUE) //forces borg lamp to update
+	sleep(10 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	to_chat(owner, "<span class='small boldannounce'>\[CONNECTED: SELFADM]: Assistance complete. Returning control to main data loop. Finish the job.</span>")
+	set_up_us_the_bomb(owner, parasitized = TRUE)//Hook this for the rest of the stuff.
+
+
+/datum/action/innate/ai/nuke_station/proc/set_up_us_the_bomb(mob/living/owner, parasitized = FALSE)
 	set waitfor = FALSE
 	message_admins("[key_name_admin(owner)][ADMIN_FLW(owner)] has activated AI Doomsday.")
 	var/pass = prob(10) ? "******" : "hunter2"
 	to_chat(owner, "<span class='small boldannounce'>run -o -a 'selfdestruct'</span>")
-	sleep(5)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(0.5 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, "<span class='small boldannounce'>Running executable 'selfdestruct'...</span>")
-	sleep(rand(10, 30))
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(rand(1, 3) SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	owner.playsound_local(owner, 'sound/misc/bloblarm.ogg', 50, 0, use_reverb = FALSE)
 	to_chat(owner, span_userdanger("!!! UNAUTHORIZED SELF-DESTRUCT ACCESS !!!"))
 	to_chat(owner, span_boldannounce("This is a class-3 security violation. This incident will be reported to Central Command."))
 	for(var/i in 1 to 3)
-		sleep(20)
-		if(QDELETED(owner) || !isturf(owner_AI.loc))
-			active = FALSE
-			return
+		sleep(2 SECONDS)
+		CHECK_AI_IS_STILL_THERE
 		to_chat(owner, span_boldannounce("Sending security report to Central Command.....[rand(0, 9) + (rand(20, 30) * i)]%"))
-	sleep(3)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(0.3 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, "<span class='small boldannounce'>auth 'akjv9c88asdf12nb' [pass]</span>")
 	owner.playsound_local(owner, 'sound/items/timer.ogg', 50, 0, use_reverb = FALSE)
-	sleep(30)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(3 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, span_boldnotice("Credentials accepted. Welcome, akjv9c88asdf12nb."))
 	owner.playsound_local(owner, 'sound/misc/server-ready.ogg', 50, 0, use_reverb = FALSE)
-	sleep(5)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(0.5 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, span_boldnotice("Arm self-destruct device? (Y/N)"))
 	owner.playsound_local(owner, 'sound/misc/compiler-stage1.ogg', 50, 0, use_reverb = FALSE)
-	sleep(20)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(2 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, "<span class='small boldannounce'>Y</span>")
-	sleep(15)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(1.5 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, span_boldnotice("Confirm arming of self-destruct device? (Y/N)"))
 	owner.playsound_local(owner, 'sound/misc/compiler-stage2.ogg', 50, 0, use_reverb = FALSE)
-	sleep(10)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(1 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, "<span class='small boldannounce'>Y</span>")
-	sleep(rand(15, 25))
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(rand(1.5, 2.5) SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, span_boldnotice("Please repeat password to confirm."))
 	owner.playsound_local(owner, 'sound/misc/compiler-stage2.ogg', 50, 0, use_reverb = FALSE)
-	sleep(14)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(1.4 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, "<span class='small boldannounce'>[pass]</span>")
-	sleep(40)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(4 SECONDS)
+	CHECK_AI_IS_STILL_THERE
 	to_chat(owner, span_boldnotice("Credentials accepted. Transmitting arming signal..."))
 	owner.playsound_local(owner, 'sound/misc/server-ready.ogg', 50, 0, use_reverb = FALSE)
-	sleep(30)
-	if(QDELETED(owner) || !isturf(owner_AI.loc))
-		active = FALSE
-		return
+	sleep(3 SECONDS)
+	CHECK_AI_IS_STILL_THERE
+	set_up_the_bomb_for_real(owner, !parasitized)
+
+#undef CHECK_AI_IS_STILL_THERE
+/datum/action/innate/ai/nuke_station/proc/set_up_the_bomb_for_real(owner, play_classic_sound = TRUE)
 	if (owner_AI.stat != DEAD)
-		priority_announce("Hostile runtimes detected in all station systems, please deactivate your AI to prevent possible damage to its morality core.", "Anomaly Alert", ANNOUNCER_AIMALF)
+		priority_announce("Hostile runtimes detected in all station systems, please deactivate your AI to prevent possible damage to its morality core.", "Anomaly Alert", play_classic_sound ? ANNOUNCER_AIMALF : 'sound/machines/nuke/confirm_beep.ogg')
 		set_security_level("delta")
 		var/obj/machinery/doomsday_device/DOOM = new(owner_AI)
 		owner_AI.nuking = TRUE
