@@ -171,7 +171,6 @@
 		"mop",
 		"multitool",
 		"normtrash",
-		"petri_dish",
 		"pipe_painter",
 		"plant_analyzer",
 		"plunger",
@@ -182,7 +181,6 @@
 		"shovel",
 		"spade",
 		"spraycan",
-		"swab",
 		"tile_sprayer",
 		"tscanner",
 		"welding_helmet",
@@ -313,7 +311,6 @@
 	prereq_ids = list("base")
 	design_ids = list(
 		"beer_dispenser",
-		"biopsy_tool",
 		"blood_pack",
 		"chem_dispenser",
 		"chem_heater",
