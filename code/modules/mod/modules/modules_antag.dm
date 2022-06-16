@@ -311,11 +311,11 @@
 	balloon_alert(user, "[attacking_item] inserted")
 	eaten_baton = TRUE
 	for(var/obj/item/melee/baton/telescopic/contractor_baton/device_baton as anything in src)
-		for(var/obj/item/I as anything in attacking_item)
-			if(istype(I, /obj/item/baton_upgrade))
-				device_baton.add_upgrade(I)
+		for(var/obj/item/item_contents as anything in attacking_item)
+			if(istype(item_contents, /obj/item/baton_upgrade))
+				device_baton.add_upgrade(item_contents)
 			else
-				I.forceMove(device_baton)
+				item_contents.forceMove(device_baton)
 	qdel(attacking_item)
 
 /obj/item/mod/module/baton_holster/on_activation()
