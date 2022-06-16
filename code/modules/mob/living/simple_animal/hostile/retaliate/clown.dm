@@ -460,9 +460,6 @@
 	buckle_lying = 0
 	AddElement(/datum/element/ridable, /datum/component/riding/creature/glutton)
 
-/mob/living/simple_animal/hostile/retaliate/clown/mutant/glutton/add_cell_sample()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_GLUTTON, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
-
 /mob/living/simple_animal/hostile/retaliate/clown/mutant/glutton/Exited(atom/movable/gone, direction)
 	. = ..()
 	prank_pouch -= gone

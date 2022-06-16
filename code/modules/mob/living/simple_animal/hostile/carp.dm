@@ -97,9 +97,6 @@
 		toggle_ai(AI_OFF)
 
 
-/mob/living/simple_animal/hostile/carp/add_cell_sample()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CARP, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
-
 /**
  * Randomly assigns a color to a carp from either a common or rare color variant lists
  *
@@ -179,9 +176,6 @@
 	maxHealth += rand(30,60)
 	move_to_delay = rand(3,7)
 
-
-/mob/living/simple_animal/hostile/carp/megacarp/add_cell_sample()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MEGACARP, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
 /mob/living/simple_animal/hostile/carp/megacarp/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
 	. = ..()
