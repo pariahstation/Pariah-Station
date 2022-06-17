@@ -67,7 +67,7 @@
 /**
  * Checks if `src` can smooth with `target`, based on the [/area/var/area_limited_icon_smoothing] variable of their areas.
  *
- * If neither area has set `area_limited_icon_smoothing`, return `TRUE`.
+ * If neither area has `area_limited_icon_smoothing` set, return `TRUE`.
  * If one area has the other's type set as `area_limited_icon_smoothing`, return `TRUE`.
  * Else, return `FALSE`
  *
