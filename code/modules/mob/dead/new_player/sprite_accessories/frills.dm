@@ -20,4 +20,3 @@
 /datum/sprite_accessory/frills/sides //narrow cobra hood from probably hyper
 	name = "Sides"
 	icon_state = "sides"
-
