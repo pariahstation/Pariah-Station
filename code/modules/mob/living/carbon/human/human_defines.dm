@@ -85,3 +85,14 @@
 	var/hal_screwydoll
 	/// When an braindead player has their equipment fiddled with, we log that info here for when they come back so they know who took their ID while they were DC'd for 30 seconds
 	var/list/afk_thefts
+
+	var/datum/examine_panel/tgui = new() //create the datum
+
+/mob/living/carbon/human/Topic(href, href_list)
+	. = ..()
+
+	if(href_list["lookup_info"])
+		switch(href_list["lookup_info"])
+			if("open_examine_panel")
+				tgui.holder = src
+				tgui.ui_interact(usr) //datum has a tgui component, here we open the window

@@ -113,10 +113,8 @@
 	/// String. If set to a non-empty one, it will be the key for the policy text value to show this role on spawn.
 	var/policy_index = ""
 
-	//PARIAH ADDITION START
 	/// Job title to use for spawning. Allows a job to spawn without needing map edits.
 	var/job_spawn_title
-	//PARIAH ADDITION END
 
 	///RPG job names, for the memes
 	var/rpg_title
@@ -126,10 +124,8 @@
 
 /datum/job/New()
 	. = ..()
-	//PARIAH ADDITION START
 	if(!job_spawn_title)
 		job_spawn_title = title
-	//PARIAH ADDITION END
 	var/list/jobs_changes = get_map_changes()
 	if(!jobs_changes)
 		return
@@ -149,7 +145,6 @@
 		return list()
 
 	return job_changes[endpart]
-
 
 /// Executes after the mob has been spawned in the map. Client might not be yet in the mob, and is thus a separate variable.
 /datum/job/proc/after_spawn(mob/living/spawned, client/player_client)

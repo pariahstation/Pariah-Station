@@ -98,38 +98,10 @@ GLOBAL_LIST_INIT(loadout_glasses, generate_loadout_items(/datum/loadout_item/gla
 	item_path = /obj/item/clothing/glasses/betterunshit
 	additional_tooltip_contents = list("PRESCRIPTION - This item functions with the 'nearsighted' quirk.")
 
-/datum/loadout_item/glasses/eyewrap
-	name = "Eyepatch Wrap"
-	item_path = /obj/item/clothing/glasses/eyepatch/wrap
-
-/datum/loadout_item/glasses/whiteeyepatch
-	name = "White Eyepatch"
-	item_path = /obj/item/clothing/glasses/eyepatch/white
-
 /datum/loadout_item/glasses/sechud
 	name = "Security Hud"
 	item_path = /obj/item/clothing/glasses/hud/security
 	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY,)
-
-//Add later
-/*
-
-/datum/loadout_item/glasses/sechud_glasses
-	name = "Prescription Security Hud"
-	item_path = /obj/item/clothing/glasses/hud/security/prescription
-	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY,)
-
-/datum/loadout_item/glasses/medhud_glasses
-	name = "Prescription Medical Hud"
-	item_path = /obj/item/clothing/glasses/hud/health/prescription
-	restricted_roles = list(JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_GENETICIST, JOB_CHEMIST, JOB_VIROLOGIST, JOB_PARAMEDIC)
-
-/datum/loadout_item/glasses/diaghud_glasses
-	name = "Prescription Diagnostic Hud"
-	item_path = /obj/item/clothing/glasses/hud/diagnostic/prescription
-	restricted_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST)
-
-*/
 
 //Families Gear
 /datum/loadout_item/glasses/osi

@@ -6,7 +6,6 @@
 
 	switch(preview_pref)
 		if(PREVIEW_PREF_JOB)
-			mannequin.underwear_visibility = NONE
 			if(preview_job) //PARIAH EDIT
 				// Silicons only need a very basic preview since there is no customization for them.
 				if (istype(preview_job, /datum/job/ai))
@@ -16,7 +15,6 @@
 				mannequin.job = preview_job.title
 				mannequin.equip_outfit_and_loadout(preview_job.outfit, src, TRUE)
 		if(PREVIEW_PREF_LOADOUT)
-			mannequin.underwear_visibility = NONE
 			var/default_outfit = new /datum/outfit()
 			mannequin.equip_outfit_and_loadout(default_outfit, src, TRUE)
 	mannequin.update_body()

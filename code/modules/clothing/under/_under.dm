@@ -24,6 +24,8 @@
 	var/mutable_appearance/accessory_overlay
 	var/freshly_laundered = FALSE
 
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+
 /obj/item/clothing/under/Initialize(mapload)
 	. = ..()
 	if(random_sensor)

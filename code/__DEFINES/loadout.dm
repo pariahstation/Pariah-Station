@@ -50,13 +50,3 @@
 
 //Glasses
 #define LOADOUT_CATEGORY_GLASSES			"Glasses"
-
-// //Loadout information types, allowing a user to set more customization to them
-// //Doesn't store any extra information a user could set
-// #define LOADOUT_INFO_NONE			0
-// //Stores a "style", which user can set from a pre-defined list on the loadout datum
-// #define LOADOUT_INFO_STYLE			1
-// //Stores a single color for use by the loadout datum
-// #define LOADOUT_INFO_ONE_COLOR 		2
-// //Stores three colors! Good for polychromatic stuff
-// #define LOADOUT_INFO_THREE_COLORS	3
