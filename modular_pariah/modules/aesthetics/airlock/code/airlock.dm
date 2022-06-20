@@ -124,8 +124,6 @@
 		pre_light_power = door_light_power
 		if(has_environment_lights)
 			set_light(pre_light_range, pre_light_power, pre_light_color, TRUE)
-			if(multi_tile)
-				filler.set_light(pre_light_range, pre_light_power, pre_light_color)
 	else
 		lights_overlay = ""
 
@@ -178,9 +176,6 @@
 		return
 	vis_overlay1.icon_state = overlay_state
 	vis_overlay2.icon_state = overlay_state
-	if(multi_tile)
-		vis_overlay1.dir = src.dir
-		vis_overlay2.dir = src.dir
 
 //STATION AIRLOCKS
 /obj/machinery/door/airlock

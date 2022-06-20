@@ -149,8 +149,6 @@
 /obj/machinery/door/airlock/Initialize(mapload)
 	. = ..()
 	//PARIAH STATION EDIT - aesthetics/airlock module
-	if(multi_tile)
-		SetBounds()
 	//overlay2
 	vis_overlay1 = new()
 	vis_overlay1.icon = overlays_file
@@ -161,9 +159,6 @@
 	vis_overlay2.plane = 1
 	vis_contents += vis_overlay1
 	vis_contents += vis_overlay2
-	if(multi_tile)
-		vis_overlay1.dir = src.dir
-		vis_overlay2.dir = src.dir
 	update_overlays()
 	//PARIAH STATION EDIT END
 	wires = set_wires()
@@ -1185,17 +1180,9 @@
 	update_icon(ALL, AIRLOCK_OPENING, TRUE)
 	sleep(1)
 	set_opacity(0)
-	//PARIAH STATION EDIT ADDITION START - aesthetics/large_doors module
-	if(multi_tile)
-		filler.set_opacity(FALSE)
-	//PARIAH STATION EDIT END
 	update_freelook_sight()
 	sleep(4)
 	set_density(FALSE)
-	//PARIAH STATION EDIT ADDITION START - aesthetics/large_doors module
-	if(multi_tile)
-		filler.set_density(FALSE)
-	//PARIAH STATION EDIT END
 	flags_1 &= ~PREVENT_CLICK_UNDER_1
 	air_update_turf(TRUE, FALSE)
 	sleep(1)
@@ -1243,29 +1230,17 @@
 	if(air_tight)
 		set_density(TRUE)
 		flags_1 |= PREVENT_CLICK_UNDER_1
-		//PARIAH STATION EDIT ADDITION START - aesthetics/large_doors module
-		if(multi_tile)
-			filler.density = TRUE
-		//PARIAH STATION EDIT END
 		air_update_turf(TRUE, TRUE)
 	sleep(1)
 	if(!air_tight)
 		set_density(TRUE)
 		flags_1 |= PREVENT_CLICK_UNDER_1
-		//PARIAH STATION EDIT ADDITION START - aesthetics/large_doors module
-		if(multi_tile)
-			filler.density = TRUE
-		//PARIAH STATION EDIT END
 		air_update_turf(TRUE, TRUE)
 	sleep(4)
 	if(dangerous_close)
 		crush()
 	if(visible && !glass)
 		set_opacity(1)
-		//PARIAH STATION EDIT ADDITION START - aesthetics/large_doors module
-		if(multi_tile)
-			filler.set_opacity(TRUE)
-		//PARIAH STATION EDIT END
 	update_freelook_sight()
 	sleep(1)
 	update_icon(ALL, AIRLOCK_CLOSED, 1)

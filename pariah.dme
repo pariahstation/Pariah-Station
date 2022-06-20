@@ -1319,7 +1319,6 @@
 #include "code\game\machinery\computer\prisoner\management.dm"
 #include "code\game\machinery\doors\airlock.dm"
 #include "code\game\machinery\doors\airlock_electronics.dm"
-#include "code\game\machinery\doors\airlock_large.dm"
 #include "code\game\machinery\doors\airlock_types.dm"
 #include "code\game\machinery\doors\alarmlock.dm"
 #include "code\game\machinery\doors\brigdoors.dm"
