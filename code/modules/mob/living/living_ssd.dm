@@ -1,4 +1,4 @@
-GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('modular_pariah/modules/indicators/icons/ssd_indicator.dmi', "default0", FLY_LAYER))
+GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/indicators/ssd_indicator.dmi', "default0", FLY_LAYER))
 
 /mob/living/proc/set_ssd_indicator(state)
 	if(state == ssd_indicator)

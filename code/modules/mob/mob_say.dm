@@ -1,5 +1,5 @@
-GLOBAL_VAR_INIT(typing_indicator_overlay, mutable_appearance('modular_pariah/modules/indicators/icons/typing_indicator.dmi', "default0", FLY_LAYER))
-GLOBAL_VAR_INIT(emote_indicator_overlay, mutable_appearance('modular_pariah/modules/indicators/icons/emote_indicator.dmi', "default0", FLY_LAYER))
+GLOBAL_VAR_INIT(typing_indicator_overlay, mutable_appearance('icons/mob/indicators/typing_indicator.dmi', "default0", FLY_LAYER))
+GLOBAL_VAR_INIT(emote_indicator_overlay, mutable_appearance('icons/mob/indicators/emote_indicator.dmi', "default0", FLY_LAYER))
 //Speech verbs.
 
 ///what clients use to speak. when you type a message into the chat bar in say mode, this is the first thing that goes off serverside.
