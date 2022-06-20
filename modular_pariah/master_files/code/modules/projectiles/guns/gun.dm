@@ -95,6 +95,8 @@
 	///if i`1t has an icon for a selector switch indicating current firemode.
 	var/selector_switch_icon = FALSE
 
+	var/on_rack = FALSE
+
 /datum/action/item_action/toggle_safety
 	name = "Toggle Safety"
 	icon_icon = 'icons/hud/gunsafety.dmi'
@@ -858,6 +860,23 @@
 	if(zoomable)
 		azoom = new()
 		azoom.gun = src
+
+/obj/item/gun/proc/place_on_rack()
+	on_rack = TRUE
+	var/matrix/M = matrix()
+	M.Turn(-90)
+	transform = M
+
+/obj/item/gun/proc/remove_from_rack()
+	if(on_rack)
+		var/matrix/M = matrix()
+		transform = M
+		on_rack = FALSE
+
+/obj/item/gun/pickup(mob/user)
+	. = ..()
+	remove_from_rack()
+
 
 #undef FIRING_PIN_REMOVAL_DELAY
 #undef DUALWIELD_PENALTY_EXTRA_MULTIPLIER

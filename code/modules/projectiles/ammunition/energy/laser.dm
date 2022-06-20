@@ -71,7 +71,7 @@
 /obj/item/ammo_casing/energy/xray
 	projectile_type = /obj/projectile/beam/xray
 	e_cost = 50
-	fire_sound = 'sound/weapons/laser3.ogg'
+	fire_sound = 'sound/weapons/xray_laser.ogg'
 
 /obj/item/ammo_casing/energy/mindflayer
 	projectile_type = /obj/projectile/beam/mindflayer

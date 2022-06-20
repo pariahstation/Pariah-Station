@@ -827,6 +827,32 @@
 		if(BURN)
 			playsound(loc, 'sound/items/welder.ogg', 40, TRUE)
 
+/obj/structure/rack/shelf
+	name = "shelf"
+	desc = "A shelf, for storing things on. Convenient!"
+	icon_state = "shelf"
+
+/obj/structure/rack/gunrack
+	name = "gun rack"
+	desc = "A gun rack for storing guns."
+	icon_state = "gunrack"
+
+/obj/structure/rack/gunrack/attackby(obj/item/W, mob/living/user, params)
+	var/list/modifiers = params2list(params)
+	if (W.tool_behaviour == TOOL_WRENCH && !(flags_1&NODECONSTRUCT_1) && LAZYACCESS(modifiers, RIGHT_CLICK))
+		W.play_tool_sound(src)
+		deconstruct(TRUE)
+		return
+	if(user.combat_mode)
+		return ..()
+	if(user.transferItemToLoc(W, drop_location()))
+		if(istype(W, /obj/item/gun))
+			var/obj/item/gun/our_gun = W
+			our_gun.place_on_rack()
+			our_gun.pixel_x = rand(-10, 10)
+		return TRUE
+
+
 /*
  * Rack destruction
  */
