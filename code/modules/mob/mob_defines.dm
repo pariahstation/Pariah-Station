@@ -240,3 +240,10 @@
 	var/datum/client_interface/mock_client
 
 	var/interaction_range = 0 //how far a mob has to be to interact with something without caring about obsctruction, defaulted to 0 tiles
+
+	var/nextsoundemote = 1 //Time at which the next emote can be played
+	var/typing_indicator = FALSE
+
+	///Whether the mob is pixel shifted or not
+	var/is_shifted
+	var/shifting //If we are in the shifting setting.

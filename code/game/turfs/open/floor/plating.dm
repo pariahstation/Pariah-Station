@@ -14,6 +14,7 @@
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	turf_flags = CAN_BE_DIRTY_1 /// No breaking the plating
 
 	var/attachment_holes = TRUE
 
@@ -150,3 +151,6 @@
 
 /turf/open/floor/plating/foam/tool_act(mob/living/user, obj/item/I, tool_type)
 	return
+
+/turf/open/floor/plating/asteroid
+	turf_flags = NONE /// They shouldn't break and they shouldn't be dirty, it's literally already a dirty turf.

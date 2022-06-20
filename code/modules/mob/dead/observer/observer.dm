@@ -297,6 +297,7 @@ Works together with spawning an observer, noted above.
 
 /mob/living/ghostize(can_reenter_corpse = TRUE)
 	. = ..()
+	set_ssd_indicator(FALSE)
 	if(. && can_reenter_corpse)
 		var/mob/dead/observer/ghost = .
 		ghost.mind.current?.med_hud_set_status()

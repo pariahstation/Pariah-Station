@@ -15,6 +15,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	internal_magazine = TRUE
 	bolt_type = BOLT_TYPE_NO_BOLT
+	has_gun_safety = FALSE
 	var/drawn = FALSE
 
 /obj/item/gun/ballistic/bow/update_icon_state()

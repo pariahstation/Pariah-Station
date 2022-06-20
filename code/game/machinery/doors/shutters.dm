@@ -9,6 +9,17 @@
 	armor = list(MELEE = 20, BULLET = 20, LASER = 20, ENERGY = 75, BOMB = 25, BIO = 100, FIRE = 100, ACID = 70)
 	max_integrity = 100
 	recipe_type = /datum/crafting_recipe/shutters
+	var/door_open_sound = 'sound/machines/shutters_open.ogg'
+	var/door_close_sound = 'sound/machines/shutters_close.ogg'
+
+/obj/machinery/door/poddoor/shutters/do_animate(animation)
+	switch(animation)
+		if("opening")
+			flick("opening", src)
+			playsound(src, door_open_sound, 30, TRUE)
+		if("closing")
+			flick("closing", src)
+			playsound(src, door_close_sound, 30, TRUE)
 
 /obj/machinery/door/poddoor/shutters/preopen
 	icon_state = "open"

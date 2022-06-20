@@ -24,3 +24,4 @@
 	med_hud_set_status()
 
 	update_fov_client()
+	set_ssd_indicator(FALSE)

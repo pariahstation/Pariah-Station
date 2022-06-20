@@ -92,6 +92,7 @@
 	var/list/active_addictions
 	///List of objective-specific equipment that couldn't properly be given to the mind
 	var/list/failed_special_equipment
+	var/list/datum/objective/objectives = list()
 
 /datum/mind/New(_key)
 	key = _key
@@ -791,6 +792,11 @@
 	head.give_hud = TRUE
 	add_antag_datum(head)
 	special_role = ROLE_REV_HEAD
+
+/datum/mind/proc/make_contractor_support()
+	if(has_antag_datum(/datum/antagonist/traitor/contractor_support))
+		return
+	add_antag_datum(/datum/antagonist/traitor/contractor_support)
 
 /datum/mind/proc/AddSpell(obj/effect/proc_holder/spell/S)
 	spell_list += S

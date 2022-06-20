@@ -1,5 +1,4 @@
 /obj/item/gun/energy/e_gun
-	icon = 'modular_pariah/modules/aesthetics/guns/icons/energy.dmi'
 	lefthand_file = 'modular_pariah/modules/aesthetics/guns/icons/guns_lefthand.dmi'
 	righthand_file = 'modular_pariah/modules/aesthetics/guns/icons/guns_righthand.dmi'
 	worn_icon = 'modular_pariah/modules/aesthetics/guns/icons/guns_back.dmi'
@@ -35,12 +34,10 @@
 	worn_icon_state = "gun"
 
 /obj/item/gun/energy/ionrifle
-	icon = 'modular_pariah/modules/aesthetics/guns/icons/energy.dmi'
 	lefthand_file = 'modular_pariah/modules/aesthetics/guns/icons/guns_lefthand.dmi'
 	righthand_file = 'modular_pariah/modules/aesthetics/guns/icons/guns_righthand.dmi'
 
 /obj/item/gun/energy/laser
-	icon = 'modular_pariah/modules/aesthetics/guns/icons/energy.dmi'
 	lefthand_file = 'modular_pariah/modules/aesthetics/guns/icons/guns_lefthand.dmi'
 	righthand_file = 'modular_pariah/modules/aesthetics/guns/icons/guns_righthand.dmi'
 
@@ -118,7 +115,6 @@
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
 
 /obj/item/gun/energy/lasercannon
-	icon = 'modular_pariah/modules/aesthetics/guns/icons/energy.dmi'
 	fire_sound_volume = 100
 	ammo_x_offset = 2
 	charge_sections = 5
@@ -262,9 +258,6 @@
 	can_suppress = FALSE
 	weapon_weight = WEAPON_HEAVY
 
-/obj/item/gun/energy/kinetic_accelerator
-	icon = 'modular_pariah/modules/aesthetics/guns/icons/energy.dmi'
-
 /obj/item/gun/ballistic/rifle/boltaction
 	name = "\improper Mosin Nagant 91-30"
 	desc = "This piece of junk looks like something that could have been used 700 years ago. It feels slightly moist."
@@ -318,7 +311,7 @@
 
 /obj/item/ammo_box/magazine/multi_sprite/ostwind/arg75
 	name = "7.62mm straight magazine"
-	icon = 'modular_pariah/modules/sec_haul_lite/icons/guns/mags.dmi'
+	icon = 'icons/obj/guns/mags.dmi'
 	icon_state = "pcr"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = CALIBER_A762
