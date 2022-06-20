@@ -323,6 +323,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 /atom/movable/screen/parallax_layer/random/asteroids
 	icon_state = "asteroids"
 
+/obj/screen/parallax_layer/random/nebula
+	icon_state = "nebula1"
+
 /atom/movable/screen/parallax_layer/planet
 	icon_state = "planet"
 	blend_mode = BLEND_OVERLAY
