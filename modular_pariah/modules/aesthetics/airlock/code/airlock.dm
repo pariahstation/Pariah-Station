@@ -21,8 +21,6 @@
 	doorOpen = 'modular_pariah/modules/aesthetics/airlock/sound/open.ogg'
 	doorClose = 'modular_pariah/modules/aesthetics/airlock/sound/close.ogg'
 	doorDeni = 'modular_pariah/modules/aesthetics/airlock/sound/access_denied.ogg'
-	boltUp = 'modular_pariah/modules/aesthetics/airlock/sound/bolts_up.ogg'
-	boltDown = 'modular_pariah/modules/aesthetics/airlock/sound/bolts_down.ogg'
 	//noPower = 'sound/machines/doorclick.ogg'
 	var/forcedOpen = 'modular_pariah/modules/aesthetics/airlock/sound/open_force.ogg' //Come on guys, why aren't all the sound files like this.
 	var/forcedClosed = 'modular_pariah/modules/aesthetics/airlock/sound/close_force.ogg'
