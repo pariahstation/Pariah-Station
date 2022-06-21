@@ -361,6 +361,7 @@
 /obj/item/clothing/head/beret/engi/ce
 	name = "chief engineer's beret"
 	desc = "A fancy beret designed exactly to the Chief Engineer's tastes, minus the LEDs."
+	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#575603#00B9D4"
