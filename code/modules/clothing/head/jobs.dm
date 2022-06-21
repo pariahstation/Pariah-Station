@@ -67,9 +67,9 @@
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#0070B7#FFCE5B"
 
-/obj/item/clothing/head/caphat/beret/white
-	name = "captain's beret"
-	desc = "For the Captains known for their sense of fashion. This one is made out of white fabric. Fancy"
+/obj/item/clothing/head/caphat/beret/parade
+	name = "captain's parade beret"
+	desc = "Worn only by Captains with an even larger abundance of class."
 	greyscale_colors = "#FFFFFF#FFCE5B"
 
 //Head of Personnel
