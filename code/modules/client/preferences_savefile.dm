@@ -314,8 +314,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Quirks
 	READ_FILE(S["all_quirks"], all_quirks)
 
-	//PARIAH EDIT ADDITION
-	load_character_pariah(S)
+	READ_FILE(S["loadout_list"], loadout_list)
+
+	loadout_list = sanitize_loadout_list(update_loadout_list(loadout_list))
+
+	READ_FILE(S["alt_job_titles"], alt_job_titles)
 
 	//try to fix any outdated data if necessary
 	//preference updating will handle saving the updated data for us.
@@ -375,7 +378,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Quirks
 	WRITE_FILE(S["all_quirks"] , all_quirks)
 
-	save_character_pariah(S) //PARIAH EDIT ADDITION
+	WRITE_FILE(S["loadout_list"], loadout_list)
+
+	WRITE_FILE(S["alt_job_titles"], alt_job_titles)
 
 	return TRUE
 

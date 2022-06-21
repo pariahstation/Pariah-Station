@@ -25,6 +25,10 @@
 	/// List of parts of the suit that are spaceproofed, for giving them back the pressure protection.
 	var/list/spaceproofed = list()
 
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_SNOUTED_VARIATION
+	has_head_sprite = TRUE
+	head_only_when_active = TRUE
+
 /obj/item/mod/module/armor_booster/on_suit_activation()
 	mod.helmet.flash_protect = FLASH_PROTECTION_WELDER
 

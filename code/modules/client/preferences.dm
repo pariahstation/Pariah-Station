@@ -82,6 +82,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	/// If set to TRUE, will update character_profiles on the next ui_data tick.
 	var/tainted_character_profiles = FALSE
 
+	/// Loadout prefs. Assoc list of [typepaths] to [associated list of item info].
+	var/list/loadout_list
+
+	/// Preference of how the preview should show the character.
+	var/preview_pref = PREVIEW_PREF_JOB
+
+	///Alternative job titles stored in preferences. Assoc list, ie. alt_job_titles["Scientist"] = "Cytologist"
+	var/list/alt_job_titles = list()
+
 /datum/preferences/Destroy(force, ...)
 	QDEL_NULL(character_preview_view)
 	QDEL_LIST(middleware)
@@ -548,3 +557,18 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 			default_randomization[preference_key] = RANDOM_ENABLED
 
 	return default_randomization
+
+
+/datum/preferences/proc/load_character_pariah(savefile/S)
+	READ_FILE(S["loadout_list"], loadout_list)
+
+
+	loadout_list = sanitize_loadout_list(update_loadout_list(loadout_list))
+
+	READ_FILE(S["alt_job_titles"], alt_job_titles)
+
+
+/datum/preferences/proc/save_character_pariah(savefile/S)
+
+	WRITE_FILE(S["loadout_list"], loadout_list)
+	WRITE_FILE(S["alt_job_titles"], alt_job_titles)
