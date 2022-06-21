@@ -1,4 +1,3 @@
-//PARIAH ADDITION START
 #define AIRLOCK_LIGHT_POWER 1
 #define AIRLOCK_LIGHT_RANGE 2
 #define AIRLOCK_POWERON_LIGHT_COLOR "#3aa7c2"
@@ -6,7 +5,6 @@
 #define AIRLOCK_ACCESS_LIGHT_COLOR "#57e69c"
 #define AIRLOCK_EMERGENCY_LIGHT_COLOR "#d1d11d"
 #define AIRLOCK_DENY_LIGHT_COLOR "#c23b23"
-//PARIAH ADDITION END
 
 #define AIRLOCK_CLOSED	1
 #define AIRLOCK_CLOSING	2
@@ -540,7 +538,6 @@
 /obj/structure/door_assembly/door_assembly_hydro
 	icon = 'modular_pariah/modules/aesthetics/airlock/icons/airlocks/station/botany.dmi'
 
-//PARIAH EDIT ADDITION START - aesthetics module
 #undef AIRLOCK_LIGHT_POWER
 #undef AIRLOCK_LIGHT_RANGE
 
@@ -549,7 +546,6 @@
 #undef AIRLOCK_ACCESS_LIGHT_COLOR
 #undef AIRLOCK_EMERGENCY_LIGHT_COLOR
 #undef AIRLOCK_DENY_LIGHT_COLOR
-//PARIAH EDIT ADDITION END
 
 #undef AIRLOCK_CLOSED
 #undef AIRLOCK_CLOSING

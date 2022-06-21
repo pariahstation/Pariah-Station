@@ -97,12 +97,12 @@
 	. = ..()
 	install_component(new /obj/item/computer_hardware/printer/mini)
 
-/obj/item/modular_computer/tablet/pda/heads/quartermaster //PARIAH EDIT
+/obj/item/modular_computer/tablet/pda/heads/quartermaster
 	name = "quartermaster PDA"
 	default_disk = /obj/item/computer_hardware/hard_drive/role/quartermaster
-	greyscale_config = /datum/greyscale_config/tablet/stripe_thick/head //PARIAH EDIT
+	greyscale_config = /datum/greyscale_config/tablet/stripe_thick/head
 	greyscale_colors = "#D6B328#6506ca#927444"
-	insert_type = /obj/item/pen/fountain //PARIAH EDIT ADDITION
+	insert_type = /obj/item/pen/fountain
 	greyscale_config = /datum/greyscale_config/tablet/stripe_thick
 	greyscale_colors = "#D6B328#6506CA#927444"
 

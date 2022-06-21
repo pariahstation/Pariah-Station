@@ -27,7 +27,6 @@ const PriorityButton = (props: {
   const className = `PreferencesMenu__Jobs__departments__priority`;
 
   return (
-    // PARIAH EDIT START
     <Button
       className={classes([
         className,
@@ -41,7 +40,6 @@ const PriorityButton = (props: {
       height={PRIORITY_BUTTON_SIZE}
       width={PRIORITY_BUTTON_SIZE}
     />
-    // PARIAH EDIT END
   );
 };
 
@@ -115,12 +113,12 @@ const PriorityButtons = (props: {
   const { createSetPriority, isOverflow, priority } = props;
 
   return (
-    <Box inline // PARIAH EDIT
+    <Box inline
       style={{
         "align-items": "center",
         "height": "100%",
-        "textAlign": "end", // PARIAH EDIT
-        "padding": "0.3em", // PARIAH EDIT
+        "textAlign": "end",
+        "padding": "0.3em",
       }}
     >
       {isOverflow
@@ -174,7 +172,7 @@ const PriorityButtons = (props: {
             />
           </>
         )}
-    </Box> // PARIAH EDIT
+    </Box>
   );
 };
 
@@ -190,18 +188,14 @@ const JobRow = (props: {
   const priority = data.job_preferences[name];
 
   const createSetPriority = createCreateSetPriorityFromName(context, name);
-  // PARIAH EDIT
   const { act } = useBackend<PreferencesMenuData>(context);
-  // PARIAH EDIT END
 
   const experienceNeeded = data.job_required_experience
     && data.job_required_experience[name];
   const daysLeft = data.job_days_left ? data.job_days_left[name] : 0;
 
-  // PARIAH EDIT
   const alt_title_selected = data.job_alt_titles[name]
     ? data.job_alt_titles[name] : name;
-  // PARIAH EDIT END
 
   let rightSide: InfernoNode;
 
@@ -240,33 +234,32 @@ const JobRow = (props: {
     />);
   }
   return (
-    <Box className={className} style={{ // PARIAH EDIT
+    <Box className={className} style={{
       "margin-top": 0,
     }}>
-      <Stack align="center" /* PARIAH EDIT */>
+      <Stack align="center">
         <Tooltip
           content={job.description}
-          position="right"// PARIAH EDIT bottom-start->right
+          position="right"
         >
           <Stack.Item className="job-name" width="50%" style={{
             "padding-left": "0.3em",
-          }}> { // PARIAH EDIT
+          }}> {
               (!job.alt_titles ? name : <Dropdown
                 width="100%"
                 options={job.alt_titles}
                 displayText={alt_title_selected}
                 onSelected={(value) => act("set_job_title", { job: name, new_title: value })}
               />)
-            // PARIAH EDIT END
             }
           </Stack.Item>
         </Tooltip>
 
-        <Stack.Item width="50%" className="options" /* PARIAH EDIT */>
+        <Stack.Item width="50%" className="options">
           {rightSide}
         </Stack.Item>
       </Stack>
-    </Box> // PARIAH EDIT
+    </Box>
   );
 };
 
@@ -305,13 +298,13 @@ const Department: SFC<{ department: string}> = (props) => {
           <Box>
             {jobsForDepartment.map(([name, job]) => {
               logger.log(name);
-              return (<JobRow /* PARIAH EDIT START - Fixing alt titles */
+              return (<JobRow
                 className={classes([className, name === department.head && "head"])}
                 key={name}
                 job={job}
                 name={name}
               />);
-            })/* PARIAH EDIT END */}
+            })}
 
             {children}
           </Box>

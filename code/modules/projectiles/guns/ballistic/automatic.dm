@@ -305,7 +305,6 @@
 	can_suppress = TRUE
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = ITEM_SLOT_BACK
-	//actions_types = list() PARIAH EDIT REMOVAL
 	fire_select_modes = list(SELECT_SEMI_AUTOMATIC)
 	mag_display = TRUE
 
@@ -322,7 +321,6 @@
 	fire_delay = 2
 	can_suppress = FALSE
 	burst_size = 0
-	//actions_types = list() PARIAH EDIT REMOVAL
 	fire_select_modes = list(SELECT_SEMI_AUTOMATIC)
 	fire_sound = 'sound/weapons/laser.ogg'
 	casing_ejector = FALSE

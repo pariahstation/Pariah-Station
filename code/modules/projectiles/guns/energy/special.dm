@@ -353,4 +353,3 @@
 
 /obj/item/gun/energy/tesla_cannon/Initialize(mapload)
 	. = ..()
-	//AddComponent(/datum/component/automatic_fire, 0.1 SECONDS) PARIAH EDIT REMOVAL

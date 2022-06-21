@@ -166,10 +166,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		data["character_profiles"] = create_character_profiles()
 		tainted_character_profiles = FALSE
 
-	//PARIAH EDIT BEGIN
 	data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR)
 	data["preview_selection"] = preview_pref
-	//PARIAH EDIT END
 
 	data["character_preferences"] = compile_character_preferences(user)
 
@@ -281,7 +279,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			return TRUE
 
-		//PARIAH EDIT ADDITION
 		if("update_preview")
 			preview_pref = params["updated_preview"]
 			character_preview_view.update_body()
@@ -294,7 +291,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				var/datum/loadout_manager/tgui = new(usr)
 				tgui.ui_interact(usr)
 			return TRUE
-		//PARIAH EDIT END
 
 
 	for (var/datum/preference_middleware/preference_middleware as anything in middleware)

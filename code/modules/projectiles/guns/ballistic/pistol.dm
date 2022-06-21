@@ -7,8 +7,7 @@
 	can_suppress = TRUE
 	burst_size = 1
 	fire_delay = 0
-	//actions_types = list() Original
-	fire_select_modes = list(SELECT_SEMI_AUTOMATIC) //PARIAH EDIT
+	fire_select_modes = list(SELECT_SEMI_AUTOMATIC)
 	bolt_type = BOLT_TYPE_LOCKING
 	fire_sound = 'sound/weapons/gun/pistol/shot.ogg'
 	dry_fire_sound = 'sound/weapons/gun/pistol/dry_fire.ogg'
@@ -81,7 +80,6 @@
 	burst_size = 3
 	fire_delay = 1
 	spread = 10
-	//actions_types = list(/datum/action/item_action/toggle_firemode) //PARIAH EDIT REMOVAL
 	suppressor_x_offset = 6
 
 /obj/item/gun/ballistic/automatic/pistol/stickman

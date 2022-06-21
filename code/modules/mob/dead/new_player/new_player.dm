@@ -235,14 +235,12 @@
 		humanc = character //Let's retypecast the var to be human,
 
 	if(humanc) //These procs all expect humans
-		//PARIAH EDIT START
 		var/chosen_rank = humanc.client?.prefs.alt_job_titles[rank] || rank
 		GLOB.data_core.manifest_inject(humanc, humanc.client)
 		if(SSshuttle.arrivals)
 			SSshuttle.arrivals.QueueAnnounce(humanc, chosen_rank)
 		else
 			announce_arrival(humanc, chosen_rank)
-		//PARIAH EDIT END
 		AddEmploymentContract(humanc)
 
 		humanc.increment_scar_slot()
@@ -269,13 +267,11 @@
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_CREWMEMBER_JOINED, character, rank)
 
-	//PARIAH EDIT ADDITION
 	if(humanc)
 		for(var/datum/loadout_item/item as anything in loadout_list_to_datums(humanc?.client?.prefs?.loadout_list))
 			if (item.restricted_roles && length(item.restricted_roles) && !(job.title in item.restricted_roles))
 				continue
 			item.post_equip_item(humanc.client?.prefs, humanc)
-	//PARIAH EDIT END
 
 /mob/dead/new_player/proc/AddEmploymentContract(mob/living/carbon/human/employee)
 	//TODO:  figure out a way to exclude wizards/nukeops/demons from this.

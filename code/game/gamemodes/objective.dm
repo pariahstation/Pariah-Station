@@ -1,5 +1,5 @@
 GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
-GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
+GLOBAL_LIST_EMPTY(objectives)
 
 /datum/objective
 	var/datum/mind/owner //The primary owner of the objective. !!SOMEWHAT DEPRECATED!! Prefer using 'team' for new code.
@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 	var/list/blacklisted_target_areas
 
 /datum/objective/New(text)
-	GLOB.objectives += src //PARIAH EDIT
+	GLOB.objectives += src
 	if(text)
 		explanation_text = text
 	if(blacklisted_target_areas)
@@ -25,7 +25,7 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 
 //Apparently objectives can be qdel'd. Learn a new thing every day
 /datum/objective/Destroy()
-	GLOB.objectives -= src //PARIAH EDIT
+	GLOB.objectives -= src
 	return ..()
 
 /datum/objective/proc/get_owners() // Combine owner and team into a single list.
@@ -607,12 +607,6 @@ GLOBAL_LIST_EMPTY(possible_items)
 	var/approved_targets = list()
 	check_items:
 		for(var/datum/objective_item/possible_item in GLOB.possible_items)
-			//PARIAH EDIT REMOVAL
-			/*
-			if(possible_item.objective_type != OBJECTIVE_ITEM_TYPE_NORMAL)
-				continue
-				*/
-			//PARIAH EDIT END
 			if(!is_unique_objective(possible_item.targetitem,dupe_search_range))
 				continue
 			for(var/datum/mind/M in owners)

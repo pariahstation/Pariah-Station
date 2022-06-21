@@ -189,12 +189,12 @@
 /mob/living/proc/on_job_equipping(datum/job/equipping)
 	return
 
-/mob/living/carbon/human/on_job_equipping(datum/job/equipping, datum/preferences/used_pref) //PARIAH EDIT CHANGE
+/mob/living/carbon/human/on_job_equipping(datum/job/equipping, datum/preferences/used_pref)
 	var/datum/bank_account/bank_account = new(real_name, equipping, dna.species.payday_modifier)
 	bank_account.payday(STARTING_PAYCHECKS, TRUE)
 	account_id = bank_account.account_id
 
-	dress_up_as_job(equipping, FALSE, used_pref) //PARIAH EDIT CHANGE
+	dress_up_as_job(equipping, FALSE, used_pref)
 
 	bank_account.replaceable = FALSE
 	dress_up_as_job(equipping)
@@ -203,9 +203,9 @@
 /mob/living/proc/dress_up_as_job(datum/job/equipping, visual_only = FALSE)
 	return
 
-/mob/living/carbon/human/dress_up_as_job(datum/job/equipping, visual_only = FALSE, datum/preferences/used_pref) //PARIAH EDIT CHANGE
+/mob/living/carbon/human/dress_up_as_job(datum/job/equipping, visual_only = FALSE, datum/preferences/used_pref)
 	dna.species.pre_equip_species_outfit(equipping, src, visual_only)
-	equip_outfit_and_loadout(equipping.outfit, used_pref, visual_only, equipping) //PARIAH EDIT CHANGE
+	equip_outfit_and_loadout(equipping.outfit, used_pref, visual_only, equipping)
 
 
 /datum/job/proc/announce_head(mob/living/carbon/human/H, channels) //tells the given channel that the given mob is the new department head. See communications.dm for valid channels.
@@ -323,8 +323,8 @@
 
 	var/obj/item/modular_computer/tablet/pda/PDA = H.get_item_by_slot(pda_slot)
 	if(istype(PDA))
-		PDA.saved_identification = H.real_name //PARIAH EDIT
-		PDA.saved_job = J.title //PARIAH EDIT
+		PDA.saved_identification = H.real_name
+		PDA.saved_job = J.title
 
 		var/obj/item/computer_hardware/identifier/id = PDA.all_components[MC_IDENTIFY]
 		if(id)

@@ -149,7 +149,6 @@ h1.alert, h2.alert		{color: #000000;}
 		100%	{color: #3bb5d3;}
 }
 
-// PARIAH EDIT ADDITION
 }
 .doyourjobidiot {
   color: #c51e1e;
@@ -172,7 +171,6 @@ h1.alert, h2.alert		{color: #000000;}
     text-shadow: 0 0 4px #c51e1e;
   }
 }
-// PARIAH EDIT END
 
 .phobia			{color: #dd0000;	font-weight: bold;	animation: phobia 750ms infinite;}
 	@keyframes phobia {

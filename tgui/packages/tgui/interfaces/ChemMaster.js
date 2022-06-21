@@ -230,12 +230,12 @@ const PackagingControls = (props, context) => {
     bottleAmount,
     setBottleAmount,
   ] = useSharedState(context, 'bottleAmount', 1);
-  // PARIAH EDIT ADDITION
+
   const [
     vialAmount,
     setVialAmount,
   ] = useSharedState(context, 'vialAmount', 1);
-  // PARIAH EDIT END
+
   const [
     packAmount,
     setPackAmount,
@@ -331,7 +331,7 @@ const PackagingControls = (props, context) => {
           </Button.Checkbox>
         </LabeledList.Item>
       )}
-      {!condi && ( // PARIAH EDIT ADDITION
+      {!condi && (
         <PackagingControlsItem
           label="Hypovials"
           amount={vialAmount}
@@ -342,7 +342,7 @@ const PackagingControls = (props, context) => {
             type: 'vial',
             amount: vialAmount,
             volume: 'auto',
-          })} /> // PARIAH EDIT END
+          })} />
       )}
       {!!condi && !autoCondiStyleChosen && (
         <LabeledList.Item label="">
