@@ -4,7 +4,7 @@
 /obj/item/gun
 	name = "gun"
 	desc = "It's a gun. It's pretty terrible, though."
-	icon = 'modular_pariah/modules/fixing_missing_icons/ballistic.dmi' //PARIAH EDIT
+	icon = 'icons/obj/guns/ballistic.dmi'
 	icon_state = "detective"
 	inhand_icon_state = "gun"
 	worn_icon_state = "gun"
