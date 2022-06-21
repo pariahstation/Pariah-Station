@@ -1,9 +1,3 @@
-/// -- The loadout manager and UI --
-/// Tracking when a client has an open loadout manager, to prevent funky stuff.
-/client
-	/// A ref to loadout_manager datum.
-	var/datum/loadout_manager/open_loadout_ui = null
-
 /// Datum holder for the loadout manager UI.
 /datum/loadout_manager
 	/// The client of the person using the UI
