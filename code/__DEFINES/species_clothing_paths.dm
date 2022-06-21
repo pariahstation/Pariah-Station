@@ -13,6 +13,8 @@
 #define DIGITIGRADE_SHOES_FILE 'icons/mob/clothing/species/feet_digitigrade.dmi'
 ///The dmi containing digitigrade oversuits
 #define DIGITIGRADE_SUIT_FILE 'icons/mob/clothing/species/suit_digitigrade.dmi'
+///The dmi containing Vox GAGS sprites
+#define DIGITIGRADE_GAGS_FILE 'icons/mob/clothing/species/color_gags_digitigrade.dmi'
 
 ///The dmi containing snouted variation masks
 #define SNOUTED_MASK_FILE 'icons/mob/clothing/species/mask_snouted.dmi'

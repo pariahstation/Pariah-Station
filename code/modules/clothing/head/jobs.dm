@@ -298,19 +298,19 @@
 	greyscale_colors = "#8D008F"
 	flags_1 = NONE
 
-/obj/item/clothing/head/beret/science/fancy
+/obj/item/clothing/head/beret/science/badge
 	desc = "A science-themed beret for our hardworking scientists. This one comes with a fancy badge!"
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#8D008F#FFFFFF"
 
-/obj/item/clothing/head/beret/science/fancy/robo
+/obj/item/clothing/head/beret/science/badge/robo
 	name = "robotics beret"
 	desc = "A sleek black beret designed with high-durability nano-mesh fiber - or so the roboticists claim."
 	greyscale_colors = "#4F4F4F#730000"
 
-/obj/item/clothing/head/beret/science/fancy/rd
+/obj/item/clothing/head/beret/science/badge/rd
 	name = "research director's beret"
 	desc = "A custom-tailored beret for the Research Director. Lamarr thinks it looks great."
 	greyscale_colors = "#8D008F#D8D39C"

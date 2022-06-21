@@ -4513,7 +4513,6 @@
 #include "modular_pariah\master_files\code\modules\projectiles\guns\ballistic\automatic.dm"
 #include "modular_pariah\modules\aesthetics\airlock\code\airlock.dm"
 #include "modular_pariah\modules\aesthetics\firedoor\code\firedoor.dm"
-#include "modular_pariah\modules\GAGS\greyscale_configs.dm"
 #include "modular_pariah\modules\loadouts\loadout_items\_loadout_datum.dm"
 #include "modular_pariah\modules\loadouts\loadout_items\loadout_datum_accessory.dm"
 #include "modular_pariah\modules\loadouts\loadout_items\loadout_datum_belts.dm"

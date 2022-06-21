@@ -186,7 +186,7 @@
 					/obj/item/storage/backpack/satchel/science = 3,
 					/obj/item/storage/backpack/duffelbag/science = 3,
 					/obj/item/clothing/head/beret/science = 3,
-					/obj/item/clothing/head/beret/science/fancy = 3,
+					/obj/item/clothing/head/beret/science/badge = 3,
 					/obj/item/clothing/mask/bandana/color/striped/science = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/science = 3,
 					/obj/item/clothing/under/rank/rnd/scientist = 3,

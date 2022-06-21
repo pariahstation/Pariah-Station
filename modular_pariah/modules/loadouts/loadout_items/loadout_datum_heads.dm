@@ -285,7 +285,7 @@ GLOBAL_LIST_INIT(loadout_helmets, generate_loadout_items(/datum/loadout_item/hea
 
 /datum/loadout_item/head/beret_robo
 	name = "Robotics Beret"
-	item_path = /obj/item/clothing/head/beret/science/fancy/robo
+	item_path = /obj/item/clothing/head/beret/science/badge/robo
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR)
 
 /datum/loadout_item/head/poppy
