@@ -353,11 +353,11 @@
 
 /datum/antagonist/traitor/get_preview_icon()
 	var/mob/living/carbon/human/dummy/consistent/traitor_dummy = new
-	traitor_dummy.hair_color = "#dba86e53"
-	traitor_dummy.hairstyle = "CIA"
+	traitor_dummy.hair_color = "#4D4D4D"
+	traitor_dummy.hairstyle = "Business Hair"
 	traitor_dummy.update_hair(TRUE)
 
-	var/icon/traitor_icon = render_preview_outfit(preview_outfit,traitor_dummy)
+	var/icon/traitor_icon = render_preview_outfit(preview_outfit, traitor_dummy)
 
 	var/icon/final_icon = finish_preview_icon(traitor_icon)
 
