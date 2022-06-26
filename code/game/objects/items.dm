@@ -215,6 +215,9 @@ GLOBAL_DATUM_INIT(welding_sparks, /mutable_appearance, mutable_appearance('icons
 	/// Used in obj/item/examine to determines whether or not to detail an item's statistics even if it does not meet the force requirements
 	var/override_notes = FALSE
 
+	/// Used in obj/item/salvage to determine how capable a given object or tool is at acquiring salvage. Ranges from SALVAGE_POWER_NONE to SALVAGE_POWER_MAX. Refer to hardspess.dm under _DEFINES for more information as to its usecase.
+	var/salvage_power = SALVAGE_POWER_NONE
+
 /obj/item/Initialize(mapload)
 
 	if(attack_verb_continuous)

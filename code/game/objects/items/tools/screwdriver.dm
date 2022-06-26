@@ -42,6 +42,7 @@
 		"cyan" = "#18a2d5",
 		"yellow" = "#ffa500"
 	)
+	salvage_power = SALVAGE_POWER_AWFUL
 
 /obj/item/screwdriver/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is stabbing [src] into [user.p_their()] [pick("temple", "heart")]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -66,6 +67,7 @@
 	random_color = FALSE
 	greyscale_config_inhand_left = null
 	greyscale_config_inhand_right = null
+	salvage_power = SALVAGE_POWER_MEDIUM
 
 /obj/item/screwdriver/abductor/get_belt_overlay()
 	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "screwdriver_alien")
@@ -95,6 +97,7 @@
 	greyscale_config_belt = null
 	greyscale_config_inhand_left = null
 	greyscale_config_inhand_right = null
+	salvage_power = SALVAGE_POWER_LOW
 
 /obj/item/screwdriver/power/Initialize(mapload)
 	. = ..()
@@ -140,3 +143,4 @@
 	usesound = 'sound/items/drill_use.ogg'
 	toolspeed = 0.5
 	random_color = FALSE
+	salvage_power = SALVAGE_POWER_LOW

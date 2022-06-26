@@ -14,6 +14,7 @@
 	custom_materials = list(/datum/material/iron=50)
 	drop_sound = 'sound/items/handling/crowbar_drop.ogg'
 	pickup_sound = 'sound/items/handling/crowbar_pickup.ogg'
+	salvage_power = SALVAGE_POWER_AWFUL
 
 	attack_verb_continuous = list("attacks", "bashes", "batters", "bludgeons", "whacks")
 	attack_verb_simple = list("attack", "bash", "batter", "bludgeon", "whack")
@@ -40,6 +41,7 @@
 	icon_state = "crowbar"
 	belt_icon_state = "crowbar_alien"
 	toolspeed = 0.1
+	salvage_power = SALVAGE_POWER_MEDIUM
 
 
 /obj/item/crowbar/large
@@ -85,6 +87,7 @@
 	force = 15
 	toolspeed = 0.7
 	force_opens = TRUE
+	salvage_power = SALVAGE_POWER_LOW
 
 /obj/item/crowbar/power/Initialize(mapload)
 	. = ..()
@@ -159,3 +162,4 @@
 	usesound = 'sound/items/jaws_pry.ogg'
 	force = 10
 	toolspeed = 0.5
+	salvage_power = SALVAGE_POWER_LOW

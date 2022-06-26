@@ -42,6 +42,7 @@
 	var/burned_fuel_for = 0 //when fuel was last removed
 	var/acti_sound = 'sound/items/welderactivate.ogg'
 	var/deac_sound = 'sound/items/welderdeactivate.ogg'
+	salvage_power = SALVAGE_POWER_AWFUL
 
 /obj/item/weldingtool/Initialize(mapload)
 	. = ..()
@@ -357,6 +358,7 @@
 	light_system = NO_LIGHT_SUPPORT
 	light_range = 0
 	change_icons = FALSE
+	salvage_power = SALVAGE_POWER_MEDIUM
 
 /obj/item/weldingtool/abductor/process()
 	if(get_fuel() <= max_fuel)
@@ -384,6 +386,7 @@
 	toolspeed = 0.5
 	var/last_gen = 0
 	var/nextrefueltick = 0
+	salvage_power = SALVAGE_POWER_LOW
 
 /obj/item/weldingtool/experimental/process()
 	..()

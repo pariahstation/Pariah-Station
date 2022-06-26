@@ -38,6 +38,7 @@
 		"cyan" = "#18a2d5",
 		"yellow" = "#d58c18"
 	)
+	salvage_power = SALVAGE_POWER_LOW
 
 /obj/item/wirecutters/Initialize(mapload)
 	if(random_color)
@@ -73,6 +74,7 @@
 	icon_state = "cutters"
 	toolspeed = 0.1
 	random_color = FALSE
+	salvage_power = SALVAGE_POWER_MEDIUM
 
 /obj/item/wirecutters/cyborg
 	name = "powered wirecutters"
@@ -82,3 +84,4 @@
 	worn_icon_state = "cutters"
 	toolspeed = 0.5
 	random_color = FALSE
+	salvage_power = SALVAGE_POWER_LOW

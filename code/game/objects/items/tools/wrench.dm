@@ -21,6 +21,7 @@
 	tool_behaviour = TOOL_WRENCH
 	toolspeed = 1
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 50, ACID = 30)
+	salvage_power = SALVAGE_POWER_AWFUL
 
 /obj/item/wrench/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is beating [user.p_them()]self to death with [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -36,7 +37,7 @@
 	custom_materials = list(/datum/material/iron = 5000, /datum/material/silver = 2500, /datum/material/plasma = 1000, /datum/material/titanium = 2000, /datum/material/diamond = 2000)
 	usesound = 'sound/effects/empulse.ogg'
 	toolspeed = 0.1
-
+	salvage_power = SALVAGE_POWER_MEDIUM
 
 /obj/item/wrench/medical
 	name = "medical wrench"
@@ -79,6 +80,7 @@
 	icon = 'icons/obj/items_cyborg.dmi'
 	icon_state = "wrench_cyborg"
 	toolspeed = 0.5
+	salvage_power = SALVAGE_POWER_LOW
 
 /obj/item/wrench/combat
 	name = "combat wrench"
