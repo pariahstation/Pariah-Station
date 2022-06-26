@@ -1,7 +1,7 @@
 /datum/language/vox
 	name = "Vox-pidgin"
 	desc = "The common tongue of the various Vox ships making up the Shoal. It sounds like chaotic shrieking to everyone else."
-	key = "V"
+	key = "v"
 	flags = TONGUELESS_SPEECH
 	space_chance = 40
 	syllables = list(
