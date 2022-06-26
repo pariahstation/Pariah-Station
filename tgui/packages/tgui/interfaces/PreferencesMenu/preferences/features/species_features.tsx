@@ -135,3 +135,8 @@ export const tail_teshari: Feature<string> = {
   name: "Tail",
   component: FeatureDropdownInput,
 };
+
+export const heterochromatic: Feature<string> = {
+  name: "Heterochromatic (Right Eye) color",
+  component: FeatureColorInput,
+};
