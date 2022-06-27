@@ -92,6 +92,7 @@
 	var/list/active_addictions
 	///List of objective-specific equipment that couldn't properly be given to the mind
 	var/list/failed_special_equipment
+	var/list/datum/objective/objectives = list()
 
 /datum/mind/New(_key)
 	key = _key
@@ -258,12 +259,12 @@
 	if(!length(shown_skills))
 		to_chat(user, span_notice("You don't seem to have any particularly outstanding skills."))
 		return
-	var/msg = "[span_info("<EM>Your skills</EM>")]\n<span class='notice'><hr>" //PARIAH EDIT CHANGE
+	var/msg = "[span_info("<EM>Your skills</EM>")]\n<span class='notice'><hr>"
 	for(var/i in shown_skills)
 		var/datum/skill/the_skill = i
 		msg += "[initial(the_skill.name)] - [get_skill_level_name(the_skill)]\n"
 	msg += "</span>"
-	to_chat(user, examine_block(msg)) //PARIAH EDIT CHANGE
+	to_chat(user, examine_block(msg))
 
 /datum/mind/proc/set_death_time()
 	SIGNAL_HANDLER

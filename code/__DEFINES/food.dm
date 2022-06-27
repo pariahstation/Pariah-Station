@@ -45,7 +45,7 @@
 #define DRINK_FANTASTIC 4
 #define FOOD_AMAZING 5
 
-#define RACE_DRINK 6 // PARIAH ADDITION
+#define RACE_DRINK 6
 
 #define FOOD_IN_CONTAINER (1<<0)
 #define FOOD_FINGER_FOOD (1<<1)

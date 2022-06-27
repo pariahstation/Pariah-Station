@@ -14,6 +14,7 @@
 	can_bayonet = TRUE
 	knife_x_offset = 20
 	knife_y_offset = 12
+	has_gun_safety = FALSE
 	var/mob/holder
 	var/max_mod_capacity = 100
 	var/list/modkits = list()

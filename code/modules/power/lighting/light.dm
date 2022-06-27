@@ -24,9 +24,9 @@
 	///Luminosity when on, also used in power calculation
 	var/brightness = 8
 	///Basically the alpha of the emitted light source
-	var/bulb_power = 1
+	var/bulb_power = 0.75
 	///Default colour of the light.
-	var/bulb_colour = "#f3fffa"
+	var/bulb_colour = "#FFEEDD"
 	///LIGHT_OK, _EMPTY, _BURNED or _BROKEN
 	var/status = LIGHT_OK
 	///Should we flicker?
@@ -65,6 +65,13 @@
 	var/bulb_emergency_pow_mul = 0.75
 	///The minimum value for the light's power in emergency mode
 	var/bulb_emergency_pow_min = 0.5
+
+	var/maploaded = FALSE //So we don't have a lot of stress on startup.
+	var/turning_on = FALSE //More stress stuff.
+	var/constant_flickering = FALSE // Are we always flickering?
+	var/flicker_timer = null
+	var/roundstart_flicker = FALSE
+	var/firealarm = FALSE
 
 /obj/machinery/light/Move()
 	if(status != LIGHT_BROKEN)
@@ -108,8 +115,7 @@
 /obj/machinery/light/update_icon_state()
 	switch(status) // set icon_states
 		if(LIGHT_OK)
-			//var/area/local_area = get_area(src) //PARIAH EDIT REMOVAL
-			if(emergency_mode || firealarm) //PARIAH EDIT CHANGE
+			if(emergency_mode || firealarm)
 				icon_state = "[base_state]_emergency"
 			else
 				icon_state = "[base_state]"
@@ -126,11 +132,7 @@
 	if(!on || status != LIGHT_OK)
 		return
 
-	/* ORIGINAL:
-	var/area/local_area = get_area(src)
-	if(emergency_mode || (local_area?.fire))
-	*/
-	if(emergency_mode || firealarm) //PARIAH EDIT END
+	if(emergency_mode || firealarm)
 		. += mutable_appearance(overlay_icon, "[base_state]_emergency")
 		return
 	if(nightshift_enabled)
@@ -138,50 +140,16 @@
 		return
 	. += mutable_appearance(overlay_icon, base_state)
 
-//PARIAH EDIT ADDITION
 #define LIGHT_ON_DELAY_UPPER 3 SECONDS
 #define LIGHT_ON_DELAY_LOWER 1 SECONDS
-//PARIAH EDIT END
 
 // update the icon_state and luminosity of the light depending on its state
-/obj/machinery/light/proc/update(trigger = TRUE, instant = FALSE, play_sound = TRUE) //PARIAH EDIT CHANGE
+/obj/machinery/light/proc/update(trigger = TRUE, instant = FALSE, play_sound = TRUE)
 	switch(status)
 		if(LIGHT_BROKEN,LIGHT_BURNED,LIGHT_EMPTY)
 			on = FALSE
 	emergency_mode = FALSE
 	if(on)
-	/* ORIGINAL
-		var/brightness_set = brightness
-		var/power_set = bulb_power
-		var/color_set = bulb_colour
-		if(color)
-			color_set = color
-		var/area/local_area = get_area(src)
-		if (local_area?.fire)
-			color_set = bulb_emergency_colour
-		else if (nightshift_enabled)
-			brightness_set = nightshift_brightness
-			power_set = nightshift_light_power
-			if(!color)
-				color_set = nightshift_light_color
-		var/matching = light && brightness_set == light.light_range && power_set == light.light_power && color_set == light.light_color
-		if(!matching)
-			switchcount++
-			if(rigged)
-				if(status == LIGHT_OK && trigger)
-					explode()
-			else if( prob( min(60, (switchcount**2)*0.01) ) )
-				if(trigger)
-					burn_out()
-			else
-				use_power = ACTIVE_POWER_USE
-				set_light(
-					l_range = brightness_set,
-					l_power = power_set,
-					l_color = color_set
-					)
-		*/
-		//PARIAH EDIT
 		if(instant)
 			turn_on(trigger, play_sound)
 		else if(maploaded)
@@ -190,7 +158,6 @@
 		else if(!turning_on)
 			turning_on = TRUE
 			addtimer(CALLBACK(src, .proc/turn_on, trigger, play_sound), rand(LIGHT_ON_DELAY_LOWER, LIGHT_ON_DELAY_UPPER))
-		//PARIAH EDIT END
 	else if(has_emergency_power(LIGHT_EMERGENCY_POWER_USE) && !turned_off())
 		use_power = IDLE_POWER_USE
 		emergency_mode = TRUE
@@ -210,10 +177,8 @@
 
 	broken_sparks(start_only=TRUE)
 
-//PARIAH EDIT
 #undef LIGHT_ON_DELAY_UPPER
 #undef LIGHT_ON_DELAY_LOWER
-//PARIAH EDIT END
 
 /obj/machinery/light/update_atom_colour()
 	..()
@@ -266,10 +231,8 @@
 			. += "The [fitting] has been smashed."
 	if(cell)
 		. += "Its backup power charge meter reads [round((cell.charge / cell.maxcharge) * 100, 0.1)]%."
-	//PARIAH EDIT ADDITION
 	if(constant_flickering)
 		. += span_danger("The lighting ballast appears to be damaged, this could be fixed with a multitool.")
-	//PARIAH EDIT END
 
 
 
@@ -283,14 +246,12 @@
 		replacer.ReplaceLight(src, user)
 		return
 
-	//PARIAH EDIT ADDITION
 	if(istype(tool, /obj/item/multitool) && constant_flickering)
 		to_chat(user, span_notice("You start repairing the ballast of [src] with [tool]."))
 		if(do_after(user, 2 SECONDS, src))
 			stop_flickering()
 			to_chat(user, span_notice("You repair the ballast of [src]!"))
 		return
-	//PARIAH EDIT END
 
 	// attempt to insert light
 	if(istype(tool, /obj/item/light))
@@ -403,16 +364,14 @@
 // if a light is turned off, it won't activate emergency power
 /obj/machinery/light/proc/turned_off()
 	var/area/local_area = get_area(src)
-	return !local_area.lightswitch && local_area.power_light || flickering || constant_flickering //PARIAH EDIT CHANGE
+	return !local_area.lightswitch && local_area.power_light || flickering || constant_flickering
 
 // returns whether this light has power
 // true if area has power and lightswitch is on
 /obj/machinery/light/proc/has_power()
 	var/area/local_area = get_area(src)
-	//PARIAH EDIT ADDITION
 	if(isnull(local_area))
 		return FALSE
-	//PARIAH EDIT END
 	return local_area.lightswitch && local_area.power_light
 
 // returns whether this light has emergency power
@@ -450,10 +409,10 @@
 			if(status != LIGHT_OK)
 				break
 			on = !on
-			update(FALSE, TRUE) //PARIAH EDIT CHANGE
+			update(FALSE, TRUE)
 			sleep(rand(5, 15))
 		on = (status == LIGHT_OK)
-		update(FALSE, TRUE) //PARIAH EDIT CHANGE
+		update(FALSE, TRUE)
 		. = TRUE //did we actually flicker?
 	flickering = FALSE
 
@@ -628,6 +587,91 @@
 	tube?.burn()
 	return
 
+
+/obj/machinery/light/proc/turn_on(trigger, play_sound = TRUE)
+	if(QDELETED(src))
+		return
+	turning_on = FALSE
+	if(!on)
+		return
+	var/BR = brightness
+	var/PO = bulb_power
+	var/CO = bulb_colour
+	if(color)
+		CO = color
+	if (firealarm)
+		CO = bulb_emergency_colour
+	else if (nightshift_enabled)
+		BR = nightshift_brightness
+		PO = nightshift_light_power
+		if(!color)
+			CO = nightshift_light_color
+	var/matching = light && BR == light.light_range && PO == light.light_power && CO == light.light_color
+	if(!matching)
+		switchcount++
+		if(rigged)
+			if(status == LIGHT_OK && trigger)
+				explode()
+		else if( prob( min(60, (switchcount**2)*0.01) ) )
+			if(trigger)
+				burn_out()
+		else
+			use_power = ACTIVE_POWER_USE
+			set_light(BR, PO, CO)
+			if(play_sound)
+				playsound(src.loc, 'sound/effects/light_on.ogg', 65, 1)
+
+/obj/machinery/light/proc/start_flickering()
+	on = FALSE
+	update(FALSE, TRUE, FALSE)
+
+	constant_flickering = TRUE
+
+	flicker_timer = addtimer(CALLBACK(src, .proc/flicker_on), rand(5, 10))
+
+/obj/machinery/light/proc/stop_flickering()
+	constant_flickering = FALSE
+
+	if(flicker_timer)
+		deltimer(flicker_timer)
+		flicker_timer = null
+
+	set_on(has_power())
+
+/obj/machinery/light/proc/alter_flicker(enable = TRUE)
+	if(!constant_flickering)
+		return
+	if(has_power())
+		on = enable
+		update(FALSE, TRUE, FALSE)
+
+/obj/machinery/light/proc/flicker_on()
+	alter_flicker(TRUE)
+	flicker_timer = addtimer(CALLBACK(src, .proc/flicker_off), rand(5, 10))
+
+/obj/machinery/light/proc/flicker_off()
+	alter_flicker(FALSE)
+	flicker_timer = addtimer(CALLBACK(src, .proc/flicker_on), rand(5, 50))
+
+/obj/machinery/light/proc/firealarm_on()
+	SIGNAL_HANDLER
+
+	firealarm = TRUE
+	update()
+
+/obj/machinery/light/proc/firealarm_off()
+	SIGNAL_HANDLER
+
+	firealarm = FALSE
+	update()
+
+/obj/machinery/light/Initialize(mapload = TRUE)
+	. = ..()
+	if(on)
+		maploaded = TRUE
+
+	if(roundstart_flicker)
+		start_flickering()
 
 
 

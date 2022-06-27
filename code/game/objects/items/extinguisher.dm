@@ -29,6 +29,17 @@
 	var/cooling_power = 2 //Sets the cooling_temperature of the water reagent datum inside of the extinguisher when it is refilled
 	/// Icon state when inside a tank holder
 	var/tank_holder_icon_state = "holder_extinguisher"
+	var/random_overlay = 0
+
+/obj/item/extinguisher/Initialize()
+	. = ..()
+	random_overlay = rand(1, 6)
+	update_icon()
+
+/obj/item/extinguisher/update_overlays()
+	. = ..()
+	if(!istype(src, /obj/item/extinguisher/mini) && !istype(src, /obj/item/extinguisher/advanced))
+		. += "ex_overlay_[random_overlay]"
 
 /obj/item/extinguisher/mini
 	name = "pocket fire extinguisher"

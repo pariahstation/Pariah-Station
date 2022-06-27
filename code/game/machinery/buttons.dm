@@ -14,6 +14,7 @@
 	armor = list(MELEE = 50, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 10, BIO = 100, FIRE = 90, ACID = 70)
 	idle_power_usage = BASE_MACHINE_IDLE_CONSUMPTION * 0.02
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	var/light_mask = "button-light-mask"
 
 /obj/machinery/button/indestructible
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -203,6 +204,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/button/door, 24)
 			C.sync_doors = sync_doors
 			device = C
 	..()
+
+/obj/machinery/button/door/update_overlays()
+	. = ..()
+	if(!light_mask)
+		return
+
+	SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+	if(!(machine_stat & (NOPOWER|BROKEN)) && !panel_open)
+		SSvis_overlays.add_vis_overlay(src, icon, light_mask, 0, EMISSIVE_PLANE)
 
 /obj/machinery/button/door/incinerator_vent_ordmix
 	name = "combustion chamber vent control"

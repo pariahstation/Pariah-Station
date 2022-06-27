@@ -63,6 +63,7 @@
 	var/can_message_change = FALSE
 	/// How long is the cooldown on the audio of the emote, if it has one?
 	var/audio_cooldown = 2 SECONDS
+	cooldown = 5 SECONDS
 
 /datum/emote/New()
 	switch(mob_type_allowed_typecache)
@@ -102,11 +103,8 @@
 		return
 
 	user.log_message(msg, LOG_EMOTE)
-	//var/dchatmsg = "<b>[user]</b> [msg]" //ORIGINAL
-	//PARIAH EDIT
 	var/space = should_have_space_before_emote(html_decode(msg)[1]) ? " " : ""
 	var/dchatmsg = "<b>[user]</b>[space][msg]"
-	//PARIAH EDIT END
 	var/tmp_sound = get_sound(user)
 	if(tmp_sound && should_play_sound(user, intentional) && !TIMER_COOLDOWN_CHECK(user, type))
 		TIMER_COOLDOWN_START(user, type, audio_cooldown)
@@ -121,13 +119,9 @@
 				ghost.show_message("<span class='emote'>[FOLLOW_LINK(ghost, user)] [dchatmsg]</span>")
 
 	if(emote_type == EMOTE_AUDIBLE)
-	//PARIAH EDIT
-		// Original: user.audible_message(msg, deaf_message = "<span class='emote'>You see how <b>[user]</b> [msg]</span>", audible_message_flags = EMOTE_MESSAGE)
 		user.audible_message(msg, deaf_message = "<span class='emote'>You see how <b>[user]</b>[space][msg]</span>", audible_message_flags = EMOTE_MESSAGE, separation = space)
 	else
-		// Original: user.visible_message(msg, blind_message = "<span class='emote'>You hear how <b>[user]</b> [msg]</span>", visible_message_flags = EMOTE_MESSAGE)
 		user.visible_message(msg, blind_message = "<span class='emote'>You hear how <b>[user]</b>[space][msg]</span>", visible_message_flags = EMOTE_MESSAGE, separation = space)
-	//PARIAH EDIT END
 	SEND_SIGNAL(user, COMSIG_MOB_EMOTED(key))
 
 /**
@@ -140,16 +134,6 @@
  * Returns FALSE if the cooldown is not over, TRUE if the cooldown is over.
  */
 /datum/emote/proc/check_cooldown(mob/user, intentional)
-	if(!intentional)
-		return TRUE
-	if(user.emotes_used && user.emotes_used[src] + cooldown > world.time)
-		var/datum/emote/default_emote = /datum/emote
-		if(cooldown > initial(default_emote.cooldown)) // only worry about longer-than-normal emotes
-			to_chat(user, span_danger("You must wait another [DisplayTimeText(user.emotes_used[src] - world.time + cooldown)] before using that emote."))
-		return FALSE
-	if(!user.emotes_used)
-		user.emotes_used = list()
-	user.emotes_used[src] = world.time
 	return TRUE
 
 /**

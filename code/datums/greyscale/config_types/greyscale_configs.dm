@@ -77,6 +77,10 @@
 	icon_file = 'icons/mob/clothing/under/color.dmi'
 	json_config = 'code/datums/greyscale/json_configs/jumpsuit_worn.json'
 
+/datum/greyscale_config/jumpsuit_worn/digitigrade
+	name = "Worn Jumpsuit - Digitigrade"
+	icon_file = DIGITIGRADE_GAGS_FILE
+
 /datum/greyscale_config/jumpsuit_worn/vox
 	name = "Worn Jumpsuit - Vox"
 	icon_file = VOX_GAGS_FILE
@@ -100,6 +104,10 @@
 	name = "Worn Prison Jumpsuit"
 	icon_file = 'icons/mob/clothing/under/color.dmi'
 	json_config = 'code/datums/greyscale/json_configs/jumpsuit_prison_worn.json'
+
+/datum/greyscale_config/jumpsuit_prison_worn/digitigrade
+	name = "Worn Prison Jumpsuit - Digitigrade"
+	icon_file = DIGITIGRADE_GAGS_FILE
 
 /datum/greyscale_config/jumpsuit_prison_inhand_left
 	name = "Held Prison Jumpsuit, Left"
@@ -158,6 +166,10 @@
 	icon_file = 'icons/mob/clothing/feet.dmi'
 	json_config = 'code/datums/greyscale/json_configs/sneakers_worn.json'
 
+/datum/greyscale_config/sneakers_worn/digitigrade
+	name = "Worn Sneakers - Digitigrade"
+	icon_file = DIGITIGRADE_GAGS_FILE
+
 /datum/greyscale_config/sneakers_orange
 	name = "Orange Sneakers"
 	icon_file = 'icons/obj/clothing/shoes.dmi'
@@ -168,6 +180,10 @@
 	icon_file = 'icons/mob/clothing/feet.dmi'
 	json_config = 'code/datums/greyscale/json_configs/sneakers_orange_worn.json'
 
+/datum/greyscale_config/sneakers_orange_worn/digitigrade
+	name = "Worn Orange Sneakers - Digitigrade"
+	icon_file = DIGITIGRADE_GAGS_FILE
+
 /datum/greyscale_config/sneakers_wheelys
 	name = "Wheeled Sneakers"
 	icon_file = 'icons/obj/clothing/shoes.dmi'
@@ -177,6 +193,16 @@
 	name = "Marisa Sneakers"
 	icon_file = 'icons/obj/clothing/shoes.dmi'
 	json_config = 'code/datums/greyscale/json_configs/sneakers_marisa.json'
+
+/datum/greyscale_config/wraps
+	name = "Cloth Wraps"
+	icon_file = 'icons/obj/clothing/shoes.dmi'
+	json_config = 'code/datums/greyscale/json_configs/wraps.json'
+
+/datum/greyscale_config/wraps/worn
+	name = "Cloth Wraps (Worn)"
+	icon_file = 'icons/mob/clothing/feet.dmi'
+	json_config = 'code/datums/greyscale/json_configs/wraps_worn.json'
 
 /datum/greyscale_config/circuit
 	name = "Circuit Board"

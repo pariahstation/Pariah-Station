@@ -22,7 +22,7 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	icon_state = "jumpskirt"
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
-	greyscale_config_worn_digitigrade = null //PARIAH EDIT ADDITION
+	greyscale_config_worn_digitigrade = null
 
 /// Returns a random, acceptable jumpsuit typepath
 /proc/get_random_jumpsuit()

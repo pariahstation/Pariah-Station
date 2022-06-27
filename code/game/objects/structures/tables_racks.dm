@@ -35,6 +35,8 @@
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_TABLES)
 	canSmoothWith = list(SMOOTH_GROUP_TABLES)
+	var/flipped_table_type = /obj/structure/flippedtable
+	var/can_flip = TRUE
 
 /obj/structure/table/Initialize(mapload, _buildstack)
 	. = ..()
@@ -324,6 +326,28 @@
 	log_combat(src, target, "shoved", "onto [src] (table)")
 	return COMSIG_CARBON_SHOVE_HANDLED
 
+/obj/structure/table/CtrlShiftClick(mob/living/user)
+	. = ..()
+	if(!istype(user) || !user.can_interact_with(src) || isobserver(user))
+		return
+	if(can_flip)
+		user.visible_message(span_danger("[user] starts flipping [src]!"), span_notice("You start flipping over the [src]!"))
+		if(do_after(user, max_integrity/4))
+			var/obj/structure/flippedtable/T = new flipped_table_type(src.loc)
+			T.name = "flipped [src.name]"
+			T.desc = "[src.desc] It is flipped!"
+			T.icon_state = src.base_icon_state
+			var/new_dir = get_dir(user, T)
+			T.dir = new_dir
+			if(new_dir == NORTH)
+				T.layer = BELOW_MOB_LAYER
+			T.max_integrity = src.max_integrity
+			T.update_integrity(src.get_integrity())
+			T.table_type = src.type
+			user.visible_message(span_danger("[user] flips over the [src]!"), span_notice("You flip over the [src]!"))
+			playsound(src, 'sound/items/trayhit2.ogg', 100)
+			qdel(src)
+
 /obj/structure/table/greyscale
 	icon = 'icons/obj/smooth_structures/table_greyscale.dmi'
 	icon_state = "table_greyscale-0"
@@ -342,6 +366,7 @@
 	icon = 'icons/obj/smooth_structures/rollingtable.dmi'
 	icon_state = "rollingtable"
 	var/list/attached_items = list()
+	can_flip = FALSE
 
 /obj/structure/table/rolling/AfterPutItemOnTable(obj/item/I, mob/living/user)
 	. = ..()
@@ -586,6 +611,7 @@
 	max_integrity = 200
 	integrity_failure = 0.25
 	armor = list(MELEE = 10, BULLET = 30, LASER = 30, ENERGY = 100, BOMB = 20, BIO = 0, FIRE = 80, ACID = 70)
+	can_flip = FALSE
 
 /obj/structure/table/reinforced/deconstruction_hints(mob/user)
 	if(deconstruction_ready)
@@ -682,6 +708,7 @@
 	buckle_lying = NO_BUCKLE_LYING
 	buckle_requires_restraints = TRUE
 	custom_materials = list(/datum/material/silver = 2000)
+	can_flip = FALSE
 	var/mob/living/carbon/human/patient = null
 	var/obj/machinery/computer/operating/computer = null
 
@@ -799,6 +826,32 @@
 				playsound(loc, 'sound/weapons/tap.ogg', 50, TRUE)
 		if(BURN)
 			playsound(loc, 'sound/items/welder.ogg', 40, TRUE)
+
+/obj/structure/rack/shelf
+	name = "shelf"
+	desc = "A shelf, for storing things on. Convenient!"
+	icon_state = "shelf"
+
+/obj/structure/rack/gunrack
+	name = "gun rack"
+	desc = "A gun rack for storing guns."
+	icon_state = "gunrack"
+
+/obj/structure/rack/gunrack/attackby(obj/item/W, mob/living/user, params)
+	var/list/modifiers = params2list(params)
+	if (W.tool_behaviour == TOOL_WRENCH && !(flags_1&NODECONSTRUCT_1) && LAZYACCESS(modifiers, RIGHT_CLICK))
+		W.play_tool_sound(src)
+		deconstruct(TRUE)
+		return
+	if(user.combat_mode)
+		return ..()
+	if(user.transferItemToLoc(W, drop_location()))
+		if(istype(W, /obj/item/gun))
+			var/obj/item/gun/our_gun = W
+			our_gun.place_on_rack()
+			our_gun.pixel_x = rand(-10, 10)
+		return TRUE
+
 
 /*
  * Rack destruction

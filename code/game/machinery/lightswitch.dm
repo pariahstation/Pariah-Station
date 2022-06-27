@@ -56,6 +56,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26)
 /obj/machinery/light_switch/interact(mob/user)
 	. = ..()
 	set_lights(!area.lightswitch)
+	playsound(src, 'sound/effects/lightswitch.ogg', 100, 1)
 
 /obj/machinery/light_switch/proc/set_lights(status)
 	if(area.lightswitch == status)
@@ -114,3 +115,20 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light_switch, 26)
 
 /obj/item/circuit_component/light_switch/input_received(datum/port/input/port)
 	attached_switch?.set_lights(on_setting.value ? TRUE : FALSE)
+
+
+/obj/machinery/light_switch/LateInitialize()
+	. = ..()
+	if(prob(50) && area.lightswitch) //50% chance for area to start with lights off.
+		turn_off()
+
+/obj/machinery/light_switch/proc/turn_off()
+	if(!area.lightswitch)
+		return
+	area.lightswitch = FALSE
+	area.update_icon()
+
+	for(var/obj/machinery/light_switch/L in area)
+		L.update_icon()
+
+	area.power_change()

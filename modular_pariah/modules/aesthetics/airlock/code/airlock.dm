@@ -1,4 +1,3 @@
-//PARIAH ADDITION START
 #define AIRLOCK_LIGHT_POWER 1
 #define AIRLOCK_LIGHT_RANGE 2
 #define AIRLOCK_POWERON_LIGHT_COLOR "#3aa7c2"
@@ -6,7 +5,6 @@
 #define AIRLOCK_ACCESS_LIGHT_COLOR "#57e69c"
 #define AIRLOCK_EMERGENCY_LIGHT_COLOR "#d1d11d"
 #define AIRLOCK_DENY_LIGHT_COLOR "#c23b23"
-//PARIAH ADDITION END
 
 #define AIRLOCK_CLOSED	1
 #define AIRLOCK_CLOSING	2
@@ -124,8 +122,6 @@
 		pre_light_power = door_light_power
 		if(has_environment_lights)
 			set_light(pre_light_range, pre_light_power, pre_light_color, TRUE)
-			if(multi_tile)
-				filler.set_light(pre_light_range, pre_light_power, pre_light_color)
 	else
 		lights_overlay = ""
 
@@ -178,9 +174,6 @@
 		return
 	vis_overlay1.icon_state = overlay_state
 	vis_overlay2.icon_state = overlay_state
-	if(multi_tile)
-		vis_overlay1.dir = src.dir
-		vis_overlay2.dir = src.dir
 
 //STATION AIRLOCKS
 /obj/machinery/door/airlock
@@ -545,7 +538,6 @@
 /obj/structure/door_assembly/door_assembly_hydro
 	icon = 'modular_pariah/modules/aesthetics/airlock/icons/airlocks/station/botany.dmi'
 
-//PARIAH EDIT ADDITION START - aesthetics module
 #undef AIRLOCK_LIGHT_POWER
 #undef AIRLOCK_LIGHT_RANGE
 
@@ -554,7 +546,6 @@
 #undef AIRLOCK_ACCESS_LIGHT_COLOR
 #undef AIRLOCK_EMERGENCY_LIGHT_COLOR
 #undef AIRLOCK_DENY_LIGHT_COLOR
-//PARIAH EDIT ADDITION END
 
 #undef AIRLOCK_CLOSED
 #undef AIRLOCK_CLOSING

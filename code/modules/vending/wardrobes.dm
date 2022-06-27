@@ -165,6 +165,7 @@
 					/obj/item/clothing/shoes/sneakers/black = 2,
 					/obj/item/clothing/gloves/fingerless = 2,
 					/obj/item/clothing/head/soft/black = 2,
+					/obj/item/clothing/head/beret/science/badge/robo = 2,
 					/obj/item/clothing/mask/bandana/color/skull/black = 2)
 	contraband = list(/obj/item/clothing/suit/hooded/techpriest = 2,
 					  /obj/item/clothing/under/costume/mech_suit = 2,
@@ -186,7 +187,7 @@
 					/obj/item/storage/backpack/satchel/science = 3,
 					/obj/item/storage/backpack/duffelbag/science = 3,
 					/obj/item/clothing/head/beret/science = 3,
-					/obj/item/clothing/head/beret/science/fancy = 3,
+					/obj/item/clothing/head/beret/science/badge = 3,
 					/obj/item/clothing/mask/bandana/color/striped/science = 3,
 					/obj/item/clothing/suit/hooded/wintercoat/science = 3,
 					/obj/item/clothing/under/rank/rnd/scientist = 3,
@@ -417,7 +418,7 @@
 	vend_reply = "Thank you for using the ChemDrobe!"
 	products = list(/obj/item/clothing/under/rank/medical/chemist = 2,
 					/obj/item/clothing/under/rank/medical/chemist/skirt = 2,
-					/obj/item/clothing/head/beret/medical = 2,
+					/obj/item/clothing/head/beret/medical/chemist = 2,
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/chemist = 2,
 					/obj/item/clothing/suit/hooded/wintercoat/medical/chemistry = 2,
@@ -461,7 +462,7 @@
 	vend_reply = "Thank you for using the ViroDrobe"
 	products = list(/obj/item/clothing/under/rank/medical/virologist = 2,
 					/obj/item/clothing/under/rank/medical/virologist/skirt = 2,
-					/obj/item/clothing/head/beret/medical = 2,
+					/obj/item/clothing/head/beret/medical/virologist = 2,
 					/obj/item/clothing/shoes/sneakers/white = 2,
 					/obj/item/clothing/suit/toggle/labcoat/virologist = 2,
 					/obj/item/clothing/suit/hooded/wintercoat/medical/viro = 2,

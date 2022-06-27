@@ -102,6 +102,7 @@
 	usesound = list('sound/items/welder.ogg', 'sound/items/welder2.ogg')
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 0.7 //plasmacutters can be used as welders, and are faster than standard welders
+	has_gun_safety = FALSE
 	var/charge_weld = 25 //amount of charge used up to start action (multiplied by amount) and per progress_flash_divisor ticks of welding
 
 /obj/item/gun/energy/plasmacutter/ComponentInitialize()
@@ -352,4 +353,3 @@
 
 /obj/item/gun/energy/tesla_cannon/Initialize(mapload)
 	. = ..()
-	//AddComponent(/datum/component/automatic_fire, 0.1 SECONDS) PARIAH EDIT REMOVAL

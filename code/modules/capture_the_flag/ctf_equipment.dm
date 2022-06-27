@@ -42,6 +42,7 @@
 	force = 50
 	weapon_weight = WEAPON_HEAVY
 	slot_flags = null
+	has_gun_safety = FALSE
 
 /obj/item/gun/ballistic/automatic/laser/ctf/Initialize(mapload)
 	. = ..()
@@ -76,6 +77,7 @@
 	semi_auto = TRUE
 	internal_magazine = FALSE
 	tac_reloads = TRUE
+	has_gun_safety = FALSE
 
 /obj/item/gun/ballistic/shotgun/ctf/Initialize(mapload)
 	. = ..()
@@ -105,6 +107,7 @@
 	inhand_icon_state = "ctfmarksman"
 	mag_type = /obj/item/ammo_box/magazine/recharge/ctf/marksman
 	fire_delay = 1 SECONDS
+	has_gun_safety = FALSE
 
 /obj/item/ammo_box/magazine/recharge/ctf/marksman
 	ammo_type = /obj/item/ammo_casing/caseless/laser/ctf/marksman
@@ -126,6 +129,7 @@
 	desc = "This looks like it could really hurt in melee."
 	force = 75
 	mag_type = /obj/item/ammo_box/magazine/recharge/ctf/deagle
+	has_gun_safety = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/ctf/Initialize(mapload)
 	. = ..()

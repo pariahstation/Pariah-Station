@@ -114,7 +114,7 @@
 	can_charge = FALSE
 	display_empty = FALSE
 	var/obj/item/minigunpack/ammo_pack
-	fire_select_modes = list(SELECT_SEMI_AUTOMATIC, SELECT_FULLY_AUTOMATIC) //PARIAH EDIT ADDITION
+	fire_select_modes = list(SELECT_SEMI_AUTOMATIC, SELECT_FULLY_AUTOMATIC)
 
 /obj/item/gun/energy/minigun/Initialize(mapload)
 	. = ..()
@@ -122,7 +122,6 @@
 		return INITIALIZE_HINT_QDEL //No pack, no gun
 	ammo_pack = loc
 	AddElement(/datum/element/update_icon_blocker)
-	//AddComponent(/datum/component/automatic_fire, 0.2 SECONDS) PARIAH EDIT REMOVAL
 
 /obj/item/gun/energy/minigun/Destroy()
 	if(ammo_pack)

@@ -332,8 +332,6 @@ export const FeatureValueInput = (props: {
   );
 };
 
-// PARIAH FEATURES
-
 export const FeatureTextInput = (
   props: FeatureValueProps<string>
 ) => {

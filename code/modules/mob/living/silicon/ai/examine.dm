@@ -1,5 +1,5 @@
 /mob/living/silicon/ai/examine(mob/user)
-	. = list("<span class='info'>This is [icon2html(src, user)] <EM>[src]</EM>!<hr>") //PARIAH EDIT CHANGE
+	. = list("<span class='info'>This is [icon2html(src, user)] <EM>[src]</EM>!<hr>")
 	if (stat == DEAD)
 		. += span_deadsay("It appears to be powered-down.")
 	else
@@ -17,6 +17,5 @@
 			. += "The wireless networking light is blinking.\n"
 		else if (!shunted && !client)
 			. += "[src]Core.exe has stopped responding! NTOS is searching for a solution to the problem...\n"
-	//. += "*---------*</span>" PARIAH EDIT REMOVAL
 
 	. += ..()

@@ -1,12 +1,10 @@
 /datum/job/head_of_personnel
 	title = JOB_HEAD_OF_PERSONNEL
-	// description = "Alter access on ID cards, manage civil and supply departments, \ //ORIGINAL
 	description = "Alter access on ID cards, manage the civil departments, \
-		protect Ian, run the station when the captain dies." //PARIAH EDIT
+		protect Ian, run the station when the captain dies."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN)
-	// head_announce = list(RADIO_CHANNEL_SUPPLY, RADIO_CHANNEL_SERVICE) //ORIGINAL
-	head_announce = list(RADIO_CHANNEL_SERVICE) //PARIAH EDIT CHANGE
+	head_announce = list(RADIO_CHANNEL_SERVICE)
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
@@ -44,6 +42,7 @@
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_BOLD_SELECT_TEXT | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
 	voice_of_god_power = 1.4 //Command staff has authority
+	alt_titles = list("Head of Personnel", "Personnel Manager", "Crew Overseer")
 
 
 /datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)

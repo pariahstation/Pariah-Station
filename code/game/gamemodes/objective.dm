@@ -1,5 +1,5 @@
 GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
-GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
+GLOBAL_LIST_EMPTY(objectives)
 
 /datum/objective
 	var/datum/mind/owner //The primary owner of the objective. !!SOMEWHAT DEPRECATED!! Prefer using 'team' for new code.
@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 	var/list/blacklisted_target_areas
 
 /datum/objective/New(text)
-	GLOB.objectives += src //PARIAH EDIT
+	GLOB.objectives += src
 	if(text)
 		explanation_text = text
 	if(blacklisted_target_areas)
@@ -25,7 +25,7 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 
 //Apparently objectives can be qdel'd. Learn a new thing every day
 /datum/objective/Destroy()
-	GLOB.objectives -= src //PARIAH EDIT
+	GLOB.objectives -= src
 	return ..()
 
 /datum/objective/proc/get_owners() // Combine owner and team into a single list.
@@ -191,6 +191,39 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 		mind.failed_special_equipment = null
 	mind.RemoveSpell(src)
 
+/datum/objective/download
+	name = "download"
+
+/datum/objective/download/proc/gen_amount_goal()
+	target_amount = rand(20,40)
+	update_explanation_text()
+	return target_amount
+
+/datum/objective/download/update_explanation_text()
+	..()
+	explanation_text = "Download [target_amount] research node\s."
+
+/datum/objective/download/check_completion()
+	var/datum/techweb/checking = new
+	var/list/datum/mind/owners = get_owners()
+	for(var/datum/mind/owner in owners)
+		if(ismob(owner.current))
+			var/mob/mob_owner = owner.current //Yeah if you get morphed and you eat a quantum tech disk with the RD's latest backup good on you soldier.
+			if(ishuman(mob_owner))
+				var/mob/living/carbon/human/human_downloader = mob_owner
+				if(human_downloader && (human_downloader.stat != DEAD) && istype(human_downloader.wear_suit, /obj/item/clothing/suit/space/space_ninja))
+					var/obj/item/clothing/suit/space/space_ninja/ninja_suit = human_downloader.wear_suit
+					ninja_suit.stored_research.copy_research_to(checking)
+			var/list/otherwise = mob_owner.get_contents()
+			for(var/obj/item/disk/tech_disk/dat_fukken_disk in otherwise)
+				dat_fukken_disk.stored_research.copy_research_to(checking)
+	return checking.researched_nodes.len >= target_amount
+
+/datum/objective/download/admin_edit(mob/admin)
+	var/count = input(admin,"How many nodes ?","Nodes",target_amount) as num|null
+	if(count)
+		target_amount = count
+	update_explanation_text()
 /datum/objective/assassinate
 	name = "assasinate"
 	var/target_role_type=FALSE
@@ -202,10 +235,16 @@ GLOBAL_LIST_EMPTY(objectives) //PARIAH EDIT
 
 /datum/objective/assassinate/update_explanation_text()
 	..()
+	RegisterSignal(target, COMSIG_LIVING_DEATH, .proc/register_target_death)
 	if(target?.current)
 		explanation_text = "Assassinate [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role]."
 	else
 		explanation_text = "Free Objective"
+
+/datum/objective/assassinate/proc/register_target_death(mob/living/dead_guy, gibbed)
+	SIGNAL_HANDLER
+	completed = TRUE
+	UnregisterSignal(dead_guy, COMSIG_LIVING_DEATH)
 
 /datum/objective/assassinate/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
@@ -568,12 +607,6 @@ GLOBAL_LIST_EMPTY(possible_items)
 	var/approved_targets = list()
 	check_items:
 		for(var/datum/objective_item/possible_item in GLOB.possible_items)
-			//PARIAH EDIT REMOVAL
-			/*
-			if(possible_item.objective_type != OBJECTIVE_ITEM_TYPE_NORMAL)
-				continue
-				*/
-			//PARIAH EDIT END
 			if(!is_unique_objective(possible_item.targetitem,dupe_search_range))
 				continue
 			for(var/datum/mind/M in owners)

@@ -1,0 +1,14 @@
+{
+	"clothwrap":
+	{
+		"layers":
+		[
+			{
+				"type": "icon_state",
+				"icon_state": "wrap",
+				"blend_mode": "overlay",
+				"color_ids": [ 1 ]
+			}
+		]
+	}
+}

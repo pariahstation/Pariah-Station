@@ -1,9 +1,7 @@
 /datum/preference_middleware/jobs
 	action_delegations = list(
 		"set_job_preference" = .proc/set_job_preference,
-	//PARIAH EDIT
 		"set_job_title" = .proc/set_job_title,
-	//PARIAH EDIT END
 	)
 
 /datum/preference_middleware/jobs/proc/set_job_preference(list/params, mob/user)
@@ -28,7 +26,6 @@
 
 	return TRUE
 
-//PARIAH EDIT
 /datum/preference_middleware/jobs/proc/set_job_title(list/params, mob/user)
 	var/job_title = params["job"]
 	var/new_job_title = params["new_title"]
@@ -44,7 +41,6 @@
 	preferences.alt_job_titles[job_title] = new_job_title
 
 	return TRUE
-//PARIAH EDIT END
 
 /datum/preference_middleware/jobs/get_constant_data()
 	var/list/data = list()
@@ -73,7 +69,7 @@
 		jobs[job.title] = list(
 			"description" = job.description,
 			"department" = department_name,
-			"alt_titles" = job.alt_titles, //PARIAH EDIT
+			"alt_titles" = job.alt_titles,
 		)
 
 	data["departments"] = departments
@@ -84,14 +80,10 @@
 /datum/preference_middleware/jobs/get_ui_data(mob/user)
 	var/list/data = list()
 
-	//PARIAH EDIT
 	if(isnull(preferences.alt_job_titles))
 		preferences.alt_job_titles = list()
-	//PARIAH EDIT END
 	data["job_preferences"] = preferences.job_preferences
-	//PARIAH EDIT
 	data["job_alt_titles"] = preferences.alt_job_titles
-	//PARIAH EDIT END
 
 	return data
 

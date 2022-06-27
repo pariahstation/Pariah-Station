@@ -72,8 +72,7 @@
 	return TRUE
 
 /datum/keybinding/mob/toggle_move_intent
-	//hotkey_keys = list("C") ORIGINAL
-	hotkey_keys = list("Alt") //PARIAH EDIT - combat_indicator module
+	hotkey_keys = list("C")
 	name = "toggle_move_intent"
 	full_name = "Hold to toggle move intent"
 	description = "Held down to cycle to the other move intent, release to cycle back"
@@ -93,8 +92,7 @@
 	return TRUE
 
 /datum/keybinding/mob/toggle_move_intent_alternative
-	//hotkey_keys = list("Alt") //ORIGINAL
-	hotkey_keys = list("Unbound") //PARIAH EDIT - combat_indicator module
+	hotkey_keys = list("Alt")
 	name = "toggle_move_intent_alt"
 	full_name = "press to cycle move intent"
 	description = "Pressing this cycle to the opposite move intent, does not cycle back"
@@ -235,7 +233,7 @@
 	return TRUE
 
 /datum/keybinding/mob/prevent_movement
-	hotkey_keys = list("Ctrl") //PARIAH EDIT
+	hotkey_keys = list("Ctrl")
 	name = "block_movement"
 	full_name = "Block movement"
 	description = "Prevents you from moving"
@@ -252,3 +250,27 @@
 	if(.)
 		return
 	user.movement_locked = FALSE
+
+/datum/keybinding/mob/pixel_shift
+	hotkey_keys = list("B")
+	name = "pixel_shift"
+	full_name = "Pixel Shift"
+	description = "Shift your characters offset."
+	category = CATEGORY_MOVEMENT
+	keybind_signal = COMSIG_KB_MOB_PIXELSHIFT
+
+/datum/keybinding/mob/pixel_shift/down(client/user)
+	. = ..()
+	if(.)
+		return
+	var/mob/M = user.mob
+	M.shifting = TRUE
+	return TRUE
+
+/datum/keybinding/mob/pixel_shift/up(client/user)
+	. = ..()
+	if(.)
+		return
+	var/mob/M = user.mob
+	M.shifting = FALSE
+	return TRUE

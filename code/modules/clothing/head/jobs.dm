@@ -67,6 +67,11 @@
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#0070B7#FFCE5B"
 
+/obj/item/clothing/head/caphat/beret/parade
+	name = "captain's parade beret"
+	desc = "Worn only by Captains with an even larger abundance of class."
+	greyscale_colors = "#FFFFFF#FFCE5B"
+
 //Head of Personnel
 /obj/item/clothing/head/hopcap
 	name = "head of personnel's cap"
@@ -74,6 +79,14 @@
 	desc = "The symbol of true bureaucratic micromanagement."
 	armor = list(MELEE = 25, BULLET = 15, LASER = 25, ENERGY = 35, BOMB = 25, BIO = 0, FIRE = 50, ACID = 50)
 	dog_fashion = /datum/dog_fashion/head/hop
+
+/obj/item/clothing/head/hopcap/beret
+	name = "head of personnel's beret"
+	desc = "A fancy beret designed by NT's Personnel division for their favorite head's head."
+	icon_state = "beret_badge"
+	greyscale_config = /datum/greyscale_config/beret_badge
+	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
+	greyscale_colors = "#006086#D60000"
 
 //Chaplain
 /obj/item/clothing/head/nun_hood
@@ -285,13 +298,22 @@
 	greyscale_colors = "#8D008F"
 	flags_1 = NONE
 
-/obj/item/clothing/head/beret/science/fancy
+/obj/item/clothing/head/beret/science/badge
 	desc = "A science-themed beret for our hardworking scientists. This one comes with a fancy badge!"
 	icon_state = "beret_badge"
 	greyscale_config = /datum/greyscale_config/beret_badge
 	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
 	greyscale_colors = "#8D008F#FFFFFF"
 
+/obj/item/clothing/head/beret/science/badge/robo
+	name = "robotics beret"
+	desc = "A sleek black beret designed with high-durability nano-mesh fiber - or so the roboticists claim."
+	greyscale_colors = "#4F4F4F#730000"
+
+/obj/item/clothing/head/beret/science/badge/rd
+	name = "research director's beret"
+	desc = "A custom-tailored beret for the Research Director. Lamarr thinks it looks great."
+	greyscale_colors = "#8D008F#D8D39C"
 
 //Medical
 
@@ -306,10 +328,20 @@
 	desc = "For finding corpses in style!"
 	greyscale_colors = "#16313D"
 
+/obj/item/clothing/head/beret/medical/chemist
+	name = "chemist beret"
+	desc = "Not acid-proof!"
+	greyscale_colors = "#FF3300"
+
 /obj/item/clothing/head/beret/medical/cmo
 	name = "chief medical officer beret"
 	desc = "A beret in a distinct surgical turquoise!"
 	greyscale_colors = "#5EB8B8"
+
+/obj/item/clothing/head/beret/medical/virologist
+	name = "virologist beret"
+	desc = "Sneezing in this expensive beret would be a waste of a good beret."
+	greyscale_colors = "#006600"
 
 
 //Engineering
@@ -326,6 +358,14 @@
 	greyscale_colors = "#FFDE15"
 	flags_1 = NONE
 
+/obj/item/clothing/head/beret/engi/ce
+	name = "chief engineer's beret"
+	desc = "A fancy beret designed exactly to the Chief Engineer's tastes, minus the LEDs."
+	icon_state = "beret_badge"
+	greyscale_config = /datum/greyscale_config/beret_badge
+	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
+	greyscale_colors = "#575603#00B9D4"
+
 
 //Cargo
 
@@ -334,6 +374,14 @@
 	desc = "No need to compensate when you can wear this beret!"
 	greyscale_colors = "#ECCA30"
 	flags_1 = NONE
+
+/obj/item/clothing/head/beret/cargo/qm
+	name = "quartermaster's beret"
+	desc = "A beret that helps the QM keep telling themselves that they're an official head of staff."
+	icon_state = "beret_badge"
+	greyscale_config = /datum/greyscale_config/beret_badge
+	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
+	greyscale_colors = "#714711#EBF755"
 
 
 //Curator

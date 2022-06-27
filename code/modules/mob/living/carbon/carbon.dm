@@ -192,8 +192,8 @@
 			power_throw++
 		if(neckgrab_throw)
 			power_throw++
-		do_attack_animation(target, no_effect = TRUE) //PARIAH EDIT ADDITION - AESTHETICS
-		playsound(loc, 'sound/weapons/punchmiss.ogg', 50, TRUE, -1) //PARIAH EDIT ADDITION - AESTHETICS
+		do_attack_animation(target, no_effect = TRUE)
+		playsound(loc, 'sound/weapons/punchmiss.ogg', 50, TRUE, -1)
 		visible_message(span_danger("[src] throws [thrown_thing][power_throw ? " really hard!" : "."]"), \
 						span_danger("You throw [thrown_thing][power_throw ? " really hard!" : "."]"))
 		log_message("has thrown [thrown_thing] [power_throw ? "really hard" : ""]", LOG_ATTACK)
@@ -545,7 +545,7 @@
 		REMOVE_TRAIT(src, TRAIT_INCAPACITATED, STAMINA)
 		REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, STAMINA)
 		REMOVE_TRAIT(src, TRAIT_FLOORED, STAMINA)
-		filters -= FILTER_STAMINACRIT //PARIAH EDIT
+		filters -= FILTER_STAMINACRIT
 	else
 		return
 	update_stamina_hud()

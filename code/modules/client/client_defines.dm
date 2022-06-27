@@ -70,10 +70,8 @@
 		/////////
 	///Player preferences datum for the client
 	var/datum/preferences/prefs = null
-	//PARIAH EDIT ADDITION
 	///last turn of the controlled mob, I think this is only used by mechs?
 	var/last_turn = 0
-	//PARIAH EDIT END
 	///Move delay of controlled mob, any keypresses inside this period will persist until the next proper move
 	var/move_delay = 0
 	///The visual delay to use for the current client.Move(), mostly used for making a client based move look like it came from some other slower source
@@ -262,3 +260,6 @@
 	//screen_text vars
 	///lazylist of screen_texts for this client, first in this list is the one playing
 	var/list/atom/movable/screen/text/screen_text/screen_texts
+
+	/// A ref to loadout_manager datum.
+	var/datum/loadout_manager/open_loadout_ui = null

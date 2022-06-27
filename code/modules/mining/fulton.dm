@@ -193,3 +193,9 @@ GLOBAL_LIST_EMPTY(total_extraction_beacons)
 
 /obj/effect/extraction_holder/singularity_pull()
 	return
+
+/obj/item/extraction_pack/contractor
+	name = "black fulton extraction pack"
+	desc = "A modified fulton pack that can be used indoors thanks to Bluespace technology. Favored by Syndicate Contractors."
+	icon_state = "extraction_pack_syndie"
+	can_use_indoors = TRUE

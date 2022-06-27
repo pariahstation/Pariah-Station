@@ -150,6 +150,8 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 	var/smoke_amt = 0 //cropped at 10
 
 	var/centcom_cancast = TRUE //Whether or not the spell should be allowed on z2
+	var/always_can_cast = FALSE
+	var/mob_spell = FALSE // If the spell is bound to the mob alone, and not the mind
 
 	action_icon = 'icons/mob/actions/actions_spells.dmi'
 	action_icon_state = "spell_default"

@@ -82,6 +82,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	/// If set to TRUE, will update character_profiles on the next ui_data tick.
 	var/tainted_character_profiles = FALSE
 
+	/// Loadout prefs. Assoc list of [typepaths] to [associated list of item info].
+	var/list/loadout_list
+
+	/// Preference of how the preview should show the character.
+	var/preview_pref = PREVIEW_PREF_JOB
+
+	///Alternative job titles stored in preferences. Assoc list, ie. alt_job_titles["Scientist"] = "Cytologist"
+	var/list/alt_job_titles = list()
+
 /datum/preferences/Destroy(force, ...)
 	QDEL_NULL(character_preview_view)
 	QDEL_LIST(middleware)
@@ -157,10 +166,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		data["character_profiles"] = create_character_profiles()
 		tainted_character_profiles = FALSE
 
-	//PARIAH EDIT BEGIN
 	data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR)
 	data["preview_selection"] = preview_pref
-	//PARIAH EDIT END
 
 	data["character_preferences"] = compile_character_preferences(user)
 
@@ -272,7 +279,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			return TRUE
 
-		//PARIAH EDIT ADDITION
 		if("update_preview")
 			preview_pref = params["updated_preview"]
 			character_preview_view.update_body()
@@ -285,7 +291,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				var/datum/loadout_manager/tgui = new(usr)
 				tgui.ui_interact(usr)
 			return TRUE
-		//PARIAH EDIT END
 
 
 	for (var/datum/preference_middleware/preference_middleware as anything in middleware)
@@ -548,3 +553,18 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/character_preview_view)
 			default_randomization[preference_key] = RANDOM_ENABLED
 
 	return default_randomization
+
+
+/datum/preferences/proc/load_character_pariah(savefile/S)
+	READ_FILE(S["loadout_list"], loadout_list)
+
+
+	loadout_list = sanitize_loadout_list(update_loadout_list(loadout_list))
+
+	READ_FILE(S["alt_job_titles"], alt_job_titles)
+
+
+/datum/preferences/proc/save_character_pariah(savefile/S)
+
+	WRITE_FILE(S["loadout_list"], loadout_list)
+	WRITE_FILE(S["alt_job_titles"], alt_job_titles)

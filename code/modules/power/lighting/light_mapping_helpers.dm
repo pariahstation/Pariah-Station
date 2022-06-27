@@ -53,7 +53,8 @@
 	fitting = "bulb"
 	brightness = 4
 	nightshift_brightness = 4
-	bulb_colour = "#FFD6AA"
+	bulb_colour = "#FFDDBB"
+	bulb_power = 0.75
 	desc = "A small lighting fixture."
 	light_type = /obj/item/light/bulb
 
