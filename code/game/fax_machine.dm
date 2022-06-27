@@ -546,6 +546,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	else
 		to_chat(user, span_notice("You insert [inserted_paper] into [src]."))
 
+	flick("fax_send", src)
 	stored_paper = inserted_paper
 
 /*
