@@ -82,7 +82,7 @@
 	if(!affecting) //missing limb? we select the first bodypart (you can never have zero, because of chest)
 		affecting = bodyparts[1]
 	SEND_SIGNAL(I, COMSIG_ITEM_ATTACK_ZONE, src, user, affecting)
-	send_item_attack_message(I, user, parse_zone(affecting.body_zone), affecting)
+	send_item_attack_message(I, user, affecting.plaintext_zone, affecting)
 	if(I.force)
 		var/attack_direction = get_dir(user, src)
 		apply_damage(I.force, I.damtype, affecting, wound_bonus = I.wound_bonus, bare_wound_bonus = I.bare_wound_bonus, sharpness = I.get_sharpness(), attack_direction = attack_direction)
@@ -421,16 +421,6 @@
 
 		if(HAS_TRAIT(src, TRAIT_BADTOUCH))
 			to_chat(M, span_warning("[src] looks visibly upset as you pat [p_them()] on the head."))
-
-	else if ((M.zone_selected == BODY_ZONE_PRECISE_GROIN) && !isnull(src.getorgan(/obj/item/organ/tail)))
-		M.visible_message(span_notice("[M] pulls on [src]'s tail!"), \
-					null, span_hear("You hear a soft patter."), DEFAULT_MESSAGE_RANGE, list(M, src))
-		to_chat(M, span_notice("You pull on [src]'s tail!"))
-		to_chat(src, span_notice("[M] pulls on your tail!"))
-		if(HAS_TRAIT(src, TRAIT_BADTOUCH)) //How dare they!
-			to_chat(M, span_warning("[src] makes a grumbling noise as you pull on [p_their()] tail."))
-		else
-			SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "tailpulled", /datum/mood_event/tailpulled)
 
 	else
 		M.visible_message(span_notice("[M] hugs [src] to make [p_them()] feel better!"), \

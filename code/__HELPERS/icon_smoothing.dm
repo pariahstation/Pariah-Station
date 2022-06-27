@@ -9,42 +9,11 @@
 
 	Each atom has its own icon file with all the possible corner states. See 'smooth_wall.dmi' for a template.
 
-	DIAGONAL SMOOTHING INSTRUCTIONS
-	To make your atom smooth diagonally you need all the proper icon states (see 'smooth_wall.dmi' for a template) and
-	to add the 'SMOOTH_DIAGONAL_CORNERS' flag to the atom's smoothing_flags var (in addition to either SMOOTH_TRUE or SMOOTH_MORE).
-
 	For turfs, what appears under the diagonal corners depends on the turf that was in the same position previously: if you make a wall on
 	a plating floor, you will see plating under the diagonal wall corner, if it was space, you will see space.
 
-	If you wish to map a diagonal wall corner with a fixed underlay, you must configure the turf's 'fixed_underlay' list var, like so:
-		fixed_underlay = list("icon"='icon_file.dmi', "icon_state"="iconstatename")
-	A non null 'fixed_underlay' list var will skip copying the previous turf appearance and always use the list. If the list is
-	not set properly, the underlay will default to regular floor plating.
-
 	To see an example of a diagonal wall, see '/turf/closed/wall/mineral/titanium' and its subtypes.
 */
-
-//Redefinitions of the diagonal directions so they can be stored in one var without conflicts
-#define NORTH_JUNCTION NORTH //(1<<0)
-#define SOUTH_JUNCTION SOUTH //(1<<1)
-#define EAST_JUNCTION EAST  //(1<<2)
-#define WEST_JUNCTION WEST  //(1<<3)
-#define NORTHEAST_JUNCTION (1<<4)
-#define SOUTHEAST_JUNCTION (1<<5)
-#define SOUTHWEST_JUNCTION (1<<6)
-#define NORTHWEST_JUNCTION (1<<7)
-
-DEFINE_BITFIELD(smoothing_junction, list(
-	"NORTH_JUNCTION" = NORTH_JUNCTION,
-	"SOUTH_JUNCTION" = SOUTH_JUNCTION,
-	"EAST_JUNCTION" = EAST_JUNCTION,
-	"WEST_JUNCTION" = WEST_JUNCTION,
-	"NORTHEAST_JUNCTION" = NORTHEAST_JUNCTION,
-	"SOUTHEAST_JUNCTION" = SOUTHEAST_JUNCTION,
-	"SOUTHWEST_JUNCTION" = SOUTHWEST_JUNCTION,
-	"NORTHWEST_JUNCTION" = NORTHWEST_JUNCTION,
-))
-
 
 #define NO_ADJ_FOUND 0
 #define ADJ_FOUND 1
@@ -63,35 +32,54 @@ DEFINE_BITFIELD(smoothing_junction, list(
 			}; \
 		}; \
 		else { \
-			if(!isnull(neighbor.smoothing_groups)) { \
-				for(var/target in source.canSmoothWith) { \
-					if(!(source.canSmoothWith[target] & neighbor.smoothing_groups[target])) { \
-						continue; \
-					}; \
-					junction |= direction_flag; \
-					break; \
-				}; \
-			}; \
-			if(!(junction & direction_flag) && source.smoothing_flags & SMOOTH_OBJ) { \
-				for(var/obj/thing in neighbor) { \
-					if(!thing.anchored || isnull(thing.smoothing_groups)) { \
-						continue; \
-					}; \
+			if(source.can_area_smooth(neighbor)) { \
+				if(!isnull(neighbor.smoothing_groups)) { \
 					for(var/target in source.canSmoothWith) { \
-						if(!(source.canSmoothWith[target] & thing.smoothing_groups[target])) { \
+						if(!(source.canSmoothWith[target] & neighbor.smoothing_groups[target])) { \
 							continue; \
 						}; \
 						junction |= direction_flag; \
 						break; \
 					}; \
-					if(junction & direction_flag) { \
-						break; \
+				}; \
+				if(!(junction & direction_flag) && source.smoothing_flags & SMOOTH_OBJ) { \
+					for(var/obj/thing in neighbor) { \
+						if(!thing.anchored || isnull(thing.smoothing_groups)) { \
+							continue; \
+						}; \
+						for(var/target in source.canSmoothWith) { \
+							if(!(source.canSmoothWith[target] & thing.smoothing_groups[target])) { \
+								continue; \
+							}; \
+							junction |= direction_flag; \
+							break; \
+						}; \
+						if(junction & direction_flag) { \
+							break; \
+						}; \
 					}; \
 				}; \
 			}; \
 		}; \
 	} while(FALSE)
 
+
+/**
+ * Checks if `src` can smooth with `target`, based on the [/area/var/area_limited_icon_smoothing] variable of their areas.
+ *
+ * If neither area has `area_limited_icon_smoothing` set, return `TRUE`.
+ * If one area has the other's type set as `area_limited_icon_smoothing`, return `TRUE`.
+ * Else, return `FALSE`
+ *
+ * Arguments:
+ * * target - The atom we're trying to smooth with.
+ */
+/atom/proc/can_area_smooth(target)
+	var/area/target_area = get_area(target)
+	var/area/source_area = get_area(src)
+	if((!source_area.area_limited_icon_smoothing || istype(target_area, source_area.area_limited_icon_smoothing)) && (!target_area.area_limited_icon_smoothing || istype(source_area, target_area.area_limited_icon_smoothing)))
+		return TRUE
+	return FALSE
 
 ///Scans all adjacent turfs to find targets to smooth with.
 /atom/proc/calculate_adjacencies()
@@ -156,45 +144,13 @@ DEFINE_BITFIELD(smoothing_junction, list(
 	if (!z)
 		CRASH("[type] called smooth_icon() without being on a z-level")
 	if(smoothing_flags & SMOOTH_CORNERS)
-		if(smoothing_flags & SMOOTH_DIAGONAL_CORNERS)
-			corners_diagonal_smooth(calculate_adjacencies())
-		else
-			corners_cardinal_smooth(calculate_adjacencies())
+		corners_cardinal_smooth(calculate_adjacencies())
 	else if(smoothing_flags & SMOOTH_BITMASK)
 		bitmask_smooth()
 	else
 		CRASH("smooth_icon called for [src] with smoothing_flags == [smoothing_flags]")
 	SEND_SIGNAL(src, COMSIG_ATOM_SMOOTHED_ICON)
 	update_appearance(~UPDATE_SMOOTHING)
-
-
-/atom/proc/corners_diagonal_smooth(adjacencies)
-	switch(adjacencies)
-		if(NORTH_JUNCTION|WEST_JUNCTION)
-			replace_smooth_overlays("d-se","d-se-0")
-		if(NORTH_JUNCTION|EAST_JUNCTION)
-			replace_smooth_overlays("d-sw","d-sw-0")
-		if(SOUTH_JUNCTION|WEST_JUNCTION)
-			replace_smooth_overlays("d-ne","d-ne-0")
-		if(SOUTH_JUNCTION|EAST_JUNCTION)
-			replace_smooth_overlays("d-nw","d-nw-0")
-
-		if(NORTH_JUNCTION|WEST_JUNCTION|NORTHWEST_JUNCTION)
-			replace_smooth_overlays("d-se","d-se-1")
-		if(NORTH_JUNCTION|EAST_JUNCTION|NORTHEAST_JUNCTION)
-			replace_smooth_overlays("d-sw","d-sw-1")
-		if(SOUTH_JUNCTION|WEST_JUNCTION|SOUTHWEST_JUNCTION)
-			replace_smooth_overlays("d-ne","d-ne-1")
-		if(SOUTH_JUNCTION|EAST_JUNCTION|SOUTHEAST_JUNCTION)
-			replace_smooth_overlays("d-nw","d-nw-1")
-
-		else
-			corners_cardinal_smooth(adjacencies)
-			return FALSE
-
-	icon_state = ""
-	return TRUE
-
 
 /atom/proc/corners_cardinal_smooth(adjacencies)
 	var/mutable_appearance/temp_ma
@@ -291,9 +247,7 @@ DEFINE_BITFIELD(smoothing_junction, list(
 	if(!target_turf)
 		return NULLTURF_BORDER
 
-	var/area/target_area = get_area(target_turf)
-	var/area/source_area = get_area(src)
-	if((source_area.area_limited_icon_smoothing && !istype(target_area, source_area.area_limited_icon_smoothing)) || (target_area.area_limited_icon_smoothing && !istype(source_area, target_area.area_limited_icon_smoothing)))
+	if(!can_area_smooth(target_turf))
 		return NO_ADJ_FOUND
 
 	if(isnull(canSmoothWith)) //special case in which it will only smooth with itself
@@ -360,38 +314,6 @@ DEFINE_BITFIELD(smoothing_junction, list(
 	smoothing_junction = new_junction
 	icon_state = "[base_icon_state]-[smoothing_junction]"
 
-
-/turf/closed/set_smoothed_icon_state(new_junction)
-	. = ..()
-	if(smoothing_flags & SMOOTH_DIAGONAL_CORNERS)
-		switch(new_junction)
-			if(
-				NORTH_JUNCTION|WEST_JUNCTION,
-				NORTH_JUNCTION|EAST_JUNCTION,
-				SOUTH_JUNCTION|WEST_JUNCTION,
-				SOUTH_JUNCTION|EAST_JUNCTION,
-				NORTH_JUNCTION|WEST_JUNCTION|NORTHWEST_JUNCTION,
-				NORTH_JUNCTION|EAST_JUNCTION|NORTHEAST_JUNCTION,
-				SOUTH_JUNCTION|WEST_JUNCTION|SOUTHWEST_JUNCTION,
-				SOUTH_JUNCTION|EAST_JUNCTION|SOUTHEAST_JUNCTION
-				)
-				icon_state = "[base_icon_state]-[smoothing_junction]-d"
-				if(!fixed_underlay && new_junction != .) // Mutable underlays?
-					var/junction_dir = reverse_ndir(smoothing_junction)
-					var/turned_adjacency = REVERSE_DIR(junction_dir)
-					var/turf/neighbor_turf = get_step(src, turned_adjacency & (NORTH|SOUTH))
-					var/mutable_appearance/underlay_appearance = mutable_appearance(layer = TURF_LAYER, plane = FLOOR_PLANE)
-					if(!neighbor_turf.get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency))
-						neighbor_turf = get_step(src, turned_adjacency & (EAST|WEST))
-
-						if(!neighbor_turf.get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency))
-							neighbor_turf = get_step(src, turned_adjacency)
-
-							if(!neighbor_turf.get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency))
-								if(!get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency)) //if all else fails, ask our own turf
-									underlay_appearance.icon = DEFAULT_UNDERLAY_ICON
-									underlay_appearance.icon_state = DEFAULT_UNDERLAY_ICON_STATE
-					underlays += underlay_appearance
 
 /turf/open/floor/set_smoothed_icon_state(new_junction)
 	if(broken || burnt)
@@ -505,18 +427,9 @@ DEFINE_BITFIELD(smoothing_junction, list(
 	name = "smooth wall"
 	icon = 'icons/turf/smooth_wall.dmi'
 	icon_state = "smooth"
-	smoothing_flags = SMOOTH_CORNERS|SMOOTH_DIAGONAL_CORNERS|SMOOTH_BORDER
+	smoothing_flags = SMOOTH_CORNERS|SMOOTH_BORDER
 	smoothing_groups = null
 	canSmoothWith = null
-
-#undef NORTH_JUNCTION
-#undef SOUTH_JUNCTION
-#undef EAST_JUNCTION
-#undef WEST_JUNCTION
-#undef NORTHEAST_JUNCTION
-#undef NORTHWEST_JUNCTION
-#undef SOUTHEAST_JUNCTION
-#undef SOUTHWEST_JUNCTION
 
 #undef NO_ADJ_FOUND
 #undef ADJ_FOUND

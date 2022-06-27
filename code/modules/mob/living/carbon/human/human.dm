@@ -1132,6 +1132,9 @@
 /mob/living/carbon/human/species/pod
 	race = /datum/species/pod
 
+/mob/living/carbon/human/species/teshari
+	race = /datum/species/teshari
+
 /mob/living/carbon/human/species/shadow
 	race = /datum/species/shadow
 
@@ -1155,3 +1158,6 @@
 
 /mob/living/carbon/human/species/skrell
 	race = /datum/species/skrell
+
+/mob/living/carbon/human/species/vox
+	race = /datum/species/vox

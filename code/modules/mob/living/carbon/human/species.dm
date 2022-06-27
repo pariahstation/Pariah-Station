@@ -15,7 +15,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 /datum/species
 	///If the game needs to manually check your race to do something not included in a proc here, it will use this.
 	var/id
-	///This is the fluff name. They are displayed on health analyzers and in the character setup menu. Leave them generic for other servers to customize.
+	///This is the fluff name. They are displayed on health analyzers and in the character setup menu. Must be `\improper`.
 	var/name
 	/// The formatting of the name of the species in plural context. Defaults to "[name]\s" if unset.
 	/// Ex "[Plasmamen] are weak", "[Mothmen] are strong", "[Lizardpeople] don't like", "[Golems] hate"
@@ -29,6 +29,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC
 	///Clothing offsets. If a species has a different body than other species, you can offset clothing so they look less weird.
 	var/list/offset_features = list(OFFSET_UNIFORM = list(0,0), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,0), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,0), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,0), OFFSET_NECK = list(0,0))
+	///If this species needs special 'fallback' sprites, what is the path to the file that contains them?
+	var/fallback_clothing_path
 
 	///The maximum number of bodyparts this species can have.
 	var/max_bodypart_count = 6
@@ -65,6 +67,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/nojumpsuit = FALSE
 	///Affects the speech message, for example: Motharula flutters, "My speech message is flutters!"
 	var/say_mod = "says"
+	///Affects the species' screams, for example: "Motharula buzzes!"
+	var/scream_verb = "screams"
 	///What languages this species can understand and say. Use a [language holder datum][/datum/language_holder] in this var.
 	var/species_language_holder = /datum/language_holder
 	/**
@@ -133,7 +137,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	/// A path to an outfit that is important for species life e.g. plasmaman outfit
 	var/datum/outfit/outfit_important_for_life
 
-	///Icon file used for eyes, defaults to 'icons/mob/human_face.dmi'
+	///Icon file used for eyes, defaults to 'icons/mob/human_face.dmi' if not set
 	var/species_eye_path
 
 	///Is this species a flying species? Used as an easy check for some things
@@ -170,6 +174,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	///List of factions the mob gain upon gaining this species.
 	var/list/inherent_factions
+	/// The [/mob/living/var/mob_size] of members of this species.
+	var/species_mob_size = MOB_SIZE_HUMAN
 
 	///Punch-specific attack verb.
 	var/attack_verb = SFX_PUNCH
@@ -427,7 +433,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(C.hud_used)
 		C.hud_used.update_locked_slots()
 
-
+	C.mob_size = species_mob_size
 	C.mob_biotypes = inherent_biotypes
 
 	replace_body(C, src)
@@ -686,6 +692,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "tail_lizard"
 
+	if(mutant_bodyparts["tail_vox"])
+		if(source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tail_vox"
+
 	if(mutant_bodyparts["waggingtail_lizard"])
 		if(source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "waggingtail_lizard"
@@ -709,6 +719,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(mutant_bodyparts["spines"])
 		if(!source.dna.features["spines"] || source.dna.features["spines"] == "None" || source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
 			bodyparts_to_add -= "spines"
+
+	if(mutant_bodyparts["spines_vox"])
+		if(!source.dna.features["spines_vox"] || source.dna.features["spines_vox"] == "None" || source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "spines_vox"
 
 	if(mutant_bodyparts["waggingspines"])
 		if(!source.dna.features["spines"] || source.dna.features["spines"] == "None" || source.wear_suit && (source.wear_suit.flags_inv & HIDEJUMPSUIT))
@@ -755,6 +769,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 					accessory = GLOB.tails_list_monkey[source.dna.features["tail_monkey"]]
 				if("headtails")
 					accessory = GLOB.headtails_list[source.dna.features["headtails"]]
+				if("tail_vox")
+					accessory = GLOB.tails_list_vox[source.dna.features["tail_vox"]]
+				if("spines_vox")
+					accessory = GLOB.spines_list_vox[source.dna.features["spines_vox"]]
 
 			if(!accessory || accessory.icon_state == "none")
 				continue
@@ -762,7 +780,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			var/mutable_appearance/accessory_overlay = mutable_appearance(accessory.icon, layer = -layer)
 
 			//A little rename so we don't have to use tail_lizard or tail_human when naming the sprites.
-			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_monkey" || bodypart == "tail_vox")
 				bodypart = "tail"
 			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human")
 				bodypart = "waggingtail"
@@ -786,6 +804,10 @@ GLOBAL_LIST_EMPTY(features_by_species)
 								accessory_overlay.color = fixed_mut_color
 							else
 								accessory_overlay.color = source.dna.features["mcolor"]
+						if(MUTCOLORS2)
+							accessory_overlay.color = source.dna.features["mcolor2"]
+						if(MUTCOLORS3)
+							accessory_overlay.color = source.dna.features["mcolor3"]
 						if(HAIR)
 							if(hair_color == "mutcolor")
 								accessory_overlay.color = source.dna.features["mcolor"]
@@ -1252,7 +1274,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(!affecting) //Something went wrong. Maybe the limb is missing?
 		affecting = H.bodyparts[1]
 
-	hit_area = affecting.name
+	hit_area = affecting.plaintext_zone
 	var/def_zone = affecting.body_zone
 
 	var/armor_block = H.run_armor_check(affecting, MELEE, span_notice("Your armor has protected your [hit_area]!"), span_warning("Your armor has softened a hit to your [hit_area]!"),I.armour_penetration, weak_against_armour = I.weak_against_armour)

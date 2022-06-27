@@ -221,6 +221,8 @@
 
 /datum/config_entry/flag/allow_holidays
 
+/datum/config_entry/flag/disable_holiday_floor_effects //For when you need consistency or don't enjoy garish vomit.
+
 
 /datum/config_entry/flag/admin_legacy_system //Defines whether the server uses the legacy admin system with admins.txt or the SQL system
 	protection = CONFIG_ENTRY_LOCKED
@@ -276,16 +278,16 @@
 /datum/config_entry/string/banappeals
 
 /datum/config_entry/string/wikiurl
-	default = "http://www.tgstation13.org/wiki"
+	default = "https://wiki.pariahstation.org/index.php/Main_Page"
 
 /datum/config_entry/string/forumurl
-	default = "http://tgstation13.org/phpBB/index.php"
+	default = "https://discord.gg/96dfjqwfVM" /// Until we actually get a forum, we will use this as a placeholder.
 
 /datum/config_entry/string/rulesurl
-	default = "http://www.tgstation13.org/wiki/Rules"
+	default = "https://wiki.pariahstation.org/index.php/Our_Rules"
 
 /datum/config_entry/string/githuburl
-	default = "https://www.github.com/tgstation/tgstation"
+	default = "https://github.com/pariahstation/Pariah-Station"
 
 /datum/config_entry/string/discordbotcommandprefix
 	default = "?"
@@ -388,9 +390,18 @@
 /datum/config_entry/flag/panic_bunker // prevents people the server hasn't seen before from connecting
 
 /datum/config_entry/number/panic_bunker_living // living time in minutes that a player needs to pass the panic bunker
+	min_val = -1
+	default = -1
 
 /// Flag for requiring players who would otherwise be denied access by the panic bunker to complete a written interview
 /datum/config_entry/flag/panic_bunker_interview
+
+/// Flag to enable the whitelist, only allowing registered players to enter the server
+/datum/config_entry/flag/panic_bunker_discord_require
+
+/// String to show the user if they were denied access due to the WAS
+/datum/config_entry/string/panic_bunker_discord_register_message
+	default = "Sorry but this server requires players to link their Discord account before playing! Please enter the following command, including the token, into this Server's Discord Guild."
 
 /datum/config_entry/string/panic_bunker_message
 	default = "Sorry but the server is currently not accepting connections from never before seen players."

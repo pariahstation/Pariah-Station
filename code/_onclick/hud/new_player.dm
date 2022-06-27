@@ -2,7 +2,7 @@
 
 /datum/hud/new_player/New(mob/owner)
 	..()
-	if (owner?.client?.interviewee)
+	if (owner?.client?.restricted_mode)
 		return
 	var/list/buttons = subtypesof(/atom/movable/screen/lobby)
 	for(var/button_type in buttons)
@@ -47,6 +47,7 @@
 		return
 	flick("[base_icon_state]_pressed", src)
 	update_appearance(UPDATE_ICON)
+	SEND_SOUND(hud.mymob, sound('sound/effects/save.ogg', volume = 75))
 	return TRUE
 
 /atom/movable/screen/lobby/button/MouseEntered(location,control,params)

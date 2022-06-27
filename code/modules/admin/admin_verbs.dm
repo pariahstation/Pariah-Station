@@ -36,6 +36,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/check_ai_laws, /*shows AI and borg laws*/
 	/client/proc/ghost_pool_protection, /*opens a menu for toggling ghost roles*/
 	/datum/admins/proc/toggleooc, /*toggles ooc on/off for everyone*/
+	/datum/admins/proc/togglelooc, /*toggles looc on/off for everyone*/
 	/datum/admins/proc/toggleoocdead, /*toggles ooc on/off for everyone who is dead*/
 	/datum/admins/proc/toggleenter, /*toggles whether people can join the current game*/
 	/datum/admins/proc/toggleguests, /*toggles whether guests can join the current game*/
@@ -80,7 +81,6 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/datum/admins/proc/known_alts_panel,
 	/datum/admins/proc/paintings_manager,
 	/datum/admins/proc/display_tags,
-	/client/proc/cmd_ic_spawn, //PARIAH EDIT - IC Spawning
 	)
 GLOBAL_LIST_INIT(admin_verbs_ban, list(/client/proc/unban_panel, /client/proc/ban_panel, /client/proc/stickybanpanel))
 GLOBAL_PROTECT(admin_verbs_ban)
@@ -133,6 +133,7 @@ GLOBAL_PROTECT(admin_verbs_server)
 	/client/proc/adminchangemap,
 	/client/proc/panicbunker,
 	/client/proc/toggle_interviews,
+	/client/proc/toggle_require_discord,
 	/client/proc/toggle_hub,
 	/client/proc/toggle_cdn
 	)
@@ -271,6 +272,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/reload_admins,
 	/client/proc/panicbunker,
 	/client/proc/toggle_interviews,
+	/client/proc/toggle_require_discord,
 	/client/proc/admin_change_sec_level,
 	/client/proc/toggle_nuke,
 	/client/proc/cmd_display_del_log,

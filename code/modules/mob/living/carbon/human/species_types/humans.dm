@@ -2,7 +2,7 @@
 	name = "\improper Human"
 	id = SPECIES_HUMAN
 	default_color = "FFFFFF"
-	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,HAS_FLESH,HAS_BONE)
+	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, HAS_FLESH, HAS_BONE, BODY_RESIZABLE, HAIRCOLOR, FACEHAIRCOLOR)
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
@@ -19,7 +19,7 @@
 /datum/species/human/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.hairstyle = "Business Hair"
 	human.hair_color = "#bb9966" // brown
-	human.update_hair()
+	human.update_hair(TRUE)
 
 /datum/species/human/get_scream_sound(mob/living/carbon/human/human)
 	if(human.gender == MALE)

@@ -1,5 +1,5 @@
 /datum/species/android
-	name = "Android"
+	name = "\improper Android"
 	id = SPECIES_ANDROID
 	say_mod = "states"
 	species_traits = list(NOBLOOD, NO_DNA_COPY, NOTRANSSTING)
@@ -58,7 +58,7 @@
 		limb.skin_tone ||= skintone
 		limb.limb_id = SPECIES_HUMAN
 		limb.should_draw_greyscale = TRUE
-		limb.name = "human [parse_zone(limb.body_zone)]"
+		limb.name = "human [limb.plaintext_zone]"
 		limb.update_limb()
 		limb.brute_reduction = 5
 		limb.burn_reduction = 4

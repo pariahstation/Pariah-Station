@@ -202,13 +202,16 @@
 	var/turf/previous_turf
 	///world.time of when we can state animate()ing parallax again
 	var/dont_animate_parallax
-	///world.time of last parallax update
-	var/last_parallax_shift
-	///ds between parallax updates
-	var/parallax_throttle = 0
+	/// Direction our current area wants to move parallax
 	var/parallax_movedir = 0
+	/// How many parallax layers to show our client
 	var/parallax_layers_max = 4
+	/// Timer for the area directional animation
 	var/parallax_animate_timer
+	/// Do we want to do parallax animations at all?
+	/// Exists to prevent laptop fires
+	var/do_parallax_animations = TRUE
+
 	///Are we locking our movement input?
 	var/movement_locked = FALSE
 
@@ -244,8 +247,8 @@
 	/// On next move, subtract this dir from the move that would otherwise be done
 	var/next_move_dir_sub
 
-	/// If the client is currently under the restrictions of the interview system
-	var/interviewee = FALSE
+	/// If the client is currently under the restrictions of the interview system, or any other reason.
+	var/restricted_mode = FALSE
 
 	/// Whether or not this client has standard hotkeys enabled
 	var/hotkeys = TRUE

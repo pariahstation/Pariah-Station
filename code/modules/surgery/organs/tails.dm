@@ -43,8 +43,8 @@
 		tail_owner.update_body()
 
 /obj/item/organ/tail/lizard
-	name = "lizard tail"
-	desc = "A severed lizard tail. Somewhere, no doubt, a lizard hater is very pleased with themselves."
+	name = "unathi tail"
+	desc = "A severed unathi tail. Somewhere, no doubt, a unathi hater is very pleased with themselves."
 	color = "#116611"
 	tail_type = "Smooth"
 	/// The sprite accessory this tail gives to the human it's attached to. If null, it will inherit its value from the human's DNA once attached.
@@ -95,8 +95,8 @@
 	new_tail.spines = spines
 
 /obj/item/organ/tail/lizard/fake
-	name = "fabricated lizard tail"
-	desc = "A fabricated severed lizard tail. This one's made of synthflesh. Probably not usable for lizard wine."
+	name = "fabricated unathi tail"
+	desc = "A fabricated severed unathi tail. This one's made of synthflesh. Probably not usable for unathi wine."
 	tail_type = null
 	spines = null
 
@@ -121,3 +121,51 @@
 	if(istype(tail_owner))
 		tail_owner.dna.species.mutant_bodyparts -= "tail_monkey"
 		tail_owner.update_body()
+
+/obj/item/organ/tail/vox
+	name = "vox tail"
+	desc = "A severed vox tail."
+	tail_type = "Vox Tail"
+	/// The sprite accessory this tail gives to the human it's attached to.
+	var/spines = "None"
+
+/obj/item/organ/tail/vox/Initialize(mapload)
+	. = ..()
+	color = "#"+ random_color()
+
+/obj/item/organ/tail/vox/Insert(mob/living/carbon/human/tail_owner, special = FALSE, drop_if_replaced = TRUE)
+	..()
+	if(istype(tail_owner))
+		var/default_part = tail_owner.dna.species.mutant_bodyparts["tail_vox"]
+		if(!default_part || default_part == "None")
+			if(tail_type)
+				tail_owner.dna.features["tail_vox"] = tail_owner.dna.species.mutant_bodyparts["tail_vox"] = tail_type
+			else
+				tail_owner.dna.species.mutant_bodyparts["tail_vox"] = tail_owner.dna.features["tail_vox"]
+
+		default_part = tail_owner.dna.species.mutant_bodyparts["spines_vox"]
+		if(!default_part || default_part == "None")
+			if(spines)
+				tail_owner.dna.features["spines_vox"] = tail_owner.dna.species.mutant_bodyparts["spines_vox"] = spines
+			else
+				tail_owner.dna.species.mutant_bodyparts["spines_vox"] = tail_owner.dna.features["spines_vox"]
+		tail_owner.update_body()
+
+/obj/item/organ/tail/vox/Remove(mob/living/carbon/human/tail_owner, special = FALSE)
+	..()
+	if(istype(tail_owner))
+		tail_owner.dna.species.mutant_bodyparts -= "tail_vox"
+		color = tail_owner.dna.features["mcolor"]
+		tail_type = tail_owner.dna.features["tail_vox"]
+		spines = tail_owner.dna.features["spines_vox"]
+		tail_owner.update_body()
+
+/obj/item/organ/tail/vox/before_organ_replacement(obj/item/organ/replacement)
+	. = ..()
+	var/obj/item/organ/tail/vox/new_tail = replacement
+
+	if(!istype(new_tail))
+		return
+
+	new_tail.tail_type = tail_type
+	new_tail.spines = spines

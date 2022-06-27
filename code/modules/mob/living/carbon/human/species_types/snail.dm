@@ -1,5 +1,5 @@
 /datum/species/snail
-	name = "Snailperson"
+	name = "\improper Snailperson"
 	id = SPECIES_SNAIL
 	offset_features = list(OFFSET_GLASSES = list(0,4))
 	default_color = "336600" //vomit green
@@ -67,6 +67,7 @@
 	armor = list(MELEE = 40, BULLET = 30, LASER = 30, ENERGY = 10, BOMB = 25, BIO = 0, FIRE = 0, ACID = 50)
 	max_integrity = 200
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	supports_variations_flags = NONE
 
 /obj/item/storage/backpack/snail/dropped(mob/user, silent)
 	. = ..()

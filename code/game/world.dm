@@ -315,8 +315,8 @@ GLOBAL_VAR(restart_counter)
 		s += " &#8212; <b>[station_name()]</b>"
 
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "<a href=\"https://pariahstation.org/\">" //Change this to wherever you want the hub to link to.
+	s += "Website"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -339,6 +339,9 @@ GLOBAL_VAR(restart_counter)
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
+
+	s += "<br>Round time: <b>[gameTimestamp("hh:mm")]</b>"
+	s += "<br>Alert level: <b>[capitalize(get_security_level())]</b>"
 
 	status = s
 

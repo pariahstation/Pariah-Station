@@ -1,9 +1,9 @@
 /datum/species/skrell
-	name = "Skrell"
+	name = "\improper Skrell"
 	id = SPECIES_SKRELL
 	say_mod = "warbles"
 	default_color = "42F58D"
-	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE)
+	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE, BODY_RESIZABLE)
 	inherent_traits = list(TRAIT_ADVANCEDTOOLUSER, TRAIT_CAN_STRIP, TRAIT_LIGHT_DRINKER)
 	external_organs = list(/obj/item/organ/external/headtails = "Long")
 	liked_food = VEGETABLES | FRUIT
@@ -38,8 +38,8 @@
 		skrell_mob.set_nutrition(NUTRITION_LEVEL_ALMOST_FULL)
 
 /datum/species/skrell/prepare_human_for_preview(mob/living/carbon/human/human)
-	human.dna.features["mcolor"] = sanitize_hexcolor(COLOR_BLUE_GRAY)
-	human.update_body()
+	human.dna.features["mcolor"] = COLOR_BLUE_GRAY
+	human.update_body(TRUE)
 
 // Copper restores blood for Skrell instead of iron.
 /datum/species/skrell/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H, delta_time, times_fired)

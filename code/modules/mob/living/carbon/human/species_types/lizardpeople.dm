@@ -1,11 +1,11 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "\improper Lizardperson"
-	plural_form = "Lizardfolk"
+	name = "\improper Unathi"
+	plural_form = "Unathi"
 	id = SPECIES_LIZARD
 	say_mod = "hisses"
 	default_color = COLOR_VIBRANT_LIME
-	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE)
+	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE, BODY_RESIZABLE)
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
@@ -168,7 +168,7 @@
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = "thermometer-empty",
 		SPECIES_PERK_NAME = "Cold-blooded",
-		SPECIES_PERK_DESC = "Lizardpeople have higher tolerance for hot temperatures, but lower \
+		SPECIES_PERK_DESC = "Unathi have higher tolerance for hot temperatures, but lower \
 			tolerance for cold temperatures. Additionally, they cannot self-regulate their body temperature - \
 			they are as cold or as warm as the environment around them is. Stay warm!",
 	))
@@ -179,7 +179,7 @@
 Lizard subspecies: ASHWALKERS
 */
 /datum/species/lizard/ashwalker
-	name = "Ash Walker"
+	name = "\improper Ash Walker"
 	id = SPECIES_LIZARD_ASH
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,HAS_FLESH,HAS_BONE)
 	mutantlungs = /obj/item/organ/lungs/ashwalker
@@ -196,7 +196,7 @@ Lizard subspecies: ASHWALKERS
 Lizard subspecies: SILVER SCALED
 */
 /datum/species/lizard/silverscale
-	name = "Silver Scale"
+	name = "\improper Silver Scale"
 	id = SPECIES_LIZARD_SILVER
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	inherent_traits = list(
@@ -236,3 +236,7 @@ Lizard subspecies: SILVER SCALED
 
 	was_silverscale.remove_filter("silver_glint")
 	..()
+
+/datum/species/lizard/prepare_human_for_preview(mob/living/carbon/human/human)
+	human.dna.features["mcolor"] = "#f8f2a4"
+	human.update_body(TRUE)

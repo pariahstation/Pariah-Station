@@ -80,6 +80,14 @@
 #define BODYTYPE_SNOUTED (1<<5)
 ///The limb has skrelly bits
 #define BODYTYPE_SKRELL (1<<6)
+///The limb is voxed
+#define BODYTYPE_VOX_BEAK (1<<7)
+///The limb is in the shape of a vox leg.
+#define BODYTYPE_VOX_LEGS (1<<8)
+///Vox limb that isnt a head or legs.
+#define BODYTYPE_VOX_OTHER (1<<9)
+///The limb is small and feathery
+#define BODYTYPE_TESHARI (1<<10)
 
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"
@@ -104,12 +112,14 @@
 #define SPECIES_PODPERSON "pod"
 #define SPECIES_SHADOW "shadow"
 #define SPECIES_SKELETON "skeleton"
+#define SPECIES_SKRELL "skrell"
 #define SPECIES_SNAIL "snail"
+#define SPECIES_TESHARI "teshari"
 #define SPECIES_VAMPIRE "vampire"
+#define SPECIES_VOX "vox"
 #define SPECIES_ZOMBIE "zombie"
 #define SPECIES_ZOMBIE_INFECTIOUS "memezombie"
 #define SPECIES_ZOMBIE_KROKODIL "krokodil_zombie"
-#define SPECIES_SKRELL "skrell"
 
 //See: datum/species/var/digitigrade_customization
 ///The species does not have digitigrade legs in generation.
@@ -388,6 +398,7 @@
 #define OFFSET_BACK "back"
 #define OFFSET_SUIT "suit"
 #define OFFSET_NECK "neck"
+#define OFFSET_ACCESSORY "accessory"
 
 //MINOR TWEAKS/MISC
 #define AGE_MIN 18 //youngest a character can be

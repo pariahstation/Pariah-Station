@@ -307,7 +307,7 @@ GLOBAL_LIST_INIT(rarity_loot, list(//rare: really good items
 		/obj/item/paint/black = 1,
 		/obj/item/paint/blue = 1,
 		/obj/item/paint/green = 1,
-		/obj/item/paint/paint_remover = 1,
+		/obj/item/paint_remover = 1,
 		/obj/item/paint/red = 1,
 		/obj/item/paint/violet = 1,
 		/obj/item/paint/white = 1,
@@ -354,6 +354,7 @@ GLOBAL_LIST_INIT(oddity_loot, list(//oddity: strange or crazy items
 			/obj/item/instrument/trombone/spectral = 1,
 			/obj/item/instrument/trumpet/spectral = 1,
 			) = 1,
+		/obj/item/toy/cards/deck/tarot/haunted = 1,
 	))
 
 //Maintenance loot spawner pools

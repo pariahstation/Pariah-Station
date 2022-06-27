@@ -313,7 +313,7 @@
 	name = "JaniDrobe"
 	desc = "A self cleaning vending machine capable of dispensing clothing for janitors."
 	icon_state = "janidrobe"
-	product_ads = "Come and get your janitorial clothing, now endorsed by lizard janitors everywhere!"
+	product_ads = "Come and get your janitorial clothing, now endorsed by unathi janitors everywhere!"
 	vend_reply = "Thank you for using the JaniDrobe!"
 	products = list(/obj/item/clothing/under/rank/civilian/janitor = 2,
 					/obj/item/clothing/under/rank/civilian/janitor/skirt = 2,
@@ -322,7 +322,7 @@
 					/obj/item/clothing/head/soft/purple = 2,
 					/obj/item/clothing/mask/bandana/color/purple = 2,
 					/obj/item/pushbroom = 2,
-					/obj/item/paint/paint_remover = 2,
+					/obj/item/paint_remover = 2,
 					/obj/item/melee/flyswatter = 2,
 					/obj/item/flashlight = 2,
 					/obj/item/clothing/suit/caution = 6,
