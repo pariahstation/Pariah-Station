@@ -21,11 +21,6 @@ GLOBAL_LIST_EMPTY(fax_machines)
 #define FAIL_NOT_DENIED 4
 #define FAIL_INCORRECTLY_DENIED 5
 
-/// Wire IDs for the fax machine
-#define WIRE_SEND_FAXES "Send wire"
-#define WIRE_RECEIVE_FAXES "Receive wire"
-#define WIRE_PAPERWORK "Paperwork wire"
-
 /// VV dropdowns for the fax machine
 #define VV_SEND_FAX "send_fax"
 #define VV_SEND_MARKED_FAX "send_marked_fax"
@@ -146,15 +141,14 @@ GLOBAL_LIST_EMPTY(fax_machines)
 
 	if(stored_paper)
 		var/list/stored_paper_data = list()
-		stored_paper_data["title"] = stored_paper.name
-		stored_paper_data["contents"] = test_preview(remove_all_tags(stored_paper.info), MAX_DISPLAYED_PAPER_CHARS)
+		stored_paper_data["contents"] = text_preview(remove_all_tags(stored_paper.info), MAX_DISPLAYED_PAPER_CHARS)
 		stored_paper_data["ref"] = REF(stored_paper_data)
 		data["stored_paper"] = stored_paper_data
 
 	if(received_paper)
 		var/list/received_paper_data = list()
 		received_paper_data["title"] = received_paper.name
-		received_paper_data["contents"] = test_preview(remove_all_tags(received_paper.info), MAX_DISPLAYED_PAPER_CHARS)
+		received_paper_data["contents"] = text_preview(remove_all_tags(received_paper.info), MAX_DISPLAYED_PAPER_CHARS)
 		received_paper_data["source"] = received_paper.was_faxed_from
 		received_paper_data["ref"] = REF(received_paper)
 		data["received_paper"] = received_paper_data
@@ -781,10 +775,6 @@ GLOBAL_LIST_EMPTY(fax_machines)
 #undef FAIL_QUESTION_WRONG
 #undef FAIL_NOT_DENIED
 #undef FAIL_INCORRECTLY_DENIED
-
-#undef WIRE_SEND_FAXES
-#undef WIRE_RECEIVE_FAXES
-#undef WIRE_PAPERWORK
 
 #undef VV_SEND_FAX
 #undef VV_SEND_MARKED_FAX
