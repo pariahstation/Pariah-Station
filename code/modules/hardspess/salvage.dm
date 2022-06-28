@@ -18,6 +18,7 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "mining1"
 	custom_materials = list(/datum/material/alloy/alien = 2000)
+	w_class = WEIGHT_CLASS_TINY
 
 ///Tier 1 Salvage Objects
 /obj/item/salvage/tier1
@@ -302,3 +303,5 @@
 	desc = "Salvage structure debug object. Used for testing if salvaging actually works, lmao."
 	icon = 'icons/obj/machines/particle_accelerator.dmi'
 	icon_state = "control_boxp3"
+
+//to-do: actually fucking code this, retard

@@ -2,6 +2,12 @@
 	icon = 'icons/obj/clothing/under/cargo.dmi'
 	worn_icon = 'icons/mob/clothing/under/cargo.dmi'
 
+/obj/item/clothing/under/rank/cargo/salvage
+	name = "salvage operators's jumpsuit"
+	desc = "It's a jumpsuit worn by Salvage Operators. Rugged and tough to protect against the harsh enviroment aboard a space hulk."
+	icon_state = "miner"
+	inhand_icon_state = "miner"
+
 /obj/item/clothing/under/rank/cargo/qm
 	name = "quartermaster's jumpsuit"
 	desc = "It's a jumpsuit worn by the quartermaster. It's specially designed to prevent back injuries caused by pushing paper."

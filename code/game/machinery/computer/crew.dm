@@ -123,7 +123,8 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		// 50-59: Cargo
 		JOB_QUARTERMASTER = 50,
 		JOB_SHAFT_MINER = 51,
-		JOB_CARGO_TECHNICIAN = 52,
+		JOB_SALVAGE_OPERATOR = 52,
+		JOB_CARGO_TECHNICIAN = 53,
 		// 60+: Civilian/other
 		JOB_HEAD_OF_PERSONNEL = 60,
 		JOB_BARTENDER = 61,
