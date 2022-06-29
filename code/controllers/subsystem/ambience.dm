@@ -7,6 +7,7 @@ SUBSYSTEM_DEF(ambience)
 	wait = 1 SECONDS
 	///Assoc list of listening client - next ambience time
 	var/list/ambience_listening_clients = list()
+	///Assoc list of client - client.mob's area during the last fire.
 	var/list/client_old_areas = list()
 	///Cache for sanic speed :D
 	var/list/currentrun = list()
@@ -22,9 +23,13 @@ SUBSYSTEM_DEF(ambience)
 
 		//Check to see if the client exists and isn't held by a new player
 		var/mob/client_mob = client_iterator?.mob
-		if(isnull(client_iterator) || !client_mob ||isnewplayer(client_mob))
+		if(isnull(client_iterator) || !client_mob)
 			ambience_listening_clients -= client_iterator
 			client_old_areas -= client_iterator
+			continue
+
+		///New players and observers don't hear ambience, but we also don't want to cull their list entry.
+		if(isdead(client_mob))
 			continue
 
 		//Check to see if the client-mob is in a valid area
@@ -66,31 +71,3 @@ SUBSYSTEM_DEF(ambience)
 	ambience_listening_clients -= to_remove
 	client_old_areas -= to_remove
 	currentrun -= to_remove
-
-/area/maintenance
-	min_ambience_cooldown = 20 SECONDS
-	max_ambience_cooldown = 35 SECONDS
-
-	var/static/list/minecraft_cave_noises = list(
-	'sound/machines/airlock.ogg',
-	'sound/voice/snap.ogg',
-	'sound/effects/clownstep1.ogg',
-	'sound/effects/clownstep2.ogg',
-	'sound/items/welder.ogg',
-	'sound/items/welder2.ogg',
-	'sound/items/crowbar.ogg',
-	'sound/items/deconstruct.ogg',
-	'sound/ambience/source_holehit3.ogg',
-	'sound/ambience/cavesound3.ogg',
-	'sound/ambience/Cave1.ogg',
-	)
-
-/area/maintenance/play_ambience(mob/M, sound/override_sound, volume)
-	if(!M.has_light_nearby() && prob(0.5))
-		return ..(M, pick(minecraft_cave_noises))
-	return ..()
-
-/area/lavaland/play_ambience(mob/M, sound/override_sound, volume)
-	if(prob(1))
-		return ..(M, 'sound/ambience/Cave1.ogg')
-	return ..()

@@ -105,6 +105,11 @@
 	sound_environment = SOUND_AREA_LAVALAND
 	ambient_buzz = 'sound/ambience/magma.ogg'
 
+/area/lavaland/play_ambience(mob/M, sound/override_sound, volume)
+	if(prob(1))
+		return ..(M, 'sound/ambience/Cave1.ogg')
+	return ..()
+
 /area/lavaland/surface
 	name = "Lavaland"
 	icon_state = "explored"

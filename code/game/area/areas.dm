@@ -441,19 +441,16 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 
 ///Tries to play looping ambience to the mobs.
 /mob/proc/refresh_looping_ambience()
+	SIGNAL_HANDLER
+
 	var/area/my_area = get_area(src)
 
 	if(!(client?.prefs.toggles & SOUND_SHIP_AMBIENCE) || !my_area.ambient_buzz || !can_hear())
 		SEND_SOUND(src, sound(null, repeat = 0, wait = 0, channel = CHANNEL_BUZZ))
 		return
 
-	//Lavaland always has it's ambience.
-	if(is_mining_level(my_area.z))
-		SEND_SOUND(src, sound(my_area.ambient_buzz, repeat = 1, wait = 0, volume = 35, channel = CHANNEL_BUZZ))
-		return
-
-	//Station ambience is dependant on a functioning and charged APC
-	if(!my_area.apc || !my_area.apc.operating || !my_area.apc.cell?.charge)
+	//Station ambience is dependant on a functioning and charged APC. (Lavaland always has it's ambience.)
+	if(!is_mining_level(my_area.z) && (!my_area.apc || !my_area.apc.operating || !my_area.apc.cell?.charge))
 		SEND_SOUND(src, sound(null, repeat = 0, wait = 0, channel = CHANNEL_BUZZ))
 		return
 
