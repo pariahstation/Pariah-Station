@@ -467,6 +467,10 @@
 	icon_file = 'icons/mob/clothing/mask.dmi'
 	json_config = 'code/datums/greyscale/json_configs/bandana_worn.json'
 
+/datum/greyscale_config/bandana_worn/vox
+	name = "Worn Bandana - Vox"
+	icon_file = VOX_GAGS_FILE
+
 /datum/greyscale_config/bandstriped
 	name = "Striped Bandana"
 	icon_file = 'icons/obj/clothing/masks.dmi'
@@ -477,6 +481,10 @@
 	icon_file = 'icons/mob/clothing/mask.dmi'
 	json_config = 'code/datums/greyscale/json_configs/bandstriped_worn.json'
 
+/datum/greyscale_config/bandstriped_worn/vox
+	name = "Worn Striped Bandana - Vox"
+	icon_file = VOX_GAGS_FILE
+
 /datum/greyscale_config/bandskull
 	name = "Skull Bandana"
 	icon_file = 'icons/obj/clothing/masks.dmi'
@@ -486,6 +494,10 @@
 	name = "Worn Skull Bandana"
 	icon_file = 'icons/mob/clothing/mask.dmi'
 	json_config = 'code/datums/greyscale/json_configs/bandskull_worn.json'
+
+/datum/greyscale_config/bandskull_worn/vox
+	name = "Worn Skull Bandana - Vox"
+	icon_file = VOX_GAGS_FILE
 
 /datum/greyscale_config/solid_wall
 	name = "Solid Wall"
