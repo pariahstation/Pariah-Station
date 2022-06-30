@@ -15,8 +15,6 @@
 	worn_icon_state = "bandana_worn"
 	greyscale_config = /datum/greyscale_config/bandana
 	greyscale_config_worn = /datum/greyscale_config/bandana_worn
-	var/greyscale_config_up = /datum/greyscale_config/bandana_up
-	var/greyscale_config_worn_up = /datum/greyscale_config/bandana_worn_up
 	greyscale_colors = "#2e2e2e"
 
 /obj/item/clothing/mask/bandana/attack_self(mob/user)
@@ -28,8 +26,8 @@
 		worn_icon_state += "_up"
 		undyeable = TRUE
 		set_greyscale(
-			new_config = greyscale_config_up,
-			new_worn_config = greyscale_config_worn_up
+			new_config = greyscale_config,
+			new_worn_config = greyscale_config_worn
 		)
 	else
 		worn_icon_state = initial(worn_icon_state)
@@ -128,8 +126,6 @@
 	worn_icon_state = "bandstriped_worn"
 	greyscale_config = /datum/greyscale_config/bandstriped
 	greyscale_config_worn = /datum/greyscale_config/bandstriped_worn
-	greyscale_config_up = /datum/greyscale_config/bandstriped_up
-	greyscale_config_worn_up = /datum/greyscale_config/bandstriped_worn_up
 	greyscale_colors = "#2e2e2e#C6C6C6"
 	undyeable = TRUE
 
@@ -182,8 +178,6 @@
 	worn_icon_state = "bandskull_worn"
 	greyscale_config = /datum/greyscale_config/bandskull
 	greyscale_config_worn = /datum/greyscale_config/bandskull_worn
-	greyscale_config_up = /datum/greyscale_config/bandskull_up
-	greyscale_config_worn_up = /datum/greyscale_config/bandskull_worn_up
 	greyscale_colors = "#2e2e2e#C6C6C6"
 	undyeable = TRUE
 
