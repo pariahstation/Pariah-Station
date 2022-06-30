@@ -342,6 +342,8 @@ GLOBAL_VAR(restart_counter)
 
 	s += "<br>Round time: <b>[gameTimestamp("hh:mm")]</b>"
 	s += "<br>Alert level: <b>[capitalize(SSsecurity_level.get_current_level_as_text())]</b>"
+	s += "<br>Alert level: <b>[capitalize(get_security_level())]</b>"
+
 
 	status = s
 

@@ -1,7 +1,8 @@
 /datum/species/monkey
-	name = "Monkey"
+	name = "\improper Monkey"
 	id = SPECIES_MONKEY
 	say_mod = "chimpers"
+	scream_verb = "screeches"
 	bodytype = BODYTYPE_ORGANIC | BODYTYPE_MONKEY
 	attack_verb = "bite"
 	attack_effect = ATTACK_EFFECT_BITE
