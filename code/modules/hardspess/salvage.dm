@@ -284,7 +284,89 @@
 	desc = "You shouldn't see this. Make a github issue report if you somehow see this structure. Fuck."
 	density = TRUE
 	anchored = TRUE
-	var/progress = 0
+	var/sal_state = UNHARVESTED
+
+/obj/structure/salvage/attackby(obj/item/W, mob/user, params)
+	user.changeNext_move(CLICK_CD_MELEE)
+	if (!ISADVANCEDTOOLUSER(user))
+		to_chat(user, span_warning("You don't have the dexterity to do this!")) //If a fucking rabbit somehow manages to get to the hulk, god help them.
+		return
+
+	//get the user's location
+	if(!isturf(user.loc))
+		return //can't do this stuff whilst inside objects and such
+
+	add_fingerprint(user)
+	try_salvage(W, user)
+
+/obj/structure/salvage/examine(mob/user)
+	. = ..()
+	. += deconstruction_hints(user)
+
+/obj/structure/salvage/proc/deconstruction_hints(mob/user)
+	switch(sal_state)
+		if(UNHARVESTED)
+			return span_notice("You could probably cut open its panel with a <b>welding tool..</b>")
+		if(CUT)
+			return span_notice("It looks like you could <b>unscrew</b> a few salvageable components here..")
+		if(HARVEST1)
+			return span_notice("It looks like you could remove some salvageable material with a <b>prying</b> tool..")
+		if(HARVEST2)
+			return span_notice("It looks like you could undo some <b>bolts</b> on some components here..")
+		if(HARVEST3)
+			return span_notice("It looks like you could snip some <b>wires</b> here..")
+		if(EMPTY)
+			return span_notice("It looks like you've taken everything you can from this. <b>It is empty of useful salvage.</b>")
+
+/obj/structure/salvage/proc/try_salvage(obj/item/tool, mob/user)
+	switch(sal_state)
+		if(EMPTY)
+			to_chat(user, span_warning("Theres nothing left to harvest in the [src]!"))
+		if(UNHARVESTED)
+			if(tool.tool_behaviour == TOOL_WELDER)
+				to_chat(user, span_notice("You start to cut the shell open..."))
+				if(tool.use_tool(src, user, 40, volume=100))
+					if(!istype(src, /obj/structure/salvage) || sal_state != UNHARVESTED)
+						return TRUE
+					tool.play_tool_sound(src, 100)
+					sal_state = CUT
+					to_chat(user, span_notice("You cut the shell of the [src] open."))
+		if(CUT)
+			if(tool.tool_behaviour == TOOL_SCREWDRIVER)
+				to_chat(user, span_notice("You start to unscrew the component..."))
+				if(tool.use_tool(src, user, 40, volume=100))
+					if(!istype(src, /obj/structure/salvage) || sal_state != CUT)
+						return TRUE
+					tool.play_tool_sound(src, 100)
+					sal_state = HARVEST1
+					to_chat(user, span_notice("You remove some harvestable components from the [src]. <b>Theres still plenty left to harvest.</b>"))
+		if(HARVEST1)
+			if(tool.tool_behaviour == TOOL_CROWBAR)
+				to_chat(user, span_notice("You start to pry out the component..."))
+				if(tool.use_tool(src, user, 40, volume=100))
+					if(!istype(src, /obj/structure/salvage) || sal_state != HARVEST1)
+						return TRUE
+					tool.play_tool_sound(src, 100)
+					sal_state = HARVEST2
+					to_chat(user, span_notice("You remove some harvestable components from the [src]. <b>Theres still some left to harvest.</b>"))
+		if(HARVEST2)
+			if(tool.tool_behaviour == TOOL_WRENCH)
+				to_chat(user, span_notice("You start to unwrench the component..."))
+				if(tool.use_tool(src, user, 40, volume=100))
+					if(!istype(src, /obj/structure/salvage) || sal_state != HARVEST2)
+						return TRUE
+					tool.play_tool_sound(src, 100)
+					sal_state = HARVEST3
+					to_chat(user, span_notice("You remove some harvestable components from the [src]. <b>Theres very little left to harvest.</b>"))
+		if(HARVEST3)
+			if(tool.tool_behaviour == TOOL_WIRECUTTER)
+				to_chat(user, span_notice("You start to excise the component..."))
+				if(tool.use_tool(src, user, 40, volume=100))
+					if(!istype(src, /obj/structure/salvage) || sal_state != HARVEST3)
+						return TRUE
+					tool.play_tool_sound(src, 100)
+					sal_state = EMPTY
+					to_chat(user, span_notice("You remove some harvestable components from the [src]. <b>Theres nothing left to harvest.</b>"))
 
 /obj/structure/salvage/terminal
 	name = "Debug Terminal"
@@ -303,5 +385,3 @@
 	desc = "Salvage structure debug object. Used for testing if salvaging actually works, lmao."
 	icon = 'icons/obj/machines/particle_accelerator.dmi'
 	icon_state = "control_boxp3"
-
-//to-do: actually fucking code this, retard

@@ -19,3 +19,11 @@
 
 ///Gives up to tier 5 salvage. Intended for T3 salvage kit tools.
 #define SALVAGE_POWER_MAX 5
+
+///SALVAGE STEPS
+#define UNHARVESTED 0 //base state
+#define CUT 1 //prep to salvage
+#define HARVEST1 2 //first harvest
+#define HARVEST2 3 //second harvest
+#define HARVEST3 4 //third harvest
+#define EMPTY 5 //empty, no more salvage

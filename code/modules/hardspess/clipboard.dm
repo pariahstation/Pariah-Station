@@ -45,3 +45,42 @@
 		to_chat(user, span_notice("You successfully remove the sidepanel with the cutter."))
 		progress = 1
 */
+
+
+///FUCK:tm:
+
+/*
+/obj/structure/salvage/proc/get_salvage(obj/structure/salvage/salvaged_structure, obj/item/salvage_tool)
+	var/list/loot = list()
+	switch(salvage_tool.salvage_power)
+		if(SALVAGE_POWER_NONE)
+			to_chat(/mob/user,span_notice)
+			return null
+		if(SALVAGE_POWER_AWFUL)
+			for(var/I in 1 to 2)
+				loot += pick(salvaged_structure.salvage_items[SALVAGE_TIER1])
+			for(var/I in 1 to 2)
+				loot += pick(salvaged_structure.salvage_items[SALVAGE_TIER2])
+
+	for(var/salvage_item in loot)
+		new salvage_item(loc)
+
+
+	var/list/salvage_items = list(
+		SALVAGE_TIER1 = list(
+			/obj/item/salvage/tier1
+		),
+		SALVAGE_TIER2 = list(
+			/obj/item/salvage/tier2
+		),
+		SALVAGE_TIER3 = list(
+			/obj/item/salvage/tier3
+		),
+		SALVAGE_TIER4 = list(
+			/obj/item/salvage/tier4
+		),
+		SALVAGE_TIER5 = list(
+			/obj/item/salvage/tier5
+		))
+
+*/
