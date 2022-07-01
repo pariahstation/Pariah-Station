@@ -2860,7 +2860,6 @@
 #include "code\modules\food_and_drinks\restaurant\custom_order.dm"
 #include "code\modules\food_and_drinks\restaurant\generic_venues.dm"
 #include "code\modules\food_and_drinks\restaurant\customers\_customer.dm"
-#include "code\modules\hardspess\clipboard.dm"
 #include "code\modules\hardspess\salvage.dm"
 #include "code\modules\hardspess\salvage_operator.dm"
 #include "code\modules\holiday\easter.dm"
