@@ -311,7 +311,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 
 /atom/movable/screen/parallax_layer/random
 	blend_mode = BLEND_OVERLAY
-	speed = 1
+	speed = 3
 	layer = 3
 
 /atom/movable/screen/parallax_layer/random/space_gas
