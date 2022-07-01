@@ -18,7 +18,7 @@
 	greyscale_config_worn_vox = /datum/greyscale_config/bandana_worn/vox
 	greyscale_colors = "#2e2e2e"
 	supports_variations_flags = CLOTHING_SNOUTED_VARIATION | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
-	var/hat_mode = TRUE
+	var/hat_mode = FALSE
 
 
 /obj/item/clothing/mask/bandana/attack_self(mob/user)
