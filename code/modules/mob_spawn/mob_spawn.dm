@@ -141,6 +141,21 @@
 	if(!LAZYLEN(spawners))
 		GLOB.mob_spawners -= name
 	return ..()
+	
+/obj/effect/mob_spawn/proc/extra_prompts(mob/user)
+	return TRUE
+
+/obj/effect/mob_spawn/proc/create_mob(mob/user, newname)
+	var/mob/living/M = new mob_type(get_turf(src)) //living mobs only
+	if(!random || newname)
+		if(newname)
+			M.real_name = newname
+		else
+			M.real_name = mob_name ? mob_name : M.name
+		if(!mob_gender)
+			mob_gender = pick(MALE, FEMALE)
+		M.gender = mob_gender
+	return M
 
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/effect/mob_spawn/ghost_role/attack_ghost(mob/user)
@@ -150,6 +165,8 @@
 		var/ghost_role = tgui_alert(usr, "Become [prompt_name]? (Warning, You can no longer be revived!)",, list("Yes", "No"))
 		if(ghost_role != "Yes" || !loc || QDELETED(user))
 			return
+	if(!extra_prompts(user))
+		return
 	if(!(GLOB.ghost_role_flags & GHOSTROLE_SPAWNER) && !(flags_1 & ADMIN_SPAWNED_1))
 		to_chat(user, span_warning("An admin has temporarily disabled non-admin ghost roles!"))
 		return
@@ -164,7 +181,7 @@
 	if(QDELETED(src) || QDELETED(user))
 		return
 	log_game("[key_name(user)] became a [prompt_name]")
-	create(user)
+	create(user.ckey, null, user)
 
 /obj/effect/mob_spawn/ghost_role/special(mob/living/spawned_mob, mob/mob_possessor)
 	. = ..()
@@ -267,3 +284,83 @@
 //don't use this in subtypes, just add 1000 brute yourself. that being said, this is a type that has 1000 brute. it doesn't really have a home anywhere else, it just needs to exist
 /obj/effect/mob_spawn/corpse/human/damaged
 	brute_damage = 1000
+	
+	var/can_use_pref_char = TRUE
+	var/can_use_alias = FALSE
+	var/any_station_species = FALSE
+	var/chosen_alias
+	var/is_pref_char
+	var/last_ckey //For validation of the user
+	//SKYRAT EDIT ADDITION END
+
+/obj/effect/mob_spawn/human/extra_prompts(mob/user)
+	last_ckey = user.ckey
+	chosen_alias = null
+	is_pref_char = null
+	if(can_use_pref_char)
+		var/initial_string = "Would you like to spawn as a randomly created character, or use the one currently selected in your preferences?"
+		var/action = alert(user, initial_string, "", "Use Random Character", "Use Character From Preferences")
+		if(action && action == "Use Character From Preferences")
+			var/warning_string = "WARNING: This spawner will use your currently selected character in prefs ([user.client.prefs.real_name])\nMake sure that the character is not used as a station crew, or would have a good reason to be this role.(ie. intern in Space Hotel)\nUSING STATION CHARACTERS FOR SYNDICATE OR HOSTILE ROLES IS PROHIBITED WILL GET YOU BANNED!\nConsider making a character dedicated to the role.\nDo you wanna proceed?"
+			var/action2 = alert(user, warning_string, "", "Yes", "No")
+			if(action2 && action2 == "Yes")
+				is_pref_char = TRUE
+			else
+				return FALSE
+
+	if(can_use_alias)
+		var/action = alert(user, "Would you like to use an alias?\nIf you do, your name will be changed to that", "", "Dont Use Alias", "Use Alias")
+		if(action && action == "Use Alias")
+			var/msg = reject_bad_name(input(user, "Set your character's alias for this role", "Alias") as text|null)
+			if(!msg)
+				return FALSE
+			chosen_alias = msg
+
+	if(QDELETED(src) || QDELETED(user))
+		return FALSE
+	//What's happening here?
+	//This function is fairly asynchronous and doesnt keep variables in context, so this check is for validation that we are using the correct user
+	if(last_ckey != user.ckey)
+		return FALSE
+	return TRUE
+
+/obj/effect/mob_spawn/human/create_mob(mob/user, newname)
+	var/mob/living/carbon/human/H = new mob_type(get_turf(src))
+	if(is_pref_char && user?.client)
+		user.client.prefs.copy_to(H)
+		H.dna.update_dna_identity()
+		if(chosen_alias)
+			H.name = chosen_alias
+			H.real_name = chosen_alias
+		//Pre-job equips so Voxes dont die
+		H.dna.species.before_equip_job(null, H)
+		H.regenerate_icons()
+	else
+		if(!random || newname)
+			if(newname)
+				H.real_name = newname
+			else
+				H.real_name = mob_name ? mob_name : H.name
+			if(!mob_gender)
+				mob_gender = pick(MALE, FEMALE)
+			H.gender = mob_gender
+		if(mob_species)
+			H.set_species(mob_species)
+		H.underwear = "Nude"
+		H.undershirt = "Nude"
+		H.socks = "Nude"
+		if(hairstyle)
+			H.hairstyle = hairstyle
+		else
+			H.hairstyle = random_hairstyle(H.gender)
+		if(facial_hairstyle)
+			H.facial_hairstyle = facial_hairstyle
+		else
+			H.facial_hairstyle = random_facial_hairstyle(H.gender)
+		if(skin_tone)
+			H.skin_tone = skin_tone
+		else
+			H.skin_tone = random_skin_tone()
+		H.update_hair()
+		H.update_body()
+	return H
