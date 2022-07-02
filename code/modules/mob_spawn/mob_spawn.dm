@@ -2,14 +2,32 @@
 	name = "Mob Spawner"
 	density = TRUE
 	anchored = TRUE
-	//So it shows up in the map editor
 	icon = 'icons/effects/mapping_helpers.dmi'
-	icon_state = "mobspawner"
-	///A forced name of the mob, though can be overridden if a special name is passed as an argument
-	var/mob_name
-	///the type of the mob, you best inherit this
-	var/mob_type = /mob/living/basic/cockroach
-	///Lazy string list of factions that the spawned mob will be in upon spawn
+	icon_state = "mobspawner" // So it shows up in the map editor
+	var/mob_type = null
+	var/mob_name = ""
+	var/mob_gender = null
+	var/death = TRUE //Kill the mob
+	var/roundstart = TRUE //fires on initialize
+	var/instant = FALSE	//fires on New
+	var/short_desc = "The mapper forgot to set this!"
+	var/flavour_text = ""
+	var/important_info = ""
+	var/faction = null
+	var/permanent = FALSE	//If true, the spawner will not disappear upon running out of uses.
+	var/random = FALSE		//Don't set a name or gender, just go random
+	var/antagonist_type
+	var/objectives = null
+	var/uses = 1			//how many times can we spawn from it. set to -1 for infinite.
+	var/brute_damage = 0
+	var/oxy_damage = 0
+	var/burn_damage = 0
+	var/datum/disease/disease = null //Do they 
+	var/mob_color //Change the mob's color
+	var/assignedrole
+	var/show_flavour = TRUE
+	var/banType = ROLE_LAVALAND
+	var/ghost_usable = TRUE
 	var/list/faction
 
 	////Human specific stuff. Don't set these if you aren't using a human, the unit tests will put a stop to your sinful hand.
