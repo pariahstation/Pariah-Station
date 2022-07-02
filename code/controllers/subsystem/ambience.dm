@@ -65,7 +65,7 @@ SUBSYSTEM_DEF(ambience)
 		channel = CHANNEL_AMBIENCE
 	)
 
-	return rand(min_ambience_cooldown, max_ambience_cooldown) + (new_sound.len * 10) //Convert to deciseconds
+	return rand(min_ambience_cooldown, max_ambience_cooldown)
 
 /datum/controller/subsystem/ambience/proc/remove_ambience_client(client/to_remove)
 	ambience_listening_clients -= to_remove
