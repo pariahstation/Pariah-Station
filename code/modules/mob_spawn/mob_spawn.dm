@@ -17,12 +17,18 @@
 	var/random = FALSE		//Don't set a name or gender, just go random
 	var/antagonist_type
 	var/objectives = null
-	var/datum/disease/disease = null //Do they 
+	var/datum/disease/disease = null //Do they
 	var/mob_color //Change the mob's color
 	var/assignedrole
 	var/show_flavour = TRUE
 	var/banType = ROLE_LAVALAND
 	var/ghost_usable = TRUE
+	var/can_use_pref_char = TRUE
+	var/can_use_alias = FALSE
+	var/any_station_species = FALSE
+	var/chosen_alias
+	var/is_pref_char
+	var/last_ckey //For validation of the user
 
 	////Human specific stuff. Don't set these if you aren't using a human, the unit tests will put a stop to your sinful hand.
 
@@ -153,7 +159,7 @@
 	if(!LAZYLEN(spawners))
 		GLOB.mob_spawners -= name
 	return ..()
-	
+
 /obj/effect/mob_spawn/proc/extra_prompts(mob/user)
 	return TRUE
 
@@ -296,21 +302,7 @@
 //don't use this in subtypes, just add 1000 brute yourself. that being said, this is a type that has 1000 brute. it doesn't really have a home anywhere else, it just needs to exist
 /obj/effect/mob_spawn/corpse/human/damaged
 	brute_damage = 1000
-	
-	var/can_use_pref_char = TRUE
-	var/can_use_alias = FALSE
-	var/any_station_species = FALSE
-	var/chosen_alias
-	var/is_pref_char
-	var/last_ckey //For validation of the user
-	//SKYRAT EDIT ADDITION END
-	
-var/can_use_pref_char = TRUE
-	var/can_use_alias = FALSE
-	var/any_station_species = FALSE
-	var/chosen_alias
-	var/is_pref_char
-	var/last_ckey //For validation of the user
+
 
 /obj/effect/mob_spawn/human/extra_prompts(mob/user)
 	last_ckey = user.ckey
