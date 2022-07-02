@@ -23,7 +23,6 @@
 	var/show_flavour = TRUE
 	var/banType = ROLE_LAVALAND
 	var/ghost_usable = TRUE
-	var/list/faction
 
 	////Human specific stuff. Don't set these if you aren't using a human, the unit tests will put a stop to your sinful hand.
 
