@@ -11,17 +11,12 @@
 	var/roundstart = TRUE //fires on initialize
 	var/instant = FALSE	//fires on New
 	var/short_desc = "The mapper forgot to set this!"
-	var/flavour_text = ""
 	var/important_info = ""
 	var/faction = null
 	var/permanent = FALSE	//If true, the spawner will not disappear upon running out of uses.
 	var/random = FALSE		//Don't set a name or gender, just go random
 	var/antagonist_type
 	var/objectives = null
-	var/uses = 1			//how many times can we spawn from it. set to -1 for infinite.
-	var/brute_damage = 0
-	var/oxy_damage = 0
-	var/burn_damage = 0
 	var/datum/disease/disease = null //Do they 
 	var/mob_color //Change the mob's color
 	var/assignedrole
@@ -310,6 +305,13 @@
 	var/is_pref_char
 	var/last_ckey //For validation of the user
 	//SKYRAT EDIT ADDITION END
+	
+var/can_use_pref_char = TRUE
+	var/can_use_alias = FALSE
+	var/any_station_species = FALSE
+	var/chosen_alias
+	var/is_pref_char
+	var/last_ckey //For validation of the user
 
 /obj/effect/mob_spawn/human/extra_prompts(mob/user)
 	last_ckey = user.ckey
