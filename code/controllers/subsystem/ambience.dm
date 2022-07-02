@@ -60,7 +60,7 @@ SUBSYSTEM_DEF(ambience)
 	new_sound = sound(new_sound, channel = CHANNEL_AMBIENCE)
 	M.playsound_local(T,
 		new_sound,
-		volume ? volume : 33,
+		volume ? volume : 27,
 		TRUE,
 		channel = CHANNEL_AMBIENCE
 	)
