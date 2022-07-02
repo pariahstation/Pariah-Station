@@ -2,33 +2,15 @@
 	name = "Mob Spawner"
 	density = TRUE
 	anchored = TRUE
+	//So it shows up in the map editor
 	icon = 'icons/effects/mapping_helpers.dmi'
-	icon_state = "mobspawner" // So it shows up in the map editor
-	var/mob_type = null
-	var/mob_name = ""
-	var/mob_gender = null
-	var/death = TRUE //Kill the mob
-	var/roundstart = TRUE //fires on initialize
-	var/instant = FALSE	//fires on New
-	var/short_desc = "The mapper forgot to set this!"
-	var/important_info = ""
-	var/faction = null
-	var/permanent = FALSE	//If true, the spawner will not disappear upon running out of uses.
-	var/random = FALSE		//Don't set a name or gender, just go random
-	var/antagonist_type
-	var/objectives = null
-	var/datum/disease/disease = null //Do they
-	var/mob_color //Change the mob's color
-	var/assignedrole
-	var/show_flavour = TRUE
-	var/banType = ROLE_LAVALAND
-	var/ghost_usable = TRUE
-	var/can_use_pref_char = TRUE
-	var/can_use_alias = FALSE
-	var/any_station_species = FALSE
-	var/chosen_alias
-	var/is_pref_char
-	var/last_ckey //For validation of the user
+	icon_state = "mobspawner"
+	///A forced name of the mob, though can be overridden if a special name is passed as an argument
+	var/mob_name
+	///the type of the mob, you best inherit this
+	var/mob_type = /mob/living/basic/cockroach
+	///Lazy string list of factions that the spawned mob will be in upon spawn
+	var/list/faction
 
 	////Human specific stuff. Don't set these if you aren't using a human, the unit tests will put a stop to your sinful hand.
 
@@ -36,7 +18,7 @@
 	var/mob_species
 	///equips the human with an outfit.
 	var/datum/outfit/outfit
-	///for mappers to override parts of the outfit. really only in here for secret away missions, please try to refrain from using this out of laziness
+	///for mappers to override parts of the outfit. raeally only in here for secret away missions, please try to refrain from using this out of laziness
 	var/list/outfit_override
 	///sets a human's hairstyle
 	var/hairstyle
@@ -148,6 +130,18 @@
 	/// Typepath indicating the kind of job datum this ghost role will have. PLEASE inherit this with a new job datum, it's not hard. jobs come with policy configs.
 	var/spawner_job_path = /datum/job/ghost_role
 
+
+	// SKYRAT EDIT ADDITION
+	/// Do we use a random appearance for this ghost role?
+	var/random_appearance = FALSE
+	/// Can we use our loadout for this role?
+	var/loadout_enabled = FALSE
+	/// Can we use our quirks for this role?
+	var/quirks_enabled = FALSE
+	/// Are we limited to a certain species type? LISTED TYPE
+	var/restricted_species
+	// SKYRAT EDIT END
+
 /obj/effect/mob_spawn/ghost_role/Initialize(mapload)
 	. = ..()
 	SSpoints_of_interest.make_point_of_interest(src)
@@ -160,31 +154,19 @@
 		GLOB.mob_spawners -= name
 	return ..()
 
-/obj/effect/mob_spawn/proc/extra_prompts(mob/user)
-	return TRUE
-
-/obj/effect/mob_spawn/proc/create_mob(mob/user, newname)
-	var/mob/living/M = new mob_type(get_turf(src)) //living mobs only
-	if(!random || newname)
-		if(newname)
-			M.real_name = newname
-		else
-			M.real_name = mob_name ? mob_name : M.name
-		if(!mob_gender)
-			mob_gender = pick(MALE, FEMALE)
-		M.gender = mob_gender
-	return M
-
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/effect/mob_spawn/ghost_role/attack_ghost(mob/user)
 	if(!SSticker.HasRoundStarted() || !loc)
 		return
+	// SKYRAT EDIT ADDITION
+	if(restricted_species && !(user.client?.prefs?.read_preference(/datum/preference/choiced/species) in restricted_species))
+		balloon_alert(user, "incorrect species!")
+		return
+	// SKYRAT EDIT END
 	if(prompt_ghost)
 		var/ghost_role = tgui_alert(usr, "Become [prompt_name]? (Warning, You can no longer be revived!)",, list("Yes", "No"))
 		if(ghost_role != "Yes" || !loc || QDELETED(user))
 			return
-	if(!extra_prompts(user))
-		return
 	if(!(GLOB.ghost_role_flags & GHOSTROLE_SPAWNER) && !(flags_1 & ADMIN_SPAWNED_1))
 		to_chat(user, span_warning("An admin has temporarily disabled non-admin ghost roles!"))
 		return
@@ -199,10 +181,22 @@
 	if(QDELETED(src) || QDELETED(user))
 		return
 	log_game("[key_name(user)] became a [prompt_name]")
-	create(user.ckey, null, user)
+	create(user)
 
 /obj/effect/mob_spawn/ghost_role/special(mob/living/spawned_mob, mob/mob_possessor)
 	. = ..()
+	// SKYRAT EDIT ADDITION
+	if(!random_appearance && mob_possessor && ishuman(spawned_mob) && mob_possessor.client)
+		var/appearance_choice = tgui_alert(mob_possessor, "Use current loaded character preferences?", "Appearance Type", list("Yes", "No"))
+		if(appearance_choice == "Yes")
+			var/mob/living/carbon/human/spawned_human = spawned_mob
+			mob_possessor?.client?.prefs?.safe_transfer_prefs_to(spawned_human)
+			spawned_human.dna.update_dna_identity()
+			if(quirks_enabled)
+				SSquirks.AssignQuirks(spawned_human, mob_possessor.client)
+			if(loadout_enabled)
+				spawned_human.equip_outfit_and_loadout(outfit, mob_possessor.client.prefs)
+	// SKYRAT EDIT END
 	if(mob_possessor)
 		spawned_mob.ckey = mob_possessor.ckey
 	if(show_flavor)
@@ -302,76 +296,3 @@
 //don't use this in subtypes, just add 1000 brute yourself. that being said, this is a type that has 1000 brute. it doesn't really have a home anywhere else, it just needs to exist
 /obj/effect/mob_spawn/corpse/human/damaged
 	brute_damage = 1000
-
-
-/obj/effect/mob_spawn/human/extra_prompts(mob/user)
-	last_ckey = user.ckey
-	chosen_alias = null
-	is_pref_char = null
-	if(can_use_pref_char)
-		var/initial_string = "Would you like to spawn as a randomly created character, or use the one currently selected in your preferences?"
-		var/action = alert(user, initial_string, "", "Use Random Character", "Use Character From Preferences")
-		if(action && action == "Use Character From Preferences")
-			var/warning_string = "WARNING: This spawner will use your currently selected character in prefs ([user.client.prefs.real_name])\nMake sure that the character is not used as a station crew, or would have a good reason to be this role.(ie. intern in Space Hotel)\nUSING STATION CHARACTERS FOR SYNDICATE OR HOSTILE ROLES IS PROHIBITED WILL GET YOU BANNED!\nConsider making a character dedicated to the role.\nDo you wanna proceed?"
-			var/action2 = alert(user, warning_string, "", "Yes", "No")
-			if(action2 && action2 == "Yes")
-				is_pref_char = TRUE
-			else
-				return FALSE
-
-	if(can_use_alias)
-		var/action = alert(user, "Would you like to use an alias?\nIf you do, your name will be changed to that", "", "Dont Use Alias", "Use Alias")
-		if(action && action == "Use Alias")
-			var/msg = reject_bad_name(input(user, "Set your character's alias for this role", "Alias") as text|null)
-			if(!msg)
-				return FALSE
-			chosen_alias = msg
-
-	if(QDELETED(src) || QDELETED(user))
-		return FALSE
-	//What's happening here?
-	//This function is fairly asynchronous and doesnt keep variables in context, so this check is for validation that we are using the correct user
-	if(last_ckey != user.ckey)
-		return FALSE
-	return TRUE
-
-/obj/effect/mob_spawn/human/create_mob(mob/user, newname)
-	var/mob/living/carbon/human/H = new mob_type(get_turf(src))
-	if(is_pref_char && user?.client)
-		user.client.prefs.copy_to(H)
-		H.dna.update_dna_identity()
-		if(chosen_alias)
-			H.name = chosen_alias
-			H.real_name = chosen_alias
-		//Pre-job equips so Voxes dont die
-		H.dna.species.before_equip_job(null, H)
-		H.regenerate_icons()
-	else
-		if(!random || newname)
-			if(newname)
-				H.real_name = newname
-			else
-				H.real_name = mob_name ? mob_name : H.name
-			if(!mob_gender)
-				mob_gender = pick(MALE, FEMALE)
-			H.gender = mob_gender
-		if(mob_species)
-			H.set_species(mob_species)
-		H.underwear = "Nude"
-		H.undershirt = "Nude"
-		H.socks = "Nude"
-		if(hairstyle)
-			H.hairstyle = hairstyle
-		else
-			H.hairstyle = random_hairstyle(H.gender)
-		if(facial_hairstyle)
-			H.facial_hairstyle = facial_hairstyle
-		else
-			H.facial_hairstyle = random_facial_hairstyle(H.gender)
-		if(skin_tone)
-			H.skin_tone = skin_tone
-		else
-			H.skin_tone = random_skin_tone()
-		H.update_hair()
-		H.update_body()
-	return H
