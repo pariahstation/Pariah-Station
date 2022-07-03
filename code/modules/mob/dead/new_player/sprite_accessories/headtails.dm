@@ -4,6 +4,7 @@ Skrell Headtails
 
 /datum/sprite_accessory/headtails
 	icon = 'icons/mob/skrell_headtails.dmi'
+	color_src = MUTCOLORS2
 
 /datum/sprite_accessory/headtails/long
 	name = "Long"
