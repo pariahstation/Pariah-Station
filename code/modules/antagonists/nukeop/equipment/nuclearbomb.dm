@@ -64,7 +64,7 @@ GLOBAL_VAR(station_nuke_source)
 
 /obj/machinery/nuclearbomb/selfdestruct
 	name = "station self-destruct terminal"
-	desc = "For when it all gets too much to bear. Do not taunt."
+	desc = "It's labelled with 'Mclousky Armaments'. You can trust this will rip apart your body at an atomic scale."
 	icon = 'icons/obj/machines/nuke_terminal.dmi'
 	icon_state = "nuclearbomb_base"
 	anchored = TRUE //stops it being moved
