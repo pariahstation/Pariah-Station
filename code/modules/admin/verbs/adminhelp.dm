@@ -188,6 +188,8 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/heard_by_no_admins = FALSE
 	/// The collection of interactions with this ticket. Use AddInteraction() or, preferably, admin_ticket_log()
 	var/list/ticket_interactions
+	/// List of player-viewable interactions.
+	var/list/player_interactions
 	/// Statclick holder for the ticket
 	var/obj/effect/statclick/ahelp/statclick
 	/// Static counter used for generating each ticket ID
@@ -196,8 +198,6 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	var/list/opening_responders
 	/// Whether this ahelp has sent a webhook or not, and what type
 	var/webhook_sent = WEBHOOK_NONE
-	/// List of player interactions
-	var/list/player_interactions
 
 /**
  * Call this on its own to create a ticket, don't manually assign current_ticket
@@ -356,7 +356,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		heard_by_no_admins = FALSE
 		send2adminchat(initiator_ckey, "Ticket #[id]: Answered by [key_name(usr)]")
 	ticket_interactions += "[time_stamp()]: [formatted_message]"
-	if (!isnull(player_message))
+	if(!isnull(player_message))
 		player_interactions += "[time_stamp()]: [player_message]"
 
 //Removes the ahelp verb and returns it after 2 minutes
@@ -685,7 +685,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 		dat += "<br>Closed at: [gameTimestamp("hh:mm:ss", closed_at)] (Approx [DisplayTimeText(world.time - closed_at)] ago)"
 	dat += "<br><br>"
 	dat += "<br><b>Log:</b><br><br>"
-	for (var/interaction in player_interactions)
+	for(var/interaction in player_interactions)
 		dat += "[interaction]<br>"
 
 	var/datum/browser/player_panel = new(usr, "ahelp[id]", 0, 620, 480)
@@ -841,7 +841,7 @@ GLOBAL_DATUM_INIT(admin_help_ui_handler, /datum/admin_help_ui_handler, new)
 			if(closed_ticket.initiator_ckey == ckey)
 				prev_tickets += closed_ticket
 		// Take the most recent entry of prev_tickets and open the panel on it
-		if(LAZYLEN(prev_tickets))
+		if(length(prev_tickets))
 			last_ticket = pop(prev_tickets)
 			last_ticket.player_ticket_panel()
 			return
@@ -869,7 +869,7 @@ GLOBAL_DATUM_INIT(admin_help_ui_handler, /datum/admin_help_ui_handler, new)
 	else
 		mob_client = what
 	if(istype(mob_client) && mob_client.current_ticket)
-		if (isnull(player_message))
+		if(isnull(player_message))
 			mob_client.current_ticket.AddInteraction(message)
 		else
 			mob_client.current_ticket.AddInteraction(message, player_message)
@@ -879,7 +879,7 @@ GLOBAL_DATUM_INIT(admin_help_ui_handler, /datum/admin_help_ui_handler, new)
 	if(istext(what)) //ckey
 		var/datum/admin_help/active_admin_help = GLOB.ahelp_tickets.CKey2ActiveTicket(what)
 		if(active_admin_help)
-			if (isnull(player_message))
+			if(isnull(player_message))
 				active_admin_help.AddInteraction(message)
 			else
 				active_admin_help.AddInteraction(message, player_message)
