@@ -58,6 +58,12 @@
 	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_WALLS)
 	canSmoothWith = list(SMOOTH_GROUP_WALLS)
 
+/turf/closed/indestructible/abductor
+	icon_state = "alien1"
+
+/turf/closed/indestructible/opshuttle
+	icon_state = "wall3"
+
 /turf/closed/indestructible/cult
 	name = "runed metal wall"
 	desc = "A cold metal wall engraved with indecipherable symbols. Studying them causes your head to pound. Effectively impervious to conventional methods of destruction."
@@ -251,8 +257,6 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 
 /turf/closed/wall/indestructible/reinforced/syndicate
 	icon = 'icons/turf/walls/metal_wall.dmi'
-	icon_state = "wall-0"
-	base_icon_state = "wall"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_WALLS)
 	canSmoothWith = list(SMOOTH_GROUP_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTLE_PARTS)
@@ -263,23 +267,13 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 
 /turf/closed/wall/indestructible/reinforced/uranium
 	icon = 'icons/turf/walls/legacy/uranium_wall.dmi'
-	icon_state = "uranium_wall-0"
-	base_icon_state = "uranium_wall"
 	smoothing_flags = SMOOTH_BITMASK
+	color = "#30f71a" //To display in mapping softwares
 
 /turf/closed/wall/indestructible/reinforced/plastinum
 	name = "plastinum wall"
 	desc = "A luxurious wall made out of a plasma-platinum alloy. Effectively impervious to conventional methods of destruction."
-	icon = 'icons/turf/walls/legacy/plastinum_wall.dmi'
-	icon_state = "plastinum_wall-0"
-	base_icon_state = "plastinum_wall"
-
-/turf/closed/indestructible/abductor
-	icon_state = "alien1"
-
-/turf/closed/indestructible/opshuttle
-	icon_state = "wall3"
-
+	color = "#b3c0c7" //To display in mapping softwares
 
 /turf/closed/indestructible/fakeglass
 	name = "window"
