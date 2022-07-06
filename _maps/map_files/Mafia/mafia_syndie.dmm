@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/closed/indestructible/riveted,
+/turf/closed/wall/indestructible/reinforced,
 /area/mafia)
 "b" = (
 /obj/structure/closet/syndicate{
@@ -129,7 +129,7 @@
 	},
 /area/mafia)
 "w" = (
-/turf/closed/indestructible/syndicate,
+/turf/closed/wall/indestructible/reinforced/syndicate,
 /area/mafia)
 "x" = (
 /obj/effect/turf_decal/tile/red,

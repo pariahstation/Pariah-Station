@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/closed/indestructible/riveted/boss,
+/turf/closed/wall/indestructible/reinforced/boss,
 /area/lavaland/surface/outdoors)
 "ac" = (
 /obj/structure/stone_tile/block{
@@ -1307,7 +1307,7 @@
 /turf/closed/mineral/random/high_chance/volcanic,
 /area/lavaland/surface/outdoors/unexplored)
 "fV" = (
-/turf/closed/indestructible/riveted/boss/see_through,
+/turf/closed/wall/indestructible/reinforced/boss/see_through,
 /area/lavaland/surface/outdoors)
 "fW" = (
 /obj/structure/necropolis_gate/locked,
