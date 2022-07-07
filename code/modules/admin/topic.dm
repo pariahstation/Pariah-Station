@@ -1006,7 +1006,6 @@
 		var/obj/machinery/fax_machine/source = locate(href_list["FaxReply"]) in GLOB.fax_machines
 		source.admin_create_fax(usr)
 
-
 	else if(href_list["reject_custom_name"])
 		if(!check_rights(R_ADMIN))
 			return

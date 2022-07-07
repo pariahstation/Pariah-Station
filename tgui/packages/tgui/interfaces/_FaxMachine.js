@@ -2,11 +2,10 @@ import { useBackend, useSharedState, useLocalState } from '../backend';
 import { BlockQuote, Box, Button, Divider, Dropdown, Section, Stack, Tabs } from '../components';
 import { Window } from '../layouts';
 
-export const _FaxMachine = (props, context) => {
+export const FaxMachine = (props, context) => {
   const { act, data } = useBackend(context);
   const {
     display_name,
-
     destination_options = [],
     default_destination,
     received_paperwork = [],
@@ -45,7 +44,7 @@ export const _FaxMachine = (props, context) => {
     <Window
       width={550}
       height={630}
-      theme={emagged ? "syndicate":"ntos"}>
+      theme={emagged ? "syndicate" : "ntos"}>
       <Window.Content>
         <Section
           title="Nanotrasen Fax Device"
@@ -80,11 +79,11 @@ export const _FaxMachine = (props, context) => {
                   }}>
                   <Stack grow width="100%">
                     <Stack.Item grow textAlign="left">
-                      <b>received Faxes </b>
+                      <b>Received Faxes</b>
                     </Stack.Item>
                     {received_paper && !!unread_message && (
                       <Stack.Item grow textAlign="right">
-                        <i>{"New message!"}</i>
+                        <i>New message!</i>
                       </Stack.Item>)}
                   </Stack>
                 </Tabs.Tab>
@@ -187,7 +186,7 @@ export const _FaxMachine = (props, context) => {
           )}>
           <Stack vertical grow>
             <Stack.Item height={2}>
-              {received_paperwork && received_paperwork.length > 0 ? (
+              {received_paperwork.length > 0 ? (
                 <Tabs>
                   {received_paperwork.map(paper => (
                     <Tabs.Tab
@@ -210,8 +209,7 @@ export const _FaxMachine = (props, context) => {
                   {selectedPaper.contents}
                 </BlockQuote>
               ) : (
-                received_paperwork && received_paperwork.length > 0
-                && ("No paper selected.")
+                received_paperwork.length > 0 && ("No paper selected.")
               )}
             </Stack.Item>
             <Divider />
@@ -269,9 +267,9 @@ export const _FaxMachine = (props, context) => {
                 <Stack.Item>
                   <Button
                     color={(!received_paperwork
-                      || received_paperwork.length <= 0) ? "good" : "caution"}
+                      || received_paperwork.length === 0) ? "good" : "caution"}
                     disabled={!received_paperwork
-                      || received_paperwork.length <= 0}
+                      || received_paperwork.length === 0}
                     content="Print All Papers"
                     tooltip="Print out all the paperwork stored in the machine."
                     onClick={() => act('print_all_paperwork')} />
