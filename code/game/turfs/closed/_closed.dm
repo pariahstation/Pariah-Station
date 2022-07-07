@@ -242,6 +242,13 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 /turf/closed/indestructible/singularity_act()
 	return
 
+/turf/closed/wall/indestructible/uranium
+	icon = 'icons/turf/walls/stone_wall.dmi'
+	desc = "A wall with uranium plating. This is probably a bad idea. Effectively impervious to conventional methods of destruction."
+	smoothing_flags = SMOOTH_BITMASK
+	plating_material = /datum/material/uranium
+	color = "#007a00" //To display in mapping softwares
+
 /turf/closed/wall/indestructible/reinforced
 	name = "reinforced wall"
 	desc = "A huge chunk of reinforced metal used to separate rooms. Effectively impervious to conventional methods of destruction."
@@ -264,11 +271,6 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	reinf_material = /datum/material/iron
 	plating_material = /datum/material/alloy/plastitanium
 	color = "#3a313a" //To display in mapping softwares
-
-/turf/closed/wall/indestructible/reinforced/uranium
-	smoothing_flags = SMOOTH_BITMASK
-	plating_material = /datum/material/uranium
-	color = "#30ed1a" //To display in mapping softwares
 
 /turf/closed/wall/indestructible/reinforced/plastinum
 	name = "plastinum wall"
