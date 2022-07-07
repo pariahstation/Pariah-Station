@@ -226,20 +226,20 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	desc = "A huge chunk of reinforced metal used to separate rooms. Effectively impervious to conventional methods of destruction."
 	explosion_block = 50
 
-/turf/closed/indestructible/rust_heretic_act()
+/turf/closed/wall/indestructible/rust_heretic_act()
 	return
 
-/turf/closed/indestructible/TerraformTurf(path, new_baseturf, flags, defer_change = FALSE, ignore_air = FALSE)
+/turf/closed/wall/indestructible/TerraformTurf(path, new_baseturf, flags, defer_change = FALSE, ignore_air = FALSE)
 	return
 
-/turf/closed/indestructible/acid_act(acidpwr, acid_volume, acid_id)
+/turf/closed/wall/indestructible/acid_act(acidpwr, acid_volume, acid_id)
 	return FALSE
 
-/turf/closed/indestructible/Melt()
+/turf/closed/wall/indestructible/Melt()
 	to_be_destroyed = FALSE
 	return src
 
-/turf/closed/indestructible/singularity_act()
+/turf/closed/wall/indestructible/singularity_act()
 	return
 
 /turf/closed/wall/indestructible/uranium
