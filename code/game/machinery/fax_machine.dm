@@ -49,7 +49,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 /obj/machinery/fax_machine
 	name = "fax machine"
 	desc = "A machine made to send faxes and process paperwork. You unbelievably boring person."
-	icon = 'icons/obj/fax.dmi'
+	icon = 'icons/obj/machines/fax.dmi'
 	base_icon_state = "fax"
 	icon_state = "fax"
 	idle_power_usage = 10
@@ -136,22 +136,21 @@ GLOBAL_LIST_EMPTY(fax_machines)
 		found_paper_data["ref"] = REF(paper)
 		found_paper_data["num"] = I
 		all_received_paperwork += list(found_paper_data)
-	if(all_received_paperwork.len)
-		data["received_paperwork"] = all_received_paperwork
+	data["received_paperwork"] = all_received_paperwork
 
+	var/list/stored_paper_data = list()
 	if(stored_paper)
-		var/list/stored_paper_data = list()
 		stored_paper_data["contents"] = text_preview(remove_all_tags(stored_paper.info), MAX_DISPLAYED_PAPER_CHARS)
 		stored_paper_data["ref"] = REF(stored_paper_data)
-		data["stored_paper"] = stored_paper_data
+	data["stored_paper"] = stored_paper_data
 
+	var/list/received_paper_data = list()
 	if(received_paper)
-		var/list/received_paper_data = list()
 		received_paper_data["title"] = received_paper.name
 		received_paper_data["contents"] = text_preview(remove_all_tags(received_paper.info), MAX_DISPLAYED_PAPER_CHARS)
 		received_paper_data["source"] = received_paper.was_faxed_from
 		received_paper_data["ref"] = REF(received_paper)
-		data["received_paper"] = received_paper_data
+	data["received_paper"] = received_paper_data
 
 	if(emagged)
 		var/emagged_text = ""
