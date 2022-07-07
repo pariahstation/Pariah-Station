@@ -114,7 +114,7 @@ GLOBAL_LIST_EMPTY(fax_machines)
 	. = ..()
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "_FaxMachine", name)
+		ui = new(user, src, "FaxMachine", name)
 		ui.open()
 
 /obj/machinery/fax_machine/ui_state(mob/user)
