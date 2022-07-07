@@ -266,9 +266,9 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 	color = "#3a313a" //To display in mapping softwares
 
 /turf/closed/wall/indestructible/reinforced/uranium
-	icon = 'icons/turf/walls/legacy/uranium_wall.dmi'
 	smoothing_flags = SMOOTH_BITMASK
-	color = "#30f71a" //To display in mapping softwares
+	plating_material = /datum/material/uranium
+	color = "#30ed1a" //To display in mapping softwares
 
 /turf/closed/wall/indestructible/reinforced/plastinum
 	name = "plastinum wall"
