@@ -134,6 +134,8 @@
 		/obj/item/clothing/suit/hooded/wintercoat/cargo = 3,
 		/obj/item/clothing/under/rank/cargo/tech = 3,
 		/obj/item/clothing/under/rank/cargo/tech/skirt = 3,
+		/obj/item/clothing/under/rank/cargo/tech/turtleneck = 3,
+		/obj/item/clothing/under/rank/cargo/tech/turtleneck/skirt = 3,
 		/obj/item/clothing/shoes/sneakers/black = 3,
 		/obj/item/clothing/gloves/fingerless = 3,
 		/obj/item/clothing/head/beret/cargo = 3,

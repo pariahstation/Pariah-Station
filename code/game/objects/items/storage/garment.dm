@@ -30,6 +30,10 @@
 	name = "chief engineer's garment bag"
 	desc = "A bag for storing extra clothes and shoes. This one belongs to the chief engineer."
 
+/obj/item/storage/bag/garment/quartermaster
+	name = "quartermaster's garment bag"
+	desc = "A bag for storing extra clothes and shoes. This one belongs to the quartermaster."
+
 /obj/item/storage/bag/garment/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -120,3 +124,16 @@
 	new /obj/item/clothing/shoes/sneakers/brown(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/engineering/ce(src)
 
+/obj/item/storage/bag/garment/quartermaster/PopulateContents()
+	new /obj/item/clothing/head/beret/cargo/qm(src)
+	new /obj/item/clothing/under/rank/cargo/qm(src)
+	new /obj/item/clothing/under/rank/cargo/qm/skirt(src)
+	new /obj/item/clothing/under/rank/cargo/qm/turtleneck(src)
+	new /obj/item/clothing/under/rank/cargo/qm/turtleneck/skirt(src)
+	new /obj/item/clothing/suit/armor/vest/alt(src)
+	new /obj/item/clothing/glasses/sunglasses(src)
+	new /obj/item/clothing/head/soft(src)
+	new /obj/item/clothing/suit/hooded/wintercoat/cargo/qm(src)
+	new /obj/item/clothing/neck/cloak/qm(src)
+	new /obj/item/clothing/shoes/sneakers/brown(src)
+	new /obj/item/clothing/gloves/fingerless(src)
