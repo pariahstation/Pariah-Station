@@ -1,6 +1,7 @@
 /obj/item/clothing/under/rank/cargo
 	icon = 'icons/obj/clothing/under/cargo.dmi'
 	worn_icon = 'icons/mob/clothing/under/cargo.dmi'
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
 
 /obj/item/clothing/under/rank/cargo/qm
 	name = "quartermaster's jumpsuit"
@@ -18,13 +19,24 @@
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
 
+/obj/item/clothing/under/rank/cargo/qm/turtleneck
+	name = "quartermaster's turtleneck"
+	desc = "A snug turtleneck sweater worn by the Quartermaster, characterized by the expensive-looking pair of suit pants."
+	icon_state = "turtleneck_qm"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/cargo/qm/turtleneck/skirt
+	name = "quartermaster's skirtleneck"
+	desc = "A snug turtleneck sweater worn by the Quartermaster, as shown by the elegant double-lining of its silk skirt."
+	icon_state = "skirtleneck_qm"
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
+
 /obj/item/clothing/under/rank/cargo/tech
 	name = "cargo technician's jumpsuit"
 	desc = "Shooooorts! They're comfy and easy to wear!"
 	icon_state = "cargotech"
 	inhand_icon_state = "lb_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
-	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
 	alt_covers_chest = TRUE
 
 
@@ -37,6 +49,18 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+
+/obj/item/clothing/under/rank/cargo/tech/turtleneck
+	name = "cargo technician's turtleneck"
+	desc = "A snug turtleneck sweater worn by the Supply department.."
+	icon_state = "turtleneck_cargo"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/rank/cargo/tech/turtleneck/skirt
+	name = "cargo technician's skirtleneck"
+	desc = "A snug turtleneck sweater worn by Supply, this time with a skirt attached!"
+	icon_state = "skirtleneck_cargo"
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON | CLOTHING_TESHARI_VARIATION | CLOTHING_VOX_VARIATION
 
 /obj/item/clothing/under/rank/cargo/miner
 	desc = "It's a snappy jumpsuit with a sturdy set of overalls. It is very dirty."

@@ -8,7 +8,7 @@
 
 //DIGITIGRADE PATHS
 ///The dmi containing digitigrade uniforms
-#define DIGITIGRADE_UNIFORM_FILE 'modular_pariah/master_files/icons/mob/clothing/uniform_digi.dmi' //PARIAH EDIT
+#define DIGITIGRADE_UNIFORM_FILE 'icons/mob/clothing/species/uniform_digitigrade.dmi'
 ///The dmi containing digitigrade shoes
 #define DIGITIGRADE_SHOES_FILE 'modular_pariah/master_files/icons/mob/clothing/feet_digi.dmi' //PARIAH EDIT
 ///The dmi containing digitigrade oversuits
