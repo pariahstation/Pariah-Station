@@ -130,7 +130,6 @@
 	new /obj/item/clothing/under/rank/cargo/qm/skirt(src)
 	new /obj/item/clothing/under/rank/cargo/qm/turtleneck(src)
 	new /obj/item/clothing/under/rank/cargo/qm/turtleneck/skirt(src)
-	new /obj/item/clothing/suit/armor/vest/alt(src)
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/head/soft(src)
 	new /obj/item/clothing/suit/hooded/wintercoat/cargo/qm(src)
