@@ -62,7 +62,8 @@
 	human.dna.features["mcolor"] = VOX_BODY_COLOR
 	human.dna.features["mcolor2"] = VOX_SNOUT_COLOR
 	human.hair_color = VOX_HAIR_COLOR
-	human.eye_color = COLOR_TEAL
+	human.eye_color_left = COLOR_TEAL
+	human.eye_color_right = COLOR_TEAL
 
 	var/obj/item/organ/external/vox_hair/hair = human.internal_organs_slot[ORGAN_SLOT_EXTERNAL_VOX_HAIR]
 	hair.set_sprite("Vox Short Quills")

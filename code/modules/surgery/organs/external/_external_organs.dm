@@ -94,7 +94,7 @@
 			if(HAIR)
 				appearance.color = human_owner.hair_color
 			if(EYECOLOR)
-				appearance.color = human_owner.eye_color
+				appearance.color = human_owner.eye_color_left
 			if(MUTCOLORS)
 				appearance.color = image_color
 			if(MUTCOLORS2)
