@@ -34,6 +34,7 @@
 	antagpanel_category = "Other"
 	show_name_in_check_antagonists = TRUE
 	ui_name = "AntagInfoBrainwashed"
+	code/modules/antagonists/brainwashing/brainwashing.dm
 	suicide_cry = "FOR... SOMEONE!!"
 
 /datum/antagonist/brainwashed/ui_static_data(mob/user)

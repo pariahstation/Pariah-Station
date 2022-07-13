@@ -7,6 +7,7 @@
 	show_name_in_check_antagonists = TRUE
 	roundend_category = "obsessed"
 	silent = TRUE //not actually silent, because greet will be called by the trauma anyway.
+	count_against_dynamic_roll_chance = FALSE
 	suicide_cry = "FOR MY LOVE!!"
 	preview_outfit = /datum/outfit/obsessed
 	var/datum/brain_trauma/special/obsessed/trauma
