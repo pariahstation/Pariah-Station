@@ -17,12 +17,12 @@
 	"gitlens.advanced.blame.customArguments": ["-w"],
 	"tgstationTestExplorer.project.resultsType": "json",
 	"[javascript]": {
-		"editor.rulers": [80]
+		"editor.rulers": [100]
 	},
 	"[typescript]": {
-		"editor.rulers": [80]
+		"editor.rulers": [100]
 	},
 	"[scss]": {
-		"editor.rulers": [80]
+		"editor.rulers": [100]
 	}
 }
