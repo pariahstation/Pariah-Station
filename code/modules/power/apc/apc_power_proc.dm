@@ -26,10 +26,13 @@
 		area.power_light = (lighting > APC_CHANNEL_AUTO_OFF)
 		area.power_equip = (equipment > APC_CHANNEL_AUTO_OFF)
 		area.power_environ = (environ > APC_CHANNEL_AUTO_OFF)
+		playsound(src.loc, 'sound/machines/terminal_on.ogg', 50, FALSE)
 	else
 		area.power_light = FALSE
 		area.power_equip = FALSE
 		area.power_environ = FALSE
+		if(!failure_timer)
+			playsound(src.loc, 'sound/machines/terminal_off.ogg', 50, FALSE)
 	area.power_change()
 
 /obj/machinery/power/apc/proc/toggle_breaker(mob/user)
@@ -119,6 +122,7 @@
 			return
 
 	failure_timer = max(failure_timer, round(duration))
+	playsound(src.loc, 'sound/machines/terminal_off.ogg', 50, FALSE)
 
 /obj/machinery/power/apc/proc/set_nightshift(on)
 	set waitfor = FALSE
