@@ -37,9 +37,6 @@
 		special_reagent = /datum/reagent/toxin
 	AddElement(/datum/element/venomous, special_reagent, 4)
 
-/mob/living/simple_animal/hostile/retaliate/snake/add_cell_sample()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_SNAKE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
-
 /mob/living/simple_animal/hostile/retaliate/snake/ListTargets(atom/the_target)
 	var/atom/target_from = GET_TARGETS_FROM(src)
 	. = oview(vision_range, target_from) //get list of things in vision range

@@ -106,10 +106,6 @@
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/food/hugemushroomslice/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_WALKING_MUSHROOM, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
-
 /obj/item/food/popcorn
 	name = "popcorn"
 	desc = "Now let's find some cinema."
@@ -224,10 +220,6 @@
 /obj/item/food/badrecipe/moldy/bacteria
 	name = "bacteria rich moldy mess"
 	desc = "Not only is this rancid lump of disgusting bile crawling with insect life, but it is also teeming with various microscopic cultures. <i>It moves when you're not looking.</i>"
-
-/obj/item/food/badrecipe/moldy/bacteria/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOLD, CELL_VIRUS_TABLE_GENERIC, rand(2, 4), 25)
 
 ///Prevents grilling burnt shit from well, burning.
 /obj/item/food/badrecipe/proc/OnGrill()
@@ -982,4 +974,4 @@
 	tastes = list("juicy meat" = 1, "rice" = 1, "cabbage" = 1)
 	foodtypes = MEAT | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	
+

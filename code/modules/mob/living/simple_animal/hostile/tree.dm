@@ -74,9 +74,6 @@
 			C.visible_message(span_danger("\The [src] knocks down \the [C]!"), \
 					span_userdanger("\The [src] knocks you down!"))
 
-/mob/living/simple_animal/hostile/tree/add_cell_sample()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_PINE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
-
 /mob/living/simple_animal/hostile/tree/festivus
 	name = "festivus pole"
 	desc = "Serenity now... SERENITY NOW!"

@@ -489,9 +489,7 @@
 		/obj/item/food/deadmouse,
 		/obj/item/food/monkeycube,
 		/obj/item/organ,
-		/obj/item/bodypart,
-		/obj/item/petri_dish,
-		/obj/item/swab
+		/obj/item/bodypart
 		))
 
 /*

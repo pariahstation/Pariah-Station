@@ -171,7 +171,6 @@
 		"mop",
 		"multitool",
 		"normtrash",
-		"petri_dish",
 		"pipe_painter",
 		"plant_analyzer",
 		"plunger",
@@ -182,7 +181,6 @@
 		"shovel",
 		"spade",
 		"spraycan",
-		"swab",
 		"tile_sprayer",
 		"tscanner",
 		"welding_helmet",
@@ -213,7 +211,6 @@
 		"hemostat",
 		"large_beaker",
 		"pillbottle",
-		"plumbing_rcd",
 		"portable_chem_mixer",
 		"retractor",
 		"scalpel",
@@ -314,7 +311,6 @@
 	prereq_ids = list("base")
 	design_ids = list(
 		"beer_dispenser",
-		"biopsy_tool",
 		"blood_pack",
 		"chem_dispenser",
 		"chem_heater",
@@ -332,7 +328,6 @@
 		"medipen_refiller",
 		"operating",
 		"pandemic",
-		"plumbing_rcd_sci",
 		"soda_dispenser",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
@@ -667,7 +662,6 @@
 		"minerbag_holding",
 		"ore_silo",
 		"phasic_scanning",
-		"plumbing_receiver",
 		"roastingstick",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)

@@ -511,10 +511,10 @@
 		if(ASSEMBLY_THIRD_STEP)
 			if(!can_finish_build(I, user, 0))
 				return
-			if(istype(I, /obj/item/stack/ducts)) //Construct
-				var/obj/item/stack/ducts/D = I
+			if(istype(I, /obj/item/stack/rods)) //Construct
+				var/obj/item/stack/rods/D = I
 				if(D.get_amount() < 1)
-					to_chat(user, span_warning("You need one fluid duct to finish [src]"))
+					to_chat(user, span_warning("You need one metal rod to finish [src]"))
 					return
 				to_chat(user, span_notice("You start to pipe up [src]..."))
 				if(do_after(user, 40, target = src) && D.use(1))

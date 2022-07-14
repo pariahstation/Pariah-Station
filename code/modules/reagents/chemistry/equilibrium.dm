@@ -398,8 +398,7 @@
 	if(!(check_fail_states(total_step_added)))
 		to_delete = TRUE
 
-	//end reactions faster so plumbing is faster
-	if((step_add >= step_target_vol) && (length(holder.reaction_list == 1)))//length is so that plumbing is faster - but it doesn't disable competitive reactions. Basically, competitive reactions will likely reach their step target at the start, so this will disable that. We want to avoid that. But equally, we do want to full stop a holder from reacting asap so plumbing isn't waiting an tick to resolve.
+	if((step_add >= step_target_vol) && (length(holder.reaction_list == 1)))
 		to_delete = TRUE
 
 	holder.update_total()//do NOT recalculate reactions

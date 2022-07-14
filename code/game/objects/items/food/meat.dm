@@ -29,18 +29,10 @@
 	name = "carp fillet"
 	desc = "A fillet of spess carp meat."
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/toxin/carpotoxin = 2, /datum/reagent/consumable/nutriment/vitamin = 2)
-	/// Cytology category you can swab the meat for.
-	var/cell_line = CELL_LINE_TABLE_CARP
-
-/obj/item/food/fishmeat/carp/Initialize(mapload)
-	. = ..()
-	if(cell_line)
-		AddElement(/datum/element/swabable, cell_line, CELL_VIRUS_TABLE_GENERIC_MOB)
 
 /obj/item/food/fishmeat/carp/imitation
 	name = "imitation carp fillet"
 	desc = "Almost just like the real thing, kinda."
-	cell_line = null
 
 /obj/item/food/fishmeat/moonfish
 	name = "moonfish fillet"
@@ -491,10 +483,6 @@
 	//total price of this dish is 20 and a small amount more for soy sauce, all of which are available at the orders console
 	venue_value = FOOD_PRICE_CHEAP
 
-/obj/item/food/sashimi/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CARP, CELL_VIRUS_TABLE_GENERIC_MOB)
-
 /obj/item/food/nugget
 	name = "chicken nugget"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/consumable/nutriment/vitamin = 1)
@@ -772,28 +760,16 @@
 	desc = "A slab of mouse meat. Best not eat it raw."
 	foodtypes = RAW | MEAT | GROSS
 
-/obj/item/food/meat/slab/mouse/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOUSE, CELL_VIRUS_TABLE_GENERIC_MOB)
-
 /obj/item/food/meat/slab/corgi
 	name = "corgi meat"
 	desc = "Tastes like... well you know..."
 	tastes = list("meat" = 4, "a fondness for wearing hats" = 1)
 	foodtypes = RAW | MEAT | GROSS
 
-/obj/item/food/meat/slab/corgi/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CORGI, CELL_VIRUS_TABLE_GENERIC_MOB)
-
 /obj/item/food/meat/slab/pug
 	name = "pug meat"
 	desc = "Tastes like... well you know..."
 	foodtypes = RAW | MEAT | GROSS
-
-/obj/item/food/meat/slab/pug/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_PUG, CELL_VIRUS_TABLE_GENERIC_MOB)
 
 /obj/item/food/meat/slab/killertomato
 	name = "killer tomato meat"
@@ -822,10 +798,6 @@
 
 /obj/item/food/meat/slab/bear/MakeGrillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/bear, rand(40 SECONDS, 70 SECONDS), TRUE, TRUE)
-
-/obj/item/food/meat/slab/bear/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_BEAR, CELL_VIRUS_TABLE_GENERIC_MOB)
 
 /obj/item/food/meat/slab/xeno
 	name = "xeno meat"
@@ -966,9 +938,6 @@
 /obj/item/food/meat/slab/chicken/MakeGrillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/chicken, rand(30 SECONDS, 90 SECONDS), TRUE, TRUE) //Add medium rare later maybe? (no this is chicken)
 
-/obj/item/food/meat/slab/chicken/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CHICKEN, CELL_VIRUS_TABLE_GENERIC_MOB)
 ////////////////////////////////////// MEAT STEAKS ///////////////////////////////////////////////////////////
 
 /obj/item/food/meat/steak
@@ -1130,10 +1099,6 @@
 	name = "raw bear cutlet"
 	tastes = list("meat" = 1, "salmon" = 1)
 
-/obj/item/food/meat/rawcutlet/bear/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_BEAR, CELL_VIRUS_TABLE_GENERIC_MOB)
-
 /obj/item/food/meat/rawcutlet/bear/MakeGrillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/cutlet/bear, rand(35 SECONDS, 50 SECONDS), TRUE, TRUE)
 /obj/item/food/meat/rawcutlet/xeno
@@ -1168,10 +1133,6 @@
 
 /obj/item/food/meat/rawcutlet/chicken/MakeGrillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/cutlet/chicken, rand(35 SECONDS, 50 SECONDS), TRUE, TRUE)
-
-/obj/item/food/meat/rawcutlet/chicken/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CHICKEN, CELL_VIRUS_TABLE_GENERIC_MOB)
 
 //Cooked cutlets
 

@@ -167,10 +167,6 @@
 /obj/effect/decal/cleanable/blood/footprints,
 /turf/open/floor/iron,
 /area/ruin/bughabitat)
-"sr" = (
-/obj/machinery/plumbing/growing_vat,
-/turf/open/floor/iron,
-/area/ruin/bughabitat)
 "st" = (
 /obj/machinery/light_switch/directional/south,
 /turf/open/floor/plastic,
@@ -184,11 +180,6 @@
 /obj/structure/chair/pew/left{
 	dir = 8
 	},
-/turf/open/floor/plastic,
-/area/ruin/bughabitat)
-"va" = (
-/obj/item/book/manual/wiki/cytology,
-/obj/structure/table,
 /turf/open/floor/plastic,
 /area/ruin/bughabitat)
 "wC" = (
@@ -241,7 +232,6 @@
 /area/ruin/bughabitat)
 "BK" = (
 /obj/structure/table/rolling,
-/obj/item/petri_dish/random,
 /obj/structure/window/reinforced/spawner,
 /turf/open/floor/plastic,
 /area/ruin/bughabitat)
@@ -316,14 +306,10 @@
 /area/ruin/bughabitat)
 "Ku" = (
 /obj/structure/table,
-/obj/item/construction/plumbing/research,
 /turf/open/floor/plastic,
 /area/ruin/bughabitat)
 "Ly" = (
 /obj/structure/table,
-/obj/item/stack/ducts/fifty{
-	amount = 23
-	},
 /mob/living/simple_animal/butterfly,
 /turf/open/floor/plastic,
 /area/ruin/bughabitat)
@@ -581,10 +567,10 @@ Xn
 Xn
 Qd
 Bs
-va
+Ku
 Ly
 Ku
-sr
+AL
 AL
 Nv
 oZ
