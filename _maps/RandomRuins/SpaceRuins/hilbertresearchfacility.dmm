@@ -1238,7 +1238,7 @@
 /turf/closed/mineral/asteroid/porous,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "Bo" = (
-/turf/closed/indestructible/riveted/plastinum,
+/turf/closed/wall/indestructible/reinforced/plastinum,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "BF" = (
 /obj/machinery/door/window/survival_pod{
@@ -1260,7 +1260,7 @@
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "BJ" = (
-/turf/closed/indestructible/riveted/plastinum,
+/turf/closed/wall/indestructible/reinforced/plastinum,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility/secretroom)
 "BL" = (
 /obj/structure/table/wood,
@@ -1360,7 +1360,7 @@
 /obj/structure/light_puzzle{
 	puzzle_id = "hilbert"
 	},
-/turf/closed/indestructible/riveted/plastinum,
+/turf/closed/wall/indestructible/reinforced/plastinum,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "Eu" = (
 /obj/item/kirbyplants/random,
@@ -1558,7 +1558,7 @@
 /turf/open/floor/grass/fairy,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "Iy" = (
-/turf/closed/indestructible/riveted/plastinum,
+/turf/closed/wall/indestructible/reinforced/plastinum,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility/secretroom)
 "ID" = (
 /obj/structure/table/reinforced/rglass,
@@ -1878,7 +1878,7 @@
 /turf/open/floor/iron/grimy,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "Ok" = (
-/turf/closed/indestructible/riveted/plastinum,
+/turf/closed/wall/indestructible/reinforced/plastinum,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "OA" = (
 /obj/machinery/door/airlock/titanium,
@@ -1983,7 +1983,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/powered/hilbertresearchfacility)
 "Rq" = (
-/turf/closed/indestructible/riveted/plastinum,
+/turf/closed/wall/indestructible/reinforced/plastinum,
 /area/ruin/unpowered/no_grav)
 "Ru" = (
 /obj/effect/turf_decal/stripes/red/line{

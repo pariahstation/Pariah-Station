@@ -335,7 +335,7 @@
 /turf/open/floor/iron,
 /area/ruin/space/derelict/bridge/ai_upload)
 "bW" = (
-/turf/closed/indestructible/riveted{
+/turf/closed/wall/indestructible/reinforced{
 	color = "#FF8888"
 	},
 /area/ruin/space/derelict/bridge/ai_upload)

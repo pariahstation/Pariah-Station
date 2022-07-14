@@ -48,8 +48,9 @@
 	article = "a"
 	name = "uranium wall"
 	desc = "A wall with uranium plating. This is probably a bad idea."
+	icon = 'icons/turf/walls/stone_wall.dmi'
 	plating_material = /datum/material/uranium
-	color = "#30f71a" //To display in mapping softwares
+	color = "#007a00" //To display in mapping softwares
 
 /turf/closed/wall/mineral/uranium/proc/radiate()
 	if(!active)
