@@ -18,7 +18,7 @@
 	var/mob_species
 	///equips the human with an outfit.
 	var/datum/outfit/outfit
-	///for mappers to override parts of the outfit. really only in here for secret away missions, please try to refrain from using this out of laziness
+	///for mappers to override parts of the outfit. raeally only in here for secret away missions, please try to refrain from using this out of laziness
 	var/list/outfit_override
 	///sets a human's hairstyle
 	var/hairstyle
@@ -130,6 +130,16 @@
 	/// Typepath indicating the kind of job datum this ghost role will have. PLEASE inherit this with a new job datum, it's not hard. jobs come with policy configs.
 	var/spawner_job_path = /datum/job/ghost_role
 
+	/// Do we use a random appearance for this ghost role?
+	var/random_appearance = FALSE
+	/// Can we use our loadout for this role?
+	var/loadout_enabled = FALSE
+	/// Can we use our quirks for this role?
+	var/quirks_enabled = FALSE
+	/// Are we limited to a certain species type? LISTED TYPE
+	var/restricted_species
+
+
 /obj/effect/mob_spawn/ghost_role/Initialize(mapload)
 	. = ..()
 	SSpoints_of_interest.make_point_of_interest(src)
@@ -145,6 +155,9 @@
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/effect/mob_spawn/ghost_role/attack_ghost(mob/user)
 	if(!SSticker.HasRoundStarted() || !loc)
+		return
+	if(restricted_species && !(user.client?.prefs?.read_preference(/datum/preference/choiced/species) in restricted_species))
+		balloon_alert(user, "incorrect species!")
 		return
 	if(prompt_ghost)
 		var/ghost_role = tgui_alert(usr, "Become [prompt_name]? (Warning, You can no longer be revived!)",, list("Yes", "No"))
@@ -168,6 +181,16 @@
 
 /obj/effect/mob_spawn/ghost_role/special(mob/living/spawned_mob, mob/mob_possessor)
 	. = ..()
+	if(!random_appearance && mob_possessor && ishuman(spawned_mob) && mob_possessor.client)
+		var/appearance_choice = tgui_alert(mob_possessor, "Use current loaded character preferences?", "Appearance Type", list("Yes", "No"))
+		if(appearance_choice == "Yes")
+			var/mob/living/carbon/human/spawned_human = spawned_mob
+			mob_possessor?.client?.prefs?.safe_transfer_prefs_to(spawned_human)
+			spawned_human.dna.update_dna_identity()
+			if(quirks_enabled)
+				SSquirks.AssignQuirks(spawned_human, mob_possessor.client)
+			if(loadout_enabled)
+				spawned_human.equip_outfit_and_loadout(outfit, mob_possessor.client.prefs)
 	if(mob_possessor)
 		spawned_mob.ckey = mob_possessor.ckey
 	if(show_flavor)
